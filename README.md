@@ -31,7 +31,7 @@ avec Claude (Anthropic), expose un flux RSS consommable dans Reeder (iOS).
 
 ### Le besoin
 
-Profil : RSSI / DSI, veille active sur l'IA (recherche, produits, agents)
+Profil : Veille active sur l'IA (recherche, produits, agents)
 et la cybersécurité (vulnérabilités, stratégie, gouvernance). Contrainte :
 pas de temps pour scanner manuellement 50 sources plusieurs fois par jour.
 
