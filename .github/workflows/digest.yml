@@ -1,1 +1,48 @@
 
+name: Build digest
+
+on:
+  schedule:
+    # 7h, 13h, 19h heure de Paris (UTC+1 en hiver, UTC+2 en été)
+    # On met 6h, 12h, 18h UTC = 7h, 13h, 19h hiver / 8h, 14h, 20h été
+    - cron: '0 6,12,18 * * *'
+  workflow_dispatch:   # bouton "Run workflow" manuel
+
+permissions:
+  contents: write      # pour que le workflow puisse commit seen.json + digest.xml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python digest.py
+
+      - name: Commit & push generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/digest.xml seen.json
+          git diff --staged --quiet || git commit -m "Update digest [skip ci]"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
