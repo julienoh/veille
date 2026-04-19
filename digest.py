@@ -23,7 +23,7 @@ from prompt import SCORING_PROMPT, SYNTHESIS_PROMPT
 OPML_FILE = "sources.opml"
 SEEN_FILE = "seen.json"
 OUTPUT_FILE = "output/digest.xml"
-DIGEST_URL = "https://YOUR-USER.github.io/veille-ia/digest.xml"  # à ajuster
+DIGEST_URL = "https://julienoh.github.io/veille-ia/digest.xml"  # à ajuster
 
 LOOKBACK_HOURS = 8           # on ne regarde que les articles des 8 dernières heures
 MIN_SCORE = 3                 # seuil pour passer dans le digest
