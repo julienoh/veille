@@ -1,6 +1,6 @@
 # Veille IA — Digest personnel
 
-Pipeline de curation IA + cybersécurité. Lit des flux RSS, filtre avec
+Pipeline de curation (IA + cybersécurité). Lit des flux RSS, filtre avec
 Claude Haiku, synthétise avec Claude Sonnet, expose un RSS prêt pour Reeder.
 
 ## Setup initial (5 min)
