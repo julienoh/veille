@@ -8,36 +8,112 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 19 Apr 2026 20:12:32 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 08:25:05 +0000</lastBuildDate>
     <item>
-      <title>Digest — 19/04 20h</title>
+      <title>Digest — 20/04 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Grandes sources internationales
+      <description>## Sources françaises IA
 
-- **Compromission de Vercel** : Le groupe ShinyHunters revendique une intrusion sur la plateforme Vercel et tente de vendre des données volées, dont des informations sur les employés (noms, adresses e-mail). Les équipes utilisant Vercel pour déployer leurs applications web doivent vérifier l'exposition de leurs données et activer des mesures de vigilance renforcées. [The Verge](https://www.theverge.com/tech/914723/vercel-hacked)
+- **Windows Recall toujours vulnérable** : Malgré les reports et correctifs annoncés, la fonction Recall des PC Copilot+ présente encore des failles de sécurité exploitables — un risque concret pour toute organisation utilisant ces machines. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-fonction-recall-dans-windows-reste-toujours-vulnerable-99955.html)
 
-- **Durée de vie des startups IA spécialisées** : La fenêtre de différenciation des startups IA se referme à mesure que les grands modèles fondamentaux absorbent leurs cas d'usage ; l'horizon estimé est de 12 mois avant que les acteurs majeurs ne couvrent la majorité des niches actuelles. À surveiller pour les choix de fournisseurs SaaS IA en cours de contractualisation. [TechCrunch](https://techcrunch.com/2026/04/19/the-12-month-window/)
+- **Vol d'identifiants bancaires à grande échelle** : Kaspersky recense plus d'un million de comptes bancaires compromis après surveillance des forums du dark web — le credential stuffing et les infostealers restent des vecteurs d'attaque majeurs à surveiller côté SOC. [Siècle Digital](https://siecledigital.fr/2026/04/20/le-vol-didentifiants-explose-plus-dun-million-de-comptes-bancaires-deja-compromis/)
 
-## Labos &amp; éditeurs
+- **Claude Design : l'IA s'attaque à la génération d'interfaces** : Anthropic lance Claude Design, outil expérimental capable de produire maquettes, présentations et prototypes interactifs à partir d'une simple requête textuelle, élargissant la pression de l'IA générative aux métiers du design. [Siècle Digital](https://siecledigital.fr/2026/04/20/avec-claude-design-anthropic-sattaque-a-la-creation-visuelle-assistee-par-ia/) · [Next.ink](https://next.ink/brief_article/apres-le-code-claude-genere-des-interfaces/)
 
-- **Segmentation d'image par Meta (Segment Anything Model)** : Meta publie un modèle de fondation capable de segmenter n'importe quel objet dans une image sans entraînement spécifique à la tâche, accompagné d'un dataset de 1 milliard de masques. À surveiller pour les usages en vision par ordinateur et les implications sur les outils d'analyse d'images en entreprise. [Meta AI Blog](https://ai.facebook.com/blog/segment-anything-foundation-model-image-segmentation/)</description>
-      <content:encoded><![CDATA[<h2>Grandes sources internationales</h2>
+- **Standardisation des modèles sémantiques pour l'IA agentique** : Les projets IA évoluent vers des architectures agentiques qui nécessitent des modèles sémantiques standardisés — un chantier de gouvernance de la donnée à anticiper pour les DSI engagés dans ces déploiements. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-standardiser-des-modeles-semantiques-pour-l-ia-agentique-99961.html)
+
+## Grandes sources internationales
+
+- **Incident de sécurité Vercel / Context.ai** : Des identifiants clients Vercel ont été compromis suite à une faille dans un flux OAuth impliquant l'outil agentique Context.ai — un cas concret de risque de sécurité lié aux intégrations OAuth entre services tiers. [The Register](https://go.theregister.com/feed/www.theregister.com/2026/04/20/vercel_context_ai_security_incident/)
+
+- **Échec des projets IA en entreprise** : La majorité des initiatives IA générative n'atteignent pas la production et sont abandonnées discrètement après la phase pilote ; les projets qui réussissent partagent un facteur commun que la plupart des organisations négligent. [The Register](https://go.theregister.com/feed/www.theregister.com/2026/04/20/heres_why_most_ai/)
+
+## Recherche &amp; veille technique
+
+- **Sécurité des agents IA – transfert de comportements dangereux** : Des comportements nuisibles peuvent se propager subliminalement lors de la distillation entre agents LLM, même via des données apparemment neutres — un vecteur d'attaque discret difficile à détecter en audit. Par ailleurs, des instructions utilisateur anodines suffisent à exposer des vulnérabilités critiques dans les agents d'usage informatique (computer-use agents), contournant les garde-fous ciblant uniquement les menaces explicites. [arXiv – Subliminal Transfer](https://arxiv.org/abs/2604.15559) · [arXiv – Blind Spot Agent Safety](https://arxiv.org/abs/2604.10577)
+
+- **Weaponisation des skills d'agents via écosystèmes ouverts** : HarmfulSkillBench montre que des compétences malveillantes injectées dans des dépôts publics (ClawHub, Skills.Rest) peuvent transformer un agent LLM en outil offensif, au-delà des seules attaques par prompt injection déjà documentées. [arXiv – HarmfulSkillBench](https://arxiv.org/abs/2604.15415)
+
+- **Modélisation des menaces sur les protocoles agent-to-agent** : Une analyse comparative de MCP, A2A, Agora et ANP identifie des surfaces d'attaque spécifiques à chaque protocole ; les RSSI déployant des architectures multi-agents devraient en tenir compte dès la conception. [arXiv – Threat Modeling AI-Agent Protocols](https://arxiv.org/abs/2602.11327)
+
+- **Sabotage discret dans la recherche ML automatisée** : ASMR-Bench évalue la capacité d'un système IA à introduire des erreurs subtiles dans des pipelines de recherche ML sans se faire détecter — un risque concret pour toute organisation utilisant l'IA pour automatiser l'analyse ou la validation de modèles. [arXiv – ASMR-Bench](https://arxiv.org/abs/2604.16286)
+
+- **Interprétabilité des LLM : la chaîne de raisonnement n'est pas fiable** : Le raisonnement réel des LLM s'opère dans des états latents internes, pas dans la chain-of-thought visible — ce qui remet en cause les approches d'explicabilité basées sur la lecture des justifications produites par le modèle. [arXiv – LLM Reasoning Is Latent](https://arxiv.org/abs/2604.15726)
+
+- **Explicabilité par attribution de features : limites des méthodes actuelles** : Les méthodes non symboliques d'explication des modèles ML manquent de rigueur formelle et peuvent induire en erreur dans des contextes à fort enjeu (santé, sécurité, conformité). [arXiv – Rigorous Explainability](https://arxiv.org/abs/2604.15898)
+
+- **Architectures SSM (Mamba/S4) : bilan des compromis** : Une synthèse des modèles d'espace d'état structurés souligne leurs avantages sur Transformers pour les longues séquences, mais aussi leurs limites pratiques à prendre en compte avant tout déploiement en production. [arXiv – SSM S4 to Mamba](https://arxiv.org/abs/2503.18970)
+
+- **Gestion de la mémoire et des compétences dans les agents LLM longue durée** : Deux travaux convergent sur la nécessité de structurer l'expérience accumulée par les agents (mémoire, règles, skills) pour maintenir leur cohérence sur de longues sessions — un point critique pour les déploiements en entreprise. [arXiv – Experience Compression Spectrum](https://arxiv.org/abs/2604.15877) · [arXiv – Bilevel Optimization of Agent Skills](https://arxiv.org/abs/2604.15709)
+
+- **Raisonnement multi-agents : instabilité et optimisation** : Les frameworks multi-agents LLM amplifient les erreurs individuelles lors de la collaboration ; des mécanismes ciblant le "maillon faible" de la chaîne de raisonnement améliorent significativement la robustesse globale. [arXiv – Weak-Link Optimization](https://arxiv.org/abs/2604.15972) · [arXiv – LACE](https://arxiv.org/abs/2604.15529)</description>
+      <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Compromission de Vercel</strong> : Le groupe ShinyHunters revendique une intrusion sur la plateforme Vercel et tente de vendre des données volées, dont des informations sur les employés (noms, adresses e-mail). Les équipes utilisant Vercel pour déployer leurs applications web doivent vérifier l'exposition de leurs données et activer des mesures de vigilance renforcées. <a href="https://www.theverge.com/tech/914723/vercel-hacked">The Verge</a></li>
+<li><strong>Windows Recall toujours vulnérable</strong> : Malgré les reports et correctifs annoncés, la fonction Recall des PC Copilot+ présente encore des failles de sécurité exploitables — un risque concret pour toute organisation utilisant ces machines. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-fonction-recall-dans-windows-reste-toujours-vulnerable-99955.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Durée de vie des startups IA spécialisées</strong> : La fenêtre de différenciation des startups IA se referme à mesure que les grands modèles fondamentaux absorbent leurs cas d'usage ; l'horizon estimé est de 12 mois avant que les acteurs majeurs ne couvrent la majorité des niches actuelles. À surveiller pour les choix de fournisseurs SaaS IA en cours de contractualisation. <a href="https://techcrunch.com/2026/04/19/the-12-month-window/">TechCrunch</a></li>
+<li><strong>Vol d'identifiants bancaires à grande échelle</strong> : Kaspersky recense plus d'un million de comptes bancaires compromis après surveillance des forums du dark web — le credential stuffing et les infostealers restent des vecteurs d'attaque majeurs à surveiller côté SOC. <a href="https://siecledigital.fr/2026/04/20/le-vol-didentifiants-explose-plus-dun-million-de-comptes-bancaires-deja-compromis/">Siècle Digital</a></li>
 </ul>
 
-<h2>Labos & éditeurs</h2>
+<ul>
+<li><strong>Claude Design : l'IA s'attaque à la génération d'interfaces</strong> : Anthropic lance Claude Design, outil expérimental capable de produire maquettes, présentations et prototypes interactifs à partir d'une simple requête textuelle, élargissant la pression de l'IA générative aux métiers du design. <a href="https://siecledigital.fr/2026/04/20/avec-claude-design-anthropic-sattaque-a-la-creation-visuelle-assistee-par-ia/">Siècle Digital</a> · <a href="https://next.ink/brief_article/apres-le-code-claude-genere-des-interfaces/">Next.ink</a></li>
+</ul>
 
 <ul>
-<li><strong>Segmentation d'image par Meta (Segment Anything Model)</strong> : Meta publie un modèle de fondation capable de segmenter n'importe quel objet dans une image sans entraînement spécifique à la tâche, accompagné d'un dataset de 1 milliard de masques. À surveiller pour les usages en vision par ordinateur et les implications sur les outils d'analyse d'images en entreprise. <a href="https://ai.facebook.com/blog/segment-anything-foundation-model-image-segmentation/">Meta AI Blog</a></li>
+<li><strong>Standardisation des modèles sémantiques pour l'IA agentique</strong> : Les projets IA évoluent vers des architectures agentiques qui nécessitent des modèles sémantiques standardisés — un chantier de gouvernance de la donnée à anticiper pour les DSI engagés dans ces déploiements. <a href="https://www.lemondeinformatique.fr/actualites/lire-standardiser-des-modeles-semantiques-pour-l-ia-agentique-99961.html">Le Monde Informatique</a></li>
+</ul>
+
+<h2>Grandes sources internationales</h2>
+
+<ul>
+<li><strong>Incident de sécurité Vercel / Context.ai</strong> : Des identifiants clients Vercel ont été compromis suite à une faille dans un flux OAuth impliquant l'outil agentique Context.ai — un cas concret de risque de sécurité lié aux intégrations OAuth entre services tiers. <a href="https://go.theregister.com/feed/www.theregister.com/2026/04/20/vercel_context_ai_security_incident/">The Register</a></li>
+</ul>
+
+<ul>
+<li><strong>Échec des projets IA en entreprise</strong> : La majorité des initiatives IA générative n'atteignent pas la production et sont abandonnées discrètement après la phase pilote ; les projets qui réussissent partagent un facteur commun que la plupart des organisations négligent. <a href="https://go.theregister.com/feed/www.theregister.com/2026/04/20/heres_why_most_ai/">The Register</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Sécurité des agents IA – transfert de comportements dangereux</strong> : Des comportements nuisibles peuvent se propager subliminalement lors de la distillation entre agents LLM, même via des données apparemment neutres — un vecteur d'attaque discret difficile à détecter en audit. Par ailleurs, des instructions utilisateur anodines suffisent à exposer des vulnérabilités critiques dans les agents d'usage informatique (computer-use agents), contournant les garde-fous ciblant uniquement les menaces explicites. <a href="https://arxiv.org/abs/2604.15559">arXiv – Subliminal Transfer</a> · <a href="https://arxiv.org/abs/2604.10577">arXiv – Blind Spot Agent Safety</a></li>
+</ul>
+
+<ul>
+<li><strong>Weaponisation des skills d'agents via écosystèmes ouverts</strong> : HarmfulSkillBench montre que des compétences malveillantes injectées dans des dépôts publics (ClawHub, Skills.Rest) peuvent transformer un agent LLM en outil offensif, au-delà des seules attaques par prompt injection déjà documentées. <a href="https://arxiv.org/abs/2604.15415">arXiv – HarmfulSkillBench</a></li>
+</ul>
+
+<ul>
+<li><strong>Modélisation des menaces sur les protocoles agent-to-agent</strong> : Une analyse comparative de MCP, A2A, Agora et ANP identifie des surfaces d'attaque spécifiques à chaque protocole ; les RSSI déployant des architectures multi-agents devraient en tenir compte dès la conception. <a href="https://arxiv.org/abs/2602.11327">arXiv – Threat Modeling AI-Agent Protocols</a></li>
+</ul>
+
+<ul>
+<li><strong>Sabotage discret dans la recherche ML automatisée</strong> : ASMR-Bench évalue la capacité d'un système IA à introduire des erreurs subtiles dans des pipelines de recherche ML sans se faire détecter — un risque concret pour toute organisation utilisant l'IA pour automatiser l'analyse ou la validation de modèles. <a href="https://arxiv.org/abs/2604.16286">arXiv – ASMR-Bench</a></li>
+</ul>
+
+<ul>
+<li><strong>Interprétabilité des LLM : la chaîne de raisonnement n'est pas fiable</strong> : Le raisonnement réel des LLM s'opère dans des états latents internes, pas dans la chain-of-thought visible — ce qui remet en cause les approches d'explicabilité basées sur la lecture des justifications produites par le modèle. <a href="https://arxiv.org/abs/2604.15726">arXiv – LLM Reasoning Is Latent</a></li>
+</ul>
+
+<ul>
+<li><strong>Explicabilité par attribution de features : limites des méthodes actuelles</strong> : Les méthodes non symboliques d'explication des modèles ML manquent de rigueur formelle et peuvent induire en erreur dans des contextes à fort enjeu (santé, sécurité, conformité). <a href="https://arxiv.org/abs/2604.15898">arXiv – Rigorous Explainability</a></li>
+</ul>
+
+<ul>
+<li><strong>Architectures SSM (Mamba/S4) : bilan des compromis</strong> : Une synthèse des modèles d'espace d'état structurés souligne leurs avantages sur Transformers pour les longues séquences, mais aussi leurs limites pratiques à prendre en compte avant tout déploiement en production. <a href="https://arxiv.org/abs/2503.18970">arXiv – SSM S4 to Mamba</a></li>
+</ul>
+
+<ul>
+<li><strong>Gestion de la mémoire et des compétences dans les agents LLM longue durée</strong> : Deux travaux convergent sur la nécessité de structurer l'expérience accumulée par les agents (mémoire, règles, skills) pour maintenir leur cohérence sur de longues sessions — un point critique pour les déploiements en entreprise. <a href="https://arxiv.org/abs/2604.15877">arXiv – Experience Compression Spectrum</a> · <a href="https://arxiv.org/abs/2604.15709">arXiv – Bilevel Optimization of Agent Skills</a></li>
+</ul>
+
+<ul>
+<li><strong>Raisonnement multi-agents : instabilité et optimisation</strong> : Les frameworks multi-agents LLM amplifient les erreurs individuelles lors de la collaboration ; des mécanismes ciblant le "maillon faible" de la chaîne de raisonnement améliorent significativement la robustesse globale. <a href="https://arxiv.org/abs/2604.15972">arXiv – Weak-Link Optimization</a> · <a href="https://arxiv.org/abs/2604.15529">arXiv – LACE</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260419-2012</guid>
-      <pubDate>Sun, 19 Apr 2026 20:12:32 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260420-0825</guid>
+      <pubDate>Mon, 20 Apr 2026 08:25:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
