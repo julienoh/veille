@@ -8,48 +8,94 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 20 Apr 2026 19:11:52 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 08:12:15 +0000</lastBuildDate>
     <item>
-      <title>Digest — 20/04 19h</title>
+      <title>Digest — 21/04 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **Hallucinations IA et intégrité scientifique** : Des chercheurs suédois ont délibérément inventé une maladie fictive ("bixonimanie") pour tester les IA — résultat : elle s'est retrouvée citée dans de vrais articles scientifiques pendant plusieurs mois, exposant la contamination en chaîne entre sorties d'IA et production académique. Un signal d'alerte concret pour toute organisation qui s'appuie sur des contenus générés ou validés par IA. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/nous-sommes-cuits-quand-la-bixonimanie-la-maladie-inventee-pour-pieger-les-ia-se-repand-comme-une-trainee-de-poudre-dans-les-publications-scientifiques_AV-202604200627.html)
+- **Cyberattaque ANTS – fuite de données personnelles** : L'Agence nationale des titres sécurisés a subi une intrusion ayant potentiellement exposé des données personnelles ; le ministère de l'Intérieur n'a confirmé l'incident que cinq jours après sa détection, soulevant des questions sur les délais de notification. [Siècle Digital](https://siecledigital.fr/2026/04/21/apres-une-cyberattaque-contre-lants-des-donnees-personnelles-pourraient-avoir-ete-divulguees/)
 
-- **OpenSSL 4.0 et chiffrement ECH** : OpenSSL 4.0 introduit notamment l'Encrypted Client Hello (ECH), qui masque le SNI dans les connexions TLS — une évolution notable pour la confidentialité réseau. À noter : ce n'est pas une version LTS, le support s'arrête en mai 2027 ; pour un déploiement en production durable, OpenSSL 3.5 (supporté jusqu'en 2030) reste le choix recommandé. [Next.ink](https://next.ink/brief_article/openssl-passe-en-version-4-0-avec-encrypted-client-hello-ech/)
+## Labos &amp; éditeurs
 
-- **Reconnaissance d'attaque et surface exposée** : Avant toute intrusion, les attaquants collectent passivement une quantité significative d'informations sur leur cible — infra exposée, fuites de credentials, empreinte numérique publique. Réduire sa surface d'exposition et auditer ce qui est visible de l'extérieur reste un levier de défense sous-estimé. [Journal du Net](https://www.journaldunet.com/cybersecurite/1549647-cybersecurite-tout-ce-que-les-attaquants-savent-deja-sur-votre-entreprise/)
+- **Agents IA et données démographiques synthétiques** : NVIDIA publie une méthode pour ancrer des agents IA dans des profils démographiques réels via des personas synthétiques, appliquée ici au marché coréen — une approche transposable pour réduire les biais culturels dans les LLM déployés en production. [Hugging Face Blog](https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas)
 
-- **Budget CNRS en baisse** : Les coupes budgétaires au CNRS fragilisent la recherche publique française, y compris sur des sujets stratégiques comme l'IA et la cybersécurité, à rebours des investissements massifs consentis par la Chine. Un contexte à surveiller pour les organisations qui s'appuient sur des partenariats académiques ou anticipent un tarissement des compétences issues de la recherche publique. [Next.ink](https://next.ink/234176/la-baisse-du-budget-du-cnrs-une-rupture-dans-le-financement-de-la-recherche-francaise/)
+## Recherche &amp; veille technique
 
-## Grandes sources internationales
+- **Empoisonnement de contexte des assistants IA (XOXO)** : Une attaque permet d'injecter du code malveillant dans le contexte des assistants de codage IA en corrompant des fichiers ou contributions tierces, sans que l'utilisateur en soit averti. Le vecteur est structurel : plus le contexte est large et multi-sources, plus la surface d'attaque est étendue. [arXiv](https://arxiv.org/abs/2503.14281)
 
-- **Android CLI pour agents IA** : Google publie un outil en ligne de commande Android conçu non pas pour les développeurs humains, mais pour les agents IA — réduction de 70 % des tokens consommés et division par trois du temps d'exécution des tâches. À surveiller pour les équipes qui intègrent du développement assisté par IA dans leurs pipelines. [The Register](https://go.theregister.com/feed/www.theregister.com/2026/04/20/google_previews_android_cli/)</description>
+- **Manipulation persistante de LLM via feedback utilisateur (LLM Hypnosis)** : Un seul utilisateur peut altérer durablement le comportement d'un LLM entraîné avec du feedback (upvote/downvote) en injectant des connaissances non autorisées, affectant potentiellement tous les autres utilisateurs. Risque direct pour les systèmes RLHF en production. [arXiv](https://arxiv.org/abs/2507.02850)
+
+- **Sécurité des LLM multi-tours (SaFeR-Steer)** : Les modèles multimodaux déployés en conversation multi-tours sont vulnérables à une escalade progressive d'intentions malveillantes exploitant la dégradation des garde-fous sur les longues sessions. Les alignements de sécurité basés uniquement sur des données mono-tour sont insuffisants. [arXiv](https://arxiv.org/abs/2604.16358)
+
+- **Méthodes défensives pour l'intégrité des LLM** : Deux techniques d'entraînement défensif (PPS et inoculation prompting) produisent des résultats similaires par des mécanismes distincts au niveau des gradients ; comprendre ces différences est nécessaire pour choisir la bonne défense selon le contexte de déploiement. [arXiv](https://arxiv.org/abs/2604.16423)
+
+- **Machine unlearning : fiabilité et conformité réglementaire** : Avec les obligations croissantes de suppression de données (RGPD, gouvernance IA), les méthodes de test du "machine unlearning" manquent encore de fiabilité et de standardisation — un point de vigilance pour les équipes qui doivent prouver la suppression effective de données dans des modèles déployés. [arXiv](https://arxiv.org/abs/2604.16536) · [arXiv](https://arxiv.org/abs/2604.16591)
+
+- **Détection d'anomalies DDoS en réseaux 5G cloud-native** : La représentation des flux (temporelle vs. structurelle) impacte significativement les performances des systèmes de détection non supervisés des attaques DDoS ; aucun paradigme unique ne s'impose, ce qui plaide pour des approches hybrides dans les environnements 5G. [arXiv](https://arxiv.org/abs/2604.16575)
+
+- **Confidentialité différentielle contre le surapprentissage** : L'application de la differential privacy lors de l'entraînement de réseaux de neurones profonds réduit le surapprentissage, avec un bénéfice secondaire sur la protection des données d'entraînement contre les attaques d'inférence. [arXiv](https://arxiv.org/abs/2604.16334)
+
+- **Optimisation inférence LLM long contexte (SinkRouter, SCATR, SMC decoding)** : Plusieurs travaux convergent sur l'amélioration de l'efficacité à l'inférence : routage KV-cache tenant compte des "sink tokens" pour réduire la pression mémoire GPU, calibration des sorties en test-time scaling, et décodage guidé par récompense via Monte Carlo séquentiel. Pertinent pour dimensionner et fiabiliser des infrastructures IA internes. [arXiv](https://arxiv.org/abs/2604.16883) · [arXiv](https://arxiv.org/abs/2604.16535) · [arXiv](https://arxiv.org/abs/2604.16453)
+
+- **Fine-tuning LLM : dynamiques d'apprentissage et désapprentissage (LoRA)** : Le fine-tuning LoRA provoque un "désapprentissage" sur les exemples annotés de façon contradictoire, un comportement absent en fine-tuning complet — à prendre en compte lors du choix de la méthode d'adaptation de modèles sur des données métier hétérogènes. [arXiv](https://arxiv.org/abs/2604.16332)
+
+- **Agents LLM multi-agents et partage de connaissances (FoT)** : Un framework de type "federated learning" appliqué au texte permet à des agents LLM de partager des raisonnements acquis sans repartir de zéro à chaque instance — ouvre des perspectives pour les architectures multi-agents en entreprise, avec les questions de gouvernance associées. [arXiv](https://arxiv.org/abs/2604.16778)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Hallucinations IA et intégrité scientifique</strong> : Des chercheurs suédois ont délibérément inventé une maladie fictive ("bixonimanie") pour tester les IA — résultat : elle s'est retrouvée citée dans de vrais articles scientifiques pendant plusieurs mois, exposant la contamination en chaîne entre sorties d'IA et production académique. Un signal d'alerte concret pour toute organisation qui s'appuie sur des contenus générés ou validés par IA. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/nous-sommes-cuits-quand-la-bixonimanie-la-maladie-inventee-pour-pieger-les-ia-se-repand-comme-une-trainee-de-poudre-dans-les-publications-scientifiques_AV-202604200627.html">BFM Tech</a></li>
+<li><strong>Cyberattaque ANTS – fuite de données personnelles</strong> : L'Agence nationale des titres sécurisés a subi une intrusion ayant potentiellement exposé des données personnelles ; le ministère de l'Intérieur n'a confirmé l'incident que cinq jours après sa détection, soulevant des questions sur les délais de notification. <a href="https://siecledigital.fr/2026/04/21/apres-une-cyberattaque-contre-lants-des-donnees-personnelles-pourraient-avoir-ete-divulguees/">Siècle Digital</a></li>
+</ul>
+
+<h2>Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Agents IA et données démographiques synthétiques</strong> : NVIDIA publie une méthode pour ancrer des agents IA dans des profils démographiques réels via des personas synthétiques, appliquée ici au marché coréen — une approche transposable pour réduire les biais culturels dans les LLM déployés en production. <a href="https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas">Hugging Face Blog</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Empoisonnement de contexte des assistants IA (XOXO)</strong> : Une attaque permet d'injecter du code malveillant dans le contexte des assistants de codage IA en corrompant des fichiers ou contributions tierces, sans que l'utilisateur en soit averti. Le vecteur est structurel : plus le contexte est large et multi-sources, plus la surface d'attaque est étendue. <a href="https://arxiv.org/abs/2503.14281">arXiv</a></li>
 </ul>
 
 <ul>
-<li><strong>OpenSSL 4.0 et chiffrement ECH</strong> : OpenSSL 4.0 introduit notamment l'Encrypted Client Hello (ECH), qui masque le SNI dans les connexions TLS — une évolution notable pour la confidentialité réseau. À noter : ce n'est pas une version LTS, le support s'arrête en mai 2027 ; pour un déploiement en production durable, OpenSSL 3.5 (supporté jusqu'en 2030) reste le choix recommandé. <a href="https://next.ink/brief_article/openssl-passe-en-version-4-0-avec-encrypted-client-hello-ech/">Next.ink</a></li>
+<li><strong>Manipulation persistante de LLM via feedback utilisateur (LLM Hypnosis)</strong> : Un seul utilisateur peut altérer durablement le comportement d'un LLM entraîné avec du feedback (upvote/downvote) en injectant des connaissances non autorisées, affectant potentiellement tous les autres utilisateurs. Risque direct pour les systèmes RLHF en production. <a href="https://arxiv.org/abs/2507.02850">arXiv</a></li>
 </ul>
 
 <ul>
-<li><strong>Reconnaissance d'attaque et surface exposée</strong> : Avant toute intrusion, les attaquants collectent passivement une quantité significative d'informations sur leur cible — infra exposée, fuites de credentials, empreinte numérique publique. Réduire sa surface d'exposition et auditer ce qui est visible de l'extérieur reste un levier de défense sous-estimé. <a href="https://www.journaldunet.com/cybersecurite/1549647-cybersecurite-tout-ce-que-les-attaquants-savent-deja-sur-votre-entreprise/">Journal du Net</a></li>
+<li><strong>Sécurité des LLM multi-tours (SaFeR-Steer)</strong> : Les modèles multimodaux déployés en conversation multi-tours sont vulnérables à une escalade progressive d'intentions malveillantes exploitant la dégradation des garde-fous sur les longues sessions. Les alignements de sécurité basés uniquement sur des données mono-tour sont insuffisants. <a href="https://arxiv.org/abs/2604.16358">arXiv</a></li>
 </ul>
 
 <ul>
-<li><strong>Budget CNRS en baisse</strong> : Les coupes budgétaires au CNRS fragilisent la recherche publique française, y compris sur des sujets stratégiques comme l'IA et la cybersécurité, à rebours des investissements massifs consentis par la Chine. Un contexte à surveiller pour les organisations qui s'appuient sur des partenariats académiques ou anticipent un tarissement des compétences issues de la recherche publique. <a href="https://next.ink/234176/la-baisse-du-budget-du-cnrs-une-rupture-dans-le-financement-de-la-recherche-francaise/">Next.ink</a></li>
+<li><strong>Méthodes défensives pour l'intégrité des LLM</strong> : Deux techniques d'entraînement défensif (PPS et inoculation prompting) produisent des résultats similaires par des mécanismes distincts au niveau des gradients ; comprendre ces différences est nécessaire pour choisir la bonne défense selon le contexte de déploiement. <a href="https://arxiv.org/abs/2604.16423">arXiv</a></li>
 </ul>
 
-<h2>Grandes sources internationales</h2>
+<ul>
+<li><strong>Machine unlearning : fiabilité et conformité réglementaire</strong> : Avec les obligations croissantes de suppression de données (RGPD, gouvernance IA), les méthodes de test du "machine unlearning" manquent encore de fiabilité et de standardisation — un point de vigilance pour les équipes qui doivent prouver la suppression effective de données dans des modèles déployés. <a href="https://arxiv.org/abs/2604.16536">arXiv</a> · <a href="https://arxiv.org/abs/2604.16591">arXiv</a></li>
+</ul>
 
 <ul>
-<li><strong>Android CLI pour agents IA</strong> : Google publie un outil en ligne de commande Android conçu non pas pour les développeurs humains, mais pour les agents IA — réduction de 70 % des tokens consommés et division par trois du temps d'exécution des tâches. À surveiller pour les équipes qui intègrent du développement assisté par IA dans leurs pipelines. <a href="https://go.theregister.com/feed/www.theregister.com/2026/04/20/google_previews_android_cli/">The Register</a></li>
+<li><strong>Détection d'anomalies DDoS en réseaux 5G cloud-native</strong> : La représentation des flux (temporelle vs. structurelle) impacte significativement les performances des systèmes de détection non supervisés des attaques DDoS ; aucun paradigme unique ne s'impose, ce qui plaide pour des approches hybrides dans les environnements 5G. <a href="https://arxiv.org/abs/2604.16575">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Confidentialité différentielle contre le surapprentissage</strong> : L'application de la differential privacy lors de l'entraînement de réseaux de neurones profonds réduit le surapprentissage, avec un bénéfice secondaire sur la protection des données d'entraînement contre les attaques d'inférence. <a href="https://arxiv.org/abs/2604.16334">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation inférence LLM long contexte (SinkRouter, SCATR, SMC decoding)</strong> : Plusieurs travaux convergent sur l'amélioration de l'efficacité à l'inférence : routage KV-cache tenant compte des "sink tokens" pour réduire la pression mémoire GPU, calibration des sorties en test-time scaling, et décodage guidé par récompense via Monte Carlo séquentiel. Pertinent pour dimensionner et fiabiliser des infrastructures IA internes. <a href="https://arxiv.org/abs/2604.16883">arXiv</a> · <a href="https://arxiv.org/abs/2604.16535">arXiv</a> · <a href="https://arxiv.org/abs/2604.16453">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Fine-tuning LLM : dynamiques d'apprentissage et désapprentissage (LoRA)</strong> : Le fine-tuning LoRA provoque un "désapprentissage" sur les exemples annotés de façon contradictoire, un comportement absent en fine-tuning complet — à prendre en compte lors du choix de la méthode d'adaptation de modèles sur des données métier hétérogènes. <a href="https://arxiv.org/abs/2604.16332">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents LLM multi-agents et partage de connaissances (FoT)</strong> : Un framework de type "federated learning" appliqué au texte permet à des agents LLM de partager des raisonnements acquis sans repartir de zéro à chaque instance — ouvre des perspectives pour les architectures multi-agents en entreprise, avec les questions de gouvernance associées. <a href="https://arxiv.org/abs/2604.16778">arXiv</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260420-1911</guid>
-      <pubDate>Mon, 20 Apr 2026 19:11:52 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260421-0812</guid>
+      <pubDate>Tue, 21 Apr 2026 08:12:15 +0000</pubDate>
     </item>
   </channel>
 </rss>
