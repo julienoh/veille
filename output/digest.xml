@@ -8,94 +8,48 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 21 Apr 2026 08:12:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 13:51:07 +0000</lastBuildDate>
     <item>
-      <title>Digest — 21/04 08h</title>
+      <title>Digest — 21/04 13h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **Cyberattaque ANTS – fuite de données personnelles** : L'Agence nationale des titres sécurisés a subi une intrusion ayant potentiellement exposé des données personnelles ; le ministère de l'Intérieur n'a confirmé l'incident que cinq jours après sa détection, soulevant des questions sur les délais de notification. [Siècle Digital](https://siecledigital.fr/2026/04/21/apres-une-cyberattaque-contre-lants-des-donnees-personnelles-pourraient-avoir-ete-divulguees/)
+- **Anthropic / Amazon : deal massif** : Anthropic s'engage à utiliser 5 GW de capacité de calcul AWS, en échange d'un investissement d'Amazon de 5 milliards de dollars, avec une option à 20 milliards — un accord qui verrouille durablement Claude sur l'infrastructure cloud d'Amazon. [Next.ink](https://next.ink/234333/anthropic-et-amazon-etendent-leur-accord-5-milliards-de-dollars-contre-5-gw/)
 
-## Labos &amp; éditeurs
+- **Shadow IT IA : fuite de données chez Vercel** : Un employé de Vercel a utilisé une application IA tierce (Context.ai) sans encadrement suffisant, ce qui a permis à des attaquants de compromettre des données internes — cas concret illustrant le risque des outils IA non maîtrisés en entreprise. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-des-donnees-de-vercel-compromises-par-une-application-ia-tierce-99983.html)
 
-- **Agents IA et données démographiques synthétiques** : NVIDIA publie une méthode pour ancrer des agents IA dans des profils démographiques réels via des personas synthétiques, appliquée ici au marché coréen — une approche transposable pour réduire les biais culturels dans les LLM déployés en production. [Hugging Face Blog](https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas)
+- **Airbus rachète Quarkslab** : Airbus acquiert le spécialiste français de la sécurité offensive et de l'analyse de code, renforçant ses capacités cyber souveraines — un mouvement de consolidation à surveiller pour l'écosystème français. [Maddyness](https://www.maddyness.com/2026/04/21/cybersecurite-airbus-met-la-main-sur-quarkslab/)
 
-## Recherche &amp; veille technique
+- **Vérification d'âge européenne : sécurité insuffisante** : L'application de vérification d'âge portée par la Commission européenne présente des failles identifiées par des chercheurs, malgré une communication officielle la présentant comme opérationnelle — un signal d'alerte sur la maturité réelle du dispositif. [Next.ink](https://next.ink/234281/lapp-de-verification-dage-de-la-commission-europeenne-presente-de-grosses-lacunes/)
 
-- **Empoisonnement de contexte des assistants IA (XOXO)** : Une attaque permet d'injecter du code malveillant dans le contexte des assistants de codage IA en corrompant des fichiers ou contributions tierces, sans que l'utilisateur en soit averti. Le vecteur est structurel : plus le contexte est large et multi-sources, plus la surface d'attaque est étendue. [arXiv](https://arxiv.org/abs/2503.14281)
+## Grandes sources internationales
 
-- **Manipulation persistante de LLM via feedback utilisateur (LLM Hypnosis)** : Un seul utilisateur peut altérer durablement le comportement d'un LLM entraîné avec du feedback (upvote/downvote) en injectant des connaissances non autorisées, affectant potentiellement tous les autres utilisateurs. Risque direct pour les systèmes RLHF en production. [arXiv](https://arxiv.org/abs/2507.02850)
-
-- **Sécurité des LLM multi-tours (SaFeR-Steer)** : Les modèles multimodaux déployés en conversation multi-tours sont vulnérables à une escalade progressive d'intentions malveillantes exploitant la dégradation des garde-fous sur les longues sessions. Les alignements de sécurité basés uniquement sur des données mono-tour sont insuffisants. [arXiv](https://arxiv.org/abs/2604.16358)
-
-- **Méthodes défensives pour l'intégrité des LLM** : Deux techniques d'entraînement défensif (PPS et inoculation prompting) produisent des résultats similaires par des mécanismes distincts au niveau des gradients ; comprendre ces différences est nécessaire pour choisir la bonne défense selon le contexte de déploiement. [arXiv](https://arxiv.org/abs/2604.16423)
-
-- **Machine unlearning : fiabilité et conformité réglementaire** : Avec les obligations croissantes de suppression de données (RGPD, gouvernance IA), les méthodes de test du "machine unlearning" manquent encore de fiabilité et de standardisation — un point de vigilance pour les équipes qui doivent prouver la suppression effective de données dans des modèles déployés. [arXiv](https://arxiv.org/abs/2604.16536) · [arXiv](https://arxiv.org/abs/2604.16591)
-
-- **Détection d'anomalies DDoS en réseaux 5G cloud-native** : La représentation des flux (temporelle vs. structurelle) impacte significativement les performances des systèmes de détection non supervisés des attaques DDoS ; aucun paradigme unique ne s'impose, ce qui plaide pour des approches hybrides dans les environnements 5G. [arXiv](https://arxiv.org/abs/2604.16575)
-
-- **Confidentialité différentielle contre le surapprentissage** : L'application de la differential privacy lors de l'entraînement de réseaux de neurones profonds réduit le surapprentissage, avec un bénéfice secondaire sur la protection des données d'entraînement contre les attaques d'inférence. [arXiv](https://arxiv.org/abs/2604.16334)
-
-- **Optimisation inférence LLM long contexte (SinkRouter, SCATR, SMC decoding)** : Plusieurs travaux convergent sur l'amélioration de l'efficacité à l'inférence : routage KV-cache tenant compte des "sink tokens" pour réduire la pression mémoire GPU, calibration des sorties en test-time scaling, et décodage guidé par récompense via Monte Carlo séquentiel. Pertinent pour dimensionner et fiabiliser des infrastructures IA internes. [arXiv](https://arxiv.org/abs/2604.16883) · [arXiv](https://arxiv.org/abs/2604.16535) · [arXiv](https://arxiv.org/abs/2604.16453)
-
-- **Fine-tuning LLM : dynamiques d'apprentissage et désapprentissage (LoRA)** : Le fine-tuning LoRA provoque un "désapprentissage" sur les exemples annotés de façon contradictoire, un comportement absent en fine-tuning complet — à prendre en compte lors du choix de la méthode d'adaptation de modèles sur des données métier hétérogènes. [arXiv](https://arxiv.org/abs/2604.16332)
-
-- **Agents LLM multi-agents et partage de connaissances (FoT)** : Un framework de type "federated learning" appliqué au texte permet à des agents LLM de partager des raisonnements acquis sans repartir de zéro à chaque instance — ouvre des perspectives pour les architectures multi-agents en entreprise, avec les questions de gouvernance associées. [arXiv](https://arxiv.org/abs/2604.16778)</description>
+- **Intrusion chez Vercel assistée par IA** : Les attaquants ont exploité un abus OAuth combiné à un compte employé compromis, en se distinguant par une vitesse d'exécution et une connaissance approfondie de l'infrastructure inhabituelles — le CEO attribue cette efficacité à l'usage de l'IA. Les données volées seraient proposées à la revente pour 2 millions de dollars. [The Register](https://go.theregister.com/feed/www.theregister.com/2026/04/21/vercel_ceo_points_to_aidriven/)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Cyberattaque ANTS – fuite de données personnelles</strong> : L'Agence nationale des titres sécurisés a subi une intrusion ayant potentiellement exposé des données personnelles ; le ministère de l'Intérieur n'a confirmé l'incident que cinq jours après sa détection, soulevant des questions sur les délais de notification. <a href="https://siecledigital.fr/2026/04/21/apres-une-cyberattaque-contre-lants-des-donnees-personnelles-pourraient-avoir-ete-divulguees/">Siècle Digital</a></li>
-</ul>
-
-<h2>Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Agents IA et données démographiques synthétiques</strong> : NVIDIA publie une méthode pour ancrer des agents IA dans des profils démographiques réels via des personas synthétiques, appliquée ici au marché coréen — une approche transposable pour réduire les biais culturels dans les LLM déployés en production. <a href="https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas">Hugging Face Blog</a></li>
-</ul>
-
-<h2>Recherche & veille technique</h2>
-
-<ul>
-<li><strong>Empoisonnement de contexte des assistants IA (XOXO)</strong> : Une attaque permet d'injecter du code malveillant dans le contexte des assistants de codage IA en corrompant des fichiers ou contributions tierces, sans que l'utilisateur en soit averti. Le vecteur est structurel : plus le contexte est large et multi-sources, plus la surface d'attaque est étendue. <a href="https://arxiv.org/abs/2503.14281">arXiv</a></li>
+<li><strong>Anthropic / Amazon : deal massif</strong> : Anthropic s'engage à utiliser 5 GW de capacité de calcul AWS, en échange d'un investissement d'Amazon de 5 milliards de dollars, avec une option à 20 milliards — un accord qui verrouille durablement Claude sur l'infrastructure cloud d'Amazon. <a href="https://next.ink/234333/anthropic-et-amazon-etendent-leur-accord-5-milliards-de-dollars-contre-5-gw/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Manipulation persistante de LLM via feedback utilisateur (LLM Hypnosis)</strong> : Un seul utilisateur peut altérer durablement le comportement d'un LLM entraîné avec du feedback (upvote/downvote) en injectant des connaissances non autorisées, affectant potentiellement tous les autres utilisateurs. Risque direct pour les systèmes RLHF en production. <a href="https://arxiv.org/abs/2507.02850">arXiv</a></li>
+<li><strong>Shadow IT IA : fuite de données chez Vercel</strong> : Un employé de Vercel a utilisé une application IA tierce (Context.ai) sans encadrement suffisant, ce qui a permis à des attaquants de compromettre des données internes — cas concret illustrant le risque des outils IA non maîtrisés en entreprise. <a href="https://www.lemondeinformatique.fr/actualites/lire-des-donnees-de-vercel-compromises-par-une-application-ia-tierce-99983.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité des LLM multi-tours (SaFeR-Steer)</strong> : Les modèles multimodaux déployés en conversation multi-tours sont vulnérables à une escalade progressive d'intentions malveillantes exploitant la dégradation des garde-fous sur les longues sessions. Les alignements de sécurité basés uniquement sur des données mono-tour sont insuffisants. <a href="https://arxiv.org/abs/2604.16358">arXiv</a></li>
+<li><strong>Airbus rachète Quarkslab</strong> : Airbus acquiert le spécialiste français de la sécurité offensive et de l'analyse de code, renforçant ses capacités cyber souveraines — un mouvement de consolidation à surveiller pour l'écosystème français. <a href="https://www.maddyness.com/2026/04/21/cybersecurite-airbus-met-la-main-sur-quarkslab/">Maddyness</a></li>
 </ul>
 
 <ul>
-<li><strong>Méthodes défensives pour l'intégrité des LLM</strong> : Deux techniques d'entraînement défensif (PPS et inoculation prompting) produisent des résultats similaires par des mécanismes distincts au niveau des gradients ; comprendre ces différences est nécessaire pour choisir la bonne défense selon le contexte de déploiement. <a href="https://arxiv.org/abs/2604.16423">arXiv</a></li>
+<li><strong>Vérification d'âge européenne : sécurité insuffisante</strong> : L'application de vérification d'âge portée par la Commission européenne présente des failles identifiées par des chercheurs, malgré une communication officielle la présentant comme opérationnelle — un signal d'alerte sur la maturité réelle du dispositif. <a href="https://next.ink/234281/lapp-de-verification-dage-de-la-commission-europeenne-presente-de-grosses-lacunes/">Next.ink</a></li>
 </ul>
 
-<ul>
-<li><strong>Machine unlearning : fiabilité et conformité réglementaire</strong> : Avec les obligations croissantes de suppression de données (RGPD, gouvernance IA), les méthodes de test du "machine unlearning" manquent encore de fiabilité et de standardisation — un point de vigilance pour les équipes qui doivent prouver la suppression effective de données dans des modèles déployés. <a href="https://arxiv.org/abs/2604.16536">arXiv</a> · <a href="https://arxiv.org/abs/2604.16591">arXiv</a></li>
-</ul>
+<h2>Grandes sources internationales</h2>
 
 <ul>
-<li><strong>Détection d'anomalies DDoS en réseaux 5G cloud-native</strong> : La représentation des flux (temporelle vs. structurelle) impacte significativement les performances des systèmes de détection non supervisés des attaques DDoS ; aucun paradigme unique ne s'impose, ce qui plaide pour des approches hybrides dans les environnements 5G. <a href="https://arxiv.org/abs/2604.16575">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Confidentialité différentielle contre le surapprentissage</strong> : L'application de la differential privacy lors de l'entraînement de réseaux de neurones profonds réduit le surapprentissage, avec un bénéfice secondaire sur la protection des données d'entraînement contre les attaques d'inférence. <a href="https://arxiv.org/abs/2604.16334">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation inférence LLM long contexte (SinkRouter, SCATR, SMC decoding)</strong> : Plusieurs travaux convergent sur l'amélioration de l'efficacité à l'inférence : routage KV-cache tenant compte des "sink tokens" pour réduire la pression mémoire GPU, calibration des sorties en test-time scaling, et décodage guidé par récompense via Monte Carlo séquentiel. Pertinent pour dimensionner et fiabiliser des infrastructures IA internes. <a href="https://arxiv.org/abs/2604.16883">arXiv</a> · <a href="https://arxiv.org/abs/2604.16535">arXiv</a> · <a href="https://arxiv.org/abs/2604.16453">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Fine-tuning LLM : dynamiques d'apprentissage et désapprentissage (LoRA)</strong> : Le fine-tuning LoRA provoque un "désapprentissage" sur les exemples annotés de façon contradictoire, un comportement absent en fine-tuning complet — à prendre en compte lors du choix de la méthode d'adaptation de modèles sur des données métier hétérogènes. <a href="https://arxiv.org/abs/2604.16332">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents LLM multi-agents et partage de connaissances (FoT)</strong> : Un framework de type "federated learning" appliqué au texte permet à des agents LLM de partager des raisonnements acquis sans repartir de zéro à chaque instance — ouvre des perspectives pour les architectures multi-agents en entreprise, avec les questions de gouvernance associées. <a href="https://arxiv.org/abs/2604.16778">arXiv</a></li>
+<li><strong>Intrusion chez Vercel assistée par IA</strong> : Les attaquants ont exploité un abus OAuth combiné à un compte employé compromis, en se distinguant par une vitesse d'exécution et une connaissance approfondie de l'infrastructure inhabituelles — le CEO attribue cette efficacité à l'usage de l'IA. Les données volées seraient proposées à la revente pour 2 millions de dollars. <a href="https://go.theregister.com/feed/www.theregister.com/2026/04/21/vercel_ceo_points_to_aidriven/">The Register</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260421-0812</guid>
-      <pubDate>Tue, 21 Apr 2026 08:12:15 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260421-1351</guid>
+      <pubDate>Tue, 21 Apr 2026 13:51:07 +0000</pubDate>
     </item>
   </channel>
 </rss>
