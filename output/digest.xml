@@ -8,66 +8,108 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 22 Apr 2026 19:20:07 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 08:07:22 +0000</lastBuildDate>
     <item>
-      <title>Digest — 22/04 19h</title>
+      <title>Digest — 23/04 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **Paquet PyPI Xinference compromis** : Les versions 2.6.0 à 2.6.2 de la bibliothèque Xinference contiennent du code malveillant capable d'exfiltrer des secrets sensibles (clés SSH, fichiers .env). Toute équipe utilisant ce paquet doit vérifier ses environnements en urgence et auditer sa chaîne d'approvisionnement logicielle. [Next.ink](https://next.ink/234711/xinference-encore-un-paquet-pypi-verole-qui-vole-vos-secrets-en-silence/)
+- **Limites opérationnelles de Claude Code** : Anthropic souffre d'un manque de capacités de calcul face à l'adoption massive de Claude Code, au point d'avoir envisagé de retirer l'outil de l'offre Pro — une décision qui révèle une tension structurelle entre croissance commerciale et infrastructure. [Next.ink](https://next.ink/234872/victime-de-son-succes-anthropic-a-teste-de-supprimer-claude-code-de-son-abonnement-pro/)
 
-- **Claude Desktop : extensions navigateur pré-autorisées à l'insu de l'utilisateur** : L'installation de Claude Desktop crée silencieusement des manifestes autorisant la communication entre l'application et ses extensions Chrome, sans en informer l'utilisateur. Ce comportement pose des questions de conformité et de maîtrise du périmètre de sécurité sur les postes de travail. [Next.ink](https://next.ink/234613/claude-desktop-sarroge-le-droit-de-pre-autoriser-ses-extensions-pour-navigateurs/)
+- **Gains IA nets inférieurs aux annonces** : La correction des erreurs générées par les outils d'IA en entreprise consomme une part non négligeable du gain de productivité attendu — un coût caché à intégrer dans tout calcul de ROI avant déploiement. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-une-part-des-benefices-de-l-ia-effacee-par-la-correction-d-erreurs-99996.html)
 
-- **Dépassements budgétaires IA et manœuvres stratégiques** : Uber a déjà épuisé l'intégralité de son budget IA 2026 du fait de l'usage intensif des outils de génération de code, signal d'un problème de gouvernance des coûts IA à anticiper. Par ailleurs, OpenAI renforce sa présence en Europe avec une direction française, et Meta mobilise ses salariés pour produire des données d'entraînement. [Frenchweb](https://www.frenchweb.fr/chez-uber-lia-fait-exploser-les-budgets-chez-meta-les-salaries-entrainent-les-machines-openai-muscle-son-jeu-en-europe-avec-un-francais-a-sa-tete/461400)
+- **Agents IA en usage métier réel (Accor)** : Accor déploie des agents IA auprès de ses équipes commerciales pour automatiser l'intégration de documents et le rapprochement de données, un cas d'usage concret qui illustre la trajectoire vers l'IA agentique en contexte grand compte. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-accor-pousse-des-agents-aupres-des-commerciaux-99994.html)
 
-- **Google Cloud : nouveaux TPU pour l'IA agentique** : Google Cloud annonce les TPU 8t et 8i, conçus spécifiquement pour les charges de travail d'IA agentique. À surveiller pour les DSI évaluant des infrastructures cloud dédiées à des agents IA en production. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-pour-l-ia-agentique-google-cloud-lance-les-tpu-8t-et-8i-99992.html)
+## Recherche &amp; veille technique
 
-## Grandes sources internationales
+- **Optimisation de l'inférence LLM** : Plusieurs axes convergent pour réduire les coûts et la latence des LLM en production : le décodage spéculatif (EAGLE3, validé chez PayPal avec un gain mesurable sur un modèle 8B), le cache sémantique continu pour recycler les réponses sur requêtes similaires, et l'exploration déterministe d'arbres de décodage tronqués comme alternative plus efficace à la self-consistency par échantillonnage. [EAGLE3/PayPal](https://arxiv.org/abs/2604.19767) · [Cache sémantique](https://arxiv.org/abs/2604.20021) · [Décodage tronqué](https://arxiv.org/abs/2604.20500)
 
-- **Google Chrome as enterprise AI agent** : Google intègre Gemini directement dans Chrome pour automatiser des tâches métier (recherche, saisie de données), et lance en parallèle une plateforme de création d'agents IA ciblant les équipes IT. Ces deux initiatives placent Google en position d'intermédiaire technique central dans les environnements de travail, avec les implications de gouvernance et de DLP que cela suppose. [TechCrunch](https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/) · [TechCrunch](https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/)
+- **Architecture MoE et recyclage de modèles** : L'approche "Expert Upcycling" montre qu'il est possible de convertir des modèles denses existants en architectures Mixture-of-Experts pour déplacer la frontière coût/performance sans repartir de zéro. Pertinent pour les organisations qui cherchent à rentabiliser des modèles déjà entraînés. [Source](https://arxiv.org/abs/2604.19835)
 
-- **Meta surveille ses employés pour entraîner ses IA** : Meta déploie un outil de capture d'activité (clics, frappes clavier, navigation) sur les postes de ses salariés américains afin d'alimenter l'entraînement de ses agents IA. Un précédent à surveiller pour les DRH et RSSI : la frontière entre monitoring légitime et collecte massive de données comportementales internes devient floue. [The Verge](https://www.theverge.com/tech/916681/meta-ai-agents-employee-tracking)
+- **Agents LLM et orchestration de workflows** : WorkflowGen propose de réduire la surcharge de raisonnement des agents LLM en réutilisant les trajectoires d'expériences passées pour générer des workflows adaptés. Dans un registre complémentaire, R2IF aligne explicitement le raisonnement interne et les décisions d'appel d'outils via des récompenses composites, ce qui améliore la fiabilité des agents en environnement outillé. [WorkflowGen](https://arxiv.org/abs/2604.19756) · [R2IF](https://arxiv.org/abs/2604.20316)
 
-- **L'IA comme accélérateur offensif** : Des hackers nord-coréens de niveau modeste ont utilisé l'IA pour coder des malwares, générer des sites fictifs et mener des opérations d'ingénierie sociale — pour un butin estimé à 12 millions de dollars en trois mois. Par ailleurs, des tests menés par Wired montrent que plusieurs modèles IA sont capables de conduire des attaques de phishing convaincantes, y compris en exploitant les compétences sociales, pas seulement techniques. La démocratisation offensive via l'IA est une réalité opérationnelle, pas une hypothèse. [Wired](https://www.wired.com/story/ai-tools-are-helping-mediocre-north-korean-hackers-steal-millions/) · [Wired](https://www.wired.com/story/ai-model-phishing-attack-cybersecurity/)
+- **Fiabilité et hallucinations des LLM** : Deux travaux distincts abordent la question de la confiance accordée aux sorties de LLM : l'un montre que l'incertitude exprimée et la correction réelle sont portées par des mécanismes internes différents (dissociation fonctionnelle via autoencodeurs sparse), l'autre propose un entraînement différentiable par prédiction conforme pour garantir statistiquement des taux d'erreur bornés. Des résultats importants pour tout déploiement en contexte critique. [Incertitude vs correction](https://arxiv.org/abs/2604.19974) · [Conformal training](https://arxiv.org/abs/2604.20098)
 
-- **Nouveaux TPU Google Cloud** : Google annonce deux nouvelles générations de puces TPU, plus rapides et moins chères, pour concurrencer Nvidia sur l'inférence et l'entraînement IA en cloud. Pertinent pour les arbitrages d'infrastructure IA, sans impact sécurité direct à court terme. [TechCrunch](https://techcrunch.com/2026/04/22/google-cloud-next-new-tpu-ai-chips-compete-with-nvidia/)</description>
+- **Fine-tuning par renforcement (RLVR)** : Une analyse théorique des limites du fine-tuning RLVR sur les modèles vision-langage pointe des problèmes de convergence et de généralisation que les succès empiriques récents masquaient. À prendre en compte avant de déployer ce type d'entraînement en production. [Source](https://arxiv.org/abs/2604.19857)
+
+- **Agents de recherche sur modèles légers** : DR-Venus démontre qu'un agent de recherche approfondie peut être entraîné sur un petit modèle (edge-scale) avec seulement 10 000 exemples ouverts, avec des implications directes pour les déploiements contraints en confidentialité ou en ressources. [Source](https://arxiv.org/abs/2604.19859)
+
+- **Membership Inference Attack (MIA)** : Une réévaluation des hypothèses classiques sur les attaques d'inférence d'appartenance remet en question la corrélation supposée entre généralisation du modèle et vulnérabilité aux MIA. Les métriques d'évaluation utilisées jusqu'ici méritent d'être reconsidérées. Sujet directement pertinent pour la conformité RGPD et la protection des données d'entraînement. [Source](https://arxiv.org/abs/2604.19936)
+
+- **Federated Learning : confidentialité et robustesse** : Deux contributions sur le FL en environnement distribué : l'une intègre la blockchain comme infrastructure de confiance pour le FL sur cloud IoT, l'autre combine confidentialité différentielle et clustering avec une agrégation guidée par la normalité pour limiter les fuites d'informations privées. Utile pour les architectures edge souveraines. [FL blockchain](https://arxiv.org/abs/2604.20062) · [FL différentiel privé](https://arxiv.org/abs/2604.20596)
+
+- **Impact environnemental des LLM** : Un cadre de screening transparent propose d'estimer l'empreinte des LLM (inférence et entraînement) à partir de descriptions en langage naturel, même sous observabilité limitée. Outil potentiellement utile pour les bilans RSE ou les exigences réglementaires émergentes. [Source](https://arxiv.org/abs/2604.19757)
+
+- **LLM médical : séparation raisonnement/communication** : Une architecture modulaire fondée sur un moteur bayésien argumente que les LLM confondent raisonnement probabiliste et communication naturelle, ce qui constitue un risque structurel dans les applications diagnostiques. [Source](https://arxiv.org/abs/2604.20022)
+
+- **Scalabilité multi-agents en edge computing** : Une étude sur le déploiement de plus de 100 agents en environnement Smart City identifie un "effondrement synergique" — dégradation superlinéaire des performances — que les optimisations locales ne suffisent pas à corriger. Résultat utile pour dimensionner des architectures multi-agents réelles. [Source](https://arxiv.org/abs/2604.20129)
+
+- **Quantization des modèles de diffusion pour le code** : Les modèles de langage basés sur la diffusion (d-LLMs) sont plus robustes à la quantification que leurs équivalents auto-régressifs sur des benchmarks de code, ce qui ouvre une piste pour réduire l'empreinte mémoire sans dégradation majeure. [Source](https://arxiv.org/abs/2604.20079)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Paquet PyPI Xinference compromis</strong> : Les versions 2.6.0 à 2.6.2 de la bibliothèque Xinference contiennent du code malveillant capable d'exfiltrer des secrets sensibles (clés SSH, fichiers .env). Toute équipe utilisant ce paquet doit vérifier ses environnements en urgence et auditer sa chaîne d'approvisionnement logicielle. <a href="https://next.ink/234711/xinference-encore-un-paquet-pypi-verole-qui-vole-vos-secrets-en-silence/">Next.ink</a></li>
+<li><strong>Limites opérationnelles de Claude Code</strong> : Anthropic souffre d'un manque de capacités de calcul face à l'adoption massive de Claude Code, au point d'avoir envisagé de retirer l'outil de l'offre Pro — une décision qui révèle une tension structurelle entre croissance commerciale et infrastructure. <a href="https://next.ink/234872/victime-de-son-succes-anthropic-a-teste-de-supprimer-claude-code-de-son-abonnement-pro/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Claude Desktop : extensions navigateur pré-autorisées à l'insu de l'utilisateur</strong> : L'installation de Claude Desktop crée silencieusement des manifestes autorisant la communication entre l'application et ses extensions Chrome, sans en informer l'utilisateur. Ce comportement pose des questions de conformité et de maîtrise du périmètre de sécurité sur les postes de travail. <a href="https://next.ink/234613/claude-desktop-sarroge-le-droit-de-pre-autoriser-ses-extensions-pour-navigateurs/">Next.ink</a></li>
+<li><strong>Gains IA nets inférieurs aux annonces</strong> : La correction des erreurs générées par les outils d'IA en entreprise consomme une part non négligeable du gain de productivité attendu — un coût caché à intégrer dans tout calcul de ROI avant déploiement. <a href="https://www.lemondeinformatique.fr/actualites/lire-une-part-des-benefices-de-l-ia-effacee-par-la-correction-d-erreurs-99996.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Dépassements budgétaires IA et manœuvres stratégiques</strong> : Uber a déjà épuisé l'intégralité de son budget IA 2026 du fait de l'usage intensif des outils de génération de code, signal d'un problème de gouvernance des coûts IA à anticiper. Par ailleurs, OpenAI renforce sa présence en Europe avec une direction française, et Meta mobilise ses salariés pour produire des données d'entraînement. <a href="https://www.frenchweb.fr/chez-uber-lia-fait-exploser-les-budgets-chez-meta-les-salaries-entrainent-les-machines-openai-muscle-son-jeu-en-europe-avec-un-francais-a-sa-tete/461400">Frenchweb</a></li>
+<li><strong>Agents IA en usage métier réel (Accor)</strong> : Accor déploie des agents IA auprès de ses équipes commerciales pour automatiser l'intégration de documents et le rapprochement de données, un cas d'usage concret qui illustre la trajectoire vers l'IA agentique en contexte grand compte. <a href="https://www.lemondeinformatique.fr/actualites/lire-accor-pousse-des-agents-aupres-des-commerciaux-99994.html">Le Monde Informatique</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Optimisation de l'inférence LLM</strong> : Plusieurs axes convergent pour réduire les coûts et la latence des LLM en production : le décodage spéculatif (EAGLE3, validé chez PayPal avec un gain mesurable sur un modèle 8B), le cache sémantique continu pour recycler les réponses sur requêtes similaires, et l'exploration déterministe d'arbres de décodage tronqués comme alternative plus efficace à la self-consistency par échantillonnage. <a href="https://arxiv.org/abs/2604.19767">EAGLE3/PayPal</a> · <a href="https://arxiv.org/abs/2604.20021">Cache sémantique</a> · <a href="https://arxiv.org/abs/2604.20500">Décodage tronqué</a></li>
 </ul>
 
 <ul>
-<li><strong>Google Cloud : nouveaux TPU pour l'IA agentique</strong> : Google Cloud annonce les TPU 8t et 8i, conçus spécifiquement pour les charges de travail d'IA agentique. À surveiller pour les DSI évaluant des infrastructures cloud dédiées à des agents IA en production. <a href="https://www.lemondeinformatique.fr/actualites/lire-pour-l-ia-agentique-google-cloud-lance-les-tpu-8t-et-8i-99992.html">Le Monde Informatique</a></li>
-</ul>
-
-<h2>Grandes sources internationales</h2>
-
-<ul>
-<li><strong>Google Chrome as enterprise AI agent</strong> : Google intègre Gemini directement dans Chrome pour automatiser des tâches métier (recherche, saisie de données), et lance en parallèle une plateforme de création d'agents IA ciblant les équipes IT. Ces deux initiatives placent Google en position d'intermédiaire technique central dans les environnements de travail, avec les implications de gouvernance et de DLP que cela suppose. <a href="https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/">TechCrunch</a> · <a href="https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/">TechCrunch</a></li>
+<li><strong>Architecture MoE et recyclage de modèles</strong> : L'approche "Expert Upcycling" montre qu'il est possible de convertir des modèles denses existants en architectures Mixture-of-Experts pour déplacer la frontière coût/performance sans repartir de zéro. Pertinent pour les organisations qui cherchent à rentabiliser des modèles déjà entraînés. <a href="https://arxiv.org/abs/2604.19835">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Meta surveille ses employés pour entraîner ses IA</strong> : Meta déploie un outil de capture d'activité (clics, frappes clavier, navigation) sur les postes de ses salariés américains afin d'alimenter l'entraînement de ses agents IA. Un précédent à surveiller pour les DRH et RSSI : la frontière entre monitoring légitime et collecte massive de données comportementales internes devient floue. <a href="https://www.theverge.com/tech/916681/meta-ai-agents-employee-tracking">The Verge</a></li>
+<li><strong>Agents LLM et orchestration de workflows</strong> : WorkflowGen propose de réduire la surcharge de raisonnement des agents LLM en réutilisant les trajectoires d'expériences passées pour générer des workflows adaptés. Dans un registre complémentaire, R2IF aligne explicitement le raisonnement interne et les décisions d'appel d'outils via des récompenses composites, ce qui améliore la fiabilité des agents en environnement outillé. <a href="https://arxiv.org/abs/2604.19756">WorkflowGen</a> · <a href="https://arxiv.org/abs/2604.20316">R2IF</a></li>
 </ul>
 
 <ul>
-<li><strong>L'IA comme accélérateur offensif</strong> : Des hackers nord-coréens de niveau modeste ont utilisé l'IA pour coder des malwares, générer des sites fictifs et mener des opérations d'ingénierie sociale — pour un butin estimé à 12 millions de dollars en trois mois. Par ailleurs, des tests menés par Wired montrent que plusieurs modèles IA sont capables de conduire des attaques de phishing convaincantes, y compris en exploitant les compétences sociales, pas seulement techniques. La démocratisation offensive via l'IA est une réalité opérationnelle, pas une hypothèse. <a href="https://www.wired.com/story/ai-tools-are-helping-mediocre-north-korean-hackers-steal-millions/">Wired</a> · <a href="https://www.wired.com/story/ai-model-phishing-attack-cybersecurity/">Wired</a></li>
+<li><strong>Fiabilité et hallucinations des LLM</strong> : Deux travaux distincts abordent la question de la confiance accordée aux sorties de LLM : l'un montre que l'incertitude exprimée et la correction réelle sont portées par des mécanismes internes différents (dissociation fonctionnelle via autoencodeurs sparse), l'autre propose un entraînement différentiable par prédiction conforme pour garantir statistiquement des taux d'erreur bornés. Des résultats importants pour tout déploiement en contexte critique. <a href="https://arxiv.org/abs/2604.19974">Incertitude vs correction</a> · <a href="https://arxiv.org/abs/2604.20098">Conformal training</a></li>
 </ul>
 
 <ul>
-<li><strong>Nouveaux TPU Google Cloud</strong> : Google annonce deux nouvelles générations de puces TPU, plus rapides et moins chères, pour concurrencer Nvidia sur l'inférence et l'entraînement IA en cloud. Pertinent pour les arbitrages d'infrastructure IA, sans impact sécurité direct à court terme. <a href="https://techcrunch.com/2026/04/22/google-cloud-next-new-tpu-ai-chips-compete-with-nvidia/">TechCrunch</a></li>
+<li><strong>Fine-tuning par renforcement (RLVR)</strong> : Une analyse théorique des limites du fine-tuning RLVR sur les modèles vision-langage pointe des problèmes de convergence et de généralisation que les succès empiriques récents masquaient. À prendre en compte avant de déployer ce type d'entraînement en production. <a href="https://arxiv.org/abs/2604.19857">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents de recherche sur modèles légers</strong> : DR-Venus démontre qu'un agent de recherche approfondie peut être entraîné sur un petit modèle (edge-scale) avec seulement 10 000 exemples ouverts, avec des implications directes pour les déploiements contraints en confidentialité ou en ressources. <a href="https://arxiv.org/abs/2604.19859">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Membership Inference Attack (MIA)</strong> : Une réévaluation des hypothèses classiques sur les attaques d'inférence d'appartenance remet en question la corrélation supposée entre généralisation du modèle et vulnérabilité aux MIA. Les métriques d'évaluation utilisées jusqu'ici méritent d'être reconsidérées. Sujet directement pertinent pour la conformité RGPD et la protection des données d'entraînement. <a href="https://arxiv.org/abs/2604.19936">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Federated Learning : confidentialité et robustesse</strong> : Deux contributions sur le FL en environnement distribué : l'une intègre la blockchain comme infrastructure de confiance pour le FL sur cloud IoT, l'autre combine confidentialité différentielle et clustering avec une agrégation guidée par la normalité pour limiter les fuites d'informations privées. Utile pour les architectures edge souveraines. <a href="https://arxiv.org/abs/2604.20062">FL blockchain</a> · <a href="https://arxiv.org/abs/2604.20596">FL différentiel privé</a></li>
+</ul>
+
+<ul>
+<li><strong>Impact environnemental des LLM</strong> : Un cadre de screening transparent propose d'estimer l'empreinte des LLM (inférence et entraînement) à partir de descriptions en langage naturel, même sous observabilité limitée. Outil potentiellement utile pour les bilans RSE ou les exigences réglementaires émergentes. <a href="https://arxiv.org/abs/2604.19757">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>LLM médical : séparation raisonnement/communication</strong> : Une architecture modulaire fondée sur un moteur bayésien argumente que les LLM confondent raisonnement probabiliste et communication naturelle, ce qui constitue un risque structurel dans les applications diagnostiques. <a href="https://arxiv.org/abs/2604.20022">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Scalabilité multi-agents en edge computing</strong> : Une étude sur le déploiement de plus de 100 agents en environnement Smart City identifie un "effondrement synergique" — dégradation superlinéaire des performances — que les optimisations locales ne suffisent pas à corriger. Résultat utile pour dimensionner des architectures multi-agents réelles. <a href="https://arxiv.org/abs/2604.20129">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Quantization des modèles de diffusion pour le code</strong> : Les modèles de langage basés sur la diffusion (d-LLMs) sont plus robustes à la quantification que leurs équivalents auto-régressifs sur des benchmarks de code, ce qui ouvre une piste pour réduire l'empreinte mémoire sans dégradation majeure. <a href="https://arxiv.org/abs/2604.20079">Source</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260422-1920</guid>
-      <pubDate>Wed, 22 Apr 2026 19:20:07 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260423-0807</guid>
+      <pubDate>Thu, 23 Apr 2026 08:07:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
