@@ -7,6 +7,13 @@ on:
     # On met 6h, 12h, 18h UTC = 7h, 13h, 19h hiver / 8h, 14h, 20h été
     - cron: '0 6,12,18 * * *'
   workflow_dispatch:   # bouton "Run workflow" manuel
+  push:
+    branches: [main]
+    # On exclut les fichiers de doc pour ne pas re-générer un digest
+    # à chaque modification de README/CHANGELOG/MEMORY.
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
 
 permissions:
   contents: write      # pour que le workflow puisse commit seen.json + digest.xml

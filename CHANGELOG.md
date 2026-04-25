@@ -7,6 +7,13 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
 
 ## [Non publié]
 
+### Fixed
+- **2026-04-25** — Déclencheur `push` manquant dans `.github/workflows/digest.yml`.
+  Le README §3 documentait 3 déclencheurs (cron, `workflow_dispatch`, push sur
+  `main`) mais le workflow n'en avait que 2. Ajout de `push: branches: [main]`
+  avec `paths-ignore` sur `**.md` et `LICENSE` pour éviter un build inutile à
+  chaque modification de doc.
+
 ### Changed
 - **2026-04-25** — Documentation inline de `digest.py` étoffée pour
   faciliter la prise en main par un dev tiers (code inchangé,
