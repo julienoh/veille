@@ -24,6 +24,10 @@ dans Reeder iOS.
 commentaires aux points subtils). Code inchangé. Le fichier est
 maintenant lisible "à froid" par un dev tiers.
 
+**2026-04-25** — Ajout du déclencheur `push: branches: [main]` dans
+`digest.yml` (avec `paths-ignore: ['**.md', 'LICENSE']`). Le README §3
+documentait 3 déclencheurs mais le workflow n'en avait que 2.
+
 ---
 
 ## Décisions prises
@@ -39,6 +43,10 @@ maintenant lisible "à froid" par un dev tiers.
   (la clé API est dans GitHub Secrets, jamais dans le repo)
 - **2026-04-19** — OPML comme source de vérité des sources (vs URLs hardcodées)
   → double usage : lisible par le pipeline ET importable dans Reeder
+- **2026-04-25** — Déclencheur `push` ajouté à `digest.yml` avec `paths-ignore`
+  sur `**.md` et `LICENSE`
+  → permet de tester un changement de code immédiatement sans attendre
+  le cron, sans re-générer un digest pour les modifs de doc seules
 
 ### Modèles Claude
 
