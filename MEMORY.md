@@ -4,7 +4,7 @@
 > Se lit au début de chaque nouvelle conversation pour reprendre le contexte.
 > Se met à jour à la fin de chaque session productive.
 
-**Dernière mise à jour** : 2026-04-22
+**Dernière mise à jour** : 2026-04-25
 
 ---
 
@@ -18,6 +18,11 @@ dans Reeder iOS.
 - Repo : https://github.com/julienoh/veille (public, MIT)
 - URL digest : https://julienoh.github.io/veille/digest.xml
 - Coût réel constaté : ~0.05$ par run
+
+**2026-04-25** — Documentation inline de `digest.py` étoffée
+(docstring module, sémantique des paramètres, docstrings fonctions,
+commentaires aux points subtils). Code inchangé. Le fichier est
+maintenant lisible "à froid" par un dev tiers.
 
 ---
 

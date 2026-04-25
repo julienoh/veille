@@ -7,6 +7,20 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
 
 ## [Non publié]
 
+### Changed
+- **2026-04-25** — Documentation inline de `digest.py` étoffée pour
+  faciliter la prise en main par un dev tiers (code inchangé,
+  277 → 404 lignes) :
+  - Docstring module avec vue d'ensemble des 6 étapes du pipeline
+    et des effets de bord persistés
+  - Section Configuration : chaque paramètre commenté avec sa
+    sémantique et la justification du défaut
+  - Docstrings de fonctions (Args / Returns / comportement d'erreur)
+  - Commentaires aux points subtils : tolérance feed-par-feed sur les
+    erreurs de fetch, extraction regex du JSON dans la réponse Haiku,
+    persistance de `seen[hash]` dès l'appel Haiku indépendamment du
+    score, ordre de persistance RSS puis seen pour cohérence sur crash
+
 ### À venir
 - Intégration Jina Reader ou Wallabag pour fetcher le contenu complet
   des articles (feeds RSS souvent tronqués)
