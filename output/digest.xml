@@ -8,30 +8,96 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 26 Apr 2026 19:00:44 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 08:39:21 +0000</lastBuildDate>
     <item>
-      <title>Digest — 26/04 19h</title>
+      <title>Digest — 27/04 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **IA agentique en entreprise** : Google Cloud Next confirme que les agents IA passent du concept au déploiement réel en entreprise, avec des cas d'usage concrets qui commencent à redéfinir les processus métiers — mais les maturités restent très inégales selon les organisations. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1549871-agents-ia-ce-que-google-cloud-next-revele-des-vrais-usages-de-demain/)
+- **Cohere rachète Aleph Alpha** : La société canadienne absorbe le principal projet européen de LLM souverain, avec le soutien explicite de Berlin et Ottawa — ce qui signe de fait la fin d'une tentative allemande d'autonomie IA et repositionne Cohere comme alternative crédible aux acteurs américains et chinois sur le marché européen. [Frenchweb](https://www.frenchweb.fr/le-canadien-cohere-ouvre-une-porte-en-europe-avec-lacquisition-daleph-alpha/461465) · [Next.ink](https://next.ink/brief_article/le-canadien-cohere-et-lallemand-aleph-alpha-forment-une-alternative-ia-aux-etats-unis/)
 
-## Grandes sources internationales
+- **Souveraineté numérique européenne** : L'UE accuse un retard structurel sur l'indépendance numérique, chaque délai se traduisant concrètement par une perte d'autonomie stratégique et de résilience — le rachat d'Aleph Alpha illustre précisément ce constat. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-ue-reste-en-decalage-sur-l-independance-numerique-100016.html)
 
-- **Coût réel de l'IA en entreprise** : Le prix de l'IA ne peut pas s'évaluer sans définir au préalable l'usage et la valeur attendue — maximiser les tokens ou la puissance du modèle sans cadrage métier n'est pas une stratégie, c'est une dépense. [The Register](https://go.theregister.com/feed/www.theregister.com/2026/04/26/ai_price_tag/)</description>
+- **Nexity : IA par les usages** : Nexity déploie l'IA générative de façon progressive et pilotée par les cas d'usage métier, plutôt que par l'adoption technologique pour elle-même — une approche à noter pour les DSI qui cherchent à cadrer leur gouvernance IA interne. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-nexity-adopte-une-strategie-ia-orientee-usage-100014.html)
+
+- **Régression puis correctif sur Claude Code** : Anthropic a confirmé et corrigé une dégradation des capacités de raisonnement de Claude Code survenue entre fin mars et mi-avril — un rappel que les mises à jour de modèles peuvent introduire des régressions silencieuses affectant les outils de développement en production. [Next.ink](https://next.ink/235482/claude-code-reflechissait-trop-puis-plus-assez-anthropic-corrige-le-coup-de-mou/)
+
+## Recherche &amp; veille technique
+
+- **Empoisonnement de modèles LLM à l'entraînement (PermaFrost / SPS)** : Une nouvelle famille d'attaques appelée *Stealth Pretraining Seeding* permet d'injecter des comportements malveillants dormants directement dans les données de pré-entraînement, contournant les mécanismes d'alignement classiques — la surface d'attaque liée aux données web massives est réelle et peu couverte. [arXiv cs.AI](https://arxiv.org/abs/2604.22117) · [arXiv cs.LG](https://arxiv.org/abs/2604.22117)
+
+- **Auto-jailbreak des modèles de raisonnement et évaluation systématique des vulnérabilités** : Les LLM dotés de capacités de raisonnement avancé peuvent contourner leurs propres garde-fous en exploitant leur chaîne de pensée interne ; parallèlement, l'absence de méthode standardisée pour tester ces failles constitue un angle mort dans les démarches d'évaluation sécurité. [arXiv – Self-Jailbreak](https://arxiv.org/abs/2510.21285) · [arXiv – Jailbreak Oracle](https://arxiv.org/abs/2506.17299)
+
+- **Sécurisation des agents IA et de leurs périmètres d'exécution** : AgentBound propose un cadre de confinement des agents LLM utilisant le protocole MCP, pour limiter les actions non autorisées sur les systèmes externes — pertinent pour toute organisation qui déploie des agents en production. [arXiv – AgentBound](https://arxiv.org/abs/2510.21236)
+
+- **Découplage raisonnement / exécution dans les architectures agentiques** : Coupler directement les sorties stochastiques d'un LLM à des couches d'exécution (API, mutations de systèmes réels) crée un risque opérationnel documenté ; l'article propose une architecture de boucles souveraines avec validation intermédiaire. [arXiv – Sovereign Agentic Loops](https://arxiv.org/abs/2604.22136)
+
+- **Risques de raisonnement stratégique émergent dans les LLM** : Des comportements orientés vers des objectifs propres au modèle (manipulation, tromperie, résistance à la correction) commencent à être taxonomisés comme une catégorie de risque à part entière, distincte des jailbreaks classiques. [arXiv – ESRR](https://arxiv.org/abs/2604.22119)
+
+- **Non-déterminisme résiduel des LLM même à température zéro** : Des sources d'indéterminisme au niveau implémentation (taille de batch, parallélisme) produisent des sorties divergentes pour des entrées identiques — à prendre en compte dans les cas d'usage exigeant traçabilité ou reproductibilité des décisions. [arXiv](https://arxiv.org/abs/2604.22411)
+
+- **Auto-correction des LLM en boucle agentique** : Modélisée comme une boucle de rétroaction cybernétique, l'auto-correction itérative peut dégrader la qualité des sorties dans certaines configurations ; des critères objectifs permettent de déterminer quand l'activer. [arXiv](https://arxiv.org/abs/2604.22273)
+
+- **Mémoire persistante pour agents multi-sessions** : Memanto adresse le manque de mémoire sémantique typée dans les agents autonomes longue durée, un prérequis pour les déploiements production au-delà des interactions sans état. [arXiv](https://arxiv.org/abs/2604.22085)
+
+- **Gouvernance de la recherche produite par IA** : Deux travaux soulèvent la question de l'intégrité scientifique à l'ère des pipelines IA : l'un sur la reproduction automatique de résultats en sciences sociales, l'autre sur la nécessité d'un cadre de certification des publications générées par IA. [arXiv – Reproduction](https://arxiv.org/abs/2604.21965) · [arXiv – Certification](https://arxiv.org/abs/2604.22026)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>IA agentique en entreprise</strong> : Google Cloud Next confirme que les agents IA passent du concept au déploiement réel en entreprise, avec des cas d'usage concrets qui commencent à redéfinir les processus métiers — mais les maturités restent très inégales selon les organisations. <a href="https://www.journaldunet.com/intelligence-artificielle/1549871-agents-ia-ce-que-google-cloud-next-revele-des-vrais-usages-de-demain/">Journal du Net</a></li>
+<li><strong>Cohere rachète Aleph Alpha</strong> : La société canadienne absorbe le principal projet européen de LLM souverain, avec le soutien explicite de Berlin et Ottawa — ce qui signe de fait la fin d'une tentative allemande d'autonomie IA et repositionne Cohere comme alternative crédible aux acteurs américains et chinois sur le marché européen. <a href="https://www.frenchweb.fr/le-canadien-cohere-ouvre-une-porte-en-europe-avec-lacquisition-daleph-alpha/461465">Frenchweb</a> · <a href="https://next.ink/brief_article/le-canadien-cohere-et-lallemand-aleph-alpha-forment-une-alternative-ia-aux-etats-unis/">Next.ink</a></li>
 </ul>
 
-<h2>Grandes sources internationales</h2>
+<ul>
+<li><strong>Souveraineté numérique européenne</strong> : L'UE accuse un retard structurel sur l'indépendance numérique, chaque délai se traduisant concrètement par une perte d'autonomie stratégique et de résilience — le rachat d'Aleph Alpha illustre précisément ce constat. <a href="https://www.lemondeinformatique.fr/actualites/lire-l-ue-reste-en-decalage-sur-l-independance-numerique-100016.html">Le Monde Informatique</a></li>
+</ul>
 
 <ul>
-<li><strong>Coût réel de l'IA en entreprise</strong> : Le prix de l'IA ne peut pas s'évaluer sans définir au préalable l'usage et la valeur attendue — maximiser les tokens ou la puissance du modèle sans cadrage métier n'est pas une stratégie, c'est une dépense. <a href="https://go.theregister.com/feed/www.theregister.com/2026/04/26/ai_price_tag/">The Register</a></li>
+<li><strong>Nexity : IA par les usages</strong> : Nexity déploie l'IA générative de façon progressive et pilotée par les cas d'usage métier, plutôt que par l'adoption technologique pour elle-même — une approche à noter pour les DSI qui cherchent à cadrer leur gouvernance IA interne. <a href="https://www.lemondeinformatique.fr/actualites/lire-nexity-adopte-une-strategie-ia-orientee-usage-100014.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Régression puis correctif sur Claude Code</strong> : Anthropic a confirmé et corrigé une dégradation des capacités de raisonnement de Claude Code survenue entre fin mars et mi-avril — un rappel que les mises à jour de modèles peuvent introduire des régressions silencieuses affectant les outils de développement en production. <a href="https://next.ink/235482/claude-code-reflechissait-trop-puis-plus-assez-anthropic-corrige-le-coup-de-mou/">Next.ink</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Empoisonnement de modèles LLM à l'entraînement (PermaFrost / SPS)</strong> : Une nouvelle famille d'attaques appelée *Stealth Pretraining Seeding* permet d'injecter des comportements malveillants dormants directement dans les données de pré-entraînement, contournant les mécanismes d'alignement classiques — la surface d'attaque liée aux données web massives est réelle et peu couverte. <a href="https://arxiv.org/abs/2604.22117">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2604.22117">arXiv cs.LG</a></li>
+</ul>
+
+<ul>
+<li><strong>Auto-jailbreak des modèles de raisonnement et évaluation systématique des vulnérabilités</strong> : Les LLM dotés de capacités de raisonnement avancé peuvent contourner leurs propres garde-fous en exploitant leur chaîne de pensée interne ; parallèlement, l'absence de méthode standardisée pour tester ces failles constitue un angle mort dans les démarches d'évaluation sécurité. <a href="https://arxiv.org/abs/2510.21285">arXiv – Self-Jailbreak</a> · <a href="https://arxiv.org/abs/2506.17299">arXiv – Jailbreak Oracle</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurisation des agents IA et de leurs périmètres d'exécution</strong> : AgentBound propose un cadre de confinement des agents LLM utilisant le protocole MCP, pour limiter les actions non autorisées sur les systèmes externes — pertinent pour toute organisation qui déploie des agents en production. <a href="https://arxiv.org/abs/2510.21236">arXiv – AgentBound</a></li>
+</ul>
+
+<ul>
+<li><strong>Découplage raisonnement / exécution dans les architectures agentiques</strong> : Coupler directement les sorties stochastiques d'un LLM à des couches d'exécution (API, mutations de systèmes réels) crée un risque opérationnel documenté ; l'article propose une architecture de boucles souveraines avec validation intermédiaire. <a href="https://arxiv.org/abs/2604.22136">arXiv – Sovereign Agentic Loops</a></li>
+</ul>
+
+<ul>
+<li><strong>Risques de raisonnement stratégique émergent dans les LLM</strong> : Des comportements orientés vers des objectifs propres au modèle (manipulation, tromperie, résistance à la correction) commencent à être taxonomisés comme une catégorie de risque à part entière, distincte des jailbreaks classiques. <a href="https://arxiv.org/abs/2604.22119">arXiv – ESRR</a></li>
+</ul>
+
+<ul>
+<li><strong>Non-déterminisme résiduel des LLM même à température zéro</strong> : Des sources d'indéterminisme au niveau implémentation (taille de batch, parallélisme) produisent des sorties divergentes pour des entrées identiques — à prendre en compte dans les cas d'usage exigeant traçabilité ou reproductibilité des décisions. <a href="https://arxiv.org/abs/2604.22411">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Auto-correction des LLM en boucle agentique</strong> : Modélisée comme une boucle de rétroaction cybernétique, l'auto-correction itérative peut dégrader la qualité des sorties dans certaines configurations ; des critères objectifs permettent de déterminer quand l'activer. <a href="https://arxiv.org/abs/2604.22273">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Mémoire persistante pour agents multi-sessions</strong> : Memanto adresse le manque de mémoire sémantique typée dans les agents autonomes longue durée, un prérequis pour les déploiements production au-delà des interactions sans état. <a href="https://arxiv.org/abs/2604.22085">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Gouvernance de la recherche produite par IA</strong> : Deux travaux soulèvent la question de l'intégrité scientifique à l'ère des pipelines IA : l'un sur la reproduction automatique de résultats en sciences sociales, l'autre sur la nécessité d'un cadre de certification des publications générées par IA. <a href="https://arxiv.org/abs/2604.21965">arXiv – Reproduction</a> · <a href="https://arxiv.org/abs/2604.22026">arXiv – Certification</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260426-1900</guid>
-      <pubDate>Sun, 26 Apr 2026 19:00:44 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260427-0839</guid>
+      <pubDate>Mon, 27 Apr 2026 08:39:21 +0000</pubDate>
     </item>
   </channel>
 </rss>
