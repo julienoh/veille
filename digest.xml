@@ -8,54 +8,88 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 04 May 2026 19:45:36 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 08:27:48 +0000</lastBuildDate>
     <item>
-      <title>Digest — 04/05 19h</title>
+      <title>Digest — 05/05 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **Caisse des Dépôts x Mistral** : L'institution publique s'engage sur un contrat pluriannuel avec Mistral, confirmant la montée en puissance des partenariats entre acteurs souverains français et l'écosystème IA national. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-caisse-des-depots-signe-un-contrat-pluriannuel-avec-mistral-100090.html)
-
-- **Impact de l'IA générative sur l'emploi tech** : Trois ans après l'essor des outils GenAI, l'Insee et la Fed observent une stagnation voire un recul des postes dans le secteur informatique — sans effondrement massif à ce stade, mais la corrélation avec l'automatisation du code est documentée. [Next.ink](https://next.ink/236671/apres-3-ans-dia-generative-un-marche-de-lemploi-des-developpeurs-touche-mais-pas-coule/)
-
-- **IA et armes CBRN** : Des travaux récents montrent que des LLM accessibles au grand public peuvent être détournés pour identifier et synthétiser des agents chimiques ou biologiques létaux en quelques heures — un risque dual concret qui dépasse le cadre théorique. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/six-heures-pour-creer-la-formule-de-plus-de-40-000-molecules-letales-comment-l-ia-pourrait-planifier-un-massacre-et-faciliter-la-conception-d-armes-chimiques-et-bacteriologiques_AN-202605040688.html)
+- **IA agentique : risques cyber sous-estimés** : La course au déploiement des agents IA expose les organisations à des vecteurs d'attaque nouveaux et souvent mal maîtrisés — la vitesse d'adoption prime sur la sécurisation, au détriment de la maîtrise des accès, de la chaîne de confiance et du contrôle des actions autonomes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-risques-cybersecurite-planent-sur-l-ia-agentique-100077.html)
 
 ## Grandes sources internationales
 
-- **AI en entreprise : structuration du marché** : Anthropic et OpenAI accélèrent leur pénétration du marché enterprise en nouant des partenariats avec des gestionnaires d'actifs, signalant une phase de commercialisation agressive au-delà de la simple offre technique. [TechCrunch](https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/)
+- **Interopérabilité des règles SIEM par IA** : Des chercheurs de Singapour et de Chine ont développé un système agentique capable de traduire automatiquement les règles de détection entre différents formats SIEM, ce qui pourrait réduire concrètement la charge de travail des équipes SOC confrontées à la fragmentation des outils. [The Register](https://go.theregister.com/feed/www.theregister.com/2026/05/05/arulecon_siem_rule_conversion/)
 
-- **Shadow AI et gouvernance des composants IA** : L'essor des agents et applications IA non maîtrisés en entreprise rend le SBOM classique insuffisant ; un nouveau référentiel, l'AI-BOM, est proposé pour inventorier les composants IA dans la chaîne d'approvisionnement et maintenir une visibilité nécessaire à leur sécurisation. [The Register](https://go.theregister.com/feed/www.theregister.com/2026/05/04/ai_bom_supply_chain/)
+## Recherche &amp; veille technique
 
-- **Infrastructure pour l'inférence IA agentique** : Les architectures cloud et stockage actuelles n'ont pas été conçues pour les charges d'inférence générées par les agents IA, ce qui impose de repenser l'infrastructure sous-jacente avant tout déploiement à grande échelle. [The Register](https://go.theregister.com/feed/www.theregister.com/2026/05/04/ai_inference_just_plays/)</description>
+- **Défense autonome contre les APT par reinforcement learning (DeepStage)** : Un framework DRL modélise l'environnement d'entreprise comme un processus de décision de Markov partiellement observable pour adapter dynamiquement la défense à chaque phase d'une attaque persistante avancée. En pratique, cela ouvre la voie à des politiques de réponse automatisées capables de s'ajuster à la progression d'un attaquant sans intervention humaine à chaque étape. [Source](https://arxiv.org/abs/2603.16969)
+
+- **Contournement des détecteurs de contenu généré par IA (StyleShield)** : Des transferts de style contrôlables suffisent à tromper les outils de détection AIGC déployés dans des contextes critiques comme le contrôle académique, révélant une fragilité structurelle de ces détecteurs. Les RSSI qui s'appuient sur ce type d'outil pour détecter des campagnes de désinformation ou de phishing doivent en relativiser la fiabilité. [Source](https://arxiv.org/abs/2605.00924)
+
+- **Détection d'anomalies dans les systèmes industriels (PhaseNet++)** : Une approche fréquentielle exploitant la cohérence de phase entre capteurs améliore la détection d'attaques cyber-physiques sur les ICS, là où les méthodes temporelles classiques échouent. Pertinent pour les opérateurs d'infrastructures critiques (OIV/OES) cherchant à renforcer leur détection sur les environnements OT. [Source](https://arxiv.org/abs/2605.00929)
+
+- **Détection d'anomalies dans les systèmes cloud (EventADL)** : Premier framework dédié à la détection et localisation d'anomalies sur données d'événements dans les services cloud, un angle mort des approches existantes centrées sur métriques et logs. Utile pour les équipes SOC gérant des environnements cloud natifs. [Source](https://arxiv.org/abs/2605.00936)
+
+- **Vie privée différentielle et fuites dans les modèles ML (mPL)** : Les garanties de confidentialité différentielle locale par enregistrement peuvent être insuffisantes lorsque les sorties de modèles sont observées conjointement par un attaquant ; la métrique mPL propose une mesure alignée sur le comportement réel d'un adversaire. À considérer lors de l'évaluation des risques de réidentification dans les systèmes ML exposés. [Source](https://arxiv.org/abs/2605.01137)
+
+- **Exemples adversariaux sans accès au modèle** : Des filtres convolutifs simples permettent de générer des exemples adversariaux efficaces sans recourir aux gradients ni à des requêtes répétées, abaissant significativement la barrière technique pour attaquer des systèmes de vision par ordinateur. [Source](https://arxiv.org/abs/2605.01098)
+
+- **Hallucinations persistantes dans les LLM (EPGS)** : Les LLM peuvent être « confiants et faux » sur certains faits, et les méthodes classiques de détection de hallucinations ne les capturent pas ; une approche géométrique par sensibilité des gradients est proposée pour les identifier. Impacte la fiabilité des LLM utilisés dans des chaînes de traitement automatisé (analyse de logs, résumés de rapports d'incidents). [Source](https://arxiv.org/abs/2605.00939)
+
+- **Alignement et gouvernance des LLM** : Deux travaux distincts abordent l'alignement des IA — l'un par un modèle économique de dissuasion (traiter les comportements non conformes comme des réponses stratégiques à des incitations), l'autre par une mise à jour dynamique des préférences au fil du temps. Ces approches théoriques alimentent le débat sur la gouvernance technique des systèmes IA en production. [Source](https://arxiv.org/abs/2605.01643) · [Source](https://arxiv.org/abs/2605.01642)
+
+- **Optimisation et compression des LLM** : Plusieurs travaux convergent sur l'efficacité des LLM en inférence et en entraînement — décomposition bas-rang (LoRA, SVD), compression des activations, inférence collaborative petit/grand modèle, sortie anticipée par couche. Ces techniques réduisent les coûts d'infrastructure et facilitent le déploiement on-premise, un enjeu croissant pour les DSI souhaitant garder la maîtrise des données. [Source](https://arxiv.org/abs/2605.01046) · [Source](https://arxiv.org/abs/2605.01255) · [Source](https://arxiv.org/abs/2605.01111) · [Source](https://arxiv.org/abs/2605.01058) · [Source](https://arxiv.org/abs/2605.01627)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Caisse des Dépôts x Mistral</strong> : L'institution publique s'engage sur un contrat pluriannuel avec Mistral, confirmant la montée en puissance des partenariats entre acteurs souverains français et l'écosystème IA national. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-caisse-des-depots-signe-un-contrat-pluriannuel-avec-mistral-100090.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Impact de l'IA générative sur l'emploi tech</strong> : Trois ans après l'essor des outils GenAI, l'Insee et la Fed observent une stagnation voire un recul des postes dans le secteur informatique — sans effondrement massif à ce stade, mais la corrélation avec l'automatisation du code est documentée. <a href="https://next.ink/236671/apres-3-ans-dia-generative-un-marche-de-lemploi-des-developpeurs-touche-mais-pas-coule/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>IA et armes CBRN</strong> : Des travaux récents montrent que des LLM accessibles au grand public peuvent être détournés pour identifier et synthétiser des agents chimiques ou biologiques létaux en quelques heures — un risque dual concret qui dépasse le cadre théorique. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/six-heures-pour-creer-la-formule-de-plus-de-40-000-molecules-letales-comment-l-ia-pourrait-planifier-un-massacre-et-faciliter-la-conception-d-armes-chimiques-et-bacteriologiques_AN-202605040688.html">BFM Tech</a></li>
+<li><strong>IA agentique : risques cyber sous-estimés</strong> : La course au déploiement des agents IA expose les organisations à des vecteurs d'attaque nouveaux et souvent mal maîtrisés — la vitesse d'adoption prime sur la sécurisation, au détriment de la maîtrise des accès, de la chaîne de confiance et du contrôle des actions autonomes. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-risques-cybersecurite-planent-sur-l-ia-agentique-100077.html">Le Monde Informatique</a></li>
 </ul>
 
 <h2>Grandes sources internationales</h2>
 
 <ul>
-<li><strong>AI en entreprise : structuration du marché</strong> : Anthropic et OpenAI accélèrent leur pénétration du marché enterprise en nouant des partenariats avec des gestionnaires d'actifs, signalant une phase de commercialisation agressive au-delà de la simple offre technique. <a href="https://techcrunch.com/2026/05/04/anthropic-and-openai-are-both-launching-joint-ventures-for-enterprise-ai-services/">TechCrunch</a></li>
+<li><strong>Interopérabilité des règles SIEM par IA</strong> : Des chercheurs de Singapour et de Chine ont développé un système agentique capable de traduire automatiquement les règles de détection entre différents formats SIEM, ce qui pourrait réduire concrètement la charge de travail des équipes SOC confrontées à la fragmentation des outils. <a href="https://go.theregister.com/feed/www.theregister.com/2026/05/05/arulecon_siem_rule_conversion/">The Register</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Défense autonome contre les APT par reinforcement learning (DeepStage)</strong> : Un framework DRL modélise l'environnement d'entreprise comme un processus de décision de Markov partiellement observable pour adapter dynamiquement la défense à chaque phase d'une attaque persistante avancée. En pratique, cela ouvre la voie à des politiques de réponse automatisées capables de s'ajuster à la progression d'un attaquant sans intervention humaine à chaque étape. <a href="https://arxiv.org/abs/2603.16969">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Shadow AI et gouvernance des composants IA</strong> : L'essor des agents et applications IA non maîtrisés en entreprise rend le SBOM classique insuffisant ; un nouveau référentiel, l'AI-BOM, est proposé pour inventorier les composants IA dans la chaîne d'approvisionnement et maintenir une visibilité nécessaire à leur sécurisation. <a href="https://go.theregister.com/feed/www.theregister.com/2026/05/04/ai_bom_supply_chain/">The Register</a></li>
+<li><strong>Contournement des détecteurs de contenu généré par IA (StyleShield)</strong> : Des transferts de style contrôlables suffisent à tromper les outils de détection AIGC déployés dans des contextes critiques comme le contrôle académique, révélant une fragilité structurelle de ces détecteurs. Les RSSI qui s'appuient sur ce type d'outil pour détecter des campagnes de désinformation ou de phishing doivent en relativiser la fiabilité. <a href="https://arxiv.org/abs/2605.00924">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Infrastructure pour l'inférence IA agentique</strong> : Les architectures cloud et stockage actuelles n'ont pas été conçues pour les charges d'inférence générées par les agents IA, ce qui impose de repenser l'infrastructure sous-jacente avant tout déploiement à grande échelle. <a href="https://go.theregister.com/feed/www.theregister.com/2026/05/04/ai_inference_just_plays/">The Register</a></li>
+<li><strong>Détection d'anomalies dans les systèmes industriels (PhaseNet++)</strong> : Une approche fréquentielle exploitant la cohérence de phase entre capteurs améliore la détection d'attaques cyber-physiques sur les ICS, là où les méthodes temporelles classiques échouent. Pertinent pour les opérateurs d'infrastructures critiques (OIV/OES) cherchant à renforcer leur détection sur les environnements OT. <a href="https://arxiv.org/abs/2605.00929">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection d'anomalies dans les systèmes cloud (EventADL)</strong> : Premier framework dédié à la détection et localisation d'anomalies sur données d'événements dans les services cloud, un angle mort des approches existantes centrées sur métriques et logs. Utile pour les équipes SOC gérant des environnements cloud natifs. <a href="https://arxiv.org/abs/2605.00936">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Vie privée différentielle et fuites dans les modèles ML (mPL)</strong> : Les garanties de confidentialité différentielle locale par enregistrement peuvent être insuffisantes lorsque les sorties de modèles sont observées conjointement par un attaquant ; la métrique mPL propose une mesure alignée sur le comportement réel d'un adversaire. À considérer lors de l'évaluation des risques de réidentification dans les systèmes ML exposés. <a href="https://arxiv.org/abs/2605.01137">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Exemples adversariaux sans accès au modèle</strong> : Des filtres convolutifs simples permettent de générer des exemples adversariaux efficaces sans recourir aux gradients ni à des requêtes répétées, abaissant significativement la barrière technique pour attaquer des systèmes de vision par ordinateur. <a href="https://arxiv.org/abs/2605.01098">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Hallucinations persistantes dans les LLM (EPGS)</strong> : Les LLM peuvent être « confiants et faux » sur certains faits, et les méthodes classiques de détection de hallucinations ne les capturent pas ; une approche géométrique par sensibilité des gradients est proposée pour les identifier. Impacte la fiabilité des LLM utilisés dans des chaînes de traitement automatisé (analyse de logs, résumés de rapports d'incidents). <a href="https://arxiv.org/abs/2605.00939">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Alignement et gouvernance des LLM</strong> : Deux travaux distincts abordent l'alignement des IA — l'un par un modèle économique de dissuasion (traiter les comportements non conformes comme des réponses stratégiques à des incitations), l'autre par une mise à jour dynamique des préférences au fil du temps. Ces approches théoriques alimentent le débat sur la gouvernance technique des systèmes IA en production. <a href="https://arxiv.org/abs/2605.01643">Source</a> · <a href="https://arxiv.org/abs/2605.01642">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation et compression des LLM</strong> : Plusieurs travaux convergent sur l'efficacité des LLM en inférence et en entraînement — décomposition bas-rang (LoRA, SVD), compression des activations, inférence collaborative petit/grand modèle, sortie anticipée par couche. Ces techniques réduisent les coûts d'infrastructure et facilitent le déploiement on-premise, un enjeu croissant pour les DSI souhaitant garder la maîtrise des données. <a href="https://arxiv.org/abs/2605.01046">Source</a> · <a href="https://arxiv.org/abs/2605.01255">Source</a> · <a href="https://arxiv.org/abs/2605.01111">Source</a> · <a href="https://arxiv.org/abs/2605.01058">Source</a> · <a href="https://arxiv.org/abs/2605.01627">Source</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260504-1945</guid>
-      <pubDate>Mon, 04 May 2026 19:45:36 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260505-0827</guid>
+      <pubDate>Tue, 05 May 2026 08:27:48 +0000</pubDate>
     </item>
   </channel>
 </rss>
