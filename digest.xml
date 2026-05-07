@@ -8,52 +8,100 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 06 May 2026 19:51:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 08:52:38 +0000</lastBuildDate>
     <item>
-      <title>Digest — 06/05 19h</title>
+      <title>Digest — 07/05 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **Chrome / Gemini – stockage silencieux de 4 Go** : Google déploie discrètement un fichier `weights.bin` d'environ 4 Go sur les machines des utilisateurs de Chrome, sans notification ni consentement explicite. Pour un RSSI, c'est un point de vigilance immédiat : des données volumineuses liées à l'IA peuvent transiter et résider sur les postes sans que la politique de sécurité en soit informée. [Next.ink](https://next.ink/237140/chrome-peut-stocker-4-go-associes-a-gemini-sur-votre-machine-sans-crier-gare/)
+- **Régulation IA en Europe** : L'UE s'apprête à interdire les outils IA de génération de nus non consentis d'ici fin 2025, en réponse aux dérives de deepfakes sexuels. En parallèle, plusieurs obligations de l'AI Act sont repoussées à 2027, ce qui allonge les délais de mise en conformité pour les organisations. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/l-union-europeenne-s-accorde-pour-bannir-les-ia-qui-permettent-la-generation-de-nus-sans-consentement-et-retarde-certaines-mesures-de-l-ia-act_AD-202505070288.html)
 
-- **Cisco acquiert Astrix Security (400 M$)** : Cisco finalise le rachat de la start-up israélienne Astrix, spécialisée dans la sécurité des agents IA et des connexions non humaines (tokens, API keys, OAuth). Un signal fort sur la montée en puissance des risques liés aux identités machines dans les architectures agentiques. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-cisco-croque-la-start-up-en-securite-agentique-astrix-400-m$-100119.html)
+- **Montée en puissance numérique de la DGSE** : Les effectifs numériques de la DGSE ont progressé de 79 % en dix ans, reflet d'une transformation profonde des services de renseignement français depuis 2015. Cela illustre l'importance stratégique croissante des compétences cyber et data dans les organisations souveraines. [Next.ink](https://next.ink/237157/les-emplois-lies-au-numerique-ont-explose-de-79-a-la-dgse-en-10-ans/)
 
-- **Google DeepMind – entraînement IA sur Eve Online** : DeepMind investit 120 M$ dans le studio CCP pour utiliser l'environnement d'*Eve Online* comme terrain d'entraînement pour des IA confrontées à des systèmes complexes et dynamiques. Pas d'impact opérationnel direct, mais illustre la tendance à exploiter des simulations à grande échelle pour accélérer la maturité des modèles d'IA autonomes. [BFM Tech](https://www.bfmtv.com/tech/gaming/google-deepmind-investit-120-millions-de-dollars-dans-eve-online-genial-jeu-massivement-multijoueur-pour-entrainer-son-ia-sur-des-systemes-complexes-et-dynamiques_AV-202505060816.html)
+- **Infrastructure IT et agents IA** : La start-up française OpsMill lève 12 M€ pour centraliser les données d'infrastructure, condition préalable au déploiement fiable d'agents IA en entreprise. Un signal de marché clair : l'outillage de la donnée d'infrastructure devient un prérequis opérationnel, pas une option. [Journal du Net](https://www.journaldunet.com/cloud/1550131-opsmill-leve-12-millions-d-euros-pour-adapter-les-systemes-it-aux-exigences-de-l-ia/)
+
+- **Google DeepMind / EVE Online** : DeepMind s'attaque à EVE Online, un environnement multi-joueurs ouvert jugé bien plus complexe que Go ou StarCraft. L'intérêt pour un RSSI est limité en pratique, mais cela illustre l'évolution des benchmarks utilisés pour tester les capacités de raisonnement et d'adaptation des IA. [Next.ink](https://next.ink/brief_article/google-deepmind-sattaque-a-eve-online/)
 
 ## Grandes sources internationales
 
-- **DeepSeek – première levée de fonds** : Le laboratoire chinois DeepSeek s'apprête à boucler un premier tour de financement qui valoriserait la société à 45 milliards de dollars, confirmant son poids croissant face aux acteurs américains malgré des coûts d'entraînement nettement inférieurs. Un signal à surveiller pour les décideurs IT qui évaluent les alternatives aux modèles OpenAI/Anthropic dans leurs stratégies IA. [TechCrunch](https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/)
+- **Tensions dans la chaîne IA** : Des acteurs clés de l'écosystème IA (infrastructure, chips, données) identifient des points de rupture concrets : pénuries de composants, concentration des infrastructures et incertitudes sur la viabilité à long terme de l'architecture technique actuelle. [TechCrunch](https://techcrunch.com/2026/05/06/five-architects-of-the-ai-economy-explain-where-the-wheels-are-coming-off/)
 
-## Labos &amp; éditeurs
+## Recherche &amp; veille technique
 
-- **Migration vLLM V0→V1 et fiabilité en RL** : Le passage de vLLM V0 à V1 introduit des changements d'architecture qui peuvent affecter la reproductibilité des résultats dans les pipelines d'apprentissage par renforcement (RL) — la cohérence des sorties du moteur d'inférence doit être vérifiée avant d'engager tout cycle d'entraînement. Un point de vigilance concret pour les équipes qui industrialisent des workflows LLM avec du RL (GRPO, PPO, etc.). [Hugging Face Blog](https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections)</description>
+- **Sécurité des agents IA à l'exécution (AgentTrust / DTap)** : Les agents IA capables d'exécuter des commandes shell, requêtes HTTP ou opérations fichiers représentent un risque opérationnel direct — une seule action non contrôlée peut entraîner exfiltration de données ou suppression accidentelle. Deux travaux proposent respectivement un mécanisme d'interception runtime des appels d'outils et une plateforme de red-teaming contrôlable pour tester ces agents avant déploiement. [AgentTrust](https://arxiv.org/abs/2605.04785) · [DTap](https://arxiv.org/abs/2605.04808)
+
+- **Backdoors indétectables dans les modèles pré-entraînés** : Une attaque de type supply-chain baptisée *Sparse Backdoor* démontre qu'il est possible d'injecter une porte dérobée mathématiquement prouvée indétectable dans des classifieurs d'images (CNN, Vision Transformers), sans altération perceptible des paramètres. Cela remet en cause la confiance accordée aux modèles téléchargés depuis des dépôts publics. [arXiv cs.AI](https://arxiv.org/abs/2605.04209) · [arXiv cs.LG](https://arxiv.org/abs/2605.04209)
+
+- **Robustesse des LLM face aux jailbreaks** : Une synthèse systématique (*SoK*) recense les techniques d'attaque adversariales contournant les garde-fous des LLM et évalue les défenses existantes — utile pour cadrer les exigences de sécurité lors de tout déploiement de LLM en production. [Source](https://arxiv.org/abs/2605.05058)
+
+- **Surveillance du raisonnement des LLM au-delà du contenu** : Les mécanismes de sécurité actuels sur les LLM se concentrent sur les sorties textuelles, mais laissent non surveillé le processus de raisonnement intermédiaire (chain-of-thought), qui peut lui-même être manipulé ou défaillant. Un monitoring temps réel de ce raisonnement est proposé comme couche de défense complémentaire. [Source](https://arxiv.org/abs/2603.25412)
+
+- **Évasion des détecteurs de vulnérabilités basés sur LLM** : Des modifications syntaxiques et sémantiques préservant la compilation suffisent à tromper les outils d'analyse de code par LLM intégrés en CI/CD — leur utilisation comme unique barrière de sécurité dans les pipelines DevSecOps est donc risquée. [arXiv cs.AI](https://arxiv.org/abs/2602.00305) · [arXiv cs.LG](https://arxiv.org/abs/2602.00305)
+
+- **Agents LLM pour l'exploitation offensive (CTF / Windows COM)** : Deux travaux évaluent la capacité des agents LLM à conduire des attaques autonomes : l'un sur des challenges CTF réalistes, l'autre sur des race conditions dans des binaires Windows COM (élévation de privilèges locale). Les résultats montrent des capacités offensives croissantes qui doivent entrer dans les modèles de menace. [DeepRed/CTF](https://arxiv.org/abs/2604.19354) · [SLYP/COM](https://arxiv.org/abs/2605.05000)
+
+- **État des lieux des systèmes agents déployés (AI Agent Index 2025)** : Un référentiel documente les caractéristiques techniques et de sécurité des agents IA effectivement en production — point d'entrée utile pour établir une cartographie des risques liés aux agents dans un contexte d'adoption enterprise. [Source](https://arxiv.org/abs/2602.17753)
+
+- **Limite fondamentale des modèles à contexte long** : Un résultat théorique établit qu'aucun modèle de séquence ne peut simultanément être efficace en calcul, compact en mémoire et expressif — trade-off à intégrer dans les choix d'architecture pour les cas d'usage RAG ou agents à longue mémoire. [arXiv cs.AI](https://arxiv.org/abs/2605.05066) · [arXiv cs.LG](https://arxiv.org/abs/2605.05066)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Chrome / Gemini – stockage silencieux de 4 Go</strong> : Google déploie discrètement un fichier `weights.bin` d'environ 4 Go sur les machines des utilisateurs de Chrome, sans notification ni consentement explicite. Pour un RSSI, c'est un point de vigilance immédiat : des données volumineuses liées à l'IA peuvent transiter et résider sur les postes sans que la politique de sécurité en soit informée. <a href="https://next.ink/237140/chrome-peut-stocker-4-go-associes-a-gemini-sur-votre-machine-sans-crier-gare/">Next.ink</a></li>
+<li><strong>Régulation IA en Europe</strong> : L'UE s'apprête à interdire les outils IA de génération de nus non consentis d'ici fin 2025, en réponse aux dérives de deepfakes sexuels. En parallèle, plusieurs obligations de l'AI Act sont repoussées à 2027, ce qui allonge les délais de mise en conformité pour les organisations. <a href="https://www.bfmtv.com/tech/vie-numerique/l-union-europeenne-s-accorde-pour-bannir-les-ia-qui-permettent-la-generation-de-nus-sans-consentement-et-retarde-certaines-mesures-de-l-ia-act_AD-202505070288.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Cisco acquiert Astrix Security (400 M$)</strong> : Cisco finalise le rachat de la start-up israélienne Astrix, spécialisée dans la sécurité des agents IA et des connexions non humaines (tokens, API keys, OAuth). Un signal fort sur la montée en puissance des risques liés aux identités machines dans les architectures agentiques. <a href="https://www.lemondeinformatique.fr/actualites/lire-cisco-croque-la-start-up-en-securite-agentique-astrix-400-m$-100119.html">Le Monde Informatique</a></li>
+<li><strong>Montée en puissance numérique de la DGSE</strong> : Les effectifs numériques de la DGSE ont progressé de 79 % en dix ans, reflet d'une transformation profonde des services de renseignement français depuis 2015. Cela illustre l'importance stratégique croissante des compétences cyber et data dans les organisations souveraines. <a href="https://next.ink/237157/les-emplois-lies-au-numerique-ont-explose-de-79-a-la-dgse-en-10-ans/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Google DeepMind – entraînement IA sur Eve Online</strong> : DeepMind investit 120 M$ dans le studio CCP pour utiliser l'environnement d'*Eve Online* comme terrain d'entraînement pour des IA confrontées à des systèmes complexes et dynamiques. Pas d'impact opérationnel direct, mais illustre la tendance à exploiter des simulations à grande échelle pour accélérer la maturité des modèles d'IA autonomes. <a href="https://www.bfmtv.com/tech/gaming/google-deepmind-investit-120-millions-de-dollars-dans-eve-online-genial-jeu-massivement-multijoueur-pour-entrainer-son-ia-sur-des-systemes-complexes-et-dynamiques_AV-202505060816.html">BFM Tech</a></li>
+<li><strong>Infrastructure IT et agents IA</strong> : La start-up française OpsMill lève 12 M€ pour centraliser les données d'infrastructure, condition préalable au déploiement fiable d'agents IA en entreprise. Un signal de marché clair : l'outillage de la donnée d'infrastructure devient un prérequis opérationnel, pas une option. <a href="https://www.journaldunet.com/cloud/1550131-opsmill-leve-12-millions-d-euros-pour-adapter-les-systemes-it-aux-exigences-de-l-ia/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Google DeepMind / EVE Online</strong> : DeepMind s'attaque à EVE Online, un environnement multi-joueurs ouvert jugé bien plus complexe que Go ou StarCraft. L'intérêt pour un RSSI est limité en pratique, mais cela illustre l'évolution des benchmarks utilisés pour tester les capacités de raisonnement et d'adaptation des IA. <a href="https://next.ink/brief_article/google-deepmind-sattaque-a-eve-online/">Next.ink</a></li>
 </ul>
 
 <h2>Grandes sources internationales</h2>
 
 <ul>
-<li><strong>DeepSeek – première levée de fonds</strong> : Le laboratoire chinois DeepSeek s'apprête à boucler un premier tour de financement qui valoriserait la société à 45 milliards de dollars, confirmant son poids croissant face aux acteurs américains malgré des coûts d'entraînement nettement inférieurs. Un signal à surveiller pour les décideurs IT qui évaluent les alternatives aux modèles OpenAI/Anthropic dans leurs stratégies IA. <a href="https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/">TechCrunch</a></li>
+<li><strong>Tensions dans la chaîne IA</strong> : Des acteurs clés de l'écosystème IA (infrastructure, chips, données) identifient des points de rupture concrets : pénuries de composants, concentration des infrastructures et incertitudes sur la viabilité à long terme de l'architecture technique actuelle. <a href="https://techcrunch.com/2026/05/06/five-architects-of-the-ai-economy-explain-where-the-wheels-are-coming-off/">TechCrunch</a></li>
 </ul>
 
-<h2>Labos & éditeurs</h2>
+<h2>Recherche & veille technique</h2>
 
 <ul>
-<li><strong>Migration vLLM V0→V1 et fiabilité en RL</strong> : Le passage de vLLM V0 à V1 introduit des changements d'architecture qui peuvent affecter la reproductibilité des résultats dans les pipelines d'apprentissage par renforcement (RL) — la cohérence des sorties du moteur d'inférence doit être vérifiée avant d'engager tout cycle d'entraînement. Un point de vigilance concret pour les équipes qui industrialisent des workflows LLM avec du RL (GRPO, PPO, etc.). <a href="https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections">Hugging Face Blog</a></li>
+<li><strong>Sécurité des agents IA à l'exécution (AgentTrust / DTap)</strong> : Les agents IA capables d'exécuter des commandes shell, requêtes HTTP ou opérations fichiers représentent un risque opérationnel direct — une seule action non contrôlée peut entraîner exfiltration de données ou suppression accidentelle. Deux travaux proposent respectivement un mécanisme d'interception runtime des appels d'outils et une plateforme de red-teaming contrôlable pour tester ces agents avant déploiement. <a href="https://arxiv.org/abs/2605.04785">AgentTrust</a> · <a href="https://arxiv.org/abs/2605.04808">DTap</a></li>
+</ul>
+
+<ul>
+<li><strong>Backdoors indétectables dans les modèles pré-entraînés</strong> : Une attaque de type supply-chain baptisée *Sparse Backdoor* démontre qu'il est possible d'injecter une porte dérobée mathématiquement prouvée indétectable dans des classifieurs d'images (CNN, Vision Transformers), sans altération perceptible des paramètres. Cela remet en cause la confiance accordée aux modèles téléchargés depuis des dépôts publics. <a href="https://arxiv.org/abs/2605.04209">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2605.04209">arXiv cs.LG</a></li>
+</ul>
+
+<ul>
+<li><strong>Robustesse des LLM face aux jailbreaks</strong> : Une synthèse systématique (*SoK*) recense les techniques d'attaque adversariales contournant les garde-fous des LLM et évalue les défenses existantes — utile pour cadrer les exigences de sécurité lors de tout déploiement de LLM en production. <a href="https://arxiv.org/abs/2605.05058">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Surveillance du raisonnement des LLM au-delà du contenu</strong> : Les mécanismes de sécurité actuels sur les LLM se concentrent sur les sorties textuelles, mais laissent non surveillé le processus de raisonnement intermédiaire (chain-of-thought), qui peut lui-même être manipulé ou défaillant. Un monitoring temps réel de ce raisonnement est proposé comme couche de défense complémentaire. <a href="https://arxiv.org/abs/2603.25412">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Évasion des détecteurs de vulnérabilités basés sur LLM</strong> : Des modifications syntaxiques et sémantiques préservant la compilation suffisent à tromper les outils d'analyse de code par LLM intégrés en CI/CD — leur utilisation comme unique barrière de sécurité dans les pipelines DevSecOps est donc risquée. <a href="https://arxiv.org/abs/2602.00305">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2602.00305">arXiv cs.LG</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents LLM pour l'exploitation offensive (CTF / Windows COM)</strong> : Deux travaux évaluent la capacité des agents LLM à conduire des attaques autonomes : l'un sur des challenges CTF réalistes, l'autre sur des race conditions dans des binaires Windows COM (élévation de privilèges locale). Les résultats montrent des capacités offensives croissantes qui doivent entrer dans les modèles de menace. <a href="https://arxiv.org/abs/2604.19354">DeepRed/CTF</a> · <a href="https://arxiv.org/abs/2605.05000">SLYP/COM</a></li>
+</ul>
+
+<ul>
+<li><strong>État des lieux des systèmes agents déployés (AI Agent Index 2025)</strong> : Un référentiel documente les caractéristiques techniques et de sécurité des agents IA effectivement en production — point d'entrée utile pour établir une cartographie des risques liés aux agents dans un contexte d'adoption enterprise. <a href="https://arxiv.org/abs/2602.17753">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Limite fondamentale des modèles à contexte long</strong> : Un résultat théorique établit qu'aucun modèle de séquence ne peut simultanément être efficace en calcul, compact en mémoire et expressif — trade-off à intégrer dans les choix d'architecture pour les cas d'usage RAG ou agents à longue mémoire. <a href="https://arxiv.org/abs/2605.05066">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2605.05066">arXiv cs.LG</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260506-1951</guid>
-      <pubDate>Wed, 06 May 2026 19:51:14 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260507-0852</guid>
+      <pubDate>Thu, 07 May 2026 08:52:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
