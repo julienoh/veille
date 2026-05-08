@@ -8,68 +8,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 08 May 2026 07:57:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 19:24:01 +0000</lastBuildDate>
     <item>
-      <title>Digest — 08/05 07h</title>
+      <title>Digest — 08/05 19h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Recherche &amp; veille technique
+      <description>## Labos &amp; éditeurs
 
-- **Robustesse et alignement des LLM** : L'entraînement adversarial basé sur la théorie de l'information améliore la résilience des LLM face aux prompts malveillants, en couvrant plus largement l'espace des attaques que les approches existantes. En parallèle, RVPO introduit une régularisation par variance pour éviter qu'un objectif dominant (ex. performance) ne masque des échecs critiques sur la sécurité lors de l'alignement RLHF. [Information Theoretic Adversarial Training](https://arxiv.org/abs/2605.05415) · [RVPO](https://arxiv.org/abs/2605.05750)
+- **LLM spécialisé cybersécurité en local** : CyberSecQwen-4B est un modèle de 4 milliards de paramètres conçu pour tourner en local, sans dépendance cloud, ciblant les usages défensifs (analyse de logs, détection, triage). L'approche illustre une tendance à privilégier des modèles compacts et auditables plutôt que des LLM généralistes pour les environnements sensibles. [Hugging Face Blog](https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/cybersecqwen-4b)
 
-- **Protection des données d'entraînement (Unlearnable Examples)** : Des perturbations imperceptibles au niveau des canaux sémantiques peuvent être injectées dans des données personnelles pour empêcher leur exploitation par des modèles, y compris dans des paradigmes d'entraînement variés (contrastif, supervisé, federated). Technique à suivre pour les DPO cherchant à protéger des corpus propriétaires. [Channel-Level Semantic Perturbations](https://arxiv.org/abs/2605.05224)
-
-- **Contrôle et pilotage des modèles génératifs (Steering)** : MidSteer propose un cadre affine formel pour orienter les représentations intermédiaires des modèles génératifs, ce qui renforce la prévisibilité du comportement post-déploiement. Les Sparse Autoencoders (SAEs), utilisés pour le même objectif, présentent toutefois des instabilités structurelles dans la composition de features qui limitent la fiabilité du steering en production. [MidSteer](https://arxiv.org/abs/2605.05220) · [Structural Instability of Feature Composition](https://arxiv.org/abs/2605.05223) · [Feature Starvation in SAEs](https://arxiv.org/abs/2605.05341)
-
-- **Efficacité d'inférence des LLM** : Trois travaux convergent sur la réduction du coût d'inférence : le prefix caching sparse adapté aux modèles hybrides/récurrents (SSM), le routage dynamique par token (TSA) qui adapte la profondeur de calcul à la difficulté contextuelle, et le mécanisme de gating d'attention conditionné par un budget de coût. Ces approches sont directement pertinentes pour les équipes cherchant à optimiser le déploiement de LLM en production. [Sparse Prefix Caching](https://arxiv.org/abs/2605.05219) · [Token-Selective Attention](https://arxiv.org/abs/2605.05222) · [Budgeted Attention Allocation](https://arxiv.org/abs/2605.05697)
-
-- **Multi-LLM et inférence fédérée** : SAT permet d'entraîner séquentiellement plusieurs petits LLM spécialisés sans coordinateur central, avec des garanties d'amélioration monotone — une alternative crédible aux très grands modèles coûteux. Distinct mais complémentaire, le federated inference par consensus d'embeddings non supervisé permet à des modèles indépendants de coopérer sans partager données ni paramètres. [SAT](https://arxiv.org/abs/2605.05216) · [Federated Inference](https://arxiv.org/abs/2605.05718)
-
-- **Catastrophic forgetting dans l'apprentissage continu des LLM** : Trois approches distinctes attaquent le problème de l'oubli catastrophique lors du fine-tuning séquentiel : attribution guidée des paramètres critiques, interventions légères sans modification des poids (CRAFT), et détection des raccourcis appris. Sujet critique pour toute organisation qui met à jour ses modèles en production sans réentraînement complet. [Attribution-Guided CL](https://arxiv.org/abs/2605.05285) · [CRAFT](https://arxiv.org/abs/2605.05732) · [Shortcut Solutions](https://arxiv.org/abs/2605.05495)
-
-- **Qualité et curation des données d'entraînement** : Une réévaluation dynamique (online) des poids des données pendant l'entraînement surpasse les méthodes de sélection statique offline, tant en généralisation qu'en flexibilité opérationnelle. À prendre en compte dans les pipelines MLOps internes. [Rethinking Data Curation](https://arxiv.org/abs/2605.05227)
-
-- **Fiabilité des métriques d'optimisation (Flat Minima)** : Les minima plats du paysage de loss, réputés favoriser la généralisation, peuvent être un artefact de reparamétrisation plutôt qu'une propriété intrinsèque du modèle. Cela remet en question les garanties théoriques de méthodes comme SAM, utilisées pour améliorer la robustesse. [Are Flat Minima an Illusion?](https://arxiv.org/abs/2605.05209)
-
-- **Détection out-of-distribution sans fine-tuning** : La simple mise à l'échelle de représentations pré-entraînées suffit à détecter des entrées hors distribution sans étiquettes ni réentraînement, ce qui simplifie le monitoring de dérive en production. [Scaling for OOD Detection](https://arxiv.org/abs/2605.05638)</description>
-      <content:encoded><![CDATA[<h2>Recherche & veille technique</h2>
+- **Architecture MoE et modularité émergente** : Allen AI publie EMO, une recherche sur le pré-entraînement de modèles Mixture of Experts (MoE) où la spécialisation des experts émerge naturellement sans supervision explicite. Pertinent pour anticiper l'évolution des architectures LLM sous-jacentes aux outils de sécurité et d'automatisation. [Hugging Face Blog](https://huggingface.co/blog/allenai/emo)</description>
+      <content:encoded><![CDATA[<h2>Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Robustesse et alignement des LLM</strong> : L'entraînement adversarial basé sur la théorie de l'information améliore la résilience des LLM face aux prompts malveillants, en couvrant plus largement l'espace des attaques que les approches existantes. En parallèle, RVPO introduit une régularisation par variance pour éviter qu'un objectif dominant (ex. performance) ne masque des échecs critiques sur la sécurité lors de l'alignement RLHF. <a href="https://arxiv.org/abs/2605.05415">Information Theoretic Adversarial Training</a> · <a href="https://arxiv.org/abs/2605.05750">RVPO</a></li>
+<li><strong>LLM spécialisé cybersécurité en local</strong> : CyberSecQwen-4B est un modèle de 4 milliards de paramètres conçu pour tourner en local, sans dépendance cloud, ciblant les usages défensifs (analyse de logs, détection, triage). L'approche illustre une tendance à privilégier des modèles compacts et auditables plutôt que des LLM généralistes pour les environnements sensibles. <a href="https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/cybersecqwen-4b">Hugging Face Blog</a></li>
 </ul>
 
 <ul>
-<li><strong>Protection des données d'entraînement (Unlearnable Examples)</strong> : Des perturbations imperceptibles au niveau des canaux sémantiques peuvent être injectées dans des données personnelles pour empêcher leur exploitation par des modèles, y compris dans des paradigmes d'entraînement variés (contrastif, supervisé, federated). Technique à suivre pour les DPO cherchant à protéger des corpus propriétaires. <a href="https://arxiv.org/abs/2605.05224">Channel-Level Semantic Perturbations</a></li>
-</ul>
-
-<ul>
-<li><strong>Contrôle et pilotage des modèles génératifs (Steering)</strong> : MidSteer propose un cadre affine formel pour orienter les représentations intermédiaires des modèles génératifs, ce qui renforce la prévisibilité du comportement post-déploiement. Les Sparse Autoencoders (SAEs), utilisés pour le même objectif, présentent toutefois des instabilités structurelles dans la composition de features qui limitent la fiabilité du steering en production. <a href="https://arxiv.org/abs/2605.05220">MidSteer</a> · <a href="https://arxiv.org/abs/2605.05223">Structural Instability of Feature Composition</a> · <a href="https://arxiv.org/abs/2605.05341">Feature Starvation in SAEs</a></li>
-</ul>
-
-<ul>
-<li><strong>Efficacité d'inférence des LLM</strong> : Trois travaux convergent sur la réduction du coût d'inférence : le prefix caching sparse adapté aux modèles hybrides/récurrents (SSM), le routage dynamique par token (TSA) qui adapte la profondeur de calcul à la difficulté contextuelle, et le mécanisme de gating d'attention conditionné par un budget de coût. Ces approches sont directement pertinentes pour les équipes cherchant à optimiser le déploiement de LLM en production. <a href="https://arxiv.org/abs/2605.05219">Sparse Prefix Caching</a> · <a href="https://arxiv.org/abs/2605.05222">Token-Selective Attention</a> · <a href="https://arxiv.org/abs/2605.05697">Budgeted Attention Allocation</a></li>
-</ul>
-
-<ul>
-<li><strong>Multi-LLM et inférence fédérée</strong> : SAT permet d'entraîner séquentiellement plusieurs petits LLM spécialisés sans coordinateur central, avec des garanties d'amélioration monotone — une alternative crédible aux très grands modèles coûteux. Distinct mais complémentaire, le federated inference par consensus d'embeddings non supervisé permet à des modèles indépendants de coopérer sans partager données ni paramètres. <a href="https://arxiv.org/abs/2605.05216">SAT</a> · <a href="https://arxiv.org/abs/2605.05718">Federated Inference</a></li>
-</ul>
-
-<ul>
-<li><strong>Catastrophic forgetting dans l'apprentissage continu des LLM</strong> : Trois approches distinctes attaquent le problème de l'oubli catastrophique lors du fine-tuning séquentiel : attribution guidée des paramètres critiques, interventions légères sans modification des poids (CRAFT), et détection des raccourcis appris. Sujet critique pour toute organisation qui met à jour ses modèles en production sans réentraînement complet. <a href="https://arxiv.org/abs/2605.05285">Attribution-Guided CL</a> · <a href="https://arxiv.org/abs/2605.05732">CRAFT</a> · <a href="https://arxiv.org/abs/2605.05495">Shortcut Solutions</a></li>
-</ul>
-
-<ul>
-<li><strong>Qualité et curation des données d'entraînement</strong> : Une réévaluation dynamique (online) des poids des données pendant l'entraînement surpasse les méthodes de sélection statique offline, tant en généralisation qu'en flexibilité opérationnelle. À prendre en compte dans les pipelines MLOps internes. <a href="https://arxiv.org/abs/2605.05227">Rethinking Data Curation</a></li>
-</ul>
-
-<ul>
-<li><strong>Fiabilité des métriques d'optimisation (Flat Minima)</strong> : Les minima plats du paysage de loss, réputés favoriser la généralisation, peuvent être un artefact de reparamétrisation plutôt qu'une propriété intrinsèque du modèle. Cela remet en question les garanties théoriques de méthodes comme SAM, utilisées pour améliorer la robustesse. <a href="https://arxiv.org/abs/2605.05209">Are Flat Minima an Illusion?</a></li>
-</ul>
-
-<ul>
-<li><strong>Détection out-of-distribution sans fine-tuning</strong> : La simple mise à l'échelle de représentations pré-entraînées suffit à détecter des entrées hors distribution sans étiquettes ni réentraînement, ce qui simplifie le monitoring de dérive en production. <a href="https://arxiv.org/abs/2605.05638">Scaling for OOD Detection</a></li>
+<li><strong>Architecture MoE et modularité émergente</strong> : Allen AI publie EMO, une recherche sur le pré-entraînement de modèles Mixture of Experts (MoE) où la spécialisation des experts émerge naturellement sans supervision explicite. Pertinent pour anticiper l'évolution des architectures LLM sous-jacentes aux outils de sécurité et d'automatisation. <a href="https://huggingface.co/blog/allenai/emo">Hugging Face Blog</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260508-0757</guid>
-      <pubDate>Fri, 08 May 2026 07:57:18 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260508-1924</guid>
+      <pubDate>Fri, 08 May 2026 19:24:01 +0000</pubDate>
     </item>
   </channel>
 </rss>
