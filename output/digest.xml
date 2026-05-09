@@ -8,72 +8,20 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 09 May 2026 08:07:37 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 19:07:56 +0000</lastBuildDate>
     <item>
-      <title>Digest — 09/05 08h</title>
+      <title>Digest — 09/05 19h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Sources françaises IA
+      <description>## Labos &amp; éditeurs
 
-- **Faille Bluetooth sur équipements policiers** : Des appareils Bluetooth embarqués dans les Tasers et caméras corporelles de policiers australiens émettent des identifiants persistants et détectables, permettant à quiconque disposant d'une application grand public de géolocaliser les agents en temps réel. Le risque concerne directement la sécurité physique des personnels en opération et interroge les choix de déploiement d'équipements connectés en environnement sensible. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/une-breche-majeure-dans-la-securite-operationnelle-des-policiers-peuvent-etre-localises-en-temps-reel-a-cause-d-une-faille-de-securite-bluetooth-dans-leur-taser-et-cameras-corporelles_AN-202505090043.html)
-
-## Recherche &amp; veille technique
-
-- **Sécurité des agents IA multi-agents** : La propagation des autorisations dans les systèmes multi-agents constitue un risque structurel distinct de l'injection de prompt — les droits d'accès doivent être traités comme une infrastructure à part entière, pas comme un paramètre applicatif. Les environnements à accès partiel peuvent produire des réponses plausibles mais incorrectes même avec des contrôles d'accès techniquement corrects, ce qui pose un problème d'intégrité des réponses difficile à détecter. [Authorization Propagation](https://arxiv.org/abs/2605.05440) · [Partial Evidence Bench](https://arxiv.org/abs/2605.05379)
-
-- **Confidentialité et secrets dans les agents IA** : Les agents LLM qui manipulent des secrets (clés, tokens, données sensibles) via des protocoles comme MCP ou A2A exposent une surface d'attaque fondamentalement différente des modèles standalone — le Confidential Computing est présenté comme piste de mitigation sérieuse. [When Agents Handle Secrets](https://arxiv.org/abs/2605.03213)
-
-- **Risques de sécurité dans les modèles de raisonnement (LRM)** : Les traces de raisonnement intermédiaires (chain-of-thought) des grands modèles de raisonnement peuvent contenir du contenu problématique ou violer des politiques de sécurité, même si la réponse finale semble conforme — un angle mort non couvert par les garde-fous classiques. [Chain of Risk](https://arxiv.org/abs/2605.05678)
-
-- **Reconstruction de vulnérabilités à partir de patches binaires** : Des agents IA peuvent désormais reconstruire les détails d'une vulnérabilité en comparant uniquement les paquets binaires avant/après patch, sans accès au code source ni aux advisories — ce qui réduit significativement la fenêtre d'exposition entre publication d'un patch et exploitation potentielle. [Patch2Vuln](https://arxiv.org/abs/2605.06601)
-
-- **Fiabilité et biais des LLM en contexte d'entreprise** : La servilité (*sycophancy*) des LLM est identifiée comme une défaillance de frontière entre conformité sociale et intégrité épistémique, avec des implications concrètes pour tout usage décisionnel. Par ailleurs, des biais géopolitiques mesurables dans les garde-fous de sécurité des LLM selon leur région d'origine posent un problème d'équité dans les déploiements globaux. [Sycophancy](https://arxiv.org/abs/2605.05403) · [Geopolitics of AI Safety](https://arxiv.org/abs/2605.05427)
-
-- **RAG agentique en environnement d'entreprise** : Plusieurs travaux convergent sur les architectures RAG agentiques pour des usages métier critiques (finance, banque) : AgenticRAG découple la recherche du raisonnement pour réduire les biais d'ancrage, tandis que FinRAG-12B démontre qu'un LLM de 12B paramètres peut atteindre un niveau production en environnement bancaire régulé sous contrainte de traçabilité. [AgenticRAG](https://arxiv.org/abs/2605.05538) · [FinRAG-12B](https://arxiv.org/abs/2605.05482) · [Agentic RAG Financial](https://arxiv.org/abs/2605.05409)
-
-- **Gouvernance et accountability des systèmes IA autonomes** : Un cadre de mesure de l'"intentionnalité fonctionnelle" est proposé pour qualifier le degré d'autonomie réelle d'un système IA — un outil potentiellement utile pour la qualification réglementaire (AI Act) et la définition des responsabilités. [Intentionality](https://arxiv.org/abs/2605.05475)
-
-- **Agents locaux et vie privée** : Les agents LLM exécutant des tâches sur navigateur ou fichiers locaux créent une tension entre coût, capacité et confidentialité — la compression des historiques en "états" permet d'envisager des modèles locaux plus légers sans sacrifier la performance. [From History to State](https://arxiv.org/abs/2605.05413)</description>
-      <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
+- **IA médicale &amp; confidentialité des données** : Un framework multi-agents (OncoAgent) est proposé pour l'aide à la décision en oncologie, avec une architecture pensée pour traiter des données cliniques sensibles sans les exposer — un cas d'usage concret qui illustre comment les approches agents peuvent être combinées à des contraintes de privacy dans des secteurs réglementés comme la santé. [Hugging Face Blog](https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/oncoagent-official-paper)</description>
+      <content:encoded><![CDATA[<h2>Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Faille Bluetooth sur équipements policiers</strong> : Des appareils Bluetooth embarqués dans les Tasers et caméras corporelles de policiers australiens émettent des identifiants persistants et détectables, permettant à quiconque disposant d'une application grand public de géolocaliser les agents en temps réel. Le risque concerne directement la sécurité physique des personnels en opération et interroge les choix de déploiement d'équipements connectés en environnement sensible. <a href="https://www.bfmtv.com/tech/cybersecurite/une-breche-majeure-dans-la-securite-operationnelle-des-policiers-peuvent-etre-localises-en-temps-reel-a-cause-d-une-faille-de-securite-bluetooth-dans-leur-taser-et-cameras-corporelles_AN-202505090043.html">BFM Tech</a></li>
-</ul>
-
-<h2>Recherche & veille technique</h2>
-
-<ul>
-<li><strong>Sécurité des agents IA multi-agents</strong> : La propagation des autorisations dans les systèmes multi-agents constitue un risque structurel distinct de l'injection de prompt — les droits d'accès doivent être traités comme une infrastructure à part entière, pas comme un paramètre applicatif. Les environnements à accès partiel peuvent produire des réponses plausibles mais incorrectes même avec des contrôles d'accès techniquement corrects, ce qui pose un problème d'intégrité des réponses difficile à détecter. <a href="https://arxiv.org/abs/2605.05440">Authorization Propagation</a> · <a href="https://arxiv.org/abs/2605.05379">Partial Evidence Bench</a></li>
-</ul>
-
-<ul>
-<li><strong>Confidentialité et secrets dans les agents IA</strong> : Les agents LLM qui manipulent des secrets (clés, tokens, données sensibles) via des protocoles comme MCP ou A2A exposent une surface d'attaque fondamentalement différente des modèles standalone — le Confidential Computing est présenté comme piste de mitigation sérieuse. <a href="https://arxiv.org/abs/2605.03213">When Agents Handle Secrets</a></li>
-</ul>
-
-<ul>
-<li><strong>Risques de sécurité dans les modèles de raisonnement (LRM)</strong> : Les traces de raisonnement intermédiaires (chain-of-thought) des grands modèles de raisonnement peuvent contenir du contenu problématique ou violer des politiques de sécurité, même si la réponse finale semble conforme — un angle mort non couvert par les garde-fous classiques. <a href="https://arxiv.org/abs/2605.05678">Chain of Risk</a></li>
-</ul>
-
-<ul>
-<li><strong>Reconstruction de vulnérabilités à partir de patches binaires</strong> : Des agents IA peuvent désormais reconstruire les détails d'une vulnérabilité en comparant uniquement les paquets binaires avant/après patch, sans accès au code source ni aux advisories — ce qui réduit significativement la fenêtre d'exposition entre publication d'un patch et exploitation potentielle. <a href="https://arxiv.org/abs/2605.06601">Patch2Vuln</a></li>
-</ul>
-
-<ul>
-<li><strong>Fiabilité et biais des LLM en contexte d'entreprise</strong> : La servilité (*sycophancy*) des LLM est identifiée comme une défaillance de frontière entre conformité sociale et intégrité épistémique, avec des implications concrètes pour tout usage décisionnel. Par ailleurs, des biais géopolitiques mesurables dans les garde-fous de sécurité des LLM selon leur région d'origine posent un problème d'équité dans les déploiements globaux. <a href="https://arxiv.org/abs/2605.05403">Sycophancy</a> · <a href="https://arxiv.org/abs/2605.05427">Geopolitics of AI Safety</a></li>
-</ul>
-
-<ul>
-<li><strong>RAG agentique en environnement d'entreprise</strong> : Plusieurs travaux convergent sur les architectures RAG agentiques pour des usages métier critiques (finance, banque) : AgenticRAG découple la recherche du raisonnement pour réduire les biais d'ancrage, tandis que FinRAG-12B démontre qu'un LLM de 12B paramètres peut atteindre un niveau production en environnement bancaire régulé sous contrainte de traçabilité. <a href="https://arxiv.org/abs/2605.05538">AgenticRAG</a> · <a href="https://arxiv.org/abs/2605.05482">FinRAG-12B</a> · <a href="https://arxiv.org/abs/2605.05409">Agentic RAG Financial</a></li>
-</ul>
-
-<ul>
-<li><strong>Gouvernance et accountability des systèmes IA autonomes</strong> : Un cadre de mesure de l'"intentionnalité fonctionnelle" est proposé pour qualifier le degré d'autonomie réelle d'un système IA — un outil potentiellement utile pour la qualification réglementaire (AI Act) et la définition des responsabilités. <a href="https://arxiv.org/abs/2605.05475">Intentionality</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents locaux et vie privée</strong> : Les agents LLM exécutant des tâches sur navigateur ou fichiers locaux créent une tension entre coût, capacité et confidentialité — la compression des historiques en "états" permet d'envisager des modèles locaux plus légers sans sacrifier la performance. <a href="https://arxiv.org/abs/2605.05413">From History to State</a></li>
+<li><strong>IA médicale & confidentialité des données</strong> : Un framework multi-agents (OncoAgent) est proposé pour l'aide à la décision en oncologie, avec une architecture pensée pour traiter des données cliniques sensibles sans les exposer — un cas d'usage concret qui illustre comment les approches agents peuvent être combinées à des contraintes de privacy dans des secteurs réglementés comme la santé. <a href="https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/oncoagent-official-paper">Hugging Face Blog</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260509-0807</guid>
-      <pubDate>Sat, 09 May 2026 08:07:37 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260509-1907</guid>
+      <pubDate>Sat, 09 May 2026 19:07:56 +0000</pubDate>
     </item>
   </channel>
 </rss>
