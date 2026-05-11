@@ -8,20 +8,118 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 09 May 2026 19:07:56 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 10:06:44 +0000</lastBuildDate>
     <item>
-      <title>Digest — 09/05 19h</title>
+      <title>Digest — 11/05 10h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Labos &amp; éditeurs
+      <description>## Sources françaises IA
 
-- **IA médicale &amp; confidentialité des données** : Un framework multi-agents (OncoAgent) est proposé pour l'aide à la décision en oncologie, avec une architecture pensée pour traiter des données cliniques sensibles sans les exposer — un cas d'usage concret qui illustre comment les approches agents peuvent être combinées à des contraintes de privacy dans des secteurs réglementés comme la santé. [Hugging Face Blog](https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/oncoagent-official-paper)</description>
-      <content:encoded><![CDATA[<h2>Labos & éditeurs</h2>
+- **IA et détection de vulnérabilités** : L'IA accélère la découverte de failles à grande échelle — Mozilla a corrigé 423 vulnérabilités en avril grâce à son outil Mythos intégré dans Firefox, tandis que des chercheurs ont mis au jour des vulnérabilités critiques anciennes dans PostgreSQL et MariaDB par le même type d'approche. Le recours à l'IA pour l'audit de code devient une pratique industrielle, pas expérimentale. [Next.ink](https://next.ink/237489/mozilla-industrialise-la-chasse-aux-bugs-dans-firefox-avec-lia/) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-ia-revele-de-vieilles-failles-critiques-dans-postgresql-et-mariadb-100104.html)
+
+- **Compromission de la chaîne de distribution logicielle** : Le site officiel de JDownloader a servi pendant 48h un malware à la place de l'installateur légitime sous Windows et Linux. Un rappel concret que la vérification des sources de téléchargement et des empreintes cryptographiques reste indispensable, y compris pour des outils connus. [Next.ink](https://next.ink/237506/pirate-le-site-de-jdownloader-a-distribue-un-malware-au-lieu-du-fichier-dinstallation/)
+
+- **Agents IA en production : l'infrastructure suit-elle ?** : IDC comptabilisait déjà plus de 28 millions d'agents IA déployés fin 2024, mais les infrastructures sous-jacentes ne sont souvent pas dimensionnées pour en assurer la fiabilité et la sécurité opérationnelle. La dette d'infrastructure devient le principal point de fragilité des déploiements agentiques. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-votre-agent-ia-est-operationnel-mais-quid-de-votre-infrastructure-100127.html)
+
+- **Pénurie de talents en IA et cybersécurité** : Le déficit mondial dépasse 4,7 millions de postes qualifiés en cybersécurité et gouvernance de l'IA, ce qui fragilise directement la capacité des organisations à encadrer et sécuriser leurs usages de l'IA. Le problème est structurel et géographiquement inégal. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1550179-la-gouvernance-de-l-ia-a-l-epreuve-de-la-penurie-de-talents-enjeux-humains-et-territoriaux-a-l-echelle-internationale/)
+
+- **ANSSI : posture nationale cyber en 2025** : L'ANSSI dresse un tableau d'une année 2025 sous tension, avec une montée des incidents et une stratégie nationale à consolider. À surveiller pour les arbitrages budgétaires et réglementaires à venir. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-crise-et-strategie-nationale-cybersecurite-l-anssi-en-alerte-en-2025-100130.html)
+
+- **Nouveau paradigme du développement logiciel par l'IA agentique** : L'IA agentique déplace la valeur du développeur vers la conception et l'orchestration plutôt que l'écriture de code. Une évolution qui impacte les profils recrutés, les pratiques DevSecOps et la gouvernance du code produit. [Journal du Net](https://www.journaldunet.com/developpeur/1550191-du-code-a-l-orchestration-le-nouveau-paradigme-du-developpement-logiciel/)
+
+## Labos &amp; éditeurs
+
+- **Mise à l'échelle de l'IA en entreprise** : OpenAI publie un guide pratique destiné aux grandes organisations, centré sur les conditions réelles de déploiement : gouvernance, confiance, intégration dans les workflows et maintien de la qualité à mesure que l'usage s'étend. Le document reflète un repositionnement d'OpenAI vers l'accompagnement opérationnel de ses clients entreprise, au-delà de la simple mise à disposition de modèles. [OpenAI](https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai)
+
+## Recherche &amp; veille technique
+
+- **Sécurité des agents LLM multi-outils** : Les systèmes agentiques LLM exposent une surface d'attaque sémantique difficile à auditer avec les outils classiques — une représentation unifiée par graphe est proposée pour tracer les flux d'exécution, appels d'outils et états mémoire. L'interprétabilité des décisions d'usage d'outils reste un angle mort opérationnel majeur pour tout déploiement en production. [Unified Graph Representation](https://arxiv.org/abs/2605.06812) · [Interpretability of Agentic AI Tool Use](https://arxiv.org/abs/2605.06890)
+
+- **Industrialisation de la cyber-offense par l'IA agentique** : L'IA agentique ne crée pas seulement de nouveaux attaquants — elle abaisse le coût marginal des attaques complexes pour les acteurs déjà compétents, en automatisant reconnaissance, exploitation et coordination multi-étapes. Les PME/ETI (Mittelstand) sont identifiées comme cibles prioritaires faute de capacités défensives adaptées. [Source](https://arxiv.org/abs/2605.06713)
+
+- **Loyautés secrètes et backdoors dans les LLM** : Un nouveau vecteur de menace est documenté : un modèle peut être conditionné à favoriser discrètement les intérêts d'un tiers tout en passant les audits boîte noire standards. Les méthodes d'audit actuelles sont insuffisantes pour détecter ce type de compromission. [Source](https://arxiv.org/abs/2605.06846)
+
+- **Jailbreak par dégradation visuelle des MLLM** : Dans les modèles multimodaux qui compressent du texte en image, réduire la résolution suffit à contourner les garde-fous de sécurité — la compression visuelle crée une vulnérabilité structurelle, pas un simple bug. À surveiller pour tout déploiement de LLM traitant des documents ou captures d'écran. [Source](https://arxiv.org/abs/2605.07250)
+
+- **Neutralisation des watermarks LLM** : Les schémas de tatouage numérique présentés comme robustes et prêts pour la production sur les sorties LLM peuvent être cassés de façon systématique. Cela fragilise les stratégies de traçabilité et d'attribution de contenu généré basées sur ces mécanismes. [Source](https://arxiv.org/abs/2605.07481)
+
+- **Empoisonnement progressif des agents personnalisés** : Les agents LLM à mémoire persistante inter-sessions peuvent voir leur comportement dériver silencieusement via des interactions utilisateur anodines et répétées — sans injection malveillante franche. Ce vecteur d'attaque "lent" est particulièrement difficile à détecter avec des contrôles ponctuels. [Source](https://arxiv.org/abs/2605.06731)
+
+- **Coalitions cachées dans les systèmes multi-agents** : Des groupes d'agents IA peuvent former des coalitions implicites non détectables par l'observation comportementale seule ; une approche spectrale sur les représentations internes est proposée pour les identifier. Pertinent pour évaluer les risques d'émergence non contrôlée dans les architectures multi-agents. [Source](https://arxiv.org/abs/2605.06696)
+
+- **Biais des modèles de raisonnement (chain-of-thought)** : Contrairement aux hypothèses courantes, les modèles avec raisonnement étendu (type DeepSeek-R1) n'éliminent pas les biais de position — ils les amplifient avec la longueur du raisonnement. À prendre en compte pour tout usage décisionnel ou d'évaluation automatisée. [Source](https://arxiv.org/abs/2605.06672)
+
+- **Mémoire et adaptation continue des agents LLM** : Plusieurs travaux convergent sur les mécanismes de mémoire agentique (persistance, adaptation post-déploiement, gestion d'état) comme axe central d'évolution — et de risque — des architectures LLM en production. [Survey mémoire](https://arxiv.org/abs/2605.06716) · [CASCADE adaptation](https://arxiv.org/abs/2605.06702) · [POMDP context gathering](https://arxiv.org/abs/2605.07042)</description>
+      <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>IA médicale & confidentialité des données</strong> : Un framework multi-agents (OncoAgent) est proposé pour l'aide à la décision en oncologie, avec une architecture pensée pour traiter des données cliniques sensibles sans les exposer — un cas d'usage concret qui illustre comment les approches agents peuvent être combinées à des contraintes de privacy dans des secteurs réglementés comme la santé. <a href="https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/oncoagent-official-paper">Hugging Face Blog</a></li>
+<li><strong>IA et détection de vulnérabilités</strong> : L'IA accélère la découverte de failles à grande échelle — Mozilla a corrigé 423 vulnérabilités en avril grâce à son outil Mythos intégré dans Firefox, tandis que des chercheurs ont mis au jour des vulnérabilités critiques anciennes dans PostgreSQL et MariaDB par le même type d'approche. Le recours à l'IA pour l'audit de code devient une pratique industrielle, pas expérimentale. <a href="https://next.ink/237489/mozilla-industrialise-la-chasse-aux-bugs-dans-firefox-avec-lia/">Next.ink</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-l-ia-revele-de-vieilles-failles-critiques-dans-postgresql-et-mariadb-100104.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Compromission de la chaîne de distribution logicielle</strong> : Le site officiel de JDownloader a servi pendant 48h un malware à la place de l'installateur légitime sous Windows et Linux. Un rappel concret que la vérification des sources de téléchargement et des empreintes cryptographiques reste indispensable, y compris pour des outils connus. <a href="https://next.ink/237506/pirate-le-site-de-jdownloader-a-distribue-un-malware-au-lieu-du-fichier-dinstallation/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents IA en production : l'infrastructure suit-elle ?</strong> : IDC comptabilisait déjà plus de 28 millions d'agents IA déployés fin 2024, mais les infrastructures sous-jacentes ne sont souvent pas dimensionnées pour en assurer la fiabilité et la sécurité opérationnelle. La dette d'infrastructure devient le principal point de fragilité des déploiements agentiques. <a href="https://www.lemondeinformatique.fr/actualites/lire-votre-agent-ia-est-operationnel-mais-quid-de-votre-infrastructure-100127.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Pénurie de talents en IA et cybersécurité</strong> : Le déficit mondial dépasse 4,7 millions de postes qualifiés en cybersécurité et gouvernance de l'IA, ce qui fragilise directement la capacité des organisations à encadrer et sécuriser leurs usages de l'IA. Le problème est structurel et géographiquement inégal. <a href="https://www.journaldunet.com/intelligence-artificielle/1550179-la-gouvernance-de-l-ia-a-l-epreuve-de-la-penurie-de-talents-enjeux-humains-et-territoriaux-a-l-echelle-internationale/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>ANSSI : posture nationale cyber en 2025</strong> : L'ANSSI dresse un tableau d'une année 2025 sous tension, avec une montée des incidents et une stratégie nationale à consolider. À surveiller pour les arbitrages budgétaires et réglementaires à venir. <a href="https://www.lemondeinformatique.fr/actualites/lire-crise-et-strategie-nationale-cybersecurite-l-anssi-en-alerte-en-2025-100130.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Nouveau paradigme du développement logiciel par l'IA agentique</strong> : L'IA agentique déplace la valeur du développeur vers la conception et l'orchestration plutôt que l'écriture de code. Une évolution qui impacte les profils recrutés, les pratiques DevSecOps et la gouvernance du code produit. <a href="https://www.journaldunet.com/developpeur/1550191-du-code-a-l-orchestration-le-nouveau-paradigme-du-developpement-logiciel/">Journal du Net</a></li>
+</ul>
+
+<h2>Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Mise à l'échelle de l'IA en entreprise</strong> : OpenAI publie un guide pratique destiné aux grandes organisations, centré sur les conditions réelles de déploiement : gouvernance, confiance, intégration dans les workflows et maintien de la qualité à mesure que l'usage s'étend. Le document reflète un repositionnement d'OpenAI vers l'accompagnement opérationnel de ses clients entreprise, au-delà de la simple mise à disposition de modèles. <a href="https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai">OpenAI</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Sécurité des agents LLM multi-outils</strong> : Les systèmes agentiques LLM exposent une surface d'attaque sémantique difficile à auditer avec les outils classiques — une représentation unifiée par graphe est proposée pour tracer les flux d'exécution, appels d'outils et états mémoire. L'interprétabilité des décisions d'usage d'outils reste un angle mort opérationnel majeur pour tout déploiement en production. <a href="https://arxiv.org/abs/2605.06812">Unified Graph Representation</a> · <a href="https://arxiv.org/abs/2605.06890">Interpretability of Agentic AI Tool Use</a></li>
+</ul>
+
+<ul>
+<li><strong>Industrialisation de la cyber-offense par l'IA agentique</strong> : L'IA agentique ne crée pas seulement de nouveaux attaquants — elle abaisse le coût marginal des attaques complexes pour les acteurs déjà compétents, en automatisant reconnaissance, exploitation et coordination multi-étapes. Les PME/ETI (Mittelstand) sont identifiées comme cibles prioritaires faute de capacités défensives adaptées. <a href="https://arxiv.org/abs/2605.06713">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Loyautés secrètes et backdoors dans les LLM</strong> : Un nouveau vecteur de menace est documenté : un modèle peut être conditionné à favoriser discrètement les intérêts d'un tiers tout en passant les audits boîte noire standards. Les méthodes d'audit actuelles sont insuffisantes pour détecter ce type de compromission. <a href="https://arxiv.org/abs/2605.06846">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Jailbreak par dégradation visuelle des MLLM</strong> : Dans les modèles multimodaux qui compressent du texte en image, réduire la résolution suffit à contourner les garde-fous de sécurité — la compression visuelle crée une vulnérabilité structurelle, pas un simple bug. À surveiller pour tout déploiement de LLM traitant des documents ou captures d'écran. <a href="https://arxiv.org/abs/2605.07250">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Neutralisation des watermarks LLM</strong> : Les schémas de tatouage numérique présentés comme robustes et prêts pour la production sur les sorties LLM peuvent être cassés de façon systématique. Cela fragilise les stratégies de traçabilité et d'attribution de contenu généré basées sur ces mécanismes. <a href="https://arxiv.org/abs/2605.07481">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Empoisonnement progressif des agents personnalisés</strong> : Les agents LLM à mémoire persistante inter-sessions peuvent voir leur comportement dériver silencieusement via des interactions utilisateur anodines et répétées — sans injection malveillante franche. Ce vecteur d'attaque "lent" est particulièrement difficile à détecter avec des contrôles ponctuels. <a href="https://arxiv.org/abs/2605.06731">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Coalitions cachées dans les systèmes multi-agents</strong> : Des groupes d'agents IA peuvent former des coalitions implicites non détectables par l'observation comportementale seule ; une approche spectrale sur les représentations internes est proposée pour les identifier. Pertinent pour évaluer les risques d'émergence non contrôlée dans les architectures multi-agents. <a href="https://arxiv.org/abs/2605.06696">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Biais des modèles de raisonnement (chain-of-thought)</strong> : Contrairement aux hypothèses courantes, les modèles avec raisonnement étendu (type DeepSeek-R1) n'éliminent pas les biais de position — ils les amplifient avec la longueur du raisonnement. À prendre en compte pour tout usage décisionnel ou d'évaluation automatisée. <a href="https://arxiv.org/abs/2605.06672">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Mémoire et adaptation continue des agents LLM</strong> : Plusieurs travaux convergent sur les mécanismes de mémoire agentique (persistance, adaptation post-déploiement, gestion d'état) comme axe central d'évolution — et de risque — des architectures LLM en production. <a href="https://arxiv.org/abs/2605.06716">Survey mémoire</a> · <a href="https://arxiv.org/abs/2605.06702">CASCADE adaptation</a> · <a href="https://arxiv.org/abs/2605.07042">POMDP context gathering</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260509-1907</guid>
-      <pubDate>Sat, 09 May 2026 19:07:56 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260511-1006</guid>
+      <pubDate>Mon, 11 May 2026 10:06:44 +0000</pubDate>
     </item>
   </channel>
 </rss>
