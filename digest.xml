@@ -8,26 +8,106 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 11 May 2026 19:53:05 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 09:26:21 +0000</lastBuildDate>
     <item>
-      <title>Digest — 11/05 19h</title>
+      <title>Digest — 12/05 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Grandes sources internationales
+      <description>## Sources françaises IA
 
-- **Exploit zero-day généré par IA détecté par Google** : C'est une première documentée — Google a intercepté un exploit zero-day dont le développement a impliqué l'IA, avant qu'il ne soit utilisé à grande échelle par des acteurs cybercriminels. Cela confirme que l'IA est désormais un outil offensif concret, pas une hypothèse prospective. [The Verge](https://www.theverge.com/tech/928007/google-ai-zero-day-exploit-stopped)
+- **IA et exploitation zero-day / failles dans les outils IA** : Google documente pour la première fois un cas avéré où un acteur malveillant a utilisé l'IA pour développer un exploit zero-day — signal fort d'une évolution des capacités offensives. Par ailleurs, une faille dans l'extension Chrome de Claude (identifiée par LayerX Security) rappelle que l'intégration des LLM dans les navigateurs élargit la surface d'attaque. [Next.ink](https://next.ink/237695/lia-aurait-aide-des-pirates-a-developper-un-exploit-zero-day-une-premiere-selon-google/) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-une-faille-dans-l-extension-claude-pour-chrome-100149.html)
 
-- **Économie de l'IA : gains surestimés, risques sous-estimés** : L'économiste Daron Acemoglu (Nobel 2024) maintient une position critique sur les promesses de productivité de l'IA, jugées largement exagérées par l'industrie. À surveiller pour cadrer les discours internes sur le ROI des investissements IA. [MIT Technology Review](https://www.technologyreview.com/2026/05/11/1137090/three-things-in-ai-to-watch-according-to-a-nobel-winning-economist/)</description>
-      <content:encoded><![CDATA[<h2>Grandes sources internationales</h2>
+- **Transparence des modèles IA face à l'Europe** : OpenAI accepte d'ouvrir partiellement l'accès à ses modèles sensibles aux institutions européennes, probablement pour anticiper les exigences de l'AI Act ; Anthropic refuse cette démarche et maintient son modèle Mythos fermé. Le positionnement des labs diverge clairement sur la question de la conformité réglementaire. [Frenchweb](https://www.frenchweb.fr/openai-abat-quelques-cartes-a-bruxelles-anthropic-garde-son-jeu-ferme/461709)
+
+- **Lunettes connectées et vie privée : alerte CNIL** : La CNIL classe les lunettes connectées comme une menace sérieuse pour la vie privée et lance un plan d'action dédié — à surveiller pour les entreprises qui envisagent ce type de dispositif en environnement professionnel. [Next.ink](https://next.ink/237679/pour-la-cnil-les-lunettes-connectees-sont-une-menace-serieuse-pour-la-vie-privee/)
+
+- **Inférence IA sur poste de travail** : AMD lance la carte Instinct MI350P pour exécuter de l'inférence et du RAG directement sur serveurs ou stations de travail existants, sans infrastructure cloud — une option à évaluer pour les organisations contraintes sur la souveraineté des données. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-avec-la-carte-instinct-mi350p-amd-apporte-l-inference-ia-aux-stations-de-travail-100138.html)
+
+- **Automatisation du développement logiciel** : Gstack automatise Claude Code pour simuler une équipe de développeurs complète ; le test JDN montre que l'outil déploie effectivement une application fonctionnelle, mais l'installation reste complexe pour des non-techniciens. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1549537-tutoriel-nous-avons-une-mini-app-de-facturation-avec-gstack-ce-que-garry-tan-ne-vous-dit-pas/)
+
+- **IA en entreprise : retours d'expérience** : Le podcast *Les Carnets de l'IA* revient sur les erreurs stratégiques fréquentes dans les projets IA en entreprise — utile pour cadrer les arbitrages en cours. [Les Carnets de l'IA](https://podcast.ausha.co/les-carnets-de-l-ia/rediff-69-mick-levy-ia-en-entreprise-les-transformations-a-venir)
+
+## Grandes sources internationales
+
+- **IA conversationnelle temps réel** : Thinking Machines travaille sur un modèle capable de traiter l'entrée utilisateur et de générer une réponse simultanément, rompant avec le schéma tour par tour qui caractérise tous les modèles actuels. L'enjeu est de rapprocher l'interaction vocale d'une conversation téléphonique naturelle, ce qui soulève des questions sur la gestion des flux audio et la latence côté infrastructure. [TechCrunch](https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/)
+
+## Recherche &amp; veille technique
+
+- **Sécurité des agents LLM multi-agents : fuite de données et attaques internes** : Dans les pipelines multi-agents, des informations sensibles peuvent se propager involontairement d'un agent à l'autre sans intention malveillante, et des agents compromis peuvent manipuler la formation de consensus pour faire adopter des conclusions erronées. Des mécanismes de détection à la génération (PRISM) et des analyses de surface d'attaque systématiques (MATRA) commencent à émerger pour adresser ces risques. [PRISM](https://arxiv.org/abs/2605.10614) · [Insider Attacks](https://arxiv.org/abs/2605.08268) · [MATRA](https://arxiv.org/abs/2605.10763)
+
+- **Contournement du filtrage de sécurité des LLM** : Il suffit de cibler un seul neurone pour désactiver les mécanismes de refus d'un modèle aligné, ce qui remet en cause la robustesse des approches d'alignement actuelles. Par ailleurs, les modèles sont structurellement incapables de "garder un secret" : prompts système, chaînes de raisonnement et données sensibles transitant dans un contexte partagé peuvent être extraits. [Single Neuron](https://arxiv.org/abs/2605.08513) · [Can You Keep a Secret](https://arxiv.org/abs/2605.10794)
+
+- **Sécurité des environnements d'exécution d'agents outillés** : Les agents LLM avec accès à des outils (bases de données, services cloud, APIs) opèrent dans des environnements privilégiés qui créent des risques d'escalade de privilèges et d'exécution de code non contrôlé. Plusieurs frameworks de protection à l'exécution sont proposés : surveillance de provenance (Agent-Sentry), contrôle du harness d'orchestration (SafeHarness) et protection contre l'injection de prompt indirecte (ClawGuard). [Privileged Execution](https://arxiv.org/abs/2605.09721) · [Agent-Sentry](https://arxiv.org/abs/2603.22868) · [SafeHarness](https://arxiv.org/abs/2604.13630) · [ClawGuard](https://arxiv.org/abs/2604.11790)
+
+- **Oracle Poisoning : empoisonnement des graphes de connaissances** : Un attaquant peut corrompre un graphe de connaissances interrogé par un agent à l'exécution pour lui faire tirer des conclusions incorrectes à partir d'un raisonnement apparemment correct — une menace distincte de l'injection de prompt, difficile à détecter par les défenses classiques. [Oracle Poisoning](https://arxiv.org/abs/2605.09822)
+
+- **Vérification formelle et confinement des agents IA** : Face aux limites des politiques de sécurité embarquées en langage naturel dans les prompts système (non vérifiables, non opposables), deux approches complémentaires émergent : la vérification de confinement au niveau du framework applicatif (indépendante du modèle) et l'application formelle de politiques. Ces travaux signalent un tournant vers des garanties de sécurité vérifiables plutôt que déclaratives. [Containment Verification](https://arxiv.org/abs/2605.09045) · [Formal Policy Enforcement](https://arxiv.org/abs/2602.16708)
+
+- **SeedHijack : attaque supply chain sur le générateur aléatoire des LLM** : En compromettant la graine du PRNG utilisé pour l'échantillonnage d'un LLM, un attaquant peut contrôler de façon déterministe les sorties du modèle — une surface d'attaque supply chain jusqu'ici ignorée. Les auteurs proposent l'usage de générateurs quantiques comme contre-mesure. [Seed Hijacking](https://arxiv.org/abs/2605.08313)
+
+- **Fiabilité des modèles vision-langage (VLM)** : L'attention visuelle concentrée sur une région n'est pas un indicateur fiable de la confiance ou de la calibration du modèle — une hypothèse courante mais empiriquement non fondée, avec des implications pour les systèmes d'IA en production. [VLM Reliability](https://arxiv.org/abs/2605.08200)</description>
+      <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Exploit zero-day généré par IA détecté par Google</strong> : C'est une première documentée — Google a intercepté un exploit zero-day dont le développement a impliqué l'IA, avant qu'il ne soit utilisé à grande échelle par des acteurs cybercriminels. Cela confirme que l'IA est désormais un outil offensif concret, pas une hypothèse prospective. <a href="https://www.theverge.com/tech/928007/google-ai-zero-day-exploit-stopped">The Verge</a></li>
+<li><strong>IA et exploitation zero-day / failles dans les outils IA</strong> : Google documente pour la première fois un cas avéré où un acteur malveillant a utilisé l'IA pour développer un exploit zero-day — signal fort d'une évolution des capacités offensives. Par ailleurs, une faille dans l'extension Chrome de Claude (identifiée par LayerX Security) rappelle que l'intégration des LLM dans les navigateurs élargit la surface d'attaque. <a href="https://next.ink/237695/lia-aurait-aide-des-pirates-a-developper-un-exploit-zero-day-une-premiere-selon-google/">Next.ink</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-une-faille-dans-l-extension-claude-pour-chrome-100149.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Économie de l'IA : gains surestimés, risques sous-estimés</strong> : L'économiste Daron Acemoglu (Nobel 2024) maintient une position critique sur les promesses de productivité de l'IA, jugées largement exagérées par l'industrie. À surveiller pour cadrer les discours internes sur le ROI des investissements IA. <a href="https://www.technologyreview.com/2026/05/11/1137090/three-things-in-ai-to-watch-according-to-a-nobel-winning-economist/">MIT Technology Review</a></li>
+<li><strong>Transparence des modèles IA face à l'Europe</strong> : OpenAI accepte d'ouvrir partiellement l'accès à ses modèles sensibles aux institutions européennes, probablement pour anticiper les exigences de l'AI Act ; Anthropic refuse cette démarche et maintient son modèle Mythos fermé. Le positionnement des labs diverge clairement sur la question de la conformité réglementaire. <a href="https://www.frenchweb.fr/openai-abat-quelques-cartes-a-bruxelles-anthropic-garde-son-jeu-ferme/461709">Frenchweb</a></li>
+</ul>
+
+<ul>
+<li><strong>Lunettes connectées et vie privée : alerte CNIL</strong> : La CNIL classe les lunettes connectées comme une menace sérieuse pour la vie privée et lance un plan d'action dédié — à surveiller pour les entreprises qui envisagent ce type de dispositif en environnement professionnel. <a href="https://next.ink/237679/pour-la-cnil-les-lunettes-connectees-sont-une-menace-serieuse-pour-la-vie-privee/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Inférence IA sur poste de travail</strong> : AMD lance la carte Instinct MI350P pour exécuter de l'inférence et du RAG directement sur serveurs ou stations de travail existants, sans infrastructure cloud — une option à évaluer pour les organisations contraintes sur la souveraineté des données. <a href="https://www.lemondeinformatique.fr/actualites/lire-avec-la-carte-instinct-mi350p-amd-apporte-l-inference-ia-aux-stations-de-travail-100138.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Automatisation du développement logiciel</strong> : Gstack automatise Claude Code pour simuler une équipe de développeurs complète ; le test JDN montre que l'outil déploie effectivement une application fonctionnelle, mais l'installation reste complexe pour des non-techniciens. <a href="https://www.journaldunet.com/intelligence-artificielle/1549537-tutoriel-nous-avons-une-mini-app-de-facturation-avec-gstack-ce-que-garry-tan-ne-vous-dit-pas/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>IA en entreprise : retours d'expérience</strong> : Le podcast *Les Carnets de l'IA* revient sur les erreurs stratégiques fréquentes dans les projets IA en entreprise — utile pour cadrer les arbitrages en cours. <a href="https://podcast.ausha.co/les-carnets-de-l-ia/rediff-69-mick-levy-ia-en-entreprise-les-transformations-a-venir">Les Carnets de l'IA</a></li>
+</ul>
+
+<h2>Grandes sources internationales</h2>
+
+<ul>
+<li><strong>IA conversationnelle temps réel</strong> : Thinking Machines travaille sur un modèle capable de traiter l'entrée utilisateur et de générer une réponse simultanément, rompant avec le schéma tour par tour qui caractérise tous les modèles actuels. L'enjeu est de rapprocher l'interaction vocale d'une conversation téléphonique naturelle, ce qui soulève des questions sur la gestion des flux audio et la latence côté infrastructure. <a href="https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/">TechCrunch</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Sécurité des agents LLM multi-agents : fuite de données et attaques internes</strong> : Dans les pipelines multi-agents, des informations sensibles peuvent se propager involontairement d'un agent à l'autre sans intention malveillante, et des agents compromis peuvent manipuler la formation de consensus pour faire adopter des conclusions erronées. Des mécanismes de détection à la génération (PRISM) et des analyses de surface d'attaque systématiques (MATRA) commencent à émerger pour adresser ces risques. <a href="https://arxiv.org/abs/2605.10614">PRISM</a> · <a href="https://arxiv.org/abs/2605.08268">Insider Attacks</a> · <a href="https://arxiv.org/abs/2605.10763">MATRA</a></li>
+</ul>
+
+<ul>
+<li><strong>Contournement du filtrage de sécurité des LLM</strong> : Il suffit de cibler un seul neurone pour désactiver les mécanismes de refus d'un modèle aligné, ce qui remet en cause la robustesse des approches d'alignement actuelles. Par ailleurs, les modèles sont structurellement incapables de "garder un secret" : prompts système, chaînes de raisonnement et données sensibles transitant dans un contexte partagé peuvent être extraits. <a href="https://arxiv.org/abs/2605.08513">Single Neuron</a> · <a href="https://arxiv.org/abs/2605.10794">Can You Keep a Secret</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurité des environnements d'exécution d'agents outillés</strong> : Les agents LLM avec accès à des outils (bases de données, services cloud, APIs) opèrent dans des environnements privilégiés qui créent des risques d'escalade de privilèges et d'exécution de code non contrôlé. Plusieurs frameworks de protection à l'exécution sont proposés : surveillance de provenance (Agent-Sentry), contrôle du harness d'orchestration (SafeHarness) et protection contre l'injection de prompt indirecte (ClawGuard). <a href="https://arxiv.org/abs/2605.09721">Privileged Execution</a> · <a href="https://arxiv.org/abs/2603.22868">Agent-Sentry</a> · <a href="https://arxiv.org/abs/2604.13630">SafeHarness</a> · <a href="https://arxiv.org/abs/2604.11790">ClawGuard</a></li>
+</ul>
+
+<ul>
+<li><strong>Oracle Poisoning : empoisonnement des graphes de connaissances</strong> : Un attaquant peut corrompre un graphe de connaissances interrogé par un agent à l'exécution pour lui faire tirer des conclusions incorrectes à partir d'un raisonnement apparemment correct — une menace distincte de l'injection de prompt, difficile à détecter par les défenses classiques. <a href="https://arxiv.org/abs/2605.09822">Oracle Poisoning</a></li>
+</ul>
+
+<ul>
+<li><strong>Vérification formelle et confinement des agents IA</strong> : Face aux limites des politiques de sécurité embarquées en langage naturel dans les prompts système (non vérifiables, non opposables), deux approches complémentaires émergent : la vérification de confinement au niveau du framework applicatif (indépendante du modèle) et l'application formelle de politiques. Ces travaux signalent un tournant vers des garanties de sécurité vérifiables plutôt que déclaratives. <a href="https://arxiv.org/abs/2605.09045">Containment Verification</a> · <a href="https://arxiv.org/abs/2602.16708">Formal Policy Enforcement</a></li>
+</ul>
+
+<ul>
+<li><strong>SeedHijack : attaque supply chain sur le générateur aléatoire des LLM</strong> : En compromettant la graine du PRNG utilisé pour l'échantillonnage d'un LLM, un attaquant peut contrôler de façon déterministe les sorties du modèle — une surface d'attaque supply chain jusqu'ici ignorée. Les auteurs proposent l'usage de générateurs quantiques comme contre-mesure. <a href="https://arxiv.org/abs/2605.08313">Seed Hijacking</a></li>
+</ul>
+
+<ul>
+<li><strong>Fiabilité des modèles vision-langage (VLM)</strong> : L'attention visuelle concentrée sur une région n'est pas un indicateur fiable de la confiance ou de la calibration du modèle — une hypothèse courante mais empiriquement non fondée, avec des implications pour les systèmes d'IA en production. <a href="https://arxiv.org/abs/2605.08200">VLM Reliability</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260511-1953</guid>
-      <pubDate>Mon, 11 May 2026 19:53:05 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260512-0926</guid>
+      <pubDate>Tue, 12 May 2026 09:26:21 +0000</pubDate>
     </item>
   </channel>
 </rss>
