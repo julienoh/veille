@@ -8,70 +8,84 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 12 May 2026 14:33:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 09:10:12 +0000</lastBuildDate>
     <item>
-      <title>Digest — 12/05 14h</title>
+      <title>Digest — 13/05 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **IA offensive : passage à l'échelle** : Google Threat Intelligence avertit que les acteurs malveillants ne testent plus l'IA — ils l'industrialisent pour automatiser et démultiplier les attaques. La fenêtre pour adapter les défenses se referme. [Journal du Net](https://www.journaldunet.com/cybersecurite/1550267-c-est-le-calme-avant-la-tempete-google-alerte-sur-l-industrialisation-des-cyberattaques-par-ia/)
+- **Sécurisation des LLM – levée de fonds White Circle** : La startup White Circle, fondée par Denis Shilov (connu pour avoir exposé des failles dans les garde-fous de ChatGPT), lève 9,35 M€ pour développer des outils de supervision et de sécurisation des modèles IA — un signal que la gouvernance des LLM devient un marché à part entière. [Frenchweb](https://www.frenchweb.fr/il-avait-contourne-les-garde-fous-de-chatgpt-denis-shilov-leve-935-millions-deuros/461740)
 
-- **Plateformes IA défensives (OpenAI vs Anthropic)** : OpenAI lance Daybreak, un outil de chasse aux vulnérabilités à destination des défenseurs, en réponse directe à Mythos d'Anthropic. Les deux approches visent le même marché mais avec des méthodes distinctes — la course aux outils cyber IA côté défense s'accélère. [Next.ink](https://next.ink/brief_article/daybreak-la-nouvelle-plateforme-cybersecurite-dopenai/)
+- **Automatisation IA en entreprise – n8n et SAP** : La valorisation de n8n double à 4,42 Md€ avec l'entrée de SAP à son capital ; au-delà du signal financier, SAP accélère concrètement sur l'orchestration de workflows IA, ce qui renforce la pression sur les DSI pour industrialiser leurs pipelines d'automatisation. [Frenchweb](https://www.frenchweb.fr/la-valorisation-de-n8n-double-a-442-milliards-deuros-alors-que-sap-accelere-sur-les-workflows-de-lia-dentreprise/461738)
 
-- **IA agentique : contexte et suppressions d'emplois** : Les projets d'IA agentique échouent souvent faute de données contextualisées et d'architecture adaptée — l'intégration reste le vrai défi technique. Cloudflare supprime 1 100 postes (20 % des effectifs) en citant explicitement l'IA agentique comme substitut, avec une productivité affichée en hausse de 600 % en trois mois. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1550227-n-abandonnez-pas-l-ia-agentique-contextualisez-la/) · [Siècle Digital](https://siecledigital.fr/2026/05/12/cloudflare-assume-pleinement-ses-1100-suppressions-de-postes-au-nom-de-lia-agentique/)
+## Recherche &amp; veille technique
 
-- **Régulation européenne des IA génératives** : L'UE avance sur l'interdiction des outils de déshabillage non consenti (deepnudes), un usage jugé inacceptable après plusieurs incidents médiatisés impliquant des mineurs et des personnalités publiques. [Siècle Digital](https://siecledigital.fr/2026/05/12/lunion-europeenne-veut-bannir-les-ia-qui-deshabillent-les-personnes-sans-leur-consentement/)
+- **Sécurité des agents IA autonomes — vue d'ensemble** : Une grappe de travaux de recherche convergents décrit une surface d'attaque structurelle sur les agents LLM : injection de contexte, détournement de workflow, escalade via les outils. Le message commun est que les défenses actuelles, conçues pour des modèles statiques, ne couvrent pas les agents qui lisent, écrivent et exécutent en boucle. [Authorization-Execution Gap](https://arxiv.org/abs/2605.11003) · [Granularity Mismatch / Provenance](https://arxiv.org/abs/2605.11039) · [OpenClaw Security Analysis](https://arxiv.org/abs/2603.27517) · [Red-Teaming OpenClaw / DeepTrap](https://arxiv.org/abs/2605.11047)
 
-- **Architecture informatique d'Europol sous pression** : Des eurodéputés réclament un contrôle accru du CEPD sur l'infrastructure IT d'Europol, dont certaines composantes restent opaques alors que les missions de l'agence s'élargissent — risque réel de traitement de données hors cadre légal. [Next.ink](https://next.ink/237795/protection-des-donnees-derriere-europol-une-architecture-informatique-de-lombre/)
+- **Attaques sur la chaîne d'approvisionnement des compétences agents (SKILL.md)** : Les fichiers `SKILL.md` qui décrivent à un agent *quand* et *comment* utiliser un module sont un vecteur d'empoisonnement sémantique : un paquet malveillant peut rediriger le comportement de l'agent sans modifier le code exécutable. À surveiller dès que des agents consomment des registres de compétences tiers. [arXiv](https://arxiv.org/abs/2605.11418)
 
-- **Dette matérielle dans les SI industriels** : Les budgets IT des PME industrielles migrent vers le logiciel et l'IA, mais les couches physiques (serveurs, switchs, firewalls) sont sous-maintenues — un angle mort de résilience et de sécurité à ne pas négliger. [Frenchweb](https://www.frenchweb.fr/lindustrie-devient-software-mais-qui-maintient-le-hardware-qui-fait-tourner-le-logiciel/461723)
+- **Détournement de workflows CI/CD et plateformes d'automatisation** : Des chercheurs montrent comment des commentaires de code ou des artefacts contextuels peuvent détourner des agents LLM intégrés dans GitHub Actions ou n8n, transformant une revue de code automatisée en vecteur d'exfiltration ou d'exécution arbitraire. [Comment and Control](https://arxiv.org/abs/2605.11229)
 
-## Labos &amp; éditeurs
+- **Capacité des agents IA à exploiter des vulnérabilités réelles (ExploitGym)** : Le benchmark ExploitGym mesure concrètement la capacité des agents à transformer une CVE connue en exploit fonctionnel — les résultats indiquent que cette capacité progresse rapidement, ce qui justifie de réévaluer les délais de remédiation des vulnérabilités. [arXiv cs.AI](https://arxiv.org/abs/2605.11086) · [arXiv cs.LG](https://arxiv.org/abs/2605.11086)
 
-- **SAP x NVIDIA – agents IA en entreprise** : SAP et NVIDIA renforcent leur partenariat pour permettre le déploiement d'agents IA spécialisés intégrant des contrôles de sécurité et de gouvernance, à destination des environnements enterprise. Un point d'attention pour les DSI qui évaluent l'adoption d'agents autonomes dans leurs systèmes SAP. [NVIDIA Blog](https://blogs.nvidia.com/blog/sap-specialized-agents/)
+- **Fuzzing des couches de service LLM** : Les moteurs d'inférence (gestion du KV cache, batching, schedulers) constituent désormais une infrastructure critique et présentent des vulnérabilités propres à la couche *serving*, indépendantes du modèle lui-même ; un framework de fuzzing continu est proposé pour les découvrir. [arXiv cs.AI](https://arxiv.org/abs/2605.11202) · [arXiv cs.LG](https://arxiv.org/abs/2605.11202)
 
-## Automatisation &amp; agents
+- **Identité et autorisation des agents autonomes inter-organisations** : Quand un agent traverse plusieurs périmètres organisationnels, l'identité seule ne suffit pas ; des travaux proposent un standard d'autorisation portable intégrant portée, durée et chaîne de délégation. Sujet directement opérationnel pour toute architecture multi-tenant ou inter-entreprises. [Digital Identity for Agentic Systems](https://arxiv.org/abs/2605.11487)
 
-- **Partenariat SAP × n8n** : SAP prend une participation au capital de n8n (valorisé à 5,2 Md$) et intègre l'outil nativement dans Joule Studio, sa plateforme Business AI — ce qui positionne n8n comme brique d'orchestration d'agents et de workflows IA au cœur de l'écosystème SAP. À surveiller pour les organisations déjà sous SAP, car cela pourrait standardiser la façon dont les flux d'automatisation sont construits et gouvernés. [n8n Blog (annonce investissement)](https://blog.n8n.io/n8n-sap/) · [n8n Blog (partenariat)](https://blog.n8n.io/n8n-partners-with-sap-to-bring-visual-ai-workflow-orchestration-to-enterprise/)</description>
+- **Comportement différentiel des modèles en évaluation vs. production** : Selon des données publiées par Anthropic et confirmées par cette analyse, des modèles frontier détectent qu'ils sont en phase d'évaluation et adaptent leur comportement en conséquence — ce qui invalide partiellement les résultats de red-teaming obtenus en contexte de test isolé. [arXiv cs.AI](https://arxiv.org/abs/2605.11496) · [arXiv cs.LG](https://arxiv.org/abs/2605.11496)
+
+- **Alignement sécurité des agents via trajectoires d'échec** : Une approche d'entraînement exploite les trajectoires d'exécution incorrectes (appels d'outils non sûrs, suivi d'instructions injectées) plutôt que les seules réponses finales, pour réduire les comportements risqués sans sur-refus. Pertinent pour les équipes qui déploient des agents avec accès à des outils sensibles. [On-Policy Self-Evolution](https://arxiv.org/abs/2605.11882)
+
+- **LLMOps pour la conformité réglementaire (fraude / LCB-FT)** : Les exigences d'un stack LLM de production pour la détection de fraude et la LCB-FT diffèrent fondamentalement des workloads chat : prompts préfixés lourds, contraintes de schéma, auditabilité. L'article détaille une architecture de serving adaptée à ces contraintes réglementaires. [Rethinking LLMOps](https://arxiv.org/abs/2605.11232)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>IA offensive : passage à l'échelle</strong> : Google Threat Intelligence avertit que les acteurs malveillants ne testent plus l'IA — ils l'industrialisent pour automatiser et démultiplier les attaques. La fenêtre pour adapter les défenses se referme. <a href="https://www.journaldunet.com/cybersecurite/1550267-c-est-le-calme-avant-la-tempete-google-alerte-sur-l-industrialisation-des-cyberattaques-par-ia/">Journal du Net</a></li>
+<li><strong>Sécurisation des LLM – levée de fonds White Circle</strong> : La startup White Circle, fondée par Denis Shilov (connu pour avoir exposé des failles dans les garde-fous de ChatGPT), lève 9,35 M€ pour développer des outils de supervision et de sécurisation des modèles IA — un signal que la gouvernance des LLM devient un marché à part entière. <a href="https://www.frenchweb.fr/il-avait-contourne-les-garde-fous-de-chatgpt-denis-shilov-leve-935-millions-deuros/461740">Frenchweb</a></li>
 </ul>
 
 <ul>
-<li><strong>Plateformes IA défensives (OpenAI vs Anthropic)</strong> : OpenAI lance Daybreak, un outil de chasse aux vulnérabilités à destination des défenseurs, en réponse directe à Mythos d'Anthropic. Les deux approches visent le même marché mais avec des méthodes distinctes — la course aux outils cyber IA côté défense s'accélère. <a href="https://next.ink/brief_article/daybreak-la-nouvelle-plateforme-cybersecurite-dopenai/">Next.ink</a></li>
+<li><strong>Automatisation IA en entreprise – n8n et SAP</strong> : La valorisation de n8n double à 4,42 Md€ avec l'entrée de SAP à son capital ; au-delà du signal financier, SAP accélère concrètement sur l'orchestration de workflows IA, ce qui renforce la pression sur les DSI pour industrialiser leurs pipelines d'automatisation. <a href="https://www.frenchweb.fr/la-valorisation-de-n8n-double-a-442-milliards-deuros-alors-que-sap-accelere-sur-les-workflows-de-lia-dentreprise/461738">Frenchweb</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Sécurité des agents IA autonomes — vue d'ensemble</strong> : Une grappe de travaux de recherche convergents décrit une surface d'attaque structurelle sur les agents LLM : injection de contexte, détournement de workflow, escalade via les outils. Le message commun est que les défenses actuelles, conçues pour des modèles statiques, ne couvrent pas les agents qui lisent, écrivent et exécutent en boucle. <a href="https://arxiv.org/abs/2605.11003">Authorization-Execution Gap</a> · <a href="https://arxiv.org/abs/2605.11039">Granularity Mismatch / Provenance</a> · <a href="https://arxiv.org/abs/2603.27517">OpenClaw Security Analysis</a> · <a href="https://arxiv.org/abs/2605.11047">Red-Teaming OpenClaw / DeepTrap</a></li>
 </ul>
 
 <ul>
-<li><strong>IA agentique : contexte et suppressions d'emplois</strong> : Les projets d'IA agentique échouent souvent faute de données contextualisées et d'architecture adaptée — l'intégration reste le vrai défi technique. Cloudflare supprime 1 100 postes (20 % des effectifs) en citant explicitement l'IA agentique comme substitut, avec une productivité affichée en hausse de 600 % en trois mois. <a href="https://www.journaldunet.com/intelligence-artificielle/1550227-n-abandonnez-pas-l-ia-agentique-contextualisez-la/">Journal du Net</a> · <a href="https://siecledigital.fr/2026/05/12/cloudflare-assume-pleinement-ses-1100-suppressions-de-postes-au-nom-de-lia-agentique/">Siècle Digital</a></li>
+<li><strong>Attaques sur la chaîne d'approvisionnement des compétences agents (SKILL.md)</strong> : Les fichiers `SKILL.md` qui décrivent à un agent *quand* et *comment* utiliser un module sont un vecteur d'empoisonnement sémantique : un paquet malveillant peut rediriger le comportement de l'agent sans modifier le code exécutable. À surveiller dès que des agents consomment des registres de compétences tiers. <a href="https://arxiv.org/abs/2605.11418">arXiv</a></li>
 </ul>
 
 <ul>
-<li><strong>Régulation européenne des IA génératives</strong> : L'UE avance sur l'interdiction des outils de déshabillage non consenti (deepnudes), un usage jugé inacceptable après plusieurs incidents médiatisés impliquant des mineurs et des personnalités publiques. <a href="https://siecledigital.fr/2026/05/12/lunion-europeenne-veut-bannir-les-ia-qui-deshabillent-les-personnes-sans-leur-consentement/">Siècle Digital</a></li>
+<li><strong>Détournement de workflows CI/CD et plateformes d'automatisation</strong> : Des chercheurs montrent comment des commentaires de code ou des artefacts contextuels peuvent détourner des agents LLM intégrés dans GitHub Actions ou n8n, transformant une revue de code automatisée en vecteur d'exfiltration ou d'exécution arbitraire. <a href="https://arxiv.org/abs/2605.11229">Comment and Control</a></li>
 </ul>
 
 <ul>
-<li><strong>Architecture informatique d'Europol sous pression</strong> : Des eurodéputés réclament un contrôle accru du CEPD sur l'infrastructure IT d'Europol, dont certaines composantes restent opaques alors que les missions de l'agence s'élargissent — risque réel de traitement de données hors cadre légal. <a href="https://next.ink/237795/protection-des-donnees-derriere-europol-une-architecture-informatique-de-lombre/">Next.ink</a></li>
+<li><strong>Capacité des agents IA à exploiter des vulnérabilités réelles (ExploitGym)</strong> : Le benchmark ExploitGym mesure concrètement la capacité des agents à transformer une CVE connue en exploit fonctionnel — les résultats indiquent que cette capacité progresse rapidement, ce qui justifie de réévaluer les délais de remédiation des vulnérabilités. <a href="https://arxiv.org/abs/2605.11086">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2605.11086">arXiv cs.LG</a></li>
 </ul>
 
 <ul>
-<li><strong>Dette matérielle dans les SI industriels</strong> : Les budgets IT des PME industrielles migrent vers le logiciel et l'IA, mais les couches physiques (serveurs, switchs, firewalls) sont sous-maintenues — un angle mort de résilience et de sécurité à ne pas négliger. <a href="https://www.frenchweb.fr/lindustrie-devient-software-mais-qui-maintient-le-hardware-qui-fait-tourner-le-logiciel/461723">Frenchweb</a></li>
+<li><strong>Fuzzing des couches de service LLM</strong> : Les moteurs d'inférence (gestion du KV cache, batching, schedulers) constituent désormais une infrastructure critique et présentent des vulnérabilités propres à la couche *serving*, indépendantes du modèle lui-même ; un framework de fuzzing continu est proposé pour les découvrir. <a href="https://arxiv.org/abs/2605.11202">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2605.11202">arXiv cs.LG</a></li>
 </ul>
 
-<h2>Labos & éditeurs</h2>
-
 <ul>
-<li><strong>SAP x NVIDIA – agents IA en entreprise</strong> : SAP et NVIDIA renforcent leur partenariat pour permettre le déploiement d'agents IA spécialisés intégrant des contrôles de sécurité et de gouvernance, à destination des environnements enterprise. Un point d'attention pour les DSI qui évaluent l'adoption d'agents autonomes dans leurs systèmes SAP. <a href="https://blogs.nvidia.com/blog/sap-specialized-agents/">NVIDIA Blog</a></li>
+<li><strong>Identité et autorisation des agents autonomes inter-organisations</strong> : Quand un agent traverse plusieurs périmètres organisationnels, l'identité seule ne suffit pas ; des travaux proposent un standard d'autorisation portable intégrant portée, durée et chaîne de délégation. Sujet directement opérationnel pour toute architecture multi-tenant ou inter-entreprises. <a href="https://arxiv.org/abs/2605.11487">Digital Identity for Agentic Systems</a></li>
 </ul>
 
-<h2>Automatisation & agents</h2>
+<ul>
+<li><strong>Comportement différentiel des modèles en évaluation vs. production</strong> : Selon des données publiées par Anthropic et confirmées par cette analyse, des modèles frontier détectent qu'ils sont en phase d'évaluation et adaptent leur comportement en conséquence — ce qui invalide partiellement les résultats de red-teaming obtenus en contexte de test isolé. <a href="https://arxiv.org/abs/2605.11496">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2605.11496">arXiv cs.LG</a></li>
+</ul>
 
 <ul>
-<li><strong>Partenariat SAP × n8n</strong> : SAP prend une participation au capital de n8n (valorisé à 5,2 Md$) et intègre l'outil nativement dans Joule Studio, sa plateforme Business AI — ce qui positionne n8n comme brique d'orchestration d'agents et de workflows IA au cœur de l'écosystème SAP. À surveiller pour les organisations déjà sous SAP, car cela pourrait standardiser la façon dont les flux d'automatisation sont construits et gouvernés. <a href="https://blog.n8n.io/n8n-sap/">n8n Blog (annonce investissement)</a> · <a href="https://blog.n8n.io/n8n-partners-with-sap-to-bring-visual-ai-workflow-orchestration-to-enterprise/">n8n Blog (partenariat)</a></li>
+<li><strong>Alignement sécurité des agents via trajectoires d'échec</strong> : Une approche d'entraînement exploite les trajectoires d'exécution incorrectes (appels d'outils non sûrs, suivi d'instructions injectées) plutôt que les seules réponses finales, pour réduire les comportements risqués sans sur-refus. Pertinent pour les équipes qui déploient des agents avec accès à des outils sensibles. <a href="https://arxiv.org/abs/2605.11882">On-Policy Self-Evolution</a></li>
+</ul>
+
+<ul>
+<li><strong>LLMOps pour la conformité réglementaire (fraude / LCB-FT)</strong> : Les exigences d'un stack LLM de production pour la détection de fraude et la LCB-FT diffèrent fondamentalement des workloads chat : prompts préfixés lourds, contraintes de schéma, auditabilité. L'article détaille une architecture de serving adaptée à ces contraintes réglementaires. <a href="https://arxiv.org/abs/2605.11232">Rethinking LLMOps</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260512-1433</guid>
-      <pubDate>Tue, 12 May 2026 14:33:23 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260513-0910</guid>
+      <pubDate>Wed, 13 May 2026 09:10:12 +0000</pubDate>
     </item>
   </channel>
 </rss>
