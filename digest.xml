@@ -8,36 +8,90 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 14 May 2026 19:50:59 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 09:00:48 +0000</lastBuildDate>
     <item>
-      <title>Digest — 14/05 19h</title>
+      <title>Digest — 15/05 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Grandes sources internationales
+      <description>## Sources françaises IA
 
-- **Zero-day BitLocker Windows 11** : Une faille zero-day permet de contourner complètement le chiffrement BitLocker dans sa configuration par défaut sur Windows 11 — Microsoft confirme être en cours d'investigation, sans patch disponible à ce stade. [Ars Technica](https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/)
+- **Mise en production des agents IA et structuration des projets** : Deux angles complémentaires convergent vers le même constat — déployer l'IA en entreprise exige d'abord de résoudre des questions d'architecture et de gouvernance avant de se préoccuper de la technologie elle-même. Pour les agents IA, cela passe par une couche dédiée à l'orchestration, la gestion des identités et la sécurité ; pour tout projet IA, cela commence par la valeur métier, la qualité des données et la capacité d'intégration au SI existant. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1550309-doit-on-inventer-un-nouvel-os-pour-les-agents-ia/) · [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1550307-si-vous-demarrez-un-projet-ia-la-premiere-question-n-est-pas-de-choisir-votre-modele/)
 
-- **Microsoft abandonne Claude Code** : Microsoft met fin à l'accès à Claude Code, l'outil de coding IA d'Anthropic qu'il testait en interne depuis décembre auprès de milliers de ses propres développeurs et employés non-techniques. [The Verge](https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad)
+## Recherche &amp; veille technique
 
-## Labos &amp; éditeurs
+- **Sécurité des LLM quantifiés** : Un modèle peut paraître sain en pleine précision et révéler un comportement malveillant une fois quantifié — une surface d'attaque concrète pour les chaînes de déploiement qui s'appuient sur des modèles tiers. [Source](https://arxiv.org/abs/2605.15152)
 
-- **Granite Embedding Multilingual R2 (IBM)** : IBM publie sous licence Apache 2.0 un nouveau modèle d'embeddings multilingues de moins de 100M de paramètres, avec une fenêtre de contexte de 32 000 tokens — un atout concret pour les pipelines RAG en environnement souverain ou air-gappé, sans contrainte de licence. [Hugging Face Blog](https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2)</description>
-      <content:encoded><![CDATA[<h2>Grandes sources internationales</h2>
+- **Contournement des protections par fine-tuning** : Les défenses actuelles contre le fine-tuning malveillant cèdent face à des adversaires adaptatifs ; les garde-fous intégrés avant publication ne constituent pas une garantie suffisante dès que l'accès aux poids ou à l'API de fine-tuning est ouvert. [Source](https://arxiv.org/abs/2605.14605)
+
+- **Détection de contenu IA et contournement par paraphrase** : Les outils de détection de texte généré par LLM restent vulnérables aux attaques par paraphrase, ce qui fragilise leur usage comme contrôle anti-plagiat ou anti-désinformation en environnement réel. [Source](https://arxiv.org/abs/2605.14240)
+
+- **Fine-tuning sur données privées (apprentissage fédéré)** : Un benchmark cross-domaine positionne l'apprentissage fédéré comme voie sérieuse pour entraîner des LLM sur des données sensibles (santé, finance…) sans les centraliser ; les résultats restent mitigés selon les domaines. [Source](https://arxiv.org/abs/2605.13936)
+
+- **Détection de toxicité équitable et calibrée** : Les mécanismes de sécurité post-hoc dépendent fortement des choix faits à l'entraînement ; évaluer équité, calibration et abstention séparément donne une image trompeuse du niveau réel de protection. [Source](https://arxiv.org/abs/2605.14074)
+
+- **Efficacité énergétique des LLM** : La distillation est souvent présentée comme économe, mais une comptabilité énergétique bout-en-bout relativise cet avantage — point à intégrer dans les évaluations RSE et les arbitrages d'infrastructure. [Source](https://arxiv.org/abs/2605.13981)
+
+- **Optimisation mémoire des LLM en inférence** : Deux approches complémentaires émergent pour réduire l'empreinte mémoire en production : l'élagage dynamique du cache KV ([Self-Pruned KV](https://arxiv.org/abs/2605.14037)) et le fine-tuning restreint à la phase de prefill pour préserver le débit serveur ([PreFT](https://arxiv.org/abs/2605.14217)). [Source 1](https://arxiv.org/abs/2605.14037) · [Source 2](https://arxiv.org/abs/2605.14217)
+
+- **Métacognition des LLM** : Les modèles sont capables d'estimer leur propre fiabilité avant et après une réponse, mais n'exploitent pas ce signal en pratique — une piste pour réduire les hallucinations sans surcoût majeur. [Source](https://arxiv.org/abs/2605.14186)
+
+- **Architectures MoE et passage à l'échelle** : Une paramétrisation stable est proposée pour les architectures Mixture-of-Experts, ce qui devrait faciliter la reproductibilité et la maîtrise des coûts lors du scaling des modèles frontier. [Source](https://arxiv.org/abs/2605.14200)
+
+- **Interprétabilité des LLM** : Deux travaux cherchent à mieux comprendre le fonctionnement interne des transformers — l'un via la géométrie spectrale du flux résiduel, l'autre en réévaluant la pertinence des couches au-delà de la similarité cosinus — sans application opérationnelle immédiate mais utile pour l'audit de modèles. [Source 1](https://arxiv.org/abs/2605.14258) · [Source 2](https://arxiv.org/abs/2605.14075)
+
+- **Modèles de fondation pour données tabulaires (TabPFN-3)** : La nouvelle version étend les capacités des modèles de fondation aux données tabulaires structurées, domaine central pour la majorité des SI métier. [Source](https://arxiv.org/abs/2605.13986)</description>
+      <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Zero-day BitLocker Windows 11</strong> : Une faille zero-day permet de contourner complètement le chiffrement BitLocker dans sa configuration par défaut sur Windows 11 — Microsoft confirme être en cours d'investigation, sans patch disponible à ce stade. <a href="https://arstechnica.com/security/2026/05/zero-day-exploit-completely-defeats-default-windows-11-bitlocker-protections/">Ars Technica</a></li>
+<li><strong>Mise en production des agents IA et structuration des projets</strong> : Deux angles complémentaires convergent vers le même constat — déployer l'IA en entreprise exige d'abord de résoudre des questions d'architecture et de gouvernance avant de se préoccuper de la technologie elle-même. Pour les agents IA, cela passe par une couche dédiée à l'orchestration, la gestion des identités et la sécurité ; pour tout projet IA, cela commence par la valeur métier, la qualité des données et la capacité d'intégration au SI existant. <a href="https://www.journaldunet.com/intelligence-artificielle/1550309-doit-on-inventer-un-nouvel-os-pour-les-agents-ia/">Journal du Net</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1550307-si-vous-demarrez-un-projet-ia-la-premiere-question-n-est-pas-de-choisir-votre-modele/">Journal du Net</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Sécurité des LLM quantifiés</strong> : Un modèle peut paraître sain en pleine précision et révéler un comportement malveillant une fois quantifié — une surface d'attaque concrète pour les chaînes de déploiement qui s'appuient sur des modèles tiers. <a href="https://arxiv.org/abs/2605.15152">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Microsoft abandonne Claude Code</strong> : Microsoft met fin à l'accès à Claude Code, l'outil de coding IA d'Anthropic qu'il testait en interne depuis décembre auprès de milliers de ses propres développeurs et employés non-techniques. <a href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad">The Verge</a></li>
+<li><strong>Contournement des protections par fine-tuning</strong> : Les défenses actuelles contre le fine-tuning malveillant cèdent face à des adversaires adaptatifs ; les garde-fous intégrés avant publication ne constituent pas une garantie suffisante dès que l'accès aux poids ou à l'API de fine-tuning est ouvert. <a href="https://arxiv.org/abs/2605.14605">Source</a></li>
 </ul>
 
-<h2>Labos & éditeurs</h2>
+<ul>
+<li><strong>Détection de contenu IA et contournement par paraphrase</strong> : Les outils de détection de texte généré par LLM restent vulnérables aux attaques par paraphrase, ce qui fragilise leur usage comme contrôle anti-plagiat ou anti-désinformation en environnement réel. <a href="https://arxiv.org/abs/2605.14240">Source</a></li>
+</ul>
 
 <ul>
-<li><strong>Granite Embedding Multilingual R2 (IBM)</strong> : IBM publie sous licence Apache 2.0 un nouveau modèle d'embeddings multilingues de moins de 100M de paramètres, avec une fenêtre de contexte de 32 000 tokens — un atout concret pour les pipelines RAG en environnement souverain ou air-gappé, sans contrainte de licence. <a href="https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2">Hugging Face Blog</a></li>
+<li><strong>Fine-tuning sur données privées (apprentissage fédéré)</strong> : Un benchmark cross-domaine positionne l'apprentissage fédéré comme voie sérieuse pour entraîner des LLM sur des données sensibles (santé, finance…) sans les centraliser ; les résultats restent mitigés selon les domaines. <a href="https://arxiv.org/abs/2605.13936">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de toxicité équitable et calibrée</strong> : Les mécanismes de sécurité post-hoc dépendent fortement des choix faits à l'entraînement ; évaluer équité, calibration et abstention séparément donne une image trompeuse du niveau réel de protection. <a href="https://arxiv.org/abs/2605.14074">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Efficacité énergétique des LLM</strong> : La distillation est souvent présentée comme économe, mais une comptabilité énergétique bout-en-bout relativise cet avantage — point à intégrer dans les évaluations RSE et les arbitrages d'infrastructure. <a href="https://arxiv.org/abs/2605.13981">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation mémoire des LLM en inférence</strong> : Deux approches complémentaires émergent pour réduire l'empreinte mémoire en production : l'élagage dynamique du cache KV (<a href="https://arxiv.org/abs/2605.14037">Self-Pruned KV</a>) et le fine-tuning restreint à la phase de prefill pour préserver le débit serveur (<a href="https://arxiv.org/abs/2605.14217">PreFT</a>). <a href="https://arxiv.org/abs/2605.14037">Source 1</a> · <a href="https://arxiv.org/abs/2605.14217">Source 2</a></li>
+</ul>
+
+<ul>
+<li><strong>Métacognition des LLM</strong> : Les modèles sont capables d'estimer leur propre fiabilité avant et après une réponse, mais n'exploitent pas ce signal en pratique — une piste pour réduire les hallucinations sans surcoût majeur. <a href="https://arxiv.org/abs/2605.14186">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Architectures MoE et passage à l'échelle</strong> : Une paramétrisation stable est proposée pour les architectures Mixture-of-Experts, ce qui devrait faciliter la reproductibilité et la maîtrise des coûts lors du scaling des modèles frontier. <a href="https://arxiv.org/abs/2605.14200">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Interprétabilité des LLM</strong> : Deux travaux cherchent à mieux comprendre le fonctionnement interne des transformers — l'un via la géométrie spectrale du flux résiduel, l'autre en réévaluant la pertinence des couches au-delà de la similarité cosinus — sans application opérationnelle immédiate mais utile pour l'audit de modèles. <a href="https://arxiv.org/abs/2605.14258">Source 1</a> · <a href="https://arxiv.org/abs/2605.14075">Source 2</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles de fondation pour données tabulaires (TabPFN-3)</strong> : La nouvelle version étend les capacités des modèles de fondation aux données tabulaires structurées, domaine central pour la majorité des SI métier. <a href="https://arxiv.org/abs/2605.13986">Source</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260514-1950</guid>
-      <pubDate>Thu, 14 May 2026 19:50:59 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260515-0900</guid>
+      <pubDate>Fri, 15 May 2026 09:00:48 +0000</pubDate>
     </item>
   </channel>
 </rss>
