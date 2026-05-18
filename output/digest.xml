@@ -8,102 +8,48 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 18 May 2026 10:24:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 15:40:15 +0000</lastBuildDate>
     <item>
-      <title>Digest — 18/05 10h</title>
+      <title>Digest — 18/05 15h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **IA en production : architecture avant tout** : Le choix du modèle est marginal — moins de 10 % de la complexité réelle. Ce qui fait ou défait un projet IA en production, c'est l'architecture data, la gouvernance et la sécurité. Les DSI doivent résister à la focalisation sur le modèle et investir sur les fondations, notamment en ouvrant les silos de données qui rendent l'IA non viable à l'échelle. [JDN – 5 piliers](https://www.journaldunet.com/intelligence-artificielle/1550235-ia-de-confiance-et-dsi-les-5-piliers-d-un-projet-viable-en-production/) · [JDN – Données fermées](https://www.journaldunet.com/intelligence-artificielle/1550353-l-ia-ne-tiendra-pas-sur-des-fondations-de-donnees-fermees/)
+- **IA et contournement de la 2FA / vibe coding** : Le rapport GTIG de Google documente l'usage concret de LLM par des attaquants pour identifier des vulnérabilités zero-day et automatiser le contournement de la double authentification — ce n'est plus théorique. Parallèlement, les plateformes de vibe coding (Lovable, Replit…) génèrent du code non audité déployé en production, créant une surface d'attaque diffuse et difficile à cartographier pour les équipes sécu. [Siècle Digital](https://siecledigital.fr/2026/05/18/comment-lia-aide-les-hackers-a-contourner-la-double-authentification/) · [Siècle Digital](https://siecledigital.fr/2026/05/18/le-vibe-coding-ouvre-une-nouvelle-breche-dans-la-cybersecurite-des-entreprises/)
 
-- **EU AI Act : la deadline du 2 août reste réelle** : L'Omnibus du 7 mai donne l'illusion d'un délai supplémentaire, mais déplace la pression sans la supprimer. Les CTO ont des décisions de mise en conformité à prendre avant août, sous peine de se retrouver en retard structurel. [JDN – Piège du report](https://www.journaldunet.com/intelligence-artificielle/1550335-eu-ai-act-le-piege-du-report/)
+- **Cyberattaque sur Mistral AI** : Des attaquants ont compromis la chaîne de distribution logicielle de Mistral AI et publié des versions corrompues d'outils de développement avant d'être stoppés. L'incident, confirmé par un bulletin de sécurité officiel, rappelle que les fournisseurs d'IA européens sont des cibles actives et que la supply chain des modèles/outils doit être intégrée aux analyses de risque tiers. [Siècle Digital](https://siecledigital.fr/2026/05/18/mistral-ai-touchee-par-une-cyberattaque-visant-son-code-source/)
 
-- **Souveraineté IA : dépendance américaine** : L'IA est désormais une infrastructure critique pour les entreprises européennes, mais la chaîne de valeur — cloud, modèles, puces — reste majoritairement sous juridiction américaine. Washington pourrait de fait fixer les conditions d'accès et les tarifs pour les utilisateurs européens. [JDN – Prix de l'IA en Europe](https://www.journaldunet.com/intelligence-artificielle/1550361-et-si-washington-decidait-du-prix-de-l-ia-en-europe/)
+- **Intégrité scientifique IA (arXiv)** : arXiv instaure une suspension d'un an pour les chercheurs soumettant des articles genAI manifestement non vérifiés — signal utile pour évaluer la fiabilité des publications sur lesquelles s'appuient benchmarks et décisions d'achat IA. [Next.ink](https://next.ink/238213/arxiv-les-chercheurs-qui-soumettent-des-articles-genai-errones-seront-suspendus-un-an/)
 
-- **IA agentique : premières exécutions contractuelles** : Dans l'assurance, l'IA ne se limite plus à l'aide à la décision — elle exécute l'acte contractuel de bout en bout. Cela soulève des questions réglementaires et de responsabilité concrètes, au-delà du cas sectoriel. [JDN – Contrat d'assurance](https://www.journaldunet.com/business/1550339-l-ia-ne-prepare-plus-simplement-le-contrat-d-assurance-elle-le-signe/)
+## Labos &amp; éditeurs
 
-- **Évaluation IA : le biais sans groupe témoin** : Sans test comparatif "avec vs sans IA", les gains mesurés sont peu fiables. C'est une erreur méthodologique courante qui conduit à surestimer la valeur réelle des outils déployés. [JDN – Tester sans comparaison](https://www.journaldunet.com/intelligence-artificielle/1550345-tester-une-ia-sans-point-de-comparaison-l-erreur-que-nous-commettons-tous/)
+- **Évaluation des agents IA open source** : IBM Research publie un classement comparatif des agents IA open source, offrant un référentiel neutre pour mesurer leurs capacités réelles — utile pour les équipes qui envisagent de déployer des agents sans dépendre de modèles propriétaires. [Hugging Face Blog](https://huggingface.co/blog/ibm-research/open-agent-leaderboard)
 
-- **Claude Code en mode autonome** : Anthropic permet désormais à Claude Code d'exécuter des tâches en arrière-plan, sans supervision humaine, sur du code et des fichiers locaux. À surveiller du point de vue des accès et de la traçabilité avant tout déploiement en environnement sensible. [JDN – Routines Claude Code](https://www.journaldunet.com/intelligence-artificielle/1550275-routines-claude-code-6-cas-d-usage-a-tester-des-maintenant/)
-
-## Recherche &amp; veille technique
-
-- **Attaques sur la mémoire persistante des agents LLM** : Deux travaux indépendants démontrent que la mémoire inter-sessions des agents LLM constitue une surface d'attaque exploitable — l'un via un empoisonnement dormant (le contenu malveillant reste inactif jusqu'au bon contexte), l'autre via "Trojan Hippo", une attaque persistante permettant l'exfiltration de données utilisateur. Pour les DSI déployant des assistants IA avec mémoire, ces vecteurs doivent être intégrés dans les modèles de menace dès maintenant. [arXiv - Sleeper Memory Poisoning](https://arxiv.org/abs/2605.15338) · [arXiv - Trojan Hippo](https://arxiv.org/abs/2605.01970)
-
-- **Autorisation des agents IA autonomes** : Le modèle classique de sécurité basé sur les credentials est insuffisant pour les agents IA : un agent peut générer des commandes syntaxiquement valides mais sémantiquement non autorisées. Le papier propose une infrastructure d'autorisation basée sur des preuves vérifiables, plus adaptée aux systèmes souverains. [arXiv - Verifiable Agentic Infrastructure](https://arxiv.org/abs/2605.15228)
-
-- **Monitoring des actions d'agents IA** : Un moniteur unique ou plus puissant est moins efficace qu'un ensemble de moniteurs diversifiés pour détecter les comportements non alignés des agents autonomes. Implication pratique : la défense en profondeur s'applique aussi à la supervision des systèmes IA en production. [arXiv - Ensemble Monitoring](https://arxiv.org/abs/2605.15377)
-
-- **Contraintes métier dans les orchestrateurs multi-agents** : LangChain, LangGraph et CrewAI ne contrôlent pas le respect des contraintes de processus métier lors du routage de tâches ; le framework SDOF propose d'y remédier par dispatch contraint par états. Pertinent pour toute organisation qui automatise des workflows sensibles avec ces outils. [arXiv - SDOF](https://arxiv.org/abs/2605.15204)
-
-- **Biais latents dans les LLM pour décisions à fort enjeu** : Un modèle peut afficher des sorties apparemment équitables tout en conservant des représentations internes biaisées activables dans certaines conditions. Ce découplage entre comportement observable et biais internes complique les audits de conformité IA (AI Act, RH, crédit...). [arXiv - Fair outputs, Biased Internals](https://arxiv.org/abs/2605.15217)
-
-- **Analyse de cause racine par agents LLM dans les microservices** : Deux frameworks distincts (STAR et TopoEvo) adressent la fragilité des agents LLM d'AIOps face aux erreurs en cascade et à la dérive topologique dans les architectures microservices. Ces travaux signalent une maturité croissante mais encore limitée des agents IA pour l'exploitation en production. [arXiv - STAR](https://arxiv.org/abs/2605.15581) · [arXiv - TopoEvo](https://arxiv.org/abs/2605.15611)
-
-- **Interfaces d'exécution des compétences agents (skills)** : SkillSmith propose de compiler les skills des agents LLM en interfaces runtime avec des périmètres d'exécution bornés, réduisant les risques de débordement de périmètre lors de l'invocation dynamique de capacités. [arXiv - SkillSmith](https://arxiv.org/abs/2605.15215)
-
-- **Limites théoriques de l'auto-amélioration des LLM** : Le framework NOVA formalise les conditions dans lesquelles un LLM peut réellement découvrir de nouvelles connaissances par itération — et montre que cette capacité a des bornes théoriques. Utile pour calibrer les attentes sur les systèmes d'IA auto-apprenants. [arXiv - NOVA](https://arxiv.org/abs/2605.15219)</description>
+- **OCR et parsing documentaire via Transformers** : PaddleOCR 3.5 s'intègre désormais avec le backend Transformers de Hugging Face, ce qui simplifie l'exploitation de l'OCR et de l'analyse de documents dans des pipelines ML existants sans infrastructure dédiée. [Hugging Face Blog](https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>IA en production : architecture avant tout</strong> : Le choix du modèle est marginal — moins de 10 % de la complexité réelle. Ce qui fait ou défait un projet IA en production, c'est l'architecture data, la gouvernance et la sécurité. Les DSI doivent résister à la focalisation sur le modèle et investir sur les fondations, notamment en ouvrant les silos de données qui rendent l'IA non viable à l'échelle. <a href="https://www.journaldunet.com/intelligence-artificielle/1550235-ia-de-confiance-et-dsi-les-5-piliers-d-un-projet-viable-en-production/">JDN – 5 piliers</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1550353-l-ia-ne-tiendra-pas-sur-des-fondations-de-donnees-fermees/">JDN – Données fermées</a></li>
+<li><strong>IA et contournement de la 2FA / vibe coding</strong> : Le rapport GTIG de Google documente l'usage concret de LLM par des attaquants pour identifier des vulnérabilités zero-day et automatiser le contournement de la double authentification — ce n'est plus théorique. Parallèlement, les plateformes de vibe coding (Lovable, Replit…) génèrent du code non audité déployé en production, créant une surface d'attaque diffuse et difficile à cartographier pour les équipes sécu. <a href="https://siecledigital.fr/2026/05/18/comment-lia-aide-les-hackers-a-contourner-la-double-authentification/">Siècle Digital</a> · <a href="https://siecledigital.fr/2026/05/18/le-vibe-coding-ouvre-une-nouvelle-breche-dans-la-cybersecurite-des-entreprises/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>EU AI Act : la deadline du 2 août reste réelle</strong> : L'Omnibus du 7 mai donne l'illusion d'un délai supplémentaire, mais déplace la pression sans la supprimer. Les CTO ont des décisions de mise en conformité à prendre avant août, sous peine de se retrouver en retard structurel. <a href="https://www.journaldunet.com/intelligence-artificielle/1550335-eu-ai-act-le-piege-du-report/">JDN – Piège du report</a></li>
+<li><strong>Cyberattaque sur Mistral AI</strong> : Des attaquants ont compromis la chaîne de distribution logicielle de Mistral AI et publié des versions corrompues d'outils de développement avant d'être stoppés. L'incident, confirmé par un bulletin de sécurité officiel, rappelle que les fournisseurs d'IA européens sont des cibles actives et que la supply chain des modèles/outils doit être intégrée aux analyses de risque tiers. <a href="https://siecledigital.fr/2026/05/18/mistral-ai-touchee-par-une-cyberattaque-visant-son-code-source/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Souveraineté IA : dépendance américaine</strong> : L'IA est désormais une infrastructure critique pour les entreprises européennes, mais la chaîne de valeur — cloud, modèles, puces — reste majoritairement sous juridiction américaine. Washington pourrait de fait fixer les conditions d'accès et les tarifs pour les utilisateurs européens. <a href="https://www.journaldunet.com/intelligence-artificielle/1550361-et-si-washington-decidait-du-prix-de-l-ia-en-europe/">JDN – Prix de l'IA en Europe</a></li>
+<li><strong>Intégrité scientifique IA (arXiv)</strong> : arXiv instaure une suspension d'un an pour les chercheurs soumettant des articles genAI manifestement non vérifiés — signal utile pour évaluer la fiabilité des publications sur lesquelles s'appuient benchmarks et décisions d'achat IA. <a href="https://next.ink/238213/arxiv-les-chercheurs-qui-soumettent-des-articles-genai-errones-seront-suspendus-un-an/">Next.ink</a></li>
+</ul>
+
+<h2>Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Évaluation des agents IA open source</strong> : IBM Research publie un classement comparatif des agents IA open source, offrant un référentiel neutre pour mesurer leurs capacités réelles — utile pour les équipes qui envisagent de déployer des agents sans dépendre de modèles propriétaires. <a href="https://huggingface.co/blog/ibm-research/open-agent-leaderboard">Hugging Face Blog</a></li>
 </ul>
 
 <ul>
-<li><strong>IA agentique : premières exécutions contractuelles</strong> : Dans l'assurance, l'IA ne se limite plus à l'aide à la décision — elle exécute l'acte contractuel de bout en bout. Cela soulève des questions réglementaires et de responsabilité concrètes, au-delà du cas sectoriel. <a href="https://www.journaldunet.com/business/1550339-l-ia-ne-prepare-plus-simplement-le-contrat-d-assurance-elle-le-signe/">JDN – Contrat d'assurance</a></li>
-</ul>
-
-<ul>
-<li><strong>Évaluation IA : le biais sans groupe témoin</strong> : Sans test comparatif "avec vs sans IA", les gains mesurés sont peu fiables. C'est une erreur méthodologique courante qui conduit à surestimer la valeur réelle des outils déployés. <a href="https://www.journaldunet.com/intelligence-artificielle/1550345-tester-une-ia-sans-point-de-comparaison-l-erreur-que-nous-commettons-tous/">JDN – Tester sans comparaison</a></li>
-</ul>
-
-<ul>
-<li><strong>Claude Code en mode autonome</strong> : Anthropic permet désormais à Claude Code d'exécuter des tâches en arrière-plan, sans supervision humaine, sur du code et des fichiers locaux. À surveiller du point de vue des accès et de la traçabilité avant tout déploiement en environnement sensible. <a href="https://www.journaldunet.com/intelligence-artificielle/1550275-routines-claude-code-6-cas-d-usage-a-tester-des-maintenant/">JDN – Routines Claude Code</a></li>
-</ul>
-
-<h2>Recherche & veille technique</h2>
-
-<ul>
-<li><strong>Attaques sur la mémoire persistante des agents LLM</strong> : Deux travaux indépendants démontrent que la mémoire inter-sessions des agents LLM constitue une surface d'attaque exploitable — l'un via un empoisonnement dormant (le contenu malveillant reste inactif jusqu'au bon contexte), l'autre via "Trojan Hippo", une attaque persistante permettant l'exfiltration de données utilisateur. Pour les DSI déployant des assistants IA avec mémoire, ces vecteurs doivent être intégrés dans les modèles de menace dès maintenant. <a href="https://arxiv.org/abs/2605.15338">arXiv - Sleeper Memory Poisoning</a> · <a href="https://arxiv.org/abs/2605.01970">arXiv - Trojan Hippo</a></li>
-</ul>
-
-<ul>
-<li><strong>Autorisation des agents IA autonomes</strong> : Le modèle classique de sécurité basé sur les credentials est insuffisant pour les agents IA : un agent peut générer des commandes syntaxiquement valides mais sémantiquement non autorisées. Le papier propose une infrastructure d'autorisation basée sur des preuves vérifiables, plus adaptée aux systèmes souverains. <a href="https://arxiv.org/abs/2605.15228">arXiv - Verifiable Agentic Infrastructure</a></li>
-</ul>
-
-<ul>
-<li><strong>Monitoring des actions d'agents IA</strong> : Un moniteur unique ou plus puissant est moins efficace qu'un ensemble de moniteurs diversifiés pour détecter les comportements non alignés des agents autonomes. Implication pratique : la défense en profondeur s'applique aussi à la supervision des systèmes IA en production. <a href="https://arxiv.org/abs/2605.15377">arXiv - Ensemble Monitoring</a></li>
-</ul>
-
-<ul>
-<li><strong>Contraintes métier dans les orchestrateurs multi-agents</strong> : LangChain, LangGraph et CrewAI ne contrôlent pas le respect des contraintes de processus métier lors du routage de tâches ; le framework SDOF propose d'y remédier par dispatch contraint par états. Pertinent pour toute organisation qui automatise des workflows sensibles avec ces outils. <a href="https://arxiv.org/abs/2605.15204">arXiv - SDOF</a></li>
-</ul>
-
-<ul>
-<li><strong>Biais latents dans les LLM pour décisions à fort enjeu</strong> : Un modèle peut afficher des sorties apparemment équitables tout en conservant des représentations internes biaisées activables dans certaines conditions. Ce découplage entre comportement observable et biais internes complique les audits de conformité IA (AI Act, RH, crédit...). <a href="https://arxiv.org/abs/2605.15217">arXiv - Fair outputs, Biased Internals</a></li>
-</ul>
-
-<ul>
-<li><strong>Analyse de cause racine par agents LLM dans les microservices</strong> : Deux frameworks distincts (STAR et TopoEvo) adressent la fragilité des agents LLM d'AIOps face aux erreurs en cascade et à la dérive topologique dans les architectures microservices. Ces travaux signalent une maturité croissante mais encore limitée des agents IA pour l'exploitation en production. <a href="https://arxiv.org/abs/2605.15581">arXiv - STAR</a> · <a href="https://arxiv.org/abs/2605.15611">arXiv - TopoEvo</a></li>
-</ul>
-
-<ul>
-<li><strong>Interfaces d'exécution des compétences agents (skills)</strong> : SkillSmith propose de compiler les skills des agents LLM en interfaces runtime avec des périmètres d'exécution bornés, réduisant les risques de débordement de périmètre lors de l'invocation dynamique de capacités. <a href="https://arxiv.org/abs/2605.15215">arXiv - SkillSmith</a></li>
-</ul>
-
-<ul>
-<li><strong>Limites théoriques de l'auto-amélioration des LLM</strong> : Le framework NOVA formalise les conditions dans lesquelles un LLM peut réellement découvrir de nouvelles connaissances par itération — et montre que cette capacité a des bornes théoriques. Utile pour calibrer les attentes sur les systèmes d'IA auto-apprenants. <a href="https://arxiv.org/abs/2605.15219">arXiv - NOVA</a></li>
+<li><strong>OCR et parsing documentaire via Transformers</strong> : PaddleOCR 3.5 s'intègre désormais avec le backend Transformers de Hugging Face, ce qui simplifie l'exploitation de l'OCR et de l'analyse de documents dans des pipelines ML existants sans infrastructure dédiée. <a href="https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers">Hugging Face Blog</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260518-1024</guid>
-      <pubDate>Mon, 18 May 2026 10:24:00 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260518-1540</guid>
+      <pubDate>Mon, 18 May 2026 15:40:15 +0000</pubDate>
     </item>
   </channel>
 </rss>
