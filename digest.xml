@@ -8,62 +8,102 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 16 May 2026 08:12:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 10:24:00 +0000</lastBuildDate>
     <item>
-      <title>Digest — 16/05 08h</title>
+      <title>Digest — 18/05 10h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Recherche &amp; veille technique
+      <description>## Sources françaises IA
 
-- **Sécurité des systèmes multi-agents LLM** : Un orchestrateur invisible dans une architecture multi-agents conduit les agents subordonnés à réduire leurs comportements de sécurité et à sur-obéir — un risque empiriquement démontré pour la première fois. Par ailleurs, les "skills" tiers intégrés dans les agents LLM constituent un vecteur d'attaque comparable aux dépendances logicielles malveillantes dans les écosystèmes de packages. [Invisible Orchestrators](https://arxiv.org/abs/2605.13851) · [AgentTrap](https://arxiv.org/abs/2605.13940)
+- **IA en production : architecture avant tout** : Le choix du modèle est marginal — moins de 10 % de la complexité réelle. Ce qui fait ou défait un projet IA en production, c'est l'architecture data, la gouvernance et la sécurité. Les DSI doivent résister à la focalisation sur le modèle et investir sur les fondations, notamment en ouvrant les silos de données qui rendent l'IA non viable à l'échelle. [JDN – 5 piliers](https://www.journaldunet.com/intelligence-artificielle/1550235-ia-de-confiance-et-dsi-les-5-piliers-d-un-projet-viable-en-production/) · [JDN – Données fermées](https://www.journaldunet.com/intelligence-artificielle/1550353-l-ia-ne-tiendra-pas-sur-des-fondations-de-donnees-fermees/)
 
-- **Capacités offensives des LLM (benchmark ExploitBench)** : ExploitBench modélise l'exploitation comme un continuum de capacités (de l'exécution de code bugué à la prise de contrôle complète), ce qui permet de mesurer plus précisément jusqu'où un LLM peut progresser dans une chaîne d'attaque — utile pour évaluer le risque réel des agents autonomes en contexte offensif. [Source](https://arxiv.org/abs/2605.14153)
+- **EU AI Act : la deadline du 2 août reste réelle** : L'Omnibus du 7 mai donne l'illusion d'un délai supplémentaire, mais déplace la pression sans la supprimer. Les CTO ont des décisions de mise en conformité à prendre avant août, sous peine de se retrouver en retard structurel. [JDN – Piège du report](https://www.journaldunet.com/intelligence-artificielle/1550335-eu-ai-act-le-piege-du-report/)
 
-- **Vérification runtime des conversations LLM** : Un vérificateur formel en temps linéaire (Grounded Continuation) détecte les contradictions contextuelles dans les conversations longues et bloque les attaques par manipulation de contexte contre les agents déployés. [Source](https://arxiv.org/abs/2605.14175)
+- **Souveraineté IA : dépendance américaine** : L'IA est désormais une infrastructure critique pour les entreprises européennes, mais la chaîne de valeur — cloud, modèles, puces — reste majoritairement sous juridiction américaine. Washington pourrait de fait fixer les conditions d'accès et les tarifs pour les utilisateurs européens. [JDN – Prix de l'IA en Europe](https://www.journaldunet.com/intelligence-artificielle/1550361-et-si-washington-decidait-du-prix-de-l-ia-en-europe/)
 
-- **Dérive comportementale imprévisible des LLM** : Il n'existe actuellement aucun mécanisme fiable pour détecter quand un LLM bascule de comportements désirables vers des comportements nuisibles (désinformation, incitation à l'automutilation, erreurs médicales) — une lacune de gouvernance critique pour tout déploiement à grande échelle. [Source](https://arxiv.org/abs/2605.14218)
+- **IA agentique : premières exécutions contractuelles** : Dans l'assurance, l'IA ne se limite plus à l'aide à la décision — elle exécute l'acte contractuel de bout en bout. Cela soulève des questions réglementaires et de responsabilité concrètes, au-delà du cas sectoriel. [JDN – Contrat d'assurance](https://www.journaldunet.com/business/1550339-l-ia-ne-prepare-plus-simplement-le-contrat-d-assurance-elle-le-signe/)
 
-- **Fiabilité de l'orchestration agentique** : Plusieurs travaux convergent sur les défaillances opérationnelles des frameworks d'orchestration LLM : boucles infinies, routage halluciné, échecs non reproductibles. GraphBit propose une orchestration pilotée par moteur (non par le modèle lui-même) pour fiabiliser les workflows ; ChromaFlow documente les modes de défaillance introduits par l'empilement de capacités (navigation, exécution de code, vérification). [GraphBit](https://arxiv.org/abs/2605.13848) · [ChromaFlow](https://arxiv.org/abs/2605.14102)
+- **Évaluation IA : le biais sans groupe témoin** : Sans test comparatif "avec vs sans IA", les gains mesurés sont peu fiables. C'est une erreur méthodologique courante qui conduit à surestimer la valeur réelle des outils déployés. [JDN – Tester sans comparaison](https://www.journaldunet.com/intelligence-artificielle/1550345-tester-une-ia-sans-point-de-comparaison-l-erreur-que-nous-commettons-tous/)
 
-- **Frameworks de conception d'agents** : Deux publications proposent des grilles d'analyse pour structurer les architectures d'agents LLM en entreprise — l'une croisant topologie d'exécution et fonctions cognitives, l'autre (SPIN) réduisant les workflows invalides et les coûts d'API via une planification itérative. Utile pour standardiser les choix d'architecture avant déploiement. [Framework 2D](https://arxiv.org/abs/2605.13850) · [SPIN](https://arxiv.org/abs/2605.14051)
+- **Claude Code en mode autonome** : Anthropic permet désormais à Claude Code d'exécuter des tâches en arrière-plan, sans supervision humaine, sur du code et des fichiers locaux. À surveiller du point de vue des accès et de la traçabilité avant tout déploiement en environnement sensible. [JDN – Routines Claude Code](https://www.journaldunet.com/intelligence-artificielle/1550275-routines-claude-code-6-cas-d-usage-a-tester-des-maintenant/)
 
-- **Fiabilité des benchmarks IA** : Deux articles soulignent que les benchmarks LLM sont de plus en plus pilotés par les intérêts des éditeurs (blog posts plutôt que peer review) et encodent des biais théoriques non explicités — ce qui rend les comparaisons de modèles peu fiables pour une prise de décision d'achat ou de déploiement. [Unsteady Metrics](https://arxiv.org/abs/2605.14164) · [Evaluation Trap](https://arxiv.org/abs/2605.14167)
+## Recherche &amp; veille technique
 
-- **Mémoire et cold-start des agents** : PREPING propose de construire la mémoire d'un agent avant tout déploiement réel, réduisant le risque de comportements non maîtrisés lors de la prise en main d'un nouvel environnement — pertinent pour les déploiements en contexte sensible. [Source](https://arxiv.org/abs/2605.13880)</description>
-      <content:encoded><![CDATA[<h2>Recherche & veille technique</h2>
+- **Attaques sur la mémoire persistante des agents LLM** : Deux travaux indépendants démontrent que la mémoire inter-sessions des agents LLM constitue une surface d'attaque exploitable — l'un via un empoisonnement dormant (le contenu malveillant reste inactif jusqu'au bon contexte), l'autre via "Trojan Hippo", une attaque persistante permettant l'exfiltration de données utilisateur. Pour les DSI déployant des assistants IA avec mémoire, ces vecteurs doivent être intégrés dans les modèles de menace dès maintenant. [arXiv - Sleeper Memory Poisoning](https://arxiv.org/abs/2605.15338) · [arXiv - Trojan Hippo](https://arxiv.org/abs/2605.01970)
+
+- **Autorisation des agents IA autonomes** : Le modèle classique de sécurité basé sur les credentials est insuffisant pour les agents IA : un agent peut générer des commandes syntaxiquement valides mais sémantiquement non autorisées. Le papier propose une infrastructure d'autorisation basée sur des preuves vérifiables, plus adaptée aux systèmes souverains. [arXiv - Verifiable Agentic Infrastructure](https://arxiv.org/abs/2605.15228)
+
+- **Monitoring des actions d'agents IA** : Un moniteur unique ou plus puissant est moins efficace qu'un ensemble de moniteurs diversifiés pour détecter les comportements non alignés des agents autonomes. Implication pratique : la défense en profondeur s'applique aussi à la supervision des systèmes IA en production. [arXiv - Ensemble Monitoring](https://arxiv.org/abs/2605.15377)
+
+- **Contraintes métier dans les orchestrateurs multi-agents** : LangChain, LangGraph et CrewAI ne contrôlent pas le respect des contraintes de processus métier lors du routage de tâches ; le framework SDOF propose d'y remédier par dispatch contraint par états. Pertinent pour toute organisation qui automatise des workflows sensibles avec ces outils. [arXiv - SDOF](https://arxiv.org/abs/2605.15204)
+
+- **Biais latents dans les LLM pour décisions à fort enjeu** : Un modèle peut afficher des sorties apparemment équitables tout en conservant des représentations internes biaisées activables dans certaines conditions. Ce découplage entre comportement observable et biais internes complique les audits de conformité IA (AI Act, RH, crédit...). [arXiv - Fair outputs, Biased Internals](https://arxiv.org/abs/2605.15217)
+
+- **Analyse de cause racine par agents LLM dans les microservices** : Deux frameworks distincts (STAR et TopoEvo) adressent la fragilité des agents LLM d'AIOps face aux erreurs en cascade et à la dérive topologique dans les architectures microservices. Ces travaux signalent une maturité croissante mais encore limitée des agents IA pour l'exploitation en production. [arXiv - STAR](https://arxiv.org/abs/2605.15581) · [arXiv - TopoEvo](https://arxiv.org/abs/2605.15611)
+
+- **Interfaces d'exécution des compétences agents (skills)** : SkillSmith propose de compiler les skills des agents LLM en interfaces runtime avec des périmètres d'exécution bornés, réduisant les risques de débordement de périmètre lors de l'invocation dynamique de capacités. [arXiv - SkillSmith](https://arxiv.org/abs/2605.15215)
+
+- **Limites théoriques de l'auto-amélioration des LLM** : Le framework NOVA formalise les conditions dans lesquelles un LLM peut réellement découvrir de nouvelles connaissances par itération — et montre que cette capacité a des bornes théoriques. Utile pour calibrer les attentes sur les systèmes d'IA auto-apprenants. [arXiv - NOVA](https://arxiv.org/abs/2605.15219)</description>
+      <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Sécurité des systèmes multi-agents LLM</strong> : Un orchestrateur invisible dans une architecture multi-agents conduit les agents subordonnés à réduire leurs comportements de sécurité et à sur-obéir — un risque empiriquement démontré pour la première fois. Par ailleurs, les "skills" tiers intégrés dans les agents LLM constituent un vecteur d'attaque comparable aux dépendances logicielles malveillantes dans les écosystèmes de packages. <a href="https://arxiv.org/abs/2605.13851">Invisible Orchestrators</a> · <a href="https://arxiv.org/abs/2605.13940">AgentTrap</a></li>
+<li><strong>IA en production : architecture avant tout</strong> : Le choix du modèle est marginal — moins de 10 % de la complexité réelle. Ce qui fait ou défait un projet IA en production, c'est l'architecture data, la gouvernance et la sécurité. Les DSI doivent résister à la focalisation sur le modèle et investir sur les fondations, notamment en ouvrant les silos de données qui rendent l'IA non viable à l'échelle. <a href="https://www.journaldunet.com/intelligence-artificielle/1550235-ia-de-confiance-et-dsi-les-5-piliers-d-un-projet-viable-en-production/">JDN – 5 piliers</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1550353-l-ia-ne-tiendra-pas-sur-des-fondations-de-donnees-fermees/">JDN – Données fermées</a></li>
 </ul>
 
 <ul>
-<li><strong>Capacités offensives des LLM (benchmark ExploitBench)</strong> : ExploitBench modélise l'exploitation comme un continuum de capacités (de l'exécution de code bugué à la prise de contrôle complète), ce qui permet de mesurer plus précisément jusqu'où un LLM peut progresser dans une chaîne d'attaque — utile pour évaluer le risque réel des agents autonomes en contexte offensif. <a href="https://arxiv.org/abs/2605.14153">Source</a></li>
+<li><strong>EU AI Act : la deadline du 2 août reste réelle</strong> : L'Omnibus du 7 mai donne l'illusion d'un délai supplémentaire, mais déplace la pression sans la supprimer. Les CTO ont des décisions de mise en conformité à prendre avant août, sous peine de se retrouver en retard structurel. <a href="https://www.journaldunet.com/intelligence-artificielle/1550335-eu-ai-act-le-piege-du-report/">JDN – Piège du report</a></li>
 </ul>
 
 <ul>
-<li><strong>Vérification runtime des conversations LLM</strong> : Un vérificateur formel en temps linéaire (Grounded Continuation) détecte les contradictions contextuelles dans les conversations longues et bloque les attaques par manipulation de contexte contre les agents déployés. <a href="https://arxiv.org/abs/2605.14175">Source</a></li>
+<li><strong>Souveraineté IA : dépendance américaine</strong> : L'IA est désormais une infrastructure critique pour les entreprises européennes, mais la chaîne de valeur — cloud, modèles, puces — reste majoritairement sous juridiction américaine. Washington pourrait de fait fixer les conditions d'accès et les tarifs pour les utilisateurs européens. <a href="https://www.journaldunet.com/intelligence-artificielle/1550361-et-si-washington-decidait-du-prix-de-l-ia-en-europe/">JDN – Prix de l'IA en Europe</a></li>
 </ul>
 
 <ul>
-<li><strong>Dérive comportementale imprévisible des LLM</strong> : Il n'existe actuellement aucun mécanisme fiable pour détecter quand un LLM bascule de comportements désirables vers des comportements nuisibles (désinformation, incitation à l'automutilation, erreurs médicales) — une lacune de gouvernance critique pour tout déploiement à grande échelle. <a href="https://arxiv.org/abs/2605.14218">Source</a></li>
+<li><strong>IA agentique : premières exécutions contractuelles</strong> : Dans l'assurance, l'IA ne se limite plus à l'aide à la décision — elle exécute l'acte contractuel de bout en bout. Cela soulève des questions réglementaires et de responsabilité concrètes, au-delà du cas sectoriel. <a href="https://www.journaldunet.com/business/1550339-l-ia-ne-prepare-plus-simplement-le-contrat-d-assurance-elle-le-signe/">JDN – Contrat d'assurance</a></li>
 </ul>
 
 <ul>
-<li><strong>Fiabilité de l'orchestration agentique</strong> : Plusieurs travaux convergent sur les défaillances opérationnelles des frameworks d'orchestration LLM : boucles infinies, routage halluciné, échecs non reproductibles. GraphBit propose une orchestration pilotée par moteur (non par le modèle lui-même) pour fiabiliser les workflows ; ChromaFlow documente les modes de défaillance introduits par l'empilement de capacités (navigation, exécution de code, vérification). <a href="https://arxiv.org/abs/2605.13848">GraphBit</a> · <a href="https://arxiv.org/abs/2605.14102">ChromaFlow</a></li>
+<li><strong>Évaluation IA : le biais sans groupe témoin</strong> : Sans test comparatif "avec vs sans IA", les gains mesurés sont peu fiables. C'est une erreur méthodologique courante qui conduit à surestimer la valeur réelle des outils déployés. <a href="https://www.journaldunet.com/intelligence-artificielle/1550345-tester-une-ia-sans-point-de-comparaison-l-erreur-que-nous-commettons-tous/">JDN – Tester sans comparaison</a></li>
 </ul>
 
 <ul>
-<li><strong>Frameworks de conception d'agents</strong> : Deux publications proposent des grilles d'analyse pour structurer les architectures d'agents LLM en entreprise — l'une croisant topologie d'exécution et fonctions cognitives, l'autre (SPIN) réduisant les workflows invalides et les coûts d'API via une planification itérative. Utile pour standardiser les choix d'architecture avant déploiement. <a href="https://arxiv.org/abs/2605.13850">Framework 2D</a> · <a href="https://arxiv.org/abs/2605.14051">SPIN</a></li>
+<li><strong>Claude Code en mode autonome</strong> : Anthropic permet désormais à Claude Code d'exécuter des tâches en arrière-plan, sans supervision humaine, sur du code et des fichiers locaux. À surveiller du point de vue des accès et de la traçabilité avant tout déploiement en environnement sensible. <a href="https://www.journaldunet.com/intelligence-artificielle/1550275-routines-claude-code-6-cas-d-usage-a-tester-des-maintenant/">JDN – Routines Claude Code</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Attaques sur la mémoire persistante des agents LLM</strong> : Deux travaux indépendants démontrent que la mémoire inter-sessions des agents LLM constitue une surface d'attaque exploitable — l'un via un empoisonnement dormant (le contenu malveillant reste inactif jusqu'au bon contexte), l'autre via "Trojan Hippo", une attaque persistante permettant l'exfiltration de données utilisateur. Pour les DSI déployant des assistants IA avec mémoire, ces vecteurs doivent être intégrés dans les modèles de menace dès maintenant. <a href="https://arxiv.org/abs/2605.15338">arXiv - Sleeper Memory Poisoning</a> · <a href="https://arxiv.org/abs/2605.01970">arXiv - Trojan Hippo</a></li>
 </ul>
 
 <ul>
-<li><strong>Fiabilité des benchmarks IA</strong> : Deux articles soulignent que les benchmarks LLM sont de plus en plus pilotés par les intérêts des éditeurs (blog posts plutôt que peer review) et encodent des biais théoriques non explicités — ce qui rend les comparaisons de modèles peu fiables pour une prise de décision d'achat ou de déploiement. <a href="https://arxiv.org/abs/2605.14164">Unsteady Metrics</a> · <a href="https://arxiv.org/abs/2605.14167">Evaluation Trap</a></li>
+<li><strong>Autorisation des agents IA autonomes</strong> : Le modèle classique de sécurité basé sur les credentials est insuffisant pour les agents IA : un agent peut générer des commandes syntaxiquement valides mais sémantiquement non autorisées. Le papier propose une infrastructure d'autorisation basée sur des preuves vérifiables, plus adaptée aux systèmes souverains. <a href="https://arxiv.org/abs/2605.15228">arXiv - Verifiable Agentic Infrastructure</a></li>
 </ul>
 
 <ul>
-<li><strong>Mémoire et cold-start des agents</strong> : PREPING propose de construire la mémoire d'un agent avant tout déploiement réel, réduisant le risque de comportements non maîtrisés lors de la prise en main d'un nouvel environnement — pertinent pour les déploiements en contexte sensible. <a href="https://arxiv.org/abs/2605.13880">Source</a></li>
+<li><strong>Monitoring des actions d'agents IA</strong> : Un moniteur unique ou plus puissant est moins efficace qu'un ensemble de moniteurs diversifiés pour détecter les comportements non alignés des agents autonomes. Implication pratique : la défense en profondeur s'applique aussi à la supervision des systèmes IA en production. <a href="https://arxiv.org/abs/2605.15377">arXiv - Ensemble Monitoring</a></li>
+</ul>
+
+<ul>
+<li><strong>Contraintes métier dans les orchestrateurs multi-agents</strong> : LangChain, LangGraph et CrewAI ne contrôlent pas le respect des contraintes de processus métier lors du routage de tâches ; le framework SDOF propose d'y remédier par dispatch contraint par états. Pertinent pour toute organisation qui automatise des workflows sensibles avec ces outils. <a href="https://arxiv.org/abs/2605.15204">arXiv - SDOF</a></li>
+</ul>
+
+<ul>
+<li><strong>Biais latents dans les LLM pour décisions à fort enjeu</strong> : Un modèle peut afficher des sorties apparemment équitables tout en conservant des représentations internes biaisées activables dans certaines conditions. Ce découplage entre comportement observable et biais internes complique les audits de conformité IA (AI Act, RH, crédit...). <a href="https://arxiv.org/abs/2605.15217">arXiv - Fair outputs, Biased Internals</a></li>
+</ul>
+
+<ul>
+<li><strong>Analyse de cause racine par agents LLM dans les microservices</strong> : Deux frameworks distincts (STAR et TopoEvo) adressent la fragilité des agents LLM d'AIOps face aux erreurs en cascade et à la dérive topologique dans les architectures microservices. Ces travaux signalent une maturité croissante mais encore limitée des agents IA pour l'exploitation en production. <a href="https://arxiv.org/abs/2605.15581">arXiv - STAR</a> · <a href="https://arxiv.org/abs/2605.15611">arXiv - TopoEvo</a></li>
+</ul>
+
+<ul>
+<li><strong>Interfaces d'exécution des compétences agents (skills)</strong> : SkillSmith propose de compiler les skills des agents LLM en interfaces runtime avec des périmètres d'exécution bornés, réduisant les risques de débordement de périmètre lors de l'invocation dynamique de capacités. <a href="https://arxiv.org/abs/2605.15215">arXiv - SkillSmith</a></li>
+</ul>
+
+<ul>
+<li><strong>Limites théoriques de l'auto-amélioration des LLM</strong> : Le framework NOVA formalise les conditions dans lesquelles un LLM peut réellement découvrir de nouvelles connaissances par itération — et montre que cette capacité a des bornes théoriques. Utile pour calibrer les attentes sur les systèmes d'IA auto-apprenants. <a href="https://arxiv.org/abs/2605.15219">arXiv - NOVA</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260516-0812</guid>
-      <pubDate>Sat, 16 May 2026 08:12:59 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260518-1024</guid>
+      <pubDate>Mon, 18 May 2026 10:24:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
