@@ -8,108 +8,38 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 19 May 2026 10:08:17 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 15:32:26 +0000</lastBuildDate>
     <item>
-      <title>Digest — 19/05 10h</title>
+      <title>Digest — 19/05 15h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **Faille BitLocker via clé USB (Windows 11)** : Un PoC publié démontre qu'il est possible de contourner le chiffrement BitLocker en exploitant l'environnement de récupération Windows depuis une clé USB bootable — une menace concrète pour les postes non supervisés ou volés. [Next.ink](https://next.ink/238328/windows-11-une-faille-permet-de-neutraliser-bitlocker-a-partir-dune-cle-usb/)
+- **Record de violations de données en France** : La CNIL a reçu 6 167 signalements de fuites de données en 2024, soit +9,5 % sur un an — un niveau jamais atteint. L'autorité annonce un renforcement de ses contrôles ciblant spécifiquement les manquements à la cybersécurité. [Next.ink](https://next.ink/238330/la-cnil-confirme-un-record-de-fuites-de-donnees-en-2025-et-promet-plus-de-controles/)
 
-- **ANSSI et la sécurité des SI de l'État** : Le DG de l'ANSSI reconnaît l'impossibilité de tout contrôler et évoque la future autorité "Ariane" comme levier de pilotage du numérique étatique, dans un contexte de fuites de données à répétition sur des institutions françaises. [Next.ink](https://next.ink/238214/nous-ne-pouvons-pas-tout-controler-lanssi-face-a-la-complexite-des-systemes-de-letat/)
+- **Sécurisation de l'IA en entreprise** : Akamai acquiert LayerX pour 205 M$ afin de renforcer la sécurité des usages IA dans les navigateurs d'entreprise. En parallèle, les RSSI sont invités à revoir leur PSI et à se coordonner avec les CDO avant tout déploiement d'agents IA autonomes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-akamai rachete layerx 205-m$-pour-securiser-l-ia-en-entreprise-100192.html) · [Journal du Net](https://www.journaldunet.com/cybersecurite/1550425-agents-ia-comment-les-rssi-se-preparent-deja-a-leur-deploiement/)
 
-- **Anthropic : acquisitions et nouvelles capacités agentiques** : Anthropic rachète Stainless (générateur de SDK utilisé par OpenAI, Google et Cloudflare) et annonce depuis Londres des sandboxes auto-hébergées et des tunnels MCP pour son API agentique — deux signaux d'une montée en puissance sur l'outillage développeur et la souveraineté d'exécution. [Next.ink](https://next.ink/brief_article/anthropic-achete-stainless-dont-les-outils-sont-utilises-par-openai-google-et-cloudflare/) · [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1550397-sandboxes-auto-hebergees-et-tunnels-mcp-anthropic-joue-la-carte-souverainete-depuis-londres/)
+- **Souveraineté numérique et dépendance américaine** : Les DSI français reconnaissent que l'élection de Trump en janvier 2025 a mis en lumière une dépendance structurelle aux technologies américaines, sans solution de substitution crédible à court terme. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-conference-cio-la-dependance-aux-technologies-americaines-bien-tenace-100181.html)
 
-- **Souveraineté numérique européenne : stratégies et capitaux** : Mistral acquiert Emmi AI et cherche un positionnement différencié face aux géants américains et chinois, tandis que l'UE s'appuie sur le fonds EQT pour retenir ses actifs technologiques stratégiques en Europe — un virage vers le capital privé qui soulève des questions sur l'indépendance réelle. [Frenchweb](https://www.frenchweb.fr/face-aux-etats-unis-et-a-la-chine-mistral-cherche-son-propre-modele-dia-et-fait-lacquisition-demmi-ai/461876) · [Frenchweb](https://www.frenchweb.fr/avec-eqt-bruxelles-confie-sa-souverainete-technologique-au-capital-prive/461870)
-
-- **DUST et les systèmes multi-agents en entreprise** : La startup française DUST lève 34 M€ pour industrialiser les architectures multi-agents, pariant que la prochaine étape de l'IA en entreprise dépasse les simples assistants et nécessite une orchestration de tâches autonomes. [Frenchweb](https://www.frenchweb.fr/avec-34-millions-deuros-dust-accelere-sur-les-systemes-multi-agents-pour-les-entreprises/461861)
-
-## Recherche &amp; veille technique
-
-- **Sécurité des agents LLM multi-mémoire** : La persistance d'état dans les agents LLM (transcripts, résumés, mémoire tampon) ouvre un vecteur d'attaque spécifique dit de "contamination d'état" : un contenu malveillant injecté dans la mémoire peut influencer durablement les décisions futures de l'agent, indépendamment des garde-fous appliqués aux sorties individuelles. [arXiv – State Contamination](https://arxiv.org/abs/2605.16746)
-
-- **Sécurité des systèmes multi-agents LLM (LLM-MAS)** : Deux travaux distincts abordent la propagation de menaces dans les architectures multi-agents. PropGuard modélise comment des instructions malveillantes se propagent entre agents via les outils et la mémoire partagée, et propose un mécanisme de détection et remédiation orienté propagation. Le système ADR (Agentic Detection &amp; Response) présente un cadre de production éprouvé à grande échelle pour sécuriser les agents opérant via le Model Context Protocol (MCP), un protocole en voie de standardisation à surveiller. [arXiv – PropGuard](https://arxiv.org/abs/2605.16346) · [arXiv – ADR](https://arxiv.org/abs/2605.17380)
-
-- **Confiance et vérifiabilité des compétences d'agents** : Les "skills" (packages d'instructions chargeables à l'exécution) sont désormais des artefacts de déploiement à part entière ; l'article propose un schéma de confiance et un critère de correction formel pour les valider avant chargement, ce qui est directement pertinent pour la gouvernance des runtimes agentiques en entreprise. [arXiv – Skills as Verifiable Artifacts](https://arxiv.org/abs/2605.00424)
-
-- **Attaques par inférence d'appartenance sur les modèles de diffusion** : Les Masked Diffusion Language Models (MDLM) se révèlent significativement plus vulnérables aux attaques de type Membership Inference Attack (MIA) que les modèles autorégressifs classiques — leurs propriétés de confidentialité n'avaient jusqu'ici pas été étudiées. À considérer avant tout déploiement ou fine-tuning sur données sensibles. [arXiv – Membership Inference](https://arxiv.org/abs/2605.16445)
-
-- **Instabilité des modèles de récompense (RLHF)** : Les reward models utilisés pour l'alignement LLM produisent des préférences contradictoires face à des variations sémantiquement neutres des entrées ; l'article propose une détection et correction via autoencodeurs sparses. Implication directe sur la fiabilité des pipelines d'évaluation automatisée de contenu. [arXiv – Preference Instability](https://arxiv.org/abs/2605.16339)
-
-- **Évaluation LLM-as-judge : calibration du recours humain** : Utiliser des LLM comme évaluateurs automatiques dans des contextes à enjeux (sécurité, conformité) nécessite de calibrer précisément le nombre minimal d'annotations humaines requises pour rester fiable — le travail fournit un cadre quantitatif pour ce compromis. [arXiv – LLM Judges](https://arxiv.org/abs/2605.16354)
-
-- **Optimisation d'inférence long-contexte (KV cache)** : ProxyKV propose une méthode de pruning du cache KV guidée par un modèle proxy léger, réduisant la pression mémoire sur les inférences longue séquence sans sacrifier la précision. Pertinent pour les équipes opérant des LLM on-premise avec contraintes GPU. [arXiv – ProxyKV](https://arxiv.org/abs/2605.16360)
-
-- **LLM pour environnements HPC** : Retour d'expérience sur l'adaptation de LLM (RAG + fine-tuning domaine) pour assister les utilisateurs de clusters HPC ; les gains d'efficacité opérationnelle sont mesurés mais la qualité dépend fortement de la fraîcheur de la base de connaissance. [arXiv – HPC-LLM](https://arxiv.org/abs/2605.16347)
-
-- **Reconnaissance vocale médicale temps réel** : Le projet Symphony adresse les contraintes spécifiques de la transcription médicale en temps réel (vocabulaire spécialisé, bruit ambiant, latence) ; les enjeux de confidentialité des données de santé associés à ces interfaces vocales IA restent un point de vigilance pour les DSI du secteur. [arXiv – Symphony](https://arxiv.org/abs/2605.16545)
-
-- **Travaux fondamentaux LLM (signal faible)** : Plusieurs papiers explorent des propriétés internes des LLM utiles à terme pour la robustesse et l'explicabilité : transitions de phase dans l'apprentissage profond, géométrie de spécialisation dans les architectures MoE, mécanismes causaux du few-shot learning, et steering d'activation sans réentraînement. Ces résultats n'ont pas d'application opérationnelle immédiate mais alimentent la compréhension des comportements émergents. [Phase Transitions](https://arxiv.org/abs/2605.16325) · [MoE Geometry](https://arxiv.org/abs/2605.16349) · [Function Vectors](https://arxiv.org/abs/2605.16591) · [Rank-1 Steering](https://arxiv.org/abs/2605.16362)</description>
+- **Infrastructure IA et impact environnemental** : L'essor de la GenAI génère un coût climatique estimé à 80 Md$ par an, porté par une vague d'investissements massifs dans les datacenters depuis 2022. Google et Blackstone créent par ailleurs une coentreprise pour déployer une plateforme cloud dédiée aux TPU, signe d'une course aux infrastructures spécialisées qui s'accélère. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-ia-et-datacenters-un-cout-climatique-de-80-md$- par an -100197.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-google-s-allie-a-blackstone-pour-creer-un-ncp-100-tpu-100202.html)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Faille BitLocker via clé USB (Windows 11)</strong> : Un PoC publié démontre qu'il est possible de contourner le chiffrement BitLocker en exploitant l'environnement de récupération Windows depuis une clé USB bootable — une menace concrète pour les postes non supervisés ou volés. <a href="https://next.ink/238328/windows-11-une-faille-permet-de-neutraliser-bitlocker-a-partir-dune-cle-usb/">Next.ink</a></li>
+<li><strong>Record de violations de données en France</strong> : La CNIL a reçu 6 167 signalements de fuites de données en 2024, soit +9,5 % sur un an — un niveau jamais atteint. L'autorité annonce un renforcement de ses contrôles ciblant spécifiquement les manquements à la cybersécurité. <a href="https://next.ink/238330/la-cnil-confirme-un-record-de-fuites-de-donnees-en-2025-et-promet-plus-de-controles/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>ANSSI et la sécurité des SI de l'État</strong> : Le DG de l'ANSSI reconnaît l'impossibilité de tout contrôler et évoque la future autorité "Ariane" comme levier de pilotage du numérique étatique, dans un contexte de fuites de données à répétition sur des institutions françaises. <a href="https://next.ink/238214/nous-ne-pouvons-pas-tout-controler-lanssi-face-a-la-complexite-des-systemes-de-letat/">Next.ink</a></li>
+<li><strong>Sécurisation de l'IA en entreprise</strong> : Akamai acquiert LayerX pour 205 M$ afin de renforcer la sécurité des usages IA dans les navigateurs d'entreprise. En parallèle, les RSSI sont invités à revoir leur PSI et à se coordonner avec les CDO avant tout déploiement d'agents IA autonomes. <a href="https://www.lemondeinformatique.fr/actualites/lire-akamai rachete layerx 205-m$-pour-securiser-l-ia-en-entreprise-100192.html">Le Monde Informatique</a> · <a href="https://www.journaldunet.com/cybersecurite/1550425-agents-ia-comment-les-rssi-se-preparent-deja-a-leur-deploiement/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Anthropic : acquisitions et nouvelles capacités agentiques</strong> : Anthropic rachète Stainless (générateur de SDK utilisé par OpenAI, Google et Cloudflare) et annonce depuis Londres des sandboxes auto-hébergées et des tunnels MCP pour son API agentique — deux signaux d'une montée en puissance sur l'outillage développeur et la souveraineté d'exécution. <a href="https://next.ink/brief_article/anthropic-achete-stainless-dont-les-outils-sont-utilises-par-openai-google-et-cloudflare/">Next.ink</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1550397-sandboxes-auto-hebergees-et-tunnels-mcp-anthropic-joue-la-carte-souverainete-depuis-londres/">Journal du Net</a></li>
+<li><strong>Souveraineté numérique et dépendance américaine</strong> : Les DSI français reconnaissent que l'élection de Trump en janvier 2025 a mis en lumière une dépendance structurelle aux technologies américaines, sans solution de substitution crédible à court terme. <a href="https://www.lemondeinformatique.fr/actualites/lire-conference-cio-la-dependance-aux-technologies-americaines-bien-tenace-100181.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Souveraineté numérique européenne : stratégies et capitaux</strong> : Mistral acquiert Emmi AI et cherche un positionnement différencié face aux géants américains et chinois, tandis que l'UE s'appuie sur le fonds EQT pour retenir ses actifs technologiques stratégiques en Europe — un virage vers le capital privé qui soulève des questions sur l'indépendance réelle. <a href="https://www.frenchweb.fr/face-aux-etats-unis-et-a-la-chine-mistral-cherche-son-propre-modele-dia-et-fait-lacquisition-demmi-ai/461876">Frenchweb</a> · <a href="https://www.frenchweb.fr/avec-eqt-bruxelles-confie-sa-souverainete-technologique-au-capital-prive/461870">Frenchweb</a></li>
-</ul>
-
-<ul>
-<li><strong>DUST et les systèmes multi-agents en entreprise</strong> : La startup française DUST lève 34 M€ pour industrialiser les architectures multi-agents, pariant que la prochaine étape de l'IA en entreprise dépasse les simples assistants et nécessite une orchestration de tâches autonomes. <a href="https://www.frenchweb.fr/avec-34-millions-deuros-dust-accelere-sur-les-systemes-multi-agents-pour-les-entreprises/461861">Frenchweb</a></li>
-</ul>
-
-<h2>Recherche & veille technique</h2>
-
-<ul>
-<li><strong>Sécurité des agents LLM multi-mémoire</strong> : La persistance d'état dans les agents LLM (transcripts, résumés, mémoire tampon) ouvre un vecteur d'attaque spécifique dit de "contamination d'état" : un contenu malveillant injecté dans la mémoire peut influencer durablement les décisions futures de l'agent, indépendamment des garde-fous appliqués aux sorties individuelles. <a href="https://arxiv.org/abs/2605.16746">arXiv – State Contamination</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité des systèmes multi-agents LLM (LLM-MAS)</strong> : Deux travaux distincts abordent la propagation de menaces dans les architectures multi-agents. PropGuard modélise comment des instructions malveillantes se propagent entre agents via les outils et la mémoire partagée, et propose un mécanisme de détection et remédiation orienté propagation. Le système ADR (Agentic Detection & Response) présente un cadre de production éprouvé à grande échelle pour sécuriser les agents opérant via le Model Context Protocol (MCP), un protocole en voie de standardisation à surveiller. <a href="https://arxiv.org/abs/2605.16346">arXiv – PropGuard</a> · <a href="https://arxiv.org/abs/2605.17380">arXiv – ADR</a></li>
-</ul>
-
-<ul>
-<li><strong>Confiance et vérifiabilité des compétences d'agents</strong> : Les "skills" (packages d'instructions chargeables à l'exécution) sont désormais des artefacts de déploiement à part entière ; l'article propose un schéma de confiance et un critère de correction formel pour les valider avant chargement, ce qui est directement pertinent pour la gouvernance des runtimes agentiques en entreprise. <a href="https://arxiv.org/abs/2605.00424">arXiv – Skills as Verifiable Artifacts</a></li>
-</ul>
-
-<ul>
-<li><strong>Attaques par inférence d'appartenance sur les modèles de diffusion</strong> : Les Masked Diffusion Language Models (MDLM) se révèlent significativement plus vulnérables aux attaques de type Membership Inference Attack (MIA) que les modèles autorégressifs classiques — leurs propriétés de confidentialité n'avaient jusqu'ici pas été étudiées. À considérer avant tout déploiement ou fine-tuning sur données sensibles. <a href="https://arxiv.org/abs/2605.16445">arXiv – Membership Inference</a></li>
-</ul>
-
-<ul>
-<li><strong>Instabilité des modèles de récompense (RLHF)</strong> : Les reward models utilisés pour l'alignement LLM produisent des préférences contradictoires face à des variations sémantiquement neutres des entrées ; l'article propose une détection et correction via autoencodeurs sparses. Implication directe sur la fiabilité des pipelines d'évaluation automatisée de contenu. <a href="https://arxiv.org/abs/2605.16339">arXiv – Preference Instability</a></li>
-</ul>
-
-<ul>
-<li><strong>Évaluation LLM-as-judge : calibration du recours humain</strong> : Utiliser des LLM comme évaluateurs automatiques dans des contextes à enjeux (sécurité, conformité) nécessite de calibrer précisément le nombre minimal d'annotations humaines requises pour rester fiable — le travail fournit un cadre quantitatif pour ce compromis. <a href="https://arxiv.org/abs/2605.16354">arXiv – LLM Judges</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation d'inférence long-contexte (KV cache)</strong> : ProxyKV propose une méthode de pruning du cache KV guidée par un modèle proxy léger, réduisant la pression mémoire sur les inférences longue séquence sans sacrifier la précision. Pertinent pour les équipes opérant des LLM on-premise avec contraintes GPU. <a href="https://arxiv.org/abs/2605.16360">arXiv – ProxyKV</a></li>
-</ul>
-
-<ul>
-<li><strong>LLM pour environnements HPC</strong> : Retour d'expérience sur l'adaptation de LLM (RAG + fine-tuning domaine) pour assister les utilisateurs de clusters HPC ; les gains d'efficacité opérationnelle sont mesurés mais la qualité dépend fortement de la fraîcheur de la base de connaissance. <a href="https://arxiv.org/abs/2605.16347">arXiv – HPC-LLM</a></li>
-</ul>
-
-<ul>
-<li><strong>Reconnaissance vocale médicale temps réel</strong> : Le projet Symphony adresse les contraintes spécifiques de la transcription médicale en temps réel (vocabulaire spécialisé, bruit ambiant, latence) ; les enjeux de confidentialité des données de santé associés à ces interfaces vocales IA restent un point de vigilance pour les DSI du secteur. <a href="https://arxiv.org/abs/2605.16545">arXiv – Symphony</a></li>
-</ul>
-
-<ul>
-<li><strong>Travaux fondamentaux LLM (signal faible)</strong> : Plusieurs papiers explorent des propriétés internes des LLM utiles à terme pour la robustesse et l'explicabilité : transitions de phase dans l'apprentissage profond, géométrie de spécialisation dans les architectures MoE, mécanismes causaux du few-shot learning, et steering d'activation sans réentraînement. Ces résultats n'ont pas d'application opérationnelle immédiate mais alimentent la compréhension des comportements émergents. <a href="https://arxiv.org/abs/2605.16325">Phase Transitions</a> · <a href="https://arxiv.org/abs/2605.16349">MoE Geometry</a> · <a href="https://arxiv.org/abs/2605.16591">Function Vectors</a> · <a href="https://arxiv.org/abs/2605.16362">Rank-1 Steering</a></li>
+<li><strong>Infrastructure IA et impact environnemental</strong> : L'essor de la GenAI génère un coût climatique estimé à 80 Md$ par an, porté par une vague d'investissements massifs dans les datacenters depuis 2022. Google et Blackstone créent par ailleurs une coentreprise pour déployer une plateforme cloud dédiée aux TPU, signe d'une course aux infrastructures spécialisées qui s'accélère. <a href="https://www.lemondeinformatique.fr/actualites/lire-ia-et-datacenters-un-cout-climatique-de-80-md$- par an -100197.html">Le Monde Informatique</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-google-s-allie-a-blackstone-pour-creer-un-ncp-100-tpu-100202.html">Le Monde Informatique</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260519-1008</guid>
-      <pubDate>Tue, 19 May 2026 10:08:17 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260519-1532</guid>
+      <pubDate>Tue, 19 May 2026 15:32:26 +0000</pubDate>
     </item>
   </channel>
 </rss>
