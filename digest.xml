@@ -8,62 +8,20 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 23 May 2026 08:39:41 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 13:43:51 +0000</lastBuildDate>
     <item>
-      <title>Digest — 23/05 08h</title>
+      <title>Digest — 23/05 13h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Recherche &amp; veille technique
+      <description>## Sources françaises IA
 
-- **Compilation de workflows agentiques dans les poids LLM** : Il est désormais possible de "compiler" des orchestrations multi-agents complexes directement dans les poids d'un modèle plus petit, réduisant les coûts d'inférence de deux ordres de grandeur avec une qualité comparable aux frameworks externes (LangGraph, CrewAI, etc.). Cela remet en question l'utilité systématique des orchestrateurs externes pour les cas d'usage stabilisés. [arXiv cs.AI](https://arxiv.org/abs/2605.22502) · [arXiv cs.LG](https://arxiv.org/abs/2605.22502)
-
-- **Attaques par injection indétectables sur agents LLM** : Les détecteurs d'injection actuels sont calibrés sur des payloads génériques ; des attaques mimant le vocabulaire métier du domaine cible passent systématiquement sous le radar, exposant les systèmes multi-agents à des compromissions silencieuses. [arXiv cs.AI](https://arxiv.org/abs/2605.22001)
-
-- **Évasion des gardes de sécurité LLM : trois vecteurs convergents** : Selon plusieurs travaux distincts, les mécanismes de refus et de détection des LLM sont contournables via des attaques dans l'espace latent (manipulation des représentations internes), via la grammaire structurée des API à sortie contrainte, et via la manipulation des descripteurs d'outils dans le protocole MCP. Le périmètre d'attaque s'étend bien au-delà du prompt texte classique. [Latent-space attacks](https://arxiv.org/abs/2605.21706) · [Structured output / grammar](https://arxiv.org/abs/2503.24191) · [MCP descriptor attacks](https://arxiv.org/abs/2512.06556)
-
-- **Sécurité des agents autonomes face aux évasions temporelles, spatiales et sémantiques** : Les benchmarks de vulnérabilité existants ne couvrent que les interactions stateless ; les agents opérant avec des privilèges système profonds sont exposés à des attaques multi-tours persistantes que les évaluations actuelles ne détectent pas. [arXiv cs.AI](https://arxiv.org/abs/2605.22321)
-
-- **Protection formelle contre l'extraction de données d'entraînement** : Une défense avec garanties formelles de confidentialité contre les attaques d'extraction sur LLM fine-tunés est proposée, sans dégradation significative des performances utiles — point directement pertinent pour les organisations qui fine-tunent des modèles sur des données sensibles. [arXiv cs.LG](https://arxiv.org/abs/2602.00688)
-
-- **Monitoring des LLM hors distribution (OOD)** : Les pipelines de surveillance actuels détectent mal les défaillances d'alignement provoquées par des prompts inhabituels ou imprévus ; le papier propose un benchmark et des pistes d'amélioration pour fiabiliser ces moniteurs en production. [arXiv cs.AI](https://arxiv.org/abs/2605.21602)
-
-- **Traçabilité et auditabilité des systèmes agentiques** : ActiveGraph propose une architecture où le log d'événements *est* l'état du système (event sourcing), permettant replay, fork et audit complet des décisions d'un agent — réponse concrète aux exigences de traçabilité réglementaire. [arXiv cs.AI](https://arxiv.org/abs/2605.21997)
-
-- **Sycophancy des LLM : taxonomie et implications** : Le comportement de "complaisance" des LLM (acquiescement à des affirmations fausses, validation excessive) manque encore de définition stable dans la littérature ; une taxonomie est proposée, ce qui est utile pour cadrer les exigences de fiabilité dans les cas d'usage décisionnels. [arXiv cs.AI](https://arxiv.org/abs/2605.21778)</description>
-      <content:encoded><![CDATA[<h2>Recherche & veille technique</h2>
+- **Fuite de données Almerys / Alan** : Des données sensibles d'assurés (état civil, numéro de sécurité sociale, numéro de contrat) ont été exposées suite à une compromission chez Almerys, prestataire de tiers-payant. Les entreprises clientes d'Alan sont concernées — la chaîne de sous-traitance reste le maillon faible à surveiller. [Next.ink](https://next.ink/238995/alan-alerte-sur-une-fuite-de-donnees-chez-almerys-son-prestataire-de-tiers-payant/)</description>
+      <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Compilation de workflows agentiques dans les poids LLM</strong> : Il est désormais possible de "compiler" des orchestrations multi-agents complexes directement dans les poids d'un modèle plus petit, réduisant les coûts d'inférence de deux ordres de grandeur avec une qualité comparable aux frameworks externes (LangGraph, CrewAI, etc.). Cela remet en question l'utilité systématique des orchestrateurs externes pour les cas d'usage stabilisés. <a href="https://arxiv.org/abs/2605.22502">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2605.22502">arXiv cs.LG</a></li>
-</ul>
-
-<ul>
-<li><strong>Attaques par injection indétectables sur agents LLM</strong> : Les détecteurs d'injection actuels sont calibrés sur des payloads génériques ; des attaques mimant le vocabulaire métier du domaine cible passent systématiquement sous le radar, exposant les systèmes multi-agents à des compromissions silencieuses. <a href="https://arxiv.org/abs/2605.22001">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Évasion des gardes de sécurité LLM : trois vecteurs convergents</strong> : Selon plusieurs travaux distincts, les mécanismes de refus et de détection des LLM sont contournables via des attaques dans l'espace latent (manipulation des représentations internes), via la grammaire structurée des API à sortie contrainte, et via la manipulation des descripteurs d'outils dans le protocole MCP. Le périmètre d'attaque s'étend bien au-delà du prompt texte classique. <a href="https://arxiv.org/abs/2605.21706">Latent-space attacks</a> · <a href="https://arxiv.org/abs/2503.24191">Structured output / grammar</a> · <a href="https://arxiv.org/abs/2512.06556">MCP descriptor attacks</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité des agents autonomes face aux évasions temporelles, spatiales et sémantiques</strong> : Les benchmarks de vulnérabilité existants ne couvrent que les interactions stateless ; les agents opérant avec des privilèges système profonds sont exposés à des attaques multi-tours persistantes que les évaluations actuelles ne détectent pas. <a href="https://arxiv.org/abs/2605.22321">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Protection formelle contre l'extraction de données d'entraînement</strong> : Une défense avec garanties formelles de confidentialité contre les attaques d'extraction sur LLM fine-tunés est proposée, sans dégradation significative des performances utiles — point directement pertinent pour les organisations qui fine-tunent des modèles sur des données sensibles. <a href="https://arxiv.org/abs/2602.00688">arXiv cs.LG</a></li>
-</ul>
-
-<ul>
-<li><strong>Monitoring des LLM hors distribution (OOD)</strong> : Les pipelines de surveillance actuels détectent mal les défaillances d'alignement provoquées par des prompts inhabituels ou imprévus ; le papier propose un benchmark et des pistes d'amélioration pour fiabiliser ces moniteurs en production. <a href="https://arxiv.org/abs/2605.21602">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Traçabilité et auditabilité des systèmes agentiques</strong> : ActiveGraph propose une architecture où le log d'événements *est* l'état du système (event sourcing), permettant replay, fork et audit complet des décisions d'un agent — réponse concrète aux exigences de traçabilité réglementaire. <a href="https://arxiv.org/abs/2605.21997">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Sycophancy des LLM : taxonomie et implications</strong> : Le comportement de "complaisance" des LLM (acquiescement à des affirmations fausses, validation excessive) manque encore de définition stable dans la littérature ; une taxonomie est proposée, ce qui est utile pour cadrer les exigences de fiabilité dans les cas d'usage décisionnels. <a href="https://arxiv.org/abs/2605.21778">arXiv cs.AI</a></li>
+<li><strong>Fuite de données Almerys / Alan</strong> : Des données sensibles d'assurés (état civil, numéro de sécurité sociale, numéro de contrat) ont été exposées suite à une compromission chez Almerys, prestataire de tiers-payant. Les entreprises clientes d'Alan sont concernées — la chaîne de sous-traitance reste le maillon faible à surveiller. <a href="https://next.ink/238995/alan-alerte-sur-une-fuite-de-donnees-chez-almerys-son-prestataire-de-tiers-payant/">Next.ink</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260523-0839</guid>
-      <pubDate>Sat, 23 May 2026 08:39:41 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260523-1343</guid>
+      <pubDate>Sat, 23 May 2026 13:43:51 +0000</pubDate>
     </item>
   </channel>
 </rss>
