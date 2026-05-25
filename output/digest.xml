@@ -8,90 +8,30 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 25 May 2026 10:26:57 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 15:15:21 +0000</lastBuildDate>
     <item>
-      <title>Digest — 25/05 10h</title>
+      <title>Digest — 25/05 15h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **IA agentique : rentabilité et autonomie en question** : La facturation à l'usage (tokens) des agents IA peut dépasser le coût d'un employé humain, ce qui impose une analyse de ROI rigoureuse avant tout déploiement. Parallèlement, Anthropic pousse Claude vers une autonomie prolongée sans supervision humaine, ce qui soulève des questions de gouvernance et de contrôle pour les équipes IT. [Next.ink](https://next.ink/brief-article/quand-lia-agentique-coute-plus-cher-que-de-payer-ses-employes-humains/) · [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1550545-anthropic-veut-amener-claude-a-un-niveau-de-perpetuelle-autonomie/)
+- **BCE et risques IA dans le secteur bancaire** : La BCE réunit ce 26 mai les grandes banques européennes pour évaluer leur exposition aux risques liés aux derniers modèles d'IA, notamment Mythos, dont le déploiement est encore attendu. Le régulateur place clairement la cybersécurité au cœur de ses priorités de supervision. [Next.ink](https://next.ink/239038/cybersecurite-la-bce-sinquiete-de-mythos-et-convoque-les-banques-europeennes/)
 
-- **Google CodeMender : correction autonome de vulnérabilités** : Google étend CodeMender au sein de son Agent Platform, l'agent étant désormais capable d'identifier et corriger des vulnérabilités de façon autonome — un cas d'usage concret à suivre pour les équipes sécurité. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-google-integre-codemender-a-agent-platform-100244.html)
+## Grandes sources internationales
 
-- **Optimisation des coûts IA : choisir le bon modèle** : Utiliser systématiquement le modèle le plus puissant n'est ni économiquement ni écologiquement justifié ; la maturité en matière d'IA passe par la capacité à sélectionner le modèle adapté à chaque usage. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1550533-et-si-le-vrai-luxe-de-l-ia-etait-d-apprendre-a-ne-pas-utiliser-le-meilleur-modele/)
-
-## Recherche &amp; veille technique
-
-- **Sécurité des systèmes multi-agents : l'angle mort de la couche mémoire** : Les pipelines multi-agents attribuent par défaut les comportements anormaux à un défaut d'alignement du modèle, mais des attaques ciblant uniquement la couche mémoire produisent des effets identiques — rendant la distinction impossible sans instrumentation dédiée. Ce "Misattribution Gap" constitue un vecteur d'attaque structurellement invisible dans les architectures actuelles. [arXiv cs.AI](https://arxiv.org/abs/2605.22842) · [arXiv cs.LG](https://arxiv.org/abs/2605.22842)
-
-- **RAG comme vecteur d'injection de code** : Une attaque baptisée RAG-Pull exploite des perturbations Unicode invisibles dans les documents indexés pour détourner le pipeline de récupération et injecter du code malveillant dans le contexte du LLM. Tout système RAG exposé à des sources externes non maîtrisées est potentiellement concerné. [arXiv cs.AI](https://arxiv.org/abs/2510.11195)
-
-- **Test-Time Training et contournement des garde-fous de sécurité** : L'adaptation des paramètres d'un modèle à l'inférence (TTT) dégrade ou neutralise les mécanismes de sécurité intégrés, y compris les filtres de contenu. Cette technique, de plus en plus répandue, ouvre un vecteur de jailbreak non documenté dans les déploiements en production. [arXiv cs.LG](https://arxiv.org/abs/2605.22984)
-
-- **Délégation de secrets dans les systèmes agentiques** : Les runtimes agentiques actuels gèrent l'autorisation par exposition directe des secrets (clés API, tokens) aux agents, ce qui crée des risques majeurs de fuite ou de réutilisation non contrôlée. Le protocole SUDP propose une délégation à usage limité sans transmission du secret brut. [arXiv cs.AI](https://arxiv.org/abs/2604.24920)
-
-- **LLMs frontier et cybersécurité : état des lieux** : Un benchmark en double mode (détection de vulnérabilités boîte blanche sur C/Java/Python + tests applicatifs boîte noire) montre que les LLMs généralistes atteignent leurs limites sur les tâches de sécurité spécialisées, plaidant pour des modèles verticaux dédiés à la cybersécurité. [arXiv cs.AI](https://arxiv.org/abs/2605.23243)
-
-- **Protocole de coordination inter-agents et gouvernance** : Deux travaux convergent sur la nécessité de définir des couches de coordination et de responsabilité entre agents autonomes agissant sur des systèmes réels (achats, déploiements, gestion de systèmes). L'absence de tels protocoles rend aujourd'hui toute attribution de responsabilité incertaine en cas d'incident. [Foundation Protocol](https://arxiv.org/abs/2605.23218) · [Accountability Boundaries](https://arxiv.org/abs/2605.23179)
-
-- **Conformité exécutable pour l'IA en infrastructure critique** : Les obligations réglementaires (transparence, traçabilité, accountability) restent aujourd'hui documentaires et non vérifiables automatiquement. L'approche par blocs ontologiques propose de rendre ces obligations directement exécutables et auditables sur les systèmes déployés — point de contact direct avec les exigences de l'AI Act. [arXiv cs.AI](https://arxiv.org/abs/2605.23297)
-
-- **Attribution et observabilité dans les systèmes IA composites** : BOHM propose une méthode d'attribution hiérarchique sans surcoût de calcul pour identifier la contribution de chaque composant dans un pipeline IA complexe. Utile pour le débogage et l'audit, notamment dans les architectures multi-modèles où la traçabilité des décisions est requise. [arXiv cs.AI](https://arxiv.org/abs/2605.22866)
-
-- **Limites fondamentales de l'IA et conception de systèmes fiables** : Des résultats d'impossibilité (Turing, Arrow, No Free Lunch) sont traduits en contraintes de conception concrètes pour les systèmes IA déployés dans des contextes critiques (juridique, médical, logiciel). À lire pour cadrer les promesses des éditeurs avec ce que le calcul peut garantir formellement. [arXiv cs.AI](https://arxiv.org/abs/2605.23024)</description>
+- **Course aux armements IA dans la recherche de vulnérabilités** : L'utilisation de l'IA accélère à la fois la découverte et l'exploitation de failles logicielles, contraignant les équipes défensives à adopter les mêmes outils pour rester dans la course face à des attaquants de mieux en mieux équipés. Le rythme de détection des bugs s'en trouve fondamentalement modifié, avec un risque de déséquilibre si les défenseurs prennent du retard. [Wired](https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>IA agentique : rentabilité et autonomie en question</strong> : La facturation à l'usage (tokens) des agents IA peut dépasser le coût d'un employé humain, ce qui impose une analyse de ROI rigoureuse avant tout déploiement. Parallèlement, Anthropic pousse Claude vers une autonomie prolongée sans supervision humaine, ce qui soulève des questions de gouvernance et de contrôle pour les équipes IT. <a href="https://next.ink/brief-article/quand-lia-agentique-coute-plus-cher-que-de-payer-ses-employes-humains/">Next.ink</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1550545-anthropic-veut-amener-claude-a-un-niveau-de-perpetuelle-autonomie/">Journal du Net</a></li>
+<li><strong>BCE et risques IA dans le secteur bancaire</strong> : La BCE réunit ce 26 mai les grandes banques européennes pour évaluer leur exposition aux risques liés aux derniers modèles d'IA, notamment Mythos, dont le déploiement est encore attendu. Le régulateur place clairement la cybersécurité au cœur de ses priorités de supervision. <a href="https://next.ink/239038/cybersecurite-la-bce-sinquiete-de-mythos-et-convoque-les-banques-europeennes/">Next.ink</a></li>
 </ul>
 
-<ul>
-<li><strong>Google CodeMender : correction autonome de vulnérabilités</strong> : Google étend CodeMender au sein de son Agent Platform, l'agent étant désormais capable d'identifier et corriger des vulnérabilités de façon autonome — un cas d'usage concret à suivre pour les équipes sécurité. <a href="https://www.lemondeinformatique.fr/actualites/lire-google-integre-codemender-a-agent-platform-100244.html">Le Monde Informatique</a></li>
-</ul>
+<h2>Grandes sources internationales</h2>
 
 <ul>
-<li><strong>Optimisation des coûts IA : choisir le bon modèle</strong> : Utiliser systématiquement le modèle le plus puissant n'est ni économiquement ni écologiquement justifié ; la maturité en matière d'IA passe par la capacité à sélectionner le modèle adapté à chaque usage. <a href="https://www.journaldunet.com/intelligence-artificielle/1550533-et-si-le-vrai-luxe-de-l-ia-etait-d-apprendre-a-ne-pas-utiliser-le-meilleur-modele/">Journal du Net</a></li>
-</ul>
-
-<h2>Recherche & veille technique</h2>
-
-<ul>
-<li><strong>Sécurité des systèmes multi-agents : l'angle mort de la couche mémoire</strong> : Les pipelines multi-agents attribuent par défaut les comportements anormaux à un défaut d'alignement du modèle, mais des attaques ciblant uniquement la couche mémoire produisent des effets identiques — rendant la distinction impossible sans instrumentation dédiée. Ce "Misattribution Gap" constitue un vecteur d'attaque structurellement invisible dans les architectures actuelles. <a href="https://arxiv.org/abs/2605.22842">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2605.22842">arXiv cs.LG</a></li>
-</ul>
-
-<ul>
-<li><strong>RAG comme vecteur d'injection de code</strong> : Une attaque baptisée RAG-Pull exploite des perturbations Unicode invisibles dans les documents indexés pour détourner le pipeline de récupération et injecter du code malveillant dans le contexte du LLM. Tout système RAG exposé à des sources externes non maîtrisées est potentiellement concerné. <a href="https://arxiv.org/abs/2510.11195">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Test-Time Training et contournement des garde-fous de sécurité</strong> : L'adaptation des paramètres d'un modèle à l'inférence (TTT) dégrade ou neutralise les mécanismes de sécurité intégrés, y compris les filtres de contenu. Cette technique, de plus en plus répandue, ouvre un vecteur de jailbreak non documenté dans les déploiements en production. <a href="https://arxiv.org/abs/2605.22984">arXiv cs.LG</a></li>
-</ul>
-
-<ul>
-<li><strong>Délégation de secrets dans les systèmes agentiques</strong> : Les runtimes agentiques actuels gèrent l'autorisation par exposition directe des secrets (clés API, tokens) aux agents, ce qui crée des risques majeurs de fuite ou de réutilisation non contrôlée. Le protocole SUDP propose une délégation à usage limité sans transmission du secret brut. <a href="https://arxiv.org/abs/2604.24920">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>LLMs frontier et cybersécurité : état des lieux</strong> : Un benchmark en double mode (détection de vulnérabilités boîte blanche sur C/Java/Python + tests applicatifs boîte noire) montre que les LLMs généralistes atteignent leurs limites sur les tâches de sécurité spécialisées, plaidant pour des modèles verticaux dédiés à la cybersécurité. <a href="https://arxiv.org/abs/2605.23243">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Protocole de coordination inter-agents et gouvernance</strong> : Deux travaux convergent sur la nécessité de définir des couches de coordination et de responsabilité entre agents autonomes agissant sur des systèmes réels (achats, déploiements, gestion de systèmes). L'absence de tels protocoles rend aujourd'hui toute attribution de responsabilité incertaine en cas d'incident. <a href="https://arxiv.org/abs/2605.23218">Foundation Protocol</a> · <a href="https://arxiv.org/abs/2605.23179">Accountability Boundaries</a></li>
-</ul>
-
-<ul>
-<li><strong>Conformité exécutable pour l'IA en infrastructure critique</strong> : Les obligations réglementaires (transparence, traçabilité, accountability) restent aujourd'hui documentaires et non vérifiables automatiquement. L'approche par blocs ontologiques propose de rendre ces obligations directement exécutables et auditables sur les systèmes déployés — point de contact direct avec les exigences de l'AI Act. <a href="https://arxiv.org/abs/2605.23297">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Attribution et observabilité dans les systèmes IA composites</strong> : BOHM propose une méthode d'attribution hiérarchique sans surcoût de calcul pour identifier la contribution de chaque composant dans un pipeline IA complexe. Utile pour le débogage et l'audit, notamment dans les architectures multi-modèles où la traçabilité des décisions est requise. <a href="https://arxiv.org/abs/2605.22866">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Limites fondamentales de l'IA et conception de systèmes fiables</strong> : Des résultats d'impossibilité (Turing, Arrow, No Free Lunch) sont traduits en contraintes de conception concrètes pour les systèmes IA déployés dans des contextes critiques (juridique, médical, logiciel). À lire pour cadrer les promesses des éditeurs avec ce que le calcul peut garantir formellement. <a href="https://arxiv.org/abs/2605.23024">arXiv cs.AI</a></li>
+<li><strong>Course aux armements IA dans la recherche de vulnérabilités</strong> : L'utilisation de l'IA accélère à la fois la découverte et l'exploitation de failles logicielles, contraignant les équipes défensives à adopter les mêmes outils pour rester dans la course face à des attaquants de mieux en mieux équipés. Le rythme de détection des bugs s'en trouve fondamentalement modifié, avec un risque de déséquilibre si les défenseurs prennent du retard. <a href="https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/">Wired</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260525-1026</guid>
-      <pubDate>Mon, 25 May 2026 10:26:57 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260525-1515</guid>
+      <pubDate>Mon, 25 May 2026 15:15:21 +0000</pubDate>
     </item>
   </channel>
 </rss>
