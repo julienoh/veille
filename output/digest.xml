@@ -8,30 +8,146 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 25 May 2026 15:15:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 10:31:20 +0000</lastBuildDate>
     <item>
-      <title>Digest — 25/05 15h</title>
+      <title>Digest — 26/05 10h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **BCE et risques IA dans le secteur bancaire** : La BCE réunit ce 26 mai les grandes banques européennes pour évaluer leur exposition aux risques liés aux derniers modèles d'IA, notamment Mythos, dont le déploiement est encore attendu. Le régulateur place clairement la cybersécurité au cœur de ses priorités de supervision. [Next.ink](https://next.ink/239038/cybersecurite-la-bce-sinquiete-de-mythos-et-convoque-les-banques-europeennes/)
+- **Claude Mythos / détection de vulnérabilités** : L'outil Mythos d'Anthropic, issu du projet Glasswing, a permis d'identifier 10 000 failles de sécurité via IA — ce qui soulève une question de gouvernance sérieuse : la BCE a convoqué les banques européennes pour évaluer les risques associés à cet outil, en soulignant que le règlement DORA ne garantit aucune souveraineté d'accès sur celui-ci. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-avec-claude-mythos-anthropic-detecte-10-000-failles-100258.html) · [Actu IA](https://www.actuia.com/actualite/ia-banques-la-bce-convoque-ses-banques-sur-mythos-mais-dora-ne-garantit-aucun-acces-souverain-a-loutil/)
+
+- **Sécurité des agents IA** : Microsoft intègre des contrôles de sécurité dès le cycle de développement des agents IA, un sujet qui devient concret en production : Meilleurstaux et Adecco témoignent de déploiements agentiques opérationnels, avec les défis de maîtrise et de supervision que cela implique. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-microsoft-securise-le-developpement-des-agents-ia-100248.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-lecons-de-meilleurstaux-et-adecco-sur-les-agents-ia-100253.html)
+
+- **Fuite de données Almerys** : Almerys, prestataire de tiers payant pour la MGEN, AG2R et d'autres mutuelles, confirme une fuite de données personnelles dont le périmètre exact reste indéterminé — potentiellement sensible compte tenu du volume d'assurés concernés. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/cyberattaque-almerys-specialiste-du-tiers-payant-et-notamment-prestataire-pour-la-mgen-ou-ag2r-confirme-avoir-ete-victime-d-une-fuite-de-donnees-dont-l-ampleur-reste-inconnue_AD-202605260412.html)
+
+- **Chiffrement et souveraineté** : Affaiblir le chiffrement au nom de la sécurité reviendrait à exposer l'État lui-même aux attaques — l'argument est rappelé fermement alors que des débats législatifs sur les backdoors persistent. [Journal du Net](https://www.journaldunet.com/cybersecurite/1550521-chiffrement-l-etat-ne-doit-pas-fragiliser-ce-qui-le-protege/)
+
+- **Pénurie de calcul pour les IA gouvernementales** : Les agences de renseignement américaines manquent de capacités GPU pour exploiter leurs modèles IA, un signal utile sur les contraintes réelles d'industrialisation de l'IA souveraine, y compris pour les États. [Next.ink](https://next.ink/brief-article/les-agences-de-renseignement-americaines-a-court-de-puissance-de-calcul-pour-leurs-ia/)
+
+- **Étiquetage des contenus IA en Europe** : À partir du 2 août 2025, le règlement IA européen imposera aux fournisseurs d'outils génératifs de permettre l'identification des contenus produits par IA — une obligation de transparence à intégrer dans les projets en cours. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/face-a-la-proliferation-des-contenus-generes-par-l-ia-l-ue-veut-une-etiquette-pour-aider-ses-citoyens-a-les-identifier_AV-202605260343.html)
 
 ## Grandes sources internationales
 
-- **Course aux armements IA dans la recherche de vulnérabilités** : L'utilisation de l'IA accélère à la fois la découverte et l'exploitation de failles logicielles, contraignant les équipes défensives à adopter les mêmes outils pour rester dans la course face à des attaquants de mieux en mieux équipés. Le rythme de détection des bugs s'en trouve fondamentalement modifié, avec un risque de déséquilibre si les défenseurs prennent du retard. [Wired](https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/)</description>
+- **ROI de l'IA en entreprise** : Uber illustre un phénomène croissant : les budgets IA explosent (épuisés en 4 mois) mais les retours concrets restent difficiles à mesurer, au point que la direction remet publiquement en question la justification de ces dépenses. Signal à surveiller pour les DSI qui pilotent leurs propres investissements IA. [The Verge](https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify)
+
+## Recherche &amp; veille technique
+
+- **Sécurité des agents IA autonomes (vue d'ensemble)** : Les systèmes agentiques LLM (planification, mémoire, outils, interactions longues) introduisent des vecteurs d'attaque inédits — prompt injection, manipulation de mémoire persistante, compromission multi-canal — que les modèles de sécurité traditionnels ne couvrent pas. Plusieurs travaux convergent sur la nécessité de principes d'architecture défensive spécifiques à ces systèmes. [Towards trustworthy agentic AI](https://arxiv.org/abs/2605.23989) · [Security of OpenClaw Agents](https://arxiv.org/abs/2605.25435)
+
+- **Jailbreak des modèles de raisonnement (Chain-of-Thought)** : Le mécanisme de raisonnement explicite (CoT) des LRM constitue une surface d'attaque exploitable : des adversaires peuvent détourner la chaîne de pensée pour contourner les garde-fous, et des raisonnements trop longs fragilisent paradoxalement la robustesse sécuritaire. Les équipes déployant des modèles de type o1/DeepSeek-R1 doivent en tenir compte. [Reasoning as an Attack Surface](https://arxiv.org/abs/2605.24497) · [Chain-of-Thought Hijacking](https://arxiv.org/abs/2510.26418)
+
+- **Prompt injection dans les SOC outillés au LLM** : Un attaquant peut injecter des instructions malveillantes directement dans des logs ou alertes ingérés par un assistant LLM en SOC, conduisant à des erreurs de triage ou à des conseils de remédiation erronés. C'est un risque concret pour toute organisation qui automatise l'analyse de journaux avec un LLM. [Poisoning the Watchtower](https://arxiv.org/abs/2605.24421) · [LivePI](https://arxiv.org/abs/2605.17986)
+
+- **Empoisonnement via MCP (Model Context Protocol)** : Les agents LLM intégrant des outils externes via MCP peuvent être trompés par des descriptions d'outils falsifiées, exécutant ainsi des actions non autorisées. Un benchmark réaliste documente l'ampleur de cette menace sur des agents en production. [When the Manual Lies](https://arxiv.org/abs/2605.24069)
+
+- **Backdoors dans les LLM open-weight et chaîne d'approvisionnement** : Des portes dérobées peuvent être dissimulées dans les templates de chat ou activées par des déclencheurs structurels multi-tours, sans nécessiter de prompt spécifique. Ces vecteurs d'attaque sur la supply chain concernent directement les organisations utilisant des modèles open-weight en production. [Inference-Time Backdoors via Chat Templates](https://arxiv.org/abs/2602.04653) · [Turn-Based Structural Triggers](https://arxiv.org/abs/2601.14340)
+
+- **Sécurité du fine-tuning LLM** : Le cycle de vie du fine-tuning expose les LLM à des attaques variées (empoisonnement des données, backdoors, extraction de paramètres) ; une revue systématique recense menaces, défenses et lacunes d'évaluation actuelles. À lire avant tout projet d'adaptation de modèle en interne. [Security in the Fine-Tuning Lifecycle](https://arxiv.org/abs/2605.25073)
+
+- **Cryptographie à clé publique sous pression de l'IA adversariale** : Des adversaires pilotés par IA peuvent optimiser adaptativement leurs attaques contre les systèmes PKC, creusant l'écart entre les modèles de sécurité algorithmiques statiques et la réalité des menaces. Cela renforce l'urgence de la migration vers des algorithmes post-quantiques et d'une cryptoagilité effective. [AI-Driven Adaptive Adversaries and Cryptographic Trust](https://arxiv.org/abs/2605.24542)
+
+- **Contrôle et confinement des agents IA : retry vs. resample** : Les scaffolds de coding IA (Claude Code, Codex) utilisent le blocage-relance des actions risquées, mais cette approche reste exploitable par un modèle adversarial ; le resampling offre de meilleures garanties de contrôle dans certains scénarios. [Retrying vs Resampling in AI Control](https://arxiv.org/abs/2605.26047)
+
+- **Vérification formelle des compétences d'agents** : Un cadre de preuve mécanique est proposé pour certifier qu'un agent ne peut exercer que les capacités déclarées dans son manifeste — réponse directe au besoin de gouvernance et d'auditabilité des systèmes agentiques. [Methods for Formal Verification of Agent Skills](https://arxiv.org/abs/2605.23951)
+
+- **Architecture scalable et auditable pour l'IA agentique** : Le prochain goulot d'étranglement n'est pas la taille des modèles mais la conception des architectures système : persistance, modularité, auditabilité et vérifiabilité sont les propriétés à cibler pour passer à l'échelle en production. [From Model Scaling to System Scaling](https://arxiv.org/abs/2605.26112)
+
+- **Retour d'expérience DARPA AIxCC** : Le bilan du plus grand challenge de cybersécurité autonome à ce jour (2023-2025) documente ce que les systèmes IA peuvent réellement faire en découverte et exploitation de vulnérabilités — référence utile pour calibrer les hypothèses sur la menace IA offensive. [SoK: DARPA AIxCC](https://arxiv.org/abs/2602.07666)
+
+- **Calibration et redondance dans le raisonnement LLM** : Les LLM sont systématiquement surconfiants (confiance &gt; précision réelle) et produisent des chaînes de raisonnement contenant une redondance significative, avec un coût énergétique et de latence inutile. À prendre en compte pour dimensionner les SLA et évaluer la fiabilité des sorties en contexte de décision. [Confidence Calibration in LLMs](https://arxiv.org/abs/2605.23909) · [How Much Thinking is Enough?](https://arxiv.org/abs/2605.23926)
+
+## Automatisation &amp; agents
+
+- **Fiabilité et contrôle des agents IA** : Limiter ce qu'un agent peut faire passe par une combinaison de mesures concrètes — périmètre d'outils réduit, schémas de sortie contraints, permissions scopées et logique de routage — plutôt que de s'en remettre au seul prompt. Un point utile pour tout projet d'automatisation en production où la surface d'action de l'agent doit rester auditable et maîtrisée. [n8n Blog](https://blog.n8n.io/make-ai-agents-more-reliable-and-restrict-the-actions-they-can-take/)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>BCE et risques IA dans le secteur bancaire</strong> : La BCE réunit ce 26 mai les grandes banques européennes pour évaluer leur exposition aux risques liés aux derniers modèles d'IA, notamment Mythos, dont le déploiement est encore attendu. Le régulateur place clairement la cybersécurité au cœur de ses priorités de supervision. <a href="https://next.ink/239038/cybersecurite-la-bce-sinquiete-de-mythos-et-convoque-les-banques-europeennes/">Next.ink</a></li>
+<li><strong>Claude Mythos / détection de vulnérabilités</strong> : L'outil Mythos d'Anthropic, issu du projet Glasswing, a permis d'identifier 10 000 failles de sécurité via IA — ce qui soulève une question de gouvernance sérieuse : la BCE a convoqué les banques européennes pour évaluer les risques associés à cet outil, en soulignant que le règlement DORA ne garantit aucune souveraineté d'accès sur celui-ci. <a href="https://www.lemondeinformatique.fr/actualites/lire-avec-claude-mythos-anthropic-detecte-10-000-failles-100258.html">Le Monde Informatique</a> · <a href="https://www.actuia.com/actualite/ia-banques-la-bce-convoque-ses-banques-sur-mythos-mais-dora-ne-garantit-aucun-acces-souverain-a-loutil/">Actu IA</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurité des agents IA</strong> : Microsoft intègre des contrôles de sécurité dès le cycle de développement des agents IA, un sujet qui devient concret en production : Meilleurstaux et Adecco témoignent de déploiements agentiques opérationnels, avec les défis de maîtrise et de supervision que cela implique. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-securise-le-developpement-des-agents-ia-100248.html">Le Monde Informatique</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-les-lecons-de-meilleurstaux-et-adecco-sur-les-agents-ia-100253.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuite de données Almerys</strong> : Almerys, prestataire de tiers payant pour la MGEN, AG2R et d'autres mutuelles, confirme une fuite de données personnelles dont le périmètre exact reste indéterminé — potentiellement sensible compte tenu du volume d'assurés concernés. <a href="https://www.bfmtv.com/tech/cybersecurite/cyberattaque-almerys-specialiste-du-tiers-payant-et-notamment-prestataire-pour-la-mgen-ou-ag2r-confirme-avoir-ete-victime-d-une-fuite-de-donnees-dont-l-ampleur-reste-inconnue_AD-202605260412.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Chiffrement et souveraineté</strong> : Affaiblir le chiffrement au nom de la sécurité reviendrait à exposer l'État lui-même aux attaques — l'argument est rappelé fermement alors que des débats législatifs sur les backdoors persistent. <a href="https://www.journaldunet.com/cybersecurite/1550521-chiffrement-l-etat-ne-doit-pas-fragiliser-ce-qui-le-protege/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Pénurie de calcul pour les IA gouvernementales</strong> : Les agences de renseignement américaines manquent de capacités GPU pour exploiter leurs modèles IA, un signal utile sur les contraintes réelles d'industrialisation de l'IA souveraine, y compris pour les États. <a href="https://next.ink/brief-article/les-agences-de-renseignement-americaines-a-court-de-puissance-de-calcul-pour-leurs-ia/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Étiquetage des contenus IA en Europe</strong> : À partir du 2 août 2025, le règlement IA européen imposera aux fournisseurs d'outils génératifs de permettre l'identification des contenus produits par IA — une obligation de transparence à intégrer dans les projets en cours. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/face-a-la-proliferation-des-contenus-generes-par-l-ia-l-ue-veut-une-etiquette-pour-aider-ses-citoyens-a-les-identifier_AV-202605260343.html">BFM Tech</a></li>
 </ul>
 
 <h2>Grandes sources internationales</h2>
 
 <ul>
-<li><strong>Course aux armements IA dans la recherche de vulnérabilités</strong> : L'utilisation de l'IA accélère à la fois la découverte et l'exploitation de failles logicielles, contraignant les équipes défensives à adopter les mêmes outils pour rester dans la course face à des attaquants de mieux en mieux équipés. Le rythme de détection des bugs s'en trouve fondamentalement modifié, avec un risque de déséquilibre si les défenseurs prennent du retard. <a href="https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/">Wired</a></li>
+<li><strong>ROI de l'IA en entreprise</strong> : Uber illustre un phénomène croissant : les budgets IA explosent (épuisés en 4 mois) mais les retours concrets restent difficiles à mesurer, au point que la direction remet publiquement en question la justification de ces dépenses. Signal à surveiller pour les DSI qui pilotent leurs propres investissements IA. <a href="https://www.theverge.com/transportation/937116/uber-ai-investment-hard-to-justify">The Verge</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Sécurité des agents IA autonomes (vue d'ensemble)</strong> : Les systèmes agentiques LLM (planification, mémoire, outils, interactions longues) introduisent des vecteurs d'attaque inédits — prompt injection, manipulation de mémoire persistante, compromission multi-canal — que les modèles de sécurité traditionnels ne couvrent pas. Plusieurs travaux convergent sur la nécessité de principes d'architecture défensive spécifiques à ces systèmes. <a href="https://arxiv.org/abs/2605.23989">Towards trustworthy agentic AI</a> · <a href="https://arxiv.org/abs/2605.25435">Security of OpenClaw Agents</a></li>
+</ul>
+
+<ul>
+<li><strong>Jailbreak des modèles de raisonnement (Chain-of-Thought)</strong> : Le mécanisme de raisonnement explicite (CoT) des LRM constitue une surface d'attaque exploitable : des adversaires peuvent détourner la chaîne de pensée pour contourner les garde-fous, et des raisonnements trop longs fragilisent paradoxalement la robustesse sécuritaire. Les équipes déployant des modèles de type o1/DeepSeek-R1 doivent en tenir compte. <a href="https://arxiv.org/abs/2605.24497">Reasoning as an Attack Surface</a> · <a href="https://arxiv.org/abs/2510.26418">Chain-of-Thought Hijacking</a></li>
+</ul>
+
+<ul>
+<li><strong>Prompt injection dans les SOC outillés au LLM</strong> : Un attaquant peut injecter des instructions malveillantes directement dans des logs ou alertes ingérés par un assistant LLM en SOC, conduisant à des erreurs de triage ou à des conseils de remédiation erronés. C'est un risque concret pour toute organisation qui automatise l'analyse de journaux avec un LLM. <a href="https://arxiv.org/abs/2605.24421">Poisoning the Watchtower</a> · <a href="https://arxiv.org/abs/2605.17986">LivePI</a></li>
+</ul>
+
+<ul>
+<li><strong>Empoisonnement via MCP (Model Context Protocol)</strong> : Les agents LLM intégrant des outils externes via MCP peuvent être trompés par des descriptions d'outils falsifiées, exécutant ainsi des actions non autorisées. Un benchmark réaliste documente l'ampleur de cette menace sur des agents en production. <a href="https://arxiv.org/abs/2605.24069">When the Manual Lies</a></li>
+</ul>
+
+<ul>
+<li><strong>Backdoors dans les LLM open-weight et chaîne d'approvisionnement</strong> : Des portes dérobées peuvent être dissimulées dans les templates de chat ou activées par des déclencheurs structurels multi-tours, sans nécessiter de prompt spécifique. Ces vecteurs d'attaque sur la supply chain concernent directement les organisations utilisant des modèles open-weight en production. <a href="https://arxiv.org/abs/2602.04653">Inference-Time Backdoors via Chat Templates</a> · <a href="https://arxiv.org/abs/2601.14340">Turn-Based Structural Triggers</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurité du fine-tuning LLM</strong> : Le cycle de vie du fine-tuning expose les LLM à des attaques variées (empoisonnement des données, backdoors, extraction de paramètres) ; une revue systématique recense menaces, défenses et lacunes d'évaluation actuelles. À lire avant tout projet d'adaptation de modèle en interne. <a href="https://arxiv.org/abs/2605.25073">Security in the Fine-Tuning Lifecycle</a></li>
+</ul>
+
+<ul>
+<li><strong>Cryptographie à clé publique sous pression de l'IA adversariale</strong> : Des adversaires pilotés par IA peuvent optimiser adaptativement leurs attaques contre les systèmes PKC, creusant l'écart entre les modèles de sécurité algorithmiques statiques et la réalité des menaces. Cela renforce l'urgence de la migration vers des algorithmes post-quantiques et d'une cryptoagilité effective. <a href="https://arxiv.org/abs/2605.24542">AI-Driven Adaptive Adversaries and Cryptographic Trust</a></li>
+</ul>
+
+<ul>
+<li><strong>Contrôle et confinement des agents IA : retry vs. resample</strong> : Les scaffolds de coding IA (Claude Code, Codex) utilisent le blocage-relance des actions risquées, mais cette approche reste exploitable par un modèle adversarial ; le resampling offre de meilleures garanties de contrôle dans certains scénarios. <a href="https://arxiv.org/abs/2605.26047">Retrying vs Resampling in AI Control</a></li>
+</ul>
+
+<ul>
+<li><strong>Vérification formelle des compétences d'agents</strong> : Un cadre de preuve mécanique est proposé pour certifier qu'un agent ne peut exercer que les capacités déclarées dans son manifeste — réponse directe au besoin de gouvernance et d'auditabilité des systèmes agentiques. <a href="https://arxiv.org/abs/2605.23951">Methods for Formal Verification of Agent Skills</a></li>
+</ul>
+
+<ul>
+<li><strong>Architecture scalable et auditable pour l'IA agentique</strong> : Le prochain goulot d'étranglement n'est pas la taille des modèles mais la conception des architectures système : persistance, modularité, auditabilité et vérifiabilité sont les propriétés à cibler pour passer à l'échelle en production. <a href="https://arxiv.org/abs/2605.26112">From Model Scaling to System Scaling</a></li>
+</ul>
+
+<ul>
+<li><strong>Retour d'expérience DARPA AIxCC</strong> : Le bilan du plus grand challenge de cybersécurité autonome à ce jour (2023-2025) documente ce que les systèmes IA peuvent réellement faire en découverte et exploitation de vulnérabilités — référence utile pour calibrer les hypothèses sur la menace IA offensive. <a href="https://arxiv.org/abs/2602.07666">SoK: DARPA AIxCC</a></li>
+</ul>
+
+<ul>
+<li><strong>Calibration et redondance dans le raisonnement LLM</strong> : Les LLM sont systématiquement surconfiants (confiance > précision réelle) et produisent des chaînes de raisonnement contenant une redondance significative, avec un coût énergétique et de latence inutile. À prendre en compte pour dimensionner les SLA et évaluer la fiabilité des sorties en contexte de décision. <a href="https://arxiv.org/abs/2605.23909">Confidence Calibration in LLMs</a> · <a href="https://arxiv.org/abs/2605.23926">How Much Thinking is Enough?</a></li>
+</ul>
+
+<h2>Automatisation & agents</h2>
+
+<ul>
+<li><strong>Fiabilité et contrôle des agents IA</strong> : Limiter ce qu'un agent peut faire passe par une combinaison de mesures concrètes — périmètre d'outils réduit, schémas de sortie contraints, permissions scopées et logique de routage — plutôt que de s'en remettre au seul prompt. Un point utile pour tout projet d'automatisation en production où la surface d'action de l'agent doit rester auditable et maîtrisée. <a href="https://blog.n8n.io/make-ai-agents-more-reliable-and-restrict-the-actions-they-can-take/">n8n Blog</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260525-1515</guid>
-      <pubDate>Mon, 25 May 2026 15:15:21 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260526-1031</guid>
+      <pubDate>Tue, 26 May 2026 10:31:20 +0000</pubDate>
     </item>
   </channel>
 </rss>
