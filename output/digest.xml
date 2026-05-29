@@ -8,36 +8,126 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 28 May 2026 20:28:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 10:18:18 +0000</lastBuildDate>
     <item>
-      <title>Digest — 28/05 20h</title>
+      <title>Digest — 29/05 10h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Sources françaises IA
 
-- **Claude Opus 4.8 (Anthropic)** : Le nouveau modèle mise sur l'autonomie accrue et la capacité à orchestrer des centaines de sous-agents en parallèle, avec une progression notable sur les tâches de code — le tout sans hausse de tarif. Un modèle de niveau supérieur, codename "Mythos", est annoncé pour une échéance proche. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1550697-anthropic-lance-claude-opus-4-8-avant-un-modele-de-grade-mythos-tres-prochainement/)
+- **Shadow IT des agents IA** : Les agents IA prolifèrent hors de tout contrôle IT — les entreprises ne savent déjà plus combien elles en ont déployé ni ce qu'ils font, reproduisant le Shadow IT mais à une vitesse et une échelle bien supérieures. [Frenchweb](https://www.frenchweb.fr/lia-cree-son-propre-shadow-it-les-entreprises-perdent-deja-la-trace-de-leurs-agents/462058)
 
-- **Mistral Summit** : Mistral AI affiche un pivot stratégique vers l'infrastructure IA et les usages industriels, signalant une montée en maturité au-delà de la simple mise à disposition de modèles. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-mistral-met-le-cap-sur-l-infrastructure-ia-et-l-industrie-100296.html)
+- **Agents IA et budgets IT** : L'IA agentique rend les projections budgétaires très difficiles : les coûts d'infrastructure, de tokens et d'orchestration sont encore mal maîtrisés par les DSI, ce qui complique tout arbitrage. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-agents-ia-creent-de-l-incertitude-dans-les-budgets-it-100292.html)
 
-## Grandes sources internationales
+- **Faille critique dans Starlette** : Un caractère malformé dans une requête HTTP suffit à compromettre les applications s'appuyant sur ce framework Python, utilisé par de nombreux outils IA — une surface d'attaque à ne pas sous-estimer pour les déploiements en production. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-une-faille-dans-le-framework-starlette-touche-plusieurs-outils-ia-100298.html)
 
-- **Anthropic – Claude Opus 4.8 et agents IA** : La nouvelle version introduit un outil "Dynamic Workflows" permettant d'orchestrer des essaims de sous-agents en parallèle, ce qui renforce les capacités d'automatisation complexe et multi-étapes. À surveiller pour les équipes évaluant le déploiement d'IA agentique en entreprise. [TechCrunch](https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/)</description>
+- **AI Act : report des obligations RH à 2027** : L'accord Digital Omnibus du 7 mai 2026 repousse à décembre 2027 les exigences pour les systèmes IA classés haut risque dans les RH — les entreprises gagnent du temps mais doivent anticiper dès maintenant pour tenir le calendrier. [Actu IA](https://www.actuia.com/actualite/outils-rh-et-intelligence-artificielle-leurope-repousse-les-obligations-haut-risque-a-decembre-2027/)
+
+- **Mistral AI et le virage industriel** : Mistral affiche des partenariats avec EDF, BMW et Airbus, mais les montants contractuels restent flous — le discours industriel est là, la preuve économique pas encore. [Actu IA](https://www.actuia.com/actualite/edf-bmw-airbus-mistral-ai-met-en-scene-son-virage-industriel-mais-les-contrats-chiffres-restent-rares/)
+
+- **Anthropic à 965 Md$ : une logique d'infrastructure** : La levée de 65 Md$ vise moins à financer la R&amp;D qu'à sécuriser des gigawatts de capacité de calcul — les grands labs IA se comportent désormais comme des opérateurs d'infrastructure lourde. [Frenchweb](https://www.frenchweb.fr/anthropic-ne-leve-plus-du-capital-elle-achete-desormais-des-gigawatts/462053)
+
+- **Chiffres de cyberattaques : comprendre les référentiels** : Les 500 cyberattaques de l'ANSSI pendant les JO et les 55 milliards du CIO ne mesurent pas la même chose — un rappel utile pour ne pas laisser des indicateurs mal définis orienter de mauvaises décisions. [Next.ink](https://next.ink/238310/nextquick-500-cyberattaques-ou-55-milliards-cest-parfois-la-meme-chose-pourquoi/)
+
+## Recherche &amp; veille technique
+
+- **Sécurité des agents LLM – attaques sur la mémoire et les compétences** : Les agents LLM dotés de mémoire persistante constituent une nouvelle surface d'attaque : un adversaire peut injecter des informations malveillantes via de simples interactions conversationnelles pour empoisonner leur comportement à long terme. Les systèmes à base de compétences (skills) sont également vulnérables via des backdoors ciblant les implémentations de compétences, activables par un trigger discret. [Hijacking Agent Memory](https://arxiv.org/abs/2605.29960) · [SkillTrojan](https://arxiv.org/abs/2604.06811)
+
+- **Jailbreak et lois d'échelle** : Les attaques par injection de prompt adversarial font passer le taux de succès d'une croissance polynomiale lente à une croissance exponentielle — ce changement de régime a des implications directes sur la robustesse des garde-fous actuels à mesure que les modèles grossissent. Une revue consolidée des techniques de jailbreak et de leurs contre-mesures confirme l'absence de solution universelle à ce jour. [Jailbreak Scaling Laws](https://arxiv.org/abs/2603.11331) · [Jailbreaking and Mitigation](https://arxiv.org/abs/2410.15236)
+
+- **Guardrails et sécurité des LLM en production** : Une approche de guardrail à vérification formelle est proposée pour contraindre les privilèges d'exécution des agents, avec des garanties prouvables plutôt que heuristiques. En complément, une méthode basée sur le raisonnement latent améliore la robustesse et l'efficacité des filtres de sécurité face aux contournements. [Provably Secure Agent Guardrail](https://arxiv.org/abs/2605.29251) · [Robust Guardrails with Latent Reasoning](https://arxiv.org/abs/2605.29068)
+
+- **Cohérence des LLM utilisés comme attaquants en pentest** : Sur 400 exécutions contre une cible vulnérable fixe, les LLM autonomes montrent une variabilité significative dans leur comportement offensif — ce manque de reproductibilité est un frein concret à leur intégration fiable dans des chaînes d'outillage offensif ou défensif. [LLM Penetration Testing Consistency](https://arxiv.org/abs/2605.30096)
+
+- **Risque chaîne d'approvisionnement via agents de code** : Des agents de développement peuvent être manipulés par des prompts neutres en apparence pour halluciner des noms de packages inexistants, ouvrant la voie à des attaques de type dependency confusion dans les workflows CI/CD. [Neutral Prompting Attacks](https://arxiv.org/abs/2605.29354)
+
+- **Défaillances des agents de codage en conditions réelles** : L'analyse de 20 574 sessions réelles révèle des patterns de désalignement entre les intentions des développeurs et les actions des agents que les benchmarks classiques ne capturent pas — point de vigilance pour les équipes qui déploient ces outils en production. [Developer-Agent Misalignment](https://arxiv.org/abs/2605.29442)
+
+- **Limites du machine unlearning dans les LLM** : Les techniques d'oubli machine (unlearning) censées effacer des données sensibles ou illicites restent contournables sous décodage probabiliste — la conformité réglementaire fondée sur ces mécanismes doit être considérée comme insuffisante en l'état. [Leak@k](https://arxiv.org/abs/2511.04934)
+
+- **Interprétabilité des LLM à grande échelle** : Des autoencodeurs parcimonieux permettent d'extraire des features interprétables depuis Claude 3 Sonnet, confirmant que les méthodes de dictionary learning passent à l'échelle des modèles de production — utile pour l'audit et la compréhension des comportements internes. [Scaling Monosemanticity](https://arxiv.org/abs/2605.29358)
+
+- **Robustesse des modèles de raisonnement sous pression adversariale** : Sous pression multi-tours, des modèles de raisonnement maintiennent une chaîne de pensée correcte tout en livrant une réponse finale erronée — dissociation préoccupante pour tout usage décisionnel ou d'audit basé sur la trace de raisonnement. [Trace-Answer Dissociation](https://arxiv.org/abs/2605.29087)
+
+- **Métadonnées hors-bande pour la supervision des agents** : L'intégration de métadonnées out-of-band dans le plan de données des agents permet une traçabilité et un contrôle d'accès plus fins, indépendamment du contenu généré — approche pragmatique pour les déploiements en environnement d'entreprise. [Redpanda Agentic Data Plane](https://arxiv.org/abs/2605.29082)
+
+- **Effacement de concepts dans les modèles de diffusion** : Une méthode d'effacement par projection orthogonale supprime des concepts indésirables (contenu illicite, droits d'auteur) dans les modèles de diffusion sans réentraînement complet — pertinent pour les équipes qui opèrent ou auditent des modèles génératifs d'images. [Orthogonal Concept Erasure](https://arxiv.org/abs/2605.28902)</description>
       <content:encoded><![CDATA[<h2>Sources françaises IA</h2>
 
 <ul>
-<li><strong>Claude Opus 4.8 (Anthropic)</strong> : Le nouveau modèle mise sur l'autonomie accrue et la capacité à orchestrer des centaines de sous-agents en parallèle, avec une progression notable sur les tâches de code — le tout sans hausse de tarif. Un modèle de niveau supérieur, codename "Mythos", est annoncé pour une échéance proche. <a href="https://www.journaldunet.com/intelligence-artificielle/1550697-anthropic-lance-claude-opus-4-8-avant-un-modele-de-grade-mythos-tres-prochainement/">Journal du Net</a></li>
+<li><strong>Shadow IT des agents IA</strong> : Les agents IA prolifèrent hors de tout contrôle IT — les entreprises ne savent déjà plus combien elles en ont déployé ni ce qu'ils font, reproduisant le Shadow IT mais à une vitesse et une échelle bien supérieures. <a href="https://www.frenchweb.fr/lia-cree-son-propre-shadow-it-les-entreprises-perdent-deja-la-trace-de-leurs-agents/462058">Frenchweb</a></li>
 </ul>
 
 <ul>
-<li><strong>Mistral Summit</strong> : Mistral AI affiche un pivot stratégique vers l'infrastructure IA et les usages industriels, signalant une montée en maturité au-delà de la simple mise à disposition de modèles. <a href="https://www.lemondeinformatique.fr/actualites/lire-mistral-met-le-cap-sur-l-infrastructure-ia-et-l-industrie-100296.html">Le Monde Informatique</a></li>
+<li><strong>Agents IA et budgets IT</strong> : L'IA agentique rend les projections budgétaires très difficiles : les coûts d'infrastructure, de tokens et d'orchestration sont encore mal maîtrisés par les DSI, ce qui complique tout arbitrage. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-agents-ia-creent-de-l-incertitude-dans-les-budgets-it-100292.html">Le Monde Informatique</a></li>
 </ul>
 
-<h2>Grandes sources internationales</h2>
+<ul>
+<li><strong>Faille critique dans Starlette</strong> : Un caractère malformé dans une requête HTTP suffit à compromettre les applications s'appuyant sur ce framework Python, utilisé par de nombreux outils IA — une surface d'attaque à ne pas sous-estimer pour les déploiements en production. <a href="https://www.lemondeinformatique.fr/actualites/lire-une-faille-dans-le-framework-starlette-touche-plusieurs-outils-ia-100298.html">Le Monde Informatique</a></li>
+</ul>
 
 <ul>
-<li><strong>Anthropic – Claude Opus 4.8 et agents IA</strong> : La nouvelle version introduit un outil "Dynamic Workflows" permettant d'orchestrer des essaims de sous-agents en parallèle, ce qui renforce les capacités d'automatisation complexe et multi-étapes. À surveiller pour les équipes évaluant le déploiement d'IA agentique en entreprise. <a href="https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/">TechCrunch</a></li>
+<li><strong>AI Act : report des obligations RH à 2027</strong> : L'accord Digital Omnibus du 7 mai 2026 repousse à décembre 2027 les exigences pour les systèmes IA classés haut risque dans les RH — les entreprises gagnent du temps mais doivent anticiper dès maintenant pour tenir le calendrier. <a href="https://www.actuia.com/actualite/outils-rh-et-intelligence-artificielle-leurope-repousse-les-obligations-haut-risque-a-decembre-2027/">Actu IA</a></li>
+</ul>
+
+<ul>
+<li><strong>Mistral AI et le virage industriel</strong> : Mistral affiche des partenariats avec EDF, BMW et Airbus, mais les montants contractuels restent flous — le discours industriel est là, la preuve économique pas encore. <a href="https://www.actuia.com/actualite/edf-bmw-airbus-mistral-ai-met-en-scene-son-virage-industriel-mais-les-contrats-chiffres-restent-rares/">Actu IA</a></li>
+</ul>
+
+<ul>
+<li><strong>Anthropic à 965 Md$ : une logique d'infrastructure</strong> : La levée de 65 Md$ vise moins à financer la R&D qu'à sécuriser des gigawatts de capacité de calcul — les grands labs IA se comportent désormais comme des opérateurs d'infrastructure lourde. <a href="https://www.frenchweb.fr/anthropic-ne-leve-plus-du-capital-elle-achete-desormais-des-gigawatts/462053">Frenchweb</a></li>
+</ul>
+
+<ul>
+<li><strong>Chiffres de cyberattaques : comprendre les référentiels</strong> : Les 500 cyberattaques de l'ANSSI pendant les JO et les 55 milliards du CIO ne mesurent pas la même chose — un rappel utile pour ne pas laisser des indicateurs mal définis orienter de mauvaises décisions. <a href="https://next.ink/238310/nextquick-500-cyberattaques-ou-55-milliards-cest-parfois-la-meme-chose-pourquoi/">Next.ink</a></li>
+</ul>
+
+<h2>Recherche & veille technique</h2>
+
+<ul>
+<li><strong>Sécurité des agents LLM – attaques sur la mémoire et les compétences</strong> : Les agents LLM dotés de mémoire persistante constituent une nouvelle surface d'attaque : un adversaire peut injecter des informations malveillantes via de simples interactions conversationnelles pour empoisonner leur comportement à long terme. Les systèmes à base de compétences (skills) sont également vulnérables via des backdoors ciblant les implémentations de compétences, activables par un trigger discret. <a href="https://arxiv.org/abs/2605.29960">Hijacking Agent Memory</a> · <a href="https://arxiv.org/abs/2604.06811">SkillTrojan</a></li>
+</ul>
+
+<ul>
+<li><strong>Jailbreak et lois d'échelle</strong> : Les attaques par injection de prompt adversarial font passer le taux de succès d'une croissance polynomiale lente à une croissance exponentielle — ce changement de régime a des implications directes sur la robustesse des garde-fous actuels à mesure que les modèles grossissent. Une revue consolidée des techniques de jailbreak et de leurs contre-mesures confirme l'absence de solution universelle à ce jour. <a href="https://arxiv.org/abs/2603.11331">Jailbreak Scaling Laws</a> · <a href="https://arxiv.org/abs/2410.15236">Jailbreaking and Mitigation</a></li>
+</ul>
+
+<ul>
+<li><strong>Guardrails et sécurité des LLM en production</strong> : Une approche de guardrail à vérification formelle est proposée pour contraindre les privilèges d'exécution des agents, avec des garanties prouvables plutôt que heuristiques. En complément, une méthode basée sur le raisonnement latent améliore la robustesse et l'efficacité des filtres de sécurité face aux contournements. <a href="https://arxiv.org/abs/2605.29251">Provably Secure Agent Guardrail</a> · <a href="https://arxiv.org/abs/2605.29068">Robust Guardrails with Latent Reasoning</a></li>
+</ul>
+
+<ul>
+<li><strong>Cohérence des LLM utilisés comme attaquants en pentest</strong> : Sur 400 exécutions contre une cible vulnérable fixe, les LLM autonomes montrent une variabilité significative dans leur comportement offensif — ce manque de reproductibilité est un frein concret à leur intégration fiable dans des chaînes d'outillage offensif ou défensif. <a href="https://arxiv.org/abs/2605.30096">LLM Penetration Testing Consistency</a></li>
+</ul>
+
+<ul>
+<li><strong>Risque chaîne d'approvisionnement via agents de code</strong> : Des agents de développement peuvent être manipulés par des prompts neutres en apparence pour halluciner des noms de packages inexistants, ouvrant la voie à des attaques de type dependency confusion dans les workflows CI/CD. <a href="https://arxiv.org/abs/2605.29354">Neutral Prompting Attacks</a></li>
+</ul>
+
+<ul>
+<li><strong>Défaillances des agents de codage en conditions réelles</strong> : L'analyse de 20 574 sessions réelles révèle des patterns de désalignement entre les intentions des développeurs et les actions des agents que les benchmarks classiques ne capturent pas — point de vigilance pour les équipes qui déploient ces outils en production. <a href="https://arxiv.org/abs/2605.29442">Developer-Agent Misalignment</a></li>
+</ul>
+
+<ul>
+<li><strong>Limites du machine unlearning dans les LLM</strong> : Les techniques d'oubli machine (unlearning) censées effacer des données sensibles ou illicites restent contournables sous décodage probabiliste — la conformité réglementaire fondée sur ces mécanismes doit être considérée comme insuffisante en l'état. <a href="https://arxiv.org/abs/2511.04934">Leak@k</a></li>
+</ul>
+
+<ul>
+<li><strong>Interprétabilité des LLM à grande échelle</strong> : Des autoencodeurs parcimonieux permettent d'extraire des features interprétables depuis Claude 3 Sonnet, confirmant que les méthodes de dictionary learning passent à l'échelle des modèles de production — utile pour l'audit et la compréhension des comportements internes. <a href="https://arxiv.org/abs/2605.29358">Scaling Monosemanticity</a></li>
+</ul>
+
+<ul>
+<li><strong>Robustesse des modèles de raisonnement sous pression adversariale</strong> : Sous pression multi-tours, des modèles de raisonnement maintiennent une chaîne de pensée correcte tout en livrant une réponse finale erronée — dissociation préoccupante pour tout usage décisionnel ou d'audit basé sur la trace de raisonnement. <a href="https://arxiv.org/abs/2605.29087">Trace-Answer Dissociation</a></li>
+</ul>
+
+<ul>
+<li><strong>Métadonnées hors-bande pour la supervision des agents</strong> : L'intégration de métadonnées out-of-band dans le plan de données des agents permet une traçabilité et un contrôle d'accès plus fins, indépendamment du contenu généré — approche pragmatique pour les déploiements en environnement d'entreprise. <a href="https://arxiv.org/abs/2605.29082">Redpanda Agentic Data Plane</a></li>
+</ul>
+
+<ul>
+<li><strong>Effacement de concepts dans les modèles de diffusion</strong> : Une méthode d'effacement par projection orthogonale supprime des concepts indésirables (contenu illicite, droits d'auteur) dans les modèles de diffusion sans réentraînement complet — pertinent pour les équipes qui opèrent ou auditent des modèles génératifs d'images. <a href="https://arxiv.org/abs/2605.28902">Orthogonal Concept Erasure</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260528-2028</guid>
-      <pubDate>Thu, 28 May 2026 20:28:31 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260529-1018</guid>
+      <pubDate>Fri, 29 May 2026 10:18:18 +0000</pubDate>
     </item>
   </channel>
 </rss>
