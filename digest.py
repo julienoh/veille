@@ -66,8 +66,8 @@ SEEN_RETENTION_DAYS = 14           # Fenêtre de déduplication. Au-delà, l'ent
 # Provider "anthropic/" → SDK Anthropic direct (clé ANTHROPIC_API_KEY).
 # Provider "openrouter/" → SDK OpenAI sur https://openrouter.ai/api/v1 (clé OPENROUTER_API_KEY).
 # On peut mixer les deux providers entre phase de filtrage et phase de synthèse.
-FILTERING_MODEL = "anthropic/claude-haiku-4-5-20251001"  # Phases 1 et 2 (scoring + dédup)
-SYNTHESIS_MODEL = "anthropic/claude-sonnet-4-6"          # Phase 3 (synthèse éditoriale)
+FILTERING_MODEL = "openrouter/deepseek/deepseek-v4-flash"  # Phases 1 et 2 (scoring + dédup)
+SYNTHESIS_MODEL = "openrouter/deepseek/deepseek-v4-pro"    # Phase 3 (synthèse éditoriale)
 
 # ---- OPML parsing ------------------------------------------------------------
 
