@@ -52,7 +52,7 @@ OUTPUT_FILE = "output/digest.xml"    # Flux RSS généré, servi par GitHub Page
 DIGEST_URL = "https://julienoh.github.io/veille/digest.xml"  # URL publique du flux
 
 # Comportement du pipeline
-LOOKBACK_HOURS = 8                 # Fenêtre temporelle des articles à considérer.
+LOOKBACK_HOURS = 48                # Fenêtre temporelle des articles à considérer.
                                    # Les 3 runs/jour (8h d'écart) se recouvrent
                                    # légèrement → pas de trou en cas de retard cron.
 ACCEPTED_DECISIONS = {"read_now", "read_later"}  # Décisions qui passent dans le digest.
