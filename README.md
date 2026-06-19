@@ -124,7 +124,12 @@ veille/
 │       └── digest.yml        # Workflow GitHub Actions (cron + deploy)
 ├── output/
 │   └── digest.xml            # Flux RSS généré, commité + servi par Pages
-├── digest.py                 # Pipeline complet (load, fetch, score, dédup, synth)
+├── logs/
+│   ├── audit-details.md      # Détail par article (score ≥ 3), 30 derniers jours
+│   ├── audit-summary.md      # Synthèse compteurs par run, 30 derniers jours
+│   └── audit-errors.md       # Erreurs survenues par run, 30 derniers jours
+├── digest.py                 # Pipeline complet (load, fetch, score, dédup, synth, audit)
+├── audit.py                  # Logs Markdown des 3 phases (cf. §6 Logs d'audit)
 ├── llm_client.py             # Mini-abstraction LLM (route anthropic/ vs openrouter/)
 ├── prompt.py                 # Prompts LLM isolés (itérables indépendamment du code)
 ├── requirements.txt          # feedparser, feedgen, anthropic, openai, httpx
@@ -156,6 +161,10 @@ La fenêtre glissante de `SEEN_RETENTION_DAYS` évite la croissance infinie.
 
 **`digest.yml`** : workflow GitHub Actions. Trois déclencheurs : cron 3x/jour,
 `workflow_dispatch` (bouton manuel), push sur main.
+
+**`audit.py`** : trois logs Markdown persistés sous `logs/` à chaque run.
+Permet de tracer le scoring article-par-article, les compteurs globaux et
+les erreurs. Sémantique et format documentés dans §6 Logs d'audit.
 
 ---
 
@@ -403,6 +412,83 @@ la dernière version stable de chaque action sur leur repo GitHub respectif.
 Vérifier les premiers jours sur le portail du fournisseur LLM que la
 consommation correspond aux estimations. Signe d'alerte : ×3 sur le volume
 attendu = probable bug de boucle ou prompt qui retourne du texte trop long.
+
+### Logs d'audit
+
+Trois fichiers Markdown sont écrits sous `logs/` à chaque run, avec rétention
+glissante 30 jours. Tous append en bas — le run le plus récent est en bas du
+fichier. Sémantique de chacun :
+
+#### `logs/audit-summary.md` — vue "santé du pipeline"
+
+Une ligne par run. À consulter en passant pour spotter une anomalie globale.
+
+| Colonne | Sens | Valeur typique |
+|---|---|---|
+| `Date UTC` | Timestamp du run (UTC, sans secondes) | `2026-06-19 18:01 UTC` |
+| `Filtrage` | Modèle LLM utilisé en phases 1 et 2 (slug abrégé) | `dsv4-flash`, `claude-haiku-4-5`, `gpt-5-mini` |
+| `Synthèse` | Modèle LLM utilisé en phase 3 (slug abrégé) | `dsv4-pro`, `claude-sonnet-4-6` |
+| `Trouvés` | Articles frais après filtrage URL/date (hors `seen.json`) | 10-60 |
+| `RN` | Articles décidés `read_now` après dédup | 0-5 |
+| `RL` | Articles décidés `read_later` après dédup | 0-15 |
+| `Arch` | Tout ce qui n'est pas RN/RL (skim, archive, doublons) | majorité |
+| `Dédup` | Articles rétrogradés par la phase 2 | 0-5 |
+| `Err` | Erreurs survenues, cliquable → ouvre `audit-errors.md` | 0 idéalement |
+| `Retenue%` | `(RN + RL) / Trouvés` — taux de retenue | 10-30% |
+
+Signaux d'alerte : `Retenue% > 50%` (prompt trop laxiste ou profil cible trop
+large), `Retenue% < 5%` sur plusieurs runs (sources sèches ou prompt trop
+strict), `Err > 10%` (modèle qui dérive ou bug récent).
+
+#### `logs/audit-details.md` — détail article par article
+
+Un bloc `## Run …` par run, avec un tableau des articles dont le **score
+phase 1 est ≥ 3**. Les scores 1-2 ne sont pas tracés ici (trop volumineux
+et sans valeur pour itérer sur le prompt).
+
+| Colonne | Sens |
+|---|---|
+| `Sc` | Score initial donné par le LLM en phase 1 (1-5), **avant rétrogradation éventuelle** par la phase 2 |
+| `Décision` | Décision **finale** : `read_now`, `read_later`, `skim`, `archive`. Si la phase 2 a rétrogradé en doublon, vaut `archive` |
+| `Tag` | Catégorie thématique : `ia_recherche`, `ia_produit`, `cyber_vuln`, `cyber_strategie`, `dev_tooling`, `business`, `autre` |
+| `Titre` | Titre du feed, cliquable vers l'article (`|` échappés en `\|`) |
+| `Source` | Nom du feed dans l'OPML |
+| `Conf` | Confiance du LLM dans son verdict : `faible`, `moyenne`, `haute` |
+| `Signal` | Critère dominant invoqué : `nouveauté`, `actionabilité`, `fiabilité`, `profondeur`, `urgence`, `hors_périmètre` |
+| `Plafond` | Plafond explicite déclenché (valeurs fermées, cf. table ci-dessous) ou `aucun` |
+| `Raison` | Justification narrative du LLM (max 25 mots). Pour un doublon rétrogradé : `doublon de [N] sujet…` |
+
+Plafonds abrégés utilisés : `levee_de_fonds`, `etude_sponsorisee`,
+`tweet_linkedin`, `roadmap_sans_livrable`, `theo_hors_perimetre`,
+`ia_generique`, `sans_source_primaire`, `resume_vague`, `aucun`.
+
+Tri intra-run : par score décroissant.
+
+#### `logs/audit-errors.md` — journal des erreurs
+
+Un tableau plat. Une ligne par erreur survenue, toutes phases confondues.
+**Aucune ligne pour un run = pipeline sain.**
+
+| Colonne | Sens |
+|---|---|
+| `Date UTC` | Timestamp où l'erreur s'est produite |
+| `Phase` | `fetch` (feed RSS), `scoring` (phase 1), `dedup` (phase 2), `synthese` (phase 3) |
+| `Cible` | Nom du feed (`fetch`), titre+source de l'article (`scoring`), nom de catégorie OPML (`dedup`, `synthese`) |
+| `Erreur` | Message traduit lisible (ex: `content=None côté LLM`, `Rate limit fournisseur LLM atteint`, `JSON malformé`) |
+
+Pour le debug profond (stack trace complète), consulter les logs du run
+correspondant sur GitHub Actions.
+
+#### Rétention et purge
+
+Toutes les entrées de plus de 30 jours sont purgées en fin de run par
+`audit.log_run()`. Aucun outil externe à lancer.
+
+#### Cross-link
+
+La cellule `Err` du summary pointe vers le fichier `audit-errors.md`
+(lien vers le fichier, pas vers une ancre précise). Pour retrouver les
+erreurs d'un run particulier : Cmd+F sur la date dans `audit-errors.md`.
 
 ---
 

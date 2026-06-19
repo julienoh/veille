@@ -38,6 +38,7 @@ from pathlib import Path
 import feedparser
 from feedgen.feed import FeedGenerator
 
+import audit
 from llm_client import complete
 from prompt import SCORING_PROMPT, DEDUP_PROMPT, SYNTHESIS_PROMPT
 
@@ -152,7 +153,7 @@ def fetch_recent_articles(sources: list[dict], seen: dict) -> list[dict]:
             parsed = feedparser.parse(src["xmlUrl"])
         except Exception as e:
             # On veut survivre à un feed cassé : log + on passe au suivant.
-            print(f"  ! fetch error {src['title']}: {e}", file=sys.stderr)
+            audit.record_error("fetch", src["title"], e)
             continue
 
         for entry in parsed.entries:
@@ -233,7 +234,8 @@ def score_article(article: dict) -> dict | None:
         }
     except Exception as e:
         # On loggue mais on n'échoue pas le run pour un seul article.
-        print(f"  ! scoring error: {e}", file=sys.stderr)
+        target = f"{article.get('title', '')[:60]} ({article.get('source', '')})"
+        audit.record_error("scoring", target, e)
         return None
 
 # ---- Phase 2 : déduplication par catégorie OPML ------------------------------
@@ -278,7 +280,7 @@ def deduplicate_category(category: str, articles: list[dict]) -> list[dict]:
         data = json.loads(m.group(0))
     except Exception as e:
         # Une erreur de dédup ne doit pas faire planter le run : on garde tout.
-        print(f"  ! dedup error pour {category}: {e}", file=sys.stderr)
+        audit.record_error("dedup", category, e)
         return articles
 
     groupes = data.get("groupes", [])
@@ -309,13 +311,17 @@ def synthesize(category: str, articles: list[dict]) -> str:
     Un appel par catégorie OPML (vs un appel global) → meilleur regroupement
     thématique et permet d'ajuster le ton par catégorie si besoin via le prompt.
 
+    Une erreur du LLM de synthèse est isolée : on log via audit et on renvoie
+    "" — le caller filtre les sections vides pour ne pas écrire une catégorie
+    cassée dans le RSS. Les autres catégories continuent.
+
     Args:
         category: nom de la catégorie OPML (ex: "Sources françaises IA")
         articles: liste d'articles déjà filtrés et dédupliqués, triés par score
             décroissant.
 
     Returns:
-        Markdown brut, à concaténer ensuite avec les autres sections.
+        Markdown brut, ou "" en cas d'erreur (à filtrer côté caller).
     """
     # Format compact lisible pour le modèle. 300 chars de résumé suffisent
     # ici car le LLM de synthèse n'a pas besoin de tout le contenu.
@@ -324,15 +330,19 @@ def synthesize(category: str, articles: list[dict]) -> str:
         f"  Résumé : {a['summary'][:300]}"
         for a in articles
     )
-    return complete(
-        model=SYNTHESIS_MODEL,
-        max_tokens=2000,  # ~3-4 paragraphes Markdown, large marge
-        prompt=SYNTHESIS_PROMPT.format(
-            category=category,
-            period=f"dernières {LOOKBACK_HOURS}h",
-            articles=articles_txt,
-        ),
-    )
+    try:
+        return complete(
+            model=SYNTHESIS_MODEL,
+            max_tokens=2000,  # ~3-4 paragraphes Markdown, large marge
+            prompt=SYNTHESIS_PROMPT.format(
+                category=category,
+                period=f"dernières {LOOKBACK_HOURS}h",
+                articles=articles_txt,
+            ),
+        )
+    except Exception as e:
+        audit.record_error("synthese", category, e)
+        return ""
 
 # ---- Génération du flux RSS --------------------------------------------------
 
@@ -409,56 +419,83 @@ def md_to_html(md: str) -> str:
 # ---- Main --------------------------------------------------------------------
 
 def main():
-    """Orchestration : charge → fetch → phase 1 → phase 2 → synthèse → RSS + seen.
+    """Orchestration : charge → fetch → phase 1 → phase 2 → synthèse → RSS + audit.
 
     Sortie anticipée si rien à traiter (économise les appels LLM). Dans tous
     les cas où on a appelé la phase 1, on persiste seen.json même si zéro article
     n'est retenu — sinon ces articles seraient re-scorés au run suivant.
+
+    À la fin du run (succès ou sortie anticipée), audit.log_run() est appelé pour
+    écrire les trois fichiers d'audit Markdown sous logs/.
     """
-    print(f"=== Digest run {datetime.now().isoformat()} ===")
+    run_ts = datetime.now(timezone.utc)
+    print(f"=== Digest run {run_ts.isoformat()} ===")
+
+    base_metrics = {
+        "filtering_model": FILTERING_MODEL,
+        "synthesis_model": SYNTHESIS_MODEL,
+    }
 
     sources = load_sources(OPML_FILE)
     print(f"Sources chargées : {len(sources)}")
 
     seen = load_seen()
     articles = fetch_recent_articles(sources, seen)
-    print(f"Articles frais trouvés : {len(articles)}")
+    n_trouves = len(articles)
+    print(f"Articles frais trouvés : {n_trouves}")
 
     if not articles:
         # Cas typique : nuit, week-end, ou cron qui rejoue trop tôt.
+        audit.log_run(run_ts, [], {
+            **base_metrics, "trouves": 0, "read_now": 0, "read_later": 0,
+            "archive": 0, "doublons": 0,
+        })
         print("Rien de neuf, on sort.")
         return
 
     # --- Phase 1 : scoring article par article -------------------------------
     # On marque seen[hash] DÈS l'appel LLM, indépendamment du score retenu —
     # un article scoré 1 ne doit pas être re-scoré au run suivant.
-    print(f"Phase 1 : scoring ({len(articles)} articles)")
-    scored = []
+    # all_scored contient TOUS les articles qui ont eu un scoring réussi (pour
+    # le log d'audit). pipeline ne contient que ceux qui passent ACCEPTED_DECISIONS.
+    print(f"Phase 1 : scoring ({n_trouves} articles)")
+    all_scored: list[dict] = []
+    pipeline: list[dict] = []
     for i, a in enumerate(articles):
         if i % 20 == 0 and i > 0:
-            print(f"  scoring {i}/{len(articles)}")
+            print(f"  scoring {i}/{n_trouves}")
         result = score_article(a)
         seen[a["hash"]] = datetime.now(timezone.utc).isoformat()
-        if result and result["decision"] in ACCEPTED_DECISIONS:
+        if result:
             a.update(result)
-            scored.append(a)
+            # Snapshot du score avant que la phase 2 puisse le rétrograder à 2.
+            # Permet au log d'audit de tracer la décision phase 1 initiale.
+            a["score_phase1"] = a["score"]
+            all_scored.append(a)
+            if a["decision"] in ACCEPTED_DECISIONS:
+                pipeline.append(a)
 
-    print(f"Phase 1 terminée : {len(scored)} articles retenus "
+    print(f"Phase 1 terminée : {len(pipeline)} articles retenus "
           f"(decision ∈ {sorted(ACCEPTED_DECISIONS)})")
 
-    if not scored:
+    if not pipeline:
         # On sauvegarde quand même seen.json pour ne pas re-scorer ces articles.
         save_seen(seen)
+        audit.log_run(run_ts, all_scored, {
+            **base_metrics, "trouves": n_trouves, "read_now": 0, "read_later": 0,
+            "archive": n_trouves, "doublons": 0,
+        })
         print("Rien de pertinent, on sort.")
         return
 
     # --- Regroupement par catégorie OPML -------------------------------------
     by_cat = defaultdict(list)
-    for a in scored:
+    for a in pipeline:
         by_cat[a["category"]].append(a)
 
     # --- Phase 2 : déduplication par catégorie -------------------------------
     print(f"Phase 2 : déduplication ({len(by_cat)} catégories)")
+    n_before_dedup = len(pipeline)
     for cat in list(by_cat.keys()):
         by_cat[cat] = deduplicate_category(cat, by_cat[cat])
         # Tri par score décroissant et cap MAX_ARTICLES_PER_CATEGORY
@@ -467,25 +504,48 @@ def main():
 
     # Une catégorie peut être devenue vide après dédup → on la retire.
     by_cat = {k: v for k, v in by_cat.items() if v}
-    n_final = sum(len(v) for v in by_cat.values())
-    print(f"Phase 2 terminée : {n_final} articles après dédup")
+    n_after_dedup = sum(len(v) for v in by_cat.values())
+    n_doublons = n_before_dedup - n_after_dedup
+    print(f"Phase 2 terminée : {n_after_dedup} articles après dédup "
+          f"({n_doublons} rétrogradé(s))")
+
+    # Recompte final basé sur all_scored (modifié en place par dedup_category).
+    n_rn = sum(1 for a in all_scored if a.get("decision") == "read_now")
+    n_rl = sum(1 for a in all_scored if a.get("decision") == "read_later")
+    metrics = {
+        **base_metrics,
+        "trouves": n_trouves,
+        "read_now": n_rn,
+        "read_later": n_rl,
+        "archive": n_trouves - n_rn - n_rl,
+        "doublons": n_doublons,
+    }
 
     if not by_cat:
         save_seen(seen)
+        audit.log_run(run_ts, all_scored, metrics)
         print("Tout est doublon, on sort.")
         return
 
     # --- Phase 3 : synthèse éditoriale ---------------------------------------
+    # Une catégorie qui plante en synthèse retourne "" → on la skip dans le RSS.
+    # Les autres catégories continuent. Si tout plante, on n'écrit pas le RSS.
     print(f"Phase 3 : synthèse ({len(by_cat)} catégories)")
     sections = {}
     for cat, items in by_cat.items():
         print(f"  synthèse {cat} ({len(items)} articles)")
-        sections[cat] = synthesize(cat, items)
+        result = synthesize(cat, items)
+        if result:
+            sections[cat] = result
 
-    # Persistance finale : RSS d'abord, puis seen (cohérence de l'état si crash).
-    write_rss(sections)
+    if sections:
+        write_rss(sections)
+        print(f"✓ Digest écrit dans {OUTPUT_FILE}")
+    else:
+        print("! Toutes les synthèses ont échoué — RSS non mis à jour pour ce run.")
+
     save_seen(seen)
-    print(f"✓ Digest écrit dans {OUTPUT_FILE}")
+    audit.log_run(run_ts, all_scored, metrics)
 
 if __name__ == "__main__":
     main()
