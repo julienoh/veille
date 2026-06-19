@@ -1,24 +1,27 @@
-"""Pipeline de curation RSS : OPML → fetch → scoring Haiku → synthèse Sonnet → RSS.
+"""Pipeline de curation RSS : OPML → fetch → filtrage (2 phases) → synthèse → RSS.
 
 Vue d'ensemble du flux (un run = une exécution déclenchée par GitHub Actions) :
 
     1. load_sources()           Lit sources.opml et retourne la liste des feeds
     2. fetch_recent_articles()  feedparser sur chaque feed, filtre par date
                                 (LOOKBACK_HOURS) et déduplication via seen.json
-    3. score_article()          Appel Haiku par article → JSON {score, tag, raison}
-                                Filtre les articles dont score >= MIN_SCORE
-    4. synthesize()             Appel Sonnet par catégorie OPML → Markdown éditorial
-    5. write_rss()              Génère output/digest.xml (1 item RSS contenant
+    3. score_article()          Phase 1 : un appel LLM de filtrage par article
+                                → JSON enrichi (score, decision, tag, confiance…)
+    4. deduplicate_category()   Phase 2 : un appel LLM de filtrage par catégorie
+                                → rétrograde les doublons en decision=archive
+    5. synthesize()             Appel LLM de synthèse par catégorie OPML
+                                → Markdown éditorial
+    6. write_rss()              Génère output/digest.xml (1 item RSS contenant
                                 toutes les sections concaténées)
-    6. save_seen()              Persiste seen.json avec rétention SEEN_RETENTION_DAYS
+    7. save_seen()              Persiste seen.json avec rétention SEEN_RETENTION_DAYS
 
 Effets de bord persistés (commités dans le repo par le workflow Actions) :
 - output/digest.xml  : le flux servi par GitHub Pages
 - seen.json          : dictionnaire {hash: date_iso} des articles déjà traités
 
 Tous les paramètres ajustables sont regroupés dans la section Configuration ci-dessous.
-Les deux prompts Claude vivent dans prompt.py pour pouvoir itérer dessus
-indépendamment du code (historique git séparé).
+Les prompts LLM vivent dans prompt.py pour pouvoir itérer dessus indépendamment
+du code (historique git séparé).
 """
 
 import hashlib
@@ -36,32 +39,34 @@ import feedparser
 from anthropic import Anthropic
 from feedgen.feed import FeedGenerator
 
-from prompt import SCORING_PROMPT, SYNTHESIS_PROMPT
+from prompt import SCORING_PROMPT, DEDUP_PROMPT, SYNTHESIS_PROMPT
 
 # ---- Configuration -----------------------------------------------------------
 # Tous les paramètres ajustables du pipeline sont regroupés ici.
-# Voir README.md §6 "Paramètres de tuning" pour la sémantique de chacun.
+# Voir README.md §5 "Paramètres de tuning" pour la sémantique de chacun.
 
 # Chemins (relatifs au cwd, qui est la racine du repo en CI comme en local)
-OPML_FILE = "sources.opml"           # Source de vérité des feeds (53 sources)
+OPML_FILE = "sources.opml"           # Source de vérité des feeds
 SEEN_FILE = "seen.json"              # Dédoublonnage persistant {hash: iso_date}
 OUTPUT_FILE = "output/digest.xml"    # Flux RSS généré, servi par GitHub Pages
 DIGEST_URL = "https://julienoh.github.io/veille/digest.xml"  # URL publique du flux
 
 # Comportement du pipeline
-LOOKBACK_HOURS = 8                # Fenêtre temporelle des articles à considérer.
-                                  # Les 3 runs/jour (8h d'écart) se recouvrent
-                                  # légèrement → pas de trou en cas de retard cron.
-MIN_SCORE = 3                     # Seuil de pertinence Haiku (1-5). Tout article
-                                  # scoré < MIN_SCORE est jeté avant la synthèse.
-MAX_ARTICLES_PER_CATEGORY = 20    # Garde-fou contre les pics de volume (ex: arXiv)
-                                  # qui exploseraient la facture Sonnet.
-SEEN_RETENTION_DAYS = 14          # Fenêtre de déduplication. Au-delà, l'entrée
-                                  # est purgée → un article peut réapparaître après.
+LOOKBACK_HOURS = 8                 # Fenêtre temporelle des articles à considérer.
+                                   # Les 3 runs/jour (8h d'écart) se recouvrent
+                                   # légèrement → pas de trou en cas de retard cron.
+ACCEPTED_DECISIONS = {"read_now", "read_later"}  # Décisions qui passent dans le digest.
+                                                 # "skim" et "archive" sont écartés.
+MAX_ARTICLES_PER_CATEGORY = 20     # Garde-fou contre les pics de volume (ex: arXiv)
+                                   # qui exploseraient la facture du LLM de synthèse.
+SEEN_RETENTION_DAYS = 14           # Fenêtre de déduplication. Au-delà, l'entrée
+                                   # est purgée → un article peut réapparaître après.
 
-# Modèles Claude utilisés. Mettre à jour quand Anthropic publie de nouvelles versions.
-HAIKU_MODEL = "claude-haiku-4-5-20251001"   # Scoring (tâche simple, JSON court)
-SONNET_MODEL = "claude-sonnet-4-6"          # Synthèse éditoriale (nuance, ton)
+# LLMs utilisés. Le projet est agnostique du fournisseur côté doc, mais l'implémentation
+# actuelle s'appuie sur le SDK Anthropic. Pour changer de fournisseur, adapter ce client
+# et les appels client.messages.create() ci-dessous.
+FILTERING_MODEL = "claude-haiku-4-5-20251001"  # Phases 1 et 2 (scoring + dédup)
+SYNTHESIS_MODEL = "claude-sonnet-4-6"          # Phase 3 (synthèse éditoriale)
 
 # Le SDK lit ANTHROPIC_API_KEY depuis l'environnement.
 # En CI : injecté via GitHub Secrets. En local : export shell.
@@ -95,7 +100,7 @@ def load_sources(opml_path: str) -> list[dict]:
 
 # ---- Seen storage (dedup) ----------------------------------------------------
 # seen.json est commité dans le repo à chaque run par le workflow Actions
-# (avec [skip ci] pour éviter une boucle de déclenchement). Cf. README §10.
+# (avec [skip ci] pour éviter une boucle de déclenchement).
 
 def load_seen() -> dict:
     """Charge seen.json. Renvoie un dict vide au premier run."""
@@ -171,7 +176,7 @@ def fetch_recent_articles(sources: list[dict], seen: dict) -> list[dict]:
                 continue
 
             # Nettoyage du résumé : strip HTML basique + collapse whitespace.
-            # Limité à 800 chars car (a) on n'envoie que 400 à Haiku derrière,
+            # Limité à 800 chars car (a) on n'envoie que 400 au LLM de filtrage,
             # (b) certains feeds renvoient l'article complet en summary.
             summary = entry.get("summary") or entry.get("description") or ""
             summary = re.sub(r"<[^>]+>", " ", summary)
@@ -189,71 +194,149 @@ def fetch_recent_articles(sources: list[dict], seen: dict) -> list[dict]:
 
     return articles
 
-# ---- Scoring avec Haiku ------------------------------------------------------
+# ---- Phase 1 : scoring article par article -----------------------------------
 
 def score_article(article: dict) -> dict | None:
-    """Demande à Haiku un score 1-5 et un tag thématique pour un article.
+    """Phase 1 : note un article via le LLM de filtrage.
 
-    Le prompt impose un JSON strict {score, tag, raison}. En pratique, le modèle
-    ajoute parfois du texte autour (« Voici le JSON : {...} ») — on extrait le
-    premier objet JSON via regex pour rester robuste.
+    Le prompt impose un JSON enrichi : score, decision, tag, tags_secondaires,
+    confiance, raison, signal_principal, plafond_appliqué. En pratique le modèle
+    ajoute parfois du texte autour — on extrait le premier objet JSON via regex.
 
     Returns:
-        {'score': int, 'tag': str} ou None si l'appel/parse échoue.
+        Dict complet du scoring, ou None si l'appel/parse échoue.
         None est traité par le caller comme "pas retenu" (ne casse pas le run).
     """
     try:
         resp = client.messages.create(
-            model=HAIKU_MODEL,
-            max_tokens=150,  # JSON court → cap bas = filet de sécurité coût/temps
+            model=FILTERING_MODEL,
+            max_tokens=400,  # JSON enrichi mais court → cap large mais raisonnable
             messages=[{
                 "role": "user",
                 "content": SCORING_PROMPT.format(
                     title=article["title"],
                     source=article["source"],
                     # 400 chars suffisent pour décider de la pertinence,
-                    # et limitent la facture Haiku sur 50 articles × 3 runs/j.
+                    # et limitent la facture LLM sur 50 articles × 3 runs/j.
                     summary=article["summary"][:400],
                 ),
             }],
         )
         text = resp.content[0].text.strip()
         # Extraction du premier objet JSON présent dans la réponse.
-        # DOTALL pour matcher les newlines à l'intérieur de l'objet.
         m = re.search(r"\{.*\}", text, re.DOTALL)
         if not m:
             return None
         data = json.loads(m.group(0))
-        return {"score": int(data["score"]), "tag": data.get("tag", "autre")}
+        return {
+            "score": int(data["score"]),
+            "decision": data.get("decision", "archive"),
+            "tag": data.get("tag", "autre"),
+            "tags_secondaires": data.get("tags_secondaires", []),
+            "confiance": data.get("confiance", "faible"),
+            "raison": data.get("raison", ""),
+            "signal_principal": data.get("signal_principal", ""),
+            "plafond_applique": data.get("plafond_appliqué", "aucun"),
+        }
     except Exception as e:
         # On loggue mais on n'échoue pas le run pour un seul article.
         print(f"  ! scoring error: {e}", file=sys.stderr)
         return None
 
-# ---- Synthèse avec Sonnet ----------------------------------------------------
+# ---- Phase 2 : déduplication par catégorie OPML ------------------------------
+
+def deduplicate_category(category: str, articles: list[dict]) -> list[dict]:
+    """Phase 2 : élimine les doublons sémantiques au sein d'une catégorie.
+
+    Un seul appel LLM par catégorie : on lui envoie tous les articles 3-5
+    de la catégorie, il retourne des clusters de doublons. Pour chaque cluster,
+    les articles non-canoniques sont rétrogradés en decision=archive et score=2.
+
+    Args:
+        category: nom de la catégorie OPML.
+        articles: liste d'articles déjà filtrés (decision in ACCEPTED_DECISIONS).
+
+    Returns:
+        Liste filtrée : articles uniques + canoniques retenus pour la synthèse.
+    """
+    if len(articles) < 2:
+        # Aucun doublon possible.
+        return articles
+
+    # Format compact indexé pour le LLM. 200 chars de résumé suffisent
+    # pour décider si deux articles parlent du même sujet.
+    articles_txt = "\n".join(
+        f"[{i}] {a['title']} | {a['source']} | {a['summary'][:200]}"
+        for i, a in enumerate(articles)
+    )
+
+    try:
+        resp = client.messages.create(
+            model=FILTERING_MODEL,
+            max_tokens=800,  # Liste de clusters, format compact
+            messages=[{
+                "role": "user",
+                "content": DEDUP_PROMPT.format(
+                    category=category,
+                    articles=articles_txt,
+                ),
+            }],
+        )
+        text = resp.content[0].text.strip()
+        m = re.search(r"\{.*\}", text, re.DOTALL)
+        if not m:
+            return articles
+        data = json.loads(m.group(0))
+    except Exception as e:
+        # Une erreur de dédup ne doit pas faire planter le run : on garde tout.
+        print(f"  ! dedup error pour {category}: {e}", file=sys.stderr)
+        return articles
+
+    groupes = data.get("groupes", [])
+    n_demoted = 0
+    for g in groupes:
+        canonical = g.get("canonical_id")
+        sujet = g.get("sujet", "")
+        for idx in g.get("ids", []):
+            # Sécurité : index hors borne ou canonique → on ne touche pas.
+            if idx == canonical or not (0 <= idx < len(articles)):
+                continue
+            articles[idx]["decision"] = "archive"
+            articles[idx]["score"] = 2
+            articles[idx]["raison"] = f"doublon de [{canonical}] {sujet}"[:120]
+            n_demoted += 1
+
+    if n_demoted:
+        print(f"    dédup {category} : {n_demoted} doublon(s) rétrogradé(s)")
+
+    # Filtre final : on ne garde que ce qui passe encore la décision attendue.
+    return [a for a in articles if a.get("decision") in ACCEPTED_DECISIONS]
+
+# ---- Phase 3 : synthèse éditoriale --------------------------------------------
 
 def synthesize(category: str, articles: list[dict]) -> str:
-    """Demande à Sonnet une synthèse Markdown éditoriale d'une catégorie.
+    """Demande au LLM de synthèse un Markdown éditorial pour une catégorie.
 
     Un appel par catégorie OPML (vs un appel global) → meilleur regroupement
     thématique et permet d'ajuster le ton par catégorie si besoin via le prompt.
 
     Args:
         category: nom de la catégorie OPML (ex: "Sources françaises IA")
-        articles: liste d'articles déjà filtrés et triés par score décroissant
+        articles: liste d'articles déjà filtrés et dédupliqués, triés par score
+            décroissant.
 
     Returns:
         Markdown brut, à concaténer ensuite avec les autres sections.
     """
     # Format compact lisible pour le modèle. 300 chars de résumé suffisent
-    # ici car Sonnet n'a pas besoin de tout le contenu pour synthétiser.
+    # ici car le LLM de synthèse n'a pas besoin de tout le contenu.
     articles_txt = "\n\n".join(
         f"- Titre : {a['title']}\n  Source : {a['source']} ({a['link']})\n"
         f"  Résumé : {a['summary'][:300]}"
         for a in articles
     )
     resp = client.messages.create(
-        model=SONNET_MODEL,
+        model=SYNTHESIS_MODEL,
         max_tokens=2000,  # ~3-4 paragraphes Markdown, large marge
         messages=[{
             "role": "user",
@@ -271,8 +354,8 @@ def synthesize(category: str, articles: list[dict]) -> str:
 def write_rss(sections: dict[str, str]) -> None:
     """Génère output/digest.xml avec UN SEUL item contenant tout le digest.
 
-    Choix éditorial (cf. README §10) : on veut un format "bulletin" — Reeder
-    affiche "1 nouveau bulletin" 3x/jour, plutôt qu'une liste de N items
+    Choix éditorial : on veut un format "bulletin" — Reeder affiche
+    "1 nouveau bulletin" 3x/jour, plutôt qu'une liste de N items
     atomiques à marquer lus un par un.
 
     Args:
@@ -282,7 +365,7 @@ def write_rss(sections: dict[str, str]) -> None:
     fg.id(DIGEST_URL)
     fg.title("Veille IA & Cyber — Digest perso")
     fg.link(href=DIGEST_URL, rel="self")
-    fg.description("Digest IA et cybersécurité généré par Claude")
+    fg.description("Digest IA et cybersécurité généré par LLM")
     fg.language("fr")
 
     now = datetime.now(timezone.utc)
@@ -341,10 +424,10 @@ def md_to_html(md: str) -> str:
 # ---- Main --------------------------------------------------------------------
 
 def main():
-    """Orchestration : charge → fetch → score → synthèse → écrit RSS + seen.
+    """Orchestration : charge → fetch → phase 1 → phase 2 → synthèse → RSS + seen.
 
-    Sortie anticipée si rien à traiter (économise les appels API). Dans tous
-    les cas où on a appelé Haiku, on persiste seen.json même si zéro article
+    Sortie anticipée si rien à traiter (économise les appels LLM). Dans tous
+    les cas où on a appelé la phase 1, on persiste seen.json même si zéro article
     n'est retenu — sinon ces articles seraient re-scorés au run suivant.
     """
     print(f"=== Digest run {datetime.now().isoformat()} ===")
@@ -361,19 +444,22 @@ def main():
         print("Rien de neuf, on sort.")
         return
 
-    # Étape de scoring : on marque seen[hash] DÈS l'appel Haiku, indépendamment
-    # du score retenu — un article scoré 1 ne doit pas être rescore au run suivant.
+    # --- Phase 1 : scoring article par article -------------------------------
+    # On marque seen[hash] DÈS l'appel LLM, indépendamment du score retenu —
+    # un article scoré 1 ne doit pas être re-scoré au run suivant.
+    print(f"Phase 1 : scoring ({len(articles)} articles)")
     scored = []
     for i, a in enumerate(articles):
-        if i % 20 == 0:
+        if i % 20 == 0 and i > 0:
             print(f"  scoring {i}/{len(articles)}")
         result = score_article(a)
         seen[a["hash"]] = datetime.now(timezone.utc).isoformat()
-        if result and result["score"] >= MIN_SCORE:
+        if result and result["decision"] in ACCEPTED_DECISIONS:
             a.update(result)
             scored.append(a)
 
-    print(f"Articles retenus (score >= {MIN_SCORE}) : {len(scored)}")
+    print(f"Phase 1 terminée : {len(scored)} articles retenus "
+          f"(decision ∈ {sorted(ACCEPTED_DECISIONS)})")
 
     if not scored:
         # On sauvegarde quand même seen.json pour ne pas re-scorer ces articles.
@@ -381,15 +467,31 @@ def main():
         print("Rien de pertinent, on sort.")
         return
 
-    # Regroupement par catégorie OPML, puis tri par score décroissant
-    # et cap à MAX_ARTICLES_PER_CATEGORY (filet de sécurité coût Sonnet).
+    # --- Regroupement par catégorie OPML -------------------------------------
     by_cat = defaultdict(list)
     for a in scored:
         by_cat[a["category"]].append(a)
-    for cat in by_cat:
+
+    # --- Phase 2 : déduplication par catégorie -------------------------------
+    print(f"Phase 2 : déduplication ({len(by_cat)} catégories)")
+    for cat in list(by_cat.keys()):
+        by_cat[cat] = deduplicate_category(cat, by_cat[cat])
+        # Tri par score décroissant et cap MAX_ARTICLES_PER_CATEGORY
+        # (filet de sécurité coût LLM de synthèse).
         by_cat[cat] = sorted(by_cat[cat], key=lambda x: -x["score"])[:MAX_ARTICLES_PER_CATEGORY]
 
-    # Synthèse : un appel Sonnet par catégorie (séquentiel, ~3-5 appels par run).
+    # Une catégorie peut être devenue vide après dédup → on la retire.
+    by_cat = {k: v for k, v in by_cat.items() if v}
+    n_final = sum(len(v) for v in by_cat.values())
+    print(f"Phase 2 terminée : {n_final} articles après dédup")
+
+    if not by_cat:
+        save_seen(seen)
+        print("Tout est doublon, on sort.")
+        return
+
+    # --- Phase 3 : synthèse éditoriale ---------------------------------------
+    print(f"Phase 3 : synthèse ({len(by_cat)} catégories)")
     sections = {}
     for cat, items in by_cat.items():
         print(f"  synthèse {cat} ({len(items)} articles)")
