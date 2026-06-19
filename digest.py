@@ -36,9 +36,9 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import feedparser
-from anthropic import Anthropic
 from feedgen.feed import FeedGenerator
 
+from llm_client import complete
 from prompt import SCORING_PROMPT, DEDUP_PROMPT, SYNTHESIS_PROMPT
 
 # ---- Configuration -----------------------------------------------------------
@@ -62,15 +62,12 @@ MAX_ARTICLES_PER_CATEGORY = 20     # Garde-fou contre les pics de volume (ex: ar
 SEEN_RETENTION_DAYS = 14           # Fenêtre de déduplication. Au-delà, l'entrée
                                    # est purgée → un article peut réapparaître après.
 
-# LLMs utilisés. Le projet est agnostique du fournisseur côté doc, mais l'implémentation
-# actuelle s'appuie sur le SDK Anthropic. Pour changer de fournisseur, adapter ce client
-# et les appels client.messages.create() ci-dessous.
-FILTERING_MODEL = "claude-haiku-4-5-20251001"  # Phases 1 et 2 (scoring + dédup)
-SYNTHESIS_MODEL = "claude-sonnet-4-6"          # Phase 3 (synthèse éditoriale)
-
-# Le SDK lit ANTHROPIC_API_KEY depuis l'environnement.
-# En CI : injecté via GitHub Secrets. En local : export shell.
-client = Anthropic()
+# LLMs utilisés. Le nom porte le provider en préfixe (cf. llm_client.py).
+# Provider "anthropic/" → SDK Anthropic direct (clé ANTHROPIC_API_KEY).
+# Provider "openrouter/" → SDK OpenAI sur https://openrouter.ai/api/v1 (clé OPENROUTER_API_KEY).
+# On peut mixer les deux providers entre phase de filtrage et phase de synthèse.
+FILTERING_MODEL = "anthropic/claude-haiku-4-5-20251001"  # Phases 1 et 2 (scoring + dédup)
+SYNTHESIS_MODEL = "anthropic/claude-sonnet-4-6"          # Phase 3 (synthèse éditoriale)
 
 # ---- OPML parsing ------------------------------------------------------------
 
@@ -208,21 +205,17 @@ def score_article(article: dict) -> dict | None:
         None est traité par le caller comme "pas retenu" (ne casse pas le run).
     """
     try:
-        resp = client.messages.create(
+        text = complete(
             model=FILTERING_MODEL,
             max_tokens=400,  # JSON enrichi mais court → cap large mais raisonnable
-            messages=[{
-                "role": "user",
-                "content": SCORING_PROMPT.format(
-                    title=article["title"],
-                    source=article["source"],
-                    # 400 chars suffisent pour décider de la pertinence,
-                    # et limitent la facture LLM sur 50 articles × 3 runs/j.
-                    summary=article["summary"][:400],
-                ),
-            }],
+            prompt=SCORING_PROMPT.format(
+                title=article["title"],
+                source=article["source"],
+                # 400 chars suffisent pour décider de la pertinence,
+                # et limitent la facture LLM sur 50 articles × 3 runs/j.
+                summary=article["summary"][:400],
+            ),
         )
-        text = resp.content[0].text.strip()
         # Extraction du premier objet JSON présent dans la réponse.
         m = re.search(r"\{.*\}", text, re.DOTALL)
         if not m:
@@ -271,18 +264,14 @@ def deduplicate_category(category: str, articles: list[dict]) -> list[dict]:
     )
 
     try:
-        resp = client.messages.create(
+        text = complete(
             model=FILTERING_MODEL,
             max_tokens=800,  # Liste de clusters, format compact
-            messages=[{
-                "role": "user",
-                "content": DEDUP_PROMPT.format(
-                    category=category,
-                    articles=articles_txt,
-                ),
-            }],
+            prompt=DEDUP_PROMPT.format(
+                category=category,
+                articles=articles_txt,
+            ),
         )
-        text = resp.content[0].text.strip()
         m = re.search(r"\{.*\}", text, re.DOTALL)
         if not m:
             return articles
@@ -335,19 +324,15 @@ def synthesize(category: str, articles: list[dict]) -> str:
         f"  Résumé : {a['summary'][:300]}"
         for a in articles
     )
-    resp = client.messages.create(
+    return complete(
         model=SYNTHESIS_MODEL,
         max_tokens=2000,  # ~3-4 paragraphes Markdown, large marge
-        messages=[{
-            "role": "user",
-            "content": SYNTHESIS_PROMPT.format(
-                category=category,
-                period=f"dernières {LOOKBACK_HOURS}h",
-                articles=articles_txt,
-            ),
-        }],
+        prompt=SYNTHESIS_PROMPT.format(
+            category=category,
+            period=f"dernières {LOOKBACK_HOURS}h",
+            articles=articles_txt,
+        ),
     )
-    return resp.content[0].text.strip()
 
 # ---- Génération du flux RSS --------------------------------------------------
 

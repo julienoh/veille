@@ -96,8 +96,22 @@ OPML (catégories → feeds)
 | Filtrage (phases 1 et 2) | `FILTERING_MODEL` | Tâche simple de classification, JSON court, volume élevé → modèle économique |
 | Synthèse (phase 3) | `SYNTHESIS_MODEL` | Nuance, regroupement thématique, ton éditorial → modèle plus capable |
 
-Pour changer de fournisseur : adapter le client `Anthropic()` et les appels
-`client.messages.create()` dans `digest.py`.
+### Fournisseurs supportés
+
+L'abstraction `llm_client.py` route les appels selon le préfixe du nom de
+modèle. Deux fournisseurs supportés en natif :
+
+| Préfixe | Fournisseur | Clé API à fournir | Exemple |
+|---|---|---|---|
+| `anthropic/` | Anthropic (SDK natif) | `ANTHROPIC_API_KEY` | `anthropic/claude-haiku-4-5-20251001` |
+| `openrouter/` | OpenRouter (SDK OpenAI, base_url custom) | `OPENROUTER_API_KEY` | `openrouter/openai/gpt-5`, `openrouter/google/gemini-2.5-flash` |
+
+Les deux phases peuvent utiliser des fournisseurs différents (ex : filtrage
+via Anthropic direct pour le caching, synthèse via OpenRouter pour tester
+un autre modèle). Il suffit de définir les variables d'env correspondantes.
+
+Pour ajouter un troisième fournisseur (Mistral direct, Together, etc.),
+étendre `llm_client.py` avec un nouveau préfixe et un client dédié.
 
 ---
 
@@ -111,8 +125,9 @@ veille/
 ├── output/
 │   └── digest.xml            # Flux RSS généré, commité + servi par Pages
 ├── digest.py                 # Pipeline complet (load, fetch, score, dédup, synth)
+├── llm_client.py             # Mini-abstraction LLM (route anthropic/ vs openrouter/)
 ├── prompt.py                 # Prompts LLM isolés (itérables indépendamment du code)
-├── requirements.txt          # feedparser, feedgen, anthropic, httpx
+├── requirements.txt          # feedparser, feedgen, anthropic, openai, httpx
 ├── seen.json                 # Hashes SHA1 des articles traités (fenêtre 14 jours)
 ├── sources.opml              # Sources organisées par catégorie
 ├── LICENSE                   # MIT
@@ -192,9 +207,10 @@ Plusieurs sources de référence n'ont pas de flux RSS direct :
 ### Prérequis
 
 - Compte GitHub gratuit.
-- Compte chez un fournisseur LLM avec clé API (par défaut :
-  [platform.claude.com](https://platform.claude.com) chez Anthropic,
-  ~20$ de crédits suffisent pour 1-2 mois).
+- Compte chez au moins un des fournisseurs LLM supportés :
+  - [platform.claude.com](https://platform.claude.com) (Anthropic)
+  - [openrouter.ai](https://openrouter.ai) (OpenRouter — accès multi-modèles)
+- ~20$ de crédits sur le fournisseur choisi suffisent pour 1-2 mois.
 
 ### Étape 1 — Cloner ou forker ce repo
 
@@ -229,11 +245,16 @@ DIGEST_URL = "https://TON-USER.github.io/NOM-REPO/digest.xml"
 3. Copier la clé immédiatement (affichée une seule fois).
 4. Dans le repo GitHub : **Settings → Secrets and variables → Actions →
    New repository secret**.
-   - Name : `ANTHROPIC_API_KEY` (ou le nom attendu par le SDK utilisé).
+   - Pour Anthropic : `ANTHROPIC_API_KEY`.
+   - Pour OpenRouter : `OPENROUTER_API_KEY`.
+   - Tu peux ajouter les deux si tu veux mixer (filtrage Anthropic, synthèse OpenRouter).
    - Value : coller la clé.
 
 > Ne jamais mettre la clé dans le code ou dans un fichier du repo. GitHub
 > Secrets est le seul endroit approprié.
+
+Si tu utilises OpenRouter, ajoute aussi `OPENROUTER_API_KEY` dans le step
+`env:` du workflow `.github/workflows/digest.yml` (à côté de `ANTHROPIC_API_KEY`).
 
 ### Étape 6 — Configurer les limites de dépenses
 
@@ -285,8 +306,8 @@ Tous dans `digest.py`, section `Configuration` en haut du fichier.
 | `ACCEPTED_DECISIONS` | `{"read_now", "read_later"}` | Ajouter `"skim"` si tu veux récupérer les articles survolables. Retirer `"read_later"` pour un digest "urgent only". |
 | `MAX_ARTICLES_PER_CATEGORY` | 20 | Baisser à 10 si la facture LLM monte. Garde-fou contre les pics (ex: arXiv). |
 | `SEEN_RETENTION_DAYS` | 14 | Fenêtre de déduplication URL. 14 jours = un article vu cette semaine ne reviendra pas la semaine prochaine. |
-| `FILTERING_MODEL` | `claude-haiku-4-5-20251001` | Modèle utilisé pour les phases 1 et 2. Préférer un petit modèle économique. |
-| `SYNTHESIS_MODEL` | `claude-sonnet-4-6` | Modèle utilisé pour la phase 3. Préférer un modèle plus capable pour le ton et le regroupement. |
+| `FILTERING_MODEL` | `anthropic/claude-haiku-4-5-20251001` | Modèle utilisé pour les phases 1 et 2. Préférer un petit modèle économique. Format `<provider>/<nom>` cf. §1. |
+| `SYNTHESIS_MODEL` | `anthropic/claude-sonnet-4-6` | Modèle utilisé pour la phase 3. Préférer un modèle plus capable pour le ton et le regroupement. Format `<provider>/<nom>` cf. §1. |
 
 ### Grille de scoring (synthèse)
 

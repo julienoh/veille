@@ -36,7 +36,11 @@ jobs:
 
       - name: Run digest
         env:
+          # Au moins une clé suffit. Le client (llm_client.py) initialise
+          # uniquement le provider effectivement utilisé par FILTERING_MODEL
+          # et SYNTHESIS_MODEL — l'autre clé peut donc être absente.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python digest.py
 
       - name: Commit & push generated files
