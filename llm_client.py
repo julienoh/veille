@@ -86,7 +86,11 @@ def complete(model: str, prompt: str, max_tokens: int) -> str:
             max_tokens=max_tokens,
             messages=[{"role": "user", "content": prompt}],
         )
-        return resp.choices[0].message.content.strip()
+        # message.content peut être None si le modèle refuse, renvoie uniquement
+        # du reasoning_content (chain-of-thought caché), ou échoue silencieusement.
+        # On renvoie "" dans ce cas — le caller traite déjà l'absence de JSON.
+        content = resp.choices[0].message.content
+        return (content or "").strip()
 
     raise ValueError(
         f"Modèle '{model}' sans préfixe provider connu. "
