@@ -388,18 +388,15 @@ FILTERING_MODEL = "..."
 SYNTHESIS_MODEL = "..."
 ```
 
-### Deprecation Node.js dans Actions (échéance juin 2026)
+### Surveiller la deprecation des actions GitHub
 
-Warning actuel dans les logs :
-> *"Node.js 20 actions are deprecated [...] forced to run with Node.js 24
-> starting June 2nd, 2026"*
+Les versions majeures des actions GitHub (checkout, setup-python,
+actions-gh-pages…) sortent régulièrement avec des changements de runtime
+Node.js. Quand un warning apparaît dans les logs du type :
+> *"Node.js XX actions are deprecated [...] forced to run with Node.js YY"*
 
-À faire avant juin 2026 — mettre à jour `digest.yml` :
-```yaml
-uses: actions/checkout@v4       →  actions/checkout@v5
-uses: actions/setup-python@v5   →  actions/setup-python@v6
-uses: peaceiris/actions-gh-pages@v4  →  version compatible Node 24
-```
+Mettre à jour les `uses:` correspondants dans `digest.yml` en consultant
+la dernière version stable de chaque action sur leur repo GitHub respectif.
 
 ### Surveiller la conso
 
