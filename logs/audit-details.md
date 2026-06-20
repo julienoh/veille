@@ -7,3 +7,7 @@ La colonne Décision reflète l'état final post-dédup.
 ## Run 2026-06-19 20:20 UTC
 
 _Aucun article score ≥ 3 sur ce run._
+
+## Run 2026-06-20 09:20 UTC
+
+_Aucun article score ≥ 3 sur ce run._
