@@ -81,20 +81,26 @@ def log_run(
 # ---- Détails (log 1) --------------------------------------------------------
 
 def _write_details(run_ts: datetime, articles_scored: list[dict]) -> None:
-    """Append un bloc `## Run …` avec les articles score_phase1 >= 3.
+    """Append un bloc `## Run …` avec TOUS les articles scorés en phase 1.
 
     Tri intra-run : par score_phase1 décroissant. Plafonds abrégés. La
     colonne Décision reflète l'état final (post-dédup), donc un article
     rétrogradé en doublon apparaît avec Décision=archive et Raison="doublon
     de [N] …".
+
+    On trace tous les articles (et plus seulement score >= 3) : c'est
+    précisément le détail des articles rejetés qui permet de comprendre
+    pourquoi un run ne retient rien. Une ligne de distribution résume les
+    scores en tête de bloc.
     """
-    keepers = [a for a in articles_scored if a.get("score_phase1", 0) >= 3]
-    keepers.sort(key=lambda a: -a["score_phase1"])
+    keepers = list(articles_scored)
+    keepers.sort(key=lambda a: -a.get("score_phase1", 0))
 
     block = [f"\n## Run {_fmt_ts(run_ts)}\n"]
     if not keepers:
-        block.append("\n_Aucun article score ≥ 3 sur ce run._\n")
+        block.append("\n_Aucun article scoré sur ce run._\n")
     else:
+        block.append(f"\n{_score_distribution(keepers)}\n")
         block.append(
             "\n| Sc | Décision | Tag | Titre | Source | Conf | Signal | Plafond | Raison |\n"
             "|---:|---|---|---|---|---|---|---|---|\n"
@@ -103,7 +109,7 @@ def _write_details(run_ts: datetime, articles_scored: list[dict]) -> None:
             title_md = f"[{_escape_md_cell(a.get('title', ''))}]({a.get('link', '')})"
             block.append(
                 "| {sc} | {dec} | {tag} | {title} | {src} | {conf} | {sig} | {plf} | {raison} |\n".format(
-                    sc=a["score_phase1"],
+                    sc=a.get("score_phase1", 0),
                     dec=a.get("decision", ""),
                     tag=a.get("tag", ""),
                     title=title_md,
@@ -121,10 +127,21 @@ def _details_header() -> str:
     return (
         "# Audit détaillé — 30 derniers jours\n"
         "\n"
-        "Rétention glissante 30 jours. Append en bas. Stocke uniquement les articles\n"
-        "dont le score initial (phase 1) est >= 3. Tri intra-run par score décroissant.\n"
-        "La colonne Décision reflète l'état final post-dédup.\n"
+        "Rétention glissante 30 jours. Append en bas. Stocke TOUS les articles scorés\n"
+        "en phase 1 (y compris rejetés) pour pouvoir diagnostiquer un run sans rétention.\n"
+        "Tri intra-run par score décroissant. Chaque bloc commence par la distribution\n"
+        "des scores. La colonne Décision reflète l'état final post-dédup.\n"
     )
+
+
+def _score_distribution(articles: list[dict]) -> str:
+    """Ligne récap des scores phase 1, ex: `Distribution : 5×s1, 3×s2, 1×s3`."""
+    counts: dict[int, int] = {}
+    for a in articles:
+        s = a.get("score_phase1", 0)
+        counts[s] = counts.get(s, 0) + 1
+    parts = [f"{counts[s]}×s{s}" for s in sorted(counts, reverse=True)]
+    return "Distribution : " + ", ".join(parts)
 
 
 def _details_block_pattern() -> re.Pattern:
@@ -199,9 +216,13 @@ def _append_summary_line(filepath: Path, line: str) -> None:
 def _write_errors(run_ts: datetime) -> None:
     """Append les lignes d'erreur collectées via record_error() pendant ce run.
 
-    Si _errors est vide → on n'ajoute rien (silence = bonne nouvelle).
+    Si _errors est vide, on n'ajoute aucune ligne (silence = bonne nouvelle)
+    mais on garantit que le fichier existe avec son en-tête, pour que les trois
+    logs soient toujours présents sous logs/ (besoin : 3 logs persistés).
     """
     if not _errors:
+        if not ERRORS_FILE.exists():
+            ERRORS_FILE.write_text(_errors_header(), encoding="utf-8")
         return
     block = []
     for err in _errors:
