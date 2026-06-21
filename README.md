@@ -125,7 +125,7 @@ veille/
 ├── output/
 │   └── digest.xml            # Flux RSS généré, commité + servi par Pages
 ├── logs/
-│   ├── audit-details.md      # Détail par article (score ≥ 3), 30 derniers jours
+│   ├── audit-details.md      # Détail de tous les articles scorés, 30 derniers jours
 │   ├── audit-summary.md      # Synthèse compteurs par run, 30 derniers jours
 │   └── audit-errors.md       # Erreurs survenues par run, 30 derniers jours
 ├── digest.py                 # Pipeline complet (load, fetch, score, dédup, synth, audit)
@@ -358,6 +358,29 @@ Trois prompts dans `prompt.py`. Bonnes pratiques :
 
 ## 6. Maintenance
 
+### Le digest ne se met pas à jour (alors que le run réussit)
+
+Comportement **attendu**, pas un bug : `output/digest.xml` n'est réécrit
+(`write_rss()`) que si au moins un article passe le scoring (`read_now`/
+`read_later`), survit à la dédup et obtient une synthèse. Si un run ne retient
+rien, `digest.py` sort tôt (`Rien de pertinent, on sort.`) et ne touche pas le
+flux — seuls `seen.json` et `logs/` sont committés (le commit `Update digest
+[skip ci]` apparaît quand même, d'où la confusion).
+
+Pour savoir *pourquoi* rien n'est retenu : ouvrir `logs/audit-details.md`, le
+bloc du run montre tous les articles avec score + raison + plafond. Un taux de
+rétention durablement à 0% (cf. colonne `Retenue%` du summary) peut être
+légitime (rubric strict + feeds hors-cible) ou signaler un prompt trop sévère.
+
+### Horaires des runs (cron & DST)
+
+Le cron GitHub Actions est interprété en UTC, **sans gestion du DST**. Le
+schedule `0 5,11,17` vise 7h/13h/19h Paris en **heure d'été** (UTC+2) ; en
+hiver (UTC+1) les runs tombent 1h plus tôt (6h/12h/18h Paris). Compromis assumé.
+Note aussi que GitHub **retarde fréquemment** les runs `schedule` (souvent
+1-2h) et peut en sauter sous forte charge : un digest qui semble « manquant »
+est le plus souvent juste décalé.
+
 ### Un feed casse (erreur 404, timeout)
 
 Dans les logs Actions → dernier run → "Run digest", chercher :
@@ -442,9 +465,13 @@ strict), `Err > 10%` (modèle qui dérive ou bug récent).
 
 #### `logs/audit-details.md` — détail article par article
 
-Un bloc `## Run …` par run, avec un tableau des articles dont le **score
-phase 1 est ≥ 3**. Les scores 1-2 ne sont pas tracés ici (trop volumineux
-et sans valeur pour itérer sur le prompt).
+Un bloc `## Run …` par run. Chaque bloc commence par une ligne
+`Distribution : …×s2, …×s1` (récap des scores phase 1), puis un tableau de
+**tous les articles scorés** (y compris les rejetés score 1-2), trié par score
+décroissant. On trace tout volontairement : c'est le détail des articles
+rejetés qui permet de comprendre un run qui ne retient rien — sans ça, un run
+sans rétention produisait `_Aucun article score ≥ 3_` et masquait les
+scores/raisons (cf. §6 « Le digest ne se met pas à jour »).
 
 | Colonne | Sens |
 |---|---|

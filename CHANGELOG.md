@@ -8,6 +8,24 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
 ## [Non publié]
 
 ### Fixed
+- **2026-06-21** — Workflow `digest.yml` : collision au `git push` quand deux
+  runs se chevauchaient (`! [rejected] (fetch first)`). Ajout d'un garde-fou
+  `concurrency: build-digest` (cancel-in-progress=false) qui sérialise les runs,
+  + `git pull --rebase --autostash` avant push en défense en profondeur.
+- **2026-06-21** — Cron décalé d'1h en heure d'été : `0 6,12,18` → `0 5,11,17`
+  pour viser 7h/13h/19h Paris l'été (UTC+2). 1h trop tôt l'hiver, compromis
+  assumé (GitHub Actions n'a pas de support DST).
+- **2026-06-21** — Audit `logs/audit-errors.md` jamais créé tant qu'aucune
+  erreur ne survenait (le besoin était 3 logs persistés, seuls 2 existaient).
+  Le fichier est désormais toujours écrit avec son en-tête.
+
+### Changed
+- **2026-06-21** — `logs/audit-details.md` trace désormais **tous** les articles
+  scorés en phase 1 (et plus seulement score ≥ 3), avec une ligne de
+  distribution des scores en tête de bloc. Motivation : un run sans rétention
+  affichait `_Aucun article score ≥ 3_` et masquait les scores/raisons,
+  rendant l'audit aveugle exactement quand on en avait besoin.
+
 - **2026-04-25** — Déclencheur `push` manquant dans `.github/workflows/digest.yml`.
   Le README §3 documentait 3 déclencheurs (cron, `workflow_dispatch`, push sur
   `main`) mais le workflow n'en avait que 2. Ajout de `push: branches: [main]`
