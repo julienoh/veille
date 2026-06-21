@@ -3,9 +3,12 @@ name: Build digest
 
 on:
   schedule:
-    # 7h, 13h, 19h heure de Paris (UTC+1 en hiver, UTC+2 en été)
-    # On met 6h, 12h, 18h UTC = 7h, 13h, 19h hiver / 8h, 14h, 20h été
-    - cron: '0 6,12,18 * * *'
+    # Cible : 7h, 13h, 19h heure de Paris. GitHub Actions ne gère pas le DST
+    # (cron toujours interprété en UTC), il faut donc choisir une saison.
+    # On optimise pour l'heure d'été (UTC+2), la majorité de l'année :
+    #   5,11,17 UTC = 7h, 13h, 19h Paris en été / 6h, 12h, 18h Paris en hiver
+    # (donc 1h trop tôt l'hiver — compromis assumé).
+    - cron: '0 5,11,17 * * *'
   workflow_dispatch:   # bouton "Run workflow" manuel
   push:
     branches: [main]
@@ -17,6 +20,14 @@ on:
 
 permissions:
   contents: write      # pour que le workflow puisse commit seen.json + digest.xml
+
+# Sérialise les runs : un run en cours bloque le suivant au lieu de tourner en
+# parallèle. Évite la collision au `git push` (deux runs poussant sur main →
+# `! [rejected] (fetch first)`). cancel-in-progress=false : on ne tue jamais un
+# run en train de committer, on met juste le suivant en file d'attente.
+concurrency:
+  group: build-digest
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -48,7 +59,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add output/digest.xml seen.json logs/
-          git diff --staged --quiet || git commit -m "Update digest [skip ci]"
+          if git diff --staged --quiet; then
+            echo "Rien à committer."
+            exit 0
+          fi
+          git commit -m "Update digest [skip ci]"
+          # Resync avant push au cas où main a bougé entre-temps (défense en
+          # profondeur — la sérialisation via concurrency: devrait déjà l'éviter).
+          git pull --rebase --autostash origin main
           git push
 
       - name: Deploy to GitHub Pages
