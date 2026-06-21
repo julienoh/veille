@@ -39,3 +39,7 @@ Distribution : 1×s2
 | Sc | Décision | Tag | Titre | Source | Conf | Signal | Plafond | Raison |
 |---:|---|---|---|---|---|---|---|---|
 | 2 | archive | ia_recherche | [Guardian Angels: LLM Personalization for Productivity and Security](https://www.lesswrong.com/posts/siWqHqCSybdhtWGud/guardian-angels-llm-personalization-for-productivity-and) | LessWrong — AI tag | faible | hors_périmètre | aucun | Vision prospective sans livrable concret ni implication pratique immédiate pour RSSI/DSI. |
+
+## Run 2026-06-21 21:07 UTC
+
+_Aucun article scoré sur ce run._
