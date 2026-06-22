@@ -113,6 +113,20 @@ un autre modèle). Il suffit de définir les variables d'env correspondantes.
 Pour ajouter un troisième fournisseur (Mistral direct, Together, etc.),
 étendre `llm_client.py` avec un nouveau préfixe et un client dédié.
 
+### Déterminisme (température)
+
+Tous les appels passent par `complete()` avec `temperature=0` (constante
+`TEMPERATURE` dans `llm_client.py`), c.-à-d. décodage glouton. Le pipeline est
+un filtre/classifieur : on veut qu'un même article reçoive **toujours** le même
+score/décision, des logs d'audit interprétables (la distribution des scores
+reflète le contenu réel, pas du bruit d'échantillonnage), et pouvoir attribuer
+toute variation d'output à une modif de prompt plutôt qu'au hasard.
+
+⚠️ Déterminisme **quasi**-total, pas garanti à 100 % : les modèles MoE (routage
+dépendant du batch serveur) et le routage hardware côté OpenRouter peuvent
+laisser un résiduel sur les articles-limite. Un `seed` fixe et l'épinglage du
+provider OpenRouter (`provider.order`) réduiraient encore ce reliquat.
+
 ---
 
 ## 2. Structure du repo

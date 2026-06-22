@@ -19,6 +19,16 @@ import os
 from anthropic import Anthropic
 from openai import OpenAI
 
+# Température fixée à 0 (décodage glouton) sur tous les appels : le pipeline est
+# un filtre/classifieur, on veut qu'un même article reçoive toujours le même
+# score/décision, des logs d'audit interprétables, et de pouvoir attribuer toute
+# variation d'output à une modif de prompt (et non au hasard d'échantillonnage).
+# NB : déterminisme quasi-total mais pas garanti à 100 % — modèles MoE (routage
+# dépendant du batch serveur) et routage hardware côté OpenRouter peuvent laisser
+# un résiduel sur les cas-limites. Un seed fixe / l'épinglage du provider le
+# réduiraient encore.
+TEMPERATURE = 0
+
 # Clients initialisés à la demande pour éviter de demander une clé qui n'est
 # pas utilisée si tu n'emploies qu'un seul fournisseur.
 _anthropic_client: Anthropic | None = None
@@ -61,6 +71,9 @@ def complete(model: str, prompt: str, max_tokens: int) -> str:
         prompt: contenu utilisateur unique (un seul message role=user).
         max_tokens: cap sur la sortie du modèle.
 
+    Tous les appels utilisent `temperature=TEMPERATURE` (= 0, décodage glouton)
+    pour un scoring/filtrage reproductible — cf. note sur la constante TEMPERATURE.
+
     Returns:
         Le texte de la réponse, strippé.
 
@@ -73,6 +86,7 @@ def complete(model: str, prompt: str, max_tokens: int) -> str:
         resp = _anthropic().messages.create(
             model=model_name,
             max_tokens=max_tokens,
+            temperature=TEMPERATURE,
             messages=[{"role": "user", "content": prompt}],
         )
         return resp.content[0].text.strip()
@@ -84,6 +98,7 @@ def complete(model: str, prompt: str, max_tokens: int) -> str:
         resp = _openrouter().chat.completions.create(
             model=model_name,
             max_tokens=max_tokens,
+            temperature=TEMPERATURE,
             messages=[{"role": "user", "content": prompt}],
         )
         # message.content peut être None si le modèle refuse, renvoie uniquement

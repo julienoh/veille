@@ -8,6 +8,13 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
 ## [Non publié]
 
 ### Fixed
+- **2026-06-22** — `llm_client.complete()` n'envoyait aucune `temperature` →
+  les deux providers échantillonnaient à leur défaut (1.0), rendant le scoring
+  non reproductible (un même article pouvait basculer de score d'un run à
+  l'autre, bruit dans les logs d'audit). Ajout de `temperature=0` (constante
+  `TEMPERATURE`) sur tous les appels. Déterminisme quasi-total — résiduel
+  possible côté MoE/routage OpenRouter, atténuable via seed + provider.order.
+
 - **2026-06-21** — Workflow `digest.yml` : collision au `git push` quand deux
   runs se chevauchaient (`! [rejected] (fetch first)`). Ajout d'un garde-fou
   `concurrency: build-digest` (cancel-in-progress=false) qui sérialise les runs,
