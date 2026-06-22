@@ -7,7 +7,24 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
 
 ## [Non publié]
 
+### Changed
+- **2026-06-22** — Refonte du `SCORING_PROMPT` pour le rendre déterministe :
+  - **Règle d'agrégation explicite** : 4 axes notés sur {0,1,2} (Actionabilité,
+    Fiabilité, Nouveauté, Profondeur), score brut = `2 + A` avec A=0 ⇒ score ≤ 2,
+    F=0 ⇒ score = 2, élévation à 5 réservée aux signaux forts vérifiables. Les
+    anciennes bandes deviennent des exemples de calibration.
+  - **Mapping score→décision déterministe** (5→read_now, 4→read_later, 3→skim,
+    2/1→archive) avec exceptions strictes chiffrées (A=2, P≥1, urgence explicite).
+  - Deux nouveaux tags **définis** : `ia_stratégie`, `ia_management_equipe` (+
+    ordre de précédence des tags). `confiance` et `signal_principal` outillés.
+- **2026-06-22** — `ACCEPTED_DECISIONS` inclut désormais `"skim"` →
+  `{read_now, read_later, skim}`, ce qui revient à retenir tout score ≥ 3
+  (avant : score 4-5 seulement, rétention ~0 % les jours calmes).
+
 ### Fixed
+- **2026-06-22** — Bloquant d'exécution dans la refonte du `SCORING_PROMPT` :
+  accolades du schéma JSON non échappées → `KeyError` à chaque `.format()`
+  (digest vide permanent). Toutes les accolades littérales doublées (`{{ }}`).
 - **2026-06-22** — `llm_client.complete()` n'envoyait aucune `temperature` →
   les deux providers échantillonnaient à leur défaut (1.0), rendant le scoring
   non reproductible (un même article pouvait basculer de score d'un run à

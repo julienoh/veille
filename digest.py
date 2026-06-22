@@ -56,8 +56,11 @@ DIGEST_URL = "https://julienoh.github.io/veille/digest.xml"  # URL publique du f
 LOOKBACK_HOURS = 8                 # Fenêtre temporelle des articles à considérer.
                                    # Les 3 runs/jour (8h d'écart) se recouvrent
                                    # légèrement → pas de trou en cas de retard cron.
-ACCEPTED_DECISIONS = {"read_now", "read_later"}  # Décisions qui passent dans le digest.
-                                                 # "skim" et "archive" sont écartés.
+ACCEPTED_DECISIONS = {"read_now", "read_later", "skim"}  # Décisions qui passent dans le digest.
+                                                         # Seul "archive" est écarté.
+                                                         # Avec le mapping du SCORING_PROMPT
+                                                         # (5→read_now, 4→read_later, 3→skim),
+                                                         # cela revient à retenir tout score >= 3.
 MAX_ARTICLES_PER_CATEGORY = 20     # Garde-fou contre les pics de volume (ex: arXiv)
                                    # qui exploseraient la facture du LLM de synthèse.
 SEEN_RETENTION_DAYS = 14           # Fenêtre de déduplication. Au-delà, l'entrée

@@ -43,7 +43,7 @@ digest.py  ←─── cron 3x/jour (GitHub Actions)
     │
     ├── 4. PHASE 1 — Scoring (LLM de filtrage, 1 appel par article)
     │       Sortie : {score, decision, tag, confiance, signal_principal, …}
-    │       Filtre : on garde decision ∈ {read_now, read_later}
+    │       Filtre : on garde decision ∈ {read_now, read_later, skim} (≈ score ≥ 3)
     │
     ├── 5. PHASE 2 — Déduplication (LLM de filtrage, 1 appel par catégorie OPML)
     │       Identifie les clusters de doublons, garde l'article canonique
@@ -71,7 +71,7 @@ OPML (catégories → feeds)
                     input : titre + source + résumé (400 chars max)
                     output : JSON enrichi (score 1-5, decision, tag,
                              confiance, signal_principal, plafond_appliqué)
-                    └─► filtre : decision ∈ {read_now, read_later}
+                    └─► filtre : decision ∈ {read_now, read_later, skim}
                           │
                           ▼  groupement par catégorie OPML
                           │
@@ -326,7 +326,7 @@ Tous dans `digest.py`, section `Configuration` en haut du fichier.
 | Paramètre | Défaut | Quand changer |
 |---|---|---|
 | `LOOKBACK_HOURS` | 8 | Monter à 12 si trop peu d'articles la nuit. Les 3 runs/jour se recouvrent légèrement avec 8h, ce qui évite les trous. |
-| `ACCEPTED_DECISIONS` | `{"read_now", "read_later"}` | Ajouter `"skim"` si tu veux récupérer les articles survolables. Retirer `"read_later"` pour un digest "urgent only". |
+| `ACCEPTED_DECISIONS` | `{"read_now", "read_later", "skim"}` | Inclut `skim` → retient ≈ tout score ≥ 3. Retirer `"skim"` pour ne garder que les score 4-5 ; retirer aussi `"read_later"` pour un digest "urgent only". |
 | `MAX_ARTICLES_PER_CATEGORY` | 20 | Baisser à 10 si la facture LLM monte. Garde-fou contre les pics (ex: arXiv). |
 | `SEEN_RETENTION_DAYS` | 14 | Fenêtre de déduplication URL. 14 jours = un article vu cette semaine ne reviendra pas la semaine prochaine. |
 | `FILTERING_MODEL` | `anthropic/claude-haiku-4-5-20251001` | Modèle utilisé pour les phases 1 et 2. Préférer un petit modèle économique. Format `<provider>/<nom>` cf. §1. |
@@ -337,16 +337,22 @@ Tous dans `digest.py`, section `Configuration` en haut du fichier.
 Le détail (critères, exemples, plafonds) vit dans `prompt.py` (`SCORING_PROMPT`).
 Synthèse pour avoir le réflexe sans ouvrir le prompt :
 
-| Score | Niveau | Décision typique |
+Le mapping score→décision est **déterministe** (`SCORING_PROMPT`), avec quelques
+exceptions strictes :
+
+| Score | Niveau | Décision (règle déterministe) |
 |---|---|---|
 | 5 | Incontournable (CVE exploitée, modèle SOTA, décision ANSSI…) | `read_now` |
-| 4 | Intéressant (vuln importante, étude solide, release majeure) | `read_now` ou `read_later` |
-| 3 | Utile si du temps (tutoriel, REX, analyse correcte) | `read_later` ou `skim` |
-| 2 | Marginal (annonce mineure, opinion peu argumentée) | `skim` ou `archive` |
+| 4 | Intéressant (vuln importante, étude solide, release majeure) | `read_later` (→ `read_now` si urgence explicite) |
+| 3 | Utile si du temps (tutoriel, REX, analyse correcte) | `skim` (→ `read_later` si actionabilité directe A=2) |
+| 2 | Marginal (annonce mineure, opinion peu argumentée) | `archive` (→ `skim` si signal technique P≥1) |
 | 1 | Bruit (clickbait, communiqué pur, méta-annonce) | `archive` |
 
-Critères transverses pondérés par le LLM : **Nouveauté**, **Actionabilité**
-(impact RSSI/DSI), **Fiabilité** (source primaire vs PR), **Profondeur**.
+Le score brut (1-5) est calculé par une **procédure déterministe** à partir de
+quatre axes notés sur {0,1,2} : **Actionabilité** (A, agit en plafond — A=0 ⇒
+score ≤ 2), **Fiabilité** (F=0 ⇒ score = 2), **Nouveauté** (N), **Profondeur**
+(P). Base : `score = 2 + A`, élévation à 5 réservée aux signaux forts vérifiables.
+Détail dans `prompt.py` (section « Calcul du score brut »).
 
 Plafonds explicites (vue d'ensemble — détail dans `prompt.py`) :
 - Levée de fonds sans contenu technique : max 2.
@@ -356,8 +362,8 @@ Plafonds explicites (vue d'ensemble — détail dans `prompt.py`) :
 
 ### Tags disponibles
 
-`ia_recherche` · `ia_produit` · `cyber_vuln` · `cyber_strategie` ·
-`dev_tooling` · `business` · `autre`.
+`ia_recherche` · `ia_produit` · `ia_stratégie` · `ia_management_equipe` ·
+`cyber_vuln` · `cyber_strategie` · `dev_tooling` · `business` · `autre`.
 
 ### Itérer sur les prompts
 
@@ -407,7 +413,7 @@ trouver la nouvelle URL.
 ### Trop peu d'articles dans le digest
 
 - `LOOKBACK_HOURS` trop court → monter à 12 ou 16.
-- `ACCEPTED_DECISIONS` trop restrictif → ajouter `"skim"`.
+- Scoring trop sévère → desserrer les plafonds ou l'axe Actionabilité dans `SCORING_PROMPT` (`skim`, score 3, est déjà retenu).
 - Sources peu actives → vérifier directement dans Reeder.
 
 ### Trop de bruit dans le digest
@@ -491,7 +497,7 @@ scores/raisons (cf. §6 « Le digest ne se met pas à jour »).
 |---|---|
 | `Sc` | Score initial donné par le LLM en phase 1 (1-5), **avant rétrogradation éventuelle** par la phase 2 |
 | `Décision` | Décision **finale** : `read_now`, `read_later`, `skim`, `archive`. Si la phase 2 a rétrogradé en doublon, vaut `archive` |
-| `Tag` | Catégorie thématique : `ia_recherche`, `ia_produit`, `cyber_vuln`, `cyber_strategie`, `dev_tooling`, `business`, `autre` |
+| `Tag` | Catégorie thématique : `ia_recherche`, `ia_produit`, `ia_stratégie`, `ia_management_equipe`, `cyber_vuln`, `cyber_strategie`, `dev_tooling`, `business`, `autre` |
 | `Titre` | Titre du feed, cliquable vers l'article (`|` échappés en `\|`) |
 | `Source` | Nom du feed dans l'OPML |
 | `Conf` | Confiance du LLM dans son verdict : `faible`, `moyenne`, `haute` |
