@@ -156,10 +156,13 @@ def _write_summary(run_ts: datetime, metrics: dict) -> None:
     trouves = metrics.get("trouves", 0)
     rn = metrics.get("read_now", 0)
     rl = metrics.get("read_later", 0)
+    skim = metrics.get("skim", 0)
     archive = metrics.get("archive", 0)
     doublons = metrics.get("doublons", 0)
     n_err = len(_errors)
-    retenue = f"{round(100 * (rn + rl) / trouves)}%" if trouves else "—"
+    # Retenue = part des articles qui entrent dans le digest (RN + RL + skim,
+    # cf. ACCEPTED_DECISIONS). skim est retenu depuis 2026-06-22.
+    retenue = f"{round(100 * (rn + rl + skim) / trouves)}%" if trouves else "—"
 
     # Cross-link vers audit-errors.md si erreur(s)
     err_cell = f"[{n_err}](audit-errors.md)" if n_err else "0"
@@ -170,7 +173,7 @@ def _write_summary(run_ts: datetime, metrics: dict) -> None:
 
     line = (
         f"| {_fmt_ts(run_ts)} | {filt} | {synth} | "
-        f"{trouves} | {rn} | {rl} | {archive} | {doublons} | {err_cell} | {retenue} |\n"
+        f"{trouves} | {rn} | {rl} | {skim} | {archive} | {doublons} | {err_cell} | {retenue} |\n"
     )
 
     _append_summary_line(SUMMARY_FILE, line)
@@ -183,14 +186,14 @@ def _summary_header() -> str:
         "Rétention glissante 30 jours. Append en bas (le plus récent en bas).\n"
         "\n"
         "- `Trouvés` : articles frais après filtrage URL/date.\n"
-        "- `RN` / `RL` : retenus en read_now / read_later (entrent dans le digest).\n"
-        "- `Arch` : tout ce qui ne passe pas le filtre decision (skim, archive, dédup).\n"
+        "- `RN` / `RL` / `Skim` : retenus en read_now / read_later / skim (entrent dans le digest).\n"
+        "- `Arch` : non retenu (decision = archive).\n"
         "- `Dédup` : articles rétrogradés par la phase 2.\n"
         "- `Err` : erreurs survenues (cliquable → audit-errors.md).\n"
-        "- `Retenue%` : (RN + RL) / Trouvés.\n"
+        "- `Retenue%` : (RN + RL + Skim) / Trouvés.\n"
         "\n"
-        "| Date UTC | Filtrage | Synthèse | Trouvés | RN | RL | Arch | Dédup | Err | Retenue% |\n"
-        "|---|---|---|---:|---:|---:|---:|---:|---:|---:|\n"
+        "| Date UTC | Filtrage | Synthèse | Trouvés | RN | RL | Skim | Arch | Dédup | Err | Retenue% |\n"
+        "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|\n"
     )
 
 

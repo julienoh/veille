@@ -453,7 +453,7 @@ def main():
         # Cas typique : nuit, week-end, ou cron qui rejoue trop tôt.
         audit.log_run(run_ts, [], {
             **base_metrics, "trouves": 0, "read_now": 0, "read_later": 0,
-            "archive": 0, "doublons": 0,
+            "skim": 0, "archive": 0, "doublons": 0,
         })
         print("Rien de neuf, on sort.")
         return
@@ -488,7 +488,7 @@ def main():
         save_seen(seen)
         audit.log_run(run_ts, all_scored, {
             **base_metrics, "trouves": n_trouves, "read_now": 0, "read_later": 0,
-            "archive": n_trouves, "doublons": 0,
+            "skim": 0, "archive": n_trouves, "doublons": 0,
         })
         print("Rien de pertinent, on sort.")
         return
@@ -517,12 +517,15 @@ def main():
     # Recompte final basé sur all_scored (modifié en place par dedup_category).
     n_rn = sum(1 for a in all_scored if a.get("decision") == "read_now")
     n_rl = sum(1 for a in all_scored if a.get("decision") == "read_later")
+    n_skim = sum(1 for a in all_scored if a.get("decision") == "skim")
     metrics = {
         **base_metrics,
         "trouves": n_trouves,
         "read_now": n_rn,
         "read_later": n_rl,
-        "archive": n_trouves - n_rn - n_rl,
+        "skim": n_skim,
+        # "archive" = tout ce qui n'est ni RN/RL/skim (donc non retenu).
+        "archive": n_trouves - n_rn - n_rl - n_skim,
         "doublons": n_doublons,
     }
 
