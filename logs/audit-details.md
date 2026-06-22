@@ -76,3 +76,7 @@ Distribution : 2×s3, 4×s2, 20×s1
 | 1 | archive | autre | [Délais de paiement : comment le suivi des encours améliore votre trésorerie ?](https://www.journaldunet.com/magazine/1551015-delais-de-paiement-comment-le-suivi-des-encours-ameliore-votre-tresorerie/) | Journal du Net | haute | hors_périmètre | aucun | Hors périmètre : gestion financière, pas cybersécurité, IA ou gouvernance informatique. |
 | 1 | archive | autre | [Le gouverneur de la Banque de France, Emmanuel Moulin, affirme que les canicules ont un effet négatif sur la croissance à moyen terme](https://www.journaldunet.com/business/1551731-le-gouverneur-de-la-banque-de-france-emmanuel-moulin-affirme-que-les-canicules-ont-un-effet-negatif-sur-la-croissance-a-moyen-terme/) | Journal du Net | haute | hors_périmètre | aucun | Hors périmètre : sujet économique sans lien avec cybersécurité ou IA pour RSSI/DSI. |
 | 1 | archive | autre | [Protection sociale : le Medef propose 30 milliards d'euros de baisse nette des cotisations, transférés vers la TVA et les retraités aisés](https://www.journaldunet.com/business/1551729-protection-sociale-le-medef-propose-30-milliards-d-euros-de-baisse-nette-des-cotisations-transferes-vers-la-tva-et-les-retraites-aises/) | Journal du Net | haute | hors_périmètre | aucun | Hors périmètre cyber/IA/DSI : réforme protection sociale sans lien technique. |
+
+## Run 2026-06-22 08:27 UTC
+
+_Aucun article scoré sur ce run._
