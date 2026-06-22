@@ -42,7 +42,7 @@ digest.py  ←─── cron 3x/jour (GitHub Actions)
     ├── 3. Filtre les articles < LOOKBACK_HOURS non déjà vus (seen.json)
     │
     ├── 4. PHASE 1 — Scoring (LLM de filtrage, 1 appel par article)
-    │       Sortie : {score, decision, tag, confiance, signal_principal, …}
+    │       Sortie : {score, decision, tags, raison}
     │       Filtre : on garde decision ∈ {read_now, read_later, skim} (≈ score ≥ 3)
     │
     ├── 5. PHASE 2 — Déduplication (LLM de filtrage, 1 appel par catégorie OPML)
@@ -69,8 +69,7 @@ OPML (catégories → feeds)
                     ▼  PHASE 1
                     LLM de filtrage
                     input : titre + source + résumé (400 chars max)
-                    output : JSON enrichi (score 1-5, decision, tag,
-                             confiance, signal_principal, plafond_appliqué)
+                    output : JSON compact (score 1-5, decision, tags, raison)
                     └─► filtre : decision ∈ {read_now, read_later, skim}
                           │
                           ▼  groupement par catégorie OPML
@@ -334,31 +333,24 @@ Tous dans `digest.py`, section `Configuration` en haut du fichier.
 
 ### Grille de scoring (synthèse)
 
-Le détail (critères, exemples, plafonds) vit dans `prompt.py` (`SCORING_PROMPT`).
+Le détail (critères, exemples) vit dans `prompt.py` (`SCORING_PROMPT`).
 Synthèse pour avoir le réflexe sans ouvrir le prompt :
 
-Le mapping score→décision est **déterministe** (`SCORING_PROMPT`), avec quelques
-exceptions strictes :
+Le mapping score→décision est **strictement déterministe** (`SCORING_PROMPT`),
+sans exception :
 
-| Score | Niveau | Décision (règle déterministe) |
+| Score | Niveau | Décision |
 |---|---|---|
 | 5 | Incontournable (CVE exploitée, modèle SOTA, décision ANSSI…) | `read_now` |
-| 4 | Intéressant (vuln importante, étude solide, release majeure) | `read_later` (→ `read_now` si urgence explicite) |
-| 3 | Utile si du temps (tutoriel, REX, analyse correcte) | `skim` (→ `read_later` si actionabilité directe A=2) |
-| 2 | Marginal (annonce mineure, opinion peu argumentée) | `archive` (→ `skim` si signal technique P≥1) |
+| 4 | Intéressant (vuln importante, étude solide, release majeure) | `read_later` |
+| 3 | Utile si du temps (tutoriel, REX, analyse correcte) | `skim` |
+| 2 | Marginal (annonce mineure, opinion peu argumentée) | `archive` |
 | 1 | Bruit (clickbait, communiqué pur, méta-annonce) | `archive` |
 
-Le score brut (1-5) est calculé par une **procédure déterministe** à partir de
-quatre axes notés sur {0,1,2} : **Actionabilité** (A, agit en plafond — A=0 ⇒
-score ≤ 2), **Fiabilité** (F=0 ⇒ score = 2), **Nouveauté** (N), **Profondeur**
-(P). Base : `score = 2 + A`, élévation à 5 réservée aux signaux forts vérifiables.
-Détail dans `prompt.py` (section « Calcul du score brut »).
-
-Plafonds explicites (vue d'ensemble — détail dans `prompt.py`) :
-- Levée de fonds sans contenu technique : max 2.
-- Étude sponsorisée par un vendeur : max 2.
-- Article basé seulement sur un tweet/post : max 2.
-- Roadmap sans livrable disponible : max 3.
+Le score (1-5) est attribué par bandes d'archétypes (« première règle qui
+correspond »), décrites dans `SCORING_PROMPT`. **Pas de système de plafonds**
+(choisi pour maximiser le rappel — quitte à laisser passer un peu de bruit
+marketing). Avec `ACCEPTED_DECISIONS` incluant `skim`, la rétention = score ≥ 3.
 
 ### Tags disponibles
 
@@ -388,7 +380,7 @@ flux — seuls `seen.json` et `logs/` sont committés (le commit `Update digest
 [skip ci]` apparaît quand même, d'où la confusion).
 
 Pour savoir *pourquoi* rien n'est retenu : ouvrir `logs/audit-details.md`, le
-bloc du run montre tous les articles avec score + raison + plafond. Un taux de
+bloc du run montre tous les articles avec score + tag + raison. Un taux de
 rétention durablement à 0% (cf. colonne `Retenue%` du summary) peut être
 légitime (rubric strict + feeds hors-cible) ou signaler un prompt trop sévère.
 
@@ -413,14 +405,14 @@ trouver la nouvelle URL.
 ### Trop peu d'articles dans le digest
 
 - `LOOKBACK_HOURS` trop court → monter à 12 ou 16.
-- Scoring trop sévère → desserrer les plafonds ou l'axe Actionabilité dans `SCORING_PROMPT` (`skim`, score 3, est déjà retenu).
+- Scoring trop sévère → assouplir les bandes de score dans `SCORING_PROMPT` (`skim`, score 3, est déjà retenu → rétention = score ≥ 3).
 - Sources peu actives → vérifier directement dans Reeder.
 
 ### Trop de bruit dans le digest
 
-- `ACCEPTED_DECISIONS` trop large → retirer `"read_later"` ou `"skim"`.
-- Profil dans `SCORING_PROMPT` trop large → affiner les critères.
-- Plafonds insuffisants → ajouter des cas dans le bloc "Plafonds obligatoires".
+- `ACCEPTED_DECISIONS` trop large → retirer `"skim"` (ne garder que score 4-5).
+- Profil dans `SCORING_PROMPT` trop large → affiner les critères de score.
+- Réintroduire des plafonds anti-bruit dans `SCORING_PROMPT` (levée de fonds, sponsorisé, tweet-seul → max 2) si le marketing passe trop.
 - Source particulièrement bruyante → retirer de l'OPML ou la déplacer dans
   une catégorie séparée.
 
@@ -500,14 +492,7 @@ scores/raisons (cf. §6 « Le digest ne se met pas à jour »).
 | `Tag` | Catégorie thématique : `ia_recherche`, `ia_produit`, `ia_stratégie`, `ia_management_equipe`, `cyber_vuln`, `cyber_strategie`, `dev_tooling`, `business`, `autre` |
 | `Titre` | Titre du feed, cliquable vers l'article (`|` échappés en `\|`) |
 | `Source` | Nom du feed dans l'OPML |
-| `Conf` | Confiance du LLM dans son verdict : `faible`, `moyenne`, `haute` |
-| `Signal` | Critère dominant invoqué : `nouveauté`, `actionabilité`, `fiabilité`, `profondeur`, `urgence`, `hors_périmètre` |
-| `Plafond` | Plafond explicite déclenché (valeurs fermées, cf. table ci-dessous) ou `aucun` |
-| `Raison` | Justification narrative du LLM (max 25 mots). Pour un doublon rétrogradé : `doublon de [N] sujet…` |
-
-Plafonds abrégés utilisés : `levee_de_fonds`, `etude_sponsorisee`,
-`tweet_linkedin`, `roadmap_sans_livrable`, `theo_hors_perimetre`,
-`ia_generique`, `sans_source_primaire`, `resume_vague`, `aucun`.
+| `Raison` | Justification narrative du LLM (max 40 mots). Pour un doublon rétrogradé : `doublon de [N] sujet…` |
 
 Tri intra-run : par score décroissant.
 
@@ -617,9 +602,9 @@ jamais dans le repo.
   envoyer en parallèle avec ~50% de réduction de coût.
 - **Alertes sur feeds cassés** : log structuré des erreurs de fetch, envoi
   d'une notification quand un feed échoue X fois de suite.
-- **Logs structurés des décisions** : exporter `signal_principal` et
-  `plafond_appliqué` dans un fichier d'audit pour itérer sur le prompt
-  à partir de données réelles.
+- **Calibration du scoring sur données** : les logs d'audit (`logs/`) tracent
+  désormais score + tag + raison de chaque article ; itérer sur les bandes de
+  `SCORING_PROMPT` à partir de la distribution réelle des scores (cf. §6).
 
 ### Moyen terme
 

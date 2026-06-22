@@ -8,6 +8,17 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
 ## [Non publié]
 
 ### Changed
+- **2026-06-22** — `SCORING_PROMPT` simplifié pour maximiser le rappel (« on
+  loupe trop d'articles ») :
+  - Schéma de sortie réduit à `{score, decision, tags, raison}` (abandon de
+    `confiance`, `signal_principal`, `plafond_appliqué`, et `tag`+`tags_secondaires`
+    fusionnés en une liste `tags` de 1-3).
+  - **Décision strictement déterministe sans exception** : 5→read_now,
+    4→read_later, 3→skim, 2/1→archive. Rétention = score ≥ 3.
+  - **Suppression de tous les plafonds** (recall max, bruit marketing assumé).
+  - Recherche IA théorique sortie du score 2 (peut atteindre 3 = retenu).
+  - `digest.py` parse `tags` (1ᵉʳ = principal, reste = secondaires) ; `audit.py`
+    perd les colonnes Conf/Signal/Plafond (devenues constantes) + code mort retiré.
 - **2026-06-22** — Refonte du `SCORING_PROMPT` pour le rendre déterministe :
   - **Règle d'agrégation explicite** : 4 axes notés sur {0,1,2} (Actionabilité,
     Fiabilité, Nouveauté, Profondeur), score brut = `2 + A` avec A=0 ⇒ score ≤ 2,
@@ -22,6 +33,10 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
   (avant : score 4-5 seulement, rétention ~0 % les jours calmes).
 
 ### Fixed
+- **2026-06-22** — `llm_client` : `resp.choices[0]` levait `TypeError: 'NoneType'
+  object is not subscriptable` quand OpenRouter renvoie `choices` vide/None
+  (réponse d'erreur/refus) → article perdu au scoring. Garde ajoutée (retourne
+  "" comme pour `content=None`).
 - **2026-06-22** — Bloquant d'exécution dans la refonte du `SCORING_PROMPT` :
   accolades du schéma JSON non échappées → `KeyError` à chaque `.format()`
   (digest vide permanent). Toutes les accolades littérales doublées (`{{ }}`).

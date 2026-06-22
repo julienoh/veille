@@ -200,9 +200,9 @@ def fetch_recent_articles(sources: list[dict], seen: dict) -> list[dict]:
 def score_article(article: dict) -> dict | None:
     """Phase 1 : note un article via le LLM de filtrage.
 
-    Le prompt impose un JSON enrichi : score, decision, tag, tags_secondaires,
-    confiance, raison, signal_principal, plafond_appliqué. En pratique le modèle
-    ajoute parfois du texte autour — on extrait le premier objet JSON via regex.
+    Le prompt impose un JSON compact : score, decision, tags (liste 1-3), raison.
+    En pratique le modèle ajoute parfois du texte autour — on extrait le premier
+    objet JSON via regex.
 
     Returns:
         Dict complet du scoring, ou None si l'appel/parse échoue.
@@ -225,15 +225,17 @@ def score_article(article: dict) -> dict | None:
         if not m:
             return None
         data = json.loads(m.group(0))
+        tags = data.get("tags", [])
+        if not isinstance(tags, list):
+            tags = []
         return {
             "score": int(data["score"]),
             "decision": data.get("decision", "archive"),
-            "tag": data.get("tag", "autre"),
-            "tags_secondaires": data.get("tags_secondaires", []),
-            "confiance": data.get("confiance", "faible"),
+            # Le prompt renvoie une liste `tags` (1-3). On garde le premier comme
+            # tag principal (groupement/affichage), le reste en secondaires.
+            "tag": tags[0] if tags else "autre",
+            "tags_secondaires": tags[1:3],
             "raison": data.get("raison", ""),
-            "signal_principal": data.get("signal_principal", ""),
-            "plafond_applique": data.get("plafond_appliqué", "aucun"),
         }
     except Exception as e:
         # On loggue mais on n'échoue pas le run pour un seul article.

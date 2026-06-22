@@ -64,8 +64,8 @@ def log_run(
     Args:
         run_ts: timestamp du début du run (UTC).
         articles_scored: tous les articles passés en phase 1 avec leur dict de
-            scoring (clés attendues : score_phase1, decision, tag, confiance,
-            signal_principal, plafond_applique, raison, title, source, link).
+            scoring (clés attendues : score_phase1, decision, tag, raison,
+            title, source, link).
         metrics: dict avec les clés trouves, read_now, read_later, archive,
             doublons, filtering_model, synthesis_model.
     """
@@ -102,21 +102,18 @@ def _write_details(run_ts: datetime, articles_scored: list[dict]) -> None:
     else:
         block.append(f"\n{_score_distribution(keepers)}\n")
         block.append(
-            "\n| Sc | Décision | Tag | Titre | Source | Conf | Signal | Plafond | Raison |\n"
-            "|---:|---|---|---|---|---|---|---|---|\n"
+            "\n| Sc | Décision | Tag | Titre | Source | Raison |\n"
+            "|---:|---|---|---|---|---|\n"
         )
         for a in keepers:
             title_md = f"[{_escape_md_cell(a.get('title', ''))}]({a.get('link', '')})"
             block.append(
-                "| {sc} | {dec} | {tag} | {title} | {src} | {conf} | {sig} | {plf} | {raison} |\n".format(
+                "| {sc} | {dec} | {tag} | {title} | {src} | {raison} |\n".format(
                     sc=a.get("score_phase1", 0),
                     dec=a.get("decision", ""),
                     tag=a.get("tag", ""),
                     title=title_md,
                     src=_escape_md_cell(a.get("source", "")),
-                    conf=a.get("confiance", ""),
-                    sig=a.get("signal_principal", ""),
-                    plf=_abbreviate_plafond(a.get("plafond_applique", "aucun")),
                     raison=_escape_md_cell(a.get("raison", "")),
                 )
             )
@@ -339,39 +336,6 @@ def _abbreviate_model(slug: str) -> str:
     if parts and re.fullmatch(r"\d{6,}", parts[-1]):
         parts = parts[:-1]
     return "-".join(parts)
-
-
-PLAFOND_ABBR = {
-    "aucun": "aucun",
-    "levée de fonds": "levee_de_fonds",
-    "etude_sponsorisee": "etude_sponsorisee",
-    "étude sponsorisée par un vendeur": "etude_sponsorisee",
-    "tweet/post linkedin": "tweet_linkedin",
-    "post linkedin": "tweet_linkedin",
-    "tweet": "tweet_linkedin",
-    "roadmap sans livrable": "roadmap_sans_livrable",
-    "roadmap": "roadmap_sans_livrable",
-    "papier théorique hors implication rssi/dsi": "theo_hors_perimetre",
-    "papier théorique": "theo_hors_perimetre",
-    "contenu ia générique": "ia_generique",
-    "sans source primaire identifiable": "sans_source_primaire",
-    "résumé trop vague": "resume_vague",
-}
-
-
-def _abbreviate_plafond(text: str) -> str:
-    """Tente d'abréger un plafond en valeur fermée. Sinon renvoie texte tronqué."""
-    if not text:
-        return "aucun"
-    key = text.strip().lower()
-    if key in PLAFOND_ABBR:
-        return PLAFOND_ABBR[key]
-    # Recherche partielle pour rattraper les variations
-    for substr, abbr in PLAFOND_ABBR.items():
-        if substr and substr in key:
-            return abbr
-    # Fallback : texte tronqué et normalisé en snake_case
-    return re.sub(r"\W+", "_", key)[:30].strip("_") or "aucun"
 
 
 def _explain_error(exc: Exception) -> str:

@@ -101,10 +101,15 @@ def complete(model: str, prompt: str, max_tokens: int) -> str:
             temperature=TEMPERATURE,
             messages=[{"role": "user", "content": prompt}],
         )
-        # message.content peut être None si le modèle refuse, renvoie uniquement
-        # du reasoning_content (chain-of-thought caché), ou échoue silencieusement.
-        # On renvoie "" dans ce cas — le caller traite déjà l'absence de JSON.
-        content = resp.choices[0].message.content
+        # `choices` peut être None/vide si OpenRouter renvoie une réponse d'erreur
+        # ou de refus (vu en prod : TypeError 'NoneType' object is not subscriptable).
+        # Et message.content peut être None (refus, reasoning_content caché, échec
+        # silencieux). Dans tous ces cas on renvoie "" — le caller traite déjà
+        # l'absence de JSON, ça évite de perdre le run sur un article.
+        choices = resp.choices or []
+        if not choices:
+            return ""
+        content = choices[0].message.content
         return (content or "").strip()
 
     raise ValueError(
