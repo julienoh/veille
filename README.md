@@ -6,7 +6,7 @@ puis synthétise avec des LLM, expose un flux RSS consommable dans Reeder (iOS).
 **URL du digest** : https://julienoh.github.io/veille/digest.xml
 **Licence** : MIT
 **Fréquence** : 3 digests/jour (7h, 13h, 19h heure de Paris)
-**Coût estimé** : ~17$/mois (API LLM uniquement, infra gratuite)
+**Infra** : gratuite (GitHub Actions + Pages) ; seule dépense = l'API LLM
 
 ---
 
@@ -26,8 +26,10 @@ puis synthétise avec des LLM, expose un flux RSS consommable dans Reeder (iOS).
 ## 1. Architecture
 
 Le pipeline est agnostique du LLM côté conception (deux rôles : *LLM de filtrage*
-et *LLM de synthèse*). L'implémentation actuelle utilise le SDK Anthropic
-(modèles configurables dans `digest.py`).
+et *LLM de synthèse*). L'implémentation actuelle utilise **DeepSeek via OpenRouter**
+(`deepseek-v4-flash` pour le filtrage, `deepseek-v4-pro` pour la synthèse). Les
+modèles sont configurables dans `digest.py` ; n'importe quel fournisseur supporté
+(cf. §1 « Fournisseurs ») peut les remplacer sans toucher au reste du code.
 
 ### Vue d'ensemble
 
@@ -92,7 +94,7 @@ OPML (catégories → feeds)
 
 | Rôle | Configuration `digest.py` | Justification |
 |---|---|---|
-| Filtrage (phases 1 et 2) | `FILTERING_MODEL` | Tâche simple de classification, JSON court, volume élevé → modèle économique |
+| Filtrage (phases 1 et 2) | `FILTERING_MODEL` | Tâche simple de classification, JSON court, volume élevé → modèle léger et rapide |
 | Synthèse (phase 3) | `SYNTHESIS_MODEL` | Nuance, regroupement thématique, ton éditorial → modèle plus capable |
 
 ### Fournisseurs supportés
@@ -230,9 +232,9 @@ Plusieurs sources de référence n'ont pas de flux RSS direct :
 
 - Compte GitHub gratuit.
 - Compte chez au moins un des fournisseurs LLM supportés :
-  - [platform.claude.com](https://platform.claude.com) (Anthropic)
-  - [openrouter.ai](https://openrouter.ai) (OpenRouter — accès multi-modèles)
-- ~20$ de crédits sur le fournisseur choisi suffisent pour 1-2 mois.
+  - [openrouter.ai](https://openrouter.ai) (OpenRouter — utilisé par défaut, accès multi-modèles dont DeepSeek)
+  - [platform.claude.com](https://platform.claude.com) (Anthropic — alternative)
+- Prévoir quelques crédits sur le fournisseur choisi.
 
 ### Étape 1 — Cloner ou forker ce repo
 
@@ -267,16 +269,16 @@ DIGEST_URL = "https://TON-USER.github.io/NOM-REPO/digest.xml"
 3. Copier la clé immédiatement (affichée une seule fois).
 4. Dans le repo GitHub : **Settings → Secrets and variables → Actions →
    New repository secret**.
-   - Pour Anthropic : `ANTHROPIC_API_KEY`.
-   - Pour OpenRouter : `OPENROUTER_API_KEY`.
-   - Tu peux ajouter les deux si tu veux mixer (filtrage Anthropic, synthèse OpenRouter).
+   - Pour OpenRouter (config par défaut) : `OPENROUTER_API_KEY`.
+   - Pour Anthropic (alternative) : `ANTHROPIC_API_KEY`.
+   - Tu peux ajouter les deux si tu veux mixer les fournisseurs entre filtrage et synthèse.
    - Value : coller la clé.
 
 > Ne jamais mettre la clé dans le code ou dans un fichier du repo. GitHub
 > Secrets est le seul endroit approprié.
 
-Si tu utilises OpenRouter, ajoute aussi `OPENROUTER_API_KEY` dans le step
-`env:` du workflow `.github/workflows/digest.yml` (à côté de `ANTHROPIC_API_KEY`).
+La clé est lue dans le step `env:` du workflow `.github/workflows/digest.yml`,
+qui expose déjà `OPENROUTER_API_KEY` et `ANTHROPIC_API_KEY`.
 
 ### Étape 6 — Configurer les limites de dépenses
 
@@ -326,10 +328,10 @@ Tous dans `digest.py`, section `Configuration` en haut du fichier.
 |---|---|---|
 | `LOOKBACK_HOURS` | 8 | Monter à 12 si trop peu d'articles la nuit. Les 3 runs/jour se recouvrent légèrement avec 8h, ce qui évite les trous. |
 | `ACCEPTED_DECISIONS` | `{"read_now", "read_later", "skim"}` | Inclut `skim` → retient ≈ tout score ≥ 3. Retirer `"skim"` pour ne garder que les score 4-5 ; retirer aussi `"read_later"` pour un digest "urgent only". |
-| `MAX_ARTICLES_PER_CATEGORY` | 20 | Baisser à 10 si la facture LLM monte. Garde-fou contre les pics (ex: arXiv). |
+| `MAX_ARTICLES_PER_CATEGORY` | 20 | Baisser à 10 si une catégorie déborde. Garde-fou contre les pics de volume (ex: arXiv). |
 | `SEEN_RETENTION_DAYS` | 14 | Fenêtre de déduplication URL. 14 jours = un article vu cette semaine ne reviendra pas la semaine prochaine. |
-| `FILTERING_MODEL` | `anthropic/claude-haiku-4-5-20251001` | Modèle utilisé pour les phases 1 et 2. Préférer un petit modèle économique. Format `<provider>/<nom>` cf. §1. |
-| `SYNTHESIS_MODEL` | `anthropic/claude-sonnet-4-6` | Modèle utilisé pour la phase 3. Préférer un modèle plus capable pour le ton et le regroupement. Format `<provider>/<nom>` cf. §1. |
+| `FILTERING_MODEL` | `openrouter/deepseek/deepseek-v4-flash` | Modèle utilisé pour les phases 1 et 2. Préférer un petit modèle léger et rapide. Format `<provider>/<nom>` cf. §1. |
+| `SYNTHESIS_MODEL` | `openrouter/deepseek/deepseek-v4-pro` | Modèle utilisé pour la phase 3. Préférer un modèle plus capable pour le ton et le regroupement. Format `<provider>/<nom>` cf. §1. |
 
 ### Grille de scoring (synthèse)
 
@@ -363,8 +365,8 @@ Trois prompts dans `prompt.py`. Bonnes pratiques :
 1. Changer une chose à la fois et observer sur 2-3 runs avant de rechanger.
 2. Versionner chaque changement avec un message de commit descriptif
    (`git log` sur `prompt.py` devient ton historique d'expérimentation).
-3. Tester en local : `ANTHROPIC_API_KEY=sk-... python3 digest.py`.
-4. Surveiller les coûts : un prompt plus long = plus de tokens × volume.
+3. Tester en local : `OPENROUTER_API_KEY=sk-... python3 digest.py`.
+4. Vérifier la distribution des scores dans `logs/audit-details.md` après chaque changement (cf. §6).
 
 ---
 
@@ -442,11 +444,11 @@ Node.js. Quand un warning apparaît dans les logs du type :
 Mettre à jour les `uses:` correspondants dans `digest.yml` en consultant
 la dernière version stable de chaque action sur leur repo GitHub respectif.
 
-### Surveiller la conso
+### Détecter un volume anormal
 
-Vérifier les premiers jours sur le portail du fournisseur LLM que la
-consommation correspond aux estimations. Signe d'alerte : ×3 sur le volume
-attendu = probable bug de boucle ou prompt qui retourne du texte trop long.
+Surveiller le nombre d'articles traités par run (colonne `Trouvés` de
+`audit-summary.md`). Signe d'alerte : un volume ×3 par rapport à l'habitude =
+probable bug de boucle ou prompt qui retourne du texte trop long.
 
 ### Logs d'audit
 
@@ -466,10 +468,11 @@ Une ligne par run. À consulter en passant pour spotter une anomalie globale.
 | `Trouvés` | Articles frais après filtrage URL/date (hors `seen.json`) | 10-60 |
 | `RN` | Articles décidés `read_now` après dédup | 0-5 |
 | `RL` | Articles décidés `read_later` après dédup | 0-15 |
-| `Arch` | Tout ce qui n'est pas RN/RL (skim, archive, doublons) | majorité |
+| `Skim` | Articles décidés `skim` après dédup (retenus depuis 2026-06-22) | 0-15 |
+| `Arch` | Non retenu (decision = `archive`) | majorité |
 | `Dédup` | Articles rétrogradés par la phase 2 | 0-5 |
 | `Err` | Erreurs survenues, cliquable → ouvre `audit-errors.md` | 0 idéalement |
-| `Retenue%` | `(RN + RL) / Trouvés` — taux de retenue | 10-30% |
+| `Retenue%` | `(RN + RL + Skim) / Trouvés` — taux de retenue | 20-40% |
 
 Signaux d'alerte : `Retenue% > 50%` (prompt trop laxiste ou profil cible trop
 large), `Retenue% < 5%` sur plusieurs runs (sources sèches ou prompt trop
@@ -531,7 +534,7 @@ erreurs d'un run particulier : Cmd+F sur la date dans `audit-errors.md`.
 Phase 1 (scoring) note chaque article isolément — efficace mais ne voit pas
 les doublons. Phase 2 (déduplication) compare uniquement les articles
 score 3-5 entre eux, ce qui élimine le bruit sémantique (deux médias qui
-relayent la même CVE) sans surcoût inutile sur les articles déjà jetés
+relayent la même CVE) sans retraiter les articles déjà jetés
 en phase 1. Séparer évite aussi qu'un prompt unique devienne illisible.
 
 ### Pourquoi un projet agnostique du LLM ?
@@ -539,7 +542,7 @@ en phase 1. Séparer évite aussi qu'un prompt unique devienne illisible.
 Le découplage *rôle / modèle* (LLM de filtrage vs LLM de synthèse) permet
 de mixer les fournisseurs, changer un seul modèle sans toucher au reste,
 et de bénéficier rapidement des nouvelles versions sans réécrire la doc.
-L'implémentation actuelle utilise Anthropic, mais le design ne l'impose pas.
+L'implémentation actuelle utilise DeepSeek via OpenRouter, mais le design ne l'impose pas.
 
 ### Pourquoi GitHub Actions + Pages ?
 
@@ -566,11 +569,11 @@ gratuitement. SQLite sur le runner Actions serait réinitialisé à chaque run
 
 ### Pourquoi deux modèles (filtrage + synthèse) au lieu d'un seul ?
 
-Un modèle économique sur de la classification simple coûte ~10× moins cher
-qu'un modèle haut de gamme, pour un résultat équivalent sur scoring +
-déduplication. La synthèse finale (regroupement thématique, ton éditorial,
-Markdown structuré) justifie le modèle plus capable. Ce split divise la
-facture totale par un facteur significatif vs un pipeline mono-modèle.
+Le scoring et la déduplication sont des tâches simples et répétitives : un
+modèle léger et rapide suffit, et il encaisse bien le volume. La synthèse
+finale (regroupement thématique, ton éditorial, Markdown structuré) demande
+plus de nuance, donc un modèle plus capable. Séparer les deux rôles permet de
+choisir le bon modèle pour chaque tâche, sans surdimensionner le filtrage.
 
 ### Pourquoi un seul item RSS par run ?
 
@@ -598,8 +601,7 @@ jamais dans le repo.
 - **Retry sur les appels LLM** : un blip réseau fait planter un article.
   Ajouter `tenacity` ou une boucle `try/except` avec backoff exponentiel.
 - **Batch scoring** : les ~50 appels phase 1 séquentiels prennent ~30s.
-  L'API Batch (chez Anthropic et d'autres fournisseurs) permettrait de les
-  envoyer en parallèle avec ~50% de réduction de coût.
+  Les envoyer en parallèle (ou via une API Batch) réduirait la durée du run.
 - **Alertes sur feeds cassés** : log structuré des erreurs de fetch, envoi
   d'une notification quand un feed échoue X fois de suite.
 - **Calibration du scoring sur données** : les logs d'audit (`logs/`) tracent
@@ -616,8 +618,7 @@ jamais dans le repo.
   dans une catégorie "Cyber FR" avec un prompt de scoring spécialisé
   (criticité CVE, périmètre DICP…).
 - **Pré-filtre arXiv par mots-clés** : avant la phase 1, filtrer les titres
-  arXiv par liste de mots-clés pertinents pour réduire le volume entrant
-  et la facture LLM.
+  arXiv par liste de mots-clés pertinents pour réduire le volume entrant.
 
 ### Long terme
 

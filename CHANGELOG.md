@@ -33,6 +33,11 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
   (avant : score 4-5 seulement, rétention ~0 % les jours calmes).
 
 ### Fixed
+- **2026-06-22** — Métriques d'audit : depuis l'ajout de `skim` à
+  `ACCEPTED_DECISIONS`, les articles `skim` (retenus dans le digest) étaient
+  comptés dans `Arch` et exclus de `Retenue%` → rétention sous-estimée (17 %
+  affiché vs 31 % réel). Ajout d'un compteur `skim`, d'une colonne `Skim` dans
+  `audit-summary.md`, et `Retenue% = (RN + RL + Skim) / Trouvés`.
 - **2026-06-22** — `llm_client` : `resp.choices[0]` levait `TypeError: 'NoneType'
   object is not subscriptable` quand OpenRouter renvoie `choices` vide/None
   (réponse d'erreur/refus) → article perdu au scoring. Garde ajoutée (retourne
