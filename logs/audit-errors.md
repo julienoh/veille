@@ -6,3 +6,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 
 | Date UTC | Phase | Cible | Erreur |
 |---|---|---|---|
+| 2026-06-22 08:10 UTC | scoring | Les LLM lisent-ils vraiment vos données structurées ? (Frenchweb) | TypeError: 'NoneType' object is not subscriptable |
