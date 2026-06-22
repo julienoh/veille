@@ -216,3 +216,13 @@ Distribution : 5×s5, 11×s4, 7×s3, 9×s2, 4×s1
 | 1 | archive | autre | [Propriétaire de la PS5 ? Amazon réalise un coup de génie et fait chuter le prix de cette manette avant les Prime Day](https://www.bfmtv.com/tech/bons-plans/proprietaire-de-la-ps5-amazon-realise-un-coup-de-genie-et-fait-chuter-le-prix-de-cette-manette-avant-les-prime-day_AB-202606220017.html) | BFM Tech | Article promotionnel sur une réduction de manette PS5, sans aucun lien avec la cybersécurité, l'IA ou le développement. Hors périmètre pour un public d'experts. |
 | 1 | archive | autre | [La BCE juge souhaitable la création de banques transfrontalières en Europe](https://www.journaldunet.com/business/action-publique/1551763-la-bce-juge-souhaitable-la-creation-de-banques-transfrontalieres-en-europe/) | Journal du Net | Hors périmètre : article sur la consolidation bancaire, sans lien avec la cybersécurité, l'IA, le développement ou l'architecture SI. |
 | 1 | archive | autre | [Alan Greenspan, ancien président de la Réserve fédérale américaine, est décédé à l'âge de 100 ans](https://www.journaldunet.com/business/action-publique/1551755-alan-greenspan-ancien-president-de-la-reserve-federale-americaine-est-decede-a-l-age-de-100-ans/) | Journal du Net | Article nécrologique sur Alan Greenspan, sans lien avec la cybersécurité, l'IA ou les sujets techniques ciblés par le public d'experts. |
+
+## Run 2026-06-22 20:10 UTC
+
+Distribution : 1×s4, 1×s3, 1×s2
+
+| Sc | Décision | Tag | Titre | Source | Raison |
+|---:|---|---|---|---|---|
+| 4 | read_later | cyber_vuln | [FortiBleed campaign used custom FortiGate sniffer to steal credentials](https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/) | BleepingComputer | Campagne ciblant FortiGate avec sniffers sur mesure, menace directe pour les pare-feux. Analyse technique à lire pour détails sur les IOCs et le mode opératoire. |
+| 3 | skim | autre | [Nvidia wants to cut data center water use, but that’s not the same as fixing AI’s water problem](https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/) | TechCrunch — AI | L'article traite de l'impact environnemental du refroidissement des data centers IA, en dehors du périmètre cybersécurité/IT opérationnel du public cible. |
+| 2 | archive | autre | [AI is cursing renters with the promise of impossible homes](https://www.theverge.com/report/953888/ai-virtual-staging-real-estate-apartment-listings) | The Verge — AI | Article non technique, ciblant le grand public, sans lien avec la cybersécurité, l'IA en entreprise, le dev ou la stratégie IT. |
