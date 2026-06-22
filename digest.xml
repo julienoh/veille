@@ -8,162 +8,30 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 22 Jun 2026 19:52:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 20:11:30 +0000</lastBuildDate>
     <item>
-      <title>Digest — 22/06 19h</title>
+      <title>Digest — 22/06 20h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Compromission supply chain WordPress (ShapedPlugin)** : Plusieurs plugins Pro de l'éditeur ShapedPlugin ont été infectés via leur pipeline de build et distribution officiel, injectant une porte dérobée dans le code livré aux clients. [The Hacker News](https://thehackernews.com/2026/06/shapedplugin-wordpress-pro-plugins.html)
-
-- **Fuite de données via proxy Squid (CVE "Squidbleed")** : Un bug de 1997 dans le parsing FTP du proxy Squid permet à un utilisateur autorisé de lire les requêtes HTTP en clair d'autres utilisateurs, y compris identifiants et tokens de session. La configuration par défaut est vulnérable. [The Hacker News](https://thehackernews.com/2026/06/29-year-old-squid-proxy-bug-squidbleed.html)
-
-- **Vulnérabilités dans les plateformes d'agents IA (AutoGen Studio et Dify)** : Microsoft a corrigé une chaîne de vulnérabilités (AutoJack) dans AutoGen Studio permettant l'exécution de code arbitraire via une page web malveillante. Parallèlement, quatre failles dans Dify (DifyTap) exposent les conversations IA d'autres locataires sans authentification. [BleepingComputer](https://www.bleepingcomputer.com/news/security/microsoft-fixes-autogen-studio-flaw-that-enabled-code-execution/) · [The Hacker News](https://thehackernews.com/2026/06/researchers-detail-difytap-flaws-in.html)
-
-- **Campagne malvertising CastleStealer via OXLOADER** : Un nouveau loader nommé OXLOADER distribue le stealer CastleStealer en utilisant des publicités Google malveillantes comme vecteur d'infection initial. [The Hacker News](https://thehackernews.com/2026/06/new-oxloader-loader-uses-malicious.html)
-
-- **Vérification obligatoire des développeurs Android** : Google imposera à partir du 30 septembre 2026 le blocage du sideloading d'applications non vérifiées sur les appareils certifiés au Brésil, en Indonésie, à Singapour et en Thaïlande. [The Hacker News](https://thehackernews.com/2026/06/google-sets-sept-30-deadline-for.html)
-
-- **Détournement d'agents IA via l'infrastructure legacy** : Des attaquants exploitent les systèmes legacy non couverts par les programmes de sécurité IA pour compromettre les agents, illustrant un angle mort croissant face à l'adoption rapide de l'IA. [The Hacker News](https://thehackernews.com/2026/06/stop-your-legacy-infrastructure-from.html)
-
-- **Marché noir du ciblage de credentials** : Un marché émergent permet aux attaquants de commander des recherches ciblées dans les bases de données de credentials volés par entreprise ou domaine, évitant d'avoir à trier eux-mêmes les dumps massifs. [BleepingComputer](https://www.bleepingcomputer.com/news/security/a-glimpse-into-the-search-your-target-market-for-stolen-credentials/)
-
-- **Cyberattaque sur le système d'alerte d'urgence brésilien** : Une intrusion présumée a déclenché au moins une douzaine de fausses alertes via le système de défense civile brésilien, conçu pour avertir des catastrophes naturelles. [The Record](https://therecord.media/suspected-cyberattack-triggers-false-emergency-alerts-brazil)
-
-- **Persistance des webshells** : Un nouvel outil webshell publié il y a deux mois sur GitHub confirme que cette technique reste activement développée et déployée par les attaquants. [SANS ISC](https://isc.sans.edu/diary/rss/33096)
-
-## Cyber — Stratégie &amp; analyse
-
-- **Compromission de la chaîne d'approvisionnement via OAuth** : La brèche chez Klue a permis à un attaquant de dérober des tokens OAuth clients pour accéder à leurs données Salesforce et autres plateformes connectées. L'incident illustre le risque systémique des intégrations tierces et la nécessité de surveiller les autorisations déléguées. [CSO Online](https://www.csoonline.com/article/4187907/klue-breach-exposed-salesforce-crm-data-through-stolen-oauth-tokens.html)
-
-- **Killer d'EDR dans l'arsenal d'un groupe RaaS** : ESET a identifié un outil de désactivation d'EDR mis à disposition des affiliés par un groupe de ransomware-as-a-service majeur. Cette intégration dans le modèle d'affaires abaisse la barrière technique pour les attaquants et renforce la pression sur les capacités de détection. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-un-tueur-d-edr-retrouve-dans-l-arsenal-d-un-groupe-de-ransomware-100518.html)
-
-- **Campagne de manipulation de réputation pour vol crypto** : Des attaquants utilisent GitHub, YouTube et VirusTotal pour simuler une légitimité et diffuser un hijacker de presse-papiers multi-plateforme. La tactique cible la confiance accordée aux signaux sociaux et aux plateformes de partage de code. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/crypto-heist-fake-reputation-boosting-campaign)
-
-- **Fuite de données à la fédération sportive de la Police Nationale** : Une enquête est en cours après une exfiltration de données, confirmant la poursuite du ciblage des fédérations sportives françaises observé depuis plusieurs mois. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-federation-sportive-de-la-police-nationale-enquete-sur-une-fuite-de-donnees-100522.html)
-
-- **Sécurisation du code généré par IA** : AWS lance Continuum, un outil visant à aider les développeurs à valider la sécurité du code produit par des agents IA avant le déploiement. La solution répond à l'explosion du volume de code first-party généré automatiquement dans les pipelines agentiques. [CSO Online](https://www.csoonline.com/article/4187917/aws-continuum-offers-devs-help-with-securing-code-2.html)
-
-## IA — Labos &amp; éditeurs
-
-- **Monétisation des agents IA** : Ampersend a développé une couche de routage sur Amazon Bedrock AgentCore Payments permettant aux agents IA de sélectionner dynamiquement le modèle le plus performant par tâche, avec paiement à la requête et respect d'enveloppes budgétaires. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-pay-per-intelligence-for-ai-agents-how-ampersend-uses-amazon-bedrock-agentcore-payments/)
-
-- **Recherche multimodale sur imagerie aérienne** : AWS propose une architecture associant Amazon Bedrock et OpenSearch Serverless pour indexer et interroger des images aériennes à grande échelle via des embeddings multimodaux, avec une évaluation comparative de modèles, stratégies de fusion et méthodes de recherche sur des données OpenStreetMap. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/embed-the-world-multimodal-ai-for-searchable-aerial-imagery-at-scale/)
-
-- **Génération d'images par lots avec ComfyUI** : AWS documente le déploiement de workflows ComfyUI sur des jobs SageMaker AI pour produire des centaines d'images en un seul traitement batch, en s'appuyant sur le CDK pour l'infrastructure et des instances GPU pour l'accélération. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/running-comfyui-workflows-on-amazon-sagemaker-ai-processing-jobs/)
+- **Campagne FortiBleed** : Une campagne ciblant les équipements Fortinet FortiGate a déployé des sniffers personnalisés pour intercepter les secrets d'authentification et dérober des identifiants. [BleepingComputer](https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **OpenAI muscle sa correction de bugs open-source** : OpenAI déploie une version améliorée de son modèle GPT-5.5-Cyber et l'initiative "Patch the Planet" pour identifier et corriger à grande échelle des vulnérabilités dans des logiciels open-source. [Wired](https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/)
-
-- **AMD rétablit le chiffrement mémoire sur ses CPU grand public** : Après protestations, AMD fait marche arrière et réintègre le chiffrement mémoire sur ses processeurs consumer, une fonctionnalité dont la suppression était perçue comme une segmentation artificielle vers les gammes professionnelles. [Ars Technica](https://arstechnica.com/security/2026/06/following-user-outcry-amd-reinstates-memory-encryption-in-consumer-cpus/)
-
-- **SpaceX loue sa puissance de calcul à Reflection AI** : SpaceX signe un contrat de 150 millions de dollars par mois avec Reflection AI, donnant accès immédiat aux derniers GPU Nvidia GB300 dans son datacenter Colossus 2 près de Memphis, de juillet 2026 à 2029. [TechCrunch](https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/)
-
-## Actualité tech FR
-
-- **Lobby des data centers vs objectifs climatiques** : Le président de l'EUDCA, lobby européen des centres de données, appelle l'UE à sacrifier ses ambitions climatiques pour ne pas freiner le développement de l'IA. Cette prise de position, relayée en pleine canicule, illustre les tensions croissantes entre transition numérique et transition écologique. [Next.ink](https://next.ink/243573/objectifs-climatiques-ou-ia-pour-le-lobby-des-data-centers-leurope-doit-choisir/)
-
-- **IA souveraine pour la cybersécurité** : Wallix et l'Inria renforcent leur partenariat pour développer des systèmes d'aide à la décision basés sur l'IA, appliqués à la gestion des identités et des accès. Le projet met l'accent sur la confiance et la souveraineté comme prérequis pour intégrer l'IA dans les outils des équipes cyber. [ZDNet France](https://www.zdnet.fr/actualites/lia-pour-la-cyber-a-besoin-de-confiance-et-de-souverainete-jugent-wallix-et-linria-497400.htm#xtor=RSS-1)</description>
+- **Refroidissement et empreinte eau de l'IA** : Le nouveau système de refroidissement de Nvidia réduit la consommation d'eau dans les datacenters, mais ne traite pas la source principale du problème : l'eau utilisée par les centrales électriques qui alimentent ces infrastructures. [TechCrunch](https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Compromission supply chain WordPress (ShapedPlugin)</strong> : Plusieurs plugins Pro de l'éditeur ShapedPlugin ont été infectés via leur pipeline de build et distribution officiel, injectant une porte dérobée dans le code livré aux clients. <a href="https://thehackernews.com/2026/06/shapedplugin-wordpress-pro-plugins.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Fuite de données via proxy Squid (CVE "Squidbleed")</strong> : Un bug de 1997 dans le parsing FTP du proxy Squid permet à un utilisateur autorisé de lire les requêtes HTTP en clair d'autres utilisateurs, y compris identifiants et tokens de session. La configuration par défaut est vulnérable. <a href="https://thehackernews.com/2026/06/29-year-old-squid-proxy-bug-squidbleed.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Vulnérabilités dans les plateformes d'agents IA (AutoGen Studio et Dify)</strong> : Microsoft a corrigé une chaîne de vulnérabilités (AutoJack) dans AutoGen Studio permettant l'exécution de code arbitraire via une page web malveillante. Parallèlement, quatre failles dans Dify (DifyTap) exposent les conversations IA d'autres locataires sans authentification. <a href="https://www.bleepingcomputer.com/news/security/microsoft-fixes-autogen-studio-flaw-that-enabled-code-execution/">BleepingComputer</a> · <a href="https://thehackernews.com/2026/06/researchers-detail-difytap-flaws-in.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Campagne malvertising CastleStealer via OXLOADER</strong> : Un nouveau loader nommé OXLOADER distribue le stealer CastleStealer en utilisant des publicités Google malveillantes comme vecteur d'infection initial. <a href="https://thehackernews.com/2026/06/new-oxloader-loader-uses-malicious.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Vérification obligatoire des développeurs Android</strong> : Google imposera à partir du 30 septembre 2026 le blocage du sideloading d'applications non vérifiées sur les appareils certifiés au Brésil, en Indonésie, à Singapour et en Thaïlande. <a href="https://thehackernews.com/2026/06/google-sets-sept-30-deadline-for.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Détournement d'agents IA via l'infrastructure legacy</strong> : Des attaquants exploitent les systèmes legacy non couverts par les programmes de sécurité IA pour compromettre les agents, illustrant un angle mort croissant face à l'adoption rapide de l'IA. <a href="https://thehackernews.com/2026/06/stop-your-legacy-infrastructure-from.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Marché noir du ciblage de credentials</strong> : Un marché émergent permet aux attaquants de commander des recherches ciblées dans les bases de données de credentials volés par entreprise ou domaine, évitant d'avoir à trier eux-mêmes les dumps massifs. <a href="https://www.bleepingcomputer.com/news/security/a-glimpse-into-the-search-your-target-market-for-stolen-credentials/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Cyberattaque sur le système d'alerte d'urgence brésilien</strong> : Une intrusion présumée a déclenché au moins une douzaine de fausses alertes via le système de défense civile brésilien, conçu pour avertir des catastrophes naturelles. <a href="https://therecord.media/suspected-cyberattack-triggers-false-emergency-alerts-brazil">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Persistance des webshells</strong> : Un nouvel outil webshell publié il y a deux mois sur GitHub confirme que cette technique reste activement développée et déployée par les attaquants. <a href="https://isc.sans.edu/diary/rss/33096">SANS ISC</a></li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Compromission de la chaîne d'approvisionnement via OAuth</strong> : La brèche chez Klue a permis à un attaquant de dérober des tokens OAuth clients pour accéder à leurs données Salesforce et autres plateformes connectées. L'incident illustre le risque systémique des intégrations tierces et la nécessité de surveiller les autorisations déléguées. <a href="https://www.csoonline.com/article/4187907/klue-breach-exposed-salesforce-crm-data-through-stolen-oauth-tokens.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Killer d'EDR dans l'arsenal d'un groupe RaaS</strong> : ESET a identifié un outil de désactivation d'EDR mis à disposition des affiliés par un groupe de ransomware-as-a-service majeur. Cette intégration dans le modèle d'affaires abaisse la barrière technique pour les attaquants et renforce la pression sur les capacités de détection. <a href="https://www.lemondeinformatique.fr/actualites/lire-un-tueur-d-edr-retrouve-dans-l-arsenal-d-un-groupe-de-ransomware-100518.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Campagne de manipulation de réputation pour vol crypto</strong> : Des attaquants utilisent GitHub, YouTube et VirusTotal pour simuler une légitimité et diffuser un hijacker de presse-papiers multi-plateforme. La tactique cible la confiance accordée aux signaux sociaux et aux plateformes de partage de code. <a href="https://www.darkreading.com/cyberattacks-data-breaches/crypto-heist-fake-reputation-boosting-campaign">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Fuite de données à la fédération sportive de la Police Nationale</strong> : Une enquête est en cours après une exfiltration de données, confirmant la poursuite du ciblage des fédérations sportives françaises observé depuis plusieurs mois. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-federation-sportive-de-la-police-nationale-enquete-sur-une-fuite-de-donnees-100522.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurisation du code généré par IA</strong> : AWS lance Continuum, un outil visant à aider les développeurs à valider la sécurité du code produit par des agents IA avant le déploiement. La solution répond à l'explosion du volume de code first-party généré automatiquement dans les pipelines agentiques. <a href="https://www.csoonline.com/article/4187917/aws-continuum-offers-devs-help-with-securing-code-2.html">CSO Online</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Monétisation des agents IA</strong> : Ampersend a développé une couche de routage sur Amazon Bedrock AgentCore Payments permettant aux agents IA de sélectionner dynamiquement le modèle le plus performant par tâche, avec paiement à la requête et respect d'enveloppes budgétaires. <a href="https://aws.amazon.com/blogs/machine-learning/building-pay-per-intelligence-for-ai-agents-how-ampersend-uses-amazon-bedrock-agentcore-payments/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Recherche multimodale sur imagerie aérienne</strong> : AWS propose une architecture associant Amazon Bedrock et OpenSearch Serverless pour indexer et interroger des images aériennes à grande échelle via des embeddings multimodaux, avec une évaluation comparative de modèles, stratégies de fusion et méthodes de recherche sur des données OpenStreetMap. <a href="https://aws.amazon.com/blogs/machine-learning/embed-the-world-multimodal-ai-for-searchable-aerial-imagery-at-scale/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Génération d'images par lots avec ComfyUI</strong> : AWS documente le déploiement de workflows ComfyUI sur des jobs SageMaker AI pour produire des centaines d'images en un seul traitement batch, en s'appuyant sur le CDK pour l'infrastructure et des instances GPU pour l'accélération. <a href="https://aws.amazon.com/blogs/machine-learning/running-comfyui-workflows-on-amazon-sagemaker-ai-processing-jobs/">AWS Machine Learning</a></li>
+<li><strong>Campagne FortiBleed</strong> : Une campagne ciblant les équipements Fortinet FortiGate a déployé des sniffers personnalisés pour intercepter les secrets d'authentification et dérober des identifiants. <a href="https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/">BleepingComputer</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>OpenAI muscle sa correction de bugs open-source</strong> : OpenAI déploie une version améliorée de son modèle GPT-5.5-Cyber et l'initiative "Patch the Planet" pour identifier et corriger à grande échelle des vulnérabilités dans des logiciels open-source. <a href="https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/">Wired</a></li>
-</ul>
-
-<ul>
-<li><strong>AMD rétablit le chiffrement mémoire sur ses CPU grand public</strong> : Après protestations, AMD fait marche arrière et réintègre le chiffrement mémoire sur ses processeurs consumer, une fonctionnalité dont la suppression était perçue comme une segmentation artificielle vers les gammes professionnelles. <a href="https://arstechnica.com/security/2026/06/following-user-outcry-amd-reinstates-memory-encryption-in-consumer-cpus/">Ars Technica</a></li>
-</ul>
-
-<ul>
-<li><strong>SpaceX loue sa puissance de calcul à Reflection AI</strong> : SpaceX signe un contrat de 150 millions de dollars par mois avec Reflection AI, donnant accès immédiat aux derniers GPU Nvidia GB300 dans son datacenter Colossus 2 près de Memphis, de juillet 2026 à 2029. <a href="https://techcrunch.com/2026/06/22/spacex-inks-compute-deal-with-reflection-ai-an-open-source-ai-lab/">TechCrunch</a></li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Lobby des data centers vs objectifs climatiques</strong> : Le président de l'EUDCA, lobby européen des centres de données, appelle l'UE à sacrifier ses ambitions climatiques pour ne pas freiner le développement de l'IA. Cette prise de position, relayée en pleine canicule, illustre les tensions croissantes entre transition numérique et transition écologique. <a href="https://next.ink/243573/objectifs-climatiques-ou-ia-pour-le-lobby-des-data-centers-leurope-doit-choisir/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>IA souveraine pour la cybersécurité</strong> : Wallix et l'Inria renforcent leur partenariat pour développer des systèmes d'aide à la décision basés sur l'IA, appliqués à la gestion des identités et des accès. Le projet met l'accent sur la confiance et la souveraineté comme prérequis pour intégrer l'IA dans les outils des équipes cyber. <a href="https://www.zdnet.fr/actualites/lia-pour-la-cyber-a-besoin-de-confiance-et-de-souverainete-jugent-wallix-et-linria-497400.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Refroidissement et empreinte eau de l'IA</strong> : Le nouveau système de refroidissement de Nvidia réduit la consommation d'eau dans les datacenters, mais ne traite pas la source principale du problème : l'eau utilisée par les centrales électriques qui alimentent ces infrastructures. <a href="https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/">TechCrunch</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260622-1952</guid>
-      <pubDate>Mon, 22 Jun 2026 19:52:21 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260622-2011</guid>
+      <pubDate>Mon, 22 Jun 2026 20:11:30 +0000</pubDate>
     </item>
   </channel>
 </rss>
