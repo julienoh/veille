@@ -8,30 +8,240 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 22 Jun 2026 20:11:30 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 11:54:25 +0000</lastBuildDate>
     <item>
-      <title>Digest — 22/06 20h</title>
+      <title>Digest — 23/06 11h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Campagne FortiBleed** : Une campagne ciblant les équipements Fortinet FortiGate a déployé des sniffers personnalisés pour intercepter les secrets d'authentification et dérober des identifiants. [BleepingComputer](https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/)
+- **CVE-2024-40766 : correctif incomplet par défaut** : La vulnérabilité a été corrigée au niveau du code, mais la configuration par défaut reste vulnérable chez de nombreux éditeurs et intégrateurs, exposant toujours les équipements. [SANS ISC](https://isc.sans.edu/diary/rss/33094)
+
+- **Campagne WhatsApp VBScript ciblant ManageEngine RMM** : Des messages directs WhatsApp distribuent des scripts VBScript malveillants qui déploient l'outil légitime ManageEngine RMM pour établir une persistance. La campagne cible spécifiquement les utilisateurs de WhatsApp Desktop et WhatsApp Web. [The Hacker News](https://thehackernews.com/2026/06/whatsapp-vbscript-campaign-uses-fake.html)
+
+- **GPT-5.5-Cyber pour l'aide au patching** : OpenAI met à disposition de défenseurs de confiance une version renforcée de son modèle dédié à la cybersécurité, dans le cadre de l'initiative Daybreak, pour identifier et corriger des vulnérabilités logicielles. [The Hacker News](https://thehackernews.com/2026/06/openai-expands-daybreak-with-gpt-55.html)
+
+## Cyber — Stratégie &amp; analyse
+
+- **Changement de posture cyber imposé par l'IA** : Les agences du réseau Five Eyes enjoignent les RSSI à refondre leur stratégie de risque pour contrer des acteurs utilisant l'IA afin de contourner les défenses, un appel jugé trop vague par certains experts. Parallèlement, un rapport souligne que la cybersécurité ne peut plus se limiter à la prévention des brèches mais doit intégrer l'inévitabilité de la compromission comme principe de survie. [CSO Online (Five Eyes)](https://www.csoonline.com/article/4188049/change-your-cyber-risk-strategy-to-meet-ai-threats-five-eyes-countries-warn-csos.html) · [CSO Online (Survie)](https://www.csoonline.com/article/4188186/cybersecurity-is-no-longer-about-protection-its-about-survival.html)
+- **Identité numérique pour agents autonomes** : L'Estonie étudie la création d'un statut officiel pour les agents IA, afin d'encadrer juridiquement ces outils capables d'effectuer des actions en ligne au nom d'une personne. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-estonie-envisage-de-creer-une-identite-officielle-des-agents-ia-100521.html)
+
+## IA — Labos &amp; éditeurs
+
+- **Agents IA pour les opérations télécoms** : NVIDIA présente des agents IA autonomes destinés à opérer 24/7 dans les réseaux télécoms, dépassant l'automatisation de tâches isolées pour gérer des flux complets. [NVIDIA Blog](https://blogs.nvidia.com/blog/telecom-ai-agents-dtw-ignite-2026/)
+
+## IA — Recherche
+
+- **Empoisonnement de la mémoire des agents LLM** : La mémoire persistante des agents IA est vulnérable à des écritures adversariales uniques capables de compromettre toutes les interactions futures. [From Untrusted Input to Trusted Memory](https://arxiv.org/abs/2606.04329)
+
+- **Contournement de l'alignement de sécurité** : Le refus de répondre à des requêtes dangereuses ne serait pas une décision sémantique profonde mais une caractéristique linéaire manipulable, ce qui fragilise les mécanismes d'alignement actuels. [The Geometry of Refusal](https://arxiv.org/abs/2606.22686)
+
+- **Dégradation des contraintes de sécurité en contexte long** : Les techniques de compaction de contexte (résumé, éviction de tokens) effacent silencieusement les règles de gouvernance et contraintes de sécurité in-context lors de sessions prolongées. [Governance Decay](https://arxiv.org/abs/2606.22528) · [Safe to Check, Unsafe to Use](https://arxiv.org/abs/2606.21732) montre aussi que la compression par résumé déplace la frontière de sécurité et permet de contourner les filtres.
+
+- **Injection de prompt visuelle furtive** : Les agents web basés sur des MLLM sont vulnérables à des injections visuelles indétectables par les défenses actuelles, élargissant la surface d'attaque au canal visuel. [MIRAGE](https://arxiv.org/abs/2606.20717)
+
+- **Détecteurs d'injection de prompt mal calibrés** : La confiance des scores des détecteurs d'injection est sévèrement dégradée lorsque la distribution des attaques change, conduisant à des blocages à tort ou des passages d'attaques avec une confiance élevée. [Confidently Wrong](https://arxiv.org/abs/2606.22659)
+
+- **Sécurité de la couche d'exécution des agents locaux** : Un audit de code source révèle que les agents LLM locaux comme OpenClaw et Nanobot fonctionnent comme des runtimes privilégiés exposés à des failles classiques (shell, système de fichiers, credentials). [Local LLM Agents as Vulnerable Runtimes](https://arxiv.org/abs/2606.21071)
+
+- **Contrôle de flux d'information géométrique** : GIF propose une méthode localement saine pour contrôler les flux entre données sensibles, entrées non fiables et actions privilégiées dans les systèmes agentiques, en exploitant la géométrie des représentations. [GIF](https://arxiv.org/abs/2606.23277)
+
+- **Vecteurs supprimés toujours reconstructibles** : Les embeddings "soft-deleted" dans les bases vectorielles HNSW utilisées en RAG restent accessibles et reconstructibles, exposant les données privées même après suppression. [Ghost Vectors](https://arxiv.org/abs/2606.18497)
+
+- **Agents face aux feedbacks non fiables** : Les agents outillés obtiennent de moins bons résultats avec un feedback environnemental peu fiable qu'avec aucune information du tout, remettant en cause leur robustesse en conditions réelles. [Don't Blindly Trust It](https://arxiv.org/abs/2606.21409)
+
+- **Évaluation déterministe des agents** : GroundEval remplace le jugement LLM par un test vérifiable de ce que l'agent a recherché, extrait, cité et était autorisé à accéder, apportant une évaluation traçable et sans biais. [GroundEval](https://arxiv.org/abs/2606.22737)
+
+- **Gouvernance et évaluabilité** : Selon un article, il existe un écart structurel d'évaluabilité qui empêche les organisations de produire des preuves suffisantes pour gérer à la fois les risques et la valeur de l'IA déployée. [The AI Evaluability Gap](https://arxiv.org/abs/2606.21015)
+
+- **Attribution et empreinte des agents web** : Il est possible de réaliser du fingerprinting multi-couche pour identifier et attribuer l'origine des agents autonomes qui scrapent le web, réponse au défi posé par leur prolifération. [Whose Agent Are You?](https://arxiv.org/abs/2606.20910)
+
+- **Mémoire procédurale des agents LLM** : Le benchmark AFTER (382 tâches d'entreprise réelles) montre que la capacité des agents à produire des compétences réutilisables via mémoire procédurale reste mal comprise et peu fiable. [Managing Procedural Memory](https://arxiv.org/abs/2606.23127)
+
+- **Détection de vulnérabilités mémoire par agents** : Revelio combine analyse statique et agent LLM pour détecter des vulnérabilités de type memory safety sur des codebases entières de manière plus économique. [Revelio](https://arxiv.org/abs/2606.22263)
+
+- **Systèmes de supervision LLM évalués en conditions réelles** : Le benchmark BELLS-O compare les filtres de modération et détecteurs de jailbreak en incluant coût, latence et indépendance vis-à-vis des fournisseurs. [BELLS-O](https://arxiv.org/abs/2606.20668)
+
+- **Traduction d'intentions réseau** : Un benchmark sémantique reproductible évalue la traduction d'intentions haut niveau en configurations réseau multivendeur par les LLM, au-delà de la simple validité syntaxique. [A Reproducible Semantic Benchmark](https://arxiv.org/abs/2606.20564)
+
+- **Attribution de domaines et phishing** : Les LLM peinent à raisonner sur la propriété légitime d'un nom de domaine (typosquatting, défensif), ce qui limite leur usage pour détecter ou attribuer des sites frauduleux. [Can LLMs Reason About Brand Ownership?](https://arxiv.org/abs/2606.20868)
+
+- **Activations massives dans les transformers** : Les activations massives (quelques dimensions disproportionnées) sont robustes architecturalement et ne semblent pas être un artéfact nuisible du flux résiduel, selon des tests contrôlés. [Massive Activations Are Architecturally Robust](https://arxiv.org/abs/2606.20743)
+
+- **RAN et intelligence agentique pour la 6G** : Une architecture pour les réseaux d'accès radio 6G intègre l'IA agentique pour optimiser l'efficacité énergétique dans des infrastructures partagées entre communications et calcul IA. [From RAN Control to Agentic Intelligence](https://arxiv.org/abs/2606.21955)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Refroidissement et empreinte eau de l'IA** : Le nouveau système de refroidissement de Nvidia réduit la consommation d'eau dans les datacenters, mais ne traite pas la source principale du problème : l'eau utilisée par les centrales électriques qui alimentent ces infrastructures. [TechCrunch](https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/)</description>
+- **Alerte Five Eyes sur les cybermenaces IA** : Les agences de renseignement de l'alliance Five Eyes préviennent que l'impact des cyberattaques dopées à l'IA se matérialisera pour les entreprises dans les prochains mois. [AI News](https://www.artificialintelligence-news.com/news/five-eyes-warning-ai-cyber-threats/)
+
+- **Framework open source pour l'entraînement de modèles massifs en RL** : Prime Intellect publie prime-rl 0.6.0, capable d'entraîner des modèles MoE à mille milliards de paramètres sur des tâches agentiques avec un temps d'étape inférieur à 5 minutes sur 28 nœuds H200. [MarkTechPost](https://www.marktechpost.com/2026/06/23/prime-intellect-releases-prime-rl-0-6-0-to-train-trillion-parameter-moe-models-on-agentic-rl-workloads/)
+
+- **API compatible OpenAI pour GLM-5.2** : Le modèle GLM-5.2 est désormais accessible via une API compatible OpenAI, avec prise en charge native du contrôle de l'effort de raisonnement, de l'appel de fonctions et de la recherche en contexte long. [MarkTechPost](https://www.marktechpost.com/2026/06/22/glm-5-2-openai-compatible-api-a-hands-on-guide-to-reasoning-effort-function-calling-and-long-context-retrieval/)
+
+## Actualité tech FR
+
+- **IA &amp; Gouvernance : le virage métier** : Selon Frenchweb, l'adoption de l'IA dans les fonds d'investissement déplace la question de la productivité vers celle de la gouvernance. Parallèlement, les cas d'usage les plus performants émergent désormais directement des métiers plutôt que des DSI. [Frenchweb - Gouvernance](https://www.frenchweb.fr/lia-entre-dans-les-fonds-pourquoi-la-question-nest-plus-la-productivite-mais-la-gouvernance/462528) · [Frenchweb - Cas d'usage](https://www.frenchweb.fr/pourquoi-les-meilleurs-cas-dusage-ia-emergent-desormais-des-metiers/462503)
+
+- **Chaos tarifaire SaaS/IA** : Les responsables IT font face à une refonte tarifaire généralisée du marché des logiciels, perturbé par l'arrivée des produits d'IA concurrents. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-responsables-it-face-au-chaos-tarifaire-du-saas-et-de-l-ia-100520.html)
+
+- **Estonie : identité officielle pour agents IA** : L'Estonie envisage de créer un cadre légal pour doter les agents IA d'une identité officielle, leur permettant d'effectuer des tâches en ligne de manière autonome. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-estonie-envisage-de-creer-une-identite-officielle-des-agents-ia-100521.html)
+
+- **Démantèlement de SocGholish** : La chaîne d'infection SocGholish, active depuis 9 ans et utilisée pour des campagnes de malvertising, a été neutralisée dans le cadre de l'opération Endgame. [ZDNet France](https://www.zdnet.fr/actualites/neuf-ans-apres-sa-detection-la-chaine-dinfection-socgholish-enfin-demantelee-497440.htm#xtor=RSS-1)
+
+- **AMD rétablit le chiffrement mémoire TSME** : Suite aux protestations, AMD a fait marche arrière et promet de réintroduire le chiffrement transparent de la RAM (TSME) sur ses processeurs Ryzen grand public. [Next.ink](https://next.ink/243601/suite-au-tolle-amd-reintroduit-le-chiffrement-memoire-sur-des-ryzen-grand-public/)
+
+- **Plan quantique américain** : Trump signe deux décrets visant à déployer des ordinateurs quantiques dès 2028 et à renforcer la cybersécurité post-quantique d'ici 2031 pour assurer la domination technologique des États-Unis. [ZDNet France](https://www.zdnet.fr/actualites/trump-accelere-sur-le-quantique-des-ordinateurs-deployes-des-2028-une-cybersecurite-renforcee-dici-2031-497465.htm#xtor=RSS-1)
+
+- **Samsung HBM4** : Samsung a déjà franchi le milliard de dollars de revenus sur la mémoire HBM4 en moins de 5 mois et vise 10 milliards d'ici fin d'année, porté par la demande en IA. [ZDNet France](https://www.zdnet.fr/actualites/memoire-hbm4-samsung-franchit-le-milliard-de-dollars-en-moins-de-cinq-mois-et-vise-dix-fois-plus-dici-fin-dannee-497461.htm#xtor=RSS-1)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Campagne FortiBleed</strong> : Une campagne ciblant les équipements Fortinet FortiGate a déployé des sniffers personnalisés pour intercepter les secrets d'authentification et dérober des identifiants. <a href="https://www.bleepingcomputer.com/news/security/fortibleed-campaign-used-custom-fortigate-sniffer-to-steal-credentials/">BleepingComputer</a></li>
+<li><strong>CVE-2024-40766 : correctif incomplet par défaut</strong> : La vulnérabilité a été corrigée au niveau du code, mais la configuration par défaut reste vulnérable chez de nombreux éditeurs et intégrateurs, exposant toujours les équipements. <a href="https://isc.sans.edu/diary/rss/33094">SANS ISC</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne WhatsApp VBScript ciblant ManageEngine RMM</strong> : Des messages directs WhatsApp distribuent des scripts VBScript malveillants qui déploient l'outil légitime ManageEngine RMM pour établir une persistance. La campagne cible spécifiquement les utilisateurs de WhatsApp Desktop et WhatsApp Web. <a href="https://thehackernews.com/2026/06/whatsapp-vbscript-campaign-uses-fake.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>GPT-5.5-Cyber pour l'aide au patching</strong> : OpenAI met à disposition de défenseurs de confiance une version renforcée de son modèle dédié à la cybersécurité, dans le cadre de l'initiative Daybreak, pour identifier et corriger des vulnérabilités logicielles. <a href="https://thehackernews.com/2026/06/openai-expands-daybreak-with-gpt-55.html">The Hacker News</a></li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Changement de posture cyber imposé par l'IA</strong> : Les agences du réseau Five Eyes enjoignent les RSSI à refondre leur stratégie de risque pour contrer des acteurs utilisant l'IA afin de contourner les défenses, un appel jugé trop vague par certains experts. Parallèlement, un rapport souligne que la cybersécurité ne peut plus se limiter à la prévention des brèches mais doit intégrer l'inévitabilité de la compromission comme principe de survie. <a href="https://www.csoonline.com/article/4188049/change-your-cyber-risk-strategy-to-meet-ai-threats-five-eyes-countries-warn-csos.html">CSO Online (Five Eyes)</a> · <a href="https://www.csoonline.com/article/4188186/cybersecurity-is-no-longer-about-protection-its-about-survival.html">CSO Online (Survie)</a></li>
+<li><strong>Identité numérique pour agents autonomes</strong> : L'Estonie étudie la création d'un statut officiel pour les agents IA, afin d'encadrer juridiquement ces outils capables d'effectuer des actions en ligne au nom d'une personne. <a href="https://www.lemondeinformatique.fr/actualites/lire-l-estonie-envisage-de-creer-une-identite-officielle-des-agents-ia-100521.html">Le Monde Informatique</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Agents IA pour les opérations télécoms</strong> : NVIDIA présente des agents IA autonomes destinés à opérer 24/7 dans les réseaux télécoms, dépassant l'automatisation de tâches isolées pour gérer des flux complets. <a href="https://blogs.nvidia.com/blog/telecom-ai-agents-dtw-ignite-2026/">NVIDIA Blog</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Empoisonnement de la mémoire des agents LLM</strong> : La mémoire persistante des agents IA est vulnérable à des écritures adversariales uniques capables de compromettre toutes les interactions futures. <a href="https://arxiv.org/abs/2606.04329">From Untrusted Input to Trusted Memory</a></li>
+</ul>
+
+<ul>
+<li><strong>Contournement de l'alignement de sécurité</strong> : Le refus de répondre à des requêtes dangereuses ne serait pas une décision sémantique profonde mais une caractéristique linéaire manipulable, ce qui fragilise les mécanismes d'alignement actuels. <a href="https://arxiv.org/abs/2606.22686">The Geometry of Refusal</a></li>
+</ul>
+
+<ul>
+<li><strong>Dégradation des contraintes de sécurité en contexte long</strong> : Les techniques de compaction de contexte (résumé, éviction de tokens) effacent silencieusement les règles de gouvernance et contraintes de sécurité in-context lors de sessions prolongées. <a href="https://arxiv.org/abs/2606.22528">Governance Decay</a> · <a href="https://arxiv.org/abs/2606.21732">Safe to Check, Unsafe to Use</a> montre aussi que la compression par résumé déplace la frontière de sécurité et permet de contourner les filtres.</li>
+</ul>
+
+<ul>
+<li><strong>Injection de prompt visuelle furtive</strong> : Les agents web basés sur des MLLM sont vulnérables à des injections visuelles indétectables par les défenses actuelles, élargissant la surface d'attaque au canal visuel. <a href="https://arxiv.org/abs/2606.20717">MIRAGE</a></li>
+</ul>
+
+<ul>
+<li><strong>Détecteurs d'injection de prompt mal calibrés</strong> : La confiance des scores des détecteurs d'injection est sévèrement dégradée lorsque la distribution des attaques change, conduisant à des blocages à tort ou des passages d'attaques avec une confiance élevée. <a href="https://arxiv.org/abs/2606.22659">Confidently Wrong</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurité de la couche d'exécution des agents locaux</strong> : Un audit de code source révèle que les agents LLM locaux comme OpenClaw et Nanobot fonctionnent comme des runtimes privilégiés exposés à des failles classiques (shell, système de fichiers, credentials). <a href="https://arxiv.org/abs/2606.21071">Local LLM Agents as Vulnerable Runtimes</a></li>
+</ul>
+
+<ul>
+<li><strong>Contrôle de flux d'information géométrique</strong> : GIF propose une méthode localement saine pour contrôler les flux entre données sensibles, entrées non fiables et actions privilégiées dans les systèmes agentiques, en exploitant la géométrie des représentations. <a href="https://arxiv.org/abs/2606.23277">GIF</a></li>
+</ul>
+
+<ul>
+<li><strong>Vecteurs supprimés toujours reconstructibles</strong> : Les embeddings "soft-deleted" dans les bases vectorielles HNSW utilisées en RAG restent accessibles et reconstructibles, exposant les données privées même après suppression. <a href="https://arxiv.org/abs/2606.18497">Ghost Vectors</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents face aux feedbacks non fiables</strong> : Les agents outillés obtiennent de moins bons résultats avec un feedback environnemental peu fiable qu'avec aucune information du tout, remettant en cause leur robustesse en conditions réelles. <a href="https://arxiv.org/abs/2606.21409">Don't Blindly Trust It</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation déterministe des agents</strong> : GroundEval remplace le jugement LLM par un test vérifiable de ce que l'agent a recherché, extrait, cité et était autorisé à accéder, apportant une évaluation traçable et sans biais. <a href="https://arxiv.org/abs/2606.22737">GroundEval</a></li>
+</ul>
+
+<ul>
+<li><strong>Gouvernance et évaluabilité</strong> : Selon un article, il existe un écart structurel d'évaluabilité qui empêche les organisations de produire des preuves suffisantes pour gérer à la fois les risques et la valeur de l'IA déployée. <a href="https://arxiv.org/abs/2606.21015">The AI Evaluability Gap</a></li>
+</ul>
+
+<ul>
+<li><strong>Attribution et empreinte des agents web</strong> : Il est possible de réaliser du fingerprinting multi-couche pour identifier et attribuer l'origine des agents autonomes qui scrapent le web, réponse au défi posé par leur prolifération. <a href="https://arxiv.org/abs/2606.20910">Whose Agent Are You?</a></li>
+</ul>
+
+<ul>
+<li><strong>Mémoire procédurale des agents LLM</strong> : Le benchmark AFTER (382 tâches d'entreprise réelles) montre que la capacité des agents à produire des compétences réutilisables via mémoire procédurale reste mal comprise et peu fiable. <a href="https://arxiv.org/abs/2606.23127">Managing Procedural Memory</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de vulnérabilités mémoire par agents</strong> : Revelio combine analyse statique et agent LLM pour détecter des vulnérabilités de type memory safety sur des codebases entières de manière plus économique. <a href="https://arxiv.org/abs/2606.22263">Revelio</a></li>
+</ul>
+
+<ul>
+<li><strong>Systèmes de supervision LLM évalués en conditions réelles</strong> : Le benchmark BELLS-O compare les filtres de modération et détecteurs de jailbreak en incluant coût, latence et indépendance vis-à-vis des fournisseurs. <a href="https://arxiv.org/abs/2606.20668">BELLS-O</a></li>
+</ul>
+
+<ul>
+<li><strong>Traduction d'intentions réseau</strong> : Un benchmark sémantique reproductible évalue la traduction d'intentions haut niveau en configurations réseau multivendeur par les LLM, au-delà de la simple validité syntaxique. <a href="https://arxiv.org/abs/2606.20564">A Reproducible Semantic Benchmark</a></li>
+</ul>
+
+<ul>
+<li><strong>Attribution de domaines et phishing</strong> : Les LLM peinent à raisonner sur la propriété légitime d'un nom de domaine (typosquatting, défensif), ce qui limite leur usage pour détecter ou attribuer des sites frauduleux. <a href="https://arxiv.org/abs/2606.20868">Can LLMs Reason About Brand Ownership?</a></li>
+</ul>
+
+<ul>
+<li><strong>Activations massives dans les transformers</strong> : Les activations massives (quelques dimensions disproportionnées) sont robustes architecturalement et ne semblent pas être un artéfact nuisible du flux résiduel, selon des tests contrôlés. <a href="https://arxiv.org/abs/2606.20743">Massive Activations Are Architecturally Robust</a></li>
+</ul>
+
+<ul>
+<li><strong>RAN et intelligence agentique pour la 6G</strong> : Une architecture pour les réseaux d'accès radio 6G intègre l'IA agentique pour optimiser l'efficacité énergétique dans des infrastructures partagées entre communications et calcul IA. <a href="https://arxiv.org/abs/2606.21955">From RAN Control to Agentic Intelligence</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Refroidissement et empreinte eau de l'IA</strong> : Le nouveau système de refroidissement de Nvidia réduit la consommation d'eau dans les datacenters, mais ne traite pas la source principale du problème : l'eau utilisée par les centrales électriques qui alimentent ces infrastructures. <a href="https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/">TechCrunch</a></li>
+<li><strong>Alerte Five Eyes sur les cybermenaces IA</strong> : Les agences de renseignement de l'alliance Five Eyes préviennent que l'impact des cyberattaques dopées à l'IA se matérialisera pour les entreprises dans les prochains mois. <a href="https://www.artificialintelligence-news.com/news/five-eyes-warning-ai-cyber-threats/">AI News</a></li>
+</ul>
+
+<ul>
+<li><strong>Framework open source pour l'entraînement de modèles massifs en RL</strong> : Prime Intellect publie prime-rl 0.6.0, capable d'entraîner des modèles MoE à mille milliards de paramètres sur des tâches agentiques avec un temps d'étape inférieur à 5 minutes sur 28 nœuds H200. <a href="https://www.marktechpost.com/2026/06/23/prime-intellect-releases-prime-rl-0-6-0-to-train-trillion-parameter-moe-models-on-agentic-rl-workloads/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>API compatible OpenAI pour GLM-5.2</strong> : Le modèle GLM-5.2 est désormais accessible via une API compatible OpenAI, avec prise en charge native du contrôle de l'effort de raisonnement, de l'appel de fonctions et de la recherche en contexte long. <a href="https://www.marktechpost.com/2026/06/22/glm-5-2-openai-compatible-api-a-hands-on-guide-to-reasoning-effort-function-calling-and-long-context-retrieval/">MarkTechPost</a></li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>IA & Gouvernance : le virage métier</strong> : Selon Frenchweb, l'adoption de l'IA dans les fonds d'investissement déplace la question de la productivité vers celle de la gouvernance. Parallèlement, les cas d'usage les plus performants émergent désormais directement des métiers plutôt que des DSI. <a href="https://www.frenchweb.fr/lia-entre-dans-les-fonds-pourquoi-la-question-nest-plus-la-productivite-mais-la-gouvernance/462528">Frenchweb - Gouvernance</a> · <a href="https://www.frenchweb.fr/pourquoi-les-meilleurs-cas-dusage-ia-emergent-desormais-des-metiers/462503">Frenchweb - Cas d'usage</a></li>
+</ul>
+
+<ul>
+<li><strong>Chaos tarifaire SaaS/IA</strong> : Les responsables IT font face à une refonte tarifaire généralisée du marché des logiciels, perturbé par l'arrivée des produits d'IA concurrents. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-responsables-it-face-au-chaos-tarifaire-du-saas-et-de-l-ia-100520.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Estonie : identité officielle pour agents IA</strong> : L'Estonie envisage de créer un cadre légal pour doter les agents IA d'une identité officielle, leur permettant d'effectuer des tâches en ligne de manière autonome. <a href="https://www.lemondeinformatique.fr/actualites/lire-l-estonie-envisage-de-creer-une-identite-officielle-des-agents-ia-100521.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Démantèlement de SocGholish</strong> : La chaîne d'infection SocGholish, active depuis 9 ans et utilisée pour des campagnes de malvertising, a été neutralisée dans le cadre de l'opération Endgame. <a href="https://www.zdnet.fr/actualites/neuf-ans-apres-sa-detection-la-chaine-dinfection-socgholish-enfin-demantelee-497440.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>AMD rétablit le chiffrement mémoire TSME</strong> : Suite aux protestations, AMD a fait marche arrière et promet de réintroduire le chiffrement transparent de la RAM (TSME) sur ses processeurs Ryzen grand public. <a href="https://next.ink/243601/suite-au-tolle-amd-reintroduit-le-chiffrement-memoire-sur-des-ryzen-grand-public/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Plan quantique américain</strong> : Trump signe deux décrets visant à déployer des ordinateurs quantiques dès 2028 et à renforcer la cybersécurité post-quantique d'ici 2031 pour assurer la domination technologique des États-Unis. <a href="https://www.zdnet.fr/actualites/trump-accelere-sur-le-quantique-des-ordinateurs-deployes-des-2028-une-cybersecurite-renforcee-dici-2031-497465.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>Samsung HBM4</strong> : Samsung a déjà franchi le milliard de dollars de revenus sur la mémoire HBM4 en moins de 5 mois et vise 10 milliards d'ici fin d'année, porté par la demande en IA. <a href="https://www.zdnet.fr/actualites/memoire-hbm4-samsung-franchit-le-milliard-de-dollars-en-moins-de-cinq-mois-et-vise-dix-fois-plus-dici-fin-dannee-497461.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260622-2011</guid>
-      <pubDate>Mon, 22 Jun 2026 20:11:30 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260623-1154</guid>
+      <pubDate>Tue, 23 Jun 2026 11:54:25 +0000</pubDate>
     </item>
   </channel>
 </rss>
