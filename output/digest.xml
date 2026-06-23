@@ -8,128 +8,174 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 23 Jun 2026 13:54:03 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 19:18:47 +0000</lastBuildDate>
     <item>
-      <title>Digest — 23/06 13h</title>
+      <title>Digest — 23/06 19h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Paquets npm malveillants ciblant Windows** : Des paquets npm se faisant passer pour des outils PostCSS (notamment `postcss-minify-selector` et `aes-decode-runner-pro`) déploient un RAT sur les postes Windows. Ils cumulent plusieurs centaines de téléchargements avant leur identification. [The Hacker News](https://thehackernews.com/2026/06/malicious-npm-packages-pose-as-postcss.html)
+- **Post-Quantum Cryptography : échéances fédérales US** : Un décret présidentiel impose aux agences fédérales américaines de migrer leurs actifs sensibles vers la cryptographie post-quantique d'ici fin 2030 (chiffrement) et fin 2031 (signatures). Ce calendrier contraignant donne un cap clair que les RSSI français peuvent utiliser comme référence pour leurs propres feuilles de route PQC. [The Hacker News](https://thehackernews.com/2026/06/trump-order-sets-2030-deadline-for.html)
 
-- **Condamnation de deux membres de Scattered Spider** : Un individu de 20 ans et un autre de 18 ans ont plaidé coupable pour l'intrusion ayant paralysé le réseau de Transport for London en 2024, entraînant des perturbations du service pendant plusieurs mois. [The Record](https://therecord.media/guilty-plea-tfl-cyberattack-scattered-spider-members)
+- **Supply chain : compromission de LastPass via Klue** : Des tokens OAuth dérobés lors de l'attaque sur Klue ont permis à des acteurs malveillants d'accéder aux données clients de l'environnement Salesforce de LastPass. Ce cas illustre une chaîne de rebond : une compromission initiale sur un fournisseur tiers devient le vecteur d'accès vers une cible finale de premier plan. [BleepingComputer](https://www.bleepingcomputer.com/news/security/lastpass-confirms-data-breach-in-klue-supply-chain-attack/)
 
-- **Saturation des équipes email face au phishing** : L'accumulation d'alertes liées au phishing, BEC et à la compromission de comptes submerge les équipes de sécurité email. L'approche par IA comportementale est présentée comme une piste pour automatiser la détection et réduire la charge opérationnelle. [BleepingComputer](https://www.bleepingcomputer.com/news/security/webinar-why-email-security-teams-are-drowning-in-alerts/)
+- **Sécurité des workflows CI/CD** : GitHub a mis à jour `actions/checkout` pour bloquer les attaques de type "pwn request", qui exploitent le trigger `pull_request_target` pour exécuter du code malveillant avec des privilèges élevés. Cette modification durcit par défaut la surface d'exposition des pipelines. [The Hacker News](https://thehackernews.com/2026/06/github-updates-actionscheckout-to-block.html)
+
+- **Sécurité des agents IA** : Une équipe de recherche a diffusé une compétence factice d'agent IA qui a contourné tous les scanners de sécurité et touché environ 26 000 agents, y compris sur des environnements d'entreprise. Cela démontre que l'écosystème des marketplaces d'agents manque encore de contrôles de sécurité matures. [The Hacker News](https://thehackernews.com/2026/06/fake-ai-agent-skill-passed-security.html)
+
+- **Menace macOS : campagne ClickFix par montage DMG silencieux** : Une nouvelle variante de ClickFix utilise des commandes Terminal pour monter silencieusement des DMG malveillants et exécuter des infostealers. La chaîne d'infection ne requiert qu'une action utilisateur initiale minimale. [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-macos-clickfix-attack-silently-mounts-dmgs-to-push-infostealer/)
+
+- **Cybercriminalité : condamnations du groupe Scattered Spider** : Deux membres de Scattered Spider ont plaidé coupable pour le piratage de Transport for London en 2024. Ce groupe, spécialisé dans l'ingénierie sociale avancée, reste une menace significative pour les grandes organisations. [BleepingComputer](https://www.bleepingcomputer.com/news/security/scattered-spider-members-plead-guilty-to-hacking-transport-for-london/)
+
+- **Gestion de l'exposition : validation de l'exploitabilité sans PoC public** : Il est désormais possible de prouver qu'une vulnérabilité est exploitable dans son environnement avant même qu'un exploit public ne circule, réduisant ainsi le délai entre divulgation et compromission. L'approche repose sur la validation dynamique de la posture de sécurité plutôt que sur la seule course au correctif. [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-exploit-doesnt-exist-you-can-still-prove-it-works-against-you/)
+
+- **Alerte Five Eyes sur l'IA et la cybersécurité** : Les agences de l'alliance Five Eyes alertent sur l'accélération de la menace cyber liée à l'IA, estimant que le calendrier de maturation de ces risques se compte en mois et non en années. Cela recoupe les préoccupations sur la sécurisation des agents et des chaînes d'approvisionnement. [The Record](https://therecord.media/five-eyes-alert-artificial-intelligence)
+
+- **Lutte anti-fraude : saisie d'infrastructure liée au groupe Huione** : Le DoJ a annoncé la saisie d'un compte cloud utilisé par des filiales du conglomérat Huione, déjà exclu du système financier américain. L'opération ciblait une infrastructure de cyber-escroqueries en Asie du Sud-Est. [The Record](https://therecord.media/feds-seize-alleged-cyber-scam-infrastructure-southeast-asia)
+
+- **Régulation : projet de loi US sur la sécurité en ligne des mineurs** : Une nouvelle proposition législative bipartisane abandonne l'obligation de moyens pour les plateformes concernant la prévention de préjudices spécifiques (suicide, troubles alimentaires, cyberharcèlement), ce qui réduit significativement le devoir de vigilance imposé aux opérateurs. [The Record](https://therecord.media/compromise-kids-online-safety-bill-unveiled-omission)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Campagne FortiBleed toujours active** : Des attaquants exploitent une vulnérabilité dans les pare-feux FortiGate pour déployer un sniffer en Golang, visant 430 000 équipements et ayant déjà collecté 110 millions d'identifiants. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/fortibleed-attackers-firewalls-credentials-stealers)
+- **Scattered Spider : deux membres plaident coupable au Royaume-Uni** : Deux opérateurs clés du groupe Scattered Spider ont plaidé coupable dès le premier jour de leur procès pour la cyberattaque d'août 2024 contre Transport for London. Cette affaire marque une avancée judiciaire notable contre ce groupe connu pour ses intrusions sophistiquées ciblant de grandes entreprises. [Krebs on Security](https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/)
 
-- **Co-infection sur serveurs SharePoint non patchés** : Une investigation Microsoft DART sur un ransomware a révélé deux attaquants distincts opérant simultanément dans le même réseau victime, chacun masquant involontairement l'activité de l'autre et complexifiant la réponse. [CSO Online](https://www.csoonline.com/article/4188359/unpatched-sharepoint-servers-opened-the-door-to-multiple-attackers-microsoft-finds.html)
+- **Post-quantique : les États-Unis fixent des échéances fédérales** : Deux décrets présidentiels signés par Donald Trump imposent un calendrier de migration vers la cryptographie post-quantique pour les agences fédérales américaines et lancent une initiative coordonnée d'investissement dans les technologies quantiques. Le texte établit une stratégie nationale pour anticiper la menace de décryptage par des ordinateurs quantiques. [CSO Online](https://www.csoonline.com/article/4188510/trump-sets-post-quantum-crypto-deadlines-launches-broader-federal-quantum-initiative.html)
 
-- **Contournement des garde-fous du modèle Fable 5 d'Anthropic** : Les restrictions censées empêcher l'utilisation du modèle à des fins de cyberattaques ont été neutralisées en quelques jours seulement après sa mise à disposition. [Schneier on Security](https://www.schneier.com/blog/archives/2026/06/anthropics-fable-5-model-jailbroken-within-days.html)
-
-- **OpenAI lance un programme de correction automatisée de vulnérabilités open source** : L'initiative "Patch the Planet", menée avec Trail of Bits, utilise l'IA pour identifier et corriger des failles dans des logiciels open source critiques, ciblant le risque supply chain. [CSO Online](https://www.csoonline.com/article/4188321/openai-rolls-out-ai-led-push-to-fix-open-source-software-flaws.html)
+- **SocGholish : le démantèlement met en lumière le rôle des TDS malveillants** : L'opération de démantèlement de SocGholish révèle l'utilisation systématique de systèmes de distribution de trafic (TDS) pour fournir un accès initial aux réseaux de victimes, notamment au profit de groupes comme Evil Corp. Cette infrastructure intermédiaire constitue un maillon critique dans la chaîne d'infection par faux navigateurs. [Dark Reading](https://www.darkreading.com/cyber-risk/socgholish-takedown-malicious-tds-threats)
 
 ## IA — Labos &amp; éditeurs
 
-- **Agents spécialisés en entreprise** : NVIDIA et IBM publient simultanément des frameworks pour construire des agents IA fiables et spécialisés, marquant le passage des pilotes génériques aux systèmes agentiques adaptés aux workflows métiers réels. NVIDIA fournit un toolkit open source avec runtime sécurisé, tandis qu'IBM propose CUGA, un harness léger avec deux douzaines d'exemples fonctionnels pour accélérer le développement. [NVIDIA Blog](https://blogs.nvidia.com/blog/nvidia-agent-toolkit-open-models-tools-skills-secure-runtime-ai-agents/) · [Hugging Face Blog](https://huggingface.co/blog/ibm-research/cuga-apps)
+- **GPT-5 en recherche biomédicale** : Le modèle Pro a permis d'élucider un mécanisme immunologique bloqué depuis 3 ans concernant le comportement des lymphocytes T. Les résultats ouvrent des pistes concrètes pour les thérapies anti-cancer et les maladies auto-immunes. [OpenAI News](https://openai.com/index/gpt-5-immunology-mystery)
+
+- **Multi-tenancy isolée sur Bedrock AgentCore** : AWS documente un pattern de mutualisation d'infrastructure avec isolation stricte des données entre locataires, démontré via des agents de santé servant plusieurs cliniques. L'architecture repose sur le modèle "pool" pour déployer des systèmes multi-tenants en production. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore/)
+
+## IA &amp; Tech — Médias internationaux
+
+- **Anthropic instrumentalise Slack pour absorber la mémoire d’entreprise** : Avec Claude Tag, l’IA n’est plus un simple assistant mais un agent permanent qui ingère l’ensemble des échanges Slack pour capturer les processus, l’historique décisionnel et les connaissances tacites de l’organisation. L’enjeu dépasse la productivité : il s’agit pour Anthropic de verrouiller les clients en s’incrustant au cœur de leur patrimoine informationnel. [TechCrunch](https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/)
+
+- **Tutoriel : pipeline ASR et traduction vocale multilingue avec NVIDIA Canary-1B-v2** : Mise en œuvre pratique d’un modèle open source capable de transcrire de la parole en anglais et de traduire directement vers le français, l’allemand, l’espagnol et l’italien, avec export automatisé des sous-titres au format SRT. Le traitement nécessite un GPU et un audio normalisé en 16 kHz mono. [MarkTechPost](https://www.marktechpost.com/2026/06/23/how-to-use-nvidia-canary-1b-v2-for-asr-translation-and-automatic-srt-subtitle-export-in-python/)
 
 ## Actualité tech FR
 
-- **Conformité IA : échéance du 2 août 2026 pour la transparence** : L'AI Act entre dans une phase d'application concrète. L'article 50 sur la transparence va imposer des obligations à de nombreuses entreprises utilisant l'IA, au-delà des seuls systèmes à haut risque. [Actu IA](https://www.actuia.com/actualite/ai-act-le-compte-a-rebours-est-lance-pour-les-entreprises-avant-le-2-aout-2026/)
+- **Fuite de données LastPass via un partenaire** : Des informations clients de LastPass ont été compromises suite à un incident de sécurité chez Klue, un partenaire tiers. L'attaque n'a pas touché les infrastructures de LastPass directement, mais le résultat est identique pour les utilisateurs concernés. [Next.ink](https://next.ink/243857/des-informations-clients-de-lastpass-compromises-apres-un-incident-chez-klue/)
 
-- **Fuites de données : la France en tête en Europe de l'Ouest** : Une étude de SurfShark montre une explosion des fuites de données en France en 2026. Les causes principales sont une hyper-centralisation des SI publics et des vulnérabilités web non corrigées. [ZDNet France](https://www.zdnet.fr/actualites/fuites-de-donnees-pourquoi-la-france-le-pays-deurope-de-louest-le-plus-touche-497451.htm#xtor=RSS-1)
+- **Faille matérielle sur anciens iPhone** : Une vulnérabilité non corrigeable a été découverte dans la puce des iPhone XR, XS, 11 et 11 Pro. Exploitée, elle permettrait d'ouvrir des voies d'attaque persistantes au niveau du bootloader, facilitant jailbreak et compromission profonde de l'appareil. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/une-faille-impossible-a-corriger-touche-quatre-modeles-d-i-phone-elle-ouvre-des-voies-d-attaques-plus-larges-pour-compromettre-le-c-ur-meme-de-la-securite-des-smartphones-d-apple_AV-202606230859.html)
 
-- **Sécurité applicative : initiatives OpenAI et AWS** : OpenAI lance son programme « Patch the Planet » pour aider à corriger les vulnérabilités open source, avec une version finale de son modèle GPT-5.5-Cyber. De son côté, AWS sort Continuum, un outil visant à sécuriser le code produit par les agents IA. [Next.ink (OpenAI)](https://next.ink/243650/securite-openai-veut-patcher-la-planete/) · [Le Monde Informatique (AWS)](https://www.lemondeinformatique.fr/actualites/lire-aws-lance-continuum-pour-securiser-le-code-100527.html)
+- **Projet de loi RIPOST et surveillance algorithmique** : Le texte présenté par Laurent Nuñez prévoit un arsenal de surveillance numérique incluant caméras algorithmiques, lecture automatique des plaques et centralisation des données. Il vise les troubles à l'ordre public (free parties, rodéos, protoxyde d'azote) et relance le débat sur l'extension de la vidéosurveillance automatisée. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/cameras-algorithmiques-lecture-automatique-des-plaques-et-centralisation-des-donnees-la-loi-ripost-presentee-a-l-assemblee-nationale-relance-le-debat-sur-la-surveillance-numerique_AN-202606230745.html)
 
-- **IA et propriété intellectuelle : stratégies de ChatGPT et pression sur Wikipédia** : OpenAI s'allie avec Getty Images pour permettre à son outil de génération d'images de servir de vraies photos sous licence quand elles existent. À l'inverse, Wikipédia durcit le ton face aux IA qui aspirent son contenu, ce qui fait chuter son trafic. [Siècle Digital (ChatGPT)](https://siecledigital.fr/2026/06/22/chatgpt-sallie-avec-getty-lune-des-plus-grandes-bibliotheques-dimages-au-monde/) · [Siècle Digital (Wikipédia)](https://siecledigital.fr/2026/06/23/pourquoi-wikipedia-voit-son-trafic-reculer-et-durcit-le-ton-contre-lia/)
+- **Alerte Five Eyes sur l'IA en cybersécurité** : L'alliance de renseignement prévient que des modèles d'IA pourraient dépasser les connaissances humaines en cybersécurité d'ici quelques mois. Les États et entreprises sont appelés à adapter leurs défenses face à la montée du piratage assisté par IA, illustrée par les avancées d'Anthropic. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/la-grande-alliance-des-agences-de-renseignement-five-eyes-s-inquiete-l-ia-pourrait-surpasser-les-connaissances-humaines-actuelles-en-cybersecurite-en-quelques-mois_AN-202606230750.html)
 
-- **Sécurité interne : Meta suspend le projet de surveillance de ses employés** : Les données issues d'un projet interne de surveillance (destiné à l'entraînement IA) se sont avérées accessibles à tous les employés de l'entreprise, forçant Meta à mettre le programme en pause. [Next.ink](https://next.ink/243649/meta-les-donnees-du-projet-de-surveillance-des-employes-etaient-accessibles-en-interne/)
+- **Transparence énergétique de l'IA exigée par l'ONU** : Antonio Guterres somme les géants de l'IA de mesurer et publier l'empreinte environnementale réelle de leurs datacenters, dénonçant l'opacité actuelle sur les coûts énergétiques massifs du secteur. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/il-est-temps-de-dire-toute-la-verite-antonio-guterres-secretaire-general-de-l-onu-appelle-les-grands-patrons-de-l-ia-a-ne-plus-cacher-les-enormes-couts-energetiques-des-centres-de-donnees_AD-202606230688.html)
 
-- **Déploiement de l'IA en entreprise : entre défis techniques et stagnation des projets** : 70 à 80 % des projets IA dans l'assurance restent au stade de POC. L'industrialisation se heurte à l'absence de bases sémantiques solides et à un fossé grandissant entre rapidité d'adoption et maîtrise de la sécurité. [Journal du Net](https://www.journaldunet.com/solutions/dsi/1551707-ia-et-assurance-les-cles-du-passage-a-l-echelle/) · [Journal du Net (bases)](https://www.journaldunet.com/intelligence-artificielle/1551625-au-dela-de-l-engouement-construire-les-bases-semantiques-de-l-ia-d-entreprise/)
+- **Rust recrute un ingénieur sécurité dédié** : La fondation Rust a embauché un ingénieur sécurité à plein temps pour un contrat initial de six mois. Sa mission : coordonner et faire évoluer la sécurité de l'écosystème du langage. [Next.ink](https://next.ink/243772/la-fondation-rust-se-paye-un-ingenieur-securite-a-plein-temps/)
 
-- **Justice : Darmanin annonce un "choc numérique" et le recours à l'IA** : Suite aux dysfonctionnements révélés par l'affaire Lyhanna, le ministère de la Justice promet une transformation numérique incluant l'utilisation de l'intelligence artificielle pour ses services. [Next.ink](https://next.ink/243809/affaire-lyhanna-gerald-darmanin-promet-un-choc-numerique-a-la-justice-et-de-lia/)
-
-- **Infrastructures et Big Tech : AWS, Nvidia et Mistral** : AWS revendique une efficience hydrique 7 fois supérieure à la moyenne pour ses datacenters. Nvidia officialise sa plateforme de calcul Vera Rubin. Mistral cherche un repositionnement face à la domination d'OpenAI sur le marché grand public et entreprise. [Le Monde Informatique (AWS)](https://www.lemondeinformatique.fr/actualites/lire-les-datacenters-aws-7-fois-plus-efficient-en-eau-que-la-moyenne-vraiment-100456.html) · [Le Monde Informatique (Nvidia)](https://www.lemondeinformatique.fr/actualites/lire-nvidia commercialise-sa-plateforme-vera-rubin-pour-l-ia-et-le-hpc-100524.html) · [Le Monde Informatique (Mistral)](https://www.lemondeinformatique.fr/actualites/lire-mistral-a-t-il-deja-perdu-ou-compris-ou-se-repositionner- -100528.html)
-
-- **Agents IA : nouveau protocole pour la découverte des ressources** : Le protocole ARD (Agent Resource Discovery) émerge pour standardiser la manière dont les agents IA identifient, catalogueent et accèdent aux ressources disponibles sur un réseau d'entreprise. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-avec-le-protocole-ard-les-agents-ia-explorent-les-ressources-disponibles-100526.html)</description>
+- **Sync-in 2.4** : La solution open source d'hébergement et synchronisation de fichiers (AGPL 3) améliore la fiabilité de ses transferts et renforce sa sécurité dans cette nouvelle version. [Next.ink](https://next.ink/brief-article/sync-in-2-4-fiabilise-ses-transferts-de-fichiers-et-ameliore-sa-securite/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Paquets npm malveillants ciblant Windows</strong> : Des paquets npm se faisant passer pour des outils PostCSS (notamment `postcss-minify-selector` et `aes-decode-runner-pro`) déploient un RAT sur les postes Windows. Ils cumulent plusieurs centaines de téléchargements avant leur identification. <a href="https://thehackernews.com/2026/06/malicious-npm-packages-pose-as-postcss.html">The Hacker News</a></li>
+<li><strong>Post-Quantum Cryptography : échéances fédérales US</strong> : Un décret présidentiel impose aux agences fédérales américaines de migrer leurs actifs sensibles vers la cryptographie post-quantique d'ici fin 2030 (chiffrement) et fin 2031 (signatures). Ce calendrier contraignant donne un cap clair que les RSSI français peuvent utiliser comme référence pour leurs propres feuilles de route PQC. <a href="https://thehackernews.com/2026/06/trump-order-sets-2030-deadline-for.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Condamnation de deux membres de Scattered Spider</strong> : Un individu de 20 ans et un autre de 18 ans ont plaidé coupable pour l'intrusion ayant paralysé le réseau de Transport for London en 2024, entraînant des perturbations du service pendant plusieurs mois. <a href="https://therecord.media/guilty-plea-tfl-cyberattack-scattered-spider-members">The Record</a></li>
+<li><strong>Supply chain : compromission de LastPass via Klue</strong> : Des tokens OAuth dérobés lors de l'attaque sur Klue ont permis à des acteurs malveillants d'accéder aux données clients de l'environnement Salesforce de LastPass. Ce cas illustre une chaîne de rebond : une compromission initiale sur un fournisseur tiers devient le vecteur d'accès vers une cible finale de premier plan. <a href="https://www.bleepingcomputer.com/news/security/lastpass-confirms-data-breach-in-klue-supply-chain-attack/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Saturation des équipes email face au phishing</strong> : L'accumulation d'alertes liées au phishing, BEC et à la compromission de comptes submerge les équipes de sécurité email. L'approche par IA comportementale est présentée comme une piste pour automatiser la détection et réduire la charge opérationnelle. <a href="https://www.bleepingcomputer.com/news/security/webinar-why-email-security-teams-are-drowning-in-alerts/">BleepingComputer</a></li>
+<li><strong>Sécurité des workflows CI/CD</strong> : GitHub a mis à jour `actions/checkout` pour bloquer les attaques de type "pwn request", qui exploitent le trigger `pull_request_target` pour exécuter du code malveillant avec des privilèges élevés. Cette modification durcit par défaut la surface d'exposition des pipelines. <a href="https://thehackernews.com/2026/06/github-updates-actionscheckout-to-block.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurité des agents IA</strong> : Une équipe de recherche a diffusé une compétence factice d'agent IA qui a contourné tous les scanners de sécurité et touché environ 26 000 agents, y compris sur des environnements d'entreprise. Cela démontre que l'écosystème des marketplaces d'agents manque encore de contrôles de sécurité matures. <a href="https://thehackernews.com/2026/06/fake-ai-agent-skill-passed-security.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Menace macOS : campagne ClickFix par montage DMG silencieux</strong> : Une nouvelle variante de ClickFix utilise des commandes Terminal pour monter silencieusement des DMG malveillants et exécuter des infostealers. La chaîne d'infection ne requiert qu'une action utilisateur initiale minimale. <a href="https://www.bleepingcomputer.com/news/security/new-macos-clickfix-attack-silently-mounts-dmgs-to-push-infostealer/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Cybercriminalité : condamnations du groupe Scattered Spider</strong> : Deux membres de Scattered Spider ont plaidé coupable pour le piratage de Transport for London en 2024. Ce groupe, spécialisé dans l'ingénierie sociale avancée, reste une menace significative pour les grandes organisations. <a href="https://www.bleepingcomputer.com/news/security/scattered-spider-members-plead-guilty-to-hacking-transport-for-london/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Gestion de l'exposition : validation de l'exploitabilité sans PoC public</strong> : Il est désormais possible de prouver qu'une vulnérabilité est exploitable dans son environnement avant même qu'un exploit public ne circule, réduisant ainsi le délai entre divulgation et compromission. L'approche repose sur la validation dynamique de la posture de sécurité plutôt que sur la seule course au correctif. <a href="https://www.bleepingcomputer.com/news/security/the-exploit-doesnt-exist-you-can-still-prove-it-works-against-you/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Alerte Five Eyes sur l'IA et la cybersécurité</strong> : Les agences de l'alliance Five Eyes alertent sur l'accélération de la menace cyber liée à l'IA, estimant que le calendrier de maturation de ces risques se compte en mois et non en années. Cela recoupe les préoccupations sur la sécurisation des agents et des chaînes d'approvisionnement. <a href="https://therecord.media/five-eyes-alert-artificial-intelligence">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Lutte anti-fraude : saisie d'infrastructure liée au groupe Huione</strong> : Le DoJ a annoncé la saisie d'un compte cloud utilisé par des filiales du conglomérat Huione, déjà exclu du système financier américain. L'opération ciblait une infrastructure de cyber-escroqueries en Asie du Sud-Est. <a href="https://therecord.media/feds-seize-alleged-cyber-scam-infrastructure-southeast-asia">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Régulation : projet de loi US sur la sécurité en ligne des mineurs</strong> : Une nouvelle proposition législative bipartisane abandonne l'obligation de moyens pour les plateformes concernant la prévention de préjudices spécifiques (suicide, troubles alimentaires, cyberharcèlement), ce qui réduit significativement le devoir de vigilance imposé aux opérateurs. <a href="https://therecord.media/compromise-kids-online-safety-bill-unveiled-omission">The Record</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Campagne FortiBleed toujours active</strong> : Des attaquants exploitent une vulnérabilité dans les pare-feux FortiGate pour déployer un sniffer en Golang, visant 430 000 équipements et ayant déjà collecté 110 millions d'identifiants. <a href="https://www.darkreading.com/cyberattacks-data-breaches/fortibleed-attackers-firewalls-credentials-stealers">Dark Reading</a></li>
+<li><strong>Scattered Spider : deux membres plaident coupable au Royaume-Uni</strong> : Deux opérateurs clés du groupe Scattered Spider ont plaidé coupable dès le premier jour de leur procès pour la cyberattaque d'août 2024 contre Transport for London. Cette affaire marque une avancée judiciaire notable contre ce groupe connu pour ses intrusions sophistiquées ciblant de grandes entreprises. <a href="https://krebsonsecurity.com/2026/06/scattered-spider-hackers-plead-guilty-on-day-1-of-trial/">Krebs on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Co-infection sur serveurs SharePoint non patchés</strong> : Une investigation Microsoft DART sur un ransomware a révélé deux attaquants distincts opérant simultanément dans le même réseau victime, chacun masquant involontairement l'activité de l'autre et complexifiant la réponse. <a href="https://www.csoonline.com/article/4188359/unpatched-sharepoint-servers-opened-the-door-to-multiple-attackers-microsoft-finds.html">CSO Online</a></li>
+<li><strong>Post-quantique : les États-Unis fixent des échéances fédérales</strong> : Deux décrets présidentiels signés par Donald Trump imposent un calendrier de migration vers la cryptographie post-quantique pour les agences fédérales américaines et lancent une initiative coordonnée d'investissement dans les technologies quantiques. Le texte établit une stratégie nationale pour anticiper la menace de décryptage par des ordinateurs quantiques. <a href="https://www.csoonline.com/article/4188510/trump-sets-post-quantum-crypto-deadlines-launches-broader-federal-quantum-initiative.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Contournement des garde-fous du modèle Fable 5 d'Anthropic</strong> : Les restrictions censées empêcher l'utilisation du modèle à des fins de cyberattaques ont été neutralisées en quelques jours seulement après sa mise à disposition. <a href="https://www.schneier.com/blog/archives/2026/06/anthropics-fable-5-model-jailbroken-within-days.html">Schneier on Security</a></li>
-</ul>
-
-<ul>
-<li><strong>OpenAI lance un programme de correction automatisée de vulnérabilités open source</strong> : L'initiative "Patch the Planet", menée avec Trail of Bits, utilise l'IA pour identifier et corriger des failles dans des logiciels open source critiques, ciblant le risque supply chain. <a href="https://www.csoonline.com/article/4188321/openai-rolls-out-ai-led-push-to-fix-open-source-software-flaws.html">CSO Online</a></li>
+<li><strong>SocGholish : le démantèlement met en lumière le rôle des TDS malveillants</strong> : L'opération de démantèlement de SocGholish révèle l'utilisation systématique de systèmes de distribution de trafic (TDS) pour fournir un accès initial aux réseaux de victimes, notamment au profit de groupes comme Evil Corp. Cette infrastructure intermédiaire constitue un maillon critique dans la chaîne d'infection par faux navigateurs. <a href="https://www.darkreading.com/cyber-risk/socgholish-takedown-malicious-tds-threats">Dark Reading</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Agents spécialisés en entreprise</strong> : NVIDIA et IBM publient simultanément des frameworks pour construire des agents IA fiables et spécialisés, marquant le passage des pilotes génériques aux systèmes agentiques adaptés aux workflows métiers réels. NVIDIA fournit un toolkit open source avec runtime sécurisé, tandis qu'IBM propose CUGA, un harness léger avec deux douzaines d'exemples fonctionnels pour accélérer le développement. <a href="https://blogs.nvidia.com/blog/nvidia-agent-toolkit-open-models-tools-skills-secure-runtime-ai-agents/">NVIDIA Blog</a> · <a href="https://huggingface.co/blog/ibm-research/cuga-apps">Hugging Face Blog</a></li>
+<li><strong>GPT-5 en recherche biomédicale</strong> : Le modèle Pro a permis d'élucider un mécanisme immunologique bloqué depuis 3 ans concernant le comportement des lymphocytes T. Les résultats ouvrent des pistes concrètes pour les thérapies anti-cancer et les maladies auto-immunes. <a href="https://openai.com/index/gpt-5-immunology-mystery">OpenAI News</a></li>
+</ul>
+
+<ul>
+<li><strong>Multi-tenancy isolée sur Bedrock AgentCore</strong> : AWS documente un pattern de mutualisation d'infrastructure avec isolation stricte des données entre locataires, démontré via des agents de santé servant plusieurs cliniques. L'architecture repose sur le modèle "pool" pour déployer des systèmes multi-tenants en production. <a href="https://aws.amazon.com/blogs/machine-learning/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Anthropic instrumentalise Slack pour absorber la mémoire d’entreprise</strong> : Avec Claude Tag, l’IA n’est plus un simple assistant mais un agent permanent qui ingère l’ensemble des échanges Slack pour capturer les processus, l’historique décisionnel et les connaissances tacites de l’organisation. L’enjeu dépasse la productivité : il s’agit pour Anthropic de verrouiller les clients en s’incrustant au cœur de leur patrimoine informationnel. <a href="https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Tutoriel : pipeline ASR et traduction vocale multilingue avec NVIDIA Canary-1B-v2</strong> : Mise en œuvre pratique d’un modèle open source capable de transcrire de la parole en anglais et de traduire directement vers le français, l’allemand, l’espagnol et l’italien, avec export automatisé des sous-titres au format SRT. Le traitement nécessite un GPU et un audio normalisé en 16 kHz mono. <a href="https://www.marktechpost.com/2026/06/23/how-to-use-nvidia-canary-1b-v2-for-asr-translation-and-automatic-srt-subtitle-export-in-python/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Conformité IA : échéance du 2 août 2026 pour la transparence</strong> : L'AI Act entre dans une phase d'application concrète. L'article 50 sur la transparence va imposer des obligations à de nombreuses entreprises utilisant l'IA, au-delà des seuls systèmes à haut risque. <a href="https://www.actuia.com/actualite/ai-act-le-compte-a-rebours-est-lance-pour-les-entreprises-avant-le-2-aout-2026/">Actu IA</a></li>
+<li><strong>Fuite de données LastPass via un partenaire</strong> : Des informations clients de LastPass ont été compromises suite à un incident de sécurité chez Klue, un partenaire tiers. L'attaque n'a pas touché les infrastructures de LastPass directement, mais le résultat est identique pour les utilisateurs concernés. <a href="https://next.ink/243857/des-informations-clients-de-lastpass-compromises-apres-un-incident-chez-klue/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Fuites de données : la France en tête en Europe de l'Ouest</strong> : Une étude de SurfShark montre une explosion des fuites de données en France en 2026. Les causes principales sont une hyper-centralisation des SI publics et des vulnérabilités web non corrigées. <a href="https://www.zdnet.fr/actualites/fuites-de-donnees-pourquoi-la-france-le-pays-deurope-de-louest-le-plus-touche-497451.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Faille matérielle sur anciens iPhone</strong> : Une vulnérabilité non corrigeable a été découverte dans la puce des iPhone XR, XS, 11 et 11 Pro. Exploitée, elle permettrait d'ouvrir des voies d'attaque persistantes au niveau du bootloader, facilitant jailbreak et compromission profonde de l'appareil. <a href="https://www.bfmtv.com/tech/cybersecurite/une-faille-impossible-a-corriger-touche-quatre-modeles-d-i-phone-elle-ouvre-des-voies-d-attaques-plus-larges-pour-compromettre-le-c-ur-meme-de-la-securite-des-smartphones-d-apple_AV-202606230859.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité applicative : initiatives OpenAI et AWS</strong> : OpenAI lance son programme « Patch the Planet » pour aider à corriger les vulnérabilités open source, avec une version finale de son modèle GPT-5.5-Cyber. De son côté, AWS sort Continuum, un outil visant à sécuriser le code produit par les agents IA. <a href="https://next.ink/243650/securite-openai-veut-patcher-la-planete/">Next.ink (OpenAI)</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-aws-lance-continuum-pour-securiser-le-code-100527.html">Le Monde Informatique (AWS)</a></li>
+<li><strong>Projet de loi RIPOST et surveillance algorithmique</strong> : Le texte présenté par Laurent Nuñez prévoit un arsenal de surveillance numérique incluant caméras algorithmiques, lecture automatique des plaques et centralisation des données. Il vise les troubles à l'ordre public (free parties, rodéos, protoxyde d'azote) et relance le débat sur l'extension de la vidéosurveillance automatisée. <a href="https://www.bfmtv.com/tech/vie-numerique/cameras-algorithmiques-lecture-automatique-des-plaques-et-centralisation-des-donnees-la-loi-ripost-presentee-a-l-assemblee-nationale-relance-le-debat-sur-la-surveillance-numerique_AN-202606230745.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>IA et propriété intellectuelle : stratégies de ChatGPT et pression sur Wikipédia</strong> : OpenAI s'allie avec Getty Images pour permettre à son outil de génération d'images de servir de vraies photos sous licence quand elles existent. À l'inverse, Wikipédia durcit le ton face aux IA qui aspirent son contenu, ce qui fait chuter son trafic. <a href="https://siecledigital.fr/2026/06/22/chatgpt-sallie-avec-getty-lune-des-plus-grandes-bibliotheques-dimages-au-monde/">Siècle Digital (ChatGPT)</a> · <a href="https://siecledigital.fr/2026/06/23/pourquoi-wikipedia-voit-son-trafic-reculer-et-durcit-le-ton-contre-lia/">Siècle Digital (Wikipédia)</a></li>
+<li><strong>Alerte Five Eyes sur l'IA en cybersécurité</strong> : L'alliance de renseignement prévient que des modèles d'IA pourraient dépasser les connaissances humaines en cybersécurité d'ici quelques mois. Les États et entreprises sont appelés à adapter leurs défenses face à la montée du piratage assisté par IA, illustrée par les avancées d'Anthropic. <a href="https://www.bfmtv.com/tech/cybersecurite/la-grande-alliance-des-agences-de-renseignement-five-eyes-s-inquiete-l-ia-pourrait-surpasser-les-connaissances-humaines-actuelles-en-cybersecurite-en-quelques-mois_AN-202606230750.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité interne : Meta suspend le projet de surveillance de ses employés</strong> : Les données issues d'un projet interne de surveillance (destiné à l'entraînement IA) se sont avérées accessibles à tous les employés de l'entreprise, forçant Meta à mettre le programme en pause. <a href="https://next.ink/243649/meta-les-donnees-du-projet-de-surveillance-des-employes-etaient-accessibles-en-interne/">Next.ink</a></li>
+<li><strong>Transparence énergétique de l'IA exigée par l'ONU</strong> : Antonio Guterres somme les géants de l'IA de mesurer et publier l'empreinte environnementale réelle de leurs datacenters, dénonçant l'opacité actuelle sur les coûts énergétiques massifs du secteur. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/il-est-temps-de-dire-toute-la-verite-antonio-guterres-secretaire-general-de-l-onu-appelle-les-grands-patrons-de-l-ia-a-ne-plus-cacher-les-enormes-couts-energetiques-des-centres-de-donnees_AD-202606230688.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Déploiement de l'IA en entreprise : entre défis techniques et stagnation des projets</strong> : 70 à 80 % des projets IA dans l'assurance restent au stade de POC. L'industrialisation se heurte à l'absence de bases sémantiques solides et à un fossé grandissant entre rapidité d'adoption et maîtrise de la sécurité. <a href="https://www.journaldunet.com/solutions/dsi/1551707-ia-et-assurance-les-cles-du-passage-a-l-echelle/">Journal du Net</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1551625-au-dela-de-l-engouement-construire-les-bases-semantiques-de-l-ia-d-entreprise/">Journal du Net (bases)</a></li>
+<li><strong>Rust recrute un ingénieur sécurité dédié</strong> : La fondation Rust a embauché un ingénieur sécurité à plein temps pour un contrat initial de six mois. Sa mission : coordonner et faire évoluer la sécurité de l'écosystème du langage. <a href="https://next.ink/243772/la-fondation-rust-se-paye-un-ingenieur-securite-a-plein-temps/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Justice : Darmanin annonce un "choc numérique" et le recours à l'IA</strong> : Suite aux dysfonctionnements révélés par l'affaire Lyhanna, le ministère de la Justice promet une transformation numérique incluant l'utilisation de l'intelligence artificielle pour ses services. <a href="https://next.ink/243809/affaire-lyhanna-gerald-darmanin-promet-un-choc-numerique-a-la-justice-et-de-lia/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Infrastructures et Big Tech : AWS, Nvidia et Mistral</strong> : AWS revendique une efficience hydrique 7 fois supérieure à la moyenne pour ses datacenters. Nvidia officialise sa plateforme de calcul Vera Rubin. Mistral cherche un repositionnement face à la domination d'OpenAI sur le marché grand public et entreprise. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-datacenters-aws-7-fois-plus-efficient-en-eau-que-la-moyenne-vraiment-100456.html">Le Monde Informatique (AWS)</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-nvidia commercialise-sa-plateforme-vera-rubin-pour-l-ia-et-le-hpc-100524.html">Le Monde Informatique (Nvidia)</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-mistral-a-t-il-deja-perdu-ou-compris-ou-se-repositionner- -100528.html">Le Monde Informatique (Mistral)</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents IA : nouveau protocole pour la découverte des ressources</strong> : Le protocole ARD (Agent Resource Discovery) émerge pour standardiser la manière dont les agents IA identifient, catalogueent et accèdent aux ressources disponibles sur un réseau d'entreprise. <a href="https://www.lemondeinformatique.fr/actualites/lire-avec-le-protocole-ard-les-agents-ia-explorent-les-ressources-disponibles-100526.html">Le Monde Informatique</a></li>
+<li><strong>Sync-in 2.4</strong> : La solution open source d'hébergement et synchronisation de fichiers (AGPL 3) améliore la fiabilité de ses transferts et renforce sa sécurité dans cette nouvelle version. <a href="https://next.ink/brief-article/sync-in-2-4-fiabilise-ses-transferts-de-fichiers-et-ameliore-sa-securite/">Next.ink</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260623-1354</guid>
-      <pubDate>Tue, 23 Jun 2026 13:54:03 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260623-1918</guid>
+      <pubDate>Tue, 23 Jun 2026 19:18:47 +0000</pubDate>
     </item>
   </channel>
 </rss>
