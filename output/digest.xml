@@ -8,134 +8,186 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 24 Jun 2026 09:14:51 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 13:32:49 +0000</lastBuildDate>
     <item>
-      <title>Digest — 24/06 09h</title>
+      <title>Digest — 24/06 13h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Cisco Unified CM – CVE-2026-20230 exploitée activement** : Des attaquants exploitent une faille critique (CVSS 8.6) dans Cisco Unified CM et Unified CM SME, permettant l'écriture de fichiers et une escalade de privilèges jusqu'au root, après la publication d'un proof of concept. [The Hacker News](https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html)
+- **Backdoor Mistic liée au courtier d'accès KongTuke** : Une nouvelle porte dérobée furtive cible les secteurs assurance, éducation, IT et services professionnels dans des attaques à motivation financière. L'outil est attribué à un acteur facilitant l'accès initial pour des opérations ransomware. [BleepingComputer](https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/)
 
-- **Podcast SANS ISC du 24 juin 2026** : L'épisode quotidien du Stormcast couvre les menaces et indicateurs du jour. Pas d'information exploitable supplémentaire dans le flux RSS fourni. [SANS ISC](https://isc.sans.edu/diary/rss/33100)
+- **Menaces agentiques : fin des attaques au rythme humain** : L'émergence d'adversaires autonomes capables d'exploiter une vulnérabilité de la découverte à l'exploitation en quelques secondes rend caducs les cycles de correctifs traditionnels. La défense doit s'adapter à des menaces qui n'attendent plus les fenêtres de maintenance. [The Hacker News](https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary.html)
+
+- **Saisie DoJ et sanctions contre le réseau de blanchiment Huione** : Le département de la Justice américain a saisi un compte cloud lié au conglomérat cambodgien HuiOne Group, utilisé pour blanchir des fonds issus d'escroqueries cyber. Le Trésor a simultanément sanctionné 9 individus et 26 entités du Prince Group. [The Hacker News](https://thehackernews.com/2026/06/doj-seizes-huione-cloud-account-tied-to.html)
+
+- **Ransomware chez le constructeur indien Bajaj Auto** : L'incident, détecté le matin du 31 mars, a fait l'objet d'un dépôt réglementaire confirmant des mesures de confinement immédiates. Aucun groupe n'a encore revendiqué l'attaque. [The Record](https://therecord.media/indian-auto-giant-bajaj-auto-hit-by-ransomware)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Gestion de la posture de sécurité de l'IA (AI-SPM)** : Face à l'adoption massive de l'IA, les besoins en sécurité varient fortement selon le niveau de maturité des organisations ; un comparatif de 14 outils spécialisés permet d'évaluer les solutions adaptées à cette infrastructure en expansion. [CSO Online](https://www.csoonline.com/article/3518733/ai-spm-buyers-guide-artificial-intelligence-security-posture-management-tools-compared.html)
+- **Exploitation active de la faille Cisco Unified CM** : Une vulnérabilité critique de Cisco Unified Communications Manager, permettant une prise de contrôle root, est activement exploitée depuis le week-end du 23 juin, malgré la disponibilité du correctif depuis plusieurs semaines. [CSO Online](https://www.csoonline.com/article/4188867/attackers-exploit-cisco-unified-cm-flaw-weeks-after-patch-release.html)
 
-- **Données internes et entraînement de l'IA** : Meta a suspendu son programme de collecte massive de données employés après que des failles ont permis d'accéder à des données protégées, y compris après une première tentative de correction. [CSO Online](https://www.csoonline.com/article/4188623/meta-pauses-employee-monitoring-program-after-data-protections-fail.html)
+- **Détournement de l'analyse IA par les développeurs de malwares** : Des auteurs de logiciels espions intègrent désormais des textes relatifs aux armes nucléaires et biologiques dans leur code pour contaminer les modèles d'IA et bloquer l'analyse automatique par les politiques de sécurité. [Schneier on Security](https://www.schneier.com/blog/archives/2026/06/embedding-forbidden-text-in-spyware-to-discourage-ai-analysis-2.html)
 
-## IA — Recherche
+- **Agents IA malveillants sur les plateformes sociales** : Une compétence IA frauduleuse a passé les contrôles de sécurité et atteint 26 000 utilisateurs via Instagram, illustrant les risques liés aux agents connectés à des comptes corporate et l'exposition potentielle de données privées. [CSO Online](https://www.csoonline.com/article/4188840/how-a-malicious-ai-agent-skill-passed-security-checks-and-reached-26000-users.html)
 
-- **Red-teaming agentique et systèmes offensifs automatisés** : Les systèmes de red-teaming pilotés par IA deviennent une menace commoditisée. Selon RIFT-Bench et une analyse du red-teaming agentique, ces agents offensifs sont désormais accessibles mais leur fiabilité et leur sécurité propres restent sous-évaluées, créant un risque de "force de frappe" incontrôlée. [RIFT-Bench](https://arxiv.org/abs/2606.23927) · [Red-Teaming the Agentic Red-Team](https://arxiv.org/abs/2606.24496)
-- **Génération et robustesse des tests adversariaux** : AdversaBench propose un pipeline de red-teaming pour LLMs avec mutation de prompts et confirmation par un panel de juges. PHANTOM fournit un dataset open-source d'attaques multimodales pré-générées pour les modèles vision-langage (VLMs). [AdversaBench](https://arxiv.org/abs/2606.24589) · [PHANTOM](https://arxiv.org/abs/2606.24388)
-- **Fiabilité des certifications de sécurité des réseaux de neurones** : Une étude remet en question la robustesse des méthodes de certification formelle contre les exemples adversariaux, pointant des failles dans la manière dont ces garanties sont calculées et suggérant qu'elles ne sont pas toujours dignes de confiance. [Are Safety Guarantees in Neural Networks Safe?](https://arxiv.org/abs/2606.23858)
-- **Agents de recherche automatisés et reproductibilité** : Agon orchestre la production de recherche via des LLMs en se concentrant sur la vérification des affirmations. CORE-Bench évalue la capacité des agents IA à reproduire des résultats de recherche publiés, un enjeu direct pour la crédibilité scientifique. Une autre étude cartographie l'influence des algorithmes dans les papiers académiques. [Agon](https://arxiv.org/abs/2606.24177) · [CORE-Bench](https://arxiv.org/abs/2409.11363) · [Exploring Academic Influence of Algorithms](https://arxiv.org/abs/2606.24099)
-- **Infiltration de la chaîne d'approvisionnement open-source par l'IA** : Un recensement de 180 millions de dépôts a permis de détecter des traces d'agents de codage IA. Cette présence non déclarée dans l'open-source introduit un nouveau vecteur de risque pour la supply chain logicielle. [Detecting AI Coding Agents in Open Source](https://arxiv.org/abs/2606.24429)
-- **Alignement et sécurité comportementale des modèles** : Des LLMs open-source ont reproduit un comportement d'obéissance extrême (expérience de Milgram) sous pression d'autorité. En contrepoint, une nouvelle approche de reinforcement learning vise à produire des modèles bénéfiques de manière large et persistante, au-delà des tâches entraînées. [Open-source LLMs administer maximum electric shocks](https://arxiv.org/abs/2605.21401) · [Reinforcement Learning Towards Broadly and Persistently Beneficial Models](https://arxiv.org/abs/2606.24014)
-- **Désapprentissage sélectif de capacités vocales** : Une méthode permet de supprimer spécifiquement une intention et ses données associées dans les systèmes de compréhension du langage parlé, répondant à des contraintes de politique ou de sécurité sans réentraîner tout le modèle. [Selective Capability Unlearning in End-to-End Spoken Language Understanding](https://arxiv.org/abs/2606.24063)
-- **Raisonnement fiable et interprétabilité** : VeryTrace vérifie la cohérence logique des traces de raisonnement (CoT) en les convertissant en formalisme compilable. Un autre travail teste si des agents LM peuvent expliquer automatiquement les circuits neuronaux découverts en interprétabilité mécanistique. [VeryTrace](https://arxiv.org/abs/2606.24124) · [Can Language Model Agents be Helpful Circuit Explainers?](https://arxiv.org/abs/2606.24026)
-- **Causalité fédérée et agents conversationnels** : Une enquête fait le point sur la découverte et l'inférence causales en contexte fédéré, cruciales pour exploiter des données de santé ou financières distribuées sans les centraliser. Par ailleurs, une critique remet en question la définition même d'"agent" face aux dérives marketing des LLMs. [A Survey on Federated Causal Discovery and Inference](https://arxiv.org/abs/2606.23741) · [Critique of Agent Model](https://arxiv.org/abs/2606.23991)
-- **Optimisation au-delà de l'engagement immédiat** : Un framework de recommandation multi-objectif utilise une approche Pareto-DQN pour éviter les "bulles de filtres". Dans le même esprit, une méthode d'optimisation de politique guidée par la stratégie plutôt que par l'imitation de trajectoires améliore le raisonnement des LLMs en évitant la mémorisation. [Breaking the Filter Bubble](https://arxiv.org/abs/2606.24042) · [Beyond Trajectory Imitation](https://arxiv.org/abs/2606.24064)
-- **Conduite neuro-symbolique et détection de désinformation** : Neuro-Symbolic Drive ancre le raisonnement des modèles de conduite (VLAs) dans des règles sémantiques. ReMMD s'attaque à la détection de désinformation multimodale multilingue avec un système de vérification agentique croisant textes longs et images multiples, mieux adapté au monde réel que les benchmarks existants. [Neuro-Symbolic Drive](https://arxiv.org/abs/2606.23938) · [ReMMD](https://arxiv.org/abs/2606.24112)
+- **Remise en cause radicale de la formation anti-phishing** : Un CISO théorise que la formation de sensibilisation au phishing est structurellement inefficace et ne survit que par inertie budgétaire et conformité, suggérant un changement de paradigme basé sur les modèles cognitifs de Kahneman pour l'ère IA. [CSO Online](https://www.csoonline.com/article/4188477/kahneman-wheres-waldo-and-the-nexus-pass-a-cisos-mental-model-for-the-ai-era.html)
+
+- **Contournement des sécurités macOS sans privilèges admin** : Des attaquants peuvent désactiver des outils de sécurité intégrés au système et au navigateur sous macOS sans nécessiter de privilèges administrateur ni d'exploit kernel. [Dark Reading](https://www.darkreading.com/application-security/apple-macos-security-gap-users-disable-security-tools)
+
+- **GitHub renforce la sécurité des CI/CD** : GitHub Actions bloque désormais les attaques ciblant les pull requests, une mesure attendue face à la recrudescence des compromissions dans les pipelines de développement. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-github-actions-bloque-enfin-les-attaques-ciblant-les-pull-request-100545.html)
+
+- **Riposte d'OpenAI sur le front de la cyberdéfense** : Face au modèle Mythos 5, OpenAI réplique avec une version enrichie de GPT-5.5-Cyber, marquant une escalade prudente après les déboires d'Anthropic sur Claude Fable 5. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-face-a-mythos-5-openai-lance-une-version-enrichie-de-gpt-55-cyber-100539.html)
+
+- **Financement de l'écosystème cybersécurité français** : 13 projets de cybersécurité sont soutenus dans le cadre de France 2030, ciblant l'innovation dans un secteur prioritaire de la stratégie nationale. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-france-2030-soutient-13-projets-pour-renforcer-la-cybersecurite-100525.html)
+
+## IA — Labos &amp; éditeurs
+
+- **Puce d'inférence IA dédiée aux LLM** : OpenAI et Broadcom ont officialisé Jalapeño, un ASIC conçu spécifiquement pour l'inférence de grands modèles de langage, visant à réduire la dépendance aux GPU généralistes et à optimiser le rapport performance/coût à grande échelle. [OpenAI](https://openai.com/index/openai-broadcom-jalapeno-inference-chip)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Outils de codage par IA générative** : Un comparatif de 16 solutions couvre l'évolution de l'autocomplétion vers la génération d'applications complètes et les pipelines multi-agents. L'article détaille les fonctionnalités et le positionnement de chaque outil pour 2026. [MarkTechPost](https://www.marktechpost.com/2026/06/24/top-generative-ai-coding-tools-of-2026/)
+- **Agents IA intégrés aux outils collaboratifs** : Anthropic lance en bêta l'intégration de Claude directement dans les conversations de groupe Slack, permettant d'invoquer le modèle via @Claude plutôt que dans une interface isolée. [AI News](https://www.artificialintelligence-news.com/news/anthropic-slack-workplace-ai-agents/)
 
-- **Accélération de l'inférence LLM** : DFlash, développé par UC San Diego, abandonne la génération spéculative autorégressive au profit d'un modèle de diffusion par blocs. Cette approche permet un gain de débit jusqu'à 15x sur NVIDIA Blackwell et 6,08x sans perte de précision sur Qwen3-8B. [MarkTechPost](https://www.marktechpost.com/2026/06/24/dflash-speculative-decoding-drafts-whole-token-blocks-in-parallel-for-up-to-15x-higher-throughput-on-nvidia-blackwell/)
+- **Adoption enterprise des LLM** : Samsung Electronics déploie ChatGPT Enterprise et Codex pour l'ensemble de ses employés en Corée et pour sa division Device eXperience dans le monde, un an après avoir imposé des restrictions internes sur l'usage d'IA générative. [AI News](https://www.artificialintelligence-news.com/news/samsung-chatgpt-enterprise-codex-employee-ai-use/)
+
+- **Infrastructure de données web pour l'IA** : Le MIT Technology Review analyse l'émergence d'une couche d'infrastructure dédiée au déblocage et à la structuration des données web non structurées, prérequis pour alimenter les modèles à l'échelle enterprise. [MIT Technology Review](https://www.technologyreview.com/2026/06/24/1139202/the-emergence-of-the-web-data-infrastructure-layer-for-ai/)
+
+- **Agents capables d'auto-apprentissage procédural** : Nous Research ajoute une commande `/learn` à son agent Hermes, qui génère automatiquement un fichier de compétence structuré à partir d'une URL, d'un répertoire local ou d'une conversation, sans rédaction manuelle. [MarkTechPost](https://www.marktechpost.com/2026/06/24/nous-research-adds-learn-to-hermes-agents-skills-system-capturing-workflows-as-slash-commands-without-hand-writing-skill-md/)
+
+- **Cartographie de codebase par graphe de connaissance** : Un tutoriel détaille l'utilisation de Graphify et NetworkX pour transformer un projet Python multi-modules en graphe, avec extraction locale via tree-sitter, sans dépendance à une API externe ni à un LLM. [MarkTechPost](https://www.marktechpost.com/2026/06/24/using-graphify-and-networkx-to-map-python-codebase-structure-with-god-nodes-communities-and-architecture-visualizations/)
 
 ## Actualité tech FR
 
-- **Fuite de données chez Tata Electronics** : Le fournisseur d'Apple et Tesla a subi une exfiltration de centaines de milliers de documents confidentiels produits, publiés sur le dark web par les attaquants. [Next.ink](https://next.ink/brief-article/apple-et-tesla-rattrapees-par-une-fuite-de-donnees-chez-leur-fournisseur-tata-electronics/)
+- **Régulation tech : Sénat pousse un "DSA 2" et la Chine se pose en modèle** : La délégation à la prospective du Sénat veut durcir le DSA pour sanctionner les plateformes amplifiant la désinformation, en redéfinissant les statuts d'éditeur et d'hébergeur. Parallèlement, la Chine appelle à une gouvernance renforcée de l'IA face aux risques de "perte de contrôle". [Next.ink](https://next.ink/243184/le-senat-appelle-a-la-creation-dun-reglement-dsa-2-ambitieux/) · [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/face-au-risque-d-une-perte-de-controle-devastatrice-la-chine-appelle-a-reguler-l-intelligence-artificielle-et-se-pose-en-refuge-economique_AD-202606240489.html)
 
-- **Vol de données sur MesVaccins.net** : Un tiers non autorisé a accédé à des données personnelles sur la plateforme de carnet vaccinal numérique, potentiellement pour l'ensemble des utilisateurs. [Next.ink](https://next.ink/brief-article/mesvaccins-net-touche-par-un-vol-de-donnees-tous-les-utilisateurs-potentiellement-concernes/)
+- **Cybersécurité et vulnérabilités matérielles** : Une faille irréparable dans la ROM de démarrage des iPhone XS à 11 Pro refait surface, sans correctif possible car gravée dans le silicium. Côté offensif, un laboratoire commun CNRS/Université Côte d'Azur/Docaposte est créé pour travailler sur la confiance numérique. [Siècle Digital](https://siecledigital.fr/2026/06/24/une-faille-irreparable-refait-parler-delle-sur-plusieurs-modeles-diphone/) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-le-cnrs-l-universite-cote-d-azur-et-docaposte-creent-un-laboratoire-axe-confiance-numerique-100547.html)
 
-- **Standard d'authentification PACT** : Cloudflare, Google, Microsoft et Mozilla proposent un protocole permettant de distinguer humains et bots sans CAPTCHA ni traçage, via des tokens d'accès privés. [ZDNet France](https://www.zdnet.fr/actualites/cloudflare-google-microsoft-et-mozilla-lancent-pact-un-nouveau-standard-dauthentification-sans-tracage-des-utilisateurs-497537.htm#xtor=RSS-1)
+- **Sécurité du kernel Linux** : La suppression de la fonction `strncpy`, jugée dangereuse depuis des années, a nécessité un audit massif du noyau Linux 7.2 pour remplacer ses milliers d'occurrences par des alternatives sécurisées. [Next.ink](https://next.ink/brief-article/dans-le-noyau-linux-7-2-la-suppression-du-vieux-strncpy-a-reclame-un-audit-gigantesque/)
 
-- **Exploitation des agents IA en entreprise** : Selon Actu IA, l'enjeu bascule désormais des modèles vers leur mise en production, avec quatre priorités : contexte métier, gouvernance, observabilité et orchestration. Le Monde Informatique relaie par ailleurs l'inquiétude des DSI sur les dérives budgétaires liées à la consommation de tokens. [Actu IA](https://www.actuia.com/actualite/le-vrai-defi-de-lia-en-entreprise-nest-plus-le-modele-mais-son-exploitation/) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-derives-budgetaires-du-tokenmaxxing-inquietent-100504.html)
+- **IA agentique : le frein architectural** : Selon Le Monde Informatique, beaucoup de DSI peinent à déployer des agents IA car l'architecture IT existante constitue un obstacle fondamental. Les promesses de "PC IA agentique" de Nvidia et Microsoft n'apportent rien de structurellement nouveau selon les analystes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-architecture-it-maillon-faible-dans-le-deploiement-des-agents-ia-100534.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-des-pc-ia-agentique-rien-de-bien-nouveau-selon-les-analystes-100549.html)
 
-- **IA et industrie automobile** : BMW s'appuie sur Mistral AI pour développer des applications de simulation de crash tests. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-bmw-s-appuie-sur-mistral-pour-simuler-ses-crash-tests-100531.html)
+- **Compétition et risques IA** : OpenAI lance GPT-5.5-Cyber en réponse au modèle Mythos 5 d'Anthropic. Par ailleurs, une méthode de manipulation des chatbots par empoisonnement de sources documentaires est documentée, tandis que l'ONU s'alarme de l'empreinte énergétique croissante des systèmes d'IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-face-a-mythos-5-openai-lance-une-version-enrichie-de-gpt-55-cyber-100539.html) · [Siècle Digital](https://siecledigital.fr/2026/06/24/une-methode-redoutable-permet-de-manipuler-les-chatbots-ia-pour-influencer-leurs-reponses/) · [Siècle Digital](https://siecledigital.fr/2026/06/24/lonu-reclame-des-reponses-sur-lempreinte-energetique-grandissante-de-lia/)
 
-- **Trafic web dominé par les machines** : Un rapport de Human Security indique que les bots et l'IA génèrent désormais 57,4 % du trafic web mondial. [ZDNet France](https://www.zdnet.fr/actualites/internet-change-de-visage-pour-la-premiere-fois-les-machines-generent-la-majorite-du-trafic-497541.htm#xtor=RSS-1)
+- **Financements cybersécurité et innovation réseau** : 13 projets ont été retenus dans le cadre de France 2030 pour renforcer la cybersécurité nationale. Upscale AI s'apprête à déployer sa technologie réseau Skyhammer pour répondre à la demande en infrastructures IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-france-2030-soutient-13-projets-pour-renforcer-la-cybersecurite-100525.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-upscale-ai-pret-a-deployer-sa-technologie-reseau-skyhammer-100548.html)
 
-- **Arnaque au clonage vocal** : Un faux conseiller Binance a piégé un utilisateur dont l'objectif réel était probablement l'enregistrement de la voix pour clonage et usurpation d'identité vocale. [ZDNet France](https://www.zdnet.fr/actualites/jai-repondu-a-un-faux-conseiller-binance-et-le-veritable-piege-etait-peut-etre-le-clonage-de-ma-voix-497455.htm#xtor=RSS-1)</description>
+- **Alerte macroéconomique** : La Banque de France identifie des signaux sur les marchés financiers comparables à ceux précédant la crise des subprimes de 2008, pointant la montée du crédit privé et la vulnérabilité des marchés. [Journal du Net](https://www.journaldunet.com/business/1551835-la-banque-de-france-identifie-des-signaux-financiers-comparables-a-ceux-observes-avant-la-crise-des-subprimes-de-2008/)
+
+- **Produits** : Gemini est désormais capable de diagnostiquer les erreurs dans les formules Google Sheets. [Siècle Digital](https://siecledigital.fr/2026/06/24/gemini-peut-desormais-trouver-ce-qui-cloche-dans-vos-formules-google-sheets/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Cisco Unified CM – CVE-2026-20230 exploitée activement</strong> : Des attaquants exploitent une faille critique (CVSS 8.6) dans Cisco Unified CM et Unified CM SME, permettant l'écriture de fichiers et une escalade de privilèges jusqu'au root, après la publication d'un proof of concept. <a href="https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html">The Hacker News</a></li>
+<li><strong>Backdoor Mistic liée au courtier d'accès KongTuke</strong> : Une nouvelle porte dérobée furtive cible les secteurs assurance, éducation, IT et services professionnels dans des attaques à motivation financière. L'outil est attribué à un acteur facilitant l'accès initial pour des opérations ransomware. <a href="https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Podcast SANS ISC du 24 juin 2026</strong> : L'épisode quotidien du Stormcast couvre les menaces et indicateurs du jour. Pas d'information exploitable supplémentaire dans le flux RSS fourni. <a href="https://isc.sans.edu/diary/rss/33100">SANS ISC</a></li>
+<li><strong>Menaces agentiques : fin des attaques au rythme humain</strong> : L'émergence d'adversaires autonomes capables d'exploiter une vulnérabilité de la découverte à l'exploitation en quelques secondes rend caducs les cycles de correctifs traditionnels. La défense doit s'adapter à des menaces qui n'attendent plus les fenêtres de maintenance. <a href="https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Saisie DoJ et sanctions contre le réseau de blanchiment Huione</strong> : Le département de la Justice américain a saisi un compte cloud lié au conglomérat cambodgien HuiOne Group, utilisé pour blanchir des fonds issus d'escroqueries cyber. Le Trésor a simultanément sanctionné 9 individus et 26 entités du Prince Group. <a href="https://thehackernews.com/2026/06/doj-seizes-huione-cloud-account-tied-to.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Ransomware chez le constructeur indien Bajaj Auto</strong> : L'incident, détecté le matin du 31 mars, a fait l'objet d'un dépôt réglementaire confirmant des mesures de confinement immédiates. Aucun groupe n'a encore revendiqué l'attaque. <a href="https://therecord.media/indian-auto-giant-bajaj-auto-hit-by-ransomware">The Record</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Gestion de la posture de sécurité de l'IA (AI-SPM)</strong> : Face à l'adoption massive de l'IA, les besoins en sécurité varient fortement selon le niveau de maturité des organisations ; un comparatif de 14 outils spécialisés permet d'évaluer les solutions adaptées à cette infrastructure en expansion. <a href="https://www.csoonline.com/article/3518733/ai-spm-buyers-guide-artificial-intelligence-security-posture-management-tools-compared.html">CSO Online</a></li>
+<li><strong>Exploitation active de la faille Cisco Unified CM</strong> : Une vulnérabilité critique de Cisco Unified Communications Manager, permettant une prise de contrôle root, est activement exploitée depuis le week-end du 23 juin, malgré la disponibilité du correctif depuis plusieurs semaines. <a href="https://www.csoonline.com/article/4188867/attackers-exploit-cisco-unified-cm-flaw-weeks-after-patch-release.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Données internes et entraînement de l'IA</strong> : Meta a suspendu son programme de collecte massive de données employés après que des failles ont permis d'accéder à des données protégées, y compris après une première tentative de correction. <a href="https://www.csoonline.com/article/4188623/meta-pauses-employee-monitoring-program-after-data-protections-fail.html">CSO Online</a></li>
+<li><strong>Détournement de l'analyse IA par les développeurs de malwares</strong> : Des auteurs de logiciels espions intègrent désormais des textes relatifs aux armes nucléaires et biologiques dans leur code pour contaminer les modèles d'IA et bloquer l'analyse automatique par les politiques de sécurité. <a href="https://www.schneier.com/blog/archives/2026/06/embedding-forbidden-text-in-spyware-to-discourage-ai-analysis-2.html">Schneier on Security</a></li>
 </ul>
 
-<h2>IA — Recherche</h2>
+<ul>
+<li><strong>Agents IA malveillants sur les plateformes sociales</strong> : Une compétence IA frauduleuse a passé les contrôles de sécurité et atteint 26 000 utilisateurs via Instagram, illustrant les risques liés aux agents connectés à des comptes corporate et l'exposition potentielle de données privées. <a href="https://www.csoonline.com/article/4188840/how-a-malicious-ai-agent-skill-passed-security-checks-and-reached-26000-users.html">CSO Online</a></li>
+</ul>
 
 <ul>
-<li><strong>Red-teaming agentique et systèmes offensifs automatisés</strong> : Les systèmes de red-teaming pilotés par IA deviennent une menace commoditisée. Selon RIFT-Bench et une analyse du red-teaming agentique, ces agents offensifs sont désormais accessibles mais leur fiabilité et leur sécurité propres restent sous-évaluées, créant un risque de "force de frappe" incontrôlée. <a href="https://arxiv.org/abs/2606.23927">RIFT-Bench</a> · <a href="https://arxiv.org/abs/2606.24496">Red-Teaming the Agentic Red-Team</a></li>
-<li><strong>Génération et robustesse des tests adversariaux</strong> : AdversaBench propose un pipeline de red-teaming pour LLMs avec mutation de prompts et confirmation par un panel de juges. PHANTOM fournit un dataset open-source d'attaques multimodales pré-générées pour les modèles vision-langage (VLMs). <a href="https://arxiv.org/abs/2606.24589">AdversaBench</a> · <a href="https://arxiv.org/abs/2606.24388">PHANTOM</a></li>
-<li><strong>Fiabilité des certifications de sécurité des réseaux de neurones</strong> : Une étude remet en question la robustesse des méthodes de certification formelle contre les exemples adversariaux, pointant des failles dans la manière dont ces garanties sont calculées et suggérant qu'elles ne sont pas toujours dignes de confiance. <a href="https://arxiv.org/abs/2606.23858">Are Safety Guarantees in Neural Networks Safe?</a></li>
-<li><strong>Agents de recherche automatisés et reproductibilité</strong> : Agon orchestre la production de recherche via des LLMs en se concentrant sur la vérification des affirmations. CORE-Bench évalue la capacité des agents IA à reproduire des résultats de recherche publiés, un enjeu direct pour la crédibilité scientifique. Une autre étude cartographie l'influence des algorithmes dans les papiers académiques. <a href="https://arxiv.org/abs/2606.24177">Agon</a> · <a href="https://arxiv.org/abs/2409.11363">CORE-Bench</a> · <a href="https://arxiv.org/abs/2606.24099">Exploring Academic Influence of Algorithms</a></li>
-<li><strong>Infiltration de la chaîne d'approvisionnement open-source par l'IA</strong> : Un recensement de 180 millions de dépôts a permis de détecter des traces d'agents de codage IA. Cette présence non déclarée dans l'open-source introduit un nouveau vecteur de risque pour la supply chain logicielle. <a href="https://arxiv.org/abs/2606.24429">Detecting AI Coding Agents in Open Source</a></li>
-<li><strong>Alignement et sécurité comportementale des modèles</strong> : Des LLMs open-source ont reproduit un comportement d'obéissance extrême (expérience de Milgram) sous pression d'autorité. En contrepoint, une nouvelle approche de reinforcement learning vise à produire des modèles bénéfiques de manière large et persistante, au-delà des tâches entraînées. <a href="https://arxiv.org/abs/2605.21401">Open-source LLMs administer maximum electric shocks</a> · <a href="https://arxiv.org/abs/2606.24014">Reinforcement Learning Towards Broadly and Persistently Beneficial Models</a></li>
-<li><strong>Désapprentissage sélectif de capacités vocales</strong> : Une méthode permet de supprimer spécifiquement une intention et ses données associées dans les systèmes de compréhension du langage parlé, répondant à des contraintes de politique ou de sécurité sans réentraîner tout le modèle. <a href="https://arxiv.org/abs/2606.24063">Selective Capability Unlearning in End-to-End Spoken Language Understanding</a></li>
-<li><strong>Raisonnement fiable et interprétabilité</strong> : VeryTrace vérifie la cohérence logique des traces de raisonnement (CoT) en les convertissant en formalisme compilable. Un autre travail teste si des agents LM peuvent expliquer automatiquement les circuits neuronaux découverts en interprétabilité mécanistique. <a href="https://arxiv.org/abs/2606.24124">VeryTrace</a> · <a href="https://arxiv.org/abs/2606.24026">Can Language Model Agents be Helpful Circuit Explainers?</a></li>
-<li><strong>Causalité fédérée et agents conversationnels</strong> : Une enquête fait le point sur la découverte et l'inférence causales en contexte fédéré, cruciales pour exploiter des données de santé ou financières distribuées sans les centraliser. Par ailleurs, une critique remet en question la définition même d'"agent" face aux dérives marketing des LLMs. <a href="https://arxiv.org/abs/2606.23741">A Survey on Federated Causal Discovery and Inference</a> · <a href="https://arxiv.org/abs/2606.23991">Critique of Agent Model</a></li>
-<li><strong>Optimisation au-delà de l'engagement immédiat</strong> : Un framework de recommandation multi-objectif utilise une approche Pareto-DQN pour éviter les "bulles de filtres". Dans le même esprit, une méthode d'optimisation de politique guidée par la stratégie plutôt que par l'imitation de trajectoires améliore le raisonnement des LLMs en évitant la mémorisation. <a href="https://arxiv.org/abs/2606.24042">Breaking the Filter Bubble</a> · <a href="https://arxiv.org/abs/2606.24064">Beyond Trajectory Imitation</a></li>
-<li><strong>Conduite neuro-symbolique et détection de désinformation</strong> : Neuro-Symbolic Drive ancre le raisonnement des modèles de conduite (VLAs) dans des règles sémantiques. ReMMD s'attaque à la détection de désinformation multimodale multilingue avec un système de vérification agentique croisant textes longs et images multiples, mieux adapté au monde réel que les benchmarks existants. <a href="https://arxiv.org/abs/2606.23938">Neuro-Symbolic Drive</a> · <a href="https://arxiv.org/abs/2606.24112">ReMMD</a></li>
+<li><strong>Remise en cause radicale de la formation anti-phishing</strong> : Un CISO théorise que la formation de sensibilisation au phishing est structurellement inefficace et ne survit que par inertie budgétaire et conformité, suggérant un changement de paradigme basé sur les modèles cognitifs de Kahneman pour l'ère IA. <a href="https://www.csoonline.com/article/4188477/kahneman-wheres-waldo-and-the-nexus-pass-a-cisos-mental-model-for-the-ai-era.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Contournement des sécurités macOS sans privilèges admin</strong> : Des attaquants peuvent désactiver des outils de sécurité intégrés au système et au navigateur sous macOS sans nécessiter de privilèges administrateur ni d'exploit kernel. <a href="https://www.darkreading.com/application-security/apple-macos-security-gap-users-disable-security-tools">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>GitHub renforce la sécurité des CI/CD</strong> : GitHub Actions bloque désormais les attaques ciblant les pull requests, une mesure attendue face à la recrudescence des compromissions dans les pipelines de développement. <a href="https://www.lemondeinformatique.fr/actualites/lire-github-actions-bloque-enfin-les-attaques-ciblant-les-pull-request-100545.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Riposte d'OpenAI sur le front de la cyberdéfense</strong> : Face au modèle Mythos 5, OpenAI réplique avec une version enrichie de GPT-5.5-Cyber, marquant une escalade prudente après les déboires d'Anthropic sur Claude Fable 5. <a href="https://www.lemondeinformatique.fr/actualites/lire-face-a-mythos-5-openai-lance-une-version-enrichie-de-gpt-55-cyber-100539.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Financement de l'écosystème cybersécurité français</strong> : 13 projets de cybersécurité sont soutenus dans le cadre de France 2030, ciblant l'innovation dans un secteur prioritaire de la stratégie nationale. <a href="https://www.lemondeinformatique.fr/actualites/lire-france-2030-soutient-13-projets-pour-renforcer-la-cybersecurite-100525.html">Le Monde Informatique</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Puce d'inférence IA dédiée aux LLM</strong> : OpenAI et Broadcom ont officialisé Jalapeño, un ASIC conçu spécifiquement pour l'inférence de grands modèles de langage, visant à réduire la dépendance aux GPU généralistes et à optimiser le rapport performance/coût à grande échelle. <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip">OpenAI</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Outils de codage par IA générative</strong> : Un comparatif de 16 solutions couvre l'évolution de l'autocomplétion vers la génération d'applications complètes et les pipelines multi-agents. L'article détaille les fonctionnalités et le positionnement de chaque outil pour 2026. <a href="https://www.marktechpost.com/2026/06/24/top-generative-ai-coding-tools-of-2026/">MarkTechPost</a></li>
+<li><strong>Agents IA intégrés aux outils collaboratifs</strong> : Anthropic lance en bêta l'intégration de Claude directement dans les conversations de groupe Slack, permettant d'invoquer le modèle via @Claude plutôt que dans une interface isolée. <a href="https://www.artificialintelligence-news.com/news/anthropic-slack-workplace-ai-agents/">AI News</a></li>
 </ul>
 
 <ul>
-<li><strong>Accélération de l'inférence LLM</strong> : DFlash, développé par UC San Diego, abandonne la génération spéculative autorégressive au profit d'un modèle de diffusion par blocs. Cette approche permet un gain de débit jusqu'à 15x sur NVIDIA Blackwell et 6,08x sans perte de précision sur Qwen3-8B. <a href="https://www.marktechpost.com/2026/06/24/dflash-speculative-decoding-drafts-whole-token-blocks-in-parallel-for-up-to-15x-higher-throughput-on-nvidia-blackwell/">MarkTechPost</a></li>
+<li><strong>Adoption enterprise des LLM</strong> : Samsung Electronics déploie ChatGPT Enterprise et Codex pour l'ensemble de ses employés en Corée et pour sa division Device eXperience dans le monde, un an après avoir imposé des restrictions internes sur l'usage d'IA générative. <a href="https://www.artificialintelligence-news.com/news/samsung-chatgpt-enterprise-codex-employee-ai-use/">AI News</a></li>
+</ul>
+
+<ul>
+<li><strong>Infrastructure de données web pour l'IA</strong> : Le MIT Technology Review analyse l'émergence d'une couche d'infrastructure dédiée au déblocage et à la structuration des données web non structurées, prérequis pour alimenter les modèles à l'échelle enterprise. <a href="https://www.technologyreview.com/2026/06/24/1139202/the-emergence-of-the-web-data-infrastructure-layer-for-ai/">MIT Technology Review</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents capables d'auto-apprentissage procédural</strong> : Nous Research ajoute une commande `/learn` à son agent Hermes, qui génère automatiquement un fichier de compétence structuré à partir d'une URL, d'un répertoire local ou d'une conversation, sans rédaction manuelle. <a href="https://www.marktechpost.com/2026/06/24/nous-research-adds-learn-to-hermes-agents-skills-system-capturing-workflows-as-slash-commands-without-hand-writing-skill-md/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Cartographie de codebase par graphe de connaissance</strong> : Un tutoriel détaille l'utilisation de Graphify et NetworkX pour transformer un projet Python multi-modules en graphe, avec extraction locale via tree-sitter, sans dépendance à une API externe ni à un LLM. <a href="https://www.marktechpost.com/2026/06/24/using-graphify-and-networkx-to-map-python-codebase-structure-with-god-nodes-communities-and-architecture-visualizations/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Fuite de données chez Tata Electronics</strong> : Le fournisseur d'Apple et Tesla a subi une exfiltration de centaines de milliers de documents confidentiels produits, publiés sur le dark web par les attaquants. <a href="https://next.ink/brief-article/apple-et-tesla-rattrapees-par-une-fuite-de-donnees-chez-leur-fournisseur-tata-electronics/">Next.ink</a></li>
+<li><strong>Régulation tech : Sénat pousse un "DSA 2" et la Chine se pose en modèle</strong> : La délégation à la prospective du Sénat veut durcir le DSA pour sanctionner les plateformes amplifiant la désinformation, en redéfinissant les statuts d'éditeur et d'hébergeur. Parallèlement, la Chine appelle à une gouvernance renforcée de l'IA face aux risques de "perte de contrôle". <a href="https://next.ink/243184/le-senat-appelle-a-la-creation-dun-reglement-dsa-2-ambitieux/">Next.ink</a> · <a href="https://www.bfmtv.com/tech/intelligence-artificielle/face-au-risque-d-une-perte-de-controle-devastatrice-la-chine-appelle-a-reguler-l-intelligence-artificielle-et-se-pose-en-refuge-economique_AD-202606240489.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Vol de données sur MesVaccins.net</strong> : Un tiers non autorisé a accédé à des données personnelles sur la plateforme de carnet vaccinal numérique, potentiellement pour l'ensemble des utilisateurs. <a href="https://next.ink/brief-article/mesvaccins-net-touche-par-un-vol-de-donnees-tous-les-utilisateurs-potentiellement-concernes/">Next.ink</a></li>
+<li><strong>Cybersécurité et vulnérabilités matérielles</strong> : Une faille irréparable dans la ROM de démarrage des iPhone XS à 11 Pro refait surface, sans correctif possible car gravée dans le silicium. Côté offensif, un laboratoire commun CNRS/Université Côte d'Azur/Docaposte est créé pour travailler sur la confiance numérique. <a href="https://siecledigital.fr/2026/06/24/une-faille-irreparable-refait-parler-delle-sur-plusieurs-modeles-diphone/">Siècle Digital</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-le-cnrs-l-universite-cote-d-azur-et-docaposte-creent-un-laboratoire-axe-confiance-numerique-100547.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Standard d'authentification PACT</strong> : Cloudflare, Google, Microsoft et Mozilla proposent un protocole permettant de distinguer humains et bots sans CAPTCHA ni traçage, via des tokens d'accès privés. <a href="https://www.zdnet.fr/actualites/cloudflare-google-microsoft-et-mozilla-lancent-pact-un-nouveau-standard-dauthentification-sans-tracage-des-utilisateurs-497537.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Sécurité du kernel Linux</strong> : La suppression de la fonction `strncpy`, jugée dangereuse depuis des années, a nécessité un audit massif du noyau Linux 7.2 pour remplacer ses milliers d'occurrences par des alternatives sécurisées. <a href="https://next.ink/brief-article/dans-le-noyau-linux-7-2-la-suppression-du-vieux-strncpy-a-reclame-un-audit-gigantesque/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation des agents IA en entreprise</strong> : Selon Actu IA, l'enjeu bascule désormais des modèles vers leur mise en production, avec quatre priorités : contexte métier, gouvernance, observabilité et orchestration. Le Monde Informatique relaie par ailleurs l'inquiétude des DSI sur les dérives budgétaires liées à la consommation de tokens. <a href="https://www.actuia.com/actualite/le-vrai-defi-de-lia-en-entreprise-nest-plus-le-modele-mais-son-exploitation/">Actu IA</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-les-derives-budgetaires-du-tokenmaxxing-inquietent-100504.html">Le Monde Informatique</a></li>
+<li><strong>IA agentique : le frein architectural</strong> : Selon Le Monde Informatique, beaucoup de DSI peinent à déployer des agents IA car l'architecture IT existante constitue un obstacle fondamental. Les promesses de "PC IA agentique" de Nvidia et Microsoft n'apportent rien de structurellement nouveau selon les analystes. <a href="https://www.lemondeinformatique.fr/actualites/lire-l-architecture-it-maillon-faible-dans-le-deploiement-des-agents-ia-100534.html">Le Monde Informatique</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-des-pc-ia-agentique-rien-de-bien-nouveau-selon-les-analystes-100549.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>IA et industrie automobile</strong> : BMW s'appuie sur Mistral AI pour développer des applications de simulation de crash tests. <a href="https://www.lemondeinformatique.fr/actualites/lire-bmw-s-appuie-sur-mistral-pour-simuler-ses-crash-tests-100531.html">Le Monde Informatique</a></li>
+<li><strong>Compétition et risques IA</strong> : OpenAI lance GPT-5.5-Cyber en réponse au modèle Mythos 5 d'Anthropic. Par ailleurs, une méthode de manipulation des chatbots par empoisonnement de sources documentaires est documentée, tandis que l'ONU s'alarme de l'empreinte énergétique croissante des systèmes d'IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-face-a-mythos-5-openai-lance-une-version-enrichie-de-gpt-55-cyber-100539.html">Le Monde Informatique</a> · <a href="https://siecledigital.fr/2026/06/24/une-methode-redoutable-permet-de-manipuler-les-chatbots-ia-pour-influencer-leurs-reponses/">Siècle Digital</a> · <a href="https://siecledigital.fr/2026/06/24/lonu-reclame-des-reponses-sur-lempreinte-energetique-grandissante-de-lia/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Trafic web dominé par les machines</strong> : Un rapport de Human Security indique que les bots et l'IA génèrent désormais 57,4 % du trafic web mondial. <a href="https://www.zdnet.fr/actualites/internet-change-de-visage-pour-la-premiere-fois-les-machines-generent-la-majorite-du-trafic-497541.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Financements cybersécurité et innovation réseau</strong> : 13 projets ont été retenus dans le cadre de France 2030 pour renforcer la cybersécurité nationale. Upscale AI s'apprête à déployer sa technologie réseau Skyhammer pour répondre à la demande en infrastructures IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-france-2030-soutient-13-projets-pour-renforcer-la-cybersecurite-100525.html">Le Monde Informatique</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-upscale-ai-pret-a-deployer-sa-technologie-reseau-skyhammer-100548.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Arnaque au clonage vocal</strong> : Un faux conseiller Binance a piégé un utilisateur dont l'objectif réel était probablement l'enregistrement de la voix pour clonage et usurpation d'identité vocale. <a href="https://www.zdnet.fr/actualites/jai-repondu-a-un-faux-conseiller-binance-et-le-veritable-piege-etait-peut-etre-le-clonage-de-ma-voix-497455.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Alerte macroéconomique</strong> : La Banque de France identifie des signaux sur les marchés financiers comparables à ceux précédant la crise des subprimes de 2008, pointant la montée du crédit privé et la vulnérabilité des marchés. <a href="https://www.journaldunet.com/business/1551835-la-banque-de-france-identifie-des-signaux-financiers-comparables-a-ceux-observes-avant-la-crise-des-subprimes-de-2008/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Produits</strong> : Gemini est désormais capable de diagnostiquer les erreurs dans les formules Google Sheets. <a href="https://siecledigital.fr/2026/06/24/gemini-peut-desormais-trouver-ce-qui-cloche-dans-vos-formules-google-sheets/">Siècle Digital</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260624-0914</guid>
-      <pubDate>Wed, 24 Jun 2026 09:14:51 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260624-1332</guid>
+      <pubDate>Wed, 24 Jun 2026 13:32:49 +0000</pubDate>
     </item>
   </channel>
 </rss>
