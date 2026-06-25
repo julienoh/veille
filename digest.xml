@@ -8,134 +8,186 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 24 Jun 2026 19:00:55 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 09:29:13 +0000</lastBuildDate>
     <item>
-      <title>Digest — 24/06 19h</title>
+      <title>Digest — 25/06 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Exploitation active d'une faille critique sur Lantronix EDS5000** : La CISA signale l'exploitation en cours d'une vulnérabilité critique affectant les dispositifs Lantronix EDS5000 Series, avec une échéance de correction fixée au 26 juin 2026 pour les agences fédérales américaines. [The Hacker News](https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html)
-
-- **Cordyceps : faille CI/CD exposant plus de 300 dépôts GitHub** : Des chercheurs ont identifié un nouveau motif de vulnérabilité dans les workflows CI/CD, baptisé Cordyceps, permettant à un attaquant de prendre le contrôle de repositories et de compromettre la chaîne d'approvisionnement open-source. [The Hacker News](https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html)
-
-- **Démantèlement de l'infrastructure Amadey et StealC** : Une opération coordonnée entre forces de l'ordre et entreprises privées a conduit à la neutralisation des réseaux criminels derrière les malwares Amadey et StealC, avec la récupération de 27 millions d'identifiants volés. [The Hacker News](https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html)
-
-- **Le service desk, maillon faible face à l'ingénierie sociale** : Les attaquants ciblent de plus en plus les services desk pour obtenir des réinitialisations de mots de passe ou modifier les paramètres MFA afin d'accéder aux comptes d'entreprise. [BleepingComputer](https://www.bleepingcomputer.com/news/security/securing-the-service-desk-why-social-engineering-attacks-keep-succeeding/)
-
-- **Panne du réseau GSM-R de la Deutsche Bahn** : L'interruption nationale des services ferroviaires allemands a été causée par un dysfonctionnement du système de communication sans fil GSM-R basé sur la 2G. [The Record](https://therecord.media/deutsche-bahn-railroad-gsmr-outage)
+- **Cisco Catalyst SD-WAN – Exploitation zero-day de la CVE-2026-20245** : Mandiant révèle que cette faille de sévérité haute (CVSS 7.8) a été exploitée par un acteur malveillant au moins deux mois avant la publication du correctif par Cisco, permettant une élévation de privilèges jusqu’au niveau root. [The Hacker News](https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Condamnation de membres de Scattered Spider** : Deux individus de 18 et 20 ans ont plaidé coupable pour le piratage de Transport for London, une attaque imputée au groupe Scattered Spider ayant causé 38 millions de dollars de dommages. [CSO Online](https://www.csoonline.com/article/4189033/scattered-spider-duo-convicted-over-38m-transport-for-london-attack.html)
-- **Menace sur la supply chain IA via ClawHub** : Cinq compétences malveillantes contenant des infostealers ont été retirées de la marketplace ClawHub après avoir contourné les contrôles de sécurité, exposant un risque de compromission dans l'écosystème OpenClaw. [Dark Reading](https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain)
+- **Simulation de crise cyber dans la distribution** : Un exercice de type ransomware a intégré des scénarios de désinformation et de compromission de systèmes IA pour tester la résilience d’une enseigne de distribution. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-anatomie-d-un-exercice-de-cybercrise-dans-le-milieu-de-la-distribution-100538.html)
 
-## IA — Labos &amp; éditeurs
+## IA — Recherche
 
-- **Agents vocaux plus naturels et réactifs** : L'architecture de Loka, exploitant Amazon Nova 2 Sonic, vise à résoudre le problème des assistants vocaux robotisés et lents qui nuisent à l'expérience client et augmentent les coûts de support. [How Loka Built a Natural, Low-Latency Voice Agent](https://aws.amazon.com/blogs/machine-learning/how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic/)
+- **Modèles de diffusion pour le langage (iLLaDA)** : Un modèle de langage de 8B paramètres entraîné avec une architecture de diffusion masquée et attention bidirectionnelle remet en cause la domination des modèles autorégressifs. [Source](https://arxiv.org/abs/2606.25331)
 
-- **Détection et masquage de données sensibles à l'échelle** : Huntington Bank a mis en place une solution sur AWS pour anonymiser automatiquement les informations personnelles (PII/PCI) dans plus de 400 millions de documents, réduisant le temps de traitement de plusieurs années à quelques mois avec une précision supérieure à 95%. [Huntington Bank: Redacting sensitive data](https://aws.amazon.com/blogs/machine-learning/huntington-bank-redacting-sensitive-data-from-400m-documents-with-aws/)
+- **Répétition des données d'entraînement** : La répétition interne dans les corpus, même après déduplication, dégrade les performances des LLMs à l'échelle Chinchilla — un problème critique à l'heure où les données de qualité s'épuisent. [Source](https://arxiv.org/abs/2606.24998)
 
-- **Optimisation du fine-tuning de Transformers** : NVIDIA NeMo AutoModel, présenté sur le Hub Hugging Face, accélère le fine-tuning des modèles de type Transformer en automatisant la configuration de l'entraînement. [Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel](https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel)
+- **Mémoire des modèles** : Donner à un LLM une mémoire contenant une conclusion erronée mais pas le raisonnement sous-jacent produit des réponses plus mauvaises que l'absence totale de mémoire. La qualité de la rétention importe plus que la quantité. [Source](https://arxiv.org/abs/2606.25449)
 
-- **Amélioration du rappel de connaissance des LLMs** : Google Research démontre que pousser un modèle à "raisonner" avant de répondre débloque l'accès à des connaissances déjà présentes dans ses paramètres, sans nécessiter d'apport externe (RAG) ou de réentraînement. [Thinking to recall](https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms/)
+- **Interprétabilité vs pilotage** : Savoir où un comportement est représenté dans les activations d'un modèle ne suffit pas à le modifier — la direction qui détecte un comportement n'est pas celle qui permet de le contrôler. [Source](https://arxiv.org/abs/2606.24952)
 
-- **Nouvelle capacité agentique dans Gemini** : Google DeepMind introduit "computer use" dans Gemini 3.5 Flash. [Introducing computer use in Gemini 3.5 Flash](https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/)
+- **Génération de code sécurisée par IA** : Une systématisation des connaissances dresse un état des lieux des capacités réelles des LLMs à produire du code sécurisé, identifie les échecs persistants et propose des directions pour progresser. [Source](https://arxiv.org/abs/2606.25195)
 
-- **BI augmentée par l'IA** : AWS détaille une intégration entre les vues sémantiques de Snowflake et Amazon QuickSight pour construire une solution de BI s'appuyant sur l'IA générative à partir de données de revues utilisateurs. [AI-powered BI with Snowflake and Amazon Quick](https://aws.amazon.com/blogs/machine-learning/ai-powered-bi-with-snowflake-and-amazon-quick/)
+- **Pentest web par LLM** : Les évaluations bout-en-bout existantes sont faussées par l'effet cascade : un échec en reconnaissance masque la capacité réelle d'exploitation de l'agent. Découpler les deux phases donne une mesure plus fiable. [Source](https://arxiv.org/abs/2606.25332)
+
+- **Juges de sécurité pour LLMs** : Selon deux études, les encodeurs surpassent les décodeurs comme juges de safety tout en étant moins coûteux et plus rapides, tandis que les juges automatisés d'ASR (taux de succès d'attaque) souffrent de problèmes de calibration et de robustesse adversariale. [Source 1](https://arxiv.org/abs/2606.25782) · [Source 2](https://arxiv.org/abs/2606.25487)
+
+- **Correction de vulnérabilités assistée par LLM** : Une étude avec participants humains révèle que les outils LLM aident les développeurs sans expertise sécurité à patcher des vulnérabilités, mais peuvent aussi introduire des régressions. [Source](https://arxiv.org/abs/2606.25973)
+
+- **Agents décentralisés et confiance** : Le protocole ERC-8004 propose un standard on-chain pour évaluer la fiabilité d'agents IA inconnus lors de transactions inter-organisationnelles — une analyse empirique teste sa validité. [Source](https://arxiv.org/abs/2606.26028)
+
+- **Injection de biais dans les RAG** : Une technique d'empoisonnement des bases RAG via sélection de contexte permet de manipuler systématiquement les opinions émises par les LLMs, sans altérer les modèles eux-mêmes. [Source](https://arxiv.org/abs/2512.00804)
+
+- **Agents et contrôle en environnement ouvert** : Pour les tâches subjectives multi-étapes, le débat multi-agents ne suffit pas — la récupération de stratégies taxonomiques réduit les erreurs composées qui contaminent les trajectoires longues. [Source](https://arxiv.org/abs/2606.24976)
+
+- **Systèmes agentiques en production** : Un guide complet couvre l'empilement technique complet pour construire des agents IA autonomes, tandis qu'une autre étude identifie les défis de gouvernance spécifiques à la dette technique dans ces systèmes. [Source 1](https://arxiv.org/abs/2606.24937) · [Source 2](https://arxiv.org/abs/2605.29129)
+
+- **RAISONNEMENT - Benchmarks et attributions** : Un benchmark automatisé pour le raisonnement relationnel (Projet Auto-World) et une méthode de feature attribution intégrant des connaissances causales (valeurs de Shapley asymétriques) sont proposés. [Source 1](https://arxiv.org/abs/2606.24965) · [Source 2](https://arxiv.org/abs/2606.25103)
+
+- **Attention visuelle chez les VLMs** : Les tokens de raisonnement dans les modèles vision-langage se comportent comme un analogue du temps de réaction humain dans les tâches de recherche visuelle classiques. [Source](https://arxiv.org/abs/2606.25066)
+
+- **Contrôle tolérant aux pannes spatiales** : Un benchmark honnête compare méthodes apprises et classiques pour le contrôle tolérant aux pannes d'actionneurs de satellites, révélant que les approches apprises peinent à généraliser hors de leurs conditions d'entraînement étroites. [Source](https://arxiv.org/abs/2606.25374)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Chip custom OpenAI** : OpenAI dévoile son premier processeur conçu en interne avec Broadcom, baptisé Jalapeño, destiné à l'inférence. Cette puce vise à réduire la dépendance aux fournisseurs tiers pour ses besoins spécifiques. [TechCrunch](https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/)
-
-- **Assistant IA pour créateurs Facebook** : Facebook teste une application compagnon intégrant un assistant IA destiné aux créateurs de contenu. L'outil vise à automatiser ou assister la production et la gestion de contenu sur la plateforme. [TechCrunch](https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/)
-
-- **Figma intègre code et automatisation** : La nouvelle mise à jour de Figma introduit une couche de code, le support des animations, et la possibilité de créer des plugins personnalisés via IA. L'outil étend ses capacités au-delà du design vers le prototypage avancé et l'automatisation de tâches. [TechCrunch](https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/)
+- **OCR longue portée à cache KV constant** : Baidu a livré en open source Unlimited OCR, un modèle de 3B paramètres en architecture MoE capable de parser plusieurs pages de document en une seule passe sans faire grimper l'empreinte mémoire ni la latence, grâce à un mécanisme de fenêtre glissante qui plafonne le cache KV. Il atteint 93,23 sur OmniDocBench v1.5. [MarkTechPost](https://www.marktechpost.com/2026/06/24/baidu-releases-unlimited-ocr-a-3b-model-that-keeps-the-kv-cache-flat-for-long-document-parsing/)
 
 ## Actualité tech FR
 
-- **Puce IA Jalapeño d'OpenAI** : OpenAI, via un partenariat avec Broadcom, a officialisé sa première puce ASIC dédiée à l'inférence. Cette puce vise à réduire la dépendance aux GPU Nvidia en offrant un meilleur rapport performance par Watt pour les modèles de langage. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/open-ai-devoile-sa-premiere-puce-ia-jalapeno-pour-reduire-sa-dependance-a-nvidia-et-rendre-les-modeles-de-pointe-plus-accessibles_AD-202606240790.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-openai-et-broadcom-devoilent-la-puce-d-inference-jalapeno-100551.html)
+- **Supercalculateurs : la Chine reprend la tête avec une machine sans GPU** : Le classement Top500 place le chinois LineShine en première position, une machine exaflopique qui se passe de GPU. [Next.ink](https://next.ink/244001/top500-des-supercalculateurs-la-chine-reprend-la-tete-cinq-machines-exaflopiques/)
 
-- **Cyberattaque contre le système de santé roumain** : En février 2024, une attaque par rançongiciel a ciblé plus de 100 hôpitaux roumains via un logiciel métier compromis. La coupure réseau ordonnée en urgence a permis de contenir l'impact sur les patients, forçant le personnel à revenir temporairement au papier. [BFM Tech](https://www.bfmtv.com/tech/actualites/cybersecurite/comment-plus-de-100-hopitaux-roumains-ont-du-se-passer-de-leurs-systemes-informatiques-et-ressortir-papier-et-stylo-pour-stopper-une-attaque-par-rancongiciel_AV-202606240645.html)</description>
+- **Infrastructure IA : Qualcomm vise le marché des datacenters** : Qualcomm lance son CPU Dragonfly C1000 dédié aux datacenters, avec accélérateurs IA et photonique intégrée, et signe Meta comme premier client stratégique. [ZDNet France](https://www.zdnet.fr/actualites/qualcomm-entre-dans-la-bataille-des-centres-de-donnees-avec-le-cpu-dragonfly-c1000-et-ses-accelerateurs-ia-497628.htm#xtor=RSS-1)
+
+- **Compétition sur les modèles : Anthropic accuse Alibaba de "distillation adversariale"** : Le conflit autour de l'IA franchit un cap : Anthropic reproche à Alibaba d'utiliser son modèle pour entraîner le sien via une technique d'extraction non autorisée. [Frenchweb](https://www.frenchweb.fr/ia-quest-ce-que-l-adversarial-distillation-que-anthropic-reproche-a-alibaba/462574)
+
+- **Licenciements massifs chez Oracle sur fond de pivot vers l'IA** : Oracle a supprimé 21 000 postes en un an (13% des effectifs) en recentrant ses activités sur l'IA générative. [Next.ink](https://next.ink/brief-article/oracle-a-licencie-21-000-personnes-en-un-an-apres-avoir-recentre-ses-activites-sur-lia/)
+
+- **Image générative : Photoroom muscle sa production pour usages pro** : Photoroom accélère sur la production massive d'images par IA, en ciblant la réponse aux besoins réels des utilisateurs plutôt que la course à la nouveauté. [Le Monde Informatique — IA](https://www.lemondeinformatique.fr/actualites/lire-photoroom-massifie-la-production-d-images-creees-par-l-ia-100544.html)
+
+- **Cybercrise : un exercice grandeur nature simule une attaque couplée ransomware / désinformation** : Un exercice dans le secteur de la distribution a testé la réponse à un scénario mêlant compromission de systèmes IA et campagne de désinformation. [Le Monde Informatique — IA](https://www.lemondeinformatique.fr/actualites/lire-anatomie-d-un-exercice-de-cybercrise-dans-le-milieu-de-la-distribution-100538.html)
+
+- **Fuites de données : la CNIL alerte sur les escroqueries ciblant les victimes** : Après une fuite de données, des offres frauduleuses d'assistance pour supprimer les informations exposées peuvent aggraver le préjudice des victimes. [ZDNet France](https://www.zdnet.fr/actualites/fuites-de-donnees-mefiez-vous-de-la-double-peine-497601.htm#xtor=RSS-1)
+
+- **Live patching : Canonical étend la mise à jour sans redémarrage à Ubuntu sur Arm64** : Le live patching, qui permet d'appliquer des correctifs noyau sans redémarrer, devient disponible sur les serveurs Arm64 sous Ubuntu, une extension notable pour les infrastructures edge et cloud-native. [Next.ink](https://next.ink/244008/dis-next-cest-quoi-le-live-patching-sans-redemarrage-dans-les-os/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exploitation active d'une faille critique sur Lantronix EDS5000</strong> : La CISA signale l'exploitation en cours d'une vulnérabilité critique affectant les dispositifs Lantronix EDS5000 Series, avec une échéance de correction fixée au 26 juin 2026 pour les agences fédérales américaines. <a href="https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Cordyceps : faille CI/CD exposant plus de 300 dépôts GitHub</strong> : Des chercheurs ont identifié un nouveau motif de vulnérabilité dans les workflows CI/CD, baptisé Cordyceps, permettant à un attaquant de prendre le contrôle de repositories et de compromettre la chaîne d'approvisionnement open-source. <a href="https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Démantèlement de l'infrastructure Amadey et StealC</strong> : Une opération coordonnée entre forces de l'ordre et entreprises privées a conduit à la neutralisation des réseaux criminels derrière les malwares Amadey et StealC, avec la récupération de 27 millions d'identifiants volés. <a href="https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Le service desk, maillon faible face à l'ingénierie sociale</strong> : Les attaquants ciblent de plus en plus les services desk pour obtenir des réinitialisations de mots de passe ou modifier les paramètres MFA afin d'accéder aux comptes d'entreprise. <a href="https://www.bleepingcomputer.com/news/security/securing-the-service-desk-why-social-engineering-attacks-keep-succeeding/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Panne du réseau GSM-R de la Deutsche Bahn</strong> : L'interruption nationale des services ferroviaires allemands a été causée par un dysfonctionnement du système de communication sans fil GSM-R basé sur la 2G. <a href="https://therecord.media/deutsche-bahn-railroad-gsmr-outage">The Record</a></li>
+<li><strong>Cisco Catalyst SD-WAN – Exploitation zero-day de la CVE-2026-20245</strong> : Mandiant révèle que cette faille de sévérité haute (CVSS 7.8) a été exploitée par un acteur malveillant au moins deux mois avant la publication du correctif par Cisco, permettant une élévation de privilèges jusqu’au niveau root. <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Condamnation de membres de Scattered Spider</strong> : Deux individus de 18 et 20 ans ont plaidé coupable pour le piratage de Transport for London, une attaque imputée au groupe Scattered Spider ayant causé 38 millions de dollars de dommages. <a href="https://www.csoonline.com/article/4189033/scattered-spider-duo-convicted-over-38m-transport-for-london-attack.html">CSO Online</a></li>
-<li><strong>Menace sur la supply chain IA via ClawHub</strong> : Cinq compétences malveillantes contenant des infostealers ont été retirées de la marketplace ClawHub après avoir contourné les contrôles de sécurité, exposant un risque de compromission dans l'écosystème OpenClaw. <a href="https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain">Dark Reading</a></li>
+<li><strong>Simulation de crise cyber dans la distribution</strong> : Un exercice de type ransomware a intégré des scénarios de désinformation et de compromission de systèmes IA pour tester la résilience d’une enseigne de distribution. <a href="https://www.lemondeinformatique.fr/actualites/lire-anatomie-d-un-exercice-de-cybercrise-dans-le-milieu-de-la-distribution-100538.html">Le Monde Informatique</a></li>
 </ul>
 
-<h2>IA — Labos & éditeurs</h2>
+<h2>IA — Recherche</h2>
 
 <ul>
-<li><strong>Agents vocaux plus naturels et réactifs</strong> : L'architecture de Loka, exploitant Amazon Nova 2 Sonic, vise à résoudre le problème des assistants vocaux robotisés et lents qui nuisent à l'expérience client et augmentent les coûts de support. <a href="https://aws.amazon.com/blogs/machine-learning/how-loka-built-a-natural-low-latency-voice-agent-with-amazon-nova-2-sonic/">How Loka Built a Natural, Low-Latency Voice Agent</a></li>
-</ul>
-
-<ul>
-<li><strong>Détection et masquage de données sensibles à l'échelle</strong> : Huntington Bank a mis en place une solution sur AWS pour anonymiser automatiquement les informations personnelles (PII/PCI) dans plus de 400 millions de documents, réduisant le temps de traitement de plusieurs années à quelques mois avec une précision supérieure à 95%. <a href="https://aws.amazon.com/blogs/machine-learning/huntington-bank-redacting-sensitive-data-from-400m-documents-with-aws/">Huntington Bank: Redacting sensitive data</a></li>
+<li><strong>Modèles de diffusion pour le langage (iLLaDA)</strong> : Un modèle de langage de 8B paramètres entraîné avec une architecture de diffusion masquée et attention bidirectionnelle remet en cause la domination des modèles autorégressifs. <a href="https://arxiv.org/abs/2606.25331">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Optimisation du fine-tuning de Transformers</strong> : NVIDIA NeMo AutoModel, présenté sur le Hub Hugging Face, accélère le fine-tuning des modèles de type Transformer en automatisant la configuration de l'entraînement. <a href="https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel">Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel</a></li>
+<li><strong>Répétition des données d'entraînement</strong> : La répétition interne dans les corpus, même après déduplication, dégrade les performances des LLMs à l'échelle Chinchilla — un problème critique à l'heure où les données de qualité s'épuisent. <a href="https://arxiv.org/abs/2606.24998">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Amélioration du rappel de connaissance des LLMs</strong> : Google Research démontre que pousser un modèle à "raisonner" avant de répondre débloque l'accès à des connaissances déjà présentes dans ses paramètres, sans nécessiter d'apport externe (RAG) ou de réentraînement. <a href="https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms/">Thinking to recall</a></li>
+<li><strong>Mémoire des modèles</strong> : Donner à un LLM une mémoire contenant une conclusion erronée mais pas le raisonnement sous-jacent produit des réponses plus mauvaises que l'absence totale de mémoire. La qualité de la rétention importe plus que la quantité. <a href="https://arxiv.org/abs/2606.25449">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Nouvelle capacité agentique dans Gemini</strong> : Google DeepMind introduit "computer use" dans Gemini 3.5 Flash. <a href="https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/">Introducing computer use in Gemini 3.5 Flash</a></li>
+<li><strong>Interprétabilité vs pilotage</strong> : Savoir où un comportement est représenté dans les activations d'un modèle ne suffit pas à le modifier — la direction qui détecte un comportement n'est pas celle qui permet de le contrôler. <a href="https://arxiv.org/abs/2606.24952">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>BI augmentée par l'IA</strong> : AWS détaille une intégration entre les vues sémantiques de Snowflake et Amazon QuickSight pour construire une solution de BI s'appuyant sur l'IA générative à partir de données de revues utilisateurs. <a href="https://aws.amazon.com/blogs/machine-learning/ai-powered-bi-with-snowflake-and-amazon-quick/">AI-powered BI with Snowflake and Amazon Quick</a></li>
+<li><strong>Génération de code sécurisée par IA</strong> : Une systématisation des connaissances dresse un état des lieux des capacités réelles des LLMs à produire du code sécurisé, identifie les échecs persistants et propose des directions pour progresser. <a href="https://arxiv.org/abs/2606.25195">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Pentest web par LLM</strong> : Les évaluations bout-en-bout existantes sont faussées par l'effet cascade : un échec en reconnaissance masque la capacité réelle d'exploitation de l'agent. Découpler les deux phases donne une mesure plus fiable. <a href="https://arxiv.org/abs/2606.25332">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Juges de sécurité pour LLMs</strong> : Selon deux études, les encodeurs surpassent les décodeurs comme juges de safety tout en étant moins coûteux et plus rapides, tandis que les juges automatisés d'ASR (taux de succès d'attaque) souffrent de problèmes de calibration et de robustesse adversariale. <a href="https://arxiv.org/abs/2606.25782">Source 1</a> · <a href="https://arxiv.org/abs/2606.25487">Source 2</a></li>
+</ul>
+
+<ul>
+<li><strong>Correction de vulnérabilités assistée par LLM</strong> : Une étude avec participants humains révèle que les outils LLM aident les développeurs sans expertise sécurité à patcher des vulnérabilités, mais peuvent aussi introduire des régressions. <a href="https://arxiv.org/abs/2606.25973">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents décentralisés et confiance</strong> : Le protocole ERC-8004 propose un standard on-chain pour évaluer la fiabilité d'agents IA inconnus lors de transactions inter-organisationnelles — une analyse empirique teste sa validité. <a href="https://arxiv.org/abs/2606.26028">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Injection de biais dans les RAG</strong> : Une technique d'empoisonnement des bases RAG via sélection de contexte permet de manipuler systématiquement les opinions émises par les LLMs, sans altérer les modèles eux-mêmes. <a href="https://arxiv.org/abs/2512.00804">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents et contrôle en environnement ouvert</strong> : Pour les tâches subjectives multi-étapes, le débat multi-agents ne suffit pas — la récupération de stratégies taxonomiques réduit les erreurs composées qui contaminent les trajectoires longues. <a href="https://arxiv.org/abs/2606.24976">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Systèmes agentiques en production</strong> : Un guide complet couvre l'empilement technique complet pour construire des agents IA autonomes, tandis qu'une autre étude identifie les défis de gouvernance spécifiques à la dette technique dans ces systèmes. <a href="https://arxiv.org/abs/2606.24937">Source 1</a> · <a href="https://arxiv.org/abs/2605.29129">Source 2</a></li>
+</ul>
+
+<ul>
+<li><strong>RAISONNEMENT - Benchmarks et attributions</strong> : Un benchmark automatisé pour le raisonnement relationnel (Projet Auto-World) et une méthode de feature attribution intégrant des connaissances causales (valeurs de Shapley asymétriques) sont proposés. <a href="https://arxiv.org/abs/2606.24965">Source 1</a> · <a href="https://arxiv.org/abs/2606.25103">Source 2</a></li>
+</ul>
+
+<ul>
+<li><strong>Attention visuelle chez les VLMs</strong> : Les tokens de raisonnement dans les modèles vision-langage se comportent comme un analogue du temps de réaction humain dans les tâches de recherche visuelle classiques. <a href="https://arxiv.org/abs/2606.25066">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Contrôle tolérant aux pannes spatiales</strong> : Un benchmark honnête compare méthodes apprises et classiques pour le contrôle tolérant aux pannes d'actionneurs de satellites, révélant que les approches apprises peinent à généraliser hors de leurs conditions d'entraînement étroites. <a href="https://arxiv.org/abs/2606.25374">Source</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Chip custom OpenAI</strong> : OpenAI dévoile son premier processeur conçu en interne avec Broadcom, baptisé Jalapeño, destiné à l'inférence. Cette puce vise à réduire la dépendance aux fournisseurs tiers pour ses besoins spécifiques. <a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Assistant IA pour créateurs Facebook</strong> : Facebook teste une application compagnon intégrant un assistant IA destiné aux créateurs de contenu. L'outil vise à automatiser ou assister la production et la gestion de contenu sur la plateforme. <a href="https://techcrunch.com/2026/06/24/facebook-rolls-out-an-ai-companion-app-for-creators/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Figma intègre code et automatisation</strong> : La nouvelle mise à jour de Figma introduit une couche de code, le support des animations, et la possibilité de créer des plugins personnalisés via IA. L'outil étend ses capacités au-delà du design vers le prototypage avancé et l'automatisation de tâches. <a href="https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/">TechCrunch</a></li>
+<li><strong>OCR longue portée à cache KV constant</strong> : Baidu a livré en open source Unlimited OCR, un modèle de 3B paramètres en architecture MoE capable de parser plusieurs pages de document en une seule passe sans faire grimper l'empreinte mémoire ni la latence, grâce à un mécanisme de fenêtre glissante qui plafonne le cache KV. Il atteint 93,23 sur OmniDocBench v1.5. <a href="https://www.marktechpost.com/2026/06/24/baidu-releases-unlimited-ocr-a-3b-model-that-keeps-the-kv-cache-flat-for-long-document-parsing/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Puce IA Jalapeño d'OpenAI</strong> : OpenAI, via un partenariat avec Broadcom, a officialisé sa première puce ASIC dédiée à l'inférence. Cette puce vise à réduire la dépendance aux GPU Nvidia en offrant un meilleur rapport performance par Watt pour les modèles de langage. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/open-ai-devoile-sa-premiere-puce-ia-jalapeno-pour-reduire-sa-dependance-a-nvidia-et-rendre-les-modeles-de-pointe-plus-accessibles_AD-202606240790.html">BFM Tech</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-openai-et-broadcom-devoilent-la-puce-d-inference-jalapeno-100551.html">Le Monde Informatique</a></li>
+<li><strong>Supercalculateurs : la Chine reprend la tête avec une machine sans GPU</strong> : Le classement Top500 place le chinois LineShine en première position, une machine exaflopique qui se passe de GPU. <a href="https://next.ink/244001/top500-des-supercalculateurs-la-chine-reprend-la-tete-cinq-machines-exaflopiques/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Cyberattaque contre le système de santé roumain</strong> : En février 2024, une attaque par rançongiciel a ciblé plus de 100 hôpitaux roumains via un logiciel métier compromis. La coupure réseau ordonnée en urgence a permis de contenir l'impact sur les patients, forçant le personnel à revenir temporairement au papier. <a href="https://www.bfmtv.com/tech/actualites/cybersecurite/comment-plus-de-100-hopitaux-roumains-ont-du-se-passer-de-leurs-systemes-informatiques-et-ressortir-papier-et-stylo-pour-stopper-une-attaque-par-rancongiciel_AV-202606240645.html">BFM Tech</a></li>
+<li><strong>Infrastructure IA : Qualcomm vise le marché des datacenters</strong> : Qualcomm lance son CPU Dragonfly C1000 dédié aux datacenters, avec accélérateurs IA et photonique intégrée, et signe Meta comme premier client stratégique. <a href="https://www.zdnet.fr/actualites/qualcomm-entre-dans-la-bataille-des-centres-de-donnees-avec-le-cpu-dragonfly-c1000-et-ses-accelerateurs-ia-497628.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>Compétition sur les modèles : Anthropic accuse Alibaba de "distillation adversariale"</strong> : Le conflit autour de l'IA franchit un cap : Anthropic reproche à Alibaba d'utiliser son modèle pour entraîner le sien via une technique d'extraction non autorisée. <a href="https://www.frenchweb.fr/ia-quest-ce-que-l-adversarial-distillation-que-anthropic-reproche-a-alibaba/462574">Frenchweb</a></li>
+</ul>
+
+<ul>
+<li><strong>Licenciements massifs chez Oracle sur fond de pivot vers l'IA</strong> : Oracle a supprimé 21 000 postes en un an (13% des effectifs) en recentrant ses activités sur l'IA générative. <a href="https://next.ink/brief-article/oracle-a-licencie-21-000-personnes-en-un-an-apres-avoir-recentre-ses-activites-sur-lia/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Image générative : Photoroom muscle sa production pour usages pro</strong> : Photoroom accélère sur la production massive d'images par IA, en ciblant la réponse aux besoins réels des utilisateurs plutôt que la course à la nouveauté. <a href="https://www.lemondeinformatique.fr/actualites/lire-photoroom-massifie-la-production-d-images-creees-par-l-ia-100544.html">Le Monde Informatique — IA</a></li>
+</ul>
+
+<ul>
+<li><strong>Cybercrise : un exercice grandeur nature simule une attaque couplée ransomware / désinformation</strong> : Un exercice dans le secteur de la distribution a testé la réponse à un scénario mêlant compromission de systèmes IA et campagne de désinformation. <a href="https://www.lemondeinformatique.fr/actualites/lire-anatomie-d-un-exercice-de-cybercrise-dans-le-milieu-de-la-distribution-100538.html">Le Monde Informatique — IA</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuites de données : la CNIL alerte sur les escroqueries ciblant les victimes</strong> : Après une fuite de données, des offres frauduleuses d'assistance pour supprimer les informations exposées peuvent aggraver le préjudice des victimes. <a href="https://www.zdnet.fr/actualites/fuites-de-donnees-mefiez-vous-de-la-double-peine-497601.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>Live patching : Canonical étend la mise à jour sans redémarrage à Ubuntu sur Arm64</strong> : Le live patching, qui permet d'appliquer des correctifs noyau sans redémarrer, devient disponible sur les serveurs Arm64 sous Ubuntu, une extension notable pour les infrastructures edge et cloud-native. <a href="https://next.ink/244008/dis-next-cest-quoi-le-live-patching-sans-redemarrage-dans-les-os/">Next.ink</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260624-1900</guid>
-      <pubDate>Wed, 24 Jun 2026 19:00:55 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260625-0929</guid>
+      <pubDate>Thu, 25 Jun 2026 09:29:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
