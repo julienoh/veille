@@ -11,3 +11,9 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-06-24 09:13 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2671)) |
 | 2026-06-25 09:27 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 62 column 6 (char 2610)) |
 | 2026-06-25 19:09 UTC | scoring | Microsoft quietly extends free Windows 10 ESU support to Oct (BleepingComputer) | Rate limit fournisseur LLM atteint |
+| 2026-06-26 08:38 UTC | scoring | TAVR-VLM: Risk-Conditioned Causal Grounding for Hallucinatio (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-06-26 08:45 UTC | scoring | SharQ: Bridging Activation Sparsity and FP4 Quantization for (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-06-26 09:05 UTC | scoring | DroidBreaker: Practical and Functional Problem-Space Attacks (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-06-26 09:08 UTC | scoring | DanceOPD: On-Policy Generative Field Distillation (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-06-26 09:16 UTC | scoring | Marylise Léon réélue secrétaire générale de la CFDT pour un  (Journal du Net) | Rate limit fournisseur LLM atteint |
+| 2026-06-26 09:16 UTC | dedup | IA — Recherche | Rate limit fournisseur LLM atteint |
