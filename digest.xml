@@ -8,150 +8,210 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 25 Jun 2026 19:14:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 09:17:31 +0000</lastBuildDate>
     <item>
-      <title>Digest — 25/06 19h</title>
+      <title>Digest — 26/06 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Extension Chrome malveillante (10M+ installations)** : L'extension "Adblock for YouTube" intègre une capacité d'injection de code JavaScript arbitraire actuellement dormante, ce qui en fait un vecteur potentiel d'attaque massive sur les navigateurs des utilisateurs. [The Hacker News](https://thehackernews.com/2026/06/chrome-ad-blocker-with-10m-installs.html)
-
-- **Malware macOS "Gaslight" anti-analyse IA** : Un nouveau malware macOS embarque délibérément des chaînes d'injection de prompt et de fausses données de débogage pour perturber les outils d'analyse automatisés basés sur l'IA. [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-macos-malware-embeds-fake-errors-to-confuse-ai-analysis-tools/)
-
-- **Phishing-as-a-Service : Bluekit évolue** : La plateforme Bluekit a déployé près de 70 nouveaux noms d'hôte en une semaine et intègre désormais une technique de "browser-in-the-middle" pour intercepter les sessions et dérober les identifiants en temps réel. [BleepingComputer](https://www.bleepingcomputer.com/news/security/bluekit-phishing-kit-adopts-browser-in-the-middle-for-login-theft/)
-
-- **Démantèlement du réseau pirate PirloTV** : Une opération a permis la saisie de 44 domaines liés à la plateforme de streaming sportif illégal PirloTV, perturbant un important réseau de piratage. [BleepingComputer](https://www.bleepingcomputer.com/news/security/pirlotv-sports-piracy-network-disrupted-as-44-domains-seized/)
-
-- **Approche de prévention de la fraude** : La détection de fraude doit s'élever au-delà de la transaction unique pour couvrir les comptes, les plateformes et l'écosystème complet, selon une analyse en quatre niveaux proposée par IPQS. [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-four-elevations-of-effective-fraud-prevention/)
-
-- **Threat Intelligence augmentée par l'IA** : Cisco Talos explore comment l'IA permettra de créer des sources de données de renseignement interrogeables en langage naturel, dépassant la simple exploitation d'IOC. [Cisco Talos](https://blog.talosintelligence.com/beyond-iocs-ai-enabled-threat-intelligence/)
+- **Nouveau backdoor STOCKSTAY de Turla** : Le groupe étatique russe Turla utilise un backdoor .NET inédit, baptisé STOCKSTAY, ciblant des entités gouvernementales et militaires ukrainiennes ainsi que des organisations intéressées par la politique étrangère italienne. [The Hacker News](https://thehackernews.com/2026/06/google-details-turlas-new-stockstay.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Responsabilité juridique des résumés IA** : Un tribunal allemand a établi que Google est responsable du contenu généré par ses résumés IA, écartant l'argument selon lequel les utilisateurs devraient savoir qu'il ne faut pas s'y fier aveuglément. [Schneier on Security](https://www.schneier.com/blog/archives/2026/06/ai-and-liability.html)
+- **GDPR, 10 ans après** : Un bilan contrasté entre une protection des données désormais ancrée dans les pratiques des entreprises européennes et une critique persistante du fardeau administratif et des contraintes réglementaires. [CSO Online](https://www.csoonline.com/article/4180915/10-years-of-the-gdpr-a-summary.html)
 
-## IA — Labos &amp; éditeurs
+## IA — Recherche
 
-- **Agents "overlay" pour moderniser les SI legacy** : AWS propose une approche par surcouche agent (agentic overlay) pour transformer des services REST existants en agents interopérables (A2A) et exposer leurs API comme outils, sans refonte lourde. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/retrofit-dont-rebuild-agentic-overlays-for-transforming-legacy-enterprise-services/)
+- **Sécurité des agents LLM et protocoles d'outillage** : Plusieurs travaux exposent des vulnérabilités critiques. Une attaque furtive multi-outils (ShareLock) cible le protocole MCP, tandis qu'une évaluation sur 541 exploits réels (CyberChainBench) teste la capacité des agents IA à détecter, exploiter et corriger des vulnérabilités dans les smart contracts. [ShareLock](https://arxiv.org/abs/2606.27027) · [CyberChainBench](https://arxiv.org/abs/2606.26216)
 
-- **Data mesh serverless pour applications agentiques** : AWS détaille une architecture de data mesh gouvernée et serverless conçue pour fournir le socle de données sécurisé et scalable nécessaire aux applications agentiques en production. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-agentic-ai-applications-with-a-modern-data-mesh-strategy-on-aws/)
+- **Défenses contre l'injection de prompt** : Deux articles distincts (cs.AI et cs.LG) présentent une évaluation adaptative des défenses "out-of-band" pour les agents utilisant des outils. La stratégie consiste à appliquer une politique de sécurité déterministe en dehors du modèle plutôt que de tenter d'entraîner le modèle à refuser les instructions malveillantes. [Article cs.AI](https://arxiv.org/abs/2606.26479) · [Article cs.LG](https://arxiv.org/abs/2606.26479)
 
-- **Agents IA pour l'analytique de santé d'infrastructure** : Présentation de Chaplin, une solution open source exploitant des agents IA exposés via Model Context Protocol (MCP) pour fournir des analyses en libre-service sur les événements de santé AWS. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-self-service-aws-health-analytics-to-find-actionable-health-insights-with-ai-agents-powered-by-amazon-bedrock/)
+- **Attaques par injection dans les processus RH** : L'utilisation des LLM pour le tri de CV crée une incitation à l'injection de prompt. L'étude montre comment des candidats peuvent manipuler le classement en intégrant des instructions cachées, en configuration simple ou multiple. [Source](https://arxiv.org/abs/2606.27287)
 
-- **Optimisation de l'entraînement sur GPU NVIDIA Blackwell via SageMaker** : Guide de configuration des jobs d'entraînement sur SageMaker AI pour tirer parti de la mémoire étendue et des formats de précision adaptés (selon la taille du modèle) propres à l'architecture Blackwell. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/optimize-model-training-on-amazon-sagemaker-ai-with-nvidia-blackwell/)
+- **Vulnérabilités héritées du fine-tuning** : Le fine-tuning pour la classification de sécurité peut introduire des vulnérabilités d'évasion indétectables par les évaluations standards. Le modèle développe des indicateurs au niveau des tokens qui le rendent sensible à des motifs absents des données de test. [Source](https://arxiv.org/abs/2606.27091)
 
-- **Super-résolution vidéo avec SeedVR2 sur SageMaker** : Déploiement de SeedVR2 sur SageMaker AI pour l'upscaling vidéo, avec comparaisons de performances sur la qualité et l'efficacité de traitement. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/implementing-super-resolution-by-deploying-seedvr2-on-amazon-sagemaker-ai/)
+- **Attaque sur les modèles de diffusion** : TEMPO-Diffusion est une attaque d'empoisonnement temporel qui améliore la furtivité et la pertinence pratique des portes dérobées dans les modèles de diffusion, en s'éloignant des hypothèses classiques d'injection au moment de l'entrée. [Source](https://arxiv.org/abs/2606.26285)
+
+- **Attaque sur les grands modèles de raisonnement** : HauntAttack exploite les chaînes de raisonnement internes des LRM. L'attaque se cache dans le processus de raisonnement même, rendant la détection plus difficile que pour les attaques agissant sur les seules entrées/sorties. [Source](https://arxiv.org/abs/2506.07031)
+
+- **Jailbreaking automatisé pour non-experts** : L'étude confirme la menace que des acteurs malveillants sans expertise technique puissent trouver des jailbreaks efficaces. L'usage d'algorithmes de bandit sur des requêtes automatiquement enrichies permet d'optimiser le choix de l'attaque. [Source](https://arxiv.org/abs/2606.26936)
+
+- **Systèmes multi-modèles : limites de performance** : Le gain des systèmes combinant plusieurs LLM (routage, vote, fusion) est plafonné par les échecs communs aux modèles membres. L'étude quantifie ce plafond de "co-échec" sur 67 modèles de pointe et montre que cette métrique est rarement rapportée. [Source](https://arxiv.org/abs/2606.27288)
+
+- **Gouvernance de l'IA et régulation** : Un article théorise que plus de régulation peut produire moins de contrôle organisationnel (Governance Inversion Hypothesis) en rendant les systèmes plus complexes et fragmentés. Un autre propose un modèle de gouvernance pour agents autonomes basé sur l'attestation des actions plutôt que la surveillance des agents eux-mêmes. [Hypothèse d'inversion](https://arxiv.org/abs/2606.26117) · [Gouvernance par actions](https://arxiv.org/abs/2606.26298)
+
+- **Agents de recherche autonomes en entreprise** : Un benchmark évalue les agents de recherche profonde sur du travail de conseil expert, avec vérificateurs et pièges cognitifs, dépassant les tests de simple rappel de faits pour mesurer la délibération et la décision multi-documents. [Source](https://arxiv.org/abs/2605.17554)
+
+- **Découverte scientifique autonome** : Deux approches distinctes sont proposées. Des agents socratiques pour la découverte en physique des hautes dimensions, et un cadre où la découverte est traitée comme un problème de méta-optimisation combinatoire résolu par des LLM. [Agents socratiques](https://arxiv.org/abs/2606.26722) · [Méta-optimisation](https://arxiv.org/abs/2606.26728)
+
+- **Inférence bayésienne pour modèles épidémiologiques** : Une méthode d'inférence basée sur la simulation est comparée au MCMC pour accélérer drastiquement le calage des paramètres de modèles mécanistes, crucial pour l'aide à la décision en santé publique. [Source](https://arxiv.org/abs/2606.27286)
+
+- **Correction automatique de code par LLM** : TerraProbe détecte les corrections trompeuses ("deceptive fixes") dans les réparations de configurations Terraform générées par LLM. Une correction qui supprime l'erreur ciblée mais introduit une autre vulnérabilité n'est pas un succès. [Source](https://arxiv.org/abs/2606.26590)
+
+- **Nouveaux benchmarks spécialisés** : TransXion fournit un graphe de transactions réaliste pour la détection de blanchiment d'argent, palliant le manque de benchmarks crédibles. RoPE adapte les encodages positionnels rotationnels des LLMs aux données structurées en graphes. [AML](https://arxiv.org/abs/2604.17420) · [RoPE pour graphes](https://arxiv.org/abs/2509.22259)
+
+- **Optimisation par comparaison** : L'étude s'attaque à la recherche de points stationnaires de fonctions non-convexes en n'ayant accès qu'à un oracle de comparaison (qui de deux points a la plus grande valeur), sans gradient ni valeur explicite. [Source](https://arxiv.org/abs/2606.27082)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Adobe rachète Topaz Labs** : Adobe intègre les outils de retouche et d'upscaling vidéo/image de Topaz Labs à sa suite logicielle, renforçant ses capacités en amélioration visuelle par IA. [TechCrunch](https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/)
-
-- **IA dans le retail** : L'IA transforme le commerce de détail moins par les interfaces clients (chatbots, essayages virtuels) que par les coulisses décisionnelles : classement des produits en recherche, gestion des stocks. [MIT Technology Review](https://www.technologyreview.com/2026/06/25/1137848/repositioning-retail-for-the-ai-era/)
+- **Agent IA "nanobot" exécutable dans Colab** : Tutoriel détaillant la construction d'un agent IA personnel léger, intégrant appel d'outils, mémoire de session, compétences et serveur MCP, le tout sans dépendance externe. [MarkTechPost](https://www.marktechpost.com/2026/06/26/build-a-nanobot-style-ai-agent-in-google-colab-with-tool-calling-session-memory-skills-and-mcp-servers/)
 
 ## Actualité tech FR
 
-- **Cellebrite utilisée par la Russie contre un opposant** : Les autorités russes ont exploité les outils de la société israélienne Cellebrite pour extraire les données d'un iPhone sans le consentement de son propriétaire, l'opposant Andreï Pivovarov, en mai 2021. [Next.ink](https://next.ink/brief-article/la-russie-a-accede-aux-donnees-de-liphone-dun-opposant-grace-aux-outils-de-cellebrite/)
+- **Mistral OCR 4 passe de l'extraction à l'analyse sémantique** : Mistral fait évoluer son modèle OCR vers un parseur documentaire capable de comprendre la structure et le sens des documents, ciblant particulièrement les pipelines RAG et la recherche. [Next.ink](https://next.ink/244274/mistral-veut-bousculer-la-gestion-des-documents-avec-son-modele-ocr-4/)
 
-- **Windows 10 : support étendu jusqu'à fin 2027** : Microsoft repousse d'un an la date de fin du support de Windows 10, au 12 octobre 2027, pour les clients du programme ESU. Un sursis pour les organisations dont la migration vers Windows 11 n'est pas finalisée. [Next.ink](https://next.ink/244245/le-support-de-windows-10-recule-dun-an-au-12-octobre-2027/)
+- **Washington propose à l'UE une alliance IA anti-Chine** : L'administration Trump cherche à embarquer l'Europe dans un partenariat visant à sécuriser les approvisionnements en composants pour datacenters IA, une initiative à lire sous l'angle de la guerre technologique sino-américaine. [Next.ink](https://next.ink/244297/washington-voudrait-embarquer-lue-dans-une-alliance-ia-face-a-la-chine/)
 
-- **AWS et Azure dans le viseur du DMA européen** : Une décision préliminaire envisage de soumettre les clouds d'Amazon et Microsoft au Digital Markets Act, ce qui impose des obligations d'interopérabilité et de loyauté des plateformes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-aws-et-microsoft-azure-bientot-soumis-au-dma-europeen-100562.html)
+- **Meta automatise sa modération par IA** : Le groupe confie aux LLM la grande majorité des décisions de modération de contenu, publicités et recours utilisateurs, dans un contexte assumé de réduction des coûts. [Next.ink](https://next.ink/244303/meta-remplace-ses-moderateurs-par-de-lia/)
 
-- **Formation cyber des militaires français en Ukraine** : Le régiment de cyberdéfense envoie des soldats en rotation en Ukraine pour une immersion directe dans la cyberguerre face aux attaques russes, dans un double objectif de formation et de coopération stratégique. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/cyberguerre-les-soldats-francais-du-regiment-de-cyberdefense-effectuent-des-rotations-en-ukraine-pour-se-former-au-plus-pres-des-cyberattaques-russes_AN-202606250644.html)
+- **DMA : AWS et Azure bientôt sous surveillance renforcée** : La Commission européenne s'oriente vers l'inscription des infrastructures cloud d'Amazon et Microsoft au règlement sur les marchés numériques, ce qui leur imposerait de nouvelles obligations concurrentielles. [Next.ink](https://next.ink/244287/dma-les-nuages-damazon-et-de-microsoft-bientot-sous-surveillance-renforcee-en-europe/)
 
-- **OpenAI dévoile Jalapeño, sa première puce IA** : Développée avec Broadcom pour l'inférence, cette puce marque l'entrée d'OpenAI sur le hardware. Aucune métrique de performance n'a été publiée. [Next.ink](https://next.ink/244189/a-la-decouverte-de-jalapeno-la-premiere-puce-dopenai-pour-lia-generative/)
+- **Le filtre anti-arnaque français bloqué par Bruxelles** : La Commission européenne juge le décret d'application incompatible avec le droit européen et demande à la France de revoir sa copie, retardant encore un projet déjà très attendu. [ZDNet](https://www.zdnet.fr/actualites/filtre-anti-arnaque-la-commission-europeenne-demande-a-la-france-de-revoir-sa-copie-497640.htm)
 
-- **Souveraineté numérique : le hardware open source comme alternative** : La dépendance européenne aux technologies propriétaires américaines pour les semi-conducteurs et datacenters est un risque. Le hardware open source est présenté comme une piste. [Journal du Net](https://www.journaldunet.com/business/action-publique/1551879-la-souverainete-europeenne-passera-t-elle-par-le-hardware-open-source/)</description>
+- **Chrome 150 désactive les bloqueurs de pubs, un risque sécurité** : La transition vers Manifest V3, attendue fin juin, limite drastiquement les capacités des extensions de blocage publicitaire, supprimant un rempart contre les malvertising et le pistage. [ZDNet](https://www.zdnet.fr/actualites/chrome-150-va-desactiver-votre-bloqueur-de-pub-et-cest-un-vrai-probleme-de-securite-497745.htm)
+
+- **L'IA révèle l'infrastructure commune des malwares Amadey et StealC** : L'analyse par IA a permis de dévoiler que ces deux programmes malveillants distincts partageaient des serveurs de commande et contrôle communs. [ZDNet](https://www.zdnet.fr/actualites/comment-lia-a-permis-de-mettre-en-lumiere-les-liens-entre-amadey-et-stealc-497667.htm)
+
+- **Binance suspend ses services en France faute d'agrément MiCA** : La plateforme crypto n'ayant pas obtenu son agrément européen à temps, elle cessera une partie majeure de ses opérations dès le 1er juillet, illustrant les effets concrets du nouveau cadre réglementaire. [ZDNet](https://www.zdnet.fr/actualites/binance-ejecte-de-france-au-1er-juillet-497732.htm)
+
+- **Mercato IA : Anthropic débauche le patron IA d'Orange** : Anthropic recrute Steve Jarrett, Chief AI Officer d'Orange depuis 2019, pour piloter son expansion en Europe, signe d'une compétition qui se déplace vers les directions informatiques des grands comptes. [Frenchweb](https://www.frenchweb.fr/anthropic-recrute-le-patron-ia-dorange-pour-accelerer-son-developpement-en-europe/462600)
+
+- **Souveraineté numérique : la France lance Cartes.gouv.fr face à Google Maps** : L'IGN déploie ce nouveau portail pour succéder au Géoportail, avec une ambition affichée de devenir une plateforme d'aide à la décision pour les professionnels. [ZDNet](https://www.zdnet.fr/actualites/cartes-gouv-fr-le-nouveau-portail-carto-souverain-qui-veut-seduire-les-pros-face-a-google-maps-497716.htm)
+
+- **IA en production : retours d'expérience variés** : La Cnam modifie annuellement 20% de son parc applicatif dans une logique d'industrialisation continue, tandis que Chronopost déploie une solution de matching de colis sans étiquette basée sur l'IA. À l'inverse, l'erreur d'un chatbot chez BMW (validation d'une offre à 16 000€) rappelle les risques juridiques et financiers de l'automatisation non supervisée. [LMI-Cnam](https://www.lemondeinformatique.fr/actualites/lire-entretien-bintou-boite-cnam--nous-modifions-chaque-annee-environ-20-de-notre-parc-applicatif-100390.html) · [LMI-Chronopost](https://www.lemondeinformatique.fr/actualites/lire-chronopost-gere-les-colis-sans-etiquette-avec-l-ia-100565.html) · [ZDNet-BMW](https://www.zdnet.fr/actualites/zd-tech-une-ia-valide-par-erreur-une-offre-de-rachat-a-16-000-euros-chez-bmw-497584.htm)
+
+- **Application Maison Blanche sur les devices fédéraux : un précédent inquiétant** : L'app officielle, déployée de force sur les téléphones des fonctionnaires américains, se réinstalle automatiquement après suppression, soulevant des questions de sécurité et de contrôle qui concernent toute organisation. [BFM](https://www.bfmtv.com/tech/vie-numerique/de-la-propagande-dans-les-veines-aux-etats-unis-l-application-de-la-maison-blanche-s-impose-sur-les-telephones-des-fonctionnaires-federaux-et-revient-lorsqu-ils-la-suppriment_AN-202606260040.html)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Extension Chrome malveillante (10M+ installations)</strong> : L'extension "Adblock for YouTube" intègre une capacité d'injection de code JavaScript arbitraire actuellement dormante, ce qui en fait un vecteur potentiel d'attaque massive sur les navigateurs des utilisateurs. <a href="https://thehackernews.com/2026/06/chrome-ad-blocker-with-10m-installs.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Malware macOS "Gaslight" anti-analyse IA</strong> : Un nouveau malware macOS embarque délibérément des chaînes d'injection de prompt et de fausses données de débogage pour perturber les outils d'analyse automatisés basés sur l'IA. <a href="https://www.bleepingcomputer.com/news/security/new-macos-malware-embeds-fake-errors-to-confuse-ai-analysis-tools/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Phishing-as-a-Service : Bluekit évolue</strong> : La plateforme Bluekit a déployé près de 70 nouveaux noms d'hôte en une semaine et intègre désormais une technique de "browser-in-the-middle" pour intercepter les sessions et dérober les identifiants en temps réel. <a href="https://www.bleepingcomputer.com/news/security/bluekit-phishing-kit-adopts-browser-in-the-middle-for-login-theft/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Démantèlement du réseau pirate PirloTV</strong> : Une opération a permis la saisie de 44 domaines liés à la plateforme de streaming sportif illégal PirloTV, perturbant un important réseau de piratage. <a href="https://www.bleepingcomputer.com/news/security/pirlotv-sports-piracy-network-disrupted-as-44-domains-seized/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Approche de prévention de la fraude</strong> : La détection de fraude doit s'élever au-delà de la transaction unique pour couvrir les comptes, les plateformes et l'écosystème complet, selon une analyse en quatre niveaux proposée par IPQS. <a href="https://www.bleepingcomputer.com/news/security/the-four-elevations-of-effective-fraud-prevention/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Threat Intelligence augmentée par l'IA</strong> : Cisco Talos explore comment l'IA permettra de créer des sources de données de renseignement interrogeables en langage naturel, dépassant la simple exploitation d'IOC. <a href="https://blog.talosintelligence.com/beyond-iocs-ai-enabled-threat-intelligence/">Cisco Talos</a></li>
+<li><strong>Nouveau backdoor STOCKSTAY de Turla</strong> : Le groupe étatique russe Turla utilise un backdoor .NET inédit, baptisé STOCKSTAY, ciblant des entités gouvernementales et militaires ukrainiennes ainsi que des organisations intéressées par la politique étrangère italienne. <a href="https://thehackernews.com/2026/06/google-details-turlas-new-stockstay.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Responsabilité juridique des résumés IA</strong> : Un tribunal allemand a établi que Google est responsable du contenu généré par ses résumés IA, écartant l'argument selon lequel les utilisateurs devraient savoir qu'il ne faut pas s'y fier aveuglément. <a href="https://www.schneier.com/blog/archives/2026/06/ai-and-liability.html">Schneier on Security</a></li>
+<li><strong>GDPR, 10 ans après</strong> : Un bilan contrasté entre une protection des données désormais ancrée dans les pratiques des entreprises européennes et une critique persistante du fardeau administratif et des contraintes réglementaires. <a href="https://www.csoonline.com/article/4180915/10-years-of-the-gdpr-a-summary.html">CSO Online</a></li>
 </ul>
 
-<h2>IA — Labos & éditeurs</h2>
+<h2>IA — Recherche</h2>
 
 <ul>
-<li><strong>Agents "overlay" pour moderniser les SI legacy</strong> : AWS propose une approche par surcouche agent (agentic overlay) pour transformer des services REST existants en agents interopérables (A2A) et exposer leurs API comme outils, sans refonte lourde. <a href="https://aws.amazon.com/blogs/machine-learning/retrofit-dont-rebuild-agentic-overlays-for-transforming-legacy-enterprise-services/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Data mesh serverless pour applications agentiques</strong> : AWS détaille une architecture de data mesh gouvernée et serverless conçue pour fournir le socle de données sécurisé et scalable nécessaire aux applications agentiques en production. <a href="https://aws.amazon.com/blogs/machine-learning/building-agentic-ai-applications-with-a-modern-data-mesh-strategy-on-aws/">AWS Machine Learning</a></li>
+<li><strong>Sécurité des agents LLM et protocoles d'outillage</strong> : Plusieurs travaux exposent des vulnérabilités critiques. Une attaque furtive multi-outils (ShareLock) cible le protocole MCP, tandis qu'une évaluation sur 541 exploits réels (CyberChainBench) teste la capacité des agents IA à détecter, exploiter et corriger des vulnérabilités dans les smart contracts. <a href="https://arxiv.org/abs/2606.27027">ShareLock</a> · <a href="https://arxiv.org/abs/2606.26216">CyberChainBench</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA pour l'analytique de santé d'infrastructure</strong> : Présentation de Chaplin, une solution open source exploitant des agents IA exposés via Model Context Protocol (MCP) pour fournir des analyses en libre-service sur les événements de santé AWS. <a href="https://aws.amazon.com/blogs/machine-learning/build-self-service-aws-health-analytics-to-find-actionable-health-insights-with-ai-agents-powered-by-amazon-bedrock/">AWS Machine Learning</a></li>
+<li><strong>Défenses contre l'injection de prompt</strong> : Deux articles distincts (cs.AI et cs.LG) présentent une évaluation adaptative des défenses "out-of-band" pour les agents utilisant des outils. La stratégie consiste à appliquer une politique de sécurité déterministe en dehors du modèle plutôt que de tenter d'entraîner le modèle à refuser les instructions malveillantes. <a href="https://arxiv.org/abs/2606.26479">Article cs.AI</a> · <a href="https://arxiv.org/abs/2606.26479">Article cs.LG</a></li>
 </ul>
 
 <ul>
-<li><strong>Optimisation de l'entraînement sur GPU NVIDIA Blackwell via SageMaker</strong> : Guide de configuration des jobs d'entraînement sur SageMaker AI pour tirer parti de la mémoire étendue et des formats de précision adaptés (selon la taille du modèle) propres à l'architecture Blackwell. <a href="https://aws.amazon.com/blogs/machine-learning/optimize-model-training-on-amazon-sagemaker-ai-with-nvidia-blackwell/">AWS Machine Learning</a></li>
+<li><strong>Attaques par injection dans les processus RH</strong> : L'utilisation des LLM pour le tri de CV crée une incitation à l'injection de prompt. L'étude montre comment des candidats peuvent manipuler le classement en intégrant des instructions cachées, en configuration simple ou multiple. <a href="https://arxiv.org/abs/2606.27287">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Super-résolution vidéo avec SeedVR2 sur SageMaker</strong> : Déploiement de SeedVR2 sur SageMaker AI pour l'upscaling vidéo, avec comparaisons de performances sur la qualité et l'efficacité de traitement. <a href="https://aws.amazon.com/blogs/machine-learning/implementing-super-resolution-by-deploying-seedvr2-on-amazon-sagemaker-ai/">AWS Machine Learning</a></li>
+<li><strong>Vulnérabilités héritées du fine-tuning</strong> : Le fine-tuning pour la classification de sécurité peut introduire des vulnérabilités d'évasion indétectables par les évaluations standards. Le modèle développe des indicateurs au niveau des tokens qui le rendent sensible à des motifs absents des données de test. <a href="https://arxiv.org/abs/2606.27091">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Attaque sur les modèles de diffusion</strong> : TEMPO-Diffusion est une attaque d'empoisonnement temporel qui améliore la furtivité et la pertinence pratique des portes dérobées dans les modèles de diffusion, en s'éloignant des hypothèses classiques d'injection au moment de l'entrée. <a href="https://arxiv.org/abs/2606.26285">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Attaque sur les grands modèles de raisonnement</strong> : HauntAttack exploite les chaînes de raisonnement internes des LRM. L'attaque se cache dans le processus de raisonnement même, rendant la détection plus difficile que pour les attaques agissant sur les seules entrées/sorties. <a href="https://arxiv.org/abs/2506.07031">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Jailbreaking automatisé pour non-experts</strong> : L'étude confirme la menace que des acteurs malveillants sans expertise technique puissent trouver des jailbreaks efficaces. L'usage d'algorithmes de bandit sur des requêtes automatiquement enrichies permet d'optimiser le choix de l'attaque. <a href="https://arxiv.org/abs/2606.26936">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Systèmes multi-modèles : limites de performance</strong> : Le gain des systèmes combinant plusieurs LLM (routage, vote, fusion) est plafonné par les échecs communs aux modèles membres. L'étude quantifie ce plafond de "co-échec" sur 67 modèles de pointe et montre que cette métrique est rarement rapportée. <a href="https://arxiv.org/abs/2606.27288">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Gouvernance de l'IA et régulation</strong> : Un article théorise que plus de régulation peut produire moins de contrôle organisationnel (Governance Inversion Hypothesis) en rendant les systèmes plus complexes et fragmentés. Un autre propose un modèle de gouvernance pour agents autonomes basé sur l'attestation des actions plutôt que la surveillance des agents eux-mêmes. <a href="https://arxiv.org/abs/2606.26117">Hypothèse d'inversion</a> · <a href="https://arxiv.org/abs/2606.26298">Gouvernance par actions</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents de recherche autonomes en entreprise</strong> : Un benchmark évalue les agents de recherche profonde sur du travail de conseil expert, avec vérificateurs et pièges cognitifs, dépassant les tests de simple rappel de faits pour mesurer la délibération et la décision multi-documents. <a href="https://arxiv.org/abs/2605.17554">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Découverte scientifique autonome</strong> : Deux approches distinctes sont proposées. Des agents socratiques pour la découverte en physique des hautes dimensions, et un cadre où la découverte est traitée comme un problème de méta-optimisation combinatoire résolu par des LLM. <a href="https://arxiv.org/abs/2606.26722">Agents socratiques</a> · <a href="https://arxiv.org/abs/2606.26728">Méta-optimisation</a></li>
+</ul>
+
+<ul>
+<li><strong>Inférence bayésienne pour modèles épidémiologiques</strong> : Une méthode d'inférence basée sur la simulation est comparée au MCMC pour accélérer drastiquement le calage des paramètres de modèles mécanistes, crucial pour l'aide à la décision en santé publique. <a href="https://arxiv.org/abs/2606.27286">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Correction automatique de code par LLM</strong> : TerraProbe détecte les corrections trompeuses ("deceptive fixes") dans les réparations de configurations Terraform générées par LLM. Une correction qui supprime l'erreur ciblée mais introduit une autre vulnérabilité n'est pas un succès. <a href="https://arxiv.org/abs/2606.26590">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Nouveaux benchmarks spécialisés</strong> : TransXion fournit un graphe de transactions réaliste pour la détection de blanchiment d'argent, palliant le manque de benchmarks crédibles. RoPE adapte les encodages positionnels rotationnels des LLMs aux données structurées en graphes. <a href="https://arxiv.org/abs/2604.17420">AML</a> · <a href="https://arxiv.org/abs/2509.22259">RoPE pour graphes</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation par comparaison</strong> : L'étude s'attaque à la recherche de points stationnaires de fonctions non-convexes en n'ayant accès qu'à un oracle de comparaison (qui de deux points a la plus grande valeur), sans gradient ni valeur explicite. <a href="https://arxiv.org/abs/2606.27082">Source</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Adobe rachète Topaz Labs</strong> : Adobe intègre les outils de retouche et d'upscaling vidéo/image de Topaz Labs à sa suite logicielle, renforçant ses capacités en amélioration visuelle par IA. <a href="https://techcrunch.com/2026/06/25/adobe-acquires-image-and-video-enhancement-tool-maker-topaz-labs/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>IA dans le retail</strong> : L'IA transforme le commerce de détail moins par les interfaces clients (chatbots, essayages virtuels) que par les coulisses décisionnelles : classement des produits en recherche, gestion des stocks. <a href="https://www.technologyreview.com/2026/06/25/1137848/repositioning-retail-for-the-ai-era/">MIT Technology Review</a></li>
+<li><strong>Agent IA "nanobot" exécutable dans Colab</strong> : Tutoriel détaillant la construction d'un agent IA personnel léger, intégrant appel d'outils, mémoire de session, compétences et serveur MCP, le tout sans dépendance externe. <a href="https://www.marktechpost.com/2026/06/26/build-a-nanobot-style-ai-agent-in-google-colab-with-tool-calling-session-memory-skills-and-mcp-servers/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Cellebrite utilisée par la Russie contre un opposant</strong> : Les autorités russes ont exploité les outils de la société israélienne Cellebrite pour extraire les données d'un iPhone sans le consentement de son propriétaire, l'opposant Andreï Pivovarov, en mai 2021. <a href="https://next.ink/brief-article/la-russie-a-accede-aux-donnees-de-liphone-dun-opposant-grace-aux-outils-de-cellebrite/">Next.ink</a></li>
+<li><strong>Mistral OCR 4 passe de l'extraction à l'analyse sémantique</strong> : Mistral fait évoluer son modèle OCR vers un parseur documentaire capable de comprendre la structure et le sens des documents, ciblant particulièrement les pipelines RAG et la recherche. <a href="https://next.ink/244274/mistral-veut-bousculer-la-gestion-des-documents-avec-son-modele-ocr-4/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Windows 10 : support étendu jusqu'à fin 2027</strong> : Microsoft repousse d'un an la date de fin du support de Windows 10, au 12 octobre 2027, pour les clients du programme ESU. Un sursis pour les organisations dont la migration vers Windows 11 n'est pas finalisée. <a href="https://next.ink/244245/le-support-de-windows-10-recule-dun-an-au-12-octobre-2027/">Next.ink</a></li>
+<li><strong>Washington propose à l'UE une alliance IA anti-Chine</strong> : L'administration Trump cherche à embarquer l'Europe dans un partenariat visant à sécuriser les approvisionnements en composants pour datacenters IA, une initiative à lire sous l'angle de la guerre technologique sino-américaine. <a href="https://next.ink/244297/washington-voudrait-embarquer-lue-dans-une-alliance-ia-face-a-la-chine/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>AWS et Azure dans le viseur du DMA européen</strong> : Une décision préliminaire envisage de soumettre les clouds d'Amazon et Microsoft au Digital Markets Act, ce qui impose des obligations d'interopérabilité et de loyauté des plateformes. <a href="https://www.lemondeinformatique.fr/actualites/lire-aws-et-microsoft-azure-bientot-soumis-au-dma-europeen-100562.html">Le Monde Informatique</a></li>
+<li><strong>Meta automatise sa modération par IA</strong> : Le groupe confie aux LLM la grande majorité des décisions de modération de contenu, publicités et recours utilisateurs, dans un contexte assumé de réduction des coûts. <a href="https://next.ink/244303/meta-remplace-ses-moderateurs-par-de-lia/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Formation cyber des militaires français en Ukraine</strong> : Le régiment de cyberdéfense envoie des soldats en rotation en Ukraine pour une immersion directe dans la cyberguerre face aux attaques russes, dans un double objectif de formation et de coopération stratégique. <a href="https://www.bfmtv.com/tech/cybersecurite/cyberguerre-les-soldats-francais-du-regiment-de-cyberdefense-effectuent-des-rotations-en-ukraine-pour-se-former-au-plus-pres-des-cyberattaques-russes_AN-202606250644.html">BFM Tech</a></li>
+<li><strong>DMA : AWS et Azure bientôt sous surveillance renforcée</strong> : La Commission européenne s'oriente vers l'inscription des infrastructures cloud d'Amazon et Microsoft au règlement sur les marchés numériques, ce qui leur imposerait de nouvelles obligations concurrentielles. <a href="https://next.ink/244287/dma-les-nuages-damazon-et-de-microsoft-bientot-sous-surveillance-renforcee-en-europe/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>OpenAI dévoile Jalapeño, sa première puce IA</strong> : Développée avec Broadcom pour l'inférence, cette puce marque l'entrée d'OpenAI sur le hardware. Aucune métrique de performance n'a été publiée. <a href="https://next.ink/244189/a-la-decouverte-de-jalapeno-la-premiere-puce-dopenai-pour-lia-generative/">Next.ink</a></li>
+<li><strong>Le filtre anti-arnaque français bloqué par Bruxelles</strong> : La Commission européenne juge le décret d'application incompatible avec le droit européen et demande à la France de revoir sa copie, retardant encore un projet déjà très attendu. <a href="https://www.zdnet.fr/actualites/filtre-anti-arnaque-la-commission-europeenne-demande-a-la-france-de-revoir-sa-copie-497640.htm">ZDNet</a></li>
 </ul>
 
 <ul>
-<li><strong>Souveraineté numérique : le hardware open source comme alternative</strong> : La dépendance européenne aux technologies propriétaires américaines pour les semi-conducteurs et datacenters est un risque. Le hardware open source est présenté comme une piste. <a href="https://www.journaldunet.com/business/action-publique/1551879-la-souverainete-europeenne-passera-t-elle-par-le-hardware-open-source/">Journal du Net</a></li>
+<li><strong>Chrome 150 désactive les bloqueurs de pubs, un risque sécurité</strong> : La transition vers Manifest V3, attendue fin juin, limite drastiquement les capacités des extensions de blocage publicitaire, supprimant un rempart contre les malvertising et le pistage. <a href="https://www.zdnet.fr/actualites/chrome-150-va-desactiver-votre-bloqueur-de-pub-et-cest-un-vrai-probleme-de-securite-497745.htm">ZDNet</a></li>
+</ul>
+
+<ul>
+<li><strong>L'IA révèle l'infrastructure commune des malwares Amadey et StealC</strong> : L'analyse par IA a permis de dévoiler que ces deux programmes malveillants distincts partageaient des serveurs de commande et contrôle communs. <a href="https://www.zdnet.fr/actualites/comment-lia-a-permis-de-mettre-en-lumiere-les-liens-entre-amadey-et-stealc-497667.htm">ZDNet</a></li>
+</ul>
+
+<ul>
+<li><strong>Binance suspend ses services en France faute d'agrément MiCA</strong> : La plateforme crypto n'ayant pas obtenu son agrément européen à temps, elle cessera une partie majeure de ses opérations dès le 1er juillet, illustrant les effets concrets du nouveau cadre réglementaire. <a href="https://www.zdnet.fr/actualites/binance-ejecte-de-france-au-1er-juillet-497732.htm">ZDNet</a></li>
+</ul>
+
+<ul>
+<li><strong>Mercato IA : Anthropic débauche le patron IA d'Orange</strong> : Anthropic recrute Steve Jarrett, Chief AI Officer d'Orange depuis 2019, pour piloter son expansion en Europe, signe d'une compétition qui se déplace vers les directions informatiques des grands comptes. <a href="https://www.frenchweb.fr/anthropic-recrute-le-patron-ia-dorange-pour-accelerer-son-developpement-en-europe/462600">Frenchweb</a></li>
+</ul>
+
+<ul>
+<li><strong>Souveraineté numérique : la France lance Cartes.gouv.fr face à Google Maps</strong> : L'IGN déploie ce nouveau portail pour succéder au Géoportail, avec une ambition affichée de devenir une plateforme d'aide à la décision pour les professionnels. <a href="https://www.zdnet.fr/actualites/cartes-gouv-fr-le-nouveau-portail-carto-souverain-qui-veut-seduire-les-pros-face-a-google-maps-497716.htm">ZDNet</a></li>
+</ul>
+
+<ul>
+<li><strong>IA en production : retours d'expérience variés</strong> : La Cnam modifie annuellement 20% de son parc applicatif dans une logique d'industrialisation continue, tandis que Chronopost déploie une solution de matching de colis sans étiquette basée sur l'IA. À l'inverse, l'erreur d'un chatbot chez BMW (validation d'une offre à 16 000€) rappelle les risques juridiques et financiers de l'automatisation non supervisée. <a href="https://www.lemondeinformatique.fr/actualites/lire-entretien-bintou-boite-cnam--nous-modifions-chaque-annee-environ-20-de-notre-parc-applicatif-100390.html">LMI-Cnam</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-chronopost-gere-les-colis-sans-etiquette-avec-l-ia-100565.html">LMI-Chronopost</a> · <a href="https://www.zdnet.fr/actualites/zd-tech-une-ia-valide-par-erreur-une-offre-de-rachat-a-16-000-euros-chez-bmw-497584.htm">ZDNet-BMW</a></li>
+</ul>
+
+<ul>
+<li><strong>Application Maison Blanche sur les devices fédéraux : un précédent inquiétant</strong> : L'app officielle, déployée de force sur les téléphones des fonctionnaires américains, se réinstalle automatiquement après suppression, soulevant des questions de sécurité et de contrôle qui concernent toute organisation. <a href="https://www.bfmtv.com/tech/vie-numerique/de-la-propagande-dans-les-veines-aux-etats-unis-l-application-de-la-maison-blanche-s-impose-sur-les-telephones-des-fonctionnaires-federaux-et-revient-lorsqu-ils-la-suppriment_AN-202606260040.html">BFM</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260625-1914</guid>
-      <pubDate>Thu, 25 Jun 2026 19:14:17 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260626-0917</guid>
+      <pubDate>Fri, 26 Jun 2026 09:17:31 +0000</pubDate>
     </item>
   </channel>
 </rss>
