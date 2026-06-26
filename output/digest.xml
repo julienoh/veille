@@ -8,162 +8,210 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 26 Jun 2026 13:22:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 19:03:22 +0000</lastBuildDate>
     <item>
-      <title>Digest — 26/06 13h</title>
+      <title>Digest — 26/06 19h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Noyau Linux : multiples élévations de privilèges locales** : Plusieurs vulnérabilités critiques permettent à un utilisateur local non privilégié d'obtenir les droits root. **CVE-2026-46331** ("pedit COW") corrompt la mémoire cache du noyau via le sous-système de contrôle de trafic ; **CVE-2026-43503** ("DirtyClone") exploite une faille dans le clonage de paquets réseau. Les deux disposent d'exploits publics fonctionnels. [pedit COW](https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables-root.html) · [DirtyClone](https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html)
+- **Amazon Q Developer — exécution de code à distance via MCP** : Une faille de sévérité haute (CVE-2026-12957, CVSS 8.5) permettait à un dépôt malveillant d'exécuter des commandes et d'exfiltrer des credentials cloud dès qu'un développeur ouvrait le repo et faisait confiance au workspace. Le correctif a été déployé par Amazon. [The Hacker News](https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html)
 
-- **PTC Windchill : RCE critique en exploitation active** : La CISA a inscrit à son catalogue KEV une vulnérabilité de type Remote Code Execution affectant les logiciels PTC Windchill et FlexPLM. L'exploitation s'accompagne de déploiements de web shells persistants. [The Hacker News](https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html)
+- **Polymarket — 3 M$ perdus dans une attaque supply-chain** : Des attaquants ont compromise un fournisseur tiers de la plateforme Polymarket pour injecter un script malveillant dans le frontend, détournant environ 3 millions de dollars. La plateforme a annoncé un remboursement intégral des clients touchés. [BleepingComputer](https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/)
 
-- **Supply chain : compromission persistante de packages npm** : La campagne liée à la famille malveillante Mini Shai-Hulud/Miasma/Hades continue d'évoluer avec de nouvelles publications malveillantes sur npm, et s'étend désormais à l'écosystème Go. [The Hacker News](https://thehackernews.com/2026/06/miasma-malware-targets-npm-packages-and.html)
+- **SharkLoader — nouveau loader déployant Cobalt Strike** : La campagne « StrikeShark » utilise un malware inédit, SharkLoader, pour déposer un beacon Cobalt Strike sur les machines cibles. Le mode opératoire et l'infrastructure suggèrent un acteur organisé en phase d'accès initial. [The Hacker News](https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html)
 
-- **Phishing ciblé : hôtellerie européenne et asiatique visée** : Microsoft signale une campagne en cours depuis avril 2026 utilisant des archives ZIP déguisées en photos pour déposer un implant Node.js sur les postes de réception. L'attribution à un groupe connu n'est pas confirmée. [The Hacker News](https://thehackernews.com/2026/06/microsoft-warns-of-photo-zip-phishing.html)
+- **TinyRCT — nouveau backdoor d'un APT sinophone en Asie du Sud-Est** : Un acteur APT sinophone cible des entités gouvernementales et des infrastructures critiques (notamment énergie) en Asie du Sud-Est avec un backdoor maison baptisé TinyRCT. La campagne vise spécifiquement des entreprises d'État. [The Hacker News](https://thehackernews.com/2026/06/chinese-speaking-apt-deploys-new.html)
 
-- **Cellebrite : matériel d'extraction utilisé en Russie après l'embargo** : Les autorités russes ont employé l'outil UFED de Cellebrite pour casser l'iPhone d'un opposant politique trois mois après l'annonce officielle de l'arrêt des ventes vers la Russie et la Biélorussie. [The Hacker News](https://thehackernews.com/2026/06/russia-used-cellebrite-on-jailed.html)
+- **Turla (Russie) — nouveaux malwares contre l'Ukraine** : Le groupe russe Turla enrichit son arsenal avec StockStay, un inédit malware documenté par Google, utilisé dans des opérations d'espionnage prolongées ciblant l'Ukraine. [The Record](https://therecord.media/russia-turla-espionage-ukraine-stockstay-malware)
 
-- **Gouvernance des identités : inadaptation aux agents IA** : Les infrastructures IAM existantes ne sont pas conçues pour gérer des agents autonomes qui héritent de permissions et exécutent des décisions à l'échelle machine, créant un angle mort de sécurité. [The Hacker News](https://thehackernews.com/2026/06/guardian-agents-next-layer-of-identity.html)
+- **Ingénierie sociale russe sur messageries — campagne de faux support tech** : Le SBU ukrainien décrit une opération russe de longue haleine où de faux agents de support technique persuadent les cibles de divulguer leurs identifiants d'applications de messagerie. [The Record](https://therecord.media/russia-ukraine-social-engineering-messaging-accounts)
 
-- **Câbles sous-marins : la FCC durcit la régulation américaine** : L'autorité américaine prévoit d'imposer pour la première fois une licence aux propriétaires et opérateurs d'équipements terminaux sous-marins (SLTE), renforçant la protection des infrastructures critiques de communication. [The Record](https://therecord.media/fcc-votes-to-toughen-rules-undersea-cables)
+- **Ciblage d'entreprises cybersécurité via de faux tenants OpenAI** : Des acteurs malveillants créent des organisations OpenAI usurpant l'identité d'entreprises légitimes et invitent leurs employés à les rejoindre, probablement pour collecter des informations sensibles via les conversations et projets partagés. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cybersecurity-firms-targeted-by-fraudulent-openai-organization-invites/)
+
+- **Automatisation GRC via agents IA** : Retour d'expérience sur la construction d'un agent IA dédié à la GRC, capable de surveiller des contrôles en continu, identifier des lacunes de preuves et ouvrir automatiquement des tâches de remédiation. [BleepingComputer](https://www.bleepingcomputer.com/news/security/your-first-grc-agent-a-red-teamers-walkthrough/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Fuite massive de passeports via un système tiers** : Près d'un million de passeports ont fuité via le système de vérification d'identité de dispensaires de cannabis, illustrant le risque de réutilisation de credentials forts sur des systèmes à faible maturité sécurité. [Schneier on Security](https://www.schneier.com/blog/archives/2026/06/one-million-passports-leaked-online.html)
+- **Fuite de données à l'Insee** : 12 800 agents voient leurs identités exposées suite à un incident, déclenchant une communication de crise. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-le-piratage-de-l-insee-expose-les-identites-de-12-800-agents-100574.html)
 
-- **IA et obligations réglementaires** : Une proposition de loi US impose aux développeurs d'IA avancée un reporting obligatoire des incidents de sécurité auprès du Département du Commerce, créant un cadre fédéral de supervision. Par ailleurs, face aux nouveaux modèles comme Mythos, les RSSI doivent recentrer le débat stratégique sur l'évolution concrète de la surface d'attaque plutôt que sur des scénarios catastrophes théoriques. [CSO Online - loi](https://www.csoonline.com/article/4189908/proposed-us-law-would-make-ai-risk-reporting-a-legal-obligation.html) · [CSO Online - Mythos](https://www.csoonline.com/article/4189600/mythos-is-a-signal-not-a-siren-what-frontier-ai-should-change-for-cisos.html)
+- **Contournement des defenses IA par les malwares** : Des codes malveillants intègrent désormais des instructions pour ordonner aux LLM de sécurité d'abandonner leur analyse, un signal fort pour réévaluer les stratégies de détection basées sur l'IA. [CSO Online](https://www.csoonline.com/article/4190094/malware-authors-subvert-ai-detection-systems.html)
 
-- **Zero Trust en OT : plan de communication au board** : Une feuille de route sur 90 jours détaille la manière dont les RSSI doivent présenter le Zero Trust appliqué aux environnements industriels, en lien avec les leçons tirées de l'incident Colonial Pipeline. [CSO Online](https://www.csoonline.com/article/4189605/what-cisos-need-to-tell-the-board-about-zero-trust-in-ot-a-90-day-communication-and-action-plan.html)
+- **Reconnaissance faciale en temps réel chez Meta** : L'entreprise prototype des lunettes connectées avec un fournisseur du Pentagone, potentiellement exploitables par les forces de l'ordre et l'armée. [Schneier on Security](https://www.schneier.com/blog/archives/2026/06/meta-is-testing-facial-recognition-for-police-and-military.html)
 
-- **Sécurisation des data lakehouses face à l'IA** : L'adoption croissante des data lakehouses comme socles de données impose aux entreprises de renforcer la gouvernance et la sécurité de ces environnements unifiés, notamment pour maîtriser les usages IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-entreprises-doivent-securiser-les-data-lakehouse-a-l-heure-de-l-ia-100566.html)
+- **Menace cyber sur les infrastructures critiques** : Le renseignement australien a déjoué une attaque préparatoire de sabotage sur un opérateur critique par un acteur étatique, rappelant que le risque physique des cyberattaques est global. [CSO Online](https://www.csoonline.com/article/4190054/cyberattacks-pose-a-threat-to-life-in-australia.html)
 
-- **Cybersécurité des TPE-PME** : Cybermalveillance lance un nouvel outil pour aider les petites structures à renforcer leur protection, dans un contexte de menace toujours soutenu. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-cybermalveillance-lance-un-outil-pour-renforcer-la-cybersecurite-des-tpe-pme-100571.html)
+- **Sécurisation des agents IA par la Linux Foundation** : Le projet ANS vise à encadrer le déploiement massif des agents autonomes en entreprise face aux risques émergents. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-linux foundation devoile-le-projet-ans-pour-securiser-les-agents-ia-100575.html)
 
-- **Sécurité open source et IA** : IBM, Red Hat et Palo Alto Networks s'associent pour sécuriser les projets open source, une initiative motivée par la montée en puissance de modèles comme Mythos 5 et GPT-5.5-Cyber. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-ibm-red-hat-et-palo-alto-networks-s-allient-pour-la-securite-des-projets-open-source-100568.html)
+- **Cisco parie sur la gestion des identités non-humaines (NHI)** : L'acquisition d'Astrix et WideField ancre la stratégie de Cisco pour faire de l'identité le plan de contrôle central face à la main-d'œuvre agentique. [Dark Reading](https://www.darkreading.com/identity-access-management-security/cisco-adds-nhi-security-stack-with-astrix-widefield)
 
-## IA — Produits, agents &amp; dev tooling
+- **Marché de l'emploi cyber junior et IA** : Contrairement aux craintes, l'IA ne supprime pas les postes débutants mais crée des besoins sur les compétences décisionnelles humaines. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/ai-wont-wipe-out-entry-level-cybersecurity-jobs)
 
-- **Boucle d'amélioration autonome pour agents** : Un workflow n8n intégrant cognee détecte les défaillances d'un agent, génère un correctif pour ses instructions et l'applique après approbation humaine du diff. [n8n Blog](https://blog.n8n.io/skill-loop/)
+- **Échéance quantique 2030** : La migration post-quantique imposée par l'administration Trump s'annonce coûteuse et techniquement lourde à cause des environnements hétérogènes IT/OT et des problèmes d'interopérabilité. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/meeting-2030-quantum-deadline-expensive-complex)
+
+- **Restriction d'accès envisagée pour GPT-5.6** : Sous pression, OpenAI pourrait brider l'accès à son prochain modèle, ce qui aurait un impact sur la souveraineté et les usages en entreprise. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-sous-pression-openai-pourrait-limiter-l-acces-au-futur-gpt-56-100572.html)
+
+## IA — Labos &amp; éditeurs
+
+- **Agents IA pour la conformité financière** : Stripe détaille l'architecture de son système d'agents ReAct pour la conformité, en mettant l'accent sur l'infrastructure dédiée et le maintien d'une boucle de supervision humaine. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/production-grade-ai-agents-for-financial-compliance-lessons-from-stripe/)
+- **Inférence locale sur mobile** : Google Research présente une technique de prédiction multi-token pour accélérer les modèles Gemini Nano directement sur les appareils Pixel. [Google Research](https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/)
+- **Extraction interactive de documents** : Un article décrit la mise en place d'un serveur pour extraire en temps réel le texte de PDF stockés sur Amazon S3, via une approche pilotée par protocole. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-interactive-pdf-text-extraction-from-amazon-s3/)
+- **IA métier pour l'assurance** : Cara, conçu avec AWS, présente son système d'IA spécifique au domaine des courtages d'assurance entreprise, en détaillant l'architecture technique et les gains mesurables obtenus. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-cara-pioneers-domain-specific-ai-for-enterprise-insurance-brokerages-with-aws/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Apple Container 1.0** : Apple publie en open source un outil en Swift permettant d'exécuter des conteneurs Linux comme machines virtuelles légères sur puces Apple Silicon, offrant une alternative aux solutions traditionnelles de conteneurisation sur Mac. [MarkTechPost](https://www.marktechpost.com/2026/06/26/meet-container-apples-open-source-swift-tool-for-running-linux-containers-as-lightweight-vms-on-apple-silicon/)
+- **Régulation d'accès aux modèles** : OpenAI a restreint le déploiement de GPT-5.6 à la demande d'un gouvernement, tout en déclarant publiquement que ce type de contrôle ne devrait pas devenir la norme, car il prive les entreprises et les défenseurs cyber d'outils avancés. [TechCrunch](https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/)
+
+- **Conséquences politiques des modèles** : Le débat ne se limite plus à une compétition entre laboratoires d'IA. Les capacités actuelles des modèles ont des répercussions politiques directes, ce qui exige une réponse collective du secteur et des États. [TechCrunch](https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/)
+
+- **Diversification de l'inférence hors Nvidia** : OpenAI a dévoilé Jalapeño, une puce d'inférence conçue avec Broadcom, marquant une étape vers la réduction de la dépendance au matériel Nvidia. D'autres acteurs comme Google, Apple et SpaceX développent également leurs propres composants. [TechCrunch](https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/)
 
 ## Actualité tech FR
 
-- **Anthropic accuse Alibaba de distillation illicite** : Anthropic a alerté les autorités US sur la récupération massive de données par Alibaba pour distiller ses modèles d'IA, tandis que l'administration Trump bloque parallèlement l'accès du groupe chinois à certains marchés. [Next.ink](https://next.ink/244350/ia-generative-anthropic-accuse-allibaba-de-distiller-ses-modeles/)
+- **Binance retire sa demande d'agrément MiCA en Europe** : La plateforme renonce à sa licence déposée en Grèce, ce qui entraînera l'arrêt de ses services dans l'UE au 1er juillet. Elle cherche désormais un autre régulateur européen pour se conformer au cadre MiCA. [Next.ink](https://next.ink/244424/binance-perd-son-passeport-pour-leurope/)
 
-- **Bercy suspend son test d'IA chinoise et bascule sur Mistral** : Le ministère de l'Économie a stoppé une expérimentation avec un modèle d'Alibaba après avoir identifié des biais jugés favorables au régime de Pékin, déployant à la place une solution du français Mistral. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/souverainete-le-ministere-de-l-economie-annonce-la-suspension-d-une-experimentation-autour-d-un-modele-chinois-d-ia-juge-favorable-au-regime-de-pekin-un-modele-du-francais-mistral-a-ete-deploye_AD-202606260435.html)
+- **OpenAI envisage des restrictions d'accès pour GPT-5.6** : Face à des pressions non précisées, Sam Altman aurait évoqué en interne la possibilité de limiter l'accès au prochain modèle, selon The Information. [Le Monde Informatique — IA](https://www.lemondeinformatique.fr/actualites/lire-sous-pression-openai-pourrait-limiter-l-acces-au-futur-gpt-56-100572.html)
 
-- **Contrôle US renforcé sur les modèles d'IA de pointe** : Selon BFM Tech, la Maison Blanche impose à OpenAI un lancement échelonné et restreint de GPT-5.6 pour raisons de sécurité, décidant au cas par cas des entités autorisées à y accéder. Ce contrôle fait écho aux restrictions déjà appliquées à Anthropic. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/apres-anthropic-au-tour-d-open-ai-de-devoir-controler-la-diffusion-de-son-dernier-modele-gpt-5-6-la-maison-blanche-decidera-au-cas-par-cas-qui-pourra-y-acceder_AV-202606260352.html)
+- **Sécurisation des agents IA : lancement du projet ANS par la Linux Foundation** : Une initiative open source voit le jour pour encadrer le déploiement croissant d'agents autonomes dans les entreprises. [Le Monde Informatique — IA](https://www.lemondeinformatique.fr/actualites/lire-la-linux-foundation-devoile-le-projet-ans-pour-securiser-les-agents-ia-100575.html)
 
-- **OpenAI lance un programme de correction automatisée des failles open source** : Le programme Patch the Planet mobilise des modèles spécialisés comme Codex Security pour détecter et corriger automatiquement des vulnérabilités dans les logiciels open source, dans le cadre de l'initiative cyber Daybreak. [Siècle Digital](https://siecledigital.fr/2026/06/25/openai-mobilise-son-ia-pour-detecter-et-corriger-les-failles-des-logiciels-open-source/)
+- **Preuve déloyale en entreprise : la Cour de cassation assouplit sa position** : Les enregistrements clandestins d'un employeur par un salarié sont désormais recevables en justice pour établir des faits de harcèlement moral, sous réserve de stricte nécessité. Cette décision modifie la gestion du risque prud'homal pour les employeurs. [Journal du Net](https://www.journaldunet.com/management/emploi-cadres/1551867-enregistrer-son-patron-en-cachette-la-cour-de-cassation-ouvre-une-breche-majeure/)
 
-- **Samsung prépare un investissement de 650 Md$ dans l'IA et les semi-conducteurs** : Porté par l'État sud-coréen comme projet national, ce plan pharaonique vise à accélérer la position du pays dans la course mondiale à l'IA. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/dans-le-cadre-d-un-grand-projet-national-coreen-samsung-prepare-un-projet-pharaonique-de-pres-de-650-milliards-de-dollars-pour-accelerer-la-course-mondiale-a-l-intelligence-artificielle_AD-202606260464.html)
+- **Guerre électronique : l'Ukraine cible les stations spatiales russes** : L'état-major ukrainien revendique des frappes de drones ayant causé des dommages critiques sur des centres de communications satellitaires russes, visant à perturber les transmissions militaires. [BFM Tech](https://www.bfmtv.com/tech/l-ukraine-annonce-avoir-inflige-des-dommages-critiques-a-des-centres-de-communications-spatiales-et-satellitaires-en-russie-dans-l-espoir-de-perturber-la-transmission-d-informations-militaires_AN-202606260667.html)
 
-- **Loi démarchage téléphonique partiellement censurée** : Le Conseil constitutionnel invalide le cumul de sanctions prévu par la loi de 2020, tout en amorçant une transition vers un régime plus strict à compter d'août 2026. [Journal du Net](https://www.journaldunet.com/business/action-publique/1551955-le-conseil-constitutionnel-declare-en-partie-inconstitutionnelle-la-loi-de-2020-sur-le-demarchage-telephonique/)
+- **Interopérabilité vs souveraineté : le débat sur les infrastructures numériques** : Une analyse critique rappelle que l'interopérabilité relève d'abord d'une logique de résilience technique, et non d'une stratégie de puissance géopolitique, contrairement à certaines visions de la souveraineté numérique. [Journal du Net](https://www.journaldunet.com/cybersecurite/1551805-infrastructures-numeriques-l-interoperabilite-est-une-politique-de-resilience-pas-une-strategie-de-puissance/)
 
-- **Sécurisation des data lakehouses à l'heure de l'IA** : L'adoption croissante des data lakehouses comme socle de données d'entreprise impose de renforcer leur sécurité pour maîtriser les nouveaux risques liés aux usages IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-entreprises-doivent-securiser-les-data-lakehouse-a-l-heure-de-l-ia-100566.html)</description>
+- **Australie : l'interdiction des réseaux sociaux aux moins de 16 ans peine à prouver son efficacité** : Une première étude menée sept mois après l'entrée en vigueur de la loi montre que les habitudes des adolescents ont peu évolué, faute de preuves suffisantes d'impact. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/nous-n-avons-pas-trouve-suffisamment-de-preuves-de-son-efficacite-une-etude-demontre-que-l-interdiction-des-reseaux-sociaux-aux-moins-de-16-ans-peine-a-produire-des-effets-en-australie_AD-202606260557.html)
+
+- **Gouvernance des données RH : un levier stratégique sous-exploité** : Les données RH, souvent dispersées dans des silos, restent insuffisamment gouvernées alors qu'elles pourraient éclairer la prise de décision stratégique. [Journal du Net](https://www.journaldunet.com/management/direction-generale/1551937-les-donnees-rh-un-actif-strategique-encore-sous-exploite/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Noyau Linux : multiples élévations de privilèges locales</strong> : Plusieurs vulnérabilités critiques permettent à un utilisateur local non privilégié d'obtenir les droits root. <strong>CVE-2026-46331</strong> ("pedit COW") corrompt la mémoire cache du noyau via le sous-système de contrôle de trafic ; <strong>CVE-2026-43503</strong> ("DirtyClone") exploite une faille dans le clonage de paquets réseau. Les deux disposent d'exploits publics fonctionnels. <a href="https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables-root.html">pedit COW</a> · <a href="https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html">DirtyClone</a></li>
+<li><strong>Amazon Q Developer — exécution de code à distance via MCP</strong> : Une faille de sévérité haute (CVE-2026-12957, CVSS 8.5) permettait à un dépôt malveillant d'exécuter des commandes et d'exfiltrer des credentials cloud dès qu'un développeur ouvrait le repo et faisait confiance au workspace. Le correctif a été déployé par Amazon. <a href="https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>PTC Windchill : RCE critique en exploitation active</strong> : La CISA a inscrit à son catalogue KEV une vulnérabilité de type Remote Code Execution affectant les logiciels PTC Windchill et FlexPLM. L'exploitation s'accompagne de déploiements de web shells persistants. <a href="https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html">The Hacker News</a></li>
+<li><strong>Polymarket — 3 M$ perdus dans une attaque supply-chain</strong> : Des attaquants ont compromise un fournisseur tiers de la plateforme Polymarket pour injecter un script malveillant dans le frontend, détournant environ 3 millions de dollars. La plateforme a annoncé un remboursement intégral des clients touchés. <a href="https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Supply chain : compromission persistante de packages npm</strong> : La campagne liée à la famille malveillante Mini Shai-Hulud/Miasma/Hades continue d'évoluer avec de nouvelles publications malveillantes sur npm, et s'étend désormais à l'écosystème Go. <a href="https://thehackernews.com/2026/06/miasma-malware-targets-npm-packages-and.html">The Hacker News</a></li>
+<li><strong>SharkLoader — nouveau loader déployant Cobalt Strike</strong> : La campagne « StrikeShark » utilise un malware inédit, SharkLoader, pour déposer un beacon Cobalt Strike sur les machines cibles. Le mode opératoire et l'infrastructure suggèrent un acteur organisé en phase d'accès initial. <a href="https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Phishing ciblé : hôtellerie européenne et asiatique visée</strong> : Microsoft signale une campagne en cours depuis avril 2026 utilisant des archives ZIP déguisées en photos pour déposer un implant Node.js sur les postes de réception. L'attribution à un groupe connu n'est pas confirmée. <a href="https://thehackernews.com/2026/06/microsoft-warns-of-photo-zip-phishing.html">The Hacker News</a></li>
+<li><strong>TinyRCT — nouveau backdoor d'un APT sinophone en Asie du Sud-Est</strong> : Un acteur APT sinophone cible des entités gouvernementales et des infrastructures critiques (notamment énergie) en Asie du Sud-Est avec un backdoor maison baptisé TinyRCT. La campagne vise spécifiquement des entreprises d'État. <a href="https://thehackernews.com/2026/06/chinese-speaking-apt-deploys-new.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Cellebrite : matériel d'extraction utilisé en Russie après l'embargo</strong> : Les autorités russes ont employé l'outil UFED de Cellebrite pour casser l'iPhone d'un opposant politique trois mois après l'annonce officielle de l'arrêt des ventes vers la Russie et la Biélorussie. <a href="https://thehackernews.com/2026/06/russia-used-cellebrite-on-jailed.html">The Hacker News</a></li>
+<li><strong>Turla (Russie) — nouveaux malwares contre l'Ukraine</strong> : Le groupe russe Turla enrichit son arsenal avec StockStay, un inédit malware documenté par Google, utilisé dans des opérations d'espionnage prolongées ciblant l'Ukraine. <a href="https://therecord.media/russia-turla-espionage-ukraine-stockstay-malware">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Gouvernance des identités : inadaptation aux agents IA</strong> : Les infrastructures IAM existantes ne sont pas conçues pour gérer des agents autonomes qui héritent de permissions et exécutent des décisions à l'échelle machine, créant un angle mort de sécurité. <a href="https://thehackernews.com/2026/06/guardian-agents-next-layer-of-identity.html">The Hacker News</a></li>
+<li><strong>Ingénierie sociale russe sur messageries — campagne de faux support tech</strong> : Le SBU ukrainien décrit une opération russe de longue haleine où de faux agents de support technique persuadent les cibles de divulguer leurs identifiants d'applications de messagerie. <a href="https://therecord.media/russia-ukraine-social-engineering-messaging-accounts">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Câbles sous-marins : la FCC durcit la régulation américaine</strong> : L'autorité américaine prévoit d'imposer pour la première fois une licence aux propriétaires et opérateurs d'équipements terminaux sous-marins (SLTE), renforçant la protection des infrastructures critiques de communication. <a href="https://therecord.media/fcc-votes-to-toughen-rules-undersea-cables">The Record</a></li>
+<li><strong>Ciblage d'entreprises cybersécurité via de faux tenants OpenAI</strong> : Des acteurs malveillants créent des organisations OpenAI usurpant l'identité d'entreprises légitimes et invitent leurs employés à les rejoindre, probablement pour collecter des informations sensibles via les conversations et projets partagés. <a href="https://www.bleepingcomputer.com/news/security/cybersecurity-firms-targeted-by-fraudulent-openai-organization-invites/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Automatisation GRC via agents IA</strong> : Retour d'expérience sur la construction d'un agent IA dédié à la GRC, capable de surveiller des contrôles en continu, identifier des lacunes de preuves et ouvrir automatiquement des tâches de remédiation. <a href="https://www.bleepingcomputer.com/news/security/your-first-grc-agent-a-red-teamers-walkthrough/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Fuite massive de passeports via un système tiers</strong> : Près d'un million de passeports ont fuité via le système de vérification d'identité de dispensaires de cannabis, illustrant le risque de réutilisation de credentials forts sur des systèmes à faible maturité sécurité. <a href="https://www.schneier.com/blog/archives/2026/06/one-million-passports-leaked-online.html">Schneier on Security</a></li>
+<li><strong>Fuite de données à l'Insee</strong> : 12 800 agents voient leurs identités exposées suite à un incident, déclenchant une communication de crise. <a href="https://www.lemondeinformatique.fr/actualites/lire-le-piratage-de-l-insee-expose-les-identites-de-12-800-agents-100574.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>IA et obligations réglementaires</strong> : Une proposition de loi US impose aux développeurs d'IA avancée un reporting obligatoire des incidents de sécurité auprès du Département du Commerce, créant un cadre fédéral de supervision. Par ailleurs, face aux nouveaux modèles comme Mythos, les RSSI doivent recentrer le débat stratégique sur l'évolution concrète de la surface d'attaque plutôt que sur des scénarios catastrophes théoriques. <a href="https://www.csoonline.com/article/4189908/proposed-us-law-would-make-ai-risk-reporting-a-legal-obligation.html">CSO Online - loi</a> · <a href="https://www.csoonline.com/article/4189600/mythos-is-a-signal-not-a-siren-what-frontier-ai-should-change-for-cisos.html">CSO Online - Mythos</a></li>
+<li><strong>Contournement des defenses IA par les malwares</strong> : Des codes malveillants intègrent désormais des instructions pour ordonner aux LLM de sécurité d'abandonner leur analyse, un signal fort pour réévaluer les stratégies de détection basées sur l'IA. <a href="https://www.csoonline.com/article/4190094/malware-authors-subvert-ai-detection-systems.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Zero Trust en OT : plan de communication au board</strong> : Une feuille de route sur 90 jours détaille la manière dont les RSSI doivent présenter le Zero Trust appliqué aux environnements industriels, en lien avec les leçons tirées de l'incident Colonial Pipeline. <a href="https://www.csoonline.com/article/4189605/what-cisos-need-to-tell-the-board-about-zero-trust-in-ot-a-90-day-communication-and-action-plan.html">CSO Online</a></li>
+<li><strong>Reconnaissance faciale en temps réel chez Meta</strong> : L'entreprise prototype des lunettes connectées avec un fournisseur du Pentagone, potentiellement exploitables par les forces de l'ordre et l'armée. <a href="https://www.schneier.com/blog/archives/2026/06/meta-is-testing-facial-recognition-for-police-and-military.html">Schneier on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurisation des data lakehouses face à l'IA</strong> : L'adoption croissante des data lakehouses comme socles de données impose aux entreprises de renforcer la gouvernance et la sécurité de ces environnements unifiés, notamment pour maîtriser les usages IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-entreprises-doivent-securiser-les-data-lakehouse-a-l-heure-de-l-ia-100566.html">Le Monde Informatique</a></li>
+<li><strong>Menace cyber sur les infrastructures critiques</strong> : Le renseignement australien a déjoué une attaque préparatoire de sabotage sur un opérateur critique par un acteur étatique, rappelant que le risque physique des cyberattaques est global. <a href="https://www.csoonline.com/article/4190054/cyberattacks-pose-a-threat-to-life-in-australia.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Cybersécurité des TPE-PME</strong> : Cybermalveillance lance un nouvel outil pour aider les petites structures à renforcer leur protection, dans un contexte de menace toujours soutenu. <a href="https://www.lemondeinformatique.fr/actualites/lire-cybermalveillance-lance-un-outil-pour-renforcer-la-cybersecurite-des-tpe-pme-100571.html">Le Monde Informatique</a></li>
+<li><strong>Sécurisation des agents IA par la Linux Foundation</strong> : Le projet ANS vise à encadrer le déploiement massif des agents autonomes en entreprise face aux risques émergents. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-linux foundation devoile-le-projet-ans-pour-securiser-les-agents-ia-100575.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité open source et IA</strong> : IBM, Red Hat et Palo Alto Networks s'associent pour sécuriser les projets open source, une initiative motivée par la montée en puissance de modèles comme Mythos 5 et GPT-5.5-Cyber. <a href="https://www.lemondeinformatique.fr/actualites/lire-ibm-red-hat-et-palo-alto-networks-s-allient-pour-la-securite-des-projets-open-source-100568.html">Le Monde Informatique</a></li>
+<li><strong>Cisco parie sur la gestion des identités non-humaines (NHI)</strong> : L'acquisition d'Astrix et WideField ancre la stratégie de Cisco pour faire de l'identité le plan de contrôle central face à la main-d'œuvre agentique. <a href="https://www.darkreading.com/identity-access-management-security/cisco-adds-nhi-security-stack-with-astrix-widefield">Dark Reading</a></li>
 </ul>
 
-<h2>IA — Produits, agents & dev tooling</h2>
+<ul>
+<li><strong>Marché de l'emploi cyber junior et IA</strong> : Contrairement aux craintes, l'IA ne supprime pas les postes débutants mais crée des besoins sur les compétences décisionnelles humaines. <a href="https://www.darkreading.com/cybersecurity-operations/ai-wont-wipe-out-entry-level-cybersecurity-jobs">Dark Reading</a></li>
+</ul>
 
 <ul>
-<li><strong>Boucle d'amélioration autonome pour agents</strong> : Un workflow n8n intégrant cognee détecte les défaillances d'un agent, génère un correctif pour ses instructions et l'applique après approbation humaine du diff. <a href="https://blog.n8n.io/skill-loop/">n8n Blog</a></li>
+<li><strong>Échéance quantique 2030</strong> : La migration post-quantique imposée par l'administration Trump s'annonce coûteuse et techniquement lourde à cause des environnements hétérogènes IT/OT et des problèmes d'interopérabilité. <a href="https://www.darkreading.com/cybersecurity-operations/meeting-2030-quantum-deadline-expensive-complex">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Restriction d'accès envisagée pour GPT-5.6</strong> : Sous pression, OpenAI pourrait brider l'accès à son prochain modèle, ce qui aurait un impact sur la souveraineté et les usages en entreprise. <a href="https://www.lemondeinformatique.fr/actualites/lire-sous-pression-openai-pourrait-limiter-l-acces-au-futur-gpt-56-100572.html">Le Monde Informatique</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Agents IA pour la conformité financière</strong> : Stripe détaille l'architecture de son système d'agents ReAct pour la conformité, en mettant l'accent sur l'infrastructure dédiée et le maintien d'une boucle de supervision humaine. <a href="https://aws.amazon.com/blogs/machine-learning/production-grade-ai-agents-for-financial-compliance-lessons-from-stripe/">AWS Machine Learning</a></li>
+<li><strong>Inférence locale sur mobile</strong> : Google Research présente une technique de prédiction multi-token pour accélérer les modèles Gemini Nano directement sur les appareils Pixel. <a href="https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/">Google Research</a></li>
+<li><strong>Extraction interactive de documents</strong> : Un article décrit la mise en place d'un serveur pour extraire en temps réel le texte de PDF stockés sur Amazon S3, via une approche pilotée par protocole. <a href="https://aws.amazon.com/blogs/machine-learning/build-interactive-pdf-text-extraction-from-amazon-s3/">AWS Machine Learning</a></li>
+<li><strong>IA métier pour l'assurance</strong> : Cara, conçu avec AWS, présente son système d'IA spécifique au domaine des courtages d'assurance entreprise, en détaillant l'architecture technique et les gains mesurables obtenus. <a href="https://aws.amazon.com/blogs/machine-learning/how-cara-pioneers-domain-specific-ai-for-enterprise-insurance-brokerages-with-aws/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Apple Container 1.0</strong> : Apple publie en open source un outil en Swift permettant d'exécuter des conteneurs Linux comme machines virtuelles légères sur puces Apple Silicon, offrant une alternative aux solutions traditionnelles de conteneurisation sur Mac. <a href="https://www.marktechpost.com/2026/06/26/meet-container-apples-open-source-swift-tool-for-running-linux-containers-as-lightweight-vms-on-apple-silicon/">MarkTechPost</a></li>
+<li><strong>Régulation d'accès aux modèles</strong> : OpenAI a restreint le déploiement de GPT-5.6 à la demande d'un gouvernement, tout en déclarant publiquement que ce type de contrôle ne devrait pas devenir la norme, car il prive les entreprises et les défenseurs cyber d'outils avancés. <a href="https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Conséquences politiques des modèles</strong> : Le débat ne se limite plus à une compétition entre laboratoires d'IA. Les capacités actuelles des modèles ont des répercussions politiques directes, ce qui exige une réponse collective du secteur et des États. <a href="https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Diversification de l'inférence hors Nvidia</strong> : OpenAI a dévoilé Jalapeño, une puce d'inférence conçue avec Broadcom, marquant une étape vers la réduction de la dépendance au matériel Nvidia. D'autres acteurs comme Google, Apple et SpaceX développent également leurs propres composants. <a href="https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Anthropic accuse Alibaba de distillation illicite</strong> : Anthropic a alerté les autorités US sur la récupération massive de données par Alibaba pour distiller ses modèles d'IA, tandis que l'administration Trump bloque parallèlement l'accès du groupe chinois à certains marchés. <a href="https://next.ink/244350/ia-generative-anthropic-accuse-allibaba-de-distiller-ses-modeles/">Next.ink</a></li>
+<li><strong>Binance retire sa demande d'agrément MiCA en Europe</strong> : La plateforme renonce à sa licence déposée en Grèce, ce qui entraînera l'arrêt de ses services dans l'UE au 1er juillet. Elle cherche désormais un autre régulateur européen pour se conformer au cadre MiCA. <a href="https://next.ink/244424/binance-perd-son-passeport-pour-leurope/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Bercy suspend son test d'IA chinoise et bascule sur Mistral</strong> : Le ministère de l'Économie a stoppé une expérimentation avec un modèle d'Alibaba après avoir identifié des biais jugés favorables au régime de Pékin, déployant à la place une solution du français Mistral. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/souverainete-le-ministere-de-l-economie-annonce-la-suspension-d-une-experimentation-autour-d-un-modele-chinois-d-ia-juge-favorable-au-regime-de-pekin-un-modele-du-francais-mistral-a-ete-deploye_AD-202606260435.html">BFM Tech</a></li>
+<li><strong>OpenAI envisage des restrictions d'accès pour GPT-5.6</strong> : Face à des pressions non précisées, Sam Altman aurait évoqué en interne la possibilité de limiter l'accès au prochain modèle, selon The Information. <a href="https://www.lemondeinformatique.fr/actualites/lire-sous-pression-openai-pourrait-limiter-l-acces-au-futur-gpt-56-100572.html">Le Monde Informatique — IA</a></li>
 </ul>
 
 <ul>
-<li><strong>Contrôle US renforcé sur les modèles d'IA de pointe</strong> : Selon BFM Tech, la Maison Blanche impose à OpenAI un lancement échelonné et restreint de GPT-5.6 pour raisons de sécurité, décidant au cas par cas des entités autorisées à y accéder. Ce contrôle fait écho aux restrictions déjà appliquées à Anthropic. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/apres-anthropic-au-tour-d-open-ai-de-devoir-controler-la-diffusion-de-son-dernier-modele-gpt-5-6-la-maison-blanche-decidera-au-cas-par-cas-qui-pourra-y-acceder_AV-202606260352.html">BFM Tech</a></li>
+<li><strong>Sécurisation des agents IA : lancement du projet ANS par la Linux Foundation</strong> : Une initiative open source voit le jour pour encadrer le déploiement croissant d'agents autonomes dans les entreprises. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-linux-foundation-devoile-le-projet-ans-pour-securiser-les-agents-ia-100575.html">Le Monde Informatique — IA</a></li>
 </ul>
 
 <ul>
-<li><strong>OpenAI lance un programme de correction automatisée des failles open source</strong> : Le programme Patch the Planet mobilise des modèles spécialisés comme Codex Security pour détecter et corriger automatiquement des vulnérabilités dans les logiciels open source, dans le cadre de l'initiative cyber Daybreak. <a href="https://siecledigital.fr/2026/06/25/openai-mobilise-son-ia-pour-detecter-et-corriger-les-failles-des-logiciels-open-source/">Siècle Digital</a></li>
+<li><strong>Preuve déloyale en entreprise : la Cour de cassation assouplit sa position</strong> : Les enregistrements clandestins d'un employeur par un salarié sont désormais recevables en justice pour établir des faits de harcèlement moral, sous réserve de stricte nécessité. Cette décision modifie la gestion du risque prud'homal pour les employeurs. <a href="https://www.journaldunet.com/management/emploi-cadres/1551867-enregistrer-son-patron-en-cachette-la-cour-de-cassation-ouvre-une-breche-majeure/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Samsung prépare un investissement de 650 Md$ dans l'IA et les semi-conducteurs</strong> : Porté par l'État sud-coréen comme projet national, ce plan pharaonique vise à accélérer la position du pays dans la course mondiale à l'IA. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/dans-le-cadre-d-un-grand-projet-national-coreen-samsung-prepare-un-projet-pharaonique-de-pres-de-650-milliards-de-dollars-pour-accelerer-la-course-mondiale-a-l-intelligence-artificielle_AD-202606260464.html">BFM Tech</a></li>
+<li><strong>Guerre électronique : l'Ukraine cible les stations spatiales russes</strong> : L'état-major ukrainien revendique des frappes de drones ayant causé des dommages critiques sur des centres de communications satellitaires russes, visant à perturber les transmissions militaires. <a href="https://www.bfmtv.com/tech/l-ukraine-annonce-avoir-inflige-des-dommages-critiques-a-des-centres-de-communications-spatiales-et-satellitaires-en-russie-dans-l-espoir-de-perturber-la-transmission-d-informations-militaires_AN-202606260667.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Loi démarchage téléphonique partiellement censurée</strong> : Le Conseil constitutionnel invalide le cumul de sanctions prévu par la loi de 2020, tout en amorçant une transition vers un régime plus strict à compter d'août 2026. <a href="https://www.journaldunet.com/business/action-publique/1551955-le-conseil-constitutionnel-declare-en-partie-inconstitutionnelle-la-loi-de-2020-sur-le-demarchage-telephonique/">Journal du Net</a></li>
+<li><strong>Interopérabilité vs souveraineté : le débat sur les infrastructures numériques</strong> : Une analyse critique rappelle que l'interopérabilité relève d'abord d'une logique de résilience technique, et non d'une stratégie de puissance géopolitique, contrairement à certaines visions de la souveraineté numérique. <a href="https://www.journaldunet.com/cybersecurite/1551805-infrastructures-numeriques-l-interoperabilite-est-une-politique-de-resilience-pas-une-strategie-de-puissance/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurisation des data lakehouses à l'heure de l'IA</strong> : L'adoption croissante des data lakehouses comme socle de données d'entreprise impose de renforcer leur sécurité pour maîtriser les nouveaux risques liés aux usages IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-entreprises-doivent-securiser-les-data-lakehouse-a-l-heure-de-l-ia-100566.html">Le Monde Informatique</a></li>
+<li><strong>Australie : l'interdiction des réseaux sociaux aux moins de 16 ans peine à prouver son efficacité</strong> : Une première étude menée sept mois après l'entrée en vigueur de la loi montre que les habitudes des adolescents ont peu évolué, faute de preuves suffisantes d'impact. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/nous-n-avons-pas-trouve-suffisamment-de-preuves-de-son-efficacite-une-etude-demontre-que-l-interdiction-des-reseaux-sociaux-aux-moins-de-16-ans-peine-a-produire-des-effets-en-australie_AD-202606260557.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Gouvernance des données RH : un levier stratégique sous-exploité</strong> : Les données RH, souvent dispersées dans des silos, restent insuffisamment gouvernées alors qu'elles pourraient éclairer la prise de décision stratégique. <a href="https://www.journaldunet.com/management/direction-generale/1551937-les-donnees-rh-un-actif-strategique-encore-sous-exploite/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260626-1322</guid>
-      <pubDate>Fri, 26 Jun 2026 13:22:18 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260626-1903</guid>
+      <pubDate>Fri, 26 Jun 2026 19:03:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
