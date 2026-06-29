@@ -8,250 +8,142 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 29 Jun 2026 10:46:43 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 14:55:59 +0000</lastBuildDate>
     <item>
-      <title>Digest — 29/06 10h</title>
+      <title>Digest — 29/06 14h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Vulnérabilité critique dans libssh2 — PoC public** : Un PoC est disponible pour CVE-2026-55200, une faille critique dans libssh2 permettant à un serveur SSH malveillant de provoquer une corruption mémoire côté client, sans authentification ni interaction utilisateur. Toutes les versions jusqu'à 1.x sont concernées, la mise à jour est urgente. [The Hacker News](https://thehackernews.com/2026/06/public-poc-released-for-critical.html)
+- **Exploitation active de failles critiques SimpleHelp et Oracle EBS** : Des attaquants exploitent CVE-2026-48558 dans SimpleHelp pour déployer un infostealer cross-plateforme (Djinn Stealer) ciblant Windows, macOS et Linux. Parallèlement, CVE-2026-46817 dans Oracle E-Business Suite fait l'objet d'attaques en cours. [SimpleHelp](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/) · [Oracle EBS](https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/)
 
-- **Extensions Edge malveillantes dissimulant leur charge par stéganographie** : Microsoft a retiré 119 extensions Edge qui cachaient des malwares dans des fichiers images et polices via stéganographie, avec activation différée pour vol d'identifiants et fraude publicitaire. Cette campagne, baptisée StegoAd, contournait les mécanismes classiques de détection. [The Hacker News](https://thehackernews.com/2026/06/microsoft-removes-119-edge-extensions.html)
+- **Chaîne d'infection Bumblebee vers ransomware Akira** : Une campagne documentée par The DFIR Report montre un chemin d'infection partant de résultats Bing Search manipulés, passant par Bumblebee et le C2 Adaptix, jusqu'au déploiement du ransomware Akira. [DFIR Report](https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/)
 
-- **Chaîne d'approvisionnement compromise : packages npm/Go exploitant VS Code Tasks** : Des packages npm et Go détournés utilisent l'API des tâches VS Code plutôt que les scripts de cycle de vie classiques pour déployer un infostealer Python multi-OS (Windows, Linux, macOS). Cette technique vise à contourner les contrôles de sécurité standards ciblant les hooks d'installation. [The Hacker News](https://thehackernews.com/2026/06/hijacked-npm-and-go-packages-use-vs.html)
+- **Abus de DCloud Uni-App pour scams crypto et phishing** : Plus de 236 000 sites utilisent des templates malveillants basés sur le framework open-source chinois DCloud Uni-App pour héberger de faux échanges crypto, des pig-butchering scams et des wallet drainers. [The Hacker News](https://thehackernews.com/2026/06/236000-dcloud-uni-app-sites-used-in.html)
 
-## IA — Recherche
+- **Gamaredon étend ses capacités malwares contre l'Ukraine** : Le groupe APT russe a mené 35 campagnes de spear-phishing distinctes en 2025, élargissant son arsenal malware et abusant de services cloud pour maintenir l'accès. [The Hacker News](https://thehackernews.com/2026/06/gamaredon-expands-ukraine-attacks-with.html)
 
-- **Insécurité fondamentale des LLM par injection de prompt** : Une preuve théorique démontre que les architectures à embedding partagé (sans séparation stricte instructions/données) rendent toute défense parfaite contre l'injection de prompt impossible. [arXiv cs.AI](https://arxiv.org/abs/2606.27567) · [arXiv cs.LG](https://arxiv.org/abs/2606.27567)
+- **Agents IA et identités : un nouveau vecteur d'attaque** : L'essor des agents IA capables d'actions transverses dans les SI crée un problème de gestion des identités privilégiées que les attaquants commencent à cibler. [BleepingComputer](https://www.bleepingcomputer.com/news/security/agentic-ai-has-an-identity-problem-and-attackers-know-it/)
 
-- **Système immunitaire natif pour agents autonomes** : Face à l'extension de la surface d'attaque (mémoire persistante, outils, collaboration multi-agents), un nouveau paradigme d'architecture de défense interne est proposé pour remplacer les sécurités périmétriques devenues insuffisantes. [arXiv cs.AI](https://arxiv.org/abs/2606.28270)
+- **BEC : l'imitation sans malware reste le maillon faible** : Les attaques BEC misent sur l'usurpation comportementale plutôt que sur des charges malveillantes, rendant la détection traditionnelle inefficace. L'IA comportementale est présentée comme piste de réponse. [BleepingComputer](https://www.bleepingcomputer.com/news/security/webinar-why-business-email-compromise-attacks-keep-succeeding/)
 
-- **Risque écosystémique des agents de code autonomes** : L'évaluation isolée des agents codeurs masque les vulnérabilités qui émergent lorsqu'ils interagissent à grande échelle sur des dépôts partagés ; l'étude préconise de gouverner le dépôt plutôt que l'agent. [arXiv cs.AI](https://arxiv.org/abs/2606.28235)
+- **Post-quantique : priorité aux credentials** : La cryptographie post-quantique doit commencer par la protection des secrets à longue durée de vie (identifiants, clés), déjà vulnérables à des attaques de type "harvest now, decrypt later". [The Hacker News](https://thehackernews.com/2026/06/why-post-quantum-cryptography-starts.html)
 
-- **Menace sur la vie privée par ré-identification agentique** : Des agents IA sont capables d'automatiser et de passer à l'échelle la ré-identification d'individus à partir de traces de mobilité collectées par les courtiers en données, rendant le risque bien plus concret. [arXiv cs.AI](https://arxiv.org/abs/2606.27936)
+- **Saisie de 400 domaines de streaming illégal FIFA** : Le département de la Justice américain a saisi près de 400 domaines diffusant illégalement des matchs de la Coupe du Monde. [BleepingComputer](https://www.bleepingcomputer.com/news/security/us-seizes-hundreds-of-fifa-world-cup-illegal-streaming-domains/)
 
-- **Mécanisme des attaques de jailbreak** : Les jailbreaks ne suppriment pas toutes les fonctions de sécurité mais désactivent sélectivement des têtes d'attention spécifiques, ce qui ouvre des pistes pour des défenses plus ciblées. [arXiv cs.AI](https://arxiv.org/abs/2606.28153)
+- **Ukraine : saisie crypto réinvestie en obligations de guerre** : L'agence ukrainienne ARMA a transféré plus de 8,3 millions de dollars en crypto saisis à un groupe cybercriminel vers des obligations d'État finançant l'effort de guerre. [The Record](https://therecord.media/ukraine-uses-seized-crypto-cybercrime-for-war-bonds)
 
-- **Manipulation des tokens spéciaux pour jailbreak** : Une nouvelle méthode d'attaque exploite les tokens spéciaux (métadonnées de fine-tuning) pour contourner les protections des services LLM en ligne. [arXiv cs.AI](https://arxiv.org/abs/2510.10271)
+## Cyber — Stratégie &amp; analyse
 
-- **Déstabilisation des systèmes multi-agents par vérification différée** : Le délai entre l'émission d'une affirmation et sa vérification dans un réseau d'agents LLM crée un seuil d'instabilité au-delà duquel les hallucinations se propagent de manière incontrôlable. [arXiv cs.LG](https://arxiv.org/abs/2606.27409)
+- **OpenAI lance GPT-5.6 sous pression politique** : Trois versions de GPT-5.6 sont déployées avec un accès restreint, sur injonction de l'administration Trump qui accélère le calendrier des acteurs de l'IA américains. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-openai-lance-de-maniere-restreinte-trois-versions-de-gpt-56-100584.html)
+- **IA générative dans Excel** : Microsoft généralise l'intégration de Copilot dans Excel pour l'ensemble des utilisateurs, étendant l'accès aux capacités d'analyse et de génération de formules par langage naturel. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-microsoft-muscle-les-fonctions-ia-d-excel-100581.html)
 
-- **Désapprentissage boîte noire pour API LLM** : Une technique permet de faire "oublier" des données sensibles, protégées ou obsolètes à un LLM accessible uniquement via API, sans accès aux poids du modèle. [arXiv cs.LG](https://arxiv.org/abs/2606.27683)
+## IA — Labos &amp; éditeurs
 
-- **Estimation d'incertitude pour détecter les hallucinations** : Une étude factorisée des méthodes par sondes internes identifie les composants clés (signaux, architecture de sonde) qui améliorent réellement la détection d'hallucinations dans les LLM. [arXiv cs.AI](https://arxiv.org/abs/2606.27679)
+- **Impact de l'IA sur l'emploi en Europe** : OpenAI publie une cartographie des transformations du marché du travail européen face à l'IA, identifiant les métiers exposés à l'automatisation et ceux appelés à évoluer. [OpenAI News](https://openai.com/index/mapping-ai-jobs-transition-eu)
 
-- **Raisonnement interne sans chaîne de pensée** : Des modèles de frontier pourraient développer une capacité de raisonnement complexe sans tokens de pensée explicites, ce qui rendrait caduques les approches de supervision basées sur le monitoring du CoT. [arXiv cs.AI](https://arxiv.org/abs/2606.07157)
-
-- **Sécurité des systèmes multi-agents inter-domaines** : Sept défis de sécurité critiques sont identifiés pour les systèmes où des agents LLM autonomes collaborent au-delà des frontières organisationnelles. [arXiv cs.AI](https://arxiv.org/abs/2505.23847)
-
-- **Sur-refus et sous-conformité des LLM en santé** : Un nouveau benchmark mesure les extrêmes de l'alignement de sécurité en contexte médical, où les modèles refusent des requêtes bénignes ou se conforment à des demandes nuisibles. [arXiv cs.AI](https://arxiv.org/abs/2601.17642)
-
-- **Deepfakes multimodaux** : État de l'art couvrant la génération et la détection de deepfakes pour tous les types de médias (image, vidéo, audio, multimodal), avec taxonomies des méthodes. [arXiv cs.LG](https://arxiv.org/abs/2411.19537)
-
-- **Composition de personnalités dans les équipes d'agents LLM** : La personnalité attribuée aux agents influence leurs performances objectives en équipe, les personnalités peu agréables générant un langage plus adversarial. [arXiv cs.AI](https://arxiv.org/abs/2606.27443)
-
-- **Planification par modèle du monde interne** : Un paradigme d'entraînement agentique unifié permet aux LLM d'utiliser un raisonnement contrefactuel ("what-if") pour planifier des tâches à long horizon au lieu de rester purement réactifs. [arXiv cs.AI](https://arxiv.org/abs/2606.27483)
-
-- **Modèles fondation vérifiables et préservant la vérité locale** : Un cadre catégorique (ODYSSEY) est introduit pour construire des modèles dont les prédictions sont localement vérifiables et préservent la vérité, en composant des briques architecturales appelées fonderies. [arXiv cs.AI](https://arxiv.org/abs/2606.27593)
-
-- **Réseaux de modèles d'IA** : Concept d'un "AI-Model Network" où les modèles collaborent et partagent des capacités, à l'image d'Internet pour les ordinateurs. [arXiv cs.AI](https://arxiv.org/abs/2606.27382)
-
-- **Benchmark d'assistants personnels agentiques** : Un nouveau benchmark évalue les agents LLM de type assistant personnel dans des environnements logiciels ouverts, avec état et personnalisés, pour une mesure plus fidèle de leurs capacités réelles. [arXiv cs.AI](https://arxiv.org/abs/2604.13072)
-
-- **Raisonnement émotionnel multimodal** : L'étude montre que le raisonnement explicite n'améliore pas nécessairement la précision de reconnaissance d'émotions, et propose une synergie entre pensée rapide (intuition) et lente (raisonnement). [arXiv cs.AI](https://arxiv.org/abs/2606.27652)
+- **Modèles open source dans les environnements gouvernementaux fermés** : Palantir déploie un moteur IA pour les agences fédérales américaines basé sur les modèles ouverts NVIDIA Nemotron, illustrant la pénétration des modèles open source dans les infrastructures sensibles de défense et de renseignement. [NVIDIA Blog](https://blogs.nvidia.com/blog/palantir-secure-ai-us-agencies-nemotron-open-models/)
 
 ## Actualité tech FR
 
-- **Fuite de données à l'Insee** : L'Institut annonce une violation de son annuaire interne, exposant les données d'identité d'environ 12 800 agents. [Next.ink](https://next.ink/brief-article/au-tour-de-linsee-de-se-faire-pirater-les-donnees-de-12-800-agents-exfiltrees/)
+- **EDB unifie transactionnel et analytique pour les agents IA** : L'éditeur de base de données fait tomber la cloison historique entre OLTP et OLAP, estimant que les agents IA ont besoin d'accéder à ces deux types de données sans latence ni duplication. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-pour-les-agents-ia-edb-combine-analytique-et-base-de-donnees-transactionnelles-100588.html)
 
-- **Panne nationale Orange** : Un incident technique paralyse le réseau mobile de l'opérateur et de sa marque Sosh depuis ce matin, avec des signalements massifs dans toute la France. [Next.ink](https://next.ink/brief-article/panne-de-grande-ampleur-sur-le-reseau-mobile-orange/)
+- **Démonstration de RAG local avec Mistral 7B** : Un traitement par RAG de plus de 15 000 articles sur 10 ans a été réalisé intégralement en local sur un MacBook Pro via Ollama et Mistral 7B, sans aucun appel cloud. L'exercice illustre la faisabilité d'une IA générative "souveraine" sur un poste de travail standard. [Next.ink](https://next.ink/244509/ia-generative-le-rag-par-lexemple-avec-15-000-actus-next-et-mistral-7b/)
 
-- **ChatGPT retardé par la Maison Blanche** : OpenAI a développé GPT-5.6 (décliné en Sol, Terra, Luna) mais Washington demande un report de la sortie, illustrant un contrôle politique croissant sur les lancements de modèles d'IA avancés. [Siècle Digital](https://siecledigital.fr/2026/06/28/le-nouveau-chatgpt-est-pret-mais-la-maison-blanche-demande-a-openai-dattendre/)
+- **Fonctions IA dans Excel généralisées** : Microsoft déploie pour tous les utilisateurs de nouvelles capacités d'IA générative dans Excel, accélérant l'automatisation de l'analyse de données directement dans le tableur. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-microsoft-muscle-les-fonctions-ia-d-excel-100581.html)
 
-- **L'Alliance presse contre les GAFAM** : Le lobby de la presse française compte utiliser la loi Balanant pour ses procédures contre Meta, Microsoft et LinkedIn, après l'échec de la PPL Darcos, et envisage d'adhérer à la SPUR. [Journal du Net](https://www.journaldunet.com/publishers/1551873-l-alliance-pourra-se-servir-de-la-loi-balanant-pour-les-procedures-en-cours-contre-meta-microsoft-et-linkedin/)
+- **Dirigeants tech sous-estiment les risques de l'adoption massive de l'IA** : Selon une analyse de Maddyness, les décideurs de la tech minimisent les risques liés à l'adoption à grande échelle, notamment sur les volets sécurité et gouvernance des données. [Maddyness](https://www.maddyness.com/2026/06/29/adoption-massive-de-lia-les-dirigeants-de-la-tech-sous-estiment-encore-largement-les-risques/)
 
-- **Loi anti ultra fast-fashion adoptée** : Le Parlement finalise un texte ciblant les plateformes asiatiques (Shein, Temu) avec des pénalités financières et une interdiction de publicité, après deux ans de navette. [Journal du Net](https://www.journaldunet.com/business/1551993-le-parlement-s-apprete-a-adopter-definitivement-une-loi-ciblant-l-ultra-fast-fashion-apres-deux-ans-de-discussions/)
+- **Le stockage, maillon faible de la course à la performance IA** : La focalisation du marché sur la puissance de calcul occulte un goulet d'étranglement critique : le volume et la vitesse d'accès au stockage nécessaires pour alimenter les modèles. [Maddyness](https://www.maddyness.com/2026/06/29/ia-et-si-la-course-a-la-performance-masquait-un-defi-de-stockage/)
 
-- **Puce post-quantique pour smartphones** : STMicroelectronics dévoile la ST54M, un composant de sécurité intégrant des défenses post-quantiques pour les appareils personnels, en anticipation des exigences réglementaires vers 2030. [ZDNet France](https://www.zdnet.fr/actualites/stmicroelectronics-dote-les-smartphones-dun-bouclier-post-quantique-avec-la-puce-st54m-497835.htm)
+- **Ford fait machine arrière sur l'IA et réembauche des ingénieurs** : Après avoir licencié des ingénieurs au profit de systèmes automatisés, le constructeur fait volte-face. L'IA n'a pas tenu ses promesses sur la qualité, obligeant Ford à réembaucher pour éviter des pertes chiffrées en centaines de millions de dollars. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/apres-la-mise-en-place-d-une-strategie-ia-et-des-licenciements-ford-reembauche-des-ingenieurs-qualifies-pour-retrouver-la-qualite-perdue-et-economiser-des-centaines-de-millions-de-dollars_AV-202606290654.html)
 
-- **YesWeHack mise sur les agents IA** : La plateforme de bug bounty lance une offensive basée sur des agents autonomes pour accélérer la détection de vulnérabilités, misant sur l'IA pour augmenter ses chasseurs de failles. [ZDNet France](https://www.zdnet.fr/actualites/comment-yeswehack-veut-sappuyer-sur-lia-pour-chasser-les-failles-497808.htm)
-
-- **Arnaque aux faux médicaments sur Google** : Les recherches "acheter [médicament] pas cher" renvoient fréquemment vers des pharmacies factices avec faux certificats SSL et faux avis, un trafic en forte croissance en France. [Siècle Digital](https://siecledigital.fr/2026/06/28/vous-cherchez-un-medicament-sur-google-cette-arnaque-explose-en-france/)
-
-- **Pénuries de mémoire liées à l'IA** : Apple anticipe des tensions d'approvisionnement alors que la demande en mémoire pour l'IA explose, déplaçant le goulot d'étranglement des GPU vers la HBM et le stockage rapide. [Frenchweb](https://www.frenchweb.fr/lia-asseche-le-marche-de-la-memoire-apple-anticipe-deja-les-prochaines-penuries/462615)
-
-- **IA et identité numérique** : L'usage des systèmes d'IA pourrait à terme nécessiter une vérification d'identité (passeport), une mutation discrète mais structurante pour la régulation des usages. [Frenchweb](https://www.frenchweb.fr/demain-faudra-t-il-montrer-son-passeport-pour-utiliser-une-ia/462603)
-
-- **Souveraineté IA et dépendance** : Plusieurs analyses convergent sur la menace existentielle que représente l'absence de maîtrise des modèles pour les entreprises — le risque d'un "débranchement" brutal depuis l'extérieur est qualifié de problème de survie, pas de conférence. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1551935-de-vivatech-a-survivatech/)
-
-- **Limites des LLM en industrie** : Un retour d'expérience d'une ETI bretonne démontre que les grands modèles de langage sont incompatibles avec des processus exigeant qualité, traçabilité et stabilité. Le constat est sans appel : les LLM sont "inadaptés" à l'industrie. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1551899-ia-pourquoi-les-llm-sont-inadaptes-quand-on-veut-de-la-qualite/)
-
-- **Remplacement des juniors par l'IA** : L'automatisation des tâches d'entrée menace l'emploi des jeunes diplômés, posant la question de qui pourra acquérir l'expérience pour devenir expert demain. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1551907-a-force-de-remplacer-les-juniors-par-l-ia-qui-formera-les-experts-de-demain/)
-
-- **Mutation du SEO vers le GEO** : Le référencement évolue d'un scoring d'autorité vers un système de signaux multiples, les moteurs génératifs transformant la logique de visibilité. La recherche devient agentique : le système planifie, utilise des outils et vérifie en plusieurs étapes, forçant les marques à devenir des sources fiables plutôt que des pages optimisées. [Frenchweb](https://www.frenchweb.fr/seo-et-geo-en-2026-lautorite-nest-plus-un-score-mais-un-systeme-de-signaux/462609) · [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1551981-l-apres-rag-pourquoi-la-recherche-ia-devient-agentique-et-ce-que-ca-change-pour-la-visibilite/)
-
-- **Agents IA : pilotage par les résultats** : La différence en 2026 se fera sur la capacité à encadrer les agents IA comme des actifs opérationnels pilotés par les résultats, et non sur le nombre de projets lancés. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1551971-agents-ia-utiles-encadres-ou-couteux/)
-
-- **Protection des fichiers sensibles dans l'IA cloud** : Norton alerte sur l'exposition des documents personnels (CV, identifiants, projets) qui transitent via les outils IA en ligne sans visibilité sur leur traitement, et propose des solutions de chiffrement des fichiers sensibles. [ZDNet France](https://www.zdnet.fr/publicite/norton-ai-for-good-proteger-les-fichiers-sensibles-quand-les-usages-ia-passent-par-le-cloud-497311.htm)</description>
+- **Vitesse de génération : nouvelle ligne de front entre OpenAI, Google et Anthropic** : La compétition entre éditeurs de modèles se déplace sur la rapidité de réponse plutôt que sur la seule puissance du raisonnement, un critère déterminant pour l'expérience utilisateur en production. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1551999-ia-openai-google-et-anthropic-deplacent-la-bataille-sur-la-vitesse/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Vulnérabilité critique dans libssh2 — PoC public</strong> : Un PoC est disponible pour CVE-2026-55200, une faille critique dans libssh2 permettant à un serveur SSH malveillant de provoquer une corruption mémoire côté client, sans authentification ni interaction utilisateur. Toutes les versions jusqu'à 1.x sont concernées, la mise à jour est urgente. <a href="https://thehackernews.com/2026/06/public-poc-released-for-critical.html">The Hacker News</a></li>
+<li><strong>Exploitation active de failles critiques SimpleHelp et Oracle EBS</strong> : Des attaquants exploitent CVE-2026-48558 dans SimpleHelp pour déployer un infostealer cross-plateforme (Djinn Stealer) ciblant Windows, macOS et Linux. Parallèlement, CVE-2026-46817 dans Oracle E-Business Suite fait l'objet d'attaques en cours. <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/">SimpleHelp</a> · <a href="https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/">Oracle EBS</a></li>
 </ul>
 
 <ul>
-<li><strong>Extensions Edge malveillantes dissimulant leur charge par stéganographie</strong> : Microsoft a retiré 119 extensions Edge qui cachaient des malwares dans des fichiers images et polices via stéganographie, avec activation différée pour vol d'identifiants et fraude publicitaire. Cette campagne, baptisée StegoAd, contournait les mécanismes classiques de détection. <a href="https://thehackernews.com/2026/06/microsoft-removes-119-edge-extensions.html">The Hacker News</a></li>
+<li><strong>Chaîne d'infection Bumblebee vers ransomware Akira</strong> : Une campagne documentée par The DFIR Report montre un chemin d'infection partant de résultats Bing Search manipulés, passant par Bumblebee et le C2 Adaptix, jusqu'au déploiement du ransomware Akira. <a href="https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/">DFIR Report</a></li>
 </ul>
 
 <ul>
-<li><strong>Chaîne d'approvisionnement compromise : packages npm/Go exploitant VS Code Tasks</strong> : Des packages npm et Go détournés utilisent l'API des tâches VS Code plutôt que les scripts de cycle de vie classiques pour déployer un infostealer Python multi-OS (Windows, Linux, macOS). Cette technique vise à contourner les contrôles de sécurité standards ciblant les hooks d'installation. <a href="https://thehackernews.com/2026/06/hijacked-npm-and-go-packages-use-vs.html">The Hacker News</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Insécurité fondamentale des LLM par injection de prompt</strong> : Une preuve théorique démontre que les architectures à embedding partagé (sans séparation stricte instructions/données) rendent toute défense parfaite contre l'injection de prompt impossible. <a href="https://arxiv.org/abs/2606.27567">arXiv cs.AI</a> · <a href="https://arxiv.org/abs/2606.27567">arXiv cs.LG</a></li>
+<li><strong>Abus de DCloud Uni-App pour scams crypto et phishing</strong> : Plus de 236 000 sites utilisent des templates malveillants basés sur le framework open-source chinois DCloud Uni-App pour héberger de faux échanges crypto, des pig-butchering scams et des wallet drainers. <a href="https://thehackernews.com/2026/06/236000-dcloud-uni-app-sites-used-in.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Système immunitaire natif pour agents autonomes</strong> : Face à l'extension de la surface d'attaque (mémoire persistante, outils, collaboration multi-agents), un nouveau paradigme d'architecture de défense interne est proposé pour remplacer les sécurités périmétriques devenues insuffisantes. <a href="https://arxiv.org/abs/2606.28270">arXiv cs.AI</a></li>
+<li><strong>Gamaredon étend ses capacités malwares contre l'Ukraine</strong> : Le groupe APT russe a mené 35 campagnes de spear-phishing distinctes en 2025, élargissant son arsenal malware et abusant de services cloud pour maintenir l'accès. <a href="https://thehackernews.com/2026/06/gamaredon-expands-ukraine-attacks-with.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Risque écosystémique des agents de code autonomes</strong> : L'évaluation isolée des agents codeurs masque les vulnérabilités qui émergent lorsqu'ils interagissent à grande échelle sur des dépôts partagés ; l'étude préconise de gouverner le dépôt plutôt que l'agent. <a href="https://arxiv.org/abs/2606.28235">arXiv cs.AI</a></li>
+<li><strong>Agents IA et identités : un nouveau vecteur d'attaque</strong> : L'essor des agents IA capables d'actions transverses dans les SI crée un problème de gestion des identités privilégiées que les attaquants commencent à cibler. <a href="https://www.bleepingcomputer.com/news/security/agentic-ai-has-an-identity-problem-and-attackers-know-it/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Menace sur la vie privée par ré-identification agentique</strong> : Des agents IA sont capables d'automatiser et de passer à l'échelle la ré-identification d'individus à partir de traces de mobilité collectées par les courtiers en données, rendant le risque bien plus concret. <a href="https://arxiv.org/abs/2606.27936">arXiv cs.AI</a></li>
+<li><strong>BEC : l'imitation sans malware reste le maillon faible</strong> : Les attaques BEC misent sur l'usurpation comportementale plutôt que sur des charges malveillantes, rendant la détection traditionnelle inefficace. L'IA comportementale est présentée comme piste de réponse. <a href="https://www.bleepingcomputer.com/news/security/webinar-why-business-email-compromise-attacks-keep-succeeding/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Mécanisme des attaques de jailbreak</strong> : Les jailbreaks ne suppriment pas toutes les fonctions de sécurité mais désactivent sélectivement des têtes d'attention spécifiques, ce qui ouvre des pistes pour des défenses plus ciblées. <a href="https://arxiv.org/abs/2606.28153">arXiv cs.AI</a></li>
+<li><strong>Post-quantique : priorité aux credentials</strong> : La cryptographie post-quantique doit commencer par la protection des secrets à longue durée de vie (identifiants, clés), déjà vulnérables à des attaques de type "harvest now, decrypt later". <a href="https://thehackernews.com/2026/06/why-post-quantum-cryptography-starts.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Manipulation des tokens spéciaux pour jailbreak</strong> : Une nouvelle méthode d'attaque exploite les tokens spéciaux (métadonnées de fine-tuning) pour contourner les protections des services LLM en ligne. <a href="https://arxiv.org/abs/2510.10271">arXiv cs.AI</a></li>
+<li><strong>Saisie de 400 domaines de streaming illégal FIFA</strong> : Le département de la Justice américain a saisi près de 400 domaines diffusant illégalement des matchs de la Coupe du Monde. <a href="https://www.bleepingcomputer.com/news/security/us-seizes-hundreds-of-fifa-world-cup-illegal-streaming-domains/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Déstabilisation des systèmes multi-agents par vérification différée</strong> : Le délai entre l'émission d'une affirmation et sa vérification dans un réseau d'agents LLM crée un seuil d'instabilité au-delà duquel les hallucinations se propagent de manière incontrôlable. <a href="https://arxiv.org/abs/2606.27409">arXiv cs.LG</a></li>
+<li><strong>Ukraine : saisie crypto réinvestie en obligations de guerre</strong> : L'agence ukrainienne ARMA a transféré plus de 8,3 millions de dollars en crypto saisis à un groupe cybercriminel vers des obligations d'État finançant l'effort de guerre. <a href="https://therecord.media/ukraine-uses-seized-crypto-cybercrime-for-war-bonds">The Record</a></li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>OpenAI lance GPT-5.6 sous pression politique</strong> : Trois versions de GPT-5.6 sont déployées avec un accès restreint, sur injonction de l'administration Trump qui accélère le calendrier des acteurs de l'IA américains. <a href="https://www.lemondeinformatique.fr/actualites/lire-openai-lance-de-maniere-restreinte-trois-versions-de-gpt-56-100584.html">Le Monde Informatique</a></li>
+<li><strong>IA générative dans Excel</strong> : Microsoft généralise l'intégration de Copilot dans Excel pour l'ensemble des utilisateurs, étendant l'accès aux capacités d'analyse et de génération de formules par langage naturel. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-muscle-les-fonctions-ia-d-excel-100581.html">Le Monde Informatique</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Impact de l'IA sur l'emploi en Europe</strong> : OpenAI publie une cartographie des transformations du marché du travail européen face à l'IA, identifiant les métiers exposés à l'automatisation et ceux appelés à évoluer. <a href="https://openai.com/index/mapping-ai-jobs-transition-eu">OpenAI News</a></li>
 </ul>
 
 <ul>
-<li><strong>Désapprentissage boîte noire pour API LLM</strong> : Une technique permet de faire "oublier" des données sensibles, protégées ou obsolètes à un LLM accessible uniquement via API, sans accès aux poids du modèle. <a href="https://arxiv.org/abs/2606.27683">arXiv cs.LG</a></li>
-</ul>
-
-<ul>
-<li><strong>Estimation d'incertitude pour détecter les hallucinations</strong> : Une étude factorisée des méthodes par sondes internes identifie les composants clés (signaux, architecture de sonde) qui améliorent réellement la détection d'hallucinations dans les LLM. <a href="https://arxiv.org/abs/2606.27679">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Raisonnement interne sans chaîne de pensée</strong> : Des modèles de frontier pourraient développer une capacité de raisonnement complexe sans tokens de pensée explicites, ce qui rendrait caduques les approches de supervision basées sur le monitoring du CoT. <a href="https://arxiv.org/abs/2606.07157">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité des systèmes multi-agents inter-domaines</strong> : Sept défis de sécurité critiques sont identifiés pour les systèmes où des agents LLM autonomes collaborent au-delà des frontières organisationnelles. <a href="https://arxiv.org/abs/2505.23847">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Sur-refus et sous-conformité des LLM en santé</strong> : Un nouveau benchmark mesure les extrêmes de l'alignement de sécurité en contexte médical, où les modèles refusent des requêtes bénignes ou se conforment à des demandes nuisibles. <a href="https://arxiv.org/abs/2601.17642">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Deepfakes multimodaux</strong> : État de l'art couvrant la génération et la détection de deepfakes pour tous les types de médias (image, vidéo, audio, multimodal), avec taxonomies des méthodes. <a href="https://arxiv.org/abs/2411.19537">arXiv cs.LG</a></li>
-</ul>
-
-<ul>
-<li><strong>Composition de personnalités dans les équipes d'agents LLM</strong> : La personnalité attribuée aux agents influence leurs performances objectives en équipe, les personnalités peu agréables générant un langage plus adversarial. <a href="https://arxiv.org/abs/2606.27443">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Planification par modèle du monde interne</strong> : Un paradigme d'entraînement agentique unifié permet aux LLM d'utiliser un raisonnement contrefactuel ("what-if") pour planifier des tâches à long horizon au lieu de rester purement réactifs. <a href="https://arxiv.org/abs/2606.27483">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Modèles fondation vérifiables et préservant la vérité locale</strong> : Un cadre catégorique (ODYSSEY) est introduit pour construire des modèles dont les prédictions sont localement vérifiables et préservent la vérité, en composant des briques architecturales appelées fonderies. <a href="https://arxiv.org/abs/2606.27593">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Réseaux de modèles d'IA</strong> : Concept d'un "AI-Model Network" où les modèles collaborent et partagent des capacités, à l'image d'Internet pour les ordinateurs. <a href="https://arxiv.org/abs/2606.27382">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Benchmark d'assistants personnels agentiques</strong> : Un nouveau benchmark évalue les agents LLM de type assistant personnel dans des environnements logiciels ouverts, avec état et personnalisés, pour une mesure plus fidèle de leurs capacités réelles. <a href="https://arxiv.org/abs/2604.13072">arXiv cs.AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Raisonnement émotionnel multimodal</strong> : L'étude montre que le raisonnement explicite n'améliore pas nécessairement la précision de reconnaissance d'émotions, et propose une synergie entre pensée rapide (intuition) et lente (raisonnement). <a href="https://arxiv.org/abs/2606.27652">arXiv cs.AI</a></li>
+<li><strong>Modèles open source dans les environnements gouvernementaux fermés</strong> : Palantir déploie un moteur IA pour les agences fédérales américaines basé sur les modèles ouverts NVIDIA Nemotron, illustrant la pénétration des modèles open source dans les infrastructures sensibles de défense et de renseignement. <a href="https://blogs.nvidia.com/blog/palantir-secure-ai-us-agencies-nemotron-open-models/">NVIDIA Blog</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Fuite de données à l'Insee</strong> : L'Institut annonce une violation de son annuaire interne, exposant les données d'identité d'environ 12 800 agents. <a href="https://next.ink/brief-article/au-tour-de-linsee-de-se-faire-pirater-les-donnees-de-12-800-agents-exfiltrees/">Next.ink</a></li>
+<li><strong>EDB unifie transactionnel et analytique pour les agents IA</strong> : L'éditeur de base de données fait tomber la cloison historique entre OLTP et OLAP, estimant que les agents IA ont besoin d'accéder à ces deux types de données sans latence ni duplication. <a href="https://www.lemondeinformatique.fr/actualites/lire-pour-les-agents-ia-edb-combine-analytique-et-base-de-donnees-transactionnelles-100588.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Panne nationale Orange</strong> : Un incident technique paralyse le réseau mobile de l'opérateur et de sa marque Sosh depuis ce matin, avec des signalements massifs dans toute la France. <a href="https://next.ink/brief-article/panne-de-grande-ampleur-sur-le-reseau-mobile-orange/">Next.ink</a></li>
+<li><strong>Démonstration de RAG local avec Mistral 7B</strong> : Un traitement par RAG de plus de 15 000 articles sur 10 ans a été réalisé intégralement en local sur un MacBook Pro via Ollama et Mistral 7B, sans aucun appel cloud. L'exercice illustre la faisabilité d'une IA générative "souveraine" sur un poste de travail standard. <a href="https://next.ink/244509/ia-generative-le-rag-par-lexemple-avec-15-000-actus-next-et-mistral-7b/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>ChatGPT retardé par la Maison Blanche</strong> : OpenAI a développé GPT-5.6 (décliné en Sol, Terra, Luna) mais Washington demande un report de la sortie, illustrant un contrôle politique croissant sur les lancements de modèles d'IA avancés. <a href="https://siecledigital.fr/2026/06/28/le-nouveau-chatgpt-est-pret-mais-la-maison-blanche-demande-a-openai-dattendre/">Siècle Digital</a></li>
+<li><strong>Fonctions IA dans Excel généralisées</strong> : Microsoft déploie pour tous les utilisateurs de nouvelles capacités d'IA générative dans Excel, accélérant l'automatisation de l'analyse de données directement dans le tableur. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-muscle-les-fonctions-ia-d-excel-100581.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>L'Alliance presse contre les GAFAM</strong> : Le lobby de la presse française compte utiliser la loi Balanant pour ses procédures contre Meta, Microsoft et LinkedIn, après l'échec de la PPL Darcos, et envisage d'adhérer à la SPUR. <a href="https://www.journaldunet.com/publishers/1551873-l-alliance-pourra-se-servir-de-la-loi-balanant-pour-les-procedures-en-cours-contre-meta-microsoft-et-linkedin/">Journal du Net</a></li>
+<li><strong>Dirigeants tech sous-estiment les risques de l'adoption massive de l'IA</strong> : Selon une analyse de Maddyness, les décideurs de la tech minimisent les risques liés à l'adoption à grande échelle, notamment sur les volets sécurité et gouvernance des données. <a href="https://www.maddyness.com/2026/06/29/adoption-massive-de-lia-les-dirigeants-de-la-tech-sous-estiment-encore-largement-les-risques/">Maddyness</a></li>
 </ul>
 
 <ul>
-<li><strong>Loi anti ultra fast-fashion adoptée</strong> : Le Parlement finalise un texte ciblant les plateformes asiatiques (Shein, Temu) avec des pénalités financières et une interdiction de publicité, après deux ans de navette. <a href="https://www.journaldunet.com/business/1551993-le-parlement-s-apprete-a-adopter-definitivement-une-loi-ciblant-l-ultra-fast-fashion-apres-deux-ans-de-discussions/">Journal du Net</a></li>
+<li><strong>Le stockage, maillon faible de la course à la performance IA</strong> : La focalisation du marché sur la puissance de calcul occulte un goulet d'étranglement critique : le volume et la vitesse d'accès au stockage nécessaires pour alimenter les modèles. <a href="https://www.maddyness.com/2026/06/29/ia-et-si-la-course-a-la-performance-masquait-un-defi-de-stockage/">Maddyness</a></li>
 </ul>
 
 <ul>
-<li><strong>Puce post-quantique pour smartphones</strong> : STMicroelectronics dévoile la ST54M, un composant de sécurité intégrant des défenses post-quantiques pour les appareils personnels, en anticipation des exigences réglementaires vers 2030. <a href="https://www.zdnet.fr/actualites/stmicroelectronics-dote-les-smartphones-dun-bouclier-post-quantique-avec-la-puce-st54m-497835.htm">ZDNet France</a></li>
+<li><strong>Ford fait machine arrière sur l'IA et réembauche des ingénieurs</strong> : Après avoir licencié des ingénieurs au profit de systèmes automatisés, le constructeur fait volte-face. L'IA n'a pas tenu ses promesses sur la qualité, obligeant Ford à réembaucher pour éviter des pertes chiffrées en centaines de millions de dollars. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/apres-la-mise-en-place-d-une-strategie-ia-et-des-licenciements-ford-reembauche-des-ingenieurs-qualifies-pour-retrouver-la-qualite-perdue-et-economiser-des-centaines-de-millions-de-dollars_AV-202606290654.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>YesWeHack mise sur les agents IA</strong> : La plateforme de bug bounty lance une offensive basée sur des agents autonomes pour accélérer la détection de vulnérabilités, misant sur l'IA pour augmenter ses chasseurs de failles. <a href="https://www.zdnet.fr/actualites/comment-yeswehack-veut-sappuyer-sur-lia-pour-chasser-les-failles-497808.htm">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Arnaque aux faux médicaments sur Google</strong> : Les recherches "acheter <a href="https://siecledigital.fr/2026/06/28/vous-cherchez-un-medicament-sur-google-cette-arnaque-explose-en-france/">médicament] pas cher" renvoient fréquemment vers des pharmacies factices avec faux certificats SSL et faux avis, un trafic en forte croissance en France. [Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Pénuries de mémoire liées à l'IA</strong> : Apple anticipe des tensions d'approvisionnement alors que la demande en mémoire pour l'IA explose, déplaçant le goulot d'étranglement des GPU vers la HBM et le stockage rapide. <a href="https://www.frenchweb.fr/lia-asseche-le-marche-de-la-memoire-apple-anticipe-deja-les-prochaines-penuries/462615">Frenchweb</a></li>
-</ul>
-
-<ul>
-<li><strong>IA et identité numérique</strong> : L'usage des systèmes d'IA pourrait à terme nécessiter une vérification d'identité (passeport), une mutation discrète mais structurante pour la régulation des usages. <a href="https://www.frenchweb.fr/demain-faudra-t-il-montrer-son-passeport-pour-utiliser-une-ia/462603">Frenchweb</a></li>
-</ul>
-
-<ul>
-<li><strong>Souveraineté IA et dépendance</strong> : Plusieurs analyses convergent sur la menace existentielle que représente l'absence de maîtrise des modèles pour les entreprises — le risque d'un "débranchement" brutal depuis l'extérieur est qualifié de problème de survie, pas de conférence. <a href="https://www.journaldunet.com/intelligence-artificielle/1551935-de-vivatech-a-survivatech/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Limites des LLM en industrie</strong> : Un retour d'expérience d'une ETI bretonne démontre que les grands modèles de langage sont incompatibles avec des processus exigeant qualité, traçabilité et stabilité. Le constat est sans appel : les LLM sont "inadaptés" à l'industrie. <a href="https://www.journaldunet.com/intelligence-artificielle/1551899-ia-pourquoi-les-llm-sont-inadaptes-quand-on-veut-de-la-qualite/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Remplacement des juniors par l'IA</strong> : L'automatisation des tâches d'entrée menace l'emploi des jeunes diplômés, posant la question de qui pourra acquérir l'expérience pour devenir expert demain. <a href="https://www.journaldunet.com/intelligence-artificielle/1551907-a-force-de-remplacer-les-juniors-par-l-ia-qui-formera-les-experts-de-demain/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Mutation du SEO vers le GEO</strong> : Le référencement évolue d'un scoring d'autorité vers un système de signaux multiples, les moteurs génératifs transformant la logique de visibilité. La recherche devient agentique : le système planifie, utilise des outils et vérifie en plusieurs étapes, forçant les marques à devenir des sources fiables plutôt que des pages optimisées. <a href="https://www.frenchweb.fr/seo-et-geo-en-2026-lautorite-nest-plus-un-score-mais-un-systeme-de-signaux/462609">Frenchweb</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1551981-l-apres-rag-pourquoi-la-recherche-ia-devient-agentique-et-ce-que-ca-change-pour-la-visibilite/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents IA : pilotage par les résultats</strong> : La différence en 2026 se fera sur la capacité à encadrer les agents IA comme des actifs opérationnels pilotés par les résultats, et non sur le nombre de projets lancés. <a href="https://www.journaldunet.com/intelligence-artificielle/1551971-agents-ia-utiles-encadres-ou-couteux/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Protection des fichiers sensibles dans l'IA cloud</strong> : Norton alerte sur l'exposition des documents personnels (CV, identifiants, projets) qui transitent via les outils IA en ligne sans visibilité sur leur traitement, et propose des solutions de chiffrement des fichiers sensibles. <a href="https://www.zdnet.fr/publicite/norton-ai-for-good-proteger-les-fichiers-sensibles-quand-les-usages-ia-passent-par-le-cloud-497311.htm">ZDNet France</a></li>
+<li><strong>Vitesse de génération : nouvelle ligne de front entre OpenAI, Google et Anthropic</strong> : La compétition entre éditeurs de modèles se déplace sur la rapidité de réponse plutôt que sur la seule puissance du raisonnement, un critère déterminant pour l'expérience utilisateur en production. <a href="https://www.journaldunet.com/intelligence-artificielle/1551999-ia-openai-google-et-anthropic-deplacent-la-bataille-sur-la-vitesse/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260629-1046</guid>
-      <pubDate>Mon, 29 Jun 2026 10:46:43 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260629-1455</guid>
+      <pubDate>Mon, 29 Jun 2026 14:55:59 +0000</pubDate>
     </item>
   </channel>
 </rss>
