@@ -24,3 +24,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-06-29 10:32 UTC | scoring | OGPO: Sample Efficient Full-Finetuning of Generative Control (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-06-29 10:42 UTC | scoring | L'impact de l'IA pour l'industrie du web : tour d'horizon et (Journal du Net) | Rate limit fournisseur LLM atteint |
 | 2026-06-29 10:44 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 80 column 6 (char 2477)) |
+| 2026-06-29 19:12 UTC | dedup | Cyber — Stratégie & analyse | JSON malformé renvoyé par le LLM (Extra data: line 12 column 1 (char 203)) |
