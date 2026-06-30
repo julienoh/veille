@@ -25,3 +25,8 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-06-29 10:42 UTC | scoring | L'impact de l'IA pour l'industrie du web : tour d'horizon et (Journal du Net) | Rate limit fournisseur LLM atteint |
 | 2026-06-29 10:44 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 80 column 6 (char 2477)) |
 | 2026-06-29 19:12 UTC | dedup | Cyber — Stratégie & analyse | JSON malformé renvoyé par le LLM (Extra data: line 12 column 1 (char 203)) |
+| 2026-06-30 08:41 UTC | scoring | Nonlinear mixture model motivated subspace clustering (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-06-30 08:41 UTC | scoring | AMR: Adaptive Modality Routing for Multimodal Polyglot Speak (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-06-30 08:59 UTC | scoring | A Machine-Verified Proof of a Quantum-Optimization Conjectur (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-06-30 09:16 UTC | scoring | Generation of Uncertainty-Aware High-Level Spatial Concepts  (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-06-30 09:18 UTC | scoring | PlantExpertVQA: A Visual Question Answering Dataset for Benc (arXiv cs.LG) | JSON malformé renvoyé par le LLM (Invalid \escape: line 5 column 26 (char 91)) |
