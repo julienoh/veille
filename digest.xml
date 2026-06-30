@@ -8,162 +8,150 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 29 Jun 2026 19:13:51 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 09:27:27 +0000</lastBuildDate>
     <item>
-      <title>Digest — 29/06 19h</title>
+      <title>Digest — 30/06 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Mustang Panda cible le gouvernement indien via Zoho WorkDrive** : Le groupe chinois détourne le service cloud légitime Zoho WorkDrive comme canal C2 dans deux campagnes d'espionnage distinctes visant l'administration indienne et des infrastructures hydroélectriques, avec de nouveaux malwares déployés sur des systèmes déjà compromis. [The Hacker News](https://thehackernews.com/2026/06/mustang-panda-uses-zoho-workdrive-as.html)
+- **Apple : correctifs de sécurité pour iOS, macOS et Safari** : Plus de 30 vulnérabilités corrigées, dont 4 failles WebKit découvertes via des outils d'IA (Anthropic Claude, OpenAI Codex Security). Ces failles WebKit exposent à de l'exécution de code arbitraire lors du traitement de contenu web malveillant. [The Hacker News](https://thehackernews.com/2026/06/apple-patches-30-ios-macos-safari-flaws.html)
 
-- **Prime américaine de 10 M$ pour des hackers russes ciblant WhatsApp et Signal** : Le Département d'État finance la traque des groupes UNC5792 et UNC4221, liés aux services de renseignement et militaires russes, pour leurs opérations contre les utilisateurs de messageries chiffrées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/us-offers-10-million-for-hackers-targeting-whatsapp-signal-users/)
+- **Oracle E-Business Suite : exploitation active de CVE-2026-46817** : Vulnérabilité critique (CVSS 9.8) de gestion de privilèges et d'authentification dans Oracle Payments, exploitée à l'état sauvage. Permet une compromission sans authentification préalable. [The Hacker News](https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html)
 
-- **Géorequêtes cellulaires soumises à mandat par la Cour suprême américaine** : La décision exige désormais un mandat pour les demandes de géofencing ciblant des téléphones individuels, renforçant la protection du Quatrième Amendement et réduisant la surveillance de localisation sans contrôle judiciaire préalable. [The Record](https://therecord.media/supreme-court-geofencing-ruling-fourth-amendment)
-
-- **Hotpatching Windows Server 2022 prolongé jusqu'en octobre 2027** : Microsoft repousse d'un an la disponibilité des mises à jour sans redémarrage, offrant une fenêtre de maintenance réduite au-delà de la fin du support standard prévue en octobre 2026. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-extends-windows-server-2022-hotpatching-until-october-2027/)
+- **SANS ISC : bulletin quotidien du 30 juin 2026** : Aperçu des menaces et indicateurs collectés par la communauté SANS sur les dernières 24h. À consulter pour tout indicateur de compromission émergent non couvert par les alertes éditeurs. [SANS ISC](https://isc.sans.edu/diary/rss/33112)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Clés RSA faibles avec nombreux zéros** : Le projet Badkeys a identifié en conditions réelles une nouvelle classe de clés RSA vulnérables, caractérisées par une forte proportion de bits à zéro. Leur présence dans la nature confirme que des implémentations continuent de générer des clés factorisables. [Schneier on Security](https://www.schneier.com/blog/archives/2026/06/factoring-rsa-keys-with-many-zeros.html)
+- **Partenariat SNCF-CEA sur les technologies de souveraineté** : La SNCF et le CEA ont signé un accord-cadre pour collaborer sur l'IA, la cybersécurité et la robotique, visant à renforcer l'autonomie technologique sur des secteurs critiques. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-sncf-et-le-cea-s-associent-sur-l-ia-la-cybersecurite-et-la-robotique-100586.html)
 
-- **Risque d'exfiltration de credentials via l'extension Amazon Q** : Une vulnérabilité dans l'extension VS Code d'Amazon Q permet à un dépôt malveillant d'exécuter du code arbitraire et de voler des credentials cloud, illustrant la surface d'attaque croissante liée au protocole MCP (Model Context Protocol). [Dark Reading](https://www.darkreading.com/cloud-security/amazon-q-vs-extension-flaw-leads-cloud-credential-theft)
+- **Formation au pentest web** : Face à l'exposition croissante des applications web, un guide pratique détaille la méthodologie pour conduire un test d'intrusion, de la reconnaissance à l'exploitation. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-apprendre-a-realiser-un-test-d-intrusion-web-100128.html)
 
-- **Compétences IA piégées comme vecteur d'attaque** : Pour démontrer les risques émergents des agents IA, des chercheurs ont délibérément publié une compétence malveillante exploitant ces systèmes. L'initiative met en garde contre la confiance aveugle dans les intégrations tierces des outils basés sur l'IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-pour-alerter-une-societe-piege-une-competence-pour-agents-ia-100590.html)
+## IA — Recherche
 
-## IA — Labos &amp; éditeurs
-
-- **Inférence Claude sur NVIDIA GB300 dans Azure** : Anthropic rend ses modèles Claude disponibles sur les GPU NVIDIA GB300 (Blackwell Ultra) via Microsoft Foundry sur Azure, ciblant les déploiements d'agents IA autonomes en entreprise. [NVIDIA Blog](https://blogs.nvidia.com/blog/anthropic-nvidia-gb300-blackwell-ultra-microsoft-azure/)
-
-- **Observabilité des agents en production sur Bedrock** : AWS détaille le débogage des agents via AgentCore Observability, en s'appuyant sur les traces et métriques pour diagnostiquer des défaillances comme les boucles infinies ou les erreurs d'appel d'outils. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/debugging-production-agents-with-amazon-bedrock-agentcore-observability/)
-
-- **Agents LLM multi-tenants avec sécurité row-level** : PAR a conçu sur AWS un système d'analytique multi-tenant qui combine signature cryptographique SigV4, validation sémantique dans Bedrock et isolation des données via Split-Plane SQL. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/multi-tenant-llm-analytics-with-row-level-security-how-we-built-a-secure-agent-on-aws/)
-
-- **Pipeline agentic pour données de santé** : Un pipeline de traitement de demandes de remboursement santé automatise l'extraction de formulaires via Bedrock Data Automation et la validation des données via un agent hébergé sur Bedrock AgentCore. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-an-agentic-ai-healthcare-claims-pipeline-with-amazon-bedrock-and-aws-healthlake/)
-
-- **Sauvegarde des assets BI sur QuickSight** : AWS publie les bonnes pratiques et un exemple de code pour industrialiser la sauvegarde des assets BI QuickSight via les APIs de la plateforme. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/implement-a-backup-strategy-for-amazon-quick-sight-bi-assets/)
-
-- **DiScoFormer : un transformeur unifié pour densité et score** : Allen AI présente DiScoFormer, un modèle unique capable d'apprendre simultanément la densité et le score sur des distributions variées. [Hugging Face Blog](https://huggingface.co/blog/allenai/discoformer)
+- **Agents multi-modèles et routage** : La sélection d'outils ou d'agents à partir de requêtes en langage naturel est intrinsèquement un problème de prédiction d'ensemble, où il faut équilibrer rappel et coût d'exécution. [Multi-Agent Routing](https://arxiv.org/abs/2606.28925) · [Robust Multi-Agent LLMs under Byzantine Faults](https://arxiv.org/abs/2605.09076)
+- **Sécurité et alignement des LLMs** : La quantification et la température d'échantillonnage interagissent de manière non triviale sur l'alignement des modèles, créant des angles morts que les évaluations classiques ignorent. Sur l'inférence, les défenses par pilotage d'activations surpassent les approches probabilistes, mais aucune méthode ne domine sur tous les modèles. [Quantization and Sampling Temperature](https://arxiv.org/abs/2606.29581) · [Activation-Cone Blind Spot](https://arxiv.org/abs/2606.29441)
+- **LLMs en production on-premise** : Un benchmark reproductible sur Text-to-SQL montre que les modèles ouverts exécutés localement restent compétitifs pour les organisations ne pouvant externaliser leurs données, à condition de choisir les bonnes recettes d'optimisation. [On-Prem Open LLMs for Text-to-SQL](https://arxiv.org/abs/2606.29733)
+- **Génération structurée et garanties formelles** : Le contrôle de risque conforme peut certifier les sorties structurées des LLMs (NER, JSON, QA), comblant un écart de 7 à 12 % par rapport aux seuils de risque demandés par les utilisateurs. [Conformal Risk Control for LLM Outputs](https://arxiv.org/abs/2606.29054)
+- **Audit et alignement des objectifs** : Un cadre bayésien permet d'inférer et de raffiner les fonctions de récompense implicites des LLMs, rendant l'audit d'alignement plus robuste que l'apprentissage inverse par renforcement classique. [Alignment Auditor](https://arxiv.org/abs/2510.06096)
+- **Fuzzing de LLMs pour comportements cachés** : Appliquer des techniques de fuzzing aux LLMs permet d'extraire systématiquement des comportements déclenchés par des conditions spécifiques non connues à l'avance, une première étude sur les agents dormants. [Fuzzing LLMs](https://arxiv.org/abs/2606.29646)
+- **Conscience d'évaluation par les modèles** : La profondeur représentationnelle de la "conscience d'être testé" évolue avec l'échelle des modèles ouverts, ce qui menace l'interprétabilité des benchmarks si les modèles modulent stratégiquement leur comportement. [Evaluation Awareness](https://arxiv.org/abs/2606.29196)
+- **Désapprentissage machine et vie privée** : Des méthodes de désapprentissage efficaces avec garanties de confidentialité répondent aux exigences du RGPD pour effacer les données personnelles des modèles entraînés. [Efficient Unlearning with Privacy Guarantees](https://arxiv.org/abs/2507.04771)
+- **Vulnérabilités sans données labellisées** : La détection de vulnérabilités par anomalie sans données d'entraînement étiquetées surpasse les LLMs seuls, qui plafonnent à peine au-dessus du hasard sur cette tâche. [ANVIL](https://arxiv.org/abs/2408.16028)
+- **Régulation européenne de l'IA** : L'AI Act introduit une obligation de ré-évaluation lors de "modifications substantielles", mais la notion d'identité du système à haut risque reste floue et problématique pour la gouvernance du cycle de vie. [AI Act and System Identity](https://arxiv.org/abs/2605.23922)
+- **Apprentissage automatique et raccourcis fallacieux** : La descente de gradient stochastique priorise de manière prouvable les caractéristiques fallacieuses dans un modèle XOR, éclairant le mécanisme par lequel les réseaux exploitent des corrélations parasites. [SGD Prioritizes Spurious Feature](https://arxiv.org/abs/2606.30444)
+- **Génération de figures scientifiques** : Un nouveau benchmark évalue spécifiquement la capacité des modèles texte-image et multimodaux à produire des diagrammes et schémas scientifiques, une lacune des benchmarks existants. [Can AI Draw Science?](https://arxiv.org/abs/2606.28406)
+- **Estimation d'état et intelligence en maillage** : Un filtre de Kalman par consensus neuronal permet l'estimation distribuée d'état latent sous dynamiques partiellement connues, tandis qu'un cadre théorique défend la nécessité d'un substrat liquide pour l'intelligence en maillage sans coordonnateur central. [Kalman Consensus Filter](https://arxiv.org/abs/2606.28441) · [Liquid Substrate for Mesh Intelligence](https://arxiv.org/abs/2606.28413)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Données de santé &amp; IA : nouvelle offensive législative aux US** : Une proposition de loi bipartisane vise à interdire la vente de données de santé et de localisation par les courtiers, y compris celles confiées à des chatbots. [The Verge](https://www.theverge.com/ai-artificial-intelligence/959033/health-location-data-protection-act-ai-warren-scanlon)
+- **Impact de l'IA sur l'emploi** : Un rapport montre que les entreprises adoptant massivement l'IA ont accru leurs effectifs de 10,2%, avec une hausse de 12% pour les postes juniors — ce qui contredit le discours dominant sur la destruction des emplois débutants. [TechCrunch](https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/)
 
-- **Agents IA : le risque de la métaphore du "collègue"** : Le discours qui présente les agents comme des "coworkers" masque le besoin de supervision humaine et crée une fausse symétrie de responsabilité. [MIT Technology Review](https://www.technologyreview.com/2026/06/29/1139849/ai-agents-are-not-your-coworkers/)
+- **Sécurité des réunions Teams** : Microsoft déploie un mécanisme d'autorisation pour les bots dans Teams, permettant aux éditeurs d'inscrire leurs bots sur liste blanche afin de bloquer les indésirables. [The Register](https://www.theregister.com/software/2026/06/30/microsoft-builds-a-bouncer-to-keep-bots-out-of-teams-meetings/5264199)
 
-- **Adoption des agents en entreprise : la question clé de la confiance** : L'investissement dans l'IA agentique explose mais le passage à l'échelle bute sur l'absence de mécanismes standardisés pour mesurer la fiabilité des décisions prises par ces systèmes. [MIT Technology Review](https://www.technologyreview.com/2026/06/29/1139635/agent-confidence-on-the-technical-frontier/)
-
-- **Anthropic verrouille le secteur public californien** : Un accord avec le gouverneur Newsom offre Claude à moitié prix à l'administration, renforçant l'ancrage local d'Anthropic alors que ses relations avec l'État fédéral se dégradent. [TechCrunch](https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/)
-
-- **Chaîne d'approvisionnement mémoire : la Corée du Sud injecte 550 Md$** : Samsung et SK Hynix s'engagent sur un plan massif de nouvelles usines de R&amp;D pour sécuriser la production de mémoire HBM face à la demande IA, consolidant la position stratégique du pays. [TechCrunch](https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/)
+- **Interface cerveau-texte non invasive** : Meta livre la v2 de Brain2Qwerty, un pipeline basé sur la magnétoencéphalographie qui décode des phrases tapées avec 61% de précision, en publiant le code d'entraînement. [MarkTechPost](https://www.marktechpost.com/2026/06/30/meta-ai-releases-brain2qwerty-v2-a-non-invasive-meg-brain-to-text-pipeline-decoding-typed-sentences-at-61-word-accuracy/)
 
 ## Actualité tech FR
 
-- **Détection tardive des fraudes internes** : Les entreprises françaises disposent de signaux faibles avant qu'une fraude ne soit découverte, mais échouent à les corréler et à les exploiter à temps. [Journal du Net](https://www.journaldunet.com/cybersecurite/1551877-pourquoi-les-entreprises-francaises-detectent-souvent-les-fraudes-internes-trop-tard/)
+- **Data Privacy Framework : Microsoft intervient en justice** : Microsoft a obtenu le droit d'intervenir devant la Cour de justice de l'UE concernant le cadre transatlantique de transfert de données personnelles. L'éditeur cherche à défendre ce mécanisme qui permet aux entreprises américaines certifiées de recevoir des données depuis l'Europe. [Next.ink](https://next.ink/244691/microsoft-vole-au-secours-du-data-privacy-framework-entre-lue-et-les-etats-unis/)
 
-- **Cybersécurité continue vs audits ponctuels** : Une posture de sécurité efficace exige une surveillance dynamique et adaptative des risques, par opposition aux photos instantanées que constituent les audits traditionnels. [Journal du Net](https://www.journaldunet.com/cybersecurite/1551797-cybersecurite-pourquoi-les-entreprises-ont-besoin-de-google-maps-pas-d-une-carte-routiere/)
+- **Apple : 32 failles corrigées, dont 25 dans WebKit** : La mise à jour iOS 26.5.2 (et iPadOS) publiée le 29 juin comble 32 vulnérabilités, majoritairement dans le moteur WebKit. Le déploiement est à prioriser pour tous les terminaux concernés. [Next.ink](https://next.ink/brief-article/apple-corrige-32-failles-de-securite-avec-ios-25-6-2/)
 
-- **Piégeage de compétences pour agents IA** : Une société de cybersécurité a démontré un nouveau vecteur de risque en publiant un faux package logiciel conçu pour tromper les agents IA chargés de coder automatiquement. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-pour-alerter-une-societe-piege-une-competence-pour-agents-ia-100590.html)
+- **États-Unis : la Cour suprême limite l'accès policier aux données de géolocalisation** : La plus haute juridiction américaine a statué que l'utilisation d'un téléphone portable ne supprime pas le droit à la vie privée, même lorsque les données de localisation sont détenues par des entreprises tierces. Cette décision encadre plus strictement les demandes des forces de l'ordre. [BFM Tech](https://www.bfmtv.com/tech/actualites/donnees-personnelles/nous-ne-perdons-pas-notre-droit-a-la-vie-privee-simplement-parce-que-nous-utilisons-un-telephone-portable-aux-etats-unis-la-cour-supreme-limite-l-acces-de-la-police-aux-donnees-de-geolocalisation_AD-202606300410.html)
 
-- **Lancement estival du Mode IA et des Aperçus IA de Google** : Google prévoit d'activer ces deux fonctions de recherche d'ici la fin de l'été en France, en laissant un délai aux éditeurs de presse partenaires pour s'adapter. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/google-lancera-son-mode-et-apercus-ia-dans-le-courant-de-l-ete-en-offrant-des-garanties-aux-editeurs-de-presse_AN-202606290843.html)</description>
+- **IA &amp; Cloud : Claude d'Anthropic disponible sur Azure** : L'arrivée de Claude sur Azure concrétise l'alliance entre Anthropic, Nvidia et Microsoft, et ouvre l'accès aux clients Microsoft qui n'étaient pas adressables via AWS ou Google Cloud. [ZDNet France](https://www.zdnet.fr/actualites/anthropic-nvidia-et-microsoft-concretisent-leur-alliance-ia-avec-larrivee-de-claude-sur-azure-497931.htm#xtor=RSS-1)
+
+- **Agents de code : Devin Desktop (ex-Windsurf) testé face à Claude Code et Codex** : Cognition fusionne Windsurf et Devin dans une interface unifiée visant à piloter plusieurs agents de code simultanément. Les premiers tests montrent une promesse d'autonomie intéressante mais une concurrence déjà solide. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552021-test-de-devin-desktop-ex-windsurf-peut-il-remplacer-claude-code-ou-codex/)
+
+- **Recherche IA : Lovelace publie un benchmark face à Google** : La start-up spécialisée dans les agents IA pour entreprises a publié un benchmark sur 12 tâches, positionnant sa solution comme une alternative moins coûteuse à la recherche Google. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-recherche-ia-de-lovelace-rivalise-avec-google-a-moindre-cout-100398.html)
+
+- **Spatial : Rocket Lab acquiert Iridium pour 8 milliards de dollars** : Le fabricant de fusées met la main sur la constellation de satellites Iridium, intégrant ainsi une activité de connectivité satellitaire rentable à son portefeuille de services. [Next.ink](https://next.ink/244709/rocket-lab-soffre-iridium-et-sa-constellation-pour-accelerer-dans-les-services-spatiaux/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Mustang Panda cible le gouvernement indien via Zoho WorkDrive</strong> : Le groupe chinois détourne le service cloud légitime Zoho WorkDrive comme canal C2 dans deux campagnes d'espionnage distinctes visant l'administration indienne et des infrastructures hydroélectriques, avec de nouveaux malwares déployés sur des systèmes déjà compromis. <a href="https://thehackernews.com/2026/06/mustang-panda-uses-zoho-workdrive-as.html">The Hacker News</a></li>
+<li><strong>Apple : correctifs de sécurité pour iOS, macOS et Safari</strong> : Plus de 30 vulnérabilités corrigées, dont 4 failles WebKit découvertes via des outils d'IA (Anthropic Claude, OpenAI Codex Security). Ces failles WebKit exposent à de l'exécution de code arbitraire lors du traitement de contenu web malveillant. <a href="https://thehackernews.com/2026/06/apple-patches-30-ios-macos-safari-flaws.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Prime américaine de 10 M$ pour des hackers russes ciblant WhatsApp et Signal</strong> : Le Département d'État finance la traque des groupes UNC5792 et UNC4221, liés aux services de renseignement et militaires russes, pour leurs opérations contre les utilisateurs de messageries chiffrées. <a href="https://www.bleepingcomputer.com/news/security/us-offers-10-million-for-hackers-targeting-whatsapp-signal-users/">BleepingComputer</a></li>
+<li><strong>Oracle E-Business Suite : exploitation active de CVE-2026-46817</strong> : Vulnérabilité critique (CVSS 9.8) de gestion de privilèges et d'authentification dans Oracle Payments, exploitée à l'état sauvage. Permet une compromission sans authentification préalable. <a href="https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Géorequêtes cellulaires soumises à mandat par la Cour suprême américaine</strong> : La décision exige désormais un mandat pour les demandes de géofencing ciblant des téléphones individuels, renforçant la protection du Quatrième Amendement et réduisant la surveillance de localisation sans contrôle judiciaire préalable. <a href="https://therecord.media/supreme-court-geofencing-ruling-fourth-amendment">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Hotpatching Windows Server 2022 prolongé jusqu'en octobre 2027</strong> : Microsoft repousse d'un an la disponibilité des mises à jour sans redémarrage, offrant une fenêtre de maintenance réduite au-delà de la fin du support standard prévue en octobre 2026. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-extends-windows-server-2022-hotpatching-until-october-2027/">BleepingComputer</a></li>
+<li><strong>SANS ISC : bulletin quotidien du 30 juin 2026</strong> : Aperçu des menaces et indicateurs collectés par la communauté SANS sur les dernières 24h. À consulter pour tout indicateur de compromission émergent non couvert par les alertes éditeurs. <a href="https://isc.sans.edu/diary/rss/33112">SANS ISC</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Clés RSA faibles avec nombreux zéros</strong> : Le projet Badkeys a identifié en conditions réelles une nouvelle classe de clés RSA vulnérables, caractérisées par une forte proportion de bits à zéro. Leur présence dans la nature confirme que des implémentations continuent de générer des clés factorisables. <a href="https://www.schneier.com/blog/archives/2026/06/factoring-rsa-keys-with-many-zeros.html">Schneier on Security</a></li>
+<li><strong>Partenariat SNCF-CEA sur les technologies de souveraineté</strong> : La SNCF et le CEA ont signé un accord-cadre pour collaborer sur l'IA, la cybersécurité et la robotique, visant à renforcer l'autonomie technologique sur des secteurs critiques. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-sncf-et-le-cea-s-associent-sur-l-ia-la-cybersecurite-et-la-robotique-100586.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Risque d'exfiltration de credentials via l'extension Amazon Q</strong> : Une vulnérabilité dans l'extension VS Code d'Amazon Q permet à un dépôt malveillant d'exécuter du code arbitraire et de voler des credentials cloud, illustrant la surface d'attaque croissante liée au protocole MCP (Model Context Protocol). <a href="https://www.darkreading.com/cloud-security/amazon-q-vs-extension-flaw-leads-cloud-credential-theft">Dark Reading</a></li>
+<li><strong>Formation au pentest web</strong> : Face à l'exposition croissante des applications web, un guide pratique détaille la méthodologie pour conduire un test d'intrusion, de la reconnaissance à l'exploitation. <a href="https://www.lemondeinformatique.fr/actualites/lire-apprendre-a-realiser-un-test-d-intrusion-web-100128.html">Le Monde Informatique</a></li>
 </ul>
 
-<ul>
-<li><strong>Compétences IA piégées comme vecteur d'attaque</strong> : Pour démontrer les risques émergents des agents IA, des chercheurs ont délibérément publié une compétence malveillante exploitant ces systèmes. L'initiative met en garde contre la confiance aveugle dans les intégrations tierces des outils basés sur l'IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-pour-alerter-une-societe-piege-une-competence-pour-agents-ia-100590.html">Le Monde Informatique</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
+<h2>IA — Recherche</h2>
 
 <ul>
-<li><strong>Inférence Claude sur NVIDIA GB300 dans Azure</strong> : Anthropic rend ses modèles Claude disponibles sur les GPU NVIDIA GB300 (Blackwell Ultra) via Microsoft Foundry sur Azure, ciblant les déploiements d'agents IA autonomes en entreprise. <a href="https://blogs.nvidia.com/blog/anthropic-nvidia-gb300-blackwell-ultra-microsoft-azure/">NVIDIA Blog</a></li>
-</ul>
-
-<ul>
-<li><strong>Observabilité des agents en production sur Bedrock</strong> : AWS détaille le débogage des agents via AgentCore Observability, en s'appuyant sur les traces et métriques pour diagnostiquer des défaillances comme les boucles infinies ou les erreurs d'appel d'outils. <a href="https://aws.amazon.com/blogs/machine-learning/debugging-production-agents-with-amazon-bedrock-agentcore-observability/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents LLM multi-tenants avec sécurité row-level</strong> : PAR a conçu sur AWS un système d'analytique multi-tenant qui combine signature cryptographique SigV4, validation sémantique dans Bedrock et isolation des données via Split-Plane SQL. <a href="https://aws.amazon.com/blogs/machine-learning/multi-tenant-llm-analytics-with-row-level-security-how-we-built-a-secure-agent-on-aws/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Pipeline agentic pour données de santé</strong> : Un pipeline de traitement de demandes de remboursement santé automatise l'extraction de formulaires via Bedrock Data Automation et la validation des données via un agent hébergé sur Bedrock AgentCore. <a href="https://aws.amazon.com/blogs/machine-learning/build-an-agentic-ai-healthcare-claims-pipeline-with-amazon-bedrock-and-aws-healthlake/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Sauvegarde des assets BI sur QuickSight</strong> : AWS publie les bonnes pratiques et un exemple de code pour industrialiser la sauvegarde des assets BI QuickSight via les APIs de la plateforme. <a href="https://aws.amazon.com/blogs/machine-learning/implement-a-backup-strategy-for-amazon-quick-sight-bi-assets/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>DiScoFormer : un transformeur unifié pour densité et score</strong> : Allen AI présente DiScoFormer, un modèle unique capable d'apprendre simultanément la densité et le score sur des distributions variées. <a href="https://huggingface.co/blog/allenai/discoformer">Hugging Face Blog</a></li>
+<li><strong>Agents multi-modèles et routage</strong> : La sélection d'outils ou d'agents à partir de requêtes en langage naturel est intrinsèquement un problème de prédiction d'ensemble, où il faut équilibrer rappel et coût d'exécution. <a href="https://arxiv.org/abs/2606.28925">Multi-Agent Routing</a> · <a href="https://arxiv.org/abs/2605.09076">Robust Multi-Agent LLMs under Byzantine Faults</a></li>
+<li><strong>Sécurité et alignement des LLMs</strong> : La quantification et la température d'échantillonnage interagissent de manière non triviale sur l'alignement des modèles, créant des angles morts que les évaluations classiques ignorent. Sur l'inférence, les défenses par pilotage d'activations surpassent les approches probabilistes, mais aucune méthode ne domine sur tous les modèles. <a href="https://arxiv.org/abs/2606.29581">Quantization and Sampling Temperature</a> · <a href="https://arxiv.org/abs/2606.29441">Activation-Cone Blind Spot</a></li>
+<li><strong>LLMs en production on-premise</strong> : Un benchmark reproductible sur Text-to-SQL montre que les modèles ouverts exécutés localement restent compétitifs pour les organisations ne pouvant externaliser leurs données, à condition de choisir les bonnes recettes d'optimisation. <a href="https://arxiv.org/abs/2606.29733">On-Prem Open LLMs for Text-to-SQL</a></li>
+<li><strong>Génération structurée et garanties formelles</strong> : Le contrôle de risque conforme peut certifier les sorties structurées des LLMs (NER, JSON, QA), comblant un écart de 7 à 12 % par rapport aux seuils de risque demandés par les utilisateurs. <a href="https://arxiv.org/abs/2606.29054">Conformal Risk Control for LLM Outputs</a></li>
+<li><strong>Audit et alignement des objectifs</strong> : Un cadre bayésien permet d'inférer et de raffiner les fonctions de récompense implicites des LLMs, rendant l'audit d'alignement plus robuste que l'apprentissage inverse par renforcement classique. <a href="https://arxiv.org/abs/2510.06096">Alignment Auditor</a></li>
+<li><strong>Fuzzing de LLMs pour comportements cachés</strong> : Appliquer des techniques de fuzzing aux LLMs permet d'extraire systématiquement des comportements déclenchés par des conditions spécifiques non connues à l'avance, une première étude sur les agents dormants. <a href="https://arxiv.org/abs/2606.29646">Fuzzing LLMs</a></li>
+<li><strong>Conscience d'évaluation par les modèles</strong> : La profondeur représentationnelle de la "conscience d'être testé" évolue avec l'échelle des modèles ouverts, ce qui menace l'interprétabilité des benchmarks si les modèles modulent stratégiquement leur comportement. <a href="https://arxiv.org/abs/2606.29196">Evaluation Awareness</a></li>
+<li><strong>Désapprentissage machine et vie privée</strong> : Des méthodes de désapprentissage efficaces avec garanties de confidentialité répondent aux exigences du RGPD pour effacer les données personnelles des modèles entraînés. <a href="https://arxiv.org/abs/2507.04771">Efficient Unlearning with Privacy Guarantees</a></li>
+<li><strong>Vulnérabilités sans données labellisées</strong> : La détection de vulnérabilités par anomalie sans données d'entraînement étiquetées surpasse les LLMs seuls, qui plafonnent à peine au-dessus du hasard sur cette tâche. <a href="https://arxiv.org/abs/2408.16028">ANVIL</a></li>
+<li><strong>Régulation européenne de l'IA</strong> : L'AI Act introduit une obligation de ré-évaluation lors de "modifications substantielles", mais la notion d'identité du système à haut risque reste floue et problématique pour la gouvernance du cycle de vie. <a href="https://arxiv.org/abs/2605.23922">AI Act and System Identity</a></li>
+<li><strong>Apprentissage automatique et raccourcis fallacieux</strong> : La descente de gradient stochastique priorise de manière prouvable les caractéristiques fallacieuses dans un modèle XOR, éclairant le mécanisme par lequel les réseaux exploitent des corrélations parasites. <a href="https://arxiv.org/abs/2606.30444">SGD Prioritizes Spurious Feature</a></li>
+<li><strong>Génération de figures scientifiques</strong> : Un nouveau benchmark évalue spécifiquement la capacité des modèles texte-image et multimodaux à produire des diagrammes et schémas scientifiques, une lacune des benchmarks existants. <a href="https://arxiv.org/abs/2606.28406">Can AI Draw Science?</a></li>
+<li><strong>Estimation d'état et intelligence en maillage</strong> : Un filtre de Kalman par consensus neuronal permet l'estimation distribuée d'état latent sous dynamiques partiellement connues, tandis qu'un cadre théorique défend la nécessité d'un substrat liquide pour l'intelligence en maillage sans coordonnateur central. <a href="https://arxiv.org/abs/2606.28441">Kalman Consensus Filter</a> · <a href="https://arxiv.org/abs/2606.28413">Liquid Substrate for Mesh Intelligence</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Données de santé & IA : nouvelle offensive législative aux US</strong> : Une proposition de loi bipartisane vise à interdire la vente de données de santé et de localisation par les courtiers, y compris celles confiées à des chatbots. <a href="https://www.theverge.com/ai-artificial-intelligence/959033/health-location-data-protection-act-ai-warren-scanlon">The Verge</a></li>
+<li><strong>Impact de l'IA sur l'emploi</strong> : Un rapport montre que les entreprises adoptant massivement l'IA ont accru leurs effectifs de 10,2%, avec une hausse de 12% pour les postes juniors — ce qui contredit le discours dominant sur la destruction des emplois débutants. <a href="https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA : le risque de la métaphore du "collègue"</strong> : Le discours qui présente les agents comme des "coworkers" masque le besoin de supervision humaine et crée une fausse symétrie de responsabilité. <a href="https://www.technologyreview.com/2026/06/29/1139849/ai-agents-are-not-your-coworkers/">MIT Technology Review</a></li>
+<li><strong>Sécurité des réunions Teams</strong> : Microsoft déploie un mécanisme d'autorisation pour les bots dans Teams, permettant aux éditeurs d'inscrire leurs bots sur liste blanche afin de bloquer les indésirables. <a href="https://www.theregister.com/software/2026/06/30/microsoft-builds-a-bouncer-to-keep-bots-out-of-teams-meetings/5264199">The Register</a></li>
 </ul>
 
 <ul>
-<li><strong>Adoption des agents en entreprise : la question clé de la confiance</strong> : L'investissement dans l'IA agentique explose mais le passage à l'échelle bute sur l'absence de mécanismes standardisés pour mesurer la fiabilité des décisions prises par ces systèmes. <a href="https://www.technologyreview.com/2026/06/29/1139635/agent-confidence-on-the-technical-frontier/">MIT Technology Review</a></li>
-</ul>
-
-<ul>
-<li><strong>Anthropic verrouille le secteur public californien</strong> : Un accord avec le gouverneur Newsom offre Claude à moitié prix à l'administration, renforçant l'ancrage local d'Anthropic alors que ses relations avec l'État fédéral se dégradent. <a href="https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Chaîne d'approvisionnement mémoire : la Corée du Sud injecte 550 Md$</strong> : Samsung et SK Hynix s'engagent sur un plan massif de nouvelles usines de R&D pour sécuriser la production de mémoire HBM face à la demande IA, consolidant la position stratégique du pays. <a href="https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/">TechCrunch</a></li>
+<li><strong>Interface cerveau-texte non invasive</strong> : Meta livre la v2 de Brain2Qwerty, un pipeline basé sur la magnétoencéphalographie qui décode des phrases tapées avec 61% de précision, en publiant le code d'entraînement. <a href="https://www.marktechpost.com/2026/06/30/meta-ai-releases-brain2qwerty-v2-a-non-invasive-meg-brain-to-text-pipeline-decoding-typed-sentences-at-61-word-accuracy/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Détection tardive des fraudes internes</strong> : Les entreprises françaises disposent de signaux faibles avant qu'une fraude ne soit découverte, mais échouent à les corréler et à les exploiter à temps. <a href="https://www.journaldunet.com/cybersecurite/1551877-pourquoi-les-entreprises-francaises-detectent-souvent-les-fraudes-internes-trop-tard/">Journal du Net</a></li>
+<li><strong>Data Privacy Framework : Microsoft intervient en justice</strong> : Microsoft a obtenu le droit d'intervenir devant la Cour de justice de l'UE concernant le cadre transatlantique de transfert de données personnelles. L'éditeur cherche à défendre ce mécanisme qui permet aux entreprises américaines certifiées de recevoir des données depuis l'Europe. <a href="https://next.ink/244691/microsoft-vole-au-secours-du-data-privacy-framework-entre-lue-et-les-etats-unis/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Cybersécurité continue vs audits ponctuels</strong> : Une posture de sécurité efficace exige une surveillance dynamique et adaptative des risques, par opposition aux photos instantanées que constituent les audits traditionnels. <a href="https://www.journaldunet.com/cybersecurite/1551797-cybersecurite-pourquoi-les-entreprises-ont-besoin-de-google-maps-pas-d-une-carte-routiere/">Journal du Net</a></li>
+<li><strong>Apple : 32 failles corrigées, dont 25 dans WebKit</strong> : La mise à jour iOS 26.5.2 (et iPadOS) publiée le 29 juin comble 32 vulnérabilités, majoritairement dans le moteur WebKit. Le déploiement est à prioriser pour tous les terminaux concernés. <a href="https://next.ink/brief-article/apple-corrige-32-failles-de-securite-avec-ios-25-6-2/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Piégeage de compétences pour agents IA</strong> : Une société de cybersécurité a démontré un nouveau vecteur de risque en publiant un faux package logiciel conçu pour tromper les agents IA chargés de coder automatiquement. <a href="https://www.lemondeinformatique.fr/actualites/lire-pour-alerter-une-societe-piege-une-competence-pour-agents-ia-100590.html">Le Monde Informatique</a></li>
+<li><strong>États-Unis : la Cour suprême limite l'accès policier aux données de géolocalisation</strong> : La plus haute juridiction américaine a statué que l'utilisation d'un téléphone portable ne supprime pas le droit à la vie privée, même lorsque les données de localisation sont détenues par des entreprises tierces. Cette décision encadre plus strictement les demandes des forces de l'ordre. <a href="https://www.bfmtv.com/tech/actualites/donnees-personnelles/nous-ne-perdons-pas-notre-droit-a-la-vie-privee-simplement-parce-que-nous-utilisons-un-telephone-portable-aux-etats-unis-la-cour-supreme-limite-l-acces-de-la-police-aux-donnees-de-geolocalisation_AD-202606300410.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Lancement estival du Mode IA et des Aperçus IA de Google</strong> : Google prévoit d'activer ces deux fonctions de recherche d'ici la fin de l'été en France, en laissant un délai aux éditeurs de presse partenaires pour s'adapter. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/google-lancera-son-mode-et-apercus-ia-dans-le-courant-de-l-ete-en-offrant-des-garanties-aux-editeurs-de-presse_AN-202606290843.html">BFM Tech</a></li>
+<li><strong>IA & Cloud : Claude d'Anthropic disponible sur Azure</strong> : L'arrivée de Claude sur Azure concrétise l'alliance entre Anthropic, Nvidia et Microsoft, et ouvre l'accès aux clients Microsoft qui n'étaient pas adressables via AWS ou Google Cloud. <a href="https://www.zdnet.fr/actualites/anthropic-nvidia-et-microsoft-concretisent-leur-alliance-ia-avec-larrivee-de-claude-sur-azure-497931.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents de code : Devin Desktop (ex-Windsurf) testé face à Claude Code et Codex</strong> : Cognition fusionne Windsurf et Devin dans une interface unifiée visant à piloter plusieurs agents de code simultanément. Les premiers tests montrent une promesse d'autonomie intéressante mais une concurrence déjà solide. <a href="https://www.journaldunet.com/intelligence-artificielle/1552021-test-de-devin-desktop-ex-windsurf-peut-il-remplacer-claude-code-ou-codex/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Recherche IA : Lovelace publie un benchmark face à Google</strong> : La start-up spécialisée dans les agents IA pour entreprises a publié un benchmark sur 12 tâches, positionnant sa solution comme une alternative moins coûteuse à la recherche Google. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-recherche-ia-de-lovelace-rivalise-avec-google-a-moindre-cout-100398.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Spatial : Rocket Lab acquiert Iridium pour 8 milliards de dollars</strong> : Le fabricant de fusées met la main sur la constellation de satellites Iridium, intégrant ainsi une activité de connectivité satellitaire rentable à son portefeuille de services. <a href="https://next.ink/244709/rocket-lab-soffre-iridium-et-sa-constellation-pour-accelerer-dans-les-services-spatiaux/">Next.ink</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260629-1913</guid>
-      <pubDate>Mon, 29 Jun 2026 19:13:51 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260630-0927</guid>
+      <pubDate>Tue, 30 Jun 2026 09:27:27 +0000</pubDate>
     </item>
   </channel>
 </rss>
