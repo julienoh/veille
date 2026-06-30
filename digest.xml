@@ -8,180 +8,192 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 30 Jun 2026 13:17:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 19:08:35 +0000</lastBuildDate>
     <item>
-      <title>Digest — 30/06 13h</title>
+      <title>Digest — 30/06 19h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Exploitation de CVE-2026-48558 (SimpleHelp)** : Une faille critique (CVSS 10.0) dans SimpleHelp est activement exploitée pour déployer les malwares TaskWeaver et Djinn Stealer. Tout déploiement non patché doit être isolé immédiatement. [Source](https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html)
+- **Agents IA détournés via des descriptions d'outils empoisonnées** : Des chercheurs de Microsoft montrent qu'un attaquant peut exfiltrer des données d'entreprise en piégeant la description d'un outil MCP, sans que l'agent ne déclenche d'alerte puisqu'il exécute des actions d'apparence légitime. [The Hacker News](https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html)
 
-- **CVE-2026-8037 (Progress Kemp LoadMaster)** : Une vulnérabilité pré-auth (CVSS 9.8) sur l'API de l'appliance permet l'exécution de commandes root. Le correctif est disponible ; l'accès à l'interface d'administration doit être strictement filtré. [Source](https://thehackernews.com/2026/06/progress-kemp-loadmaster-flaw-could-let.html)
+- **Bypass des garde-fous des agents de codage IA** : Adversa AI révèle que la technique GuardFall exploite des subtilités historiques du shell pour contourner les contrôles de sécurité de 10 des 11 agents de codage open-source testés, permettant l'exécution de commandes dangereuses. [The Hacker News](https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html)
 
-- **Faille Windows BlueHammer exploitée par rançongiciels** : La CISA confirme que des groupes rançongiciels exploitent désormais cette vulnérabilité d'élévation de privilèges Microsoft Defender, déjà utilisée en zero-day par le passé. Priorité à l'application du correctif sur tous les postes Windows exposés. [Source](https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/)
+- **Fuite massive de clés API dans les apps iOS intégrant l'IA** : Sur 444 applications iPhone de chatbot testées, 282 exposaient en clair dans leur trafic réseau des clés API, tokens ou accès proxy vers des services d'IA payants, ouvrant un accès non autorisé à ces ressources. [The Hacker News](https://thehackernews.com/2026/06/282-ios-apps-found-leaking-llm-api-keys.html)
 
-- **Fuite de données Aflac via une filiale japonaise** : Une compromission de la filiale nippone d'Aflac a conduit au vol de données personnelles et bancaires. Rappel de la nécessité d'étendre la gouvernance de sécurité à toutes les entités d'un groupe. [Source](https://www.bleepingcomputer.com/news/security/insurance-giant-aflac-discloses-data-breach-after-subsidiary-hack/)
+- **Extensions Chrome malveillantes ciblant l'IA** : Une fausse extension Perplexity sur le Chrome Web Store intercepte le trafic de recherche et collecte des données de navigation. En parallèle, la campagne Silent Swap utilise une fausse extension Google Notes pour remplacer les adresses de portefeuilles crypto lors des transactions. [BleepingComputer](https://www.bleepingcomputer.com/news/security/fake-perplexity-extension-on-chrome-web-store-tracked-searches/) · [The Hacker News](https://thehackernews.com/2026/06/silent-swap-crypto-clipper-uses-fake.html)
 
-- **Rançongiciel Blackfield cible Nidec Corporation** : Le groupe réclame 2 millions de dollars au fabricant japonais. La surface de risque du secteur industriel reste une cible privilégiée des extorsions. [Source](https://www.bleepingcomputer.com/news/security/blackfield-ransomware-asks-nidec-corporation-for-2-million-ransom/)
+- **Exploitation active d'une RCE critique dans Langflow** : La vulnérabilité CVE-2026-33017 (CVSS 9.3), permettant l'exécution de code à distance sans authentification, est exploitée pour déployer un mineur de Monero sur les instances exposées. [The Hacker News](https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html)
 
-- **Vulnérabilités dans AirDrop et Quick Share** : Six failles permettent à un attaquant à proximité, sans connexion préalable, de crasher le service ou contourner des contrôles sur Mac et iPhone. À surveiller côté iOS/macOS au prochain cycle de correctifs. [Source](https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html)
+- **Botnet RustDuck en Rust pour DDoS** : Un nouveau malware en deux étapes, actif depuis février 2026, compromet routeurs, caméras IP et serveurs mal sécurisés pour constituer un réseau dédié aux attaques DDoS. [The Hacker News](https://thehackernews.com/2026/06/rustduck-botnet-rebuilds-in-rust-to.html)
 
-- **Vol d'identifiants via les navigateurs IA (BioShocking)** : La technique BioShocking piège les navigateurs et assistants IA pour qu'ils divulguent des informations d'authentification sous couvert d'un jeu. Risque émergent lié aux agents autonomes en entreprise. [Source](https://thehackernews.com/2026/06/new-bioshocking-attack-tricks-ai.html)
+- **Fonctionnement structuré des attaques BEC** : L'analyse de forums souterrains par Flare confirme que le Business Email Compromise est une opération planifiée impliquant compromission de comptes, recherche financière et réseaux organisés de cash-out. [BleepingComputer](https://www.bleepingcomputer.com/news/security/lessons-from-the-underground-how-to-combat-business-email-compromise/)
 
-- **Fraude préparatoire à la Coupe du Monde FIFA 2026** : Check Point Research constate une infrastructure de fraude (sites, applis, phishing) pré-déployée en amont de l'événement. Sensibilisation renforcée à prévoir pour les collaborateurs susceptibles de suivre la compétition. [Source](https://thehackernews.com/2026/06/what-numbers-say-about-fifa-2026-cyber.html)
-
-- **Corrections Apple (juin 2026)** : Mises à jour iOS, macOS et Safari publiées, sans les autres OS habituels. Application prioritaire pour corriger les failles anonymisées dans l'écosystème Apple. [Source](https://isc.sans.edu/diary/rss/33114)
-
-- **Contrôle des bots Microsoft Teams** : Une nouvelle politique administrateur empêche les bots de rejoindre des réunions sans l'accord de l'organisateur. Activable pour réduire le risque d'intrusion via des applications malveillantes. [Source](https://www.bleepingcomputer.com/news/microsoft/mircosoft-adds-smarter-bot-protection-to-teams-meetings/)
+- **Législation sur la sécurité en ligne des enfants** : Le KIDS Act a été adopté à la Chambre des représentants américaine (267-117), mais son passage au Sénat reste peu probable. [The Record](https://therecord.media/house-passes-kids-online-safety-bill-senate-unlikely)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Shadow AI dans l'automatisation** : L'adoption de workflows générés par IA crée une dette technique de sécurité critique : des automatismes fonctionnels mais opaques, dont personne ne maîtrise le comportement réel ni les implications. [Dark Reading](https://www.darkreading.com/cyber-risk/ai-generated-workflows-silent-security-disaster)
-
-- **Extensions malveillantes ciblant l'IA** : Une extension Chromium usurpant Perplexity AI interceptait les requêtes de recherche via des serveurs contrôlés par l'attaquant avant de les relayer. Google l'a retirée après signalement par Microsoft Threat Intelligence. [CSO Online](https://www.csoonline.com/article/4191060/malicious-chromium-extension-spoofs-perplexity-ai-to-hijack-browser-searches.html)
-
-- **Chiffrement post-quantique — calendrier US** : Le ministère américain de la Défense a officialisé un calendrier contraignant pour la migration vers des algorithmes post-quantiques, reconnaissant la menace quantique comme imminente pour la sécurité des systèmes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-un-calendrier-americain-serre-pour-le-chiffrement-postet-8209-quantique -100596.html)
-
-- **Vidéosurveillance augmentée par l'IA** : L'IA transforme les capacités de surveillance vidéo de masse, avec des déploiements documentés en Israël/Iran et en Russie, concrétisant le basculement d'une surveillance de masse passive vers un espionnage automatisé et ciblé. [Schneier on Security](https://www.schneier.com/blog/archives/2026/06/the-realities-of-ai-video-surveillance.html)
+- **Mistic, nouvelle backdoor liée aux ransomwares** : Une backdoor active depuis avril cible des entreprises pour déployer des ransomwares. Aucune attribution précise n'est encore confirmée, mais l'outil semble conçu pour s'intégrer dans des chaînes d'attaque complexes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-attention-a-mistic-une-backdoor-servant-aux-campagnes-de-ransomware-100603.html)
 
 ## IA — Labos &amp; éditeurs
 
-- **Données synthétiques pour agents de vision** : NVIDIA détaille trois workflows combinant données synthétiques (Omniverse) et fine-tuning pour améliorer la précision des agents Vision AI, notamment sur des cas où les données réelles sont insuffisantes ou difficiles à annoter. [NVIDIA Blog](https://blogs.nvidia.com/blog/vision-ai-agent-skills-omniverse-metropolis/)
+- **Anthropic Claude Sonnet 5 sur AWS** : Disponible sur Bedrock, ce modèle inaugure la nouvelle génération Sonnet avec des performances en hausse sur le raisonnement et la génération de code. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/introducing-claude-sonnet-5-on-aws-anthropics-most-capable-sonnet-model/)
+
+- **Optimisation du coût par token chez NVIDIA** : La stack logicielle d'inférence (TensorRT-LLM, Triton, NIM) est co-conçue avec le hardware pour maximiser le nombre de tokens utiles par dollar et par watt, critère désormais central pour le passage à l'échelle. [NVIDIA Blog](https://blogs.nvidia.com/blog/inference-software-lowest-token-cost/)
+
+- **Agents IA et UI générative sur Bedrock** : AWS propose via AgentCore et le protocole AG-UI un template (FAST) pour construire des frontends agentiques interactifs, avec état partagé et validation humaine, en s'appuyant sur CopilotKit. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcore-with-the-ag-ui-protocol/)
+
+- **Gestion multi-comptes des modèles Bedrock** : Les managed entitlements permettent de souscrire à un modèle depuis un compte central et d'en distribuer l'accès aux comptes applicatifs sans passer par les permissions AWS Marketplace. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/simplify-multi-account-access-to-amazon-bedrock-models-with-managed-entitlements/)
+
+- **Résilience des applications GenAI sur AWS** : Cinq patterns sont détaillés, des mécanismes natifs Bedrock (retry, fallback) jusqu'à l'orchestration multi-modèles via LLM gateway, pour gérer les épuisements de quota et les pics de trafic. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/implementing-resilience-patterns-with-amazon-bedrock-and-llm-gateway/)
+
+- **Fine-tuning Amazon Nova pour extraction d'emails** : Le fine-tuning via SageMaker AI permet d'atteindre 94,77% de précision sur l'extraction de champs spécifiques, en corrigeant les confusions entre données similaires que les modèles généralistes commettent. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/fine-tune-amazon-nova-models-for-accurate-email-data-extraction/)
+
+- **NER bilingue pour la logistique par distillation** : IBS Software a utilisé la distillation de connaissances sur Bedrock pour construire un modèle de reconnaissance d'entités nommées bilingue adapté au transport de marchandises. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/)
+
+- **Benchmark d'agents pour migration Java (IBM)** : ScarfBench évalue la capacité des agents IA à réaliser des migrations de frameworks Java en entreprise, un cas d'usage critique pour la modernisation de legacy. [Hugging Face Blog](https://huggingface.co/blog/ibm-research/scarfbench)
+
+- **Spécialisation inévitable des modèles** : Un article d'analyse soutient que la spécialisation des modèles d'IA est une trajectoire incontournable face aux limites des approches généralistes pour les usages métier. [Hugging Face Blog](https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable)
+
+- **NVIDIA BioNeMo pour les sciences de la vie** : Le toolkit BioNeMo Agent s'intègre à Claude Science pour accélérer les workflows de recherche en sciences du vivant via des agents GPU-accélérés. [NVIDIA Blog](https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/)
+
+- **Accélération d'entraînement VFX sur AWS** : Outpost VFX a réduit d'un facteur 8 le temps d'entraînement de ses modèles de remplacement facial en passant d'un GPU unique à une configuration multi-GPU sur AWS. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-outpost-vfx-uses-aws-to-accelerate-ai-model-training-for-visual-effects/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Prérequis data pour l'IA agricole** : L'adoption de l'IA dans l'agriculture bute sur un déficit de données structurées et exploitables. Le MIT souligne que l'investissement dans les cas d'usage (marges, météo, engrais) est prématuré sans une couche de fondation sur la donnée. [MIT Technology Review](https://www.technologyreview.com/2026/06/30/1139513/agriculture-is-ready-for-ai-but-its-data-isnt/)
+- **Anthropic : Sonnet 5 et Claude Science** : Anthropic sort Sonnet 5, positionné comme une alternative économique à Opus et GPT-5.5 pour exécuter des agents, avec des garanties de sécurité renforcées. Parallèlement, Claude Science n'est pas un nouveau modèle mais un environnement de travail unifié pour la recherche computationnelle, visant à réduire la dispersion des scientifiques entre outils. [Sonnet 5](https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/) · [Claude Science](https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/)
 
-- **Agents IA autonomes dans la finance crypto** : OKX prépare une marketplace permettant à des agents IA de contracter, d'échanger des paiements et de se payer entre eux, en s'appuyant sur des mécanismes d'identité et de réputation on-chain. [TechCrunch](https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/)
+- **Amazon : fonds d'1 milliard pour le déploiement d'agents** : Amazon crée une nouvelle organisation dédiée au déploiement d'agents IA sur mesure, en intégrant ses ingénieurs directement chez les clients. L'accent est mis sur la rapidité d'exécution et l'autonomie des clients. [Source](https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/)
+
+- **Agents IA dans le clavier smartphone** : La startup Acti intègre des agents IA directement dans le clavier des smartphones (iOS/Android), permettant de créer des raccourcis personnalisés en langage naturel et d'agir à travers les applications. [Source](https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/)
+
+- **Proton : mise à jour du chatbot privé Lumo** : Proton déploie Lumo 2.0, une version enrichie de son assistant IA axé sur la confidentialité, avec un éventail de capacités élargi. [Source](https://techcrunch.com/2026/06/30/lumo-protons-privacy-focused-ai-chatbot-gets-an-upgrade/)
 
 ## Actualité tech FR
 
-- **Infrastructure vieillissante à l'ANSM** : Un appel d'offres de l'Agence du médicament expose des systèmes d'exploitation et logiciels non maintenus sur ses serveurs, un risque de sécurité notable pour une institution critique. [Next.ink](https://next.ink/244290/un-appel-doffres-devoile-dinquietants-details-du-systeme-it-de-lagence-du-medicament/)
+- **Meta automatise la modération avec son IA** : Meta annonce que 90% de la modération de contenu sera confiée à ses LLM d'ici fin décembre, revendiquant un taux d'erreur inférieur de 13% à celui des humains. Cette transformation massive affectera les posts, commentaires et l'analyse de conformité publicitaire. [Siècle Digital](https://siecledigital.fr/2026/06/29/meta-prevoit-de-remplacer-90-de-son-personnel-de-moderation-de-contenu-par-une-ia/)
 
-- **Compétition sino-américaine et cybersécurité** : Le nouveau LLM chinois GLM-5.2 rivalise avec les modèles d'OpenAI et Anthropic, soulevant la question de l'efficacité des embargos US et d'un possible bouleversement des équilibres en cybersécurité. [Next.ink](https://next.ink/244743/avec-le-modele-glm-5-2-la-chine-pourrait-rebattre-les-cartes-de-la-cybersecurite/)
+- **Fuites d'iPhone 18 Pro : documents désormais sur le web public** : Les données confidentielles dérobées à Tata Electronics, concernant notamment l'iPhone 18 Pro, ne se limitent plus au dark web et circulent désormais librement sur internet. Apple tente de contenir cette brèche industrielle majeure. [Next.ink](https://next.ink/brief-article/apple-tente-de-colmater-les-fuites-autour-de-liphone-18-pro/)
 
-- **Piratage de Jaguar Land Rover** : L'attaque majeure subie par le constructeur, l'une des plus importantes de 2025, est désormais attribuée à un groupe de hackers russes. [ZDNet France](https://www.zdnet.fr/actualites/piratage-xxl-de-jaguar-land-rover-la-piste-dun-hacking-russe-evoquee-497908.htm#xtor=RSS-1)
-
-- **Convergence OLTP/OLAP avec pgEdge ColdFront** : pgEdge lance une plateforme unifiée pour le transactionnel et l'analytique, éliminant la latence de transfert entre les deux environnements. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-pgedge-fond-ses-systemes-oltp-et-olap-dans-coldfront-100595.html)
-
-- **Évolution de l'IoT vers l'intelligence ambiante** : L'intégration de l'IA permet à l'IoT de passer de la simple collecte de données à une capacité d'analyse, d'anticipation et d'optimisation en temps réel. [JDN](https://www.journaldunet.com/iot/1551941-l-ia-transforme-l-iot-en-intelligence-ambiante/)
-
-- **Alternatives aux LLM pour l'industrie** : Face aux limites des LLM en environnement industriel (stabilité, contrôle), des approches alternatives émergent pour l'automatisation des processus. [JDN](https://www.journaldunet.com/intelligence-artificielle/1552001-ia-les-alternatives-aux-llm-pour-la-performance-des-processus/)
-
-- **Données synthétiques et conformité RGPD** : L'usage de données synthétiques en RH n'exonère pas des obligations du RGPD ; une gouvernance stricte reste nécessaire pour éviter les risques de ré-identification. [JDN](https://www.journaldunet.com/e-rh/1552017-l-illusion-des-donnees-synthetiques-en-rh-quand-l-innovation-rencontre-le-rgpd/)
-
-- **Wine 11.12** : Disponible avec le support de la mise à l'échelle fractionnaire pour Wayland. [Next.ink](https://next.ink/brief-article/wine-11-12-disponible-avec-le-support-de-la-mise-a-lechelle-fractionnaire-pour-wayland/)</description>
+- **La Chine publie un modèle d'IA en accès libre face aux restrictions US** : Pékin riposte au verrouillage américain (GPT-5.6 réservé à des partenaires agréés, suspension de modèles Anthropic) en diffusant gratuitement un LLM compétitif téléchargeable par tous. [Siècle Digital](https://siecledigital.fr/2026/06/30/la-chine-devoile-une-ia-capable-de-rivaliser-avec-les-meilleurs-modeles-americains/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exploitation de CVE-2026-48558 (SimpleHelp)</strong> : Une faille critique (CVSS 10.0) dans SimpleHelp est activement exploitée pour déployer les malwares TaskWeaver et Djinn Stealer. Tout déploiement non patché doit être isolé immédiatement. <a href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html">Source</a></li>
+<li><strong>Agents IA détournés via des descriptions d'outils empoisonnées</strong> : Des chercheurs de Microsoft montrent qu'un attaquant peut exfiltrer des données d'entreprise en piégeant la description d'un outil MCP, sans que l'agent ne déclenche d'alerte puisqu'il exécute des actions d'apparence légitime. <a href="https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>CVE-2026-8037 (Progress Kemp LoadMaster)</strong> : Une vulnérabilité pré-auth (CVSS 9.8) sur l'API de l'appliance permet l'exécution de commandes root. Le correctif est disponible ; l'accès à l'interface d'administration doit être strictement filtré. <a href="https://thehackernews.com/2026/06/progress-kemp-loadmaster-flaw-could-let.html">Source</a></li>
+<li><strong>Bypass des garde-fous des agents de codage IA</strong> : Adversa AI révèle que la technique GuardFall exploite des subtilités historiques du shell pour contourner les contrôles de sécurité de 10 des 11 agents de codage open-source testés, permettant l'exécution de commandes dangereuses. <a href="https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Faille Windows BlueHammer exploitée par rançongiciels</strong> : La CISA confirme que des groupes rançongiciels exploitent désormais cette vulnérabilité d'élévation de privilèges Microsoft Defender, déjà utilisée en zero-day par le passé. Priorité à l'application du correctif sur tous les postes Windows exposés. <a href="https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/">Source</a></li>
+<li><strong>Fuite massive de clés API dans les apps iOS intégrant l'IA</strong> : Sur 444 applications iPhone de chatbot testées, 282 exposaient en clair dans leur trafic réseau des clés API, tokens ou accès proxy vers des services d'IA payants, ouvrant un accès non autorisé à ces ressources. <a href="https://thehackernews.com/2026/06/282-ios-apps-found-leaking-llm-api-keys.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Fuite de données Aflac via une filiale japonaise</strong> : Une compromission de la filiale nippone d'Aflac a conduit au vol de données personnelles et bancaires. Rappel de la nécessité d'étendre la gouvernance de sécurité à toutes les entités d'un groupe. <a href="https://www.bleepingcomputer.com/news/security/insurance-giant-aflac-discloses-data-breach-after-subsidiary-hack/">Source</a></li>
+<li><strong>Extensions Chrome malveillantes ciblant l'IA</strong> : Une fausse extension Perplexity sur le Chrome Web Store intercepte le trafic de recherche et collecte des données de navigation. En parallèle, la campagne Silent Swap utilise une fausse extension Google Notes pour remplacer les adresses de portefeuilles crypto lors des transactions. <a href="https://www.bleepingcomputer.com/news/security/fake-perplexity-extension-on-chrome-web-store-tracked-searches/">BleepingComputer</a> · <a href="https://thehackernews.com/2026/06/silent-swap-crypto-clipper-uses-fake.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Rançongiciel Blackfield cible Nidec Corporation</strong> : Le groupe réclame 2 millions de dollars au fabricant japonais. La surface de risque du secteur industriel reste une cible privilégiée des extorsions. <a href="https://www.bleepingcomputer.com/news/security/blackfield-ransomware-asks-nidec-corporation-for-2-million-ransom/">Source</a></li>
+<li><strong>Exploitation active d'une RCE critique dans Langflow</strong> : La vulnérabilité CVE-2026-33017 (CVSS 9.3), permettant l'exécution de code à distance sans authentification, est exploitée pour déployer un mineur de Monero sur les instances exposées. <a href="https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Vulnérabilités dans AirDrop et Quick Share</strong> : Six failles permettent à un attaquant à proximité, sans connexion préalable, de crasher le service ou contourner des contrôles sur Mac et iPhone. À surveiller côté iOS/macOS au prochain cycle de correctifs. <a href="https://thehackernews.com/2026/06/airdrop-and-quick-share-flaws-let.html">Source</a></li>
+<li><strong>Botnet RustDuck en Rust pour DDoS</strong> : Un nouveau malware en deux étapes, actif depuis février 2026, compromet routeurs, caméras IP et serveurs mal sécurisés pour constituer un réseau dédié aux attaques DDoS. <a href="https://thehackernews.com/2026/06/rustduck-botnet-rebuilds-in-rust-to.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Vol d'identifiants via les navigateurs IA (BioShocking)</strong> : La technique BioShocking piège les navigateurs et assistants IA pour qu'ils divulguent des informations d'authentification sous couvert d'un jeu. Risque émergent lié aux agents autonomes en entreprise. <a href="https://thehackernews.com/2026/06/new-bioshocking-attack-tricks-ai.html">Source</a></li>
+<li><strong>Fonctionnement structuré des attaques BEC</strong> : L'analyse de forums souterrains par Flare confirme que le Business Email Compromise est une opération planifiée impliquant compromission de comptes, recherche financière et réseaux organisés de cash-out. <a href="https://www.bleepingcomputer.com/news/security/lessons-from-the-underground-how-to-combat-business-email-compromise/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Fraude préparatoire à la Coupe du Monde FIFA 2026</strong> : Check Point Research constate une infrastructure de fraude (sites, applis, phishing) pré-déployée en amont de l'événement. Sensibilisation renforcée à prévoir pour les collaborateurs susceptibles de suivre la compétition. <a href="https://thehackernews.com/2026/06/what-numbers-say-about-fifa-2026-cyber.html">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Corrections Apple (juin 2026)</strong> : Mises à jour iOS, macOS et Safari publiées, sans les autres OS habituels. Application prioritaire pour corriger les failles anonymisées dans l'écosystème Apple. <a href="https://isc.sans.edu/diary/rss/33114">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Contrôle des bots Microsoft Teams</strong> : Une nouvelle politique administrateur empêche les bots de rejoindre des réunions sans l'accord de l'organisateur. Activable pour réduire le risque d'intrusion via des applications malveillantes. <a href="https://www.bleepingcomputer.com/news/microsoft/mircosoft-adds-smarter-bot-protection-to-teams-meetings/">Source</a></li>
+<li><strong>Législation sur la sécurité en ligne des enfants</strong> : Le KIDS Act a été adopté à la Chambre des représentants américaine (267-117), mais son passage au Sénat reste peu probable. <a href="https://therecord.media/house-passes-kids-online-safety-bill-senate-unlikely">The Record</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Shadow AI dans l'automatisation</strong> : L'adoption de workflows générés par IA crée une dette technique de sécurité critique : des automatismes fonctionnels mais opaques, dont personne ne maîtrise le comportement réel ni les implications. <a href="https://www.darkreading.com/cyber-risk/ai-generated-workflows-silent-security-disaster">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Extensions malveillantes ciblant l'IA</strong> : Une extension Chromium usurpant Perplexity AI interceptait les requêtes de recherche via des serveurs contrôlés par l'attaquant avant de les relayer. Google l'a retirée après signalement par Microsoft Threat Intelligence. <a href="https://www.csoonline.com/article/4191060/malicious-chromium-extension-spoofs-perplexity-ai-to-hijack-browser-searches.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Chiffrement post-quantique — calendrier US</strong> : Le ministère américain de la Défense a officialisé un calendrier contraignant pour la migration vers des algorithmes post-quantiques, reconnaissant la menace quantique comme imminente pour la sécurité des systèmes. <a href="https://www.lemondeinformatique.fr/actualites/lire-un-calendrier-americain-serre-pour-le-chiffrement-postet-8209-quantique -100596.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Vidéosurveillance augmentée par l'IA</strong> : L'IA transforme les capacités de surveillance vidéo de masse, avec des déploiements documentés en Israël/Iran et en Russie, concrétisant le basculement d'une surveillance de masse passive vers un espionnage automatisé et ciblé. <a href="https://www.schneier.com/blog/archives/2026/06/the-realities-of-ai-video-surveillance.html">Schneier on Security</a></li>
+<li><strong>Mistic, nouvelle backdoor liée aux ransomwares</strong> : Une backdoor active depuis avril cible des entreprises pour déployer des ransomwares. Aucune attribution précise n'est encore confirmée, mais l'outil semble conçu pour s'intégrer dans des chaînes d'attaque complexes. <a href="https://www.lemondeinformatique.fr/actualites/lire-attention-a-mistic-une-backdoor-servant-aux-campagnes-de-ransomware-100603.html">Le Monde Informatique</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Données synthétiques pour agents de vision</strong> : NVIDIA détaille trois workflows combinant données synthétiques (Omniverse) et fine-tuning pour améliorer la précision des agents Vision AI, notamment sur des cas où les données réelles sont insuffisantes ou difficiles à annoter. <a href="https://blogs.nvidia.com/blog/vision-ai-agent-skills-omniverse-metropolis/">NVIDIA Blog</a></li>
+<li><strong>Anthropic Claude Sonnet 5 sur AWS</strong> : Disponible sur Bedrock, ce modèle inaugure la nouvelle génération Sonnet avec des performances en hausse sur le raisonnement et la génération de code. <a href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-sonnet-5-on-aws-anthropics-most-capable-sonnet-model/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation du coût par token chez NVIDIA</strong> : La stack logicielle d'inférence (TensorRT-LLM, Triton, NIM) est co-conçue avec le hardware pour maximiser le nombre de tokens utiles par dollar et par watt, critère désormais central pour le passage à l'échelle. <a href="https://blogs.nvidia.com/blog/inference-software-lowest-token-cost/">NVIDIA Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents IA et UI générative sur Bedrock</strong> : AWS propose via AgentCore et le protocole AG-UI un template (FAST) pour construire des frontends agentiques interactifs, avec état partagé et validation humaine, en s'appuyant sur CopilotKit. <a href="https://aws.amazon.com/blogs/machine-learning/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcore-with-the-ag-ui-protocol/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Gestion multi-comptes des modèles Bedrock</strong> : Les managed entitlements permettent de souscrire à un modèle depuis un compte central et d'en distribuer l'accès aux comptes applicatifs sans passer par les permissions AWS Marketplace. <a href="https://aws.amazon.com/blogs/machine-learning/simplify-multi-account-access-to-amazon-bedrock-models-with-managed-entitlements/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Résilience des applications GenAI sur AWS</strong> : Cinq patterns sont détaillés, des mécanismes natifs Bedrock (retry, fallback) jusqu'à l'orchestration multi-modèles via LLM gateway, pour gérer les épuisements de quota et les pics de trafic. <a href="https://aws.amazon.com/blogs/machine-learning/implementing-resilience-patterns-with-amazon-bedrock-and-llm-gateway/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Fine-tuning Amazon Nova pour extraction d'emails</strong> : Le fine-tuning via SageMaker AI permet d'atteindre 94,77% de précision sur l'extraction de champs spécifiques, en corrigeant les confusions entre données similaires que les modèles généralistes commettent. <a href="https://aws.amazon.com/blogs/machine-learning/fine-tune-amazon-nova-models-for-accurate-email-data-extraction/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>NER bilingue pour la logistique par distillation</strong> : IBS Software a utilisé la distillation de connaissances sur Bedrock pour construire un modèle de reconnaissance d'entités nommées bilingue adapté au transport de marchandises. <a href="https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmark d'agents pour migration Java (IBM)</strong> : ScarfBench évalue la capacité des agents IA à réaliser des migrations de frameworks Java en entreprise, un cas d'usage critique pour la modernisation de legacy. <a href="https://huggingface.co/blog/ibm-research/scarfbench">Hugging Face Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Spécialisation inévitable des modèles</strong> : Un article d'analyse soutient que la spécialisation des modèles d'IA est une trajectoire incontournable face aux limites des approches généralistes pour les usages métier. <a href="https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable">Hugging Face Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>NVIDIA BioNeMo pour les sciences de la vie</strong> : Le toolkit BioNeMo Agent s'intègre à Claude Science pour accélérer les workflows de recherche en sciences du vivant via des agents GPU-accélérés. <a href="https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/">NVIDIA Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Accélération d'entraînement VFX sur AWS</strong> : Outpost VFX a réduit d'un facteur 8 le temps d'entraînement de ses modèles de remplacement facial en passant d'un GPU unique à une configuration multi-GPU sur AWS. <a href="https://aws.amazon.com/blogs/machine-learning/how-outpost-vfx-uses-aws-to-accelerate-ai-model-training-for-visual-effects/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Prérequis data pour l'IA agricole</strong> : L'adoption de l'IA dans l'agriculture bute sur un déficit de données structurées et exploitables. Le MIT souligne que l'investissement dans les cas d'usage (marges, météo, engrais) est prématuré sans une couche de fondation sur la donnée. <a href="https://www.technologyreview.com/2026/06/30/1139513/agriculture-is-ready-for-ai-but-its-data-isnt/">MIT Technology Review</a></li>
+<li><strong>Anthropic : Sonnet 5 et Claude Science</strong> : Anthropic sort Sonnet 5, positionné comme une alternative économique à Opus et GPT-5.5 pour exécuter des agents, avec des garanties de sécurité renforcées. Parallèlement, Claude Science n'est pas un nouveau modèle mais un environnement de travail unifié pour la recherche computationnelle, visant à réduire la dispersion des scientifiques entre outils. <a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/">Sonnet 5</a> · <a href="https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/">Claude Science</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA autonomes dans la finance crypto</strong> : OKX prépare une marketplace permettant à des agents IA de contracter, d'échanger des paiements et de se payer entre eux, en s'appuyant sur des mécanismes d'identité et de réputation on-chain. <a href="https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/">TechCrunch</a></li>
+<li><strong>Amazon : fonds d'1 milliard pour le déploiement d'agents</strong> : Amazon crée une nouvelle organisation dédiée au déploiement d'agents IA sur mesure, en intégrant ses ingénieurs directement chez les clients. L'accent est mis sur la rapidité d'exécution et l'autonomie des clients. <a href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents IA dans le clavier smartphone</strong> : La startup Acti intègre des agents IA directement dans le clavier des smartphones (iOS/Android), permettant de créer des raccourcis personnalisés en langage naturel et d'agir à travers les applications. <a href="https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Proton : mise à jour du chatbot privé Lumo</strong> : Proton déploie Lumo 2.0, une version enrichie de son assistant IA axé sur la confidentialité, avec un éventail de capacités élargi. <a href="https://techcrunch.com/2026/06/30/lumo-protons-privacy-focused-ai-chatbot-gets-an-upgrade/">Source</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Infrastructure vieillissante à l'ANSM</strong> : Un appel d'offres de l'Agence du médicament expose des systèmes d'exploitation et logiciels non maintenus sur ses serveurs, un risque de sécurité notable pour une institution critique. <a href="https://next.ink/244290/un-appel-doffres-devoile-dinquietants-details-du-systeme-it-de-lagence-du-medicament/">Next.ink</a></li>
+<li><strong>Meta automatise la modération avec son IA</strong> : Meta annonce que 90% de la modération de contenu sera confiée à ses LLM d'ici fin décembre, revendiquant un taux d'erreur inférieur de 13% à celui des humains. Cette transformation massive affectera les posts, commentaires et l'analyse de conformité publicitaire. <a href="https://siecledigital.fr/2026/06/29/meta-prevoit-de-remplacer-90-de-son-personnel-de-moderation-de-contenu-par-une-ia/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Compétition sino-américaine et cybersécurité</strong> : Le nouveau LLM chinois GLM-5.2 rivalise avec les modèles d'OpenAI et Anthropic, soulevant la question de l'efficacité des embargos US et d'un possible bouleversement des équilibres en cybersécurité. <a href="https://next.ink/244743/avec-le-modele-glm-5-2-la-chine-pourrait-rebattre-les-cartes-de-la-cybersecurite/">Next.ink</a></li>
+<li><strong>Fuites d'iPhone 18 Pro : documents désormais sur le web public</strong> : Les données confidentielles dérobées à Tata Electronics, concernant notamment l'iPhone 18 Pro, ne se limitent plus au dark web et circulent désormais librement sur internet. Apple tente de contenir cette brèche industrielle majeure. <a href="https://next.ink/brief-article/apple-tente-de-colmater-les-fuites-autour-de-liphone-18-pro/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Piratage de Jaguar Land Rover</strong> : L'attaque majeure subie par le constructeur, l'une des plus importantes de 2025, est désormais attribuée à un groupe de hackers russes. <a href="https://www.zdnet.fr/actualites/piratage-xxl-de-jaguar-land-rover-la-piste-dun-hacking-russe-evoquee-497908.htm#xtor=RSS-1">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Convergence OLTP/OLAP avec pgEdge ColdFront</strong> : pgEdge lance une plateforme unifiée pour le transactionnel et l'analytique, éliminant la latence de transfert entre les deux environnements. <a href="https://www.lemondeinformatique.fr/actualites/lire-pgedge-fond-ses-systemes-oltp-et-olap-dans-coldfront-100595.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Évolution de l'IoT vers l'intelligence ambiante</strong> : L'intégration de l'IA permet à l'IoT de passer de la simple collecte de données à une capacité d'analyse, d'anticipation et d'optimisation en temps réel. <a href="https://www.journaldunet.com/iot/1551941-l-ia-transforme-l-iot-en-intelligence-ambiante/">JDN</a></li>
-</ul>
-
-<ul>
-<li><strong>Alternatives aux LLM pour l'industrie</strong> : Face aux limites des LLM en environnement industriel (stabilité, contrôle), des approches alternatives émergent pour l'automatisation des processus. <a href="https://www.journaldunet.com/intelligence-artificielle/1552001-ia-les-alternatives-aux-llm-pour-la-performance-des-processus/">JDN</a></li>
-</ul>
-
-<ul>
-<li><strong>Données synthétiques et conformité RGPD</strong> : L'usage de données synthétiques en RH n'exonère pas des obligations du RGPD ; une gouvernance stricte reste nécessaire pour éviter les risques de ré-identification. <a href="https://www.journaldunet.com/e-rh/1552017-l-illusion-des-donnees-synthetiques-en-rh-quand-l-innovation-rencontre-le-rgpd/">JDN</a></li>
-</ul>
-
-<ul>
-<li><strong>Wine 11.12</strong> : Disponible avec le support de la mise à l'échelle fractionnaire pour Wayland. <a href="https://next.ink/brief-article/wine-11-12-disponible-avec-le-support-de-la-mise-a-lechelle-fractionnaire-pour-wayland/">Next.ink</a></li>
+<li><strong>La Chine publie un modèle d'IA en accès libre face aux restrictions US</strong> : Pékin riposte au verrouillage américain (GPT-5.6 réservé à des partenaires agréés, suspension de modèles Anthropic) en diffusant gratuitement un LLM compétitif téléchargeable par tous. <a href="https://siecledigital.fr/2026/06/30/la-chine-devoile-une-ia-capable-de-rivaliser-avec-les-meilleurs-modeles-americains/">Siècle Digital</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260630-1317</guid>
-      <pubDate>Tue, 30 Jun 2026 13:17:09 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260630-1908</guid>
+      <pubDate>Tue, 30 Jun 2026 19:08:35 +0000</pubDate>
     </item>
   </channel>
 </rss>
