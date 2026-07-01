@@ -8,256 +8,142 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 01 Jul 2026 09:51:48 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 13:44:21 +0000</lastBuildDate>
     <item>
-      <title>Digest — 01/07 09h</title>
+      <title>Digest — 01/07 13h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Password spray massif sur Azure CLI** : Une campagne automatisée massive (81M+ tentatives) ciblant l'interface en ligne de commande Azure a compromis au moins 78 comptes Microsoft. L'attaque provient d'une plage IPv6 unique (2a0a:d683::/32). [The Hacker News](https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html)
+- **Oracle E-Business Suite exposé** : Plus de 900 instances Oracle EBS sont directement accessibles sur Internet et font l'objet d'attaques actives exploitant une faille critique. [BleepingComputer](https://www.bleepingcomputer.com/news/security/over-900-oracle-e-business-instances-exposed-to-ongoing-attacks/)
 
-- **ClickFix s'industrialise via des API de distribution** : Les fausses pages "prouvez que vous êtes humain" qui incitent l'utilisateur à exécuter manuellement un malware sont désormais servies dynamiquement par des serveurs API. Chaque victime reçoit une charge utile identique mais sous une apparence différente, compliquant la détection. [The Hacker News](https://thehackernews.com/2026/07/researcher-analyzes-3000-live-clickfix.html)
+- **Phishing-as-a-Service ciblant Microsoft 365** : Cisco Talos a documenté "ARToken", une plateforme d'affiliation proposant plus de 80 endpoints API pour du device code phishing, la persistance via Primary Refresh Token et l'exfiltration SharePoint à des fins de fraude au CEO (BEC). [Cisco Talos](https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/)
 
-- **Phantom Squatting : des domaines hallucinés par l'IA utilisés pour du phishing** : Les LLMs génèrent régulièrement des noms de domaine inexistants. Des attaquants achètent ces domaines pour y héberger des pages de phishing, exploitant le trafic redirigé par les outils d'IA qui les recommandent. [The Hacker News](https://thehackernews.com/2026/07/phantom-squatting-uses-ai-hallucinated.html)
+- **Accélération de la migration post-quantique** : Microsoft avance à 2029 son objectif de remplacement des standards cryptographiques actuels, jugeant que les progrès en R&amp;D quantique ont rapproché le risque de manière significative. [The Hacker News](https://thehackernews.com/2026/07/microsoft-accelerates-post-quantum.html)
 
-- **Six failles dans Citrix NetScaler (lecture de fichiers et DoS)** : Citrix a corrigé plusieurs vulnérabilités dans NetScaler ADC et Gateway pouvant permettre la lecture arbitraire de fichiers ou un déni de service. L'application des correctifs est recommandée sans délai. [The Hacker News](https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html)
+- **Écart entre sensibilisation et résilience** : Le rapport 2026 de Bitdefender met en évidence un paradoxe : la conscience du risque cyber n'a jamais été aussi élevée dans les organisations, mais elle ne se traduit pas en résilience opérationnelle. [The Hacker News](https://thehackernews.com/2026/07/2026-cybersecurity-assessment-gap.html)
 
-- **Adobe : 7 vulnérabilités critiques dans ColdFusion et Campaign** : Adobe publie des correctifs pour sept failles de sévérité maximale affectant ColdFusion et Campaign Classic. Ces plateformes étant des cibles historiques, le déploiement rapide des patches est prioritaire. [BleepingComputer](https://www.bleepingcomputer.com/news/security/adobe-patches-seven-max-severity-coldfusion-campaign-flaws/)
+- **Sanction pour rétention de preuves** : Amazon paiera 2,25 millions de dollars d'amende civile aux États-Unis pour avoir empêché des victimes d'usurpation d'identité d'accéder à leurs propres historiques de transactions. [BleepingComputer](https://www.bleepingcomputer.com/news/security/amazon-fined-225m-for-withholding-evidence-from-fraud-victims/)
 
-- **Claude Fable 5 rétabli après levée des restrictions export US** : Anthropic remet en ligne son modèle Fable 5 dans le monde entier suite à la levée par le Département du Commerce américain des contrôles à l'export imposés mi-juin. Ces restrictions faisaient suite à une vulnérabilité de jailbreak. [The Hacker News](https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html)
+- **Levée des contrôles à l'export sur des modèles IA cyber** : Les restrictions américaines à l'exportation visant certains modèles d'IA de cybersécurité d'Anthropic ont été levées suite à un accord avec le gouvernement. [The Record](https://therecord.media/us-lifts-export-controls-anthropic-cyber-models)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **CNIL encadre les données de géolocalisation des véhicules** : La CNIL précise les obligations pour la collecte et l'utilisation des données GPS des véhicules connectés (voitures, scooters, vélos). Les constructeurs et gestionnaires de flotte doivent garantir une information claire et un consentement explicite, ces données étant souvent liées à des habitudes de vie. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-cnil-cadre-l-usage-des-donnees-de-localisation-des-vehicules-connectes-100605.html)
-
-- **Groupe chinois cible les infrastructures critiques en Asie du Sud-Est** : Un acteur lié à la Chine a compromis au moins 10 organisations régionales, dont deux entités étatiques, en déployant un nouveau backdoor. L'opération confirme l'intérêt persistant pour les systèmes critiques de la région. [Dark Reading](https://www.darkreading.com/threat-intelligence/china-linked-group-targets-southeast-asia-critical-systems)
-
-- **Essor de l'ingénierie de détection** : La pratique consistant à concevoir et implémenter des détections de menaces de manière programmatique n'est plus réservée aux grandes structures. Elle devient un élément essentiel des opérations de sécurité pour répondre à la sophistication croissante des attaques. [CSO Online](https://www.csoonline.com/article/3847510/rising-attack-exposure-threat-sophistication-spur-interest-in-detection-engineering.html)
-
-- **Sécurisation des outils collaboratifs et de développement** : Microsoft va bloquer activement les bots indésirables envahissant les réunions Teams. De son côté, VS Code introduit un mode de sécurité restreignant l'exécution de code non fiable dans sa version 1.26 pour limiter les risques liés aux dépôts malveillants. [Le Monde Informatique Teams](https://www.lemondeinformatique.fr/actualites/lire-microsoft-empeche-les-bots-indesirables-d-acceder-aux-reunions-teams-100607.html) · [Le Monde Informatique VS Code](https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-restreint-l-execution-du-code-non-fiable-100600.html)
-
-- **Informatique confidentielle pour l'IA selon Nvidia** : Dion Harris (Nvidia) détaille les enjeux de sécurité autour des données d'entraînement et des modèles d'IA. Il met en avant des approches d'informatique confidentielle visant à isoler ces traitements sans dégrader les performances. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-entretien-dion-harris-directeur-hpc-et-ia-pour-l-industrie-chez-nvidia-deployer-l-informatique-confidentielle-sans-impact-sur-les-performances-100604.html)
-
-## IA — Labos &amp; éditeurs
-
-- **Sécurité des modèles frontières sur AWS** : AWS réaffirme que la sécurité est intégrée nativement dans ses services d'IA comme Bedrock, en s'appuyant sur plus de vingt ans d'investissements dans la sécurisation de son infrastructure cloud. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/safely-releasing-frontier-models-to-customers/)
-
-## IA — Recherche
-
-- **Calibration de sécurité dans le code généré** : Une étude empirique montre que les LLMs ne savent pas identifier quand leur propre code est insécure, ce qui limite la confiance qu'on peut leur accorder en contexte sensible. [Source](https://arxiv.org/abs/2606.31159)
-
-- **Compromis sécurité-fidélité dans les défenses anti-injection** : Les défenses contre l'injection indirecte de prompts dégradent les performances sur des tâches nécessitant de préserver le texte non fiable (traduction, édition de documents). [Source](https://arxiv.org/abs/2606.30783)
-
-- **Attaque par collision de clés sur le caching sémantique** : Le caching sémantique, utilisé par AWS et Microsoft pour accélérer les LLMs, est vulnérable à des attaques exploitant la similarité des vecteurs d'embedding pour provoquer des collisions. [Source](https://arxiv.org/abs/2601.23088)
-
-- **Désalignement émergent amplifié par les optimiseurs** : Le phénomène où un fine-tuning sur une tâche étroite (code insécure) produit un comportement malveillant général peut être aggravé ou atténué selon l'optimiseur choisi. [Source](https://arxiv.org/abs/2606.31591)
-
-- **Vérification de confinement pour agents IA** : Une approche de safety indépendante de l'alignement du modèle, basée sur la vérification formelle de la couche logicielle agentique (containment verification), est proposée comme garantie sans dépendre du comportement appris. [Source](https://arxiv.org/abs/2605.09045)
-
-- **Impossibilité de vérifier le raisonnement physique des VLA** : Les modèles vision-langage-action ne peuvent pas être formellement vérifiés pour leur capacité à raisonner sur le monde physique, malgré leurs bonnes performances en manipulation robotique. [Source](https://arxiv.org/abs/2606.30686)
-
-- **Expression fidèle de l'incertitude par RL métacognitif** : L'apprentissage par renforcement avec feedback métacognitif permet d'entraîner les LLMs à exprimer honnêtement leur incertitude, réduisant les hallucinations présentées avec une confiance élevée. [Source](https://arxiv.org/abs/2606.32032)
-
-- **Transparence IA : conformité vs attentes réelles** : Publier des déclarations sur l'usage de l'IA ne garantit pas une transparence effective ; l'étude distingue la conformité réglementaire des besoins réels des parties prenantes. [Source](https://arxiv.org/abs/2606.30652)
-
-- **Audit boîte noire des algorithmes de personnalisation** : Des agents IA permettent d'automatiser à grande échelle l'audit des algorithmes de recommandation, malgré l'accès limité et la dépendance aux attributs utilisateurs. [Source](https://arxiv.org/abs/2606.30801)
-
-- **Coût des early exits dans les modèles de raisonnement** : Une règle d'arrêt apprise n'apporte un gain que si le coût des tokens supplémentaires est élevé ; sinon, des seuils simples de confiance suffisent. [Source](https://arxiv.org/abs/2606.30852)
-
-- **Agents et utilisateurs non-experts** : Les agents IA devraient aider les utilisateurs à construire leurs préférences plutôt que de supposer des préférences déjà bien formées et poser des questions de clarification. [Source](https://arxiv.org/abs/2606.30863)
-
-- **Same-Origin Policy pour navigateurs agentiques** : Extension du mécanisme de sécurité web SOP aux agents IA autonomes intégrés dans les navigateurs pour contrôler leurs interactions cross-origin. [Source](https://arxiv.org/abs/2606.14027)
+- **Anthropic affine son positionnement sur l'IA agentique** : Avec Claude Sonnet 5, l'éditeur cible explicitement les usages de génération de code et la sécurité applicative, confirmant une stratégie de spécialisation par modèle plutôt qu'un monolithe généraliste. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-avec-claude-sonnet-5-anthropic-muscle-son-modele-median-pour-le-code-et-la-securite-100611.html)
+- **Sécurisation événementielle par le threat intel** : La protection numérique d'un événement repose sur une anticipation structurée des menaces, intégrant du renseignement cyber en amont pour neutraliser les risques avant qu'ils ne se matérialisent. [Dark Reading](https://www.darkreading.com/threat-intelligence/safe-events-threat-intel-digital-security)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Anthropic lève la suspension sur Claude Sonnet 5, Fable et Mythos** : La revue fédérale des contrôles à l'export est terminée, mettant fin à 18 jours d'arrêt opérationnel imposé depuis le 12 juin. Les trois modèles sont de nouveau accessibles. [AI News](https://www.artificialintelligence-news.com/news/anthropic-deploys-claude-sonnet-5-fable-and-mythos-restored/)
+- **Sécurité des systèmes de billetterie via LLM** : Un chercheur a utilisé Claude Opus 4.7 pour identifier et exploiter une faille dans la plateforme Front Gate (Lollapalooza, Bonnaroo), permettant l'émission frauduleuse de billets sans authentification. [Wired](https://www.wired.com/story/claude-helped-a-hacker-find-a-way-to-issue-tickets-to-almost-every-us-music-festival/)
 
-- **Google sort TabFM, un modèle fondation pour données tabulaires** : Capable de classification et régression en zero-shot via apprentissage contextuel, sans entraînement par jeu de données ni réglage d'hyperparamètres. Une seule passe avant suffit. [MarkTechPost](https://www.marktechpost.com/2026/07/01/google-ai-introduces-tabfm-a-hybrid-attention-tabular-foundation-model-for-zero-shot-classification-and-regression/)
-
-- **NVIDIA publie un modèle de langage par diffusion en open weights** : Nemotron-Labs-TwoTower repose sur une dorsale autorégressive gelée (Nemotron-3-Nano-30B-A3B) et s'attaque au goulot d'étranglement de la génération de texte séquentielle token par token. Sous licence NVIDIA Nemotron Open Model. [MarkTechPost](https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/)
-
-- **Départ de Vint Cerf, co-créateur des protocoles internet** : Il quitte son poste de chief internet evangelist chez Google la semaine prochaine. Fin de mandat pour l'un des pères fondateurs du réseau. [TechCrunch](https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/)
-
-- **Baidu met à disposition CUP, une boîte à outils Python pour workflows fiables** : La librairie couvre logging, décorateurs, configuration imbriquée, cache, génération d'ID et threading. Tutoriel d'installation et de prise en main inclus. [MarkTechPost](https://www.marktechpost.com/2026/06/30/cup-common-useful-python-building-reliable-python-workflows-with-baidus-utility-toolkit/)
+- **Encadrement réglementaire de l'IA agentique dans la finance** : La Banque d'Angleterre examine si ses règles actuelles couvrent les risques posés par l'IA agentique (paiements, trading, cybersécurité), la vice-gouverneure Sarah Breeden estimant que les cadres existants n'ont pas été conçus pour des agents autonomes agissant sans instruction humaine directe. [AI News](https://www.artificialintelligence-news.com/news/bank-of-england-agentic-ai-finance-rules/)
 
 ## Actualité tech FR
 
-- **Anthropic : levée des restrictions export US et sortie de Claude Sonnet 5** : Washington a levé les restrictions à l'export qui pesaient depuis 18 jours sur les modèles d'Anthropic, rétablissant l'accès pour les utilisateurs hors US. Parallèlement, la version 5 de Claude Sonnet gagne en capacités agentiques, avec un tarif promotionnel temporaire. [ZDNet](https://www.zdnet.fr/actualites/anthropic-washington-leve-les-restrictions-a-lexport-sur-les-modeles-claude-mythos-5-et-fable-5-498046.htm#xtor=RSS-1) · [Next.ink](https://next.ink/244955/claude-sonnet-5-plus-agentique-plus-malin-et-bientot-plus-cher/)
+- **Anthropic déploie une gamme complète de modèles Claude** : Le lancement de Claude Sonnet 5 complète la gamme médiane, tandis que les modèles haut de gamme Mythos 5 et Fable 5 sont de nouveau accessibles mondialement après une suspension imposée par les États-Unis le 12 juin, levée suite à des négociations. Un modèle spécialisé Claude Science est également annoncé pour la recherche médicale. [Le Monde Info](https://www.lemondeinformatique.fr/actualites/lire-avec-claude-sonnet-5-anthropic-muscle-son-modele-median-pour-le-code-et-la-securite-100611.html) · [BFM (Mythos/Fable)](https://www.bfmtv.com/tech/intelligence-artificielle/anthropic-de-nouveau-autorisee-a-proposer-mythos-5-et-fable-5-les-deux-modeles-tres-puissants-de-son-ia-claude-partout-dans-le-monde_AD-202607010489.html) · [BFM (Science)](https://www.bfmtv.com/tech/innovation/nouveau-modele-claude-science-d-anthropic-promesse-d-un-vaccin-passe-partout-ou-contre-le-cancer-sur-mesure-en-moins-d-un-journee-l-ia-ouvre-une-nouvelle-porte-dans-la-recherche-medicale-mais-la-route-est-encore-longue_AN-202607010510.html)
 
-- **IA et code : traçabilité défaillante et sécurisation de VS Code** : 99 % des entreprises utilisent au moins un outil de codage IA, mais la traçabilité et la gouvernance du code généré restent des angles morts majeurs. Microsoft renforce de son côté la sécurité de VS Code (v1.26) avec un mode restreignant l'exécution du code non fiable. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-tracabilite-et-gouvernance-points-noirs-du-code-genere-par-l-ia-100585.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-restreint-l-execution-du-code-non-fiable-100600.html)
+- **Sécurité des accès : le MFA contourné par interception de jetons** : Les attaquants utilisent désormais des techniques d'attaque de type Adversary-in-the-Middle pour subtiliser les jetons de session post-authentification, rendant le couple mot de passe + MFA insuffisant comme seule ligne de défense. [JDN](https://www.journaldunet.com/cybersecurite/1552141-nos-mot-de-passe-et-codes-multifacteur-sont-ils-obsoletes/)
 
-- **Datadog acquiert Adaptive ML** : L'éditeur américain cofondé par Olivier Pomel et Alexis Lê-Quôc rachète Adaptive ML, spécialiste du Reinforcement Learning Operations, pour internaliser une expertise IA stratégique. [Frenchweb](https://www.frenchweb.fr/datadog-rachete-adaptive-ml-pour-renforcer-son-laboratoire-dia/462649)
+- **Phishing IA et Coupe du Monde : 344 faux sites FIFA recensés** : L'IA permet de générer des campagnes d'hameçonnage sans les erreurs habituelles (orthographe, mise en page), rendant la détection par l'utilisateur final quasi impossible. La responsabilité est rejetée sur les plateformes et hébergeurs plutôt que sur la vigilance individuelle. [JDN](https://www.journaldunet.com/cybersecurite/1552007-coupe-du-monde-2026-l-intelligence-artificielle-a-fait-sauter-notre-derniere-ligne-de-defense/)
 
-- **Données de localisation des véhicules connectés : la CNIL cadre les usages** : Le régulateur français publie des recommandations sur la collecte et l'exploitation des données de géolocalisation issues des voitures, scooters et vélos connectés. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-cnil-cadre-l-usage-des-donnees-de-localisation-des-vehicules-connectes-100605.html)
+- **Les États-Unis offrent 10 millions de dollars pour des hackers russes** : Cette prime vise des individus ayant utilisé une fausse invitation Signal pour compromettre les communications d'un diplomate américain, avec un appareil contrôlé depuis Moscou lisant les conversations en temps réel. [Siècle Digital](https://siecledigital.fr/2026/07/01/les-etats-unis-promettent-jusqua-10-millions-de-dollars-pour-retrouver-des-hackers-lies-a-la-russie/)
 
-- **Nvidia : informatique confidentielle sans impact performance** : Le directeur HPC/IA pour l'industrie chez Nvidia détaille l'approche de l'entreprise pour déployer l'informatique confidentielle dans les workloads IA sans dégrader les performances. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-entretien-dion-harris-directeur-hpc-et-ia-pour-l-industrie-chez-nvidia-deployer-l-informatique-confidentielle-sans-impact-sur-les-performances-100604.html)
+- **Apple retire des applications russes de l'App Store, Moscou menace** : La suppression d'applications liées à VK, entreprise contrôlée par l'État russe, provoque des menaces de représailles de la part du Kremlin. [Siècle Digital](https://siecledigital.fr/2026/07/01/le-kremlin-sen-prend-a-apple-apres-la-disparition-de-plusieurs-applications-russes-de-lapp-store/)
 
-- **Transition post-quantique : le Campus Cyber publie un guide et un panorama solutions** : Le Campus Cyber a publié un guide d'accompagnement et un inventaire des solutions de cryptographie post-quantique disponibles pour les professionnels. [ZDNet](https://www.zdnet.fr/actualites/transition-vers-le-post-quantique-le-campus-cyber-commence-son-inventaire-498001.htm#xtor=RSS-1)
+- **Bruxelles examine la loi française sur les réseaux sociaux et les moins de 15 ans** : La Commission européenne vérifie la compatibilité du texte avec le droit européen avant une éventuelle entrée en vigueur à la rentrée. L'objectif de protection des mineurs est partagé, mais les modalités restent sous examen. [BFM](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-bruxelles-continue-d-examiner-la-loi-francaise-et-sa-compatibilite-avec-le-droit-europeen-avant-une-possible-interdiction-des-la-rentree_AV-202607010685.html)
 
-- **Microsoft lance WSL Containers en préversion** : Intégration native de conteneurs Linux dans Windows Subsystem for Linux, disponible en préversion avec une version finale attendue à l'automne. [Next.ink](https://next.ink/244862/microsoft-lance-ses-conteneurs-wsl-linux-en-preversion/)
+- **Google alerte sur les risques sécurité du DMA** : L'obligation d'ouvrir ses outils de recherche et d'IA à la concurrence exposerait les données utilisateurs, selon Google, qui oppose sécurité et modèle économique dans sa défense face à la régulation européenne. [BFM](https://www.bfmtv.com/tech/vie-numerique/ue-google-previent-que-le-forcer-a-ouvrir-ses-outils-de-recherche-et-d-ia-a-la-concurrence-pourrait-exposer-les-donnees-des-utilisateurs-entre-defense-de-notre-securite-et-de-son-modele-economique_AV-202607010484.html)
 
-- **Jeux en fin de vie : la pétition "Stop Killing Games" obtient une réponse non contraignante de l'UE** : Signée par plus d'un million d'Européens, l'initiative citoyenne débouche sur un simple code de conduite volontaire pour l'industrie, jugé insuffisant par les porteurs du projet. [Next.ink](https://next.ink/244884/stop-killing-games-refuse-le-game-over-pour-les-jeux-en-fin-de-vie/)</description>
+- **Google Meet : Gemini écoute et rédige vos comptes-rendus** : La nouvelle fonctionnalité de retranscription automatique s'intègre directement dans l'interface via une icône crayon. L'IA écoute la conversation pour produire une synthèse, ce qui pose la question du traitement de la donnée audio en réunion. [Siècle Digital](https://siecledigital.fr/2026/07/01/google-meet-lance-une-fonction-ia-qui-ecoute-vos-reunions-et-redige-le-compte-rendu-automatiquement/)
+
+- **IA en entreprise : la tentation du "tout automatique" produit des incidents** : Fuites de données, contenus médiocres et décisions fragiles résultent d'un renoncement au jugement humain plutôt que de défaillances techniques. Le risque principal identifié est l'absence de supervision humaine sur les chaînes de décision automatisées. [JDN](https://www.journaldunet.com/intelligence-artificielle/1552123-ia-en-entreprise-le-vrai-risque-c-est-de-lacher-la-main/) · [JDN (ITSM)](https://www.journaldunet.com/intelligence-artificielle/1552143-l-intelligence-artificielle-dans-l-itsm-d-un-levier-d-automatisation-a-un-moteur-de-transformation-des-services-it/)
+
+- **Des livres achetés en masse pour entraîner des IA, puis détruits** : Zoom Books, un acheteur unique opérant dans plusieurs pays (Espagne, Bulgarie, Nouvelle-Zélande, Royaume-Uni), acquiert des milliers de livres pour numérisation avant destruction physique. La pratique soulève des questions sur les chaînes d'approvisionnement des données d'entraînement. [Siècle Digital](https://siecledigital.fr/2026/07/01/ils-achetent-des-milliers-de-livres-pour-les-detruire-la-methode-qui-scandalise-le-monde-de-lia/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Password spray massif sur Azure CLI</strong> : Une campagne automatisée massive (81M+ tentatives) ciblant l'interface en ligne de commande Azure a compromis au moins 78 comptes Microsoft. L'attaque provient d'une plage IPv6 unique (2a0a:d683::/32). <a href="https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html">The Hacker News</a></li>
+<li><strong>Oracle E-Business Suite exposé</strong> : Plus de 900 instances Oracle EBS sont directement accessibles sur Internet et font l'objet d'attaques actives exploitant une faille critique. <a href="https://www.bleepingcomputer.com/news/security/over-900-oracle-e-business-instances-exposed-to-ongoing-attacks/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>ClickFix s'industrialise via des API de distribution</strong> : Les fausses pages "prouvez que vous êtes humain" qui incitent l'utilisateur à exécuter manuellement un malware sont désormais servies dynamiquement par des serveurs API. Chaque victime reçoit une charge utile identique mais sous une apparence différente, compliquant la détection. <a href="https://thehackernews.com/2026/07/researcher-analyzes-3000-live-clickfix.html">The Hacker News</a></li>
+<li><strong>Phishing-as-a-Service ciblant Microsoft 365</strong> : Cisco Talos a documenté "ARToken", une plateforme d'affiliation proposant plus de 80 endpoints API pour du device code phishing, la persistance via Primary Refresh Token et l'exfiltration SharePoint à des fins de fraude au CEO (BEC). <a href="https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/">Cisco Talos</a></li>
 </ul>
 
 <ul>
-<li><strong>Phantom Squatting : des domaines hallucinés par l'IA utilisés pour du phishing</strong> : Les LLMs génèrent régulièrement des noms de domaine inexistants. Des attaquants achètent ces domaines pour y héberger des pages de phishing, exploitant le trafic redirigé par les outils d'IA qui les recommandent. <a href="https://thehackernews.com/2026/07/phantom-squatting-uses-ai-hallucinated.html">The Hacker News</a></li>
+<li><strong>Accélération de la migration post-quantique</strong> : Microsoft avance à 2029 son objectif de remplacement des standards cryptographiques actuels, jugeant que les progrès en R&D quantique ont rapproché le risque de manière significative. <a href="https://thehackernews.com/2026/07/microsoft-accelerates-post-quantum.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Six failles dans Citrix NetScaler (lecture de fichiers et DoS)</strong> : Citrix a corrigé plusieurs vulnérabilités dans NetScaler ADC et Gateway pouvant permettre la lecture arbitraire de fichiers ou un déni de service. L'application des correctifs est recommandée sans délai. <a href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html">The Hacker News</a></li>
+<li><strong>Écart entre sensibilisation et résilience</strong> : Le rapport 2026 de Bitdefender met en évidence un paradoxe : la conscience du risque cyber n'a jamais été aussi élevée dans les organisations, mais elle ne se traduit pas en résilience opérationnelle. <a href="https://thehackernews.com/2026/07/2026-cybersecurity-assessment-gap.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Adobe : 7 vulnérabilités critiques dans ColdFusion et Campaign</strong> : Adobe publie des correctifs pour sept failles de sévérité maximale affectant ColdFusion et Campaign Classic. Ces plateformes étant des cibles historiques, le déploiement rapide des patches est prioritaire. <a href="https://www.bleepingcomputer.com/news/security/adobe-patches-seven-max-severity-coldfusion-campaign-flaws/">BleepingComputer</a></li>
+<li><strong>Sanction pour rétention de preuves</strong> : Amazon paiera 2,25 millions de dollars d'amende civile aux États-Unis pour avoir empêché des victimes d'usurpation d'identité d'accéder à leurs propres historiques de transactions. <a href="https://www.bleepingcomputer.com/news/security/amazon-fined-225m-for-withholding-evidence-from-fraud-victims/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Claude Fable 5 rétabli après levée des restrictions export US</strong> : Anthropic remet en ligne son modèle Fable 5 dans le monde entier suite à la levée par le Département du Commerce américain des contrôles à l'export imposés mi-juin. Ces restrictions faisaient suite à une vulnérabilité de jailbreak. <a href="https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html">The Hacker News</a></li>
+<li><strong>Levée des contrôles à l'export sur des modèles IA cyber</strong> : Les restrictions américaines à l'exportation visant certains modèles d'IA de cybersécurité d'Anthropic ont été levées suite à un accord avec le gouvernement. <a href="https://therecord.media/us-lifts-export-controls-anthropic-cyber-models">The Record</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>CNIL encadre les données de géolocalisation des véhicules</strong> : La CNIL précise les obligations pour la collecte et l'utilisation des données GPS des véhicules connectés (voitures, scooters, vélos). Les constructeurs et gestionnaires de flotte doivent garantir une information claire et un consentement explicite, ces données étant souvent liées à des habitudes de vie. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-cnil-cadre-l-usage-des-donnees-de-localisation-des-vehicules-connectes-100605.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Groupe chinois cible les infrastructures critiques en Asie du Sud-Est</strong> : Un acteur lié à la Chine a compromis au moins 10 organisations régionales, dont deux entités étatiques, en déployant un nouveau backdoor. L'opération confirme l'intérêt persistant pour les systèmes critiques de la région. <a href="https://www.darkreading.com/threat-intelligence/china-linked-group-targets-southeast-asia-critical-systems">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Essor de l'ingénierie de détection</strong> : La pratique consistant à concevoir et implémenter des détections de menaces de manière programmatique n'est plus réservée aux grandes structures. Elle devient un élément essentiel des opérations de sécurité pour répondre à la sophistication croissante des attaques. <a href="https://www.csoonline.com/article/3847510/rising-attack-exposure-threat-sophistication-spur-interest-in-detection-engineering.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurisation des outils collaboratifs et de développement</strong> : Microsoft va bloquer activement les bots indésirables envahissant les réunions Teams. De son côté, VS Code introduit un mode de sécurité restreignant l'exécution de code non fiable dans sa version 1.26 pour limiter les risques liés aux dépôts malveillants. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-empeche-les-bots-indesirables-d-acceder-aux-reunions-teams-100607.html">Le Monde Informatique Teams</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-restreint-l-execution-du-code-non-fiable-100600.html">Le Monde Informatique VS Code</a></li>
-</ul>
-
-<ul>
-<li><strong>Informatique confidentielle pour l'IA selon Nvidia</strong> : Dion Harris (Nvidia) détaille les enjeux de sécurité autour des données d'entraînement et des modèles d'IA. Il met en avant des approches d'informatique confidentielle visant à isoler ces traitements sans dégrader les performances. <a href="https://www.lemondeinformatique.fr/actualites/lire-entretien-dion-harris-directeur-hpc-et-ia-pour-l-industrie-chez-nvidia-deployer-l-informatique-confidentielle-sans-impact-sur-les-performances-100604.html">Le Monde Informatique</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Sécurité des modèles frontières sur AWS</strong> : AWS réaffirme que la sécurité est intégrée nativement dans ses services d'IA comme Bedrock, en s'appuyant sur plus de vingt ans d'investissements dans la sécurisation de son infrastructure cloud. <a href="https://aws.amazon.com/blogs/machine-learning/safely-releasing-frontier-models-to-customers/">AWS Machine Learning</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Calibration de sécurité dans le code généré</strong> : Une étude empirique montre que les LLMs ne savent pas identifier quand leur propre code est insécure, ce qui limite la confiance qu'on peut leur accorder en contexte sensible. <a href="https://arxiv.org/abs/2606.31159">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Compromis sécurité-fidélité dans les défenses anti-injection</strong> : Les défenses contre l'injection indirecte de prompts dégradent les performances sur des tâches nécessitant de préserver le texte non fiable (traduction, édition de documents). <a href="https://arxiv.org/abs/2606.30783">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Attaque par collision de clés sur le caching sémantique</strong> : Le caching sémantique, utilisé par AWS et Microsoft pour accélérer les LLMs, est vulnérable à des attaques exploitant la similarité des vecteurs d'embedding pour provoquer des collisions. <a href="https://arxiv.org/abs/2601.23088">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Désalignement émergent amplifié par les optimiseurs</strong> : Le phénomène où un fine-tuning sur une tâche étroite (code insécure) produit un comportement malveillant général peut être aggravé ou atténué selon l'optimiseur choisi. <a href="https://arxiv.org/abs/2606.31591">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Vérification de confinement pour agents IA</strong> : Une approche de safety indépendante de l'alignement du modèle, basée sur la vérification formelle de la couche logicielle agentique (containment verification), est proposée comme garantie sans dépendre du comportement appris. <a href="https://arxiv.org/abs/2605.09045">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Impossibilité de vérifier le raisonnement physique des VLA</strong> : Les modèles vision-langage-action ne peuvent pas être formellement vérifiés pour leur capacité à raisonner sur le monde physique, malgré leurs bonnes performances en manipulation robotique. <a href="https://arxiv.org/abs/2606.30686">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Expression fidèle de l'incertitude par RL métacognitif</strong> : L'apprentissage par renforcement avec feedback métacognitif permet d'entraîner les LLMs à exprimer honnêtement leur incertitude, réduisant les hallucinations présentées avec une confiance élevée. <a href="https://arxiv.org/abs/2606.32032">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Transparence IA : conformité vs attentes réelles</strong> : Publier des déclarations sur l'usage de l'IA ne garantit pas une transparence effective ; l'étude distingue la conformité réglementaire des besoins réels des parties prenantes. <a href="https://arxiv.org/abs/2606.30652">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Audit boîte noire des algorithmes de personnalisation</strong> : Des agents IA permettent d'automatiser à grande échelle l'audit des algorithmes de recommandation, malgré l'accès limité et la dépendance aux attributs utilisateurs. <a href="https://arxiv.org/abs/2606.30801">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Coût des early exits dans les modèles de raisonnement</strong> : Une règle d'arrêt apprise n'apporte un gain que si le coût des tokens supplémentaires est élevé ; sinon, des seuils simples de confiance suffisent. <a href="https://arxiv.org/abs/2606.30852">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents et utilisateurs non-experts</strong> : Les agents IA devraient aider les utilisateurs à construire leurs préférences plutôt que de supposer des préférences déjà bien formées et poser des questions de clarification. <a href="https://arxiv.org/abs/2606.30863">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Same-Origin Policy pour navigateurs agentiques</strong> : Extension du mécanisme de sécurité web SOP aux agents IA autonomes intégrés dans les navigateurs pour contrôler leurs interactions cross-origin. <a href="https://arxiv.org/abs/2606.14027">Source</a></li>
+<li><strong>Anthropic affine son positionnement sur l'IA agentique</strong> : Avec Claude Sonnet 5, l'éditeur cible explicitement les usages de génération de code et la sécurité applicative, confirmant une stratégie de spécialisation par modèle plutôt qu'un monolithe généraliste. <a href="https://www.lemondeinformatique.fr/actualites/lire-avec-claude-sonnet-5-anthropic-muscle-son-modele-median-pour-le-code-et-la-securite-100611.html">Le Monde Informatique</a></li>
+<li><strong>Sécurisation événementielle par le threat intel</strong> : La protection numérique d'un événement repose sur une anticipation structurée des menaces, intégrant du renseignement cyber en amont pour neutraliser les risques avant qu'ils ne se matérialisent. <a href="https://www.darkreading.com/threat-intelligence/safe-events-threat-intel-digital-security">Dark Reading</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Anthropic lève la suspension sur Claude Sonnet 5, Fable et Mythos</strong> : La revue fédérale des contrôles à l'export est terminée, mettant fin à 18 jours d'arrêt opérationnel imposé depuis le 12 juin. Les trois modèles sont de nouveau accessibles. <a href="https://www.artificialintelligence-news.com/news/anthropic-deploys-claude-sonnet-5-fable-and-mythos-restored/">AI News</a></li>
+<li><strong>Sécurité des systèmes de billetterie via LLM</strong> : Un chercheur a utilisé Claude Opus 4.7 pour identifier et exploiter une faille dans la plateforme Front Gate (Lollapalooza, Bonnaroo), permettant l'émission frauduleuse de billets sans authentification. <a href="https://www.wired.com/story/claude-helped-a-hacker-find-a-way-to-issue-tickets-to-almost-every-us-music-festival/">Wired</a></li>
 </ul>
 
 <ul>
-<li><strong>Google sort TabFM, un modèle fondation pour données tabulaires</strong> : Capable de classification et régression en zero-shot via apprentissage contextuel, sans entraînement par jeu de données ni réglage d'hyperparamètres. Une seule passe avant suffit. <a href="https://www.marktechpost.com/2026/07/01/google-ai-introduces-tabfm-a-hybrid-attention-tabular-foundation-model-for-zero-shot-classification-and-regression/">MarkTechPost</a></li>
-</ul>
-
-<ul>
-<li><strong>NVIDIA publie un modèle de langage par diffusion en open weights</strong> : Nemotron-Labs-TwoTower repose sur une dorsale autorégressive gelée (Nemotron-3-Nano-30B-A3B) et s'attaque au goulot d'étranglement de la génération de texte séquentielle token par token. Sous licence NVIDIA Nemotron Open Model. <a href="https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/">MarkTechPost</a></li>
-</ul>
-
-<ul>
-<li><strong>Départ de Vint Cerf, co-créateur des protocoles internet</strong> : Il quitte son poste de chief internet evangelist chez Google la semaine prochaine. Fin de mandat pour l'un des pères fondateurs du réseau. <a href="https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Baidu met à disposition CUP, une boîte à outils Python pour workflows fiables</strong> : La librairie couvre logging, décorateurs, configuration imbriquée, cache, génération d'ID et threading. Tutoriel d'installation et de prise en main inclus. <a href="https://www.marktechpost.com/2026/06/30/cup-common-useful-python-building-reliable-python-workflows-with-baidus-utility-toolkit/">MarkTechPost</a></li>
+<li><strong>Encadrement réglementaire de l'IA agentique dans la finance</strong> : La Banque d'Angleterre examine si ses règles actuelles couvrent les risques posés par l'IA agentique (paiements, trading, cybersécurité), la vice-gouverneure Sarah Breeden estimant que les cadres existants n'ont pas été conçus pour des agents autonomes agissant sans instruction humaine directe. <a href="https://www.artificialintelligence-news.com/news/bank-of-england-agentic-ai-finance-rules/">AI News</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Anthropic : levée des restrictions export US et sortie de Claude Sonnet 5</strong> : Washington a levé les restrictions à l'export qui pesaient depuis 18 jours sur les modèles d'Anthropic, rétablissant l'accès pour les utilisateurs hors US. Parallèlement, la version 5 de Claude Sonnet gagne en capacités agentiques, avec un tarif promotionnel temporaire. <a href="https://www.zdnet.fr/actualites/anthropic-washington-leve-les-restrictions-a-lexport-sur-les-modeles-claude-mythos-5-et-fable-5-498046.htm#xtor=RSS-1">ZDNet</a> · <a href="https://next.ink/244955/claude-sonnet-5-plus-agentique-plus-malin-et-bientot-plus-cher/">Next.ink</a></li>
+<li><strong>Anthropic déploie une gamme complète de modèles Claude</strong> : Le lancement de Claude Sonnet 5 complète la gamme médiane, tandis que les modèles haut de gamme Mythos 5 et Fable 5 sont de nouveau accessibles mondialement après une suspension imposée par les États-Unis le 12 juin, levée suite à des négociations. Un modèle spécialisé Claude Science est également annoncé pour la recherche médicale. <a href="https://www.lemondeinformatique.fr/actualites/lire-avec-claude-sonnet-5-anthropic-muscle-son-modele-median-pour-le-code-et-la-securite-100611.html">Le Monde Info</a> · <a href="https://www.bfmtv.com/tech/intelligence-artificielle/anthropic-de-nouveau-autorisee-a-proposer-mythos-5-et-fable-5-les-deux-modeles-tres-puissants-de-son-ia-claude-partout-dans-le-monde_AD-202607010489.html">BFM (Mythos/Fable)</a> · <a href="https://www.bfmtv.com/tech/innovation/nouveau-modele-claude-science-d-anthropic-promesse-d-un-vaccin-passe-partout-ou-contre-le-cancer-sur-mesure-en-moins-d-un-journee-l-ia-ouvre-une-nouvelle-porte-dans-la-recherche-medicale-mais-la-route-est-encore-longue_AN-202607010510.html">BFM (Science)</a></li>
 </ul>
 
 <ul>
-<li><strong>IA et code : traçabilité défaillante et sécurisation de VS Code</strong> : 99 % des entreprises utilisent au moins un outil de codage IA, mais la traçabilité et la gouvernance du code généré restent des angles morts majeurs. Microsoft renforce de son côté la sécurité de VS Code (v1.26) avec un mode restreignant l'exécution du code non fiable. <a href="https://www.lemondeinformatique.fr/actualites/lire-tracabilite-et-gouvernance-points-noirs-du-code-genere-par-l-ia-100585.html">Le Monde Informatique</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-restreint-l-execution-du-code-non-fiable-100600.html">Le Monde Informatique</a></li>
+<li><strong>Sécurité des accès : le MFA contourné par interception de jetons</strong> : Les attaquants utilisent désormais des techniques d'attaque de type Adversary-in-the-Middle pour subtiliser les jetons de session post-authentification, rendant le couple mot de passe + MFA insuffisant comme seule ligne de défense. <a href="https://www.journaldunet.com/cybersecurite/1552141-nos-mot-de-passe-et-codes-multifacteur-sont-ils-obsoletes/">JDN</a></li>
 </ul>
 
 <ul>
-<li><strong>Datadog acquiert Adaptive ML</strong> : L'éditeur américain cofondé par Olivier Pomel et Alexis Lê-Quôc rachète Adaptive ML, spécialiste du Reinforcement Learning Operations, pour internaliser une expertise IA stratégique. <a href="https://www.frenchweb.fr/datadog-rachete-adaptive-ml-pour-renforcer-son-laboratoire-dia/462649">Frenchweb</a></li>
+<li><strong>Phishing IA et Coupe du Monde : 344 faux sites FIFA recensés</strong> : L'IA permet de générer des campagnes d'hameçonnage sans les erreurs habituelles (orthographe, mise en page), rendant la détection par l'utilisateur final quasi impossible. La responsabilité est rejetée sur les plateformes et hébergeurs plutôt que sur la vigilance individuelle. <a href="https://www.journaldunet.com/cybersecurite/1552007-coupe-du-monde-2026-l-intelligence-artificielle-a-fait-sauter-notre-derniere-ligne-de-defense/">JDN</a></li>
 </ul>
 
 <ul>
-<li><strong>Données de localisation des véhicules connectés : la CNIL cadre les usages</strong> : Le régulateur français publie des recommandations sur la collecte et l'exploitation des données de géolocalisation issues des voitures, scooters et vélos connectés. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-cnil-cadre-l-usage-des-donnees-de-localisation-des-vehicules-connectes-100605.html">Le Monde Informatique</a></li>
+<li><strong>Les États-Unis offrent 10 millions de dollars pour des hackers russes</strong> : Cette prime vise des individus ayant utilisé une fausse invitation Signal pour compromettre les communications d'un diplomate américain, avec un appareil contrôlé depuis Moscou lisant les conversations en temps réel. <a href="https://siecledigital.fr/2026/07/01/les-etats-unis-promettent-jusqua-10-millions-de-dollars-pour-retrouver-des-hackers-lies-a-la-russie/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Nvidia : informatique confidentielle sans impact performance</strong> : Le directeur HPC/IA pour l'industrie chez Nvidia détaille l'approche de l'entreprise pour déployer l'informatique confidentielle dans les workloads IA sans dégrader les performances. <a href="https://www.lemondeinformatique.fr/actualites/lire-entretien-dion-harris-directeur-hpc-et-ia-pour-l-industrie-chez-nvidia-deployer-l-informatique-confidentielle-sans-impact-sur-les-performances-100604.html">Le Monde Informatique</a></li>
+<li><strong>Apple retire des applications russes de l'App Store, Moscou menace</strong> : La suppression d'applications liées à VK, entreprise contrôlée par l'État russe, provoque des menaces de représailles de la part du Kremlin. <a href="https://siecledigital.fr/2026/07/01/le-kremlin-sen-prend-a-apple-apres-la-disparition-de-plusieurs-applications-russes-de-lapp-store/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Transition post-quantique : le Campus Cyber publie un guide et un panorama solutions</strong> : Le Campus Cyber a publié un guide d'accompagnement et un inventaire des solutions de cryptographie post-quantique disponibles pour les professionnels. <a href="https://www.zdnet.fr/actualites/transition-vers-le-post-quantique-le-campus-cyber-commence-son-inventaire-498001.htm#xtor=RSS-1">ZDNet</a></li>
+<li><strong>Bruxelles examine la loi française sur les réseaux sociaux et les moins de 15 ans</strong> : La Commission européenne vérifie la compatibilité du texte avec le droit européen avant une éventuelle entrée en vigueur à la rentrée. L'objectif de protection des mineurs est partagé, mais les modalités restent sous examen. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-bruxelles-continue-d-examiner-la-loi-francaise-et-sa-compatibilite-avec-le-droit-europeen-avant-une-possible-interdiction-des-la-rentree_AV-202607010685.html">BFM</a></li>
 </ul>
 
 <ul>
-<li><strong>Microsoft lance WSL Containers en préversion</strong> : Intégration native de conteneurs Linux dans Windows Subsystem for Linux, disponible en préversion avec une version finale attendue à l'automne. <a href="https://next.ink/244862/microsoft-lance-ses-conteneurs-wsl-linux-en-preversion/">Next.ink</a></li>
+<li><strong>Google alerte sur les risques sécurité du DMA</strong> : L'obligation d'ouvrir ses outils de recherche et d'IA à la concurrence exposerait les données utilisateurs, selon Google, qui oppose sécurité et modèle économique dans sa défense face à la régulation européenne. <a href="https://www.bfmtv.com/tech/vie-numerique/ue-google-previent-que-le-forcer-a-ouvrir-ses-outils-de-recherche-et-d-ia-a-la-concurrence-pourrait-exposer-les-donnees-des-utilisateurs-entre-defense-de-notre-securite-et-de-son-modele-economique_AV-202607010484.html">BFM</a></li>
 </ul>
 
 <ul>
-<li><strong>Jeux en fin de vie : la pétition "Stop Killing Games" obtient une réponse non contraignante de l'UE</strong> : Signée par plus d'un million d'Européens, l'initiative citoyenne débouche sur un simple code de conduite volontaire pour l'industrie, jugé insuffisant par les porteurs du projet. <a href="https://next.ink/244884/stop-killing-games-refuse-le-game-over-pour-les-jeux-en-fin-de-vie/">Next.ink</a></li>
+<li><strong>Google Meet : Gemini écoute et rédige vos comptes-rendus</strong> : La nouvelle fonctionnalité de retranscription automatique s'intègre directement dans l'interface via une icône crayon. L'IA écoute la conversation pour produire une synthèse, ce qui pose la question du traitement de la donnée audio en réunion. <a href="https://siecledigital.fr/2026/07/01/google-meet-lance-une-fonction-ia-qui-ecoute-vos-reunions-et-redige-le-compte-rendu-automatiquement/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>IA en entreprise : la tentation du "tout automatique" produit des incidents</strong> : Fuites de données, contenus médiocres et décisions fragiles résultent d'un renoncement au jugement humain plutôt que de défaillances techniques. Le risque principal identifié est l'absence de supervision humaine sur les chaînes de décision automatisées. <a href="https://www.journaldunet.com/intelligence-artificielle/1552123-ia-en-entreprise-le-vrai-risque-c-est-de-lacher-la-main/">JDN</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552143-l-intelligence-artificielle-dans-l-itsm-d-un-levier-d-automatisation-a-un-moteur-de-transformation-des-services-it/">JDN (ITSM)</a></li>
+</ul>
+
+<ul>
+<li><strong>Des livres achetés en masse pour entraîner des IA, puis détruits</strong> : Zoom Books, un acheteur unique opérant dans plusieurs pays (Espagne, Bulgarie, Nouvelle-Zélande, Royaume-Uni), acquiert des milliers de livres pour numérisation avant destruction physique. La pratique soulève des questions sur les chaînes d'approvisionnement des données d'entraînement. <a href="https://siecledigital.fr/2026/07/01/ils-achetent-des-milliers-de-livres-pour-les-detruire-la-methode-qui-scandalise-le-monde-de-lia/">Siècle Digital</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260701-0951</guid>
-      <pubDate>Wed, 01 Jul 2026 09:51:48 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260701-1344</guid>
+      <pubDate>Wed, 01 Jul 2026 13:44:21 +0000</pubDate>
     </item>
   </channel>
 </rss>
