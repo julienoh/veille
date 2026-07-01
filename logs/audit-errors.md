@@ -30,3 +30,5 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-06-30 08:59 UTC | scoring | A Machine-Verified Proof of a Quantum-Optimization Conjectur (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-06-30 09:16 UTC | scoring | Generation of Uncertainty-Aware High-Level Spatial Concepts  (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-06-30 09:18 UTC | scoring | PlantExpertVQA: A Visual Question Answering Dataset for Benc (arXiv cs.LG) | JSON malformé renvoyé par le LLM (Invalid \escape: line 5 column 26 (char 91)) |
+| 2026-07-01 09:46 UTC | scoring | "Solarpunk", "Star Fox", "Deer & Boy", "Crushed in time": no (BFM Tech) | Rate limit fournisseur LLM atteint |
+| 2026-07-01 09:50 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 80 column 6 (char 2531)) |
