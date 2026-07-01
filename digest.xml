@@ -8,192 +8,256 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 30 Jun 2026 19:08:35 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 09:51:48 +0000</lastBuildDate>
     <item>
-      <title>Digest — 30/06 19h</title>
+      <title>Digest — 01/07 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Agents IA détournés via des descriptions d'outils empoisonnées** : Des chercheurs de Microsoft montrent qu'un attaquant peut exfiltrer des données d'entreprise en piégeant la description d'un outil MCP, sans que l'agent ne déclenche d'alerte puisqu'il exécute des actions d'apparence légitime. [The Hacker News](https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html)
+- **Password spray massif sur Azure CLI** : Une campagne automatisée massive (81M+ tentatives) ciblant l'interface en ligne de commande Azure a compromis au moins 78 comptes Microsoft. L'attaque provient d'une plage IPv6 unique (2a0a:d683::/32). [The Hacker News](https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html)
 
-- **Bypass des garde-fous des agents de codage IA** : Adversa AI révèle que la technique GuardFall exploite des subtilités historiques du shell pour contourner les contrôles de sécurité de 10 des 11 agents de codage open-source testés, permettant l'exécution de commandes dangereuses. [The Hacker News](https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html)
+- **ClickFix s'industrialise via des API de distribution** : Les fausses pages "prouvez que vous êtes humain" qui incitent l'utilisateur à exécuter manuellement un malware sont désormais servies dynamiquement par des serveurs API. Chaque victime reçoit une charge utile identique mais sous une apparence différente, compliquant la détection. [The Hacker News](https://thehackernews.com/2026/07/researcher-analyzes-3000-live-clickfix.html)
 
-- **Fuite massive de clés API dans les apps iOS intégrant l'IA** : Sur 444 applications iPhone de chatbot testées, 282 exposaient en clair dans leur trafic réseau des clés API, tokens ou accès proxy vers des services d'IA payants, ouvrant un accès non autorisé à ces ressources. [The Hacker News](https://thehackernews.com/2026/06/282-ios-apps-found-leaking-llm-api-keys.html)
+- **Phantom Squatting : des domaines hallucinés par l'IA utilisés pour du phishing** : Les LLMs génèrent régulièrement des noms de domaine inexistants. Des attaquants achètent ces domaines pour y héberger des pages de phishing, exploitant le trafic redirigé par les outils d'IA qui les recommandent. [The Hacker News](https://thehackernews.com/2026/07/phantom-squatting-uses-ai-hallucinated.html)
 
-- **Extensions Chrome malveillantes ciblant l'IA** : Une fausse extension Perplexity sur le Chrome Web Store intercepte le trafic de recherche et collecte des données de navigation. En parallèle, la campagne Silent Swap utilise une fausse extension Google Notes pour remplacer les adresses de portefeuilles crypto lors des transactions. [BleepingComputer](https://www.bleepingcomputer.com/news/security/fake-perplexity-extension-on-chrome-web-store-tracked-searches/) · [The Hacker News](https://thehackernews.com/2026/06/silent-swap-crypto-clipper-uses-fake.html)
+- **Six failles dans Citrix NetScaler (lecture de fichiers et DoS)** : Citrix a corrigé plusieurs vulnérabilités dans NetScaler ADC et Gateway pouvant permettre la lecture arbitraire de fichiers ou un déni de service. L'application des correctifs est recommandée sans délai. [The Hacker News](https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html)
 
-- **Exploitation active d'une RCE critique dans Langflow** : La vulnérabilité CVE-2026-33017 (CVSS 9.3), permettant l'exécution de code à distance sans authentification, est exploitée pour déployer un mineur de Monero sur les instances exposées. [The Hacker News](https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html)
+- **Adobe : 7 vulnérabilités critiques dans ColdFusion et Campaign** : Adobe publie des correctifs pour sept failles de sévérité maximale affectant ColdFusion et Campaign Classic. Ces plateformes étant des cibles historiques, le déploiement rapide des patches est prioritaire. [BleepingComputer](https://www.bleepingcomputer.com/news/security/adobe-patches-seven-max-severity-coldfusion-campaign-flaws/)
 
-- **Botnet RustDuck en Rust pour DDoS** : Un nouveau malware en deux étapes, actif depuis février 2026, compromet routeurs, caméras IP et serveurs mal sécurisés pour constituer un réseau dédié aux attaques DDoS. [The Hacker News](https://thehackernews.com/2026/06/rustduck-botnet-rebuilds-in-rust-to.html)
-
-- **Fonctionnement structuré des attaques BEC** : L'analyse de forums souterrains par Flare confirme que le Business Email Compromise est une opération planifiée impliquant compromission de comptes, recherche financière et réseaux organisés de cash-out. [BleepingComputer](https://www.bleepingcomputer.com/news/security/lessons-from-the-underground-how-to-combat-business-email-compromise/)
-
-- **Législation sur la sécurité en ligne des enfants** : Le KIDS Act a été adopté à la Chambre des représentants américaine (267-117), mais son passage au Sénat reste peu probable. [The Record](https://therecord.media/house-passes-kids-online-safety-bill-senate-unlikely)
+- **Claude Fable 5 rétabli après levée des restrictions export US** : Anthropic remet en ligne son modèle Fable 5 dans le monde entier suite à la levée par le Département du Commerce américain des contrôles à l'export imposés mi-juin. Ces restrictions faisaient suite à une vulnérabilité de jailbreak. [The Hacker News](https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Mistic, nouvelle backdoor liée aux ransomwares** : Une backdoor active depuis avril cible des entreprises pour déployer des ransomwares. Aucune attribution précise n'est encore confirmée, mais l'outil semble conçu pour s'intégrer dans des chaînes d'attaque complexes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-attention-a-mistic-une-backdoor-servant-aux-campagnes-de-ransomware-100603.html)
+- **CNIL encadre les données de géolocalisation des véhicules** : La CNIL précise les obligations pour la collecte et l'utilisation des données GPS des véhicules connectés (voitures, scooters, vélos). Les constructeurs et gestionnaires de flotte doivent garantir une information claire et un consentement explicite, ces données étant souvent liées à des habitudes de vie. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-cnil-cadre-l-usage-des-donnees-de-localisation-des-vehicules-connectes-100605.html)
+
+- **Groupe chinois cible les infrastructures critiques en Asie du Sud-Est** : Un acteur lié à la Chine a compromis au moins 10 organisations régionales, dont deux entités étatiques, en déployant un nouveau backdoor. L'opération confirme l'intérêt persistant pour les systèmes critiques de la région. [Dark Reading](https://www.darkreading.com/threat-intelligence/china-linked-group-targets-southeast-asia-critical-systems)
+
+- **Essor de l'ingénierie de détection** : La pratique consistant à concevoir et implémenter des détections de menaces de manière programmatique n'est plus réservée aux grandes structures. Elle devient un élément essentiel des opérations de sécurité pour répondre à la sophistication croissante des attaques. [CSO Online](https://www.csoonline.com/article/3847510/rising-attack-exposure-threat-sophistication-spur-interest-in-detection-engineering.html)
+
+- **Sécurisation des outils collaboratifs et de développement** : Microsoft va bloquer activement les bots indésirables envahissant les réunions Teams. De son côté, VS Code introduit un mode de sécurité restreignant l'exécution de code non fiable dans sa version 1.26 pour limiter les risques liés aux dépôts malveillants. [Le Monde Informatique Teams](https://www.lemondeinformatique.fr/actualites/lire-microsoft-empeche-les-bots-indesirables-d-acceder-aux-reunions-teams-100607.html) · [Le Monde Informatique VS Code](https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-restreint-l-execution-du-code-non-fiable-100600.html)
+
+- **Informatique confidentielle pour l'IA selon Nvidia** : Dion Harris (Nvidia) détaille les enjeux de sécurité autour des données d'entraînement et des modèles d'IA. Il met en avant des approches d'informatique confidentielle visant à isoler ces traitements sans dégrader les performances. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-entretien-dion-harris-directeur-hpc-et-ia-pour-l-industrie-chez-nvidia-deployer-l-informatique-confidentielle-sans-impact-sur-les-performances-100604.html)
 
 ## IA — Labos &amp; éditeurs
 
-- **Anthropic Claude Sonnet 5 sur AWS** : Disponible sur Bedrock, ce modèle inaugure la nouvelle génération Sonnet avec des performances en hausse sur le raisonnement et la génération de code. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/introducing-claude-sonnet-5-on-aws-anthropics-most-capable-sonnet-model/)
+- **Sécurité des modèles frontières sur AWS** : AWS réaffirme que la sécurité est intégrée nativement dans ses services d'IA comme Bedrock, en s'appuyant sur plus de vingt ans d'investissements dans la sécurisation de son infrastructure cloud. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/safely-releasing-frontier-models-to-customers/)
 
-- **Optimisation du coût par token chez NVIDIA** : La stack logicielle d'inférence (TensorRT-LLM, Triton, NIM) est co-conçue avec le hardware pour maximiser le nombre de tokens utiles par dollar et par watt, critère désormais central pour le passage à l'échelle. [NVIDIA Blog](https://blogs.nvidia.com/blog/inference-software-lowest-token-cost/)
+## IA — Recherche
 
-- **Agents IA et UI générative sur Bedrock** : AWS propose via AgentCore et le protocole AG-UI un template (FAST) pour construire des frontends agentiques interactifs, avec état partagé et validation humaine, en s'appuyant sur CopilotKit. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcore-with-the-ag-ui-protocol/)
+- **Calibration de sécurité dans le code généré** : Une étude empirique montre que les LLMs ne savent pas identifier quand leur propre code est insécure, ce qui limite la confiance qu'on peut leur accorder en contexte sensible. [Source](https://arxiv.org/abs/2606.31159)
 
-- **Gestion multi-comptes des modèles Bedrock** : Les managed entitlements permettent de souscrire à un modèle depuis un compte central et d'en distribuer l'accès aux comptes applicatifs sans passer par les permissions AWS Marketplace. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/simplify-multi-account-access-to-amazon-bedrock-models-with-managed-entitlements/)
+- **Compromis sécurité-fidélité dans les défenses anti-injection** : Les défenses contre l'injection indirecte de prompts dégradent les performances sur des tâches nécessitant de préserver le texte non fiable (traduction, édition de documents). [Source](https://arxiv.org/abs/2606.30783)
 
-- **Résilience des applications GenAI sur AWS** : Cinq patterns sont détaillés, des mécanismes natifs Bedrock (retry, fallback) jusqu'à l'orchestration multi-modèles via LLM gateway, pour gérer les épuisements de quota et les pics de trafic. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/implementing-resilience-patterns-with-amazon-bedrock-and-llm-gateway/)
+- **Attaque par collision de clés sur le caching sémantique** : Le caching sémantique, utilisé par AWS et Microsoft pour accélérer les LLMs, est vulnérable à des attaques exploitant la similarité des vecteurs d'embedding pour provoquer des collisions. [Source](https://arxiv.org/abs/2601.23088)
 
-- **Fine-tuning Amazon Nova pour extraction d'emails** : Le fine-tuning via SageMaker AI permet d'atteindre 94,77% de précision sur l'extraction de champs spécifiques, en corrigeant les confusions entre données similaires que les modèles généralistes commettent. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/fine-tune-amazon-nova-models-for-accurate-email-data-extraction/)
+- **Désalignement émergent amplifié par les optimiseurs** : Le phénomène où un fine-tuning sur une tâche étroite (code insécure) produit un comportement malveillant général peut être aggravé ou atténué selon l'optimiseur choisi. [Source](https://arxiv.org/abs/2606.31591)
 
-- **NER bilingue pour la logistique par distillation** : IBS Software a utilisé la distillation de connaissances sur Bedrock pour construire un modèle de reconnaissance d'entités nommées bilingue adapté au transport de marchandises. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/)
+- **Vérification de confinement pour agents IA** : Une approche de safety indépendante de l'alignement du modèle, basée sur la vérification formelle de la couche logicielle agentique (containment verification), est proposée comme garantie sans dépendre du comportement appris. [Source](https://arxiv.org/abs/2605.09045)
 
-- **Benchmark d'agents pour migration Java (IBM)** : ScarfBench évalue la capacité des agents IA à réaliser des migrations de frameworks Java en entreprise, un cas d'usage critique pour la modernisation de legacy. [Hugging Face Blog](https://huggingface.co/blog/ibm-research/scarfbench)
+- **Impossibilité de vérifier le raisonnement physique des VLA** : Les modèles vision-langage-action ne peuvent pas être formellement vérifiés pour leur capacité à raisonner sur le monde physique, malgré leurs bonnes performances en manipulation robotique. [Source](https://arxiv.org/abs/2606.30686)
 
-- **Spécialisation inévitable des modèles** : Un article d'analyse soutient que la spécialisation des modèles d'IA est une trajectoire incontournable face aux limites des approches généralistes pour les usages métier. [Hugging Face Blog](https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable)
+- **Expression fidèle de l'incertitude par RL métacognitif** : L'apprentissage par renforcement avec feedback métacognitif permet d'entraîner les LLMs à exprimer honnêtement leur incertitude, réduisant les hallucinations présentées avec une confiance élevée. [Source](https://arxiv.org/abs/2606.32032)
 
-- **NVIDIA BioNeMo pour les sciences de la vie** : Le toolkit BioNeMo Agent s'intègre à Claude Science pour accélérer les workflows de recherche en sciences du vivant via des agents GPU-accélérés. [NVIDIA Blog](https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/)
+- **Transparence IA : conformité vs attentes réelles** : Publier des déclarations sur l'usage de l'IA ne garantit pas une transparence effective ; l'étude distingue la conformité réglementaire des besoins réels des parties prenantes. [Source](https://arxiv.org/abs/2606.30652)
 
-- **Accélération d'entraînement VFX sur AWS** : Outpost VFX a réduit d'un facteur 8 le temps d'entraînement de ses modèles de remplacement facial en passant d'un GPU unique à une configuration multi-GPU sur AWS. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-outpost-vfx-uses-aws-to-accelerate-ai-model-training-for-visual-effects/)
+- **Audit boîte noire des algorithmes de personnalisation** : Des agents IA permettent d'automatiser à grande échelle l'audit des algorithmes de recommandation, malgré l'accès limité et la dépendance aux attributs utilisateurs. [Source](https://arxiv.org/abs/2606.30801)
+
+- **Coût des early exits dans les modèles de raisonnement** : Une règle d'arrêt apprise n'apporte un gain que si le coût des tokens supplémentaires est élevé ; sinon, des seuils simples de confiance suffisent. [Source](https://arxiv.org/abs/2606.30852)
+
+- **Agents et utilisateurs non-experts** : Les agents IA devraient aider les utilisateurs à construire leurs préférences plutôt que de supposer des préférences déjà bien formées et poser des questions de clarification. [Source](https://arxiv.org/abs/2606.30863)
+
+- **Same-Origin Policy pour navigateurs agentiques** : Extension du mécanisme de sécurité web SOP aux agents IA autonomes intégrés dans les navigateurs pour contrôler leurs interactions cross-origin. [Source](https://arxiv.org/abs/2606.14027)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Anthropic : Sonnet 5 et Claude Science** : Anthropic sort Sonnet 5, positionné comme une alternative économique à Opus et GPT-5.5 pour exécuter des agents, avec des garanties de sécurité renforcées. Parallèlement, Claude Science n'est pas un nouveau modèle mais un environnement de travail unifié pour la recherche computationnelle, visant à réduire la dispersion des scientifiques entre outils. [Sonnet 5](https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/) · [Claude Science](https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/)
+- **Anthropic lève la suspension sur Claude Sonnet 5, Fable et Mythos** : La revue fédérale des contrôles à l'export est terminée, mettant fin à 18 jours d'arrêt opérationnel imposé depuis le 12 juin. Les trois modèles sont de nouveau accessibles. [AI News](https://www.artificialintelligence-news.com/news/anthropic-deploys-claude-sonnet-5-fable-and-mythos-restored/)
 
-- **Amazon : fonds d'1 milliard pour le déploiement d'agents** : Amazon crée une nouvelle organisation dédiée au déploiement d'agents IA sur mesure, en intégrant ses ingénieurs directement chez les clients. L'accent est mis sur la rapidité d'exécution et l'autonomie des clients. [Source](https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/)
+- **Google sort TabFM, un modèle fondation pour données tabulaires** : Capable de classification et régression en zero-shot via apprentissage contextuel, sans entraînement par jeu de données ni réglage d'hyperparamètres. Une seule passe avant suffit. [MarkTechPost](https://www.marktechpost.com/2026/07/01/google-ai-introduces-tabfm-a-hybrid-attention-tabular-foundation-model-for-zero-shot-classification-and-regression/)
 
-- **Agents IA dans le clavier smartphone** : La startup Acti intègre des agents IA directement dans le clavier des smartphones (iOS/Android), permettant de créer des raccourcis personnalisés en langage naturel et d'agir à travers les applications. [Source](https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/)
+- **NVIDIA publie un modèle de langage par diffusion en open weights** : Nemotron-Labs-TwoTower repose sur une dorsale autorégressive gelée (Nemotron-3-Nano-30B-A3B) et s'attaque au goulot d'étranglement de la génération de texte séquentielle token par token. Sous licence NVIDIA Nemotron Open Model. [MarkTechPost](https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/)
 
-- **Proton : mise à jour du chatbot privé Lumo** : Proton déploie Lumo 2.0, une version enrichie de son assistant IA axé sur la confidentialité, avec un éventail de capacités élargi. [Source](https://techcrunch.com/2026/06/30/lumo-protons-privacy-focused-ai-chatbot-gets-an-upgrade/)
+- **Départ de Vint Cerf, co-créateur des protocoles internet** : Il quitte son poste de chief internet evangelist chez Google la semaine prochaine. Fin de mandat pour l'un des pères fondateurs du réseau. [TechCrunch](https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/)
+
+- **Baidu met à disposition CUP, une boîte à outils Python pour workflows fiables** : La librairie couvre logging, décorateurs, configuration imbriquée, cache, génération d'ID et threading. Tutoriel d'installation et de prise en main inclus. [MarkTechPost](https://www.marktechpost.com/2026/06/30/cup-common-useful-python-building-reliable-python-workflows-with-baidus-utility-toolkit/)
 
 ## Actualité tech FR
 
-- **Meta automatise la modération avec son IA** : Meta annonce que 90% de la modération de contenu sera confiée à ses LLM d'ici fin décembre, revendiquant un taux d'erreur inférieur de 13% à celui des humains. Cette transformation massive affectera les posts, commentaires et l'analyse de conformité publicitaire. [Siècle Digital](https://siecledigital.fr/2026/06/29/meta-prevoit-de-remplacer-90-de-son-personnel-de-moderation-de-contenu-par-une-ia/)
+- **Anthropic : levée des restrictions export US et sortie de Claude Sonnet 5** : Washington a levé les restrictions à l'export qui pesaient depuis 18 jours sur les modèles d'Anthropic, rétablissant l'accès pour les utilisateurs hors US. Parallèlement, la version 5 de Claude Sonnet gagne en capacités agentiques, avec un tarif promotionnel temporaire. [ZDNet](https://www.zdnet.fr/actualites/anthropic-washington-leve-les-restrictions-a-lexport-sur-les-modeles-claude-mythos-5-et-fable-5-498046.htm#xtor=RSS-1) · [Next.ink](https://next.ink/244955/claude-sonnet-5-plus-agentique-plus-malin-et-bientot-plus-cher/)
 
-- **Fuites d'iPhone 18 Pro : documents désormais sur le web public** : Les données confidentielles dérobées à Tata Electronics, concernant notamment l'iPhone 18 Pro, ne se limitent plus au dark web et circulent désormais librement sur internet. Apple tente de contenir cette brèche industrielle majeure. [Next.ink](https://next.ink/brief-article/apple-tente-de-colmater-les-fuites-autour-de-liphone-18-pro/)
+- **IA et code : traçabilité défaillante et sécurisation de VS Code** : 99 % des entreprises utilisent au moins un outil de codage IA, mais la traçabilité et la gouvernance du code généré restent des angles morts majeurs. Microsoft renforce de son côté la sécurité de VS Code (v1.26) avec un mode restreignant l'exécution du code non fiable. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-tracabilite-et-gouvernance-points-noirs-du-code-genere-par-l-ia-100585.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-restreint-l-execution-du-code-non-fiable-100600.html)
 
-- **La Chine publie un modèle d'IA en accès libre face aux restrictions US** : Pékin riposte au verrouillage américain (GPT-5.6 réservé à des partenaires agréés, suspension de modèles Anthropic) en diffusant gratuitement un LLM compétitif téléchargeable par tous. [Siècle Digital](https://siecledigital.fr/2026/06/30/la-chine-devoile-une-ia-capable-de-rivaliser-avec-les-meilleurs-modeles-americains/)</description>
+- **Datadog acquiert Adaptive ML** : L'éditeur américain cofondé par Olivier Pomel et Alexis Lê-Quôc rachète Adaptive ML, spécialiste du Reinforcement Learning Operations, pour internaliser une expertise IA stratégique. [Frenchweb](https://www.frenchweb.fr/datadog-rachete-adaptive-ml-pour-renforcer-son-laboratoire-dia/462649)
+
+- **Données de localisation des véhicules connectés : la CNIL cadre les usages** : Le régulateur français publie des recommandations sur la collecte et l'exploitation des données de géolocalisation issues des voitures, scooters et vélos connectés. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-cnil-cadre-l-usage-des-donnees-de-localisation-des-vehicules-connectes-100605.html)
+
+- **Nvidia : informatique confidentielle sans impact performance** : Le directeur HPC/IA pour l'industrie chez Nvidia détaille l'approche de l'entreprise pour déployer l'informatique confidentielle dans les workloads IA sans dégrader les performances. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-entretien-dion-harris-directeur-hpc-et-ia-pour-l-industrie-chez-nvidia-deployer-l-informatique-confidentielle-sans-impact-sur-les-performances-100604.html)
+
+- **Transition post-quantique : le Campus Cyber publie un guide et un panorama solutions** : Le Campus Cyber a publié un guide d'accompagnement et un inventaire des solutions de cryptographie post-quantique disponibles pour les professionnels. [ZDNet](https://www.zdnet.fr/actualites/transition-vers-le-post-quantique-le-campus-cyber-commence-son-inventaire-498001.htm#xtor=RSS-1)
+
+- **Microsoft lance WSL Containers en préversion** : Intégration native de conteneurs Linux dans Windows Subsystem for Linux, disponible en préversion avec une version finale attendue à l'automne. [Next.ink](https://next.ink/244862/microsoft-lance-ses-conteneurs-wsl-linux-en-preversion/)
+
+- **Jeux en fin de vie : la pétition "Stop Killing Games" obtient une réponse non contraignante de l'UE** : Signée par plus d'un million d'Européens, l'initiative citoyenne débouche sur un simple code de conduite volontaire pour l'industrie, jugé insuffisant par les porteurs du projet. [Next.ink](https://next.ink/244884/stop-killing-games-refuse-le-game-over-pour-les-jeux-en-fin-de-vie/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Agents IA détournés via des descriptions d'outils empoisonnées</strong> : Des chercheurs de Microsoft montrent qu'un attaquant peut exfiltrer des données d'entreprise en piégeant la description d'un outil MCP, sans que l'agent ne déclenche d'alerte puisqu'il exécute des actions d'apparence légitime. <a href="https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html">The Hacker News</a></li>
+<li><strong>Password spray massif sur Azure CLI</strong> : Une campagne automatisée massive (81M+ tentatives) ciblant l'interface en ligne de commande Azure a compromis au moins 78 comptes Microsoft. L'attaque provient d'une plage IPv6 unique (2a0a:d683::/32). <a href="https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Bypass des garde-fous des agents de codage IA</strong> : Adversa AI révèle que la technique GuardFall exploite des subtilités historiques du shell pour contourner les contrôles de sécurité de 10 des 11 agents de codage open-source testés, permettant l'exécution de commandes dangereuses. <a href="https://thehackernews.com/2026/06/guardfall-exposes-open-source-ai-coding.html">The Hacker News</a></li>
+<li><strong>ClickFix s'industrialise via des API de distribution</strong> : Les fausses pages "prouvez que vous êtes humain" qui incitent l'utilisateur à exécuter manuellement un malware sont désormais servies dynamiquement par des serveurs API. Chaque victime reçoit une charge utile identique mais sous une apparence différente, compliquant la détection. <a href="https://thehackernews.com/2026/07/researcher-analyzes-3000-live-clickfix.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Fuite massive de clés API dans les apps iOS intégrant l'IA</strong> : Sur 444 applications iPhone de chatbot testées, 282 exposaient en clair dans leur trafic réseau des clés API, tokens ou accès proxy vers des services d'IA payants, ouvrant un accès non autorisé à ces ressources. <a href="https://thehackernews.com/2026/06/282-ios-apps-found-leaking-llm-api-keys.html">The Hacker News</a></li>
+<li><strong>Phantom Squatting : des domaines hallucinés par l'IA utilisés pour du phishing</strong> : Les LLMs génèrent régulièrement des noms de domaine inexistants. Des attaquants achètent ces domaines pour y héberger des pages de phishing, exploitant le trafic redirigé par les outils d'IA qui les recommandent. <a href="https://thehackernews.com/2026/07/phantom-squatting-uses-ai-hallucinated.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Extensions Chrome malveillantes ciblant l'IA</strong> : Une fausse extension Perplexity sur le Chrome Web Store intercepte le trafic de recherche et collecte des données de navigation. En parallèle, la campagne Silent Swap utilise une fausse extension Google Notes pour remplacer les adresses de portefeuilles crypto lors des transactions. <a href="https://www.bleepingcomputer.com/news/security/fake-perplexity-extension-on-chrome-web-store-tracked-searches/">BleepingComputer</a> · <a href="https://thehackernews.com/2026/06/silent-swap-crypto-clipper-uses-fake.html">The Hacker News</a></li>
+<li><strong>Six failles dans Citrix NetScaler (lecture de fichiers et DoS)</strong> : Citrix a corrigé plusieurs vulnérabilités dans NetScaler ADC et Gateway pouvant permettre la lecture arbitraire de fichiers ou un déni de service. L'application des correctifs est recommandée sans délai. <a href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation active d'une RCE critique dans Langflow</strong> : La vulnérabilité CVE-2026-33017 (CVSS 9.3), permettant l'exécution de code à distance sans authentification, est exploitée pour déployer un mineur de Monero sur les instances exposées. <a href="https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html">The Hacker News</a></li>
+<li><strong>Adobe : 7 vulnérabilités critiques dans ColdFusion et Campaign</strong> : Adobe publie des correctifs pour sept failles de sévérité maximale affectant ColdFusion et Campaign Classic. Ces plateformes étant des cibles historiques, le déploiement rapide des patches est prioritaire. <a href="https://www.bleepingcomputer.com/news/security/adobe-patches-seven-max-severity-coldfusion-campaign-flaws/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Botnet RustDuck en Rust pour DDoS</strong> : Un nouveau malware en deux étapes, actif depuis février 2026, compromet routeurs, caméras IP et serveurs mal sécurisés pour constituer un réseau dédié aux attaques DDoS. <a href="https://thehackernews.com/2026/06/rustduck-botnet-rebuilds-in-rust-to.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Fonctionnement structuré des attaques BEC</strong> : L'analyse de forums souterrains par Flare confirme que le Business Email Compromise est une opération planifiée impliquant compromission de comptes, recherche financière et réseaux organisés de cash-out. <a href="https://www.bleepingcomputer.com/news/security/lessons-from-the-underground-how-to-combat-business-email-compromise/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Législation sur la sécurité en ligne des enfants</strong> : Le KIDS Act a été adopté à la Chambre des représentants américaine (267-117), mais son passage au Sénat reste peu probable. <a href="https://therecord.media/house-passes-kids-online-safety-bill-senate-unlikely">The Record</a></li>
+<li><strong>Claude Fable 5 rétabli après levée des restrictions export US</strong> : Anthropic remet en ligne son modèle Fable 5 dans le monde entier suite à la levée par le Département du Commerce américain des contrôles à l'export imposés mi-juin. Ces restrictions faisaient suite à une vulnérabilité de jailbreak. <a href="https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Mistic, nouvelle backdoor liée aux ransomwares</strong> : Une backdoor active depuis avril cible des entreprises pour déployer des ransomwares. Aucune attribution précise n'est encore confirmée, mais l'outil semble conçu pour s'intégrer dans des chaînes d'attaque complexes. <a href="https://www.lemondeinformatique.fr/actualites/lire-attention-a-mistic-une-backdoor-servant-aux-campagnes-de-ransomware-100603.html">Le Monde Informatique</a></li>
+<li><strong>CNIL encadre les données de géolocalisation des véhicules</strong> : La CNIL précise les obligations pour la collecte et l'utilisation des données GPS des véhicules connectés (voitures, scooters, vélos). Les constructeurs et gestionnaires de flotte doivent garantir une information claire et un consentement explicite, ces données étant souvent liées à des habitudes de vie. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-cnil-cadre-l-usage-des-donnees-de-localisation-des-vehicules-connectes-100605.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Groupe chinois cible les infrastructures critiques en Asie du Sud-Est</strong> : Un acteur lié à la Chine a compromis au moins 10 organisations régionales, dont deux entités étatiques, en déployant un nouveau backdoor. L'opération confirme l'intérêt persistant pour les systèmes critiques de la région. <a href="https://www.darkreading.com/threat-intelligence/china-linked-group-targets-southeast-asia-critical-systems">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Essor de l'ingénierie de détection</strong> : La pratique consistant à concevoir et implémenter des détections de menaces de manière programmatique n'est plus réservée aux grandes structures. Elle devient un élément essentiel des opérations de sécurité pour répondre à la sophistication croissante des attaques. <a href="https://www.csoonline.com/article/3847510/rising-attack-exposure-threat-sophistication-spur-interest-in-detection-engineering.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurisation des outils collaboratifs et de développement</strong> : Microsoft va bloquer activement les bots indésirables envahissant les réunions Teams. De son côté, VS Code introduit un mode de sécurité restreignant l'exécution de code non fiable dans sa version 1.26 pour limiter les risques liés aux dépôts malveillants. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-empeche-les-bots-indesirables-d-acceder-aux-reunions-teams-100607.html">Le Monde Informatique Teams</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-restreint-l-execution-du-code-non-fiable-100600.html">Le Monde Informatique VS Code</a></li>
+</ul>
+
+<ul>
+<li><strong>Informatique confidentielle pour l'IA selon Nvidia</strong> : Dion Harris (Nvidia) détaille les enjeux de sécurité autour des données d'entraînement et des modèles d'IA. Il met en avant des approches d'informatique confidentielle visant à isoler ces traitements sans dégrader les performances. <a href="https://www.lemondeinformatique.fr/actualites/lire-entretien-dion-harris-directeur-hpc-et-ia-pour-l-industrie-chez-nvidia-deployer-l-informatique-confidentielle-sans-impact-sur-les-performances-100604.html">Le Monde Informatique</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Anthropic Claude Sonnet 5 sur AWS</strong> : Disponible sur Bedrock, ce modèle inaugure la nouvelle génération Sonnet avec des performances en hausse sur le raisonnement et la génération de code. <a href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-sonnet-5-on-aws-anthropics-most-capable-sonnet-model/">AWS Machine Learning</a></li>
+<li><strong>Sécurité des modèles frontières sur AWS</strong> : AWS réaffirme que la sécurité est intégrée nativement dans ses services d'IA comme Bedrock, en s'appuyant sur plus de vingt ans d'investissements dans la sécurisation de son infrastructure cloud. <a href="https://aws.amazon.com/blogs/machine-learning/safely-releasing-frontier-models-to-customers/">AWS Machine Learning</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Calibration de sécurité dans le code généré</strong> : Une étude empirique montre que les LLMs ne savent pas identifier quand leur propre code est insécure, ce qui limite la confiance qu'on peut leur accorder en contexte sensible. <a href="https://arxiv.org/abs/2606.31159">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Optimisation du coût par token chez NVIDIA</strong> : La stack logicielle d'inférence (TensorRT-LLM, Triton, NIM) est co-conçue avec le hardware pour maximiser le nombre de tokens utiles par dollar et par watt, critère désormais central pour le passage à l'échelle. <a href="https://blogs.nvidia.com/blog/inference-software-lowest-token-cost/">NVIDIA Blog</a></li>
+<li><strong>Compromis sécurité-fidélité dans les défenses anti-injection</strong> : Les défenses contre l'injection indirecte de prompts dégradent les performances sur des tâches nécessitant de préserver le texte non fiable (traduction, édition de documents). <a href="https://arxiv.org/abs/2606.30783">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA et UI générative sur Bedrock</strong> : AWS propose via AgentCore et le protocole AG-UI un template (FAST) pour construire des frontends agentiques interactifs, avec état partagé et validation humaine, en s'appuyant sur CopilotKit. <a href="https://aws.amazon.com/blogs/machine-learning/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcore-with-the-ag-ui-protocol/">AWS Machine Learning</a></li>
+<li><strong>Attaque par collision de clés sur le caching sémantique</strong> : Le caching sémantique, utilisé par AWS et Microsoft pour accélérer les LLMs, est vulnérable à des attaques exploitant la similarité des vecteurs d'embedding pour provoquer des collisions. <a href="https://arxiv.org/abs/2601.23088">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Gestion multi-comptes des modèles Bedrock</strong> : Les managed entitlements permettent de souscrire à un modèle depuis un compte central et d'en distribuer l'accès aux comptes applicatifs sans passer par les permissions AWS Marketplace. <a href="https://aws.amazon.com/blogs/machine-learning/simplify-multi-account-access-to-amazon-bedrock-models-with-managed-entitlements/">AWS Machine Learning</a></li>
+<li><strong>Désalignement émergent amplifié par les optimiseurs</strong> : Le phénomène où un fine-tuning sur une tâche étroite (code insécure) produit un comportement malveillant général peut être aggravé ou atténué selon l'optimiseur choisi. <a href="https://arxiv.org/abs/2606.31591">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Résilience des applications GenAI sur AWS</strong> : Cinq patterns sont détaillés, des mécanismes natifs Bedrock (retry, fallback) jusqu'à l'orchestration multi-modèles via LLM gateway, pour gérer les épuisements de quota et les pics de trafic. <a href="https://aws.amazon.com/blogs/machine-learning/implementing-resilience-patterns-with-amazon-bedrock-and-llm-gateway/">AWS Machine Learning</a></li>
+<li><strong>Vérification de confinement pour agents IA</strong> : Une approche de safety indépendante de l'alignement du modèle, basée sur la vérification formelle de la couche logicielle agentique (containment verification), est proposée comme garantie sans dépendre du comportement appris. <a href="https://arxiv.org/abs/2605.09045">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Fine-tuning Amazon Nova pour extraction d'emails</strong> : Le fine-tuning via SageMaker AI permet d'atteindre 94,77% de précision sur l'extraction de champs spécifiques, en corrigeant les confusions entre données similaires que les modèles généralistes commettent. <a href="https://aws.amazon.com/blogs/machine-learning/fine-tune-amazon-nova-models-for-accurate-email-data-extraction/">AWS Machine Learning</a></li>
+<li><strong>Impossibilité de vérifier le raisonnement physique des VLA</strong> : Les modèles vision-langage-action ne peuvent pas être formellement vérifiés pour leur capacité à raisonner sur le monde physique, malgré leurs bonnes performances en manipulation robotique. <a href="https://arxiv.org/abs/2606.30686">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>NER bilingue pour la logistique par distillation</strong> : IBS Software a utilisé la distillation de connaissances sur Bedrock pour construire un modèle de reconnaissance d'entités nommées bilingue adapté au transport de marchandises. <a href="https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/">AWS Machine Learning</a></li>
+<li><strong>Expression fidèle de l'incertitude par RL métacognitif</strong> : L'apprentissage par renforcement avec feedback métacognitif permet d'entraîner les LLMs à exprimer honnêtement leur incertitude, réduisant les hallucinations présentées avec une confiance élevée. <a href="https://arxiv.org/abs/2606.32032">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Benchmark d'agents pour migration Java (IBM)</strong> : ScarfBench évalue la capacité des agents IA à réaliser des migrations de frameworks Java en entreprise, un cas d'usage critique pour la modernisation de legacy. <a href="https://huggingface.co/blog/ibm-research/scarfbench">Hugging Face Blog</a></li>
+<li><strong>Transparence IA : conformité vs attentes réelles</strong> : Publier des déclarations sur l'usage de l'IA ne garantit pas une transparence effective ; l'étude distingue la conformité réglementaire des besoins réels des parties prenantes. <a href="https://arxiv.org/abs/2606.30652">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Spécialisation inévitable des modèles</strong> : Un article d'analyse soutient que la spécialisation des modèles d'IA est une trajectoire incontournable face aux limites des approches généralistes pour les usages métier. <a href="https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable">Hugging Face Blog</a></li>
+<li><strong>Audit boîte noire des algorithmes de personnalisation</strong> : Des agents IA permettent d'automatiser à grande échelle l'audit des algorithmes de recommandation, malgré l'accès limité et la dépendance aux attributs utilisateurs. <a href="https://arxiv.org/abs/2606.30801">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>NVIDIA BioNeMo pour les sciences de la vie</strong> : Le toolkit BioNeMo Agent s'intègre à Claude Science pour accélérer les workflows de recherche en sciences du vivant via des agents GPU-accélérés. <a href="https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/">NVIDIA Blog</a></li>
+<li><strong>Coût des early exits dans les modèles de raisonnement</strong> : Une règle d'arrêt apprise n'apporte un gain que si le coût des tokens supplémentaires est élevé ; sinon, des seuils simples de confiance suffisent. <a href="https://arxiv.org/abs/2606.30852">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Accélération d'entraînement VFX sur AWS</strong> : Outpost VFX a réduit d'un facteur 8 le temps d'entraînement de ses modèles de remplacement facial en passant d'un GPU unique à une configuration multi-GPU sur AWS. <a href="https://aws.amazon.com/blogs/machine-learning/how-outpost-vfx-uses-aws-to-accelerate-ai-model-training-for-visual-effects/">AWS Machine Learning</a></li>
+<li><strong>Agents et utilisateurs non-experts</strong> : Les agents IA devraient aider les utilisateurs à construire leurs préférences plutôt que de supposer des préférences déjà bien formées et poser des questions de clarification. <a href="https://arxiv.org/abs/2606.30863">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Same-Origin Policy pour navigateurs agentiques</strong> : Extension du mécanisme de sécurité web SOP aux agents IA autonomes intégrés dans les navigateurs pour contrôler leurs interactions cross-origin. <a href="https://arxiv.org/abs/2606.14027">Source</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Anthropic : Sonnet 5 et Claude Science</strong> : Anthropic sort Sonnet 5, positionné comme une alternative économique à Opus et GPT-5.5 pour exécuter des agents, avec des garanties de sécurité renforcées. Parallèlement, Claude Science n'est pas un nouveau modèle mais un environnement de travail unifié pour la recherche computationnelle, visant à réduire la dispersion des scientifiques entre outils. <a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/">Sonnet 5</a> · <a href="https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/">Claude Science</a></li>
+<li><strong>Anthropic lève la suspension sur Claude Sonnet 5, Fable et Mythos</strong> : La revue fédérale des contrôles à l'export est terminée, mettant fin à 18 jours d'arrêt opérationnel imposé depuis le 12 juin. Les trois modèles sont de nouveau accessibles. <a href="https://www.artificialintelligence-news.com/news/anthropic-deploys-claude-sonnet-5-fable-and-mythos-restored/">AI News</a></li>
 </ul>
 
 <ul>
-<li><strong>Amazon : fonds d'1 milliard pour le déploiement d'agents</strong> : Amazon crée une nouvelle organisation dédiée au déploiement d'agents IA sur mesure, en intégrant ses ingénieurs directement chez les clients. L'accent est mis sur la rapidité d'exécution et l'autonomie des clients. <a href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/">Source</a></li>
+<li><strong>Google sort TabFM, un modèle fondation pour données tabulaires</strong> : Capable de classification et régression en zero-shot via apprentissage contextuel, sans entraînement par jeu de données ni réglage d'hyperparamètres. Une seule passe avant suffit. <a href="https://www.marktechpost.com/2026/07/01/google-ai-introduces-tabfm-a-hybrid-attention-tabular-foundation-model-for-zero-shot-classification-and-regression/">MarkTechPost</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA dans le clavier smartphone</strong> : La startup Acti intègre des agents IA directement dans le clavier des smartphones (iOS/Android), permettant de créer des raccourcis personnalisés en langage naturel et d'agir à travers les applications. <a href="https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/">Source</a></li>
+<li><strong>NVIDIA publie un modèle de langage par diffusion en open weights</strong> : Nemotron-Labs-TwoTower repose sur une dorsale autorégressive gelée (Nemotron-3-Nano-30B-A3B) et s'attaque au goulot d'étranglement de la génération de texte séquentielle token par token. Sous licence NVIDIA Nemotron Open Model. <a href="https://www.marktechpost.com/2026/07/01/nvidia-releases-nemotron-labs-twotower/">MarkTechPost</a></li>
 </ul>
 
 <ul>
-<li><strong>Proton : mise à jour du chatbot privé Lumo</strong> : Proton déploie Lumo 2.0, une version enrichie de son assistant IA axé sur la confidentialité, avec un éventail de capacités élargi. <a href="https://techcrunch.com/2026/06/30/lumo-protons-privacy-focused-ai-chatbot-gets-an-upgrade/">Source</a></li>
+<li><strong>Départ de Vint Cerf, co-créateur des protocoles internet</strong> : Il quitte son poste de chief internet evangelist chez Google la semaine prochaine. Fin de mandat pour l'un des pères fondateurs du réseau. <a href="https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Baidu met à disposition CUP, une boîte à outils Python pour workflows fiables</strong> : La librairie couvre logging, décorateurs, configuration imbriquée, cache, génération d'ID et threading. Tutoriel d'installation et de prise en main inclus. <a href="https://www.marktechpost.com/2026/06/30/cup-common-useful-python-building-reliable-python-workflows-with-baidus-utility-toolkit/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Meta automatise la modération avec son IA</strong> : Meta annonce que 90% de la modération de contenu sera confiée à ses LLM d'ici fin décembre, revendiquant un taux d'erreur inférieur de 13% à celui des humains. Cette transformation massive affectera les posts, commentaires et l'analyse de conformité publicitaire. <a href="https://siecledigital.fr/2026/06/29/meta-prevoit-de-remplacer-90-de-son-personnel-de-moderation-de-contenu-par-une-ia/">Siècle Digital</a></li>
+<li><strong>Anthropic : levée des restrictions export US et sortie de Claude Sonnet 5</strong> : Washington a levé les restrictions à l'export qui pesaient depuis 18 jours sur les modèles d'Anthropic, rétablissant l'accès pour les utilisateurs hors US. Parallèlement, la version 5 de Claude Sonnet gagne en capacités agentiques, avec un tarif promotionnel temporaire. <a href="https://www.zdnet.fr/actualites/anthropic-washington-leve-les-restrictions-a-lexport-sur-les-modeles-claude-mythos-5-et-fable-5-498046.htm#xtor=RSS-1">ZDNet</a> · <a href="https://next.ink/244955/claude-sonnet-5-plus-agentique-plus-malin-et-bientot-plus-cher/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Fuites d'iPhone 18 Pro : documents désormais sur le web public</strong> : Les données confidentielles dérobées à Tata Electronics, concernant notamment l'iPhone 18 Pro, ne se limitent plus au dark web et circulent désormais librement sur internet. Apple tente de contenir cette brèche industrielle majeure. <a href="https://next.ink/brief-article/apple-tente-de-colmater-les-fuites-autour-de-liphone-18-pro/">Next.ink</a></li>
+<li><strong>IA et code : traçabilité défaillante et sécurisation de VS Code</strong> : 99 % des entreprises utilisent au moins un outil de codage IA, mais la traçabilité et la gouvernance du code généré restent des angles morts majeurs. Microsoft renforce de son côté la sécurité de VS Code (v1.26) avec un mode restreignant l'exécution du code non fiable. <a href="https://www.lemondeinformatique.fr/actualites/lire-tracabilite-et-gouvernance-points-noirs-du-code-genere-par-l-ia-100585.html">Le Monde Informatique</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-restreint-l-execution-du-code-non-fiable-100600.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>La Chine publie un modèle d'IA en accès libre face aux restrictions US</strong> : Pékin riposte au verrouillage américain (GPT-5.6 réservé à des partenaires agréés, suspension de modèles Anthropic) en diffusant gratuitement un LLM compétitif téléchargeable par tous. <a href="https://siecledigital.fr/2026/06/30/la-chine-devoile-une-ia-capable-de-rivaliser-avec-les-meilleurs-modeles-americains/">Siècle Digital</a></li>
+<li><strong>Datadog acquiert Adaptive ML</strong> : L'éditeur américain cofondé par Olivier Pomel et Alexis Lê-Quôc rachète Adaptive ML, spécialiste du Reinforcement Learning Operations, pour internaliser une expertise IA stratégique. <a href="https://www.frenchweb.fr/datadog-rachete-adaptive-ml-pour-renforcer-son-laboratoire-dia/462649">Frenchweb</a></li>
+</ul>
+
+<ul>
+<li><strong>Données de localisation des véhicules connectés : la CNIL cadre les usages</strong> : Le régulateur français publie des recommandations sur la collecte et l'exploitation des données de géolocalisation issues des voitures, scooters et vélos connectés. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-cnil-cadre-l-usage-des-donnees-de-localisation-des-vehicules-connectes-100605.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Nvidia : informatique confidentielle sans impact performance</strong> : Le directeur HPC/IA pour l'industrie chez Nvidia détaille l'approche de l'entreprise pour déployer l'informatique confidentielle dans les workloads IA sans dégrader les performances. <a href="https://www.lemondeinformatique.fr/actualites/lire-entretien-dion-harris-directeur-hpc-et-ia-pour-l-industrie-chez-nvidia-deployer-l-informatique-confidentielle-sans-impact-sur-les-performances-100604.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Transition post-quantique : le Campus Cyber publie un guide et un panorama solutions</strong> : Le Campus Cyber a publié un guide d'accompagnement et un inventaire des solutions de cryptographie post-quantique disponibles pour les professionnels. <a href="https://www.zdnet.fr/actualites/transition-vers-le-post-quantique-le-campus-cyber-commence-son-inventaire-498001.htm#xtor=RSS-1">ZDNet</a></li>
+</ul>
+
+<ul>
+<li><strong>Microsoft lance WSL Containers en préversion</strong> : Intégration native de conteneurs Linux dans Windows Subsystem for Linux, disponible en préversion avec une version finale attendue à l'automne. <a href="https://next.ink/244862/microsoft-lance-ses-conteneurs-wsl-linux-en-preversion/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Jeux en fin de vie : la pétition "Stop Killing Games" obtient une réponse non contraignante de l'UE</strong> : Signée par plus d'un million d'Européens, l'initiative citoyenne débouche sur un simple code de conduite volontaire pour l'industrie, jugé insuffisant par les porteurs du projet. <a href="https://next.ink/244884/stop-killing-games-refuse-le-game-over-pour-les-jeux-en-fin-de-vie/">Next.ink</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260630-1908</guid>
-      <pubDate>Tue, 30 Jun 2026 19:08:35 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260701-0951</guid>
+      <pubDate>Wed, 01 Jul 2026 09:51:48 +0000</pubDate>
     </item>
   </channel>
 </rss>
