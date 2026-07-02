@@ -32,3 +32,7 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-06-30 09:18 UTC | scoring | PlantExpertVQA: A Visual Question Answering Dataset for Benc (arXiv cs.LG) | JSON malformé renvoyé par le LLM (Invalid \escape: line 5 column 26 (char 91)) |
 | 2026-07-01 09:46 UTC | scoring | "Solarpunk", "Star Fox", "Deer & Boy", "Crushed in time": no (BFM Tech) | Rate limit fournisseur LLM atteint |
 | 2026-07-01 09:50 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 80 column 6 (char 2531)) |
+| 2026-07-02 08:47 UTC | scoring | MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cac (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-02 08:47 UTC | scoring | Accelerating Discrete Diffusion Models with Parallel-In-Time (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-02 09:01 UTC | scoring | FastUMAP: Scalable Dimensionality Reduction via Bipartite La (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-02 09:10 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2553)) |

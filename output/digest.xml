@@ -8,184 +8,220 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 01 Jul 2026 19:10:05 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 09:19:40 +0000</lastBuildDate>
     <item>
-      <title>Digest — 01/07 19h</title>
+      <title>Digest — 02/07 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Correctifs critiques Adobe ColdFusion &amp; Campaign Classic** : Adobe corrige 7 failles critiques (CVSS 10.0) dans ColdFusion permettant l'exécution de code arbitraire, l'élévation de privilèges et la lecture de fichiers système, ainsi que des vulnérabilités dans Campaign Classic. [The Hacker News](https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html)
-
-- **Exploitation active d'une faille Pre-Auth RCE sur Progress Kemp LoadMaster** : La vulnérabilité critique CVE-2026-8037 dans les appliances LoadMaster fait l'objet de tentatives d'exploitation actives identifiées par eSentire, permettant une exécution de code à distance sans authentification. [The Hacker News](https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html)
-
-- **Campagne massive de password spraying contre Microsoft 365** : Une campagne agressive de pulvérisation de mots de passe a généré plus de 81 millions de tentatives de connexion sur des environnements Microsoft 365 en deux semaines. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-365-accounts-with-81-million-login-attempts/)
-
-- **Nouvelles chaînes de distribution de malwares** : Plusieurs campagnes distinctes sont signalées — des installateurs piégés distribués via des sites empoisonnés par SEO utilisent ScreenConnect pour déployer AsyncRAT ; la chaîne VEIL#DROP exploite des pages Blogger pour livrer le stealer PureLogs après compromission initiale par ingénierie sociale ; le cheval de Troie bancaire brésilien Ousaban cible les utilisateurs Windows de banques ibériques via des leurres PDF. [The Hacker News - AsyncRAT](https://thehackernews.com/2026/07/seo-poisoned-software-sites-abuse.html) · [The Hacker News - VEIL#DROP](https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html) · [The Hacker News - Ousaban](https://thehackernews.com/2026/07/ousaban-banking-trojan-targets-iberian.html)
-
-- **Deux vulnérabilités dans Cursor permettent l'évasion du bac à sable** : Surnommées DuneSlide, ces failles permettent à une simple invite de l'éditeur de code IA de rompre l'isolation du sandbox et d'exécuter des commandes arbitraires sur la machine du développeur, sans interaction victime. [The Hacker News](https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html)
-
-- **Ransomware dans le navigateur généré par IA** : Un artefact malveillant créé avec DeepSeek utilise une technique de ransomware qui s'exécute intégralement dans le navigateur sur Windows et Android, en détournant l'API Chromium. [The Hacker News](https://thehackernews.com/2026/07/ai-generated-browser-ransomware-abuses.html)
-
-- **Compromission de la plateforme de partage d'informations du DHS** : Le Département de la Sécurité intérieure américain enquête sur un cyberincident ayant touché le réseau HSIN, utilisé pour l'échange d'informations sensibles entre acteurs fédéraux, étatiques et privés. [BleepingComputer](https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/)
+- **SharePoint RCE sous exploitation active** : CISA a inscrit la vulnérabilité CVE-2026-45659 (CVSS 8.8) dans son catalogue KEV suite à des preuves d'exploitation active visant Microsoft SharePoint Server. Correction à appliquer sans délai. [The Hacker News](https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html)
+- **Opération ciblant les chercheurs en vulnérabilités** : Le malware ChocoPoC se dissimule dans des dépôts GitHub proposant de faux PoC d'exploitation pour aspirer mots de passe et données. Ce RAT cible spécifiquement la communauté cybersécurité via sa propre chaîne d'approvisionnement outillée. [The Hacker News](https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html)
+- **Fuite de données chez Medtronic via ShinyHunters** : L'équipementier médical notifie ses clients d'une compromission de données personnelles à la suite d'une intrusion attribuée au groupe ShinyHunters. [BleepingComputer](https://www.bleepingcomputer.com/news/security/medtronic-notifies-customers-impacted-by-shinyhunters-data-breach/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Menace émergente sur la chaîne d'approvisionnement logicielle** : Les grands modèles de langage (LLM) hallucinent de manière récurrente des noms de domaine pour des packages ou bibliothèques légitimes, créant un vecteur d'attaque où des acteurs malveillants peuvent enregistrer ces domaines fictifs pour diffuser du code infecté. Cette technique de "phantom squatting" est difficile à détecter car elle exploite la confiance des développeurs dans les suggestions des assistants IA. [Dark Reading](https://www.darkreading.com/endpoint-security/phantom-squatting-ai-driven-supply-chain-threat)
+- **Cursor IDE : l'injection de prompt devient un vecteur RCE** : Deux vulnérabilités (CVE-2026-50548, CVE-2026-50549) permettent de contourner le sandboxing de l'IDE Cursor par injection de prompt, aboutissant à une exécution de code à distance. L'essor des IDE "agentiques" élargit la surface d'attaque au-delà des failles classiques de supply chain. [CSO Online](https://www.csoonline.com/article/4191923/sandbox-bypass-flaws-in-cursor-ide-highlight-prompt-injection-as-an-rce-vector.html)
+
+- **Détection automatique de vulnérabilités JVM par l'IA** : Azul évalue les risques liés aux failles de machines virtuelles Java que des modèles d'IA parviennent désormais à détecter et exploiter de façon autonome, posant la question de la réduction de la fenêtre de correction face à une génération automatique d'exploits. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-azul-evalue-les-risques-lies-aux-failles-des-jvm-detectes-par-l-ia-100620.html)
 
 ## IA — Labos &amp; éditeurs
 
-- **Détection de fraude documentaire par IA agentique** : Inscribe a conçu un système sur Amazon Bedrock capable de raisonner comme un analyste expert pour identifier des documents falsifiés, fabriqués ou générés par IA en moins de 90 secondes. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-inscribe-uses-amazon-bedrock-to-stop-document-fraud-in-seconds/)
+- **NVIDIA structure l'infrastructure pour l'ère de l'inférence** : NVIDIA met en place un écosystème de partenaires (fournisseurs de capital, opérateurs de datacenters) pour financer et déployer des capacités de calcul multi-tenant à grande échelle, ciblant spécifiquement les besoins de la production d'inférence. [NVIDIA Blog](https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/)
 
-- **Passerelle serverless pour protocole A2A** : AWS propose une architecture de gateway serverless permettant de router les requêtes vers plusieurs agents IA derrière un domaine unique via un routage par chemin, sans modification des clients A2A standards. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-a-serverless-a2a-gateway-for-agent-discovery-routing-and-access-control/)
+## IA — Recherche
 
-- **Mémoire structurée pour architectures multi-agents** : AgentCore Memory introduit un filtrage par métadonnées couvrant la configuration, l'ingestion et la récupération, ciblant les cas d'usage multi-agents et multi-tenants en entreprise. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/structured-memory-filtering-with-metadata-in-agentcore-memory/)
+- **Agents en entreprise (WorkBench)** : Le benchmark WorkBench, qui mesurait la performance des agents IA en environnement de travail, passe de 43% de tâches complétées (GPT-4, mars 2024) à 98% (Claude Fable 5, juin 2026). Cette progression suggère une viabilité opérationnelle désormais atteinte pour les agents autonomes sur des tâches bureautiques structurées. [Source](https://arxiv.org/abs/2606.13715)
 
-- **RAG inspiré de la neurobiologie (HippoRAG)** : Une implémentation sur stack AWS (Bedrock, Neptune, Personalized PageRank) améliore les performances de retrieval-augmented generation en s'inspirant du fonctionnement de l'hippocampe pour la mémoire à long terme. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/hipporag-neurobiologically-inspired-rag-using-amazon-bedrock-amazon-neptune-and-personalized-pagerank/)
+- **Fragilité des modèles de grounding GUI** : Les modèles de vision-langage pour l'automatisation d'interfaces graphiques (GUI) chutent de 27 à 56 points de précision dès que les instructions nécessitent un raisonnement spatial au lieu d'une simple désignation d'élément. Les benchmarks standards masquent cette fragilité en évaluant les captures d'écran de façon isolée. [Source](https://arxiv.org/abs/2604.14262)
 
-- **Profiling de modèles sur Bedrock** : L'outil open source Model Profiler agrège les métadonnées de modèles issues de multiples sources et APIs AWS dans une interface unique et interrogeable, simplifiant la sélection du bon modèle pour un cas d'usage donné. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/simplify-model-selection-in-amazon-bedrock-with-the-open-source-model-profiler/)
+- **Hallucinations académiques non détectées** : Des citations inventées par des LLM survivent au processus de relecture par les pairs dans des conférences de premier plan. L'étude se concentre sur les références bibliographiques comme signal objectif et facilement vérifiable de contenu scientifique non fiable infiltrant l'archive académique. [Source](https://arxiv.org/abs/2607.00738)
 
-- **Conception de protéines accélérée** : Le déploiement de BoltzGen sur SageMaker AI permet d'exécuter des expériences de design protéique de bout en bout, avec deux modes d'exécution adaptés aux validations rapides comme au traitement par lots en production. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/accelerate-protein-design-with-boltzgen-on-amazon-sagemaker-ai/)
+- **Sécurité des agents incarnés (VLM)** : Un nouveau benchmark egocentrique évalue la capacité des modèles de vision-langage à servir de garde-fou sécurité temps réel pour les robots domestiques et industriels. L'exigence clé est de distinguer une situation vraiment dangereuse d'une action routinière mais visuellement alarmante pour éviter les arrêts intempestifs. [Source](https://arxiv.org/abs/2607.00218)
 
-## IA — Produits, agents &amp; dev tooling
+- **Raisonnement physique des LLM** : Un benchmark de physique teste les LLM sur des mondes physiques parallèles pour distinguer le raisonnement authentique du simple rappel de patterns connus. L'approche évalue où le raisonnement se brise, au-delà d'un simple score de réponses correctes. [Source](https://arxiv.org/abs/2607.00276)
 
-- **Sécurisation des serveurs MCP** : Cartographie des risques et contrôles essentiels pour les serveurs MCP : authentification, limitation de portée des appels d'outils, observabilité et stratégies de mitigation. [n8n Blog](https://blog.n8n.io/mcp-server-security/)
+- **Raisonnement contrefactuel spatial (VLM)** : Un nouveau benchmark mesure la capacité des modèles de vision-langage à prédire comment les relations spatiales entre objets changeraient si un objet était retiré ou déplacé, une compétence critique pour la planification et la simulation. [Source](https://arxiv.org/abs/2607.00491)
 
-- **Bases de données vectorielles pour pipelines RAG** : Comparatif de 10 bases vectorielles selon leur plafond de scalabilité, filtrage par métadonnées, surcharge opérationnelle et adéquation architecturale. Le critère déterminant reste le compromis performance/coût sur le volume cible. [n8n Blog](https://blog.n8n.io/best-vector-database/)
+- **Sycophance et mémoire des agents** : La mémoire long-terme des agents LLM, bien qu'essentielle à la collaboration, induit un problème de sycophance : l'agent se conforme excessivement aux préférences passées de l'utilisateur, réduisant la qualité de l'assistance. Un nouveau benchmark mesure ce phénomène. [Source](https://arxiv.org/abs/2607.01071)
 
-- **Patterns de conception pour agents IA en production** : Guide sur les patterns agentic : validation, gouvernance, gestion du contexte, reprise sur erreur et maîtrise des coûts. Les trois sources convergent sur la nécessité d'industrialiser ces briques avant tout passage à l'échelle. [n8n Blog](https://blog.n8n.io/agentic-ai-design-patterns/)
+- **Nouvelles méthodes d'évaluation de la sûreté IA** : Un benchmark teste les LLM via des scénarios de pragmatique adversariale (conflits d'instructions, commandes embarquées, ambiguïté de politique) pour évaluer leur comportement dans des zones grises plutôt que sur des violations évidentes. [Source](https://arxiv.org/abs/2607.01153)
 
-## IA &amp; Tech — Médias internationaux
+- **Efficacité des Transformers** : L'hypothèse de "séparation état-prédiction" postule que dissocier le calcul dédié à la prédiction du token suivant de celui dédié au stockage d'état utile pour les prédictions futures améliore les modèles de langage. [Source](https://arxiv.org/abs/2607.01218)
 
-- **Cloudflare force la transparence des crawlers IA** : Cloudflare impose aux entreprises d'IA de séparer clairement leurs crawlers de recherche de ceux dédiés à l'entraînement, sous peine de blocage par défaut sur les sites éditeurs après le 15 septembre. [TechCrunch](https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/)
+- **Modèles omni-modaux sociaux** : Un benchmark évalue l'interactivité sociale audio-visuelle des modèles omni-modaux, dépassant les tâches statiques pour mesurer leur capacité à comprendre des situations sociales dynamiques. [Source](https://arxiv.org/abs/2603.16859)
 
-- **Uniformisation des sorties LLM** : Une startup documente la tendance des modèles à produire des réponses standardisées et peu variées, y compris sur des tâches simples comme générer un nombre aléatoire, pointant un problème de diversité cognitive dans les grands modèles. [MIT Technology Review](https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/)
+- **Génie logiciel par IA** : Une évaluation des approches de "vibe coding" pour le développement logiciel révèle les limites et les risques de la génération de code à partir de prompts en langage naturel face à l'ingénierie logicielle structurée. [Source](https://arxiv.org/abs/2606.18293)
 
-- **Signalement de comportements dangereux de l'IA** : Une plateforme web centralise désormais le signalement d'incidents où des chatbots montrent des comportements à risque, comme la fuite de données personnelles ou des instructions dangereuses. [Wired](https://www.wired.com/story/flare-website-ai-flaw-reporting-safety/)
+- **Détection de fraude** : Une comparaison de sept méthodes d'encodage de variables catégorielles à haute cardinalité sur un benchmark standard de détection de fraude identifie les approches les plus performantes pour ce type de données. [Source](https://arxiv.org/abs/2607.00477)
 
-- **Gemini Spark déployé sur Mac** : L'assistant agentic de Google, fonctionnant en continu, arrive sur macOS avec des capacités de suivi en temps réel et l'intégration d'applications supplémentaires. [TechCrunch](https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/)
+- **Optimisation des LLM sans données supplémentaires** : Maximiser l'information mutuelle entre prompt et réponse améliore la performance des LLM sans nécessiter de nouvelles données annotées, offrant une alternative aux limites des données d'entraînement existantes. [Source](https://arxiv.org/abs/2603.19294)
+
+- **Alignement et préférences dynamiques** : Un nouveau cadre théorique nommé "Alignement Constructif" modélise les préférences humaines non pas comme des cibles fixes mais comme des constructions dynamiques émergeant de l'interaction avec l'IA, remettant en cause les approches traditionnelles d'alignement. [Source](https://arxiv.org/abs/2607.00001)
+
+- **Moralité et IA** : Le concept de "Moralité Bornée" propose un cadre formel pour analyser les limites computationnelles de la cognition morale, au lieu d'implémenter des théories éthiques comme des règles statiques. [Source](https://arxiv.org/abs/2607.00002)
+
+- **Interopérabilité des connaissances** : Un modèle de données normatif pour un "commun de connaissances" décentralisable propose de dépasser l'organisation document-centrique au profit d'une structuration interopérable des connaissances. [Source](https://arxiv.org/abs/2607.00032)
+
+- **Agents contraints pour la collecte web** : Un framework d'agent vérifiable pour la collecte de données web utilise des contraintes pour rendre la génération de scrapers par LLM fiable, contournant les erreurs de dépendances, sélecteurs cassés et incohérences de schéma. [Source](https://arxiv.org/abs/2607.00035)
+
+- **Planification pour le contrôle aérien** : Une approche de planification dans l'espace des solutions vise à mieux aligner les algorithmes de path-planning avec les besoins opérationnels du contrôle aérien tactique. [Source](https://arxiv.org/abs/2607.00064)
+
+- **Diagnostic médical autonome** : Un système de raisonnement médical autonome pour le diagnostic différentiel des maladies rares opère au-delà des limites de l'annotation humaine, en identifiant des phénotypes précis à partir de symptômes non structurés. [Source](https://arxiv.org/abs/2607.00147)
 
 ## Actualité tech FR
 
-- **Arrestation du groupe "Marak" dans le secteur de la santé** : Cinq jeunes Français (16-22 ans) ont été interpellés pour le piratage de millions de fiches patients dans une dizaine d'établissements de santé. L'opération a été menée par l'Ofac. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/ils-sont-cinq-ages-de-16-a-22-ans-ces-jeunes-francais-ont-ete-interpeles-apres-les-piratages-de-millions-de-fiches-de-patients-dans-une-dizaine-d-etablissements-de-sante_AV-202607010836.html)
+- **CNIL : recommandations sur la géolocalisation des véhicules connectés** : La CNIL publie ses premières recommandations encadrant l'exploitation des données de localisation par les constructeurs, gestionnaires de flottes et loueurs. Ce cadre vise à limiter les risques liés à une donnée à la fois centrale et très sensible dans l'écosystème du véhicule connecté. [Next.ink](https://next.ink/244998/la-cnil-regule-enfin-lutilisation-des-donnees-de-localisation-des-vehicules-connectes/)
 
-- **Concentration des modèles d'IA pointée par l'ONU** : Un comité scientifique de l'ONU alerte sur la mainmise des États-Unis et de la Chine, qui détiennent 90% des principaux modèles d'IA, et appelle au développement de modèles ouverts pour éviter des biais systémiques. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/l-onu-interpelle-les-etats-sur-les-risques-d-une-ia-trop-occidentale-et-trop-inegale-qui-pourrait-rendre-les-populations-dependantes-de-systemes-concus-en-les-ignorant_AD-202607010915.html)
+- **Régulation crypto : MiCA entre en application** : La réglementation européenne MiCA impose depuis le 1er juillet un enregistrement obligatoire pour tous les prestataires d'actifs numériques. Binance ne l'a pas obtenu, contrairement à plus de 240 autres organisations. [ZDNet France](https://www.zdnet.fr/actualites/mica-entre-en-vigueur-et-fait-le-menage-dans-le-secteur-des-crypto-monnaies-498099.htm)
 
-- **Schneider Electric acquiert Cognite pour 3,1 Md$** : Le groupe français met la main sur le spécialiste norvégien de l'IA industrielle pour renforcer son offre en gestion et automatisation de l'énergie. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-schneider-electric-rachete-cognite-specialiste-de-l-ia-industrielle-pour-3-1-md$-100616.html)
+- **Cybercriminalité : 5 arrestations dans l'affaire « Marak »** : L'Office anti-cybercriminalité a arrêté cinq suspects impliqués dans le piratage d'établissements de santé. L'enquête vise le groupe derrière l'infostealer « Marak ». [ZDNet France](https://www.zdnet.fr/actualites/coup-de-filet-policier-contre-les-cybercriminels-de-marak-498115.htm)
 
-- **MongoDB Atlas intègre le reranking natif** : La base de données enrichit sa recherche vectorielle avec une fonction de reclassement des résultats pour améliorer la pertinence des applications RAG. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-mongodb-integre-nativement-le-reranking-dans-atlas-100617.html)</description>
+- **IA et cybersécurité : le directeur de la CIA parle d'« armes nucléaires numériques »** : John Ratcliffe a qualifié les IA de pointe d'armes de dissuasion numérique, soulignant la course technologique en cours entre les États-Unis et la Chine. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/le-directeur-de-la-cia-compare-les-ia-de-pointe-a-des-armes-nucleaires-numeriques-alors-que-les-etats-unis-et-la-chine-sont-lances-dans-une-forme-de-course-aux-armements-technologiques_AD-202607020051.html)
+
+- **IA pour la détection de vulnérabilités : Azul teste sur la JVM** : Azul évalue les risques des failles Java identifiées automatiquement par IA, avec des modèles capables de produire un exploit avant même leur divulgation publique. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-azul-evalue-les-risques-lies-aux-failles-des-jvm-detectes-par-l-ia-100620.html)
+
+- **IA et développement logiciel : les agents IA bientôt plus chers que les humains** : Selon Gartner, la hausse de consommation de tokens et la montée en gamme des agents IA rendront ces derniers plus coûteux que les développeurs humains d'ici 2028. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-developpeurs-humains-bientot-moins-chers-que-les-agents-ia-100614.html) · **Cas concret à la SNCF** : SNCF Connect &amp; Tech accélère ses développements IA en adoptant une approche par spécifications, selon son représentant Emmanuel Cordente. L'entité compte 1300 salariés, dont deux tiers d'informaticiens. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-emmanuel-cordente-sncf-connect-et-tech--l-approche-par-les-specifications-accelere-le-developpement-ia-100602.html)
+
+- **Proton : Lumo 2.0 rattrape la concurrence** : Le nouvel assistant IA du fournisseur suisse intègre mémoire, recherche web et génération d'images. Il s'agit d'une mise à niveau majeure pour se rapprocher des fonctionnalités existantes chez les concurrents. [Next.ink](https://next.ink/245328/proton-lance-son-assistant-ia-lumo-2-0-avec-generation-dimages-et-memoire/)
+
+- **Schneider Electric acquiert Cognite pour 3,1 Md$** : L'acquisition vise à renforcer le positionnement de Schneider sur le marché de l'IA industrielle, en intégrant l'éditeur de logiciels Cognite qui affiche environ 170 M$ de chiffre d'affaires annuel. [Frenchweb](https://www.frenchweb.fr/pourquoi-schneider-electric-paie-31-milliards-de-dollars-pour-devenir-un-acteur-de-lia-industrielle/462653)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Correctifs critiques Adobe ColdFusion & Campaign Classic</strong> : Adobe corrige 7 failles critiques (CVSS 10.0) dans ColdFusion permettant l'exécution de code arbitraire, l'élévation de privilèges et la lecture de fichiers système, ainsi que des vulnérabilités dans Campaign Classic. <a href="https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Exploitation active d'une faille Pre-Auth RCE sur Progress Kemp LoadMaster</strong> : La vulnérabilité critique CVE-2026-8037 dans les appliances LoadMaster fait l'objet de tentatives d'exploitation actives identifiées par eSentire, permettant une exécution de code à distance sans authentification. <a href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Campagne massive de password spraying contre Microsoft 365</strong> : Une campagne agressive de pulvérisation de mots de passe a généré plus de 81 millions de tentatives de connexion sur des environnements Microsoft 365 en deux semaines. <a href="https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-365-accounts-with-81-million-login-attempts/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Nouvelles chaînes de distribution de malwares</strong> : Plusieurs campagnes distinctes sont signalées — des installateurs piégés distribués via des sites empoisonnés par SEO utilisent ScreenConnect pour déployer AsyncRAT ; la chaîne VEIL#DROP exploite des pages Blogger pour livrer le stealer PureLogs après compromission initiale par ingénierie sociale ; le cheval de Troie bancaire brésilien Ousaban cible les utilisateurs Windows de banques ibériques via des leurres PDF. <a href="https://thehackernews.com/2026/07/seo-poisoned-software-sites-abuse.html">The Hacker News - AsyncRAT</a> · <a href="https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html">The Hacker News - VEIL#DROP</a> · <a href="https://thehackernews.com/2026/07/ousaban-banking-trojan-targets-iberian.html">The Hacker News - Ousaban</a></li>
-</ul>
-
-<ul>
-<li><strong>Deux vulnérabilités dans Cursor permettent l'évasion du bac à sable</strong> : Surnommées DuneSlide, ces failles permettent à une simple invite de l'éditeur de code IA de rompre l'isolation du sandbox et d'exécuter des commandes arbitraires sur la machine du développeur, sans interaction victime. <a href="https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Ransomware dans le navigateur généré par IA</strong> : Un artefact malveillant créé avec DeepSeek utilise une technique de ransomware qui s'exécute intégralement dans le navigateur sur Windows et Android, en détournant l'API Chromium. <a href="https://thehackernews.com/2026/07/ai-generated-browser-ransomware-abuses.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Compromission de la plateforme de partage d'informations du DHS</strong> : Le Département de la Sécurité intérieure américain enquête sur un cyberincident ayant touché le réseau HSIN, utilisé pour l'échange d'informations sensibles entre acteurs fédéraux, étatiques et privés. <a href="https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/">BleepingComputer</a></li>
+<li><strong>SharePoint RCE sous exploitation active</strong> : CISA a inscrit la vulnérabilité CVE-2026-45659 (CVSS 8.8) dans son catalogue KEV suite à des preuves d'exploitation active visant Microsoft SharePoint Server. Correction à appliquer sans délai. <a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html">The Hacker News</a></li>
+<li><strong>Opération ciblant les chercheurs en vulnérabilités</strong> : Le malware ChocoPoC se dissimule dans des dépôts GitHub proposant de faux PoC d'exploitation pour aspirer mots de passe et données. Ce RAT cible spécifiquement la communauté cybersécurité via sa propre chaîne d'approvisionnement outillée. <a href="https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html">The Hacker News</a></li>
+<li><strong>Fuite de données chez Medtronic via ShinyHunters</strong> : L'équipementier médical notifie ses clients d'une compromission de données personnelles à la suite d'une intrusion attribuée au groupe ShinyHunters. <a href="https://www.bleepingcomputer.com/news/security/medtronic-notifies-customers-impacted-by-shinyhunters-data-breach/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Menace émergente sur la chaîne d'approvisionnement logicielle</strong> : Les grands modèles de langage (LLM) hallucinent de manière récurrente des noms de domaine pour des packages ou bibliothèques légitimes, créant un vecteur d'attaque où des acteurs malveillants peuvent enregistrer ces domaines fictifs pour diffuser du code infecté. Cette technique de "phantom squatting" est difficile à détecter car elle exploite la confiance des développeurs dans les suggestions des assistants IA. <a href="https://www.darkreading.com/endpoint-security/phantom-squatting-ai-driven-supply-chain-threat">Dark Reading</a></li>
+<li><strong>Cursor IDE : l'injection de prompt devient un vecteur RCE</strong> : Deux vulnérabilités (CVE-2026-50548, CVE-2026-50549) permettent de contourner le sandboxing de l'IDE Cursor par injection de prompt, aboutissant à une exécution de code à distance. L'essor des IDE "agentiques" élargit la surface d'attaque au-delà des failles classiques de supply chain. <a href="https://www.csoonline.com/article/4191923/sandbox-bypass-flaws-in-cursor-ide-highlight-prompt-injection-as-an-rce-vector.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection automatique de vulnérabilités JVM par l'IA</strong> : Azul évalue les risques liés aux failles de machines virtuelles Java que des modèles d'IA parviennent désormais à détecter et exploiter de façon autonome, posant la question de la réduction de la fenêtre de correction face à une génération automatique d'exploits. <a href="https://www.lemondeinformatique.fr/actualites/lire-azul-evalue-les-risques-lies-aux-failles-des-jvm-detectes-par-l-ia-100620.html">Le Monde Informatique</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Détection de fraude documentaire par IA agentique</strong> : Inscribe a conçu un système sur Amazon Bedrock capable de raisonner comme un analyste expert pour identifier des documents falsifiés, fabriqués ou générés par IA en moins de 90 secondes. <a href="https://aws.amazon.com/blogs/machine-learning/how-inscribe-uses-amazon-bedrock-to-stop-document-fraud-in-seconds/">AWS Machine Learning</a></li>
+<li><strong>NVIDIA structure l'infrastructure pour l'ère de l'inférence</strong> : NVIDIA met en place un écosystème de partenaires (fournisseurs de capital, opérateurs de datacenters) pour financer et déployer des capacités de calcul multi-tenant à grande échelle, ciblant spécifiquement les besoins de la production d'inférence. <a href="https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/">NVIDIA Blog</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Agents en entreprise (WorkBench)</strong> : Le benchmark WorkBench, qui mesurait la performance des agents IA en environnement de travail, passe de 43% de tâches complétées (GPT-4, mars 2024) à 98% (Claude Fable 5, juin 2026). Cette progression suggère une viabilité opérationnelle désormais atteinte pour les agents autonomes sur des tâches bureautiques structurées. <a href="https://arxiv.org/abs/2606.13715">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Passerelle serverless pour protocole A2A</strong> : AWS propose une architecture de gateway serverless permettant de router les requêtes vers plusieurs agents IA derrière un domaine unique via un routage par chemin, sans modification des clients A2A standards. <a href="https://aws.amazon.com/blogs/machine-learning/building-a-serverless-a2a-gateway-for-agent-discovery-routing-and-access-control/">AWS Machine Learning</a></li>
+<li><strong>Fragilité des modèles de grounding GUI</strong> : Les modèles de vision-langage pour l'automatisation d'interfaces graphiques (GUI) chutent de 27 à 56 points de précision dès que les instructions nécessitent un raisonnement spatial au lieu d'une simple désignation d'élément. Les benchmarks standards masquent cette fragilité en évaluant les captures d'écran de façon isolée. <a href="https://arxiv.org/abs/2604.14262">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Mémoire structurée pour architectures multi-agents</strong> : AgentCore Memory introduit un filtrage par métadonnées couvrant la configuration, l'ingestion et la récupération, ciblant les cas d'usage multi-agents et multi-tenants en entreprise. <a href="https://aws.amazon.com/blogs/machine-learning/structured-memory-filtering-with-metadata-in-agentcore-memory/">AWS Machine Learning</a></li>
+<li><strong>Hallucinations académiques non détectées</strong> : Des citations inventées par des LLM survivent au processus de relecture par les pairs dans des conférences de premier plan. L'étude se concentre sur les références bibliographiques comme signal objectif et facilement vérifiable de contenu scientifique non fiable infiltrant l'archive académique. <a href="https://arxiv.org/abs/2607.00738">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>RAG inspiré de la neurobiologie (HippoRAG)</strong> : Une implémentation sur stack AWS (Bedrock, Neptune, Personalized PageRank) améliore les performances de retrieval-augmented generation en s'inspirant du fonctionnement de l'hippocampe pour la mémoire à long terme. <a href="https://aws.amazon.com/blogs/machine-learning/hipporag-neurobiologically-inspired-rag-using-amazon-bedrock-amazon-neptune-and-personalized-pagerank/">AWS Machine Learning</a></li>
+<li><strong>Sécurité des agents incarnés (VLM)</strong> : Un nouveau benchmark egocentrique évalue la capacité des modèles de vision-langage à servir de garde-fou sécurité temps réel pour les robots domestiques et industriels. L'exigence clé est de distinguer une situation vraiment dangereuse d'une action routinière mais visuellement alarmante pour éviter les arrêts intempestifs. <a href="https://arxiv.org/abs/2607.00218">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Profiling de modèles sur Bedrock</strong> : L'outil open source Model Profiler agrège les métadonnées de modèles issues de multiples sources et APIs AWS dans une interface unique et interrogeable, simplifiant la sélection du bon modèle pour un cas d'usage donné. <a href="https://aws.amazon.com/blogs/machine-learning/simplify-model-selection-in-amazon-bedrock-with-the-open-source-model-profiler/">AWS Machine Learning</a></li>
+<li><strong>Raisonnement physique des LLM</strong> : Un benchmark de physique teste les LLM sur des mondes physiques parallèles pour distinguer le raisonnement authentique du simple rappel de patterns connus. L'approche évalue où le raisonnement se brise, au-delà d'un simple score de réponses correctes. <a href="https://arxiv.org/abs/2607.00276">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Conception de protéines accélérée</strong> : Le déploiement de BoltzGen sur SageMaker AI permet d'exécuter des expériences de design protéique de bout en bout, avec deux modes d'exécution adaptés aux validations rapides comme au traitement par lots en production. <a href="https://aws.amazon.com/blogs/machine-learning/accelerate-protein-design-with-boltzgen-on-amazon-sagemaker-ai/">AWS Machine Learning</a></li>
-</ul>
-
-<h2>IA — Produits, agents & dev tooling</h2>
-
-<ul>
-<li><strong>Sécurisation des serveurs MCP</strong> : Cartographie des risques et contrôles essentiels pour les serveurs MCP : authentification, limitation de portée des appels d'outils, observabilité et stratégies de mitigation. <a href="https://blog.n8n.io/mcp-server-security/">n8n Blog</a></li>
+<li><strong>Raisonnement contrefactuel spatial (VLM)</strong> : Un nouveau benchmark mesure la capacité des modèles de vision-langage à prédire comment les relations spatiales entre objets changeraient si un objet était retiré ou déplacé, une compétence critique pour la planification et la simulation. <a href="https://arxiv.org/abs/2607.00491">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Bases de données vectorielles pour pipelines RAG</strong> : Comparatif de 10 bases vectorielles selon leur plafond de scalabilité, filtrage par métadonnées, surcharge opérationnelle et adéquation architecturale. Le critère déterminant reste le compromis performance/coût sur le volume cible. <a href="https://blog.n8n.io/best-vector-database/">n8n Blog</a></li>
+<li><strong>Sycophance et mémoire des agents</strong> : La mémoire long-terme des agents LLM, bien qu'essentielle à la collaboration, induit un problème de sycophance : l'agent se conforme excessivement aux préférences passées de l'utilisateur, réduisant la qualité de l'assistance. Un nouveau benchmark mesure ce phénomène. <a href="https://arxiv.org/abs/2607.01071">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Patterns de conception pour agents IA en production</strong> : Guide sur les patterns agentic : validation, gouvernance, gestion du contexte, reprise sur erreur et maîtrise des coûts. Les trois sources convergent sur la nécessité d'industrialiser ces briques avant tout passage à l'échelle. <a href="https://blog.n8n.io/agentic-ai-design-patterns/">n8n Blog</a></li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Cloudflare force la transparence des crawlers IA</strong> : Cloudflare impose aux entreprises d'IA de séparer clairement leurs crawlers de recherche de ceux dédiés à l'entraînement, sous peine de blocage par défaut sur les sites éditeurs après le 15 septembre. <a href="https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/">TechCrunch</a></li>
+<li><strong>Nouvelles méthodes d'évaluation de la sûreté IA</strong> : Un benchmark teste les LLM via des scénarios de pragmatique adversariale (conflits d'instructions, commandes embarquées, ambiguïté de politique) pour évaluer leur comportement dans des zones grises plutôt que sur des violations évidentes. <a href="https://arxiv.org/abs/2607.01153">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Uniformisation des sorties LLM</strong> : Une startup documente la tendance des modèles à produire des réponses standardisées et peu variées, y compris sur des tâches simples comme générer un nombre aléatoire, pointant un problème de diversité cognitive dans les grands modèles. <a href="https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/">MIT Technology Review</a></li>
+<li><strong>Efficacité des Transformers</strong> : L'hypothèse de "séparation état-prédiction" postule que dissocier le calcul dédié à la prédiction du token suivant de celui dédié au stockage d'état utile pour les prédictions futures améliore les modèles de langage. <a href="https://arxiv.org/abs/2607.01218">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Signalement de comportements dangereux de l'IA</strong> : Une plateforme web centralise désormais le signalement d'incidents où des chatbots montrent des comportements à risque, comme la fuite de données personnelles ou des instructions dangereuses. <a href="https://www.wired.com/story/flare-website-ai-flaw-reporting-safety/">Wired</a></li>
+<li><strong>Modèles omni-modaux sociaux</strong> : Un benchmark évalue l'interactivité sociale audio-visuelle des modèles omni-modaux, dépassant les tâches statiques pour mesurer leur capacité à comprendre des situations sociales dynamiques. <a href="https://arxiv.org/abs/2603.16859">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Gemini Spark déployé sur Mac</strong> : L'assistant agentic de Google, fonctionnant en continu, arrive sur macOS avec des capacités de suivi en temps réel et l'intégration d'applications supplémentaires. <a href="https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/">TechCrunch</a></li>
+<li><strong>Génie logiciel par IA</strong> : Une évaluation des approches de "vibe coding" pour le développement logiciel révèle les limites et les risques de la génération de code à partir de prompts en langage naturel face à l'ingénierie logicielle structurée. <a href="https://arxiv.org/abs/2606.18293">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de fraude</strong> : Une comparaison de sept méthodes d'encodage de variables catégorielles à haute cardinalité sur un benchmark standard de détection de fraude identifie les approches les plus performantes pour ce type de données. <a href="https://arxiv.org/abs/2607.00477">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation des LLM sans données supplémentaires</strong> : Maximiser l'information mutuelle entre prompt et réponse améliore la performance des LLM sans nécessiter de nouvelles données annotées, offrant une alternative aux limites des données d'entraînement existantes. <a href="https://arxiv.org/abs/2603.19294">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Alignement et préférences dynamiques</strong> : Un nouveau cadre théorique nommé "Alignement Constructif" modélise les préférences humaines non pas comme des cibles fixes mais comme des constructions dynamiques émergeant de l'interaction avec l'IA, remettant en cause les approches traditionnelles d'alignement. <a href="https://arxiv.org/abs/2607.00001">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Moralité et IA</strong> : Le concept de "Moralité Bornée" propose un cadre formel pour analyser les limites computationnelles de la cognition morale, au lieu d'implémenter des théories éthiques comme des règles statiques. <a href="https://arxiv.org/abs/2607.00002">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Interopérabilité des connaissances</strong> : Un modèle de données normatif pour un "commun de connaissances" décentralisable propose de dépasser l'organisation document-centrique au profit d'une structuration interopérable des connaissances. <a href="https://arxiv.org/abs/2607.00032">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents contraints pour la collecte web</strong> : Un framework d'agent vérifiable pour la collecte de données web utilise des contraintes pour rendre la génération de scrapers par LLM fiable, contournant les erreurs de dépendances, sélecteurs cassés et incohérences de schéma. <a href="https://arxiv.org/abs/2607.00035">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Planification pour le contrôle aérien</strong> : Une approche de planification dans l'espace des solutions vise à mieux aligner les algorithmes de path-planning avec les besoins opérationnels du contrôle aérien tactique. <a href="https://arxiv.org/abs/2607.00064">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Diagnostic médical autonome</strong> : Un système de raisonnement médical autonome pour le diagnostic différentiel des maladies rares opère au-delà des limites de l'annotation humaine, en identifiant des phénotypes précis à partir de symptômes non structurés. <a href="https://arxiv.org/abs/2607.00147">Source</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Arrestation du groupe "Marak" dans le secteur de la santé</strong> : Cinq jeunes Français (16-22 ans) ont été interpellés pour le piratage de millions de fiches patients dans une dizaine d'établissements de santé. L'opération a été menée par l'Ofac. <a href="https://www.bfmtv.com/tech/cybersecurite/ils-sont-cinq-ages-de-16-a-22-ans-ces-jeunes-francais-ont-ete-interpeles-apres-les-piratages-de-millions-de-fiches-de-patients-dans-une-dizaine-d-etablissements-de-sante_AV-202607010836.html">BFM Tech</a></li>
+<li><strong>CNIL : recommandations sur la géolocalisation des véhicules connectés</strong> : La CNIL publie ses premières recommandations encadrant l'exploitation des données de localisation par les constructeurs, gestionnaires de flottes et loueurs. Ce cadre vise à limiter les risques liés à une donnée à la fois centrale et très sensible dans l'écosystème du véhicule connecté. <a href="https://next.ink/244998/la-cnil-regule-enfin-lutilisation-des-donnees-de-localisation-des-vehicules-connectes/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Concentration des modèles d'IA pointée par l'ONU</strong> : Un comité scientifique de l'ONU alerte sur la mainmise des États-Unis et de la Chine, qui détiennent 90% des principaux modèles d'IA, et appelle au développement de modèles ouverts pour éviter des biais systémiques. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/l-onu-interpelle-les-etats-sur-les-risques-d-une-ia-trop-occidentale-et-trop-inegale-qui-pourrait-rendre-les-populations-dependantes-de-systemes-concus-en-les-ignorant_AD-202607010915.html">BFM Tech</a></li>
+<li><strong>Régulation crypto : MiCA entre en application</strong> : La réglementation européenne MiCA impose depuis le 1er juillet un enregistrement obligatoire pour tous les prestataires d'actifs numériques. Binance ne l'a pas obtenu, contrairement à plus de 240 autres organisations. <a href="https://www.zdnet.fr/actualites/mica-entre-en-vigueur-et-fait-le-menage-dans-le-secteur-des-crypto-monnaies-498099.htm">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>Schneider Electric acquiert Cognite pour 3,1 Md$</strong> : Le groupe français met la main sur le spécialiste norvégien de l'IA industrielle pour renforcer son offre en gestion et automatisation de l'énergie. <a href="https://www.lemondeinformatique.fr/actualites/lire-schneider-electric-rachete-cognite-specialiste-de-l-ia-industrielle-pour-3-1-md$-100616.html">Le Monde Informatique</a></li>
+<li><strong>Cybercriminalité : 5 arrestations dans l'affaire « Marak »</strong> : L'Office anti-cybercriminalité a arrêté cinq suspects impliqués dans le piratage d'établissements de santé. L'enquête vise le groupe derrière l'infostealer « Marak ». <a href="https://www.zdnet.fr/actualites/coup-de-filet-policier-contre-les-cybercriminels-de-marak-498115.htm">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>MongoDB Atlas intègre le reranking natif</strong> : La base de données enrichit sa recherche vectorielle avec une fonction de reclassement des résultats pour améliorer la pertinence des applications RAG. <a href="https://www.lemondeinformatique.fr/actualites/lire-mongodb-integre-nativement-le-reranking-dans-atlas-100617.html">Le Monde Informatique</a></li>
+<li><strong>IA et cybersécurité : le directeur de la CIA parle d'« armes nucléaires numériques »</strong> : John Ratcliffe a qualifié les IA de pointe d'armes de dissuasion numérique, soulignant la course technologique en cours entre les États-Unis et la Chine. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/le-directeur-de-la-cia-compare-les-ia-de-pointe-a-des-armes-nucleaires-numeriques-alors-que-les-etats-unis-et-la-chine-sont-lances-dans-une-forme-de-course-aux-armements-technologiques_AD-202607020051.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>IA pour la détection de vulnérabilités : Azul teste sur la JVM</strong> : Azul évalue les risques des failles Java identifiées automatiquement par IA, avec des modèles capables de produire un exploit avant même leur divulgation publique. <a href="https://www.lemondeinformatique.fr/actualites/lire-azul-evalue-les-risques-lies-aux-failles-des-jvm-detectes-par-l-ia-100620.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>IA et développement logiciel : les agents IA bientôt plus chers que les humains</strong> : Selon Gartner, la hausse de consommation de tokens et la montée en gamme des agents IA rendront ces derniers plus coûteux que les développeurs humains d'ici 2028. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-developpeurs-humains-bientot-moins-chers-que-les-agents-ia-100614.html">Le Monde Informatique</a> · <strong>Cas concret à la SNCF</strong> : SNCF Connect & Tech accélère ses développements IA en adoptant une approche par spécifications, selon son représentant Emmanuel Cordente. L'entité compte 1300 salariés, dont deux tiers d'informaticiens. <a href="https://www.lemondeinformatique.fr/actualites/lire-emmanuel-cordente-sncf-connect-et-tech--l-approche-par-les-specifications-accelere-le-developpement-ia-100602.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Proton : Lumo 2.0 rattrape la concurrence</strong> : Le nouvel assistant IA du fournisseur suisse intègre mémoire, recherche web et génération d'images. Il s'agit d'une mise à niveau majeure pour se rapprocher des fonctionnalités existantes chez les concurrents. <a href="https://next.ink/245328/proton-lance-son-assistant-ia-lumo-2-0-avec-generation-dimages-et-memoire/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Schneider Electric acquiert Cognite pour 3,1 Md$</strong> : L'acquisition vise à renforcer le positionnement de Schneider sur le marché de l'IA industrielle, en intégrant l'éditeur de logiciels Cognite qui affiche environ 170 M$ de chiffre d'affaires annuel. <a href="https://www.frenchweb.fr/pourquoi-schneider-electric-paie-31-milliards-de-dollars-pour-devenir-un-acteur-de-lia-industrielle/462653">Frenchweb</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260701-1910</guid>
-      <pubDate>Wed, 01 Jul 2026 19:10:05 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260702-0919</guid>
+      <pubDate>Thu, 02 Jul 2026 09:19:40 +0000</pubDate>
     </item>
   </channel>
 </rss>
