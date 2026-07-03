@@ -8,204 +8,130 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 03 Jul 2026 09:16:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 13:08:30 +0000</lastBuildDate>
     <item>
-      <title>Digest — 03/07 09h</title>
+      <title>Digest — 03/07 13h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Pegasus cible un eurodéputé impliqué dans l'enquête sur les logiciels espions** : Stelios Kouloglou, ancien membre de la commission d'enquête du Parlement européen sur les abus des logiciels espions commerciaux, a été infecté à deux reprises par Pegasus pendant son mandat. [The Record](https://therecord.media/pegasus-spyware-european-parliament-pega-committee-member)
+- **Pegasus cible un enquêteur parlementaire européen** : Un ancien eurodéputé membre de la commission d'enquête sur les logiciels espions a été infecté à plusieurs reprises par Pegasus. L'affaire illustre le risque de compromission directe des fonctions de contrôle démocratique par les outils de surveillance qu'elles sont censées encadrer. [The Hacker News](https://thehackernews.com/2026/07/european-parliament-member.html)
 
-- **Modèles Claude : accès et performances en retrait** : Anthropic annonce que Claude Fable 5 ne sera temporairement plus accessible via les abonnements classiques après le 7 juillet, tout en évoquant un retour rapide hors forfait. Parallèlement, la version relancée de Claude Fable déçoit les utilisateurs, qui constatent des performances nettement inférieures à celles de la version initiale. [BleepingComputer (accès)](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-isnt-permanently-leaving-subscriptions-anthropic-says/) · [BleepingComputer (performances)](https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-relaunch-disappoints-users-with-nerfed-performance/)
+- **PamStealer : nouveau voleur d'identifiants macOS** : Un infostealer se fait passer pour l'utilitaire open source Maccy afin de dérober les mots de passe de session macOS. Il exploite le fichier PAM (Pluggable Authentication Module) pour intercepter les credentials, une méthode discrète et persistante. [The Hacker News](https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Extension Chromium malveillante usurpant Perplexity AI** : Une extension frauduleuse se faisant passer pour Perplexity AI a été retirée du Chrome Web Store ; elle collectait des données utilisateur et exécutait du code non autorisé. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-une-extension-usurpant-perplexity-ai-dans-chromium-decouverte-100634.html)
+- **IA offensive chinoise** : Deux nouveaux LLM issus de laboratoires chinois atteignent les performances des modèles américains de pointe, renforçant les capacités des attaquants (génération de code malveillant, spear-phishing) plus rapidement que les outils de défense ne s'adaptent. [Dark Reading](https://www.darkreading.com/cyber-risk/chinese-llms-broaden-gap-between-attackers-and-defenders)
 
-- **Suez déploie la 5G privée pour sa vidéosurveillance industrielle** : Suez expérimente un couplage vidéosurveillance et 5G privée sur ses sites industriels pour gagner en flexibilité de déploiement tout en maîtrisant la souveraineté et la sécurité des flux de données. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-suez-teste-la-videosurveillance-en-5g-privee-100630.html)
+- **Faille Citrix NetScaler (type CitrixBleed)** : Une nouvelle vulnérabilité de fuite d'information dans les appliances NetScaler, similaire à CitrixBleed, fait l'objet de tentatives d'exploitation actives après la publication d'un correctif cette semaine. [CSO Online](https://www.csoonline.com/article/4192741/new-citrixbleed-like-netscaler-flaw-sees-exploit-attempts-in-the-wild.html)
 
-## IA — Recherche
-
-- **Sécurité des agents LLM à l'échelle** : Un cadre de test systématique est proposé pour découvrir et vérifier les risques de sécurité des agents LLM, en s'appuyant sur des preuves plutôt que sur des scénarios conçus manuellement. [Safety Testing LLM Agents at Scale](https://arxiv.org/abs/2607.01793)
-
-- **Validation des décisions en réseaux télécoms autonomes** : Un mécanisme de garde-fou basé sur la criticité est introduit pour intercepter et valider en temps réel les décisions des agents IA dans les réseaux autonomes de niveaux 4-5. [Criticality-Based Guard Rail Validation](https://arxiv.org/abs/2607.02210)
-
-- **Surveillance en ligne de la sûreté des LLM** : Un moniteur temps réel simple est étudié pour détecter les dérives de sûreté des LLM en production et déclencher une alerte, complétant l'alignement initial. [Online Safety Monitoring for LLMs](https://arxiv.org/abs/2607.02510)
-
-- **Nouvelles surfaces d'attaque des agents de code** : Deux travaux distincts alertent sur des risques émergents : les agents de code peuvent distribuer des attaques à travers des pull requests successives en exploitant la persistance du codebase, et les LLM de génération de code restent vulnérables à la production de code non sécurisé, nécessitant des méthodes de red teaming automatisé multi-tours. [Distributed Attacks in Persistent-State AI Control](https://arxiv.org/abs/2607.02514) · [RedCoder: Automated Multi-Turn Red Teaming for Code LLMs](https://arxiv.org/abs/2507.22063)
-
-- **Analyse de provenance pour l'alignement des agents** : Face aux actions non alignées des agents LLM, l'analyse de provenance est proposée comme méthode pour tracer et vérifier que les appels d'outils respectent l'intention de l'utilisateur. [Safeguarding LLM Agents from Misalignment through Provenance Analysis](https://arxiv.org/abs/2607.01236)
-
-- **Compression du cache KV pour les LLM de raisonnement** : Une technique de compression par fenêtre glissante du cache clé-valeur (KV) permet de réduire la latence et d'augmenter le débit d'inférence pour les longs raisonnements en chaîne de pensée. [Kara: Efficient Reasoning LLM Serving](https://arxiv.org/abs/2607.01237)
-
-- **Gouvernance des systèmes agentiques** : Un cadre organisationnel de "Risk Architecture" est proposé pour adapter la gestion des risques logiciels aux équipes d'ingénierie IA, en prenant en compte le comportement non déterministe et continu des systèmes agentiques. [Risk Architecture for AI-Native Engineering Teams](https://arxiv.org/abs/2607.01421)
-
-- **Audit et évaluation des modèles** : Plusieurs travaux convergent sur les défis de l'audit : une méthode à deux signaux permet de détecter si un modèle open-weight a été "ablité" de son mécanisme de refus ; une étude révèle que les outils de détection de contamination des benchmarks échouent face aux changements de distribution et à l'échelle ; et un benchmark isomorphe (ISOSCI) est créé pour isoler la capacité de raisonnement de la simple récupération de connaissances. [Has This Checkpoint Been Abliterated?](https://arxiv.org/abs/2607.01854) · [The Reliability Gap in Benchmark Auditing](https://arxiv.org/abs/2606.03305) · [IsoSci Benchmark](https://arxiv.org/abs/2607.01431)
-
-- **Taxonomies et cadres de risque pour l'IA** : Selon deux papiers, le paysage de l'évaluation des risques reste fragmenté. L'un propose une vue d'ensemble pour les systèmes intelligents sous l'AI Act, l'autre présente une taxonomie ouverte (Eticas) conçue pour opérationnaliser les audits. [Overview of Risk Assessment and Management for Intelligent Systems](https://arxiv.org/abs/2607.02197) · [The Eticas AI Risk Taxonomy](https://arxiv.org/abs/2607.02201)
-
-- **Sécurité des entrées multilingues** : HaloGuard 1.0, un classifieur constitutionnel open-weight, atteint des performances de pointe en sûreté des prompts en anglais et multilingues avec une taille de modèle réduite de 90%. [HaloGuard 1.0](https://arxiv.org/abs/2607.02079)
-
-- **Impact des agents IA sur l'open source** : Une étude causale montre que l'adoption d'agents de codage IA dans les projets open source ne décourage pas la participation des nouveaux contributeurs, contrairement aux craintes initiales. [Decoupling Code Complexity from Newcomer Participation](https://arxiv.org/abs/2607.01810)
-
-- **Émergence d'objectifs latents dans les débats multi-agents** : La structure sociale (rôle, audience) influence ce que les agents LLM disent lors de débats, faisant émerger des objectifs latents sans qu'ils soient explicitement programmés. [What LLM Agents Say When No One Is Watching](https://arxiv.org/abs/2607.02507)
-
-- **Détection de vulnérabilités en conditions réelles** : Les modèles de deep learning pour la détection de vulnérabilités, bien que performants sur benchmarks, montrent des limites significatives en conditions réelles, selon une évaluation pratique. [From Lab to Reality: A Practical Evaluation](https://arxiv.org/abs/2512.10485)
-
-- **Architecture des systèmes agentiques** : L'architecture de Claude Code est analysée et comparée à d'autres outils, offrant un aperçu de l'espace de conception des systèmes agents actuels et futurs. [Dive into Claude Code](https://arxiv.org/abs/2604.14228)
-
-- **Contrats adaptatifs pour la délégation IA** : Des contrats adaptatifs sont proposés pour optimiser le rapport coût-efficacité de la délégation de tâches à des fournisseurs d'IA, en tenant compte du bruit dans l'évaluation. [Adaptive Contracts for Cost-Effective AI Delegation](https://arxiv.org/abs/2603.17212)
-
-- **Manipulation du fact-checking participatif** : Les systèmes de fact-checking collaboratif des grandes plateformes sont vulnérables à des manipulations coordonnées visant à influencer le consensus. [Gaming Consensus](https://arxiv.org/abs/2607.01824)
+- **Surveillance par caméras Flock** : Une présentation interne révèle que le système Flock peut identifier et pister des véhicules sans plaque d'immatriculation, via une « empreinte véhicule » combinant autocollants, porte-bagages et plaques temporaires. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/flock-cameras-can-surveil-cars-without-license-plates.html)
 
 ## Actualité tech FR
 
-- **Souveraineté : la France écarte Palantir** : La France officialise sa rupture avec Palantir pour ses services de renseignement, un choix motivé par la dépendance stratégique envers Washington et le besoin de souveraineté numérique sur les données sensibles. [ZDNet](https://www.zdnet.fr/actualites/zd-tech-voici-pourquoi-la-france-ecarte-officiellement-palantir-de-son-renseignement-497588.htm)
+- **Microsoft Authenticator bloque les terminaux jailbreakés en entreprise** : L'application rejette désormais les appareils Android et iOS débridés, renforçant la posture de sécurité mais pouvant impacter les flottes mobiles et le BYOD. [Next.ink](https://next.ink/245658/microsoft-authenticator-ne-veut-plus-dappareils-jailbreakes-en-entreprise/)
 
-- **Google : amende de 4,1 Md€ définitivement confirmée** : La justice européenne a rejeté le dernier recours de Google, rendant définitive l'amende record pour abus de position dominante sur la recherche en ligne. [ZDNet](https://www.zdnet.fr/actualites/amende-a-41-milliards-deuros-google-ny-coupera-pas-498227.htm)
+- **Nouvelle intrusion dans une agence fédérale américaine** : Le réseau de coordination du renseignement non classifié a été compromis, sans revendication à ce stade, relançant les doutes sur la capacité de l'État fédéral à sécuriser ses agences. [Next.ink](https://next.ink/245586/nouvelle-intrusion-dans-une-agence-du-gouvernement-americain/)
 
-- **Extension Chromium malveillante usurpant Perplexity AI** : Une extension frauduleuse pour Chromium se faisant passer pour Perplexity AI a été détectée et supprimée par Google. Le niveau de détail disponible dans l'article est limité. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-une-extension-usurpant-perplexity-ai-dans-chromium-decouverte-100634.html)
+- **Phishing record en 2025 et angles morts défensifs** : 3,8 millions d'attaques recensées l'an dernier, un volume qui masque une sophistication croissante ; les éditeurs doivent adopter le point de vue de l'attaquant pour réduire l'écart entre perception et réalité du terrain. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552155-anatomie-du-phishing-moderne-le-clic-anodin-qui-coute-tout/) · [Journal du Net](https://www.journaldunet.com/cybersecurite/1552153-quand-l-experience-de-terrain-revele-les-angles-morts-de-la-cybersecurite/)
 
-- **Faille "Hide My Email" d'Apple non corrigée depuis un an** : Une vulnérabilité dans la fonction "Hide My Email" d'iCloud+ expose les adresses réelles des utilisateurs. Signalée à Apple en 2025, elle n'a pas été résolue malgré les échanges. [BFM Tech](https://www.bfmtv.com/tech/apple/chez-apple-depuis-un-an-une-faille-de-securite-dans-la-fonction-hide-my-email-revele-les-courriels-des-utilisateurs-qui-devraient-etre-caches_AV-202607030233.html)
+- **ChatControl de retour au Conseil européen** : Le texte autorisant la surveillance volontaire des messageries pour détecter les contenus pédocriminels est remis à l'ordre du jour après son rejet fin mars. [Next.ink](https://next.ink/245484/chatcontrol-nouvelle-tentative-de-prolonger-la-surveillance-des-messageries/)
 
-- **Lutte contre le code IA dans l'open source : Godot durcit ses règles** : Face au volume de pull requests générées par IA, le moteur de jeu Godot interdit les contributions issues d'agents autonomes et du "vibe coding", et renforce ses exigences de qualité. [Next.ink](https://next.ink/245539/godot-serre-la-vis-face-aux-pull-requests-generees-par-ia/)
+- **Dépendance persistante aux modèles d'IA américains** : Anthropic a réactivé Claude Fable 5 après la levée des contrôles à l'export, mais cet épisode souligne le risque de dépendance des organisations européennes vis-à-vis de fournisseurs soumis au droit US. [Actu IA](https://www.actuia.com/actualite/washington-retablit-fable-5-mais-le-risque-de-dependance-aux-modeles-americains-demeure-entier/)
 
-- **IA en entreprise : Microsoft crée une division de 6 000 personnes** : Microsoft investit 2,5 Md$ dans une nouvelle unité dédiée au déploiement de l'IA au sein des entreprises. [ZDNet](https://www.zdnet.fr/actualites/ia-en-entreprise-microsoft-lance-a-son-tour-une-unite-dediee-de-6-000-personnes-498239.htm)
+- **Souveraineté IA : le Portugal livre Amália pendant que la France débat** : Le Portugal lance un LLM open source en portugais pour 7 M€, un contre-exemple face à l'absence de modèle public français et à la dépendance envers Mistral. [Actu IA](https://www.actuia.com/actualite/pendant-que-la-france-debat-de-souverainete-ia-le-portugal-a-livre-la-sienne-pour-7-meur/)
 
-- **L'IA complexifie l'entrée sur le marché du travail** : L'IA générative élève les exigences de compétences pour les postes juniors, rendant le marché du travail plus difficile pour les débutants, selon Le Monde Informatique. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-ia-durcit-les-exigences-de-competences-pour-les-emplois-juniors-100561.html)
+- **OpenAI propose 5 % de son capital à l'État américain** : La suggestion d'Altman et l'appel aux rivaux esquissent un fonds souverain IA et illustrent un rapport État-industrie distinct de la voie européenne. [Actu IA](https://www.actuia.com/actualite/fonds-souverain-de-lia-ce-que-la-proposition-daltman-revele-du-rapport-etat-industrie-americain/)
 
-- **Régulation et avancées de l'IA** :
-    - L'ONU alerte sur la vitesse des progrès de l'IA qui pourrait dépasser la capacité des États à la gouverner et appelle à une coopération internationale. [Next.ink](https://next.ink/245530/lonu-alerte-sur-la-rapidite-des-progres-de-lia/)
-    - Apple ouvre Safari aux agents IA via un pont MCP officiel pour le débogage et les tests de compatibilité, selon Next.ink. [Next.ink](https://next.ink/brief-article/apple-ouvre-la-porte-de-safari-aux-agents-ia/)
+- **La Californie déploie Poppy, IA souveraine pour ses agents publics** : Une plateforme sans fuite de données et indépendante de tout fournisseur unique, un modèle opérationnel pertinent pour les administrations françaises et européennes. [Actu IA](https://www.actuia.com/actualite/ce-que-poppy-lia-generative-de-la-californie-apprend-a-ladministration-europeenne/)
 
-- **Mageia 10 est disponible** : La distribution Linux communautaire française Mageia, héritière de Mandrake, est sortie en version 10 le 30 juin. [Next.ink](https://next.ink/brief-article/mageia-10-disponible-sans-trompettes-ni-fanfare/)</description>
+- **Microsoft et Amazon copient Palantir avec des ingénieurs IA chez le client** : Les deux géants créent des entités de Forward Deployed Engineering, plaçant des ingénieurs directement chez les entreprises pour accélérer l'adoption de l'IA. [Next.ink](https://next.ink/245579/marche-entreprise-les-acteurs-de-lia-misent-sur-des-ingenieurs-places-chez-le-client/)
+
+- **Trafic de semi-conducteurs : deux employés de Super Micro arrêtés** : Soupçonnés d'avoir exporté illégalement des serveurs IA vers la Chine en contournant les sanctions américaines. [BFM Tech](https://www.bfmtv.com/tech/actualites/deux-salaries-de-l-americain-super-micro-computer-ont-ete-places-en-detention-pour-trafic-presume-de-semiconducteurs-avec-la-chine_AD-202607030399.html)
+
+- **L'IA n'a pas (encore) tué Google Search** : Une étude sur plus d'un million de mots-clés montre que le volume de recherche n'a baissé que de 2 % depuis 2023, loin des 25 % prédits par Gartner. [Siècle Digital](https://siecledigital.fr/2026/07/03/lia-est-elle-vraiment-en-train-de-tuer-google-cette-etude-repond-enfin/)
+
+- **L'IA fait exploser les émissions carbone de Google et Amazon** : +18 % pour Google en un an, +16 % pour Amazon ; leurs engagements climatiques s'éloignent à mesure que l'infrastructure IA croît. [Siècle Digital](https://siecledigital.fr/2026/07/03/la-course-a-lia-fait-flamber-les-emissions-de-gaz-a-effet-de-serre-de-google-et-amazon/)
+
+- **Google condamné définitivement à 4,1 milliards d'euros par l'Europe** : La plus haute cour européenne confirme l'amende antitrust après huit ans de procédure, un montant supérieur au budget annuel de la CNIL. [Siècle Digital](https://siecledigital.fr/2026/07/03/google-condamne-a-payer-41-milliards-deuros-apres-sa-defaite-definitive-face-a-leurope/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Pegasus cible un eurodéputé impliqué dans l'enquête sur les logiciels espions</strong> : Stelios Kouloglou, ancien membre de la commission d'enquête du Parlement européen sur les abus des logiciels espions commerciaux, a été infecté à deux reprises par Pegasus pendant son mandat. <a href="https://therecord.media/pegasus-spyware-european-parliament-pega-committee-member">The Record</a></li>
+<li><strong>Pegasus cible un enquêteur parlementaire européen</strong> : Un ancien eurodéputé membre de la commission d'enquête sur les logiciels espions a été infecté à plusieurs reprises par Pegasus. L'affaire illustre le risque de compromission directe des fonctions de contrôle démocratique par les outils de surveillance qu'elles sont censées encadrer. <a href="https://thehackernews.com/2026/07/european-parliament-member.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles Claude : accès et performances en retrait</strong> : Anthropic annonce que Claude Fable 5 ne sera temporairement plus accessible via les abonnements classiques après le 7 juillet, tout en évoquant un retour rapide hors forfait. Parallèlement, la version relancée de Claude Fable déçoit les utilisateurs, qui constatent des performances nettement inférieures à celles de la version initiale. <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-isnt-permanently-leaving-subscriptions-anthropic-says/">BleepingComputer (accès)</a> · <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-relaunch-disappoints-users-with-nerfed-performance/">BleepingComputer (performances)</a></li>
+<li><strong>PamStealer : nouveau voleur d'identifiants macOS</strong> : Un infostealer se fait passer pour l'utilitaire open source Maccy afin de dérober les mots de passe de session macOS. Il exploite le fichier PAM (Pluggable Authentication Module) pour intercepter les credentials, une méthode discrète et persistante. <a href="https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Extension Chromium malveillante usurpant Perplexity AI</strong> : Une extension frauduleuse se faisant passer pour Perplexity AI a été retirée du Chrome Web Store ; elle collectait des données utilisateur et exécutait du code non autorisé. <a href="https://www.lemondeinformatique.fr/actualites/lire-une-extension-usurpant-perplexity-ai-dans-chromium-decouverte-100634.html">Le Monde Informatique</a></li>
+<li><strong>IA offensive chinoise</strong> : Deux nouveaux LLM issus de laboratoires chinois atteignent les performances des modèles américains de pointe, renforçant les capacités des attaquants (génération de code malveillant, spear-phishing) plus rapidement que les outils de défense ne s'adaptent. <a href="https://www.darkreading.com/cyber-risk/chinese-llms-broaden-gap-between-attackers-and-defenders">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Suez déploie la 5G privée pour sa vidéosurveillance industrielle</strong> : Suez expérimente un couplage vidéosurveillance et 5G privée sur ses sites industriels pour gagner en flexibilité de déploiement tout en maîtrisant la souveraineté et la sécurité des flux de données. <a href="https://www.lemondeinformatique.fr/actualites/lire-suez-teste-la-videosurveillance-en-5g-privee-100630.html">Le Monde Informatique</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Sécurité des agents LLM à l'échelle</strong> : Un cadre de test systématique est proposé pour découvrir et vérifier les risques de sécurité des agents LLM, en s'appuyant sur des preuves plutôt que sur des scénarios conçus manuellement. <a href="https://arxiv.org/abs/2607.01793">Safety Testing LLM Agents at Scale</a></li>
+<li><strong>Faille Citrix NetScaler (type CitrixBleed)</strong> : Une nouvelle vulnérabilité de fuite d'information dans les appliances NetScaler, similaire à CitrixBleed, fait l'objet de tentatives d'exploitation actives après la publication d'un correctif cette semaine. <a href="https://www.csoonline.com/article/4192741/new-citrixbleed-like-netscaler-flaw-sees-exploit-attempts-in-the-wild.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Validation des décisions en réseaux télécoms autonomes</strong> : Un mécanisme de garde-fou basé sur la criticité est introduit pour intercepter et valider en temps réel les décisions des agents IA dans les réseaux autonomes de niveaux 4-5. <a href="https://arxiv.org/abs/2607.02210">Criticality-Based Guard Rail Validation</a></li>
-</ul>
-
-<ul>
-<li><strong>Surveillance en ligne de la sûreté des LLM</strong> : Un moniteur temps réel simple est étudié pour détecter les dérives de sûreté des LLM en production et déclencher une alerte, complétant l'alignement initial. <a href="https://arxiv.org/abs/2607.02510">Online Safety Monitoring for LLMs</a></li>
-</ul>
-
-<ul>
-<li><strong>Nouvelles surfaces d'attaque des agents de code</strong> : Deux travaux distincts alertent sur des risques émergents : les agents de code peuvent distribuer des attaques à travers des pull requests successives en exploitant la persistance du codebase, et les LLM de génération de code restent vulnérables à la production de code non sécurisé, nécessitant des méthodes de red teaming automatisé multi-tours. <a href="https://arxiv.org/abs/2607.02514">Distributed Attacks in Persistent-State AI Control</a> · <a href="https://arxiv.org/abs/2507.22063">RedCoder: Automated Multi-Turn Red Teaming for Code LLMs</a></li>
-</ul>
-
-<ul>
-<li><strong>Analyse de provenance pour l'alignement des agents</strong> : Face aux actions non alignées des agents LLM, l'analyse de provenance est proposée comme méthode pour tracer et vérifier que les appels d'outils respectent l'intention de l'utilisateur. <a href="https://arxiv.org/abs/2607.01236">Safeguarding LLM Agents from Misalignment through Provenance Analysis</a></li>
-</ul>
-
-<ul>
-<li><strong>Compression du cache KV pour les LLM de raisonnement</strong> : Une technique de compression par fenêtre glissante du cache clé-valeur (KV) permet de réduire la latence et d'augmenter le débit d'inférence pour les longs raisonnements en chaîne de pensée. <a href="https://arxiv.org/abs/2607.01237">Kara: Efficient Reasoning LLM Serving</a></li>
-</ul>
-
-<ul>
-<li><strong>Gouvernance des systèmes agentiques</strong> : Un cadre organisationnel de "Risk Architecture" est proposé pour adapter la gestion des risques logiciels aux équipes d'ingénierie IA, en prenant en compte le comportement non déterministe et continu des systèmes agentiques. <a href="https://arxiv.org/abs/2607.01421">Risk Architecture for AI-Native Engineering Teams</a></li>
-</ul>
-
-<ul>
-<li><strong>Audit et évaluation des modèles</strong> : Plusieurs travaux convergent sur les défis de l'audit : une méthode à deux signaux permet de détecter si un modèle open-weight a été "ablité" de son mécanisme de refus ; une étude révèle que les outils de détection de contamination des benchmarks échouent face aux changements de distribution et à l'échelle ; et un benchmark isomorphe (ISOSCI) est créé pour isoler la capacité de raisonnement de la simple récupération de connaissances. <a href="https://arxiv.org/abs/2607.01854">Has This Checkpoint Been Abliterated?</a> · <a href="https://arxiv.org/abs/2606.03305">The Reliability Gap in Benchmark Auditing</a> · <a href="https://arxiv.org/abs/2607.01431">IsoSci Benchmark</a></li>
-</ul>
-
-<ul>
-<li><strong>Taxonomies et cadres de risque pour l'IA</strong> : Selon deux papiers, le paysage de l'évaluation des risques reste fragmenté. L'un propose une vue d'ensemble pour les systèmes intelligents sous l'AI Act, l'autre présente une taxonomie ouverte (Eticas) conçue pour opérationnaliser les audits. <a href="https://arxiv.org/abs/2607.02197">Overview of Risk Assessment and Management for Intelligent Systems</a> · <a href="https://arxiv.org/abs/2607.02201">The Eticas AI Risk Taxonomy</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité des entrées multilingues</strong> : HaloGuard 1.0, un classifieur constitutionnel open-weight, atteint des performances de pointe en sûreté des prompts en anglais et multilingues avec une taille de modèle réduite de 90%. <a href="https://arxiv.org/abs/2607.02079">HaloGuard 1.0</a></li>
-</ul>
-
-<ul>
-<li><strong>Impact des agents IA sur l'open source</strong> : Une étude causale montre que l'adoption d'agents de codage IA dans les projets open source ne décourage pas la participation des nouveaux contributeurs, contrairement aux craintes initiales. <a href="https://arxiv.org/abs/2607.01810">Decoupling Code Complexity from Newcomer Participation</a></li>
-</ul>
-
-<ul>
-<li><strong>Émergence d'objectifs latents dans les débats multi-agents</strong> : La structure sociale (rôle, audience) influence ce que les agents LLM disent lors de débats, faisant émerger des objectifs latents sans qu'ils soient explicitement programmés. <a href="https://arxiv.org/abs/2607.02507">What LLM Agents Say When No One Is Watching</a></li>
-</ul>
-
-<ul>
-<li><strong>Détection de vulnérabilités en conditions réelles</strong> : Les modèles de deep learning pour la détection de vulnérabilités, bien que performants sur benchmarks, montrent des limites significatives en conditions réelles, selon une évaluation pratique. <a href="https://arxiv.org/abs/2512.10485">From Lab to Reality: A Practical Evaluation</a></li>
-</ul>
-
-<ul>
-<li><strong>Architecture des systèmes agentiques</strong> : L'architecture de Claude Code est analysée et comparée à d'autres outils, offrant un aperçu de l'espace de conception des systèmes agents actuels et futurs. <a href="https://arxiv.org/abs/2604.14228">Dive into Claude Code</a></li>
-</ul>
-
-<ul>
-<li><strong>Contrats adaptatifs pour la délégation IA</strong> : Des contrats adaptatifs sont proposés pour optimiser le rapport coût-efficacité de la délégation de tâches à des fournisseurs d'IA, en tenant compte du bruit dans l'évaluation. <a href="https://arxiv.org/abs/2603.17212">Adaptive Contracts for Cost-Effective AI Delegation</a></li>
-</ul>
-
-<ul>
-<li><strong>Manipulation du fact-checking participatif</strong> : Les systèmes de fact-checking collaboratif des grandes plateformes sont vulnérables à des manipulations coordonnées visant à influencer le consensus. <a href="https://arxiv.org/abs/2607.01824">Gaming Consensus</a></li>
+<li><strong>Surveillance par caméras Flock</strong> : Une présentation interne révèle que le système Flock peut identifier et pister des véhicules sans plaque d'immatriculation, via une « empreinte véhicule » combinant autocollants, porte-bagages et plaques temporaires. <a href="https://www.schneier.com/blog/archives/2026/07/flock-cameras-can-surveil-cars-without-license-plates.html">Schneier on Security</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Souveraineté : la France écarte Palantir</strong> : La France officialise sa rupture avec Palantir pour ses services de renseignement, un choix motivé par la dépendance stratégique envers Washington et le besoin de souveraineté numérique sur les données sensibles. <a href="https://www.zdnet.fr/actualites/zd-tech-voici-pourquoi-la-france-ecarte-officiellement-palantir-de-son-renseignement-497588.htm">ZDNet</a></li>
+<li><strong>Microsoft Authenticator bloque les terminaux jailbreakés en entreprise</strong> : L'application rejette désormais les appareils Android et iOS débridés, renforçant la posture de sécurité mais pouvant impacter les flottes mobiles et le BYOD. <a href="https://next.ink/245658/microsoft-authenticator-ne-veut-plus-dappareils-jailbreakes-en-entreprise/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Google : amende de 4,1 Md€ définitivement confirmée</strong> : La justice européenne a rejeté le dernier recours de Google, rendant définitive l'amende record pour abus de position dominante sur la recherche en ligne. <a href="https://www.zdnet.fr/actualites/amende-a-41-milliards-deuros-google-ny-coupera-pas-498227.htm">ZDNet</a></li>
+<li><strong>Nouvelle intrusion dans une agence fédérale américaine</strong> : Le réseau de coordination du renseignement non classifié a été compromis, sans revendication à ce stade, relançant les doutes sur la capacité de l'État fédéral à sécuriser ses agences. <a href="https://next.ink/245586/nouvelle-intrusion-dans-une-agence-du-gouvernement-americain/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Extension Chromium malveillante usurpant Perplexity AI</strong> : Une extension frauduleuse pour Chromium se faisant passer pour Perplexity AI a été détectée et supprimée par Google. Le niveau de détail disponible dans l'article est limité. <a href="https://www.lemondeinformatique.fr/actualites/lire-une-extension-usurpant-perplexity-ai-dans-chromium-decouverte-100634.html">Le Monde Informatique</a></li>
+<li><strong>Phishing record en 2025 et angles morts défensifs</strong> : 3,8 millions d'attaques recensées l'an dernier, un volume qui masque une sophistication croissante ; les éditeurs doivent adopter le point de vue de l'attaquant pour réduire l'écart entre perception et réalité du terrain. <a href="https://www.journaldunet.com/cybersecurite/1552155-anatomie-du-phishing-moderne-le-clic-anodin-qui-coute-tout/">Journal du Net</a> · <a href="https://www.journaldunet.com/cybersecurite/1552153-quand-l-experience-de-terrain-revele-les-angles-morts-de-la-cybersecurite/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Faille "Hide My Email" d'Apple non corrigée depuis un an</strong> : Une vulnérabilité dans la fonction "Hide My Email" d'iCloud+ expose les adresses réelles des utilisateurs. Signalée à Apple en 2025, elle n'a pas été résolue malgré les échanges. <a href="https://www.bfmtv.com/tech/apple/chez-apple-depuis-un-an-une-faille-de-securite-dans-la-fonction-hide-my-email-revele-les-courriels-des-utilisateurs-qui-devraient-etre-caches_AV-202607030233.html">BFM Tech</a></li>
+<li><strong>ChatControl de retour au Conseil européen</strong> : Le texte autorisant la surveillance volontaire des messageries pour détecter les contenus pédocriminels est remis à l'ordre du jour après son rejet fin mars. <a href="https://next.ink/245484/chatcontrol-nouvelle-tentative-de-prolonger-la-surveillance-des-messageries/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Lutte contre le code IA dans l'open source : Godot durcit ses règles</strong> : Face au volume de pull requests générées par IA, le moteur de jeu Godot interdit les contributions issues d'agents autonomes et du "vibe coding", et renforce ses exigences de qualité. <a href="https://next.ink/245539/godot-serre-la-vis-face-aux-pull-requests-generees-par-ia/">Next.ink</a></li>
+<li><strong>Dépendance persistante aux modèles d'IA américains</strong> : Anthropic a réactivé Claude Fable 5 après la levée des contrôles à l'export, mais cet épisode souligne le risque de dépendance des organisations européennes vis-à-vis de fournisseurs soumis au droit US. <a href="https://www.actuia.com/actualite/washington-retablit-fable-5-mais-le-risque-de-dependance-aux-modeles-americains-demeure-entier/">Actu IA</a></li>
 </ul>
 
 <ul>
-<li><strong>IA en entreprise : Microsoft crée une division de 6 000 personnes</strong> : Microsoft investit 2,5 Md$ dans une nouvelle unité dédiée au déploiement de l'IA au sein des entreprises. <a href="https://www.zdnet.fr/actualites/ia-en-entreprise-microsoft-lance-a-son-tour-une-unite-dediee-de-6-000-personnes-498239.htm">ZDNet</a></li>
+<li><strong>Souveraineté IA : le Portugal livre Amália pendant que la France débat</strong> : Le Portugal lance un LLM open source en portugais pour 7 M€, un contre-exemple face à l'absence de modèle public français et à la dépendance envers Mistral. <a href="https://www.actuia.com/actualite/pendant-que-la-france-debat-de-souverainete-ia-le-portugal-a-livre-la-sienne-pour-7-meur/">Actu IA</a></li>
 </ul>
 
 <ul>
-<li><strong>L'IA complexifie l'entrée sur le marché du travail</strong> : L'IA générative élève les exigences de compétences pour les postes juniors, rendant le marché du travail plus difficile pour les débutants, selon Le Monde Informatique. <a href="https://www.lemondeinformatique.fr/actualites/lire-l-ia-durcit-les-exigences-de-competences-pour-les-emplois-juniors-100561.html">Le Monde Informatique</a></li>
+<li><strong>OpenAI propose 5 % de son capital à l'État américain</strong> : La suggestion d'Altman et l'appel aux rivaux esquissent un fonds souverain IA et illustrent un rapport État-industrie distinct de la voie européenne. <a href="https://www.actuia.com/actualite/fonds-souverain-de-lia-ce-que-la-proposition-daltman-revele-du-rapport-etat-industrie-americain/">Actu IA</a></li>
 </ul>
 
 <ul>
-<li><strong>Régulation et avancées de l'IA</strong> :</li>
+<li><strong>La Californie déploie Poppy, IA souveraine pour ses agents publics</strong> : Une plateforme sans fuite de données et indépendante de tout fournisseur unique, un modèle opérationnel pertinent pour les administrations françaises et européennes. <a href="https://www.actuia.com/actualite/ce-que-poppy-lia-generative-de-la-californie-apprend-a-ladministration-europeenne/">Actu IA</a></li>
 </ul>
-    - L'ONU alerte sur la vitesse des progrès de l'IA qui pourrait dépasser la capacité des États à la gouverner et appelle à une coopération internationale. <a href="https://next.ink/245530/lonu-alerte-sur-la-rapidite-des-progres-de-lia/">Next.ink</a>
-    - Apple ouvre Safari aux agents IA via un pont MCP officiel pour le débogage et les tests de compatibilité, selon Next.ink. <a href="https://next.ink/brief-article/apple-ouvre-la-porte-de-safari-aux-agents-ia/">Next.ink</a>
 
 <ul>
-<li><strong>Mageia 10 est disponible</strong> : La distribution Linux communautaire française Mageia, héritière de Mandrake, est sortie en version 10 le 30 juin. <a href="https://next.ink/brief-article/mageia-10-disponible-sans-trompettes-ni-fanfare/">Next.ink</a></li>
+<li><strong>Microsoft et Amazon copient Palantir avec des ingénieurs IA chez le client</strong> : Les deux géants créent des entités de Forward Deployed Engineering, plaçant des ingénieurs directement chez les entreprises pour accélérer l'adoption de l'IA. <a href="https://next.ink/245579/marche-entreprise-les-acteurs-de-lia-misent-sur-des-ingenieurs-places-chez-le-client/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Trafic de semi-conducteurs : deux employés de Super Micro arrêtés</strong> : Soupçonnés d'avoir exporté illégalement des serveurs IA vers la Chine en contournant les sanctions américaines. <a href="https://www.bfmtv.com/tech/actualites/deux-salaries-de-l-americain-super-micro-computer-ont-ete-places-en-detention-pour-trafic-presume-de-semiconducteurs-avec-la-chine_AD-202607030399.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>L'IA n'a pas (encore) tué Google Search</strong> : Une étude sur plus d'un million de mots-clés montre que le volume de recherche n'a baissé que de 2 % depuis 2023, loin des 25 % prédits par Gartner. <a href="https://siecledigital.fr/2026/07/03/lia-est-elle-vraiment-en-train-de-tuer-google-cette-etude-repond-enfin/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>L'IA fait exploser les émissions carbone de Google et Amazon</strong> : +18 % pour Google en un an, +16 % pour Amazon ; leurs engagements climatiques s'éloignent à mesure que l'infrastructure IA croît. <a href="https://siecledigital.fr/2026/07/03/la-course-a-lia-fait-flamber-les-emissions-de-gaz-a-effet-de-serre-de-google-et-amazon/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Google condamné définitivement à 4,1 milliards d'euros par l'Europe</strong> : La plus haute cour européenne confirme l'amende antitrust après huit ans de procédure, un montant supérieur au budget annuel de la CNIL. <a href="https://siecledigital.fr/2026/07/03/google-condamne-a-payer-41-milliards-deuros-apres-sa-defaite-definitive-face-a-leurope/">Siècle Digital</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260703-0916</guid>
-      <pubDate>Fri, 03 Jul 2026 09:16:39 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260703-1308</guid>
+      <pubDate>Fri, 03 Jul 2026 13:08:30 +0000</pubDate>
     </item>
   </channel>
 </rss>
