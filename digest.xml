@@ -8,130 +8,110 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 03 Jul 2026 13:08:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 18:21:16 +0000</lastBuildDate>
     <item>
-      <title>Digest — 03/07 13h</title>
+      <title>Digest — 03/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Pegasus cible un enquêteur parlementaire européen** : Un ancien eurodéputé membre de la commission d'enquête sur les logiciels espions a été infecté à plusieurs reprises par Pegasus. L'affaire illustre le risque de compromission directe des fonctions de contrôle démocratique par les outils de surveillance qu'elles sont censées encadrer. [The Hacker News](https://thehackernews.com/2026/07/european-parliament-member.html)
+- **Démantèlement du proxy résidentiel NetNut** : Une opération conjointe impliquant Google a neutralisé NetNut, un réseau proxy résidentiel exploitant environ 2 millions d'appareils Android compromis (téléviseurs connectés, boîtiers de streaming). La désactivation des domaines de commande et contrôle coupe l'accès des clients du service à ce parc de machines infectées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/netnut-proxy-network-disrupted-2-million-infected-devices-cut-off/)
 
-- **PamStealer : nouveau voleur d'identifiants macOS** : Un infostealer se fait passer pour l'utilitaire open source Maccy afin de dérober les mots de passe de session macOS. Il exploite le fichier PAM (Pluggable Authentication Module) pour intercepter les credentials, une méthode discrète et persistante. [The Hacker News](https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html)
+- **Nouveaux paquets npm malveillants liés à la Corée du Nord** : Des attaquants ont publié les paquets `rollup-packages-polyfill-core` et `rollup-runtime-polyfill-core` sur npm, usurpant l'identité d'outils légitimes de polyfill. Leur but est le vol de secrets développeurs et l'accès distant aux machines compromises. [The Hacker News](https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html)
+
+- **Campagne Armored Likho contre les gouvernements et le secteur électrique** : Un acteur non documenté, mêlant motivations financières et cyber-espionnage, cible des agences gouvernementales et le secteur de l'énergie en Russie, au Brésil et au Kazakhstan, en s'appuyant sur le stealer BusySnake. [The Hacker News](https://thehackernews.com/2026/07/armored-likho-targets-government.html)
+
+- **ARToken : nouvelle plateforme de PhaaS liée à EvilTokens** : La plateforme de phishing-as-a-service ARToken, affiliée à EvilTokens, expose un kit complet de compromission de comptes Microsoft 365. Cette découverte offre une visibilité sur les outils utilisés pour dérober des jetons d'authentification M365. [BleepingComputer](https://www.bleepingcomputer.com/news/security/artoken-phaas-exposes-eviltokens-microsoft-365-phishing-toolkit/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **IA offensive chinoise** : Deux nouveaux LLM issus de laboratoires chinois atteignent les performances des modèles américains de pointe, renforçant les capacités des attaquants (génération de code malveillant, spear-phishing) plus rapidement que les outils de défense ne s'adaptent. [Dark Reading](https://www.darkreading.com/cyber-risk/chinese-llms-broaden-gap-between-attackers-and-defenders)
+- **Attaque massive par password spraying sur Microsoft 365** : Une campagne automatisée a généré 81 millions de tentatives de connexion sur des comptes Microsoft 365 entre le 12 et le 26 juin, avec un taux de succès d'au moins 78 compromissions. L'attaque ciblait principalement des clients via des mot de passe faibles ou réutilisés. [CSO Online](https://www.csoonline.com/article/4192819/microsoft-365-users-fall-victim-to-one-in-a-million-password-spray-attack.html)
 
-- **Faille Citrix NetScaler (type CitrixBleed)** : Une nouvelle vulnérabilité de fuite d'information dans les appliances NetScaler, similaire à CitrixBleed, fait l'objet de tentatives d'exploitation actives après la publication d'un correctif cette semaine. [CSO Online](https://www.csoonline.com/article/4192741/new-citrixbleed-like-netscaler-flaw-sees-exploit-attempts-in-the-wild.html)
+- **Adobe passe à un rythme de correctifs bimensuel** : L'éditeur double la fréquence de ses publications de correctifs de sécurité pour suivre l'accélération de la découverte et de l'exploitation de vulnérabilités. Cette décision fait écho à Oracle, qui avait déjà abandonné le cycle trimestriel au profit d'un rythme mensuel. [CSO Online](https://www.csoonline.com/article/4192789/adobe-premieres-a-second-patch-tuesday-each-month-to-deliver-fixes-faster.html)
 
-- **Surveillance par caméras Flock** : Une présentation interne révèle que le système Flock peut identifier et pister des véhicules sans plaque d'immatriculation, via une « empreinte véhicule » combinant autocollants, porte-bagages et plaques temporaires. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/flock-cameras-can-surveil-cars-without-license-plates.html)
+## IA — Produits, agents &amp; dev tooling
+
+- **Gestion des erreurs dans les appels d'outils LLM** : Les défaillances des appels d'outils par les LLM doivent être classifiées (erreurs de syntaxe, de sémantique, de réseau) pour déclencher des stratégies adaptées. L'implémentation de retries intelligents, de mécanismes de fallback et de coupe-circuits est indispensable pour stabiliser les pipelines en production. [n8n Blog](https://blog.n8n.io/llm-tool-calling-error-handling/)
 
 ## Actualité tech FR
 
-- **Microsoft Authenticator bloque les terminaux jailbreakés en entreprise** : L'application rejette désormais les appareils Android et iOS débridés, renforçant la posture de sécurité mais pouvant impacter les flottes mobiles et le BYOD. [Next.ink](https://next.ink/245658/microsoft-authenticator-ne-veut-plus-dappareils-jailbreakes-en-entreprise/)
+- **Espionnage d'un membre de la commission Pegasus** : Un ancien eurodéputé grec siégeant à la commission d'enquête sur Pegasus a été ciblé et infecté par le logiciel espion, d'après Citizen Lab. L'infection s'est produite pendant ses travaux sur le dossier. [Next.ink](https://next.ink/245726/un-eurodepute-membre-de-la-commission-denquete-sur-pegasus-a-ete-espionne-par-le-logiciel/)
 
-- **Nouvelle intrusion dans une agence fédérale américaine** : Le réseau de coordination du renseignement non classifié a été compromis, sans revendication à ce stade, relançant les doutes sur la capacité de l'État fédéral à sécuriser ses agences. [Next.ink](https://next.ink/245586/nouvelle-intrusion-dans-une-agence-du-gouvernement-americain/)
+- **Stratégie de résilience cyber européenne** : Dans un contexte géopolitique tendu, l'Europe doit dépasser le stade du potentiel et transformer sa dépendance numérique en une stratégie de puissance collective concrète. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552229-resilience-cyber-l-europe-doit-transformer-son-potentiel-en-puissance-collective/)
 
-- **Phishing record en 2025 et angles morts défensifs** : 3,8 millions d'attaques recensées l'an dernier, un volume qui masque une sophistication croissante ; les éditeurs doivent adopter le point de vue de l'attaquant pour réduire l'écart entre perception et réalité du terrain. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552155-anatomie-du-phishing-moderne-le-clic-anodin-qui-coute-tout/) · [Journal du Net](https://www.journaldunet.com/cybersecurite/1552153-quand-l-experience-de-terrain-revele-les-angles-morts-de-la-cybersecurite/)
+- **Performances dégradées des modèles IA après blocage** : Le modèle Claude (Fable 5) montre des performances réduites depuis la levée de son blocage lié à une directive de la Maison-Blanche, suscitant de vives critiques. Le modèle Mythos 5 semble également affecté. [Next.ink](https://next.ink/245820/depuis-son-retour-claude-fable-5-fait-beaucoup-moins-rever/)
 
-- **ChatControl de retour au Conseil européen** : Le texte autorisant la surveillance volontaire des messageries pour détecter les contenus pédocriminels est remis à l'ordre du jour après son rejet fin mars. [Next.ink](https://next.ink/245484/chatcontrol-nouvelle-tentative-de-prolonger-la-surveillance-des-messageries/)
+- **Retard et coûts des agents IA chez Meta** : Mark Zuckerberg a reconnu en interne un retard dans le développement des agents IA, tandis que la direction du labo IA promet des gains futurs significatifs malgré des coûts élevés. [Next.ink](https://next.ink/245816/chez-meta-lia-coute-cher-et-les-agents-ne-vont-pas-assez-vite/)
 
-- **Dépendance persistante aux modèles d'IA américains** : Anthropic a réactivé Claude Fable 5 après la levée des contrôles à l'export, mais cet épisode souligne le risque de dépendance des organisations européennes vis-à-vis de fournisseurs soumis au droit US. [Actu IA](https://www.actuia.com/actualite/washington-retablit-fable-5-mais-le-risque-de-dependance-aux-modeles-americains-demeure-entier/)
+- **Gouvernance des coûts IA en entreprise** : Nutanix lance Agent Gateway pour contrôler la gouvernance et les coûts des agents IA, alors que Gartner prédit l'annulation de plus de 40 % des projets d'IA agentique d'ici 2027 pour ces mêmes raisons. [Le Monde Informatique — IA](https://www.lemondeinformatique.fr/actualites/lire-avec-agent-gateway-nutanix-gouverne-et-controle-les-couts-des-agents-ia-100647.html)
 
-- **Souveraineté IA : le Portugal livre Amália pendant que la France débat** : Le Portugal lance un LLM open source en portugais pour 7 M€, un contre-exemple face à l'absence de modèle public français et à la dépendance envers Mistral. [Actu IA](https://www.actuia.com/actualite/pendant-que-la-france-debat-de-souverainete-ia-le-portugal-a-livre-la-sienne-pour-7-meur/)
+- **Impact environnemental de Gemini** : Google a augmenté de 37,5 % sa consommation d'eau et d'électricité en trois ans, une hausse largement imputée à l'entraînement et l'inférence de son IA Gemini, malgré un affichage "100 % renouvelable" via des garanties d'origine. [Next.ink](https://next.ink/245571/google-375-de-consommation-deau-et-delectricite-lempreinte-de-gemini-detaillee/)
 
-- **OpenAI propose 5 % de son capital à l'État américain** : La suggestion d'Altman et l'appel aux rivaux esquissent un fonds souverain IA et illustrent un rapport État-industrie distinct de la voie européenne. [Actu IA](https://www.actuia.com/actualite/fonds-souverain-de-lia-ce-que-la-proposition-daltman-revele-du-rapport-etat-industrie-americain/)
-
-- **La Californie déploie Poppy, IA souveraine pour ses agents publics** : Une plateforme sans fuite de données et indépendante de tout fournisseur unique, un modèle opérationnel pertinent pour les administrations françaises et européennes. [Actu IA](https://www.actuia.com/actualite/ce-que-poppy-lia-generative-de-la-californie-apprend-a-ladministration-europeenne/)
-
-- **Microsoft et Amazon copient Palantir avec des ingénieurs IA chez le client** : Les deux géants créent des entités de Forward Deployed Engineering, plaçant des ingénieurs directement chez les entreprises pour accélérer l'adoption de l'IA. [Next.ink](https://next.ink/245579/marche-entreprise-les-acteurs-de-lia-misent-sur-des-ingenieurs-places-chez-le-client/)
-
-- **Trafic de semi-conducteurs : deux employés de Super Micro arrêtés** : Soupçonnés d'avoir exporté illégalement des serveurs IA vers la Chine en contournant les sanctions américaines. [BFM Tech](https://www.bfmtv.com/tech/actualites/deux-salaries-de-l-americain-super-micro-computer-ont-ete-places-en-detention-pour-trafic-presume-de-semiconducteurs-avec-la-chine_AD-202607030399.html)
-
-- **L'IA n'a pas (encore) tué Google Search** : Une étude sur plus d'un million de mots-clés montre que le volume de recherche n'a baissé que de 2 % depuis 2023, loin des 25 % prédits par Gartner. [Siècle Digital](https://siecledigital.fr/2026/07/03/lia-est-elle-vraiment-en-train-de-tuer-google-cette-etude-repond-enfin/)
-
-- **L'IA fait exploser les émissions carbone de Google et Amazon** : +18 % pour Google en un an, +16 % pour Amazon ; leurs engagements climatiques s'éloignent à mesure que l'infrastructure IA croît. [Siècle Digital](https://siecledigital.fr/2026/07/03/la-course-a-lia-fait-flamber-les-emissions-de-gaz-a-effet-de-serre-de-google-et-amazon/)
-
-- **Google condamné définitivement à 4,1 milliards d'euros par l'Europe** : La plus haute cour européenne confirme l'amende antitrust après huit ans de procédure, un montant supérieur au budget annuel de la CNIL. [Siècle Digital](https://siecledigital.fr/2026/07/03/google-condamne-a-payer-41-milliards-deuros-apres-sa-defaite-definitive-face-a-leurope/)</description>
+- **Contournement des restrictions IA par la Chine** : Anthropic cumule les techniques (correction de failles, analyse de fuseaux horaires) pour empêcher l'accès chinois à Claude, mais ces mesures d'évasion restent imparfaites. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/correction-des-failles-fuseau-horaire-et-techniques-d-evasion-comment-anthropic-essaye-d-empecher-la-chine-d-utiliser-claude-son-chatbot-ia_AV-202607030661.html)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Pegasus cible un enquêteur parlementaire européen</strong> : Un ancien eurodéputé membre de la commission d'enquête sur les logiciels espions a été infecté à plusieurs reprises par Pegasus. L'affaire illustre le risque de compromission directe des fonctions de contrôle démocratique par les outils de surveillance qu'elles sont censées encadrer. <a href="https://thehackernews.com/2026/07/european-parliament-member.html">The Hacker News</a></li>
+<li><strong>Démantèlement du proxy résidentiel NetNut</strong> : Une opération conjointe impliquant Google a neutralisé NetNut, un réseau proxy résidentiel exploitant environ 2 millions d'appareils Android compromis (téléviseurs connectés, boîtiers de streaming). La désactivation des domaines de commande et contrôle coupe l'accès des clients du service à ce parc de machines infectées. <a href="https://www.bleepingcomputer.com/news/security/netnut-proxy-network-disrupted-2-million-infected-devices-cut-off/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>PamStealer : nouveau voleur d'identifiants macOS</strong> : Un infostealer se fait passer pour l'utilitaire open source Maccy afin de dérober les mots de passe de session macOS. Il exploite le fichier PAM (Pluggable Authentication Module) pour intercepter les credentials, une méthode discrète et persistante. <a href="https://thehackernews.com/2026/07/pamstealer-uses-fake-maccy-sites-and.html">The Hacker News</a></li>
+<li><strong>Nouveaux paquets npm malveillants liés à la Corée du Nord</strong> : Des attaquants ont publié les paquets `rollup-packages-polyfill-core` et `rollup-runtime-polyfill-core` sur npm, usurpant l'identité d'outils légitimes de polyfill. Leur but est le vol de secrets développeurs et l'accès distant aux machines compromises. <a href="https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne Armored Likho contre les gouvernements et le secteur électrique</strong> : Un acteur non documenté, mêlant motivations financières et cyber-espionnage, cible des agences gouvernementales et le secteur de l'énergie en Russie, au Brésil et au Kazakhstan, en s'appuyant sur le stealer BusySnake. <a href="https://thehackernews.com/2026/07/armored-likho-targets-government.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>ARToken : nouvelle plateforme de PhaaS liée à EvilTokens</strong> : La plateforme de phishing-as-a-service ARToken, affiliée à EvilTokens, expose un kit complet de compromission de comptes Microsoft 365. Cette découverte offre une visibilité sur les outils utilisés pour dérober des jetons d'authentification M365. <a href="https://www.bleepingcomputer.com/news/security/artoken-phaas-exposes-eviltokens-microsoft-365-phishing-toolkit/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>IA offensive chinoise</strong> : Deux nouveaux LLM issus de laboratoires chinois atteignent les performances des modèles américains de pointe, renforçant les capacités des attaquants (génération de code malveillant, spear-phishing) plus rapidement que les outils de défense ne s'adaptent. <a href="https://www.darkreading.com/cyber-risk/chinese-llms-broaden-gap-between-attackers-and-defenders">Dark Reading</a></li>
+<li><strong>Attaque massive par password spraying sur Microsoft 365</strong> : Une campagne automatisée a généré 81 millions de tentatives de connexion sur des comptes Microsoft 365 entre le 12 et le 26 juin, avec un taux de succès d'au moins 78 compromissions. L'attaque ciblait principalement des clients via des mot de passe faibles ou réutilisés. <a href="https://www.csoonline.com/article/4192819/microsoft-365-users-fall-victim-to-one-in-a-million-password-spray-attack.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Faille Citrix NetScaler (type CitrixBleed)</strong> : Une nouvelle vulnérabilité de fuite d'information dans les appliances NetScaler, similaire à CitrixBleed, fait l'objet de tentatives d'exploitation actives après la publication d'un correctif cette semaine. <a href="https://www.csoonline.com/article/4192741/new-citrixbleed-like-netscaler-flaw-sees-exploit-attempts-in-the-wild.html">CSO Online</a></li>
+<li><strong>Adobe passe à un rythme de correctifs bimensuel</strong> : L'éditeur double la fréquence de ses publications de correctifs de sécurité pour suivre l'accélération de la découverte et de l'exploitation de vulnérabilités. Cette décision fait écho à Oracle, qui avait déjà abandonné le cycle trimestriel au profit d'un rythme mensuel. <a href="https://www.csoonline.com/article/4192789/adobe-premieres-a-second-patch-tuesday-each-month-to-deliver-fixes-faster.html">CSO Online</a></li>
 </ul>
 
+<h2>IA — Produits, agents & dev tooling</h2>
+
 <ul>
-<li><strong>Surveillance par caméras Flock</strong> : Une présentation interne révèle que le système Flock peut identifier et pister des véhicules sans plaque d'immatriculation, via une « empreinte véhicule » combinant autocollants, porte-bagages et plaques temporaires. <a href="https://www.schneier.com/blog/archives/2026/07/flock-cameras-can-surveil-cars-without-license-plates.html">Schneier on Security</a></li>
+<li><strong>Gestion des erreurs dans les appels d'outils LLM</strong> : Les défaillances des appels d'outils par les LLM doivent être classifiées (erreurs de syntaxe, de sémantique, de réseau) pour déclencher des stratégies adaptées. L'implémentation de retries intelligents, de mécanismes de fallback et de coupe-circuits est indispensable pour stabiliser les pipelines en production. <a href="https://blog.n8n.io/llm-tool-calling-error-handling/">n8n Blog</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Microsoft Authenticator bloque les terminaux jailbreakés en entreprise</strong> : L'application rejette désormais les appareils Android et iOS débridés, renforçant la posture de sécurité mais pouvant impacter les flottes mobiles et le BYOD. <a href="https://next.ink/245658/microsoft-authenticator-ne-veut-plus-dappareils-jailbreakes-en-entreprise/">Next.ink</a></li>
+<li><strong>Espionnage d'un membre de la commission Pegasus</strong> : Un ancien eurodéputé grec siégeant à la commission d'enquête sur Pegasus a été ciblé et infecté par le logiciel espion, d'après Citizen Lab. L'infection s'est produite pendant ses travaux sur le dossier. <a href="https://next.ink/245726/un-eurodepute-membre-de-la-commission-denquete-sur-pegasus-a-ete-espionne-par-le-logiciel/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Nouvelle intrusion dans une agence fédérale américaine</strong> : Le réseau de coordination du renseignement non classifié a été compromis, sans revendication à ce stade, relançant les doutes sur la capacité de l'État fédéral à sécuriser ses agences. <a href="https://next.ink/245586/nouvelle-intrusion-dans-une-agence-du-gouvernement-americain/">Next.ink</a></li>
+<li><strong>Stratégie de résilience cyber européenne</strong> : Dans un contexte géopolitique tendu, l'Europe doit dépasser le stade du potentiel et transformer sa dépendance numérique en une stratégie de puissance collective concrète. <a href="https://www.journaldunet.com/cybersecurite/1552229-resilience-cyber-l-europe-doit-transformer-son-potentiel-en-puissance-collective/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Phishing record en 2025 et angles morts défensifs</strong> : 3,8 millions d'attaques recensées l'an dernier, un volume qui masque une sophistication croissante ; les éditeurs doivent adopter le point de vue de l'attaquant pour réduire l'écart entre perception et réalité du terrain. <a href="https://www.journaldunet.com/cybersecurite/1552155-anatomie-du-phishing-moderne-le-clic-anodin-qui-coute-tout/">Journal du Net</a> · <a href="https://www.journaldunet.com/cybersecurite/1552153-quand-l-experience-de-terrain-revele-les-angles-morts-de-la-cybersecurite/">Journal du Net</a></li>
+<li><strong>Performances dégradées des modèles IA après blocage</strong> : Le modèle Claude (Fable 5) montre des performances réduites depuis la levée de son blocage lié à une directive de la Maison-Blanche, suscitant de vives critiques. Le modèle Mythos 5 semble également affecté. <a href="https://next.ink/245820/depuis-son-retour-claude-fable-5-fait-beaucoup-moins-rever/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>ChatControl de retour au Conseil européen</strong> : Le texte autorisant la surveillance volontaire des messageries pour détecter les contenus pédocriminels est remis à l'ordre du jour après son rejet fin mars. <a href="https://next.ink/245484/chatcontrol-nouvelle-tentative-de-prolonger-la-surveillance-des-messageries/">Next.ink</a></li>
+<li><strong>Retard et coûts des agents IA chez Meta</strong> : Mark Zuckerberg a reconnu en interne un retard dans le développement des agents IA, tandis que la direction du labo IA promet des gains futurs significatifs malgré des coûts élevés. <a href="https://next.ink/245816/chez-meta-lia-coute-cher-et-les-agents-ne-vont-pas-assez-vite/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Dépendance persistante aux modèles d'IA américains</strong> : Anthropic a réactivé Claude Fable 5 après la levée des contrôles à l'export, mais cet épisode souligne le risque de dépendance des organisations européennes vis-à-vis de fournisseurs soumis au droit US. <a href="https://www.actuia.com/actualite/washington-retablit-fable-5-mais-le-risque-de-dependance-aux-modeles-americains-demeure-entier/">Actu IA</a></li>
+<li><strong>Gouvernance des coûts IA en entreprise</strong> : Nutanix lance Agent Gateway pour contrôler la gouvernance et les coûts des agents IA, alors que Gartner prédit l'annulation de plus de 40 % des projets d'IA agentique d'ici 2027 pour ces mêmes raisons. <a href="https://www.lemondeinformatique.fr/actualites/lire-avec-agent-gateway-nutanix-gouverne-et-controle-les-couts-des-agents-ia-100647.html">Le Monde Informatique — IA</a></li>
 </ul>
 
 <ul>
-<li><strong>Souveraineté IA : le Portugal livre Amália pendant que la France débat</strong> : Le Portugal lance un LLM open source en portugais pour 7 M€, un contre-exemple face à l'absence de modèle public français et à la dépendance envers Mistral. <a href="https://www.actuia.com/actualite/pendant-que-la-france-debat-de-souverainete-ia-le-portugal-a-livre-la-sienne-pour-7-meur/">Actu IA</a></li>
+<li><strong>Impact environnemental de Gemini</strong> : Google a augmenté de 37,5 % sa consommation d'eau et d'électricité en trois ans, une hausse largement imputée à l'entraînement et l'inférence de son IA Gemini, malgré un affichage "100 % renouvelable" via des garanties d'origine. <a href="https://next.ink/245571/google-375-de-consommation-deau-et-delectricite-lempreinte-de-gemini-detaillee/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>OpenAI propose 5 % de son capital à l'État américain</strong> : La suggestion d'Altman et l'appel aux rivaux esquissent un fonds souverain IA et illustrent un rapport État-industrie distinct de la voie européenne. <a href="https://www.actuia.com/actualite/fonds-souverain-de-lia-ce-que-la-proposition-daltman-revele-du-rapport-etat-industrie-americain/">Actu IA</a></li>
-</ul>
-
-<ul>
-<li><strong>La Californie déploie Poppy, IA souveraine pour ses agents publics</strong> : Une plateforme sans fuite de données et indépendante de tout fournisseur unique, un modèle opérationnel pertinent pour les administrations françaises et européennes. <a href="https://www.actuia.com/actualite/ce-que-poppy-lia-generative-de-la-californie-apprend-a-ladministration-europeenne/">Actu IA</a></li>
-</ul>
-
-<ul>
-<li><strong>Microsoft et Amazon copient Palantir avec des ingénieurs IA chez le client</strong> : Les deux géants créent des entités de Forward Deployed Engineering, plaçant des ingénieurs directement chez les entreprises pour accélérer l'adoption de l'IA. <a href="https://next.ink/245579/marche-entreprise-les-acteurs-de-lia-misent-sur-des-ingenieurs-places-chez-le-client/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Trafic de semi-conducteurs : deux employés de Super Micro arrêtés</strong> : Soupçonnés d'avoir exporté illégalement des serveurs IA vers la Chine en contournant les sanctions américaines. <a href="https://www.bfmtv.com/tech/actualites/deux-salaries-de-l-americain-super-micro-computer-ont-ete-places-en-detention-pour-trafic-presume-de-semiconducteurs-avec-la-chine_AD-202607030399.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>L'IA n'a pas (encore) tué Google Search</strong> : Une étude sur plus d'un million de mots-clés montre que le volume de recherche n'a baissé que de 2 % depuis 2023, loin des 25 % prédits par Gartner. <a href="https://siecledigital.fr/2026/07/03/lia-est-elle-vraiment-en-train-de-tuer-google-cette-etude-repond-enfin/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>L'IA fait exploser les émissions carbone de Google et Amazon</strong> : +18 % pour Google en un an, +16 % pour Amazon ; leurs engagements climatiques s'éloignent à mesure que l'infrastructure IA croît. <a href="https://siecledigital.fr/2026/07/03/la-course-a-lia-fait-flamber-les-emissions-de-gaz-a-effet-de-serre-de-google-et-amazon/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Google condamné définitivement à 4,1 milliards d'euros par l'Europe</strong> : La plus haute cour européenne confirme l'amende antitrust après huit ans de procédure, un montant supérieur au budget annuel de la CNIL. <a href="https://siecledigital.fr/2026/07/03/google-condamne-a-payer-41-milliards-deuros-apres-sa-defaite-definitive-face-a-leurope/">Siècle Digital</a></li>
+<li><strong>Contournement des restrictions IA par la Chine</strong> : Anthropic cumule les techniques (correction de failles, analyse de fuseaux horaires) pour empêcher l'accès chinois à Claude, mais ces mesures d'évasion restent imparfaites. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/correction-des-failles-fuseau-horaire-et-techniques-d-evasion-comment-anthropic-essaye-d-empecher-la-chine-d-utiliser-claude-son-chatbot-ia_AV-202607030661.html">BFM Tech</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260703-1308</guid>
-      <pubDate>Fri, 03 Jul 2026 13:08:30 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260703-1821</guid>
+      <pubDate>Fri, 03 Jul 2026 18:21:16 +0000</pubDate>
     </item>
   </channel>
 </rss>
