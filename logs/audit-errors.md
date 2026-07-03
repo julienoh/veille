@@ -36,3 +36,6 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-02 08:47 UTC | scoring | Accelerating Discrete Diffusion Models with Parallel-In-Time (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-07-02 09:01 UTC | scoring | FastUMAP: Scalable Dimensionality Reduction via Bipartite La (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-07-02 09:10 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2553)) |
+| 2026-07-03 08:20 UTC | scoring | Spec-AUF: Accept-Until-Fail Training under Train-Inference M (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-03 09:11 UTC | scoring | Sony signe un prix qui va ravir les fans de gaming sur cette (BFM Tech) | Rate limit fournisseur LLM atteint |
+| 2026-07-03 09:13 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 80 column 6 (char 2696)) |
