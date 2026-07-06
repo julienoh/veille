@@ -39,3 +39,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-03 08:20 UTC | scoring | Spec-AUF: Accept-Until-Fail Training under Train-Inference M (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
 | 2026-07-03 09:11 UTC | scoring | Sony signe un prix qui va ravir les fans de gaming sur cette (BFM Tech) | Rate limit fournisseur LLM atteint |
 | 2026-07-03 09:13 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 80 column 6 (char 2696)) |
+| 2026-07-06 14:32 UTC | scoring | How to Evaluate an AI SOC Platform in 2026: 6 Capabilities T (The Hacker News) | Rate limit fournisseur LLM atteint |
