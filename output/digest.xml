@@ -8,122 +8,126 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 06 Jul 2026 14:38:31 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 19:07:14 +0000</lastBuildDate>
     <item>
-      <title>Digest — 06/07 14h</title>
+      <title>Digest — 06/07 19h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Exploitation active d'une faille critique Adobe ColdFusion** : La vulnérabilité CVE-2026-48282 (sévérité maximale) fait l'objet d'attaques en cours, nécessitant une correction immédiate si ce n'est déjà fait. [BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-adobe-coldfusion-flaw-now-exploited-in-attacks/)
+- **Faille critique KVM (CVE-2026-53359)** : Un bug de type use-after-free vieux de 16 ans dans l'hyperviseur KVM permet à une VM invitée de s'échapper vers l'hôte sur les systèmes Intel et AMD x86. Le défaut réside dans le code shadow MMU partagé entre les deux architectures. [The Hacker News](https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html)
 
-- **Campagne de cyberespionnage chinoise ciblant l'Inde** : Des acteurs suspectés d'être liés à la Chine utilisent un faux utilitaire de déclaration fiscale indienne pour déployer le RAT DcRAT et voler des données sensibles. [The Hacker News](https://thehackernews.com/2026/07/suspected-china-nexus-hackers-use-fake.html)
+- **Exploitation imminente de CVE-2026-20896 (Gitea)** : Des acteurs malveillants scannent activement les images Docker Gitea 13 jours après la divulgation de cette faille critique (CVSS 9.8), qui exploite une confiance abusive dans l'en-tête `X-WEBAUTH-USER`. Correctif à appliquer sans délai. [The Hacker News](https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html)
 
-- **Intensification des cyberattaques russes contre les médias ukrainiens** : Les médias ukrainiens sont désormais des "cibles prioritaires" pour les hackers russes, avec deux attaques inédites récemment révélées contre des organisations de télévision. [The Record](https://therecord.media/ukraine-media-organizations-priority-hacking-targets-russia)
+- **Violation de données chez un fabricant de dispositifs médicaux** : Près de 4 millions de personnes sont notifiées après un accès non autorisé à des données incluant numéros de sécurité sociale et informations de santé. L'entreprise affirme n'avoir aucune preuve de publication ou d'exposition publique des données compromises. [The Record](https://therecord.media/medical-device-maker-notifies-nearly-4-million-of-breach)
 
-- **Sécurité du développement logiciel assisté par IA** : L'accélération du cycle de développement par l'IA supprime les étapes où s'intégraient traditionnellement les décisions de sécurité, créant un angle mort dans la sécurisation du code produit. [BleepingComputer](https://www.bleepingcomputer.com/news/security/software-is-now-written-at-the-speed-of-thought-security-isnt/)
-
-- **Risques de surface liés à des composants ordinaires** : Le récapitulatif hebdomadaire souligne que les menaces récentes (botnets proxy, ransomwares navigateur, malware déguisé en PoC) exploitent des éléments banals comme des boîtiers de streaming, des champs de formulaire ou des dépendances de code. [The Hacker News](https://thehackernews.com/2026/07/monday-recap-proxy-botnets-browser.html)
-
-- **Implications sécurité du protocole RCS via les enregistrements DNS NAPTR** : Le déploiement croissant de RCS en remplacement du SMS s'appuie sur des enregistrements DNS NAPTR pour la découverte de service, une surface à connaître pour le filtrage et la supervision. [SANS ISC](https://isc.sans.edu/diary/rss/33124)
+- **Démantèlement du service pirate HiAnime** : Les autorités vietnamiennes ont arrêté sept suspects liés à l'exploitation de HiAnime, la plus grande plateforme de streaming illégal d'anime avant sa fermeture en juin. [BleepingComputer](https://www.bleepingcomputer.com/news/security/vietnam-arrests-suspects-behind-hianime-anime-piracy-service/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **ANSSI : arrêt de la certification des produits sans chiffrement post-quantique** : L'ANSSI cessera de certifier les produits de sécurité dépourvus de chiffrement résistant aux attaques quantiques, imposant de facto une migration accélérée aux administrations et OIV. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/france-to-stop-certifying-non-quantum-safe-encryption.html)
+- **IA agentique : angle mort du Zero Trust et des contrôles d'identité** : Les agents IA autonomes combinent une capacité d'exécution élevée à une absence totale de jugement, créant des failles dans les programmes Zero Trust existants. [CSO Online](https://www.csoonline.com/article/4193263/the-agentic-blind-spots-in-your-zero-trust-program.html) · Selon CSO Online également, les contrôles d'identité classiques (creds statiques, privilèges permanents) sont inadaptés : il faut pouvoir autoriser, limiter et révoquer des permissions plusieurs fois au sein d'un même workflow agentique. [CSO Online](https://www.csoonline.com/article/4193274/identity-the-operational-control-plane-for-agentic-ai.html)
 
-- **Agent IA autonome : intrusion complète jusqu'à la rançon** : Un agent IA a mené de bout en bout une campagne d'intrusion, d'adaptation en vol et d'extorsion après avoir exploité un serveur Langflow vulnérable — une démonstration concrète de l'accélération des opérations ransomware par les LLM. [CSO Online](https://www.csoonline.com/article/4193195/this-ai-agent-autonomously-hacked-a-network-adapted-on-the-fly-and-demanded-a-ransom.html)
+- **Opérationnalisation de l'IA agentique : la sécurité toujours à la traîne** : Depuis l'arrivée de ChatGPT, la gouvernance et la sécurité n'ont pas suivi le rythme de l'adoption, les utilisateurs exposant données corporate, financières et de santé sans contrôle. [CSO Online](https://www.csoonline.com/article/4193287/operationalizing-agentic-ai-from-assisted-to-autonomous.html)
 
-- **Faille dans Argo CD : risque sur les clusters Kubernetes** : Une vulnérabilité découverte par Synacktiv dans le composant de l'outil Argo CD expose les clusters Kubernetes. Correctif à appliquer sans délai. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-une-faille-dans-argo-cd-fragilise-les-clusters-kubernetes-100657.html)
-
-- **SaaS et SPOF : le risque de concentration des plateformes académiques** : L'enseignement supérieur illustre le danger systémique de concentrer l'ensemble des opérations (cours, notes, identité) sur quelques plateformes SaaS qui deviennent autant de points de défaillance uniques. [CSO Online](https://www.csoonline.com/article/4192380/single-points-of-failure-fail-the-saas-layer-is-not-an-exception.html)
-
-- **Spoofing GPS dans la marine marchande** : Les piratages de signaux GPS se multiplient contre les navires marchands, créant des perturbations opérationnelles significatives bien au-delà des zones de conflit. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-le-piratage-de-gps-seme-la-zizanie-dans-la-marine-marchande-100644.html)
+- **JadePuffer : première attaque ransomware entièrement pilotée par LLM** : Un acteur malveillant "agentique" a exploité une faille sur Langflow pour exfiltrer des données d'un serveur de production et chiffrer d'autres systèmes. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack)
 
 ## IA — Labos &amp; éditeurs
 
-- **LeRobot v0.6.0 (Hugging Face)** : introduction d'un pipeline "Imagine, Evaluate, Improve" pour l'apprentissage robotique, combinant génération de données synthétiques, évaluation automatique et affinage itératif des politiques. La release met l'accent sur la réduction du besoin en démonstrations humaines réelles. [Hugging Face Blog](https://huggingface.co/blog/lerobot-release-v060)
+- **Stratégie de données chez Photoroom (Hugging Face)** : Le quatrième volet de la série PRX détaille leur approche pour constituer et gérer les datasets d'entraînement, en se concentrant sur les méthodes de curation et de filtrage des données. [Hugging Face Blog](https://huggingface.co/blog/Photoroom/prx-part4-data)
+
+- **Infrastructure RL multi-tours pour Amazon Nova** : AWS documente le déploiement sur SageMaker HyperPod d'un pipeline event-driven en deux phases, où l'entraînement se déclenche automatiquement à l'upload de données dans S3 pour apprendre au modèle à interagir de façon séquentielle. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/deploying-multi-turn-rl-infrastructure-for-amazon-nova-on-amazon-sagemaker-hyperpod/)
+
+- **OCR et masquage de PII dans les images** : Un pipeline combine le raisonnement visuel contextuel d'Amazon Nova avec SAM 3 de Meta (déployé sur SageMaker) pour la segmentation, et Textract pour l'OCR, afin de détecter et caviarder automatiquement des informations personnelles dans des images. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/automatically-redact-pii-in-images-with-amazon-nova/)
+
+- **Modèles ouverts au centre de la recherche (ICML 2026)** : Une analyse des papiers acceptés à ICML montre que les modèles frontière ouverts et l'infrastructure ouverte sont devenus le socle de la recherche moderne en IA. [NVIDIA Blog](https://blogs.nvidia.com/blog/open-models-icml-2026/)
+
+- **Nations et priorités stratégiques en IA** : NVIDIA examine comment les États utilisent l'IA non seulement pour la productivité mais aussi pour protéger leurs données et développer des infrastructures souveraines dans le transport, la santé ou la communication. [NVIDIA Blog](https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/)
+
+- **Intégration de MiniMax sur Amazon Bedrock** : Présentation des modalités d'accès aux modèles MiniMax via Bedrock, couvrant les capacités, les tiers de service, le scaling de l'inférence on-demand et les différentes API disponibles. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/run-minimax-models-on-amazon-bedrock/)
+
+- **Streaming MLflow pour les benchmarks SageMaker** : Les jobs d'inférence optimisée et de benchmark sur SageMaker AI peuvent désormais streamer automatiquement métriques, paramètres et graphiques dans MLflow pour unifier le tracking des expériences. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/streaming-benchmark-and-recommendation-results-to-mlflow-with-amazon-sagemaker-ai/)
+
+## IA &amp; Tech — Médias internationaux
+
+- **Reddit contre le spam généré par IA** : La plateforme déploie ses propres LLM pour détecter et supprimer le spam, une pollution largement issue de l'usage abusif de ces mêmes modèles par des tiers. [TechCrunch](https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/)
 
 ## Actualité tech FR
 
-- **Valeur stratégique de l'IA : vos données, pas les modèles** : Le modèle lui-même devient une commodité face à la multiplication des offres (modèles chinois ouverts, saturation des GPU). L'avantage concurrentiel réside désormais dans la maîtrise de vos données métier et la gouvernance que vous imposez à l'IA. Selon le JDN, cette bascule expose les entreprises qui ne comprennent pas les mécanismes sous-jacents des LLM et qui les utilisent comme de simples outils cloud, créant un risque de "cheval de Troie". [JDN 1](https://www.journaldunet.com/intelligence-artificielle/1552203-ia-en-entreprise-le-modele-est-devenu-une-commodite-votre-avantage-est-ailleurs/) · [JDN 2](https://www.journaldunet.com/intelligence-artificielle/1552239-l-ia-expose-les-entreprises-qui-ne-la-maitrisent-pas/)
-
-- **Souveraineté et stratégie européenne** : L'Europe ne doit pas imiter les stratégies américaines ou chinoises mais capitaliser sur ses atouts propres (énergie, données de confiance, quantique) pour rester dans la course. Parallèlement, l'ouverture par Google d'un labo IA au Ghana, hors zone francophone, souligne l'urgence pour les acteurs européens de structurer l'écosystème IA francophone avant un verrouillage total par les géants US. [JDN 3](https://www.journaldunet.com/intelligence-artificielle/1552325-l-europe-ne-gagnera-pas-la-guerre-de-l-ia-en-jouant-selon-les-regles-des-autres/) · [JDN 4](https://www.journaldunet.com/intelligence-artificielle/1552253-google-installe-son-premier-labo-d-ia-en-afrique-au-ghana-l-afrique-francophone-doit-elle-s-inquieter/)
-
-- **IA agentique : maturation et tests en autonomie** : Tableau (Salesforce) intègre l'IA agentique dans sa pile analytique, signalant l'arrivée de cette technologie dans les outils métier établis. En parallèle, le projet Emergence World étudie les comportements émergents d'agents IA laissés en totale autonomie dans un monde virtuel, un point d'attention pour la confiance à accorder à ces systèmes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-tableau-greffe-l-ia-agentique-a-sa-pile-analytique-100656.html) · [JDN](https://www.journaldunet.com/intelligence-artificielle/1552321-emergence-world-permet-d-etudier-ce-qui-se-passe-lorsque-vous-laissez-des-ia-tourner-en-totale-autonomie/)
-
-- **Évolution des métiers et filières** : L'intégration de l'IA dans l'industrie ne détruit pas les emplois mais crée des métiers techniques augmentés ("Smart Trade"). La revalorisation de ces filières est présentée comme un levier direct de souveraineté face aux pénuries de compétences. [JDN](https://www.journaldunet.com/intelligence-artificielle/1552277-l-avenement-du-smart-trade-comment-l-ia-reinvente-les-metiers-de-l-industrie/)</description>
+- **Windows 11 26H2** : La prochaine mise à jour majeure de Windows 11 arrivera cet automne sous forme de package d'activation, les nouveautés ayant déjà été déployées progressivement en amont. [Next.ink](https://next.ink/246195/windows-11-la-mise-a-jour-26h2-se-dessine-pour-cet-automne/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exploitation active d'une faille critique Adobe ColdFusion</strong> : La vulnérabilité CVE-2026-48282 (sévérité maximale) fait l'objet d'attaques en cours, nécessitant une correction immédiate si ce n'est déjà fait. <a href="https://www.bleepingcomputer.com/news/security/max-severity-adobe-coldfusion-flaw-now-exploited-in-attacks/">BleepingComputer</a></li>
+<li><strong>Faille critique KVM (CVE-2026-53359)</strong> : Un bug de type use-after-free vieux de 16 ans dans l'hyperviseur KVM permet à une VM invitée de s'échapper vers l'hôte sur les systèmes Intel et AMD x86. Le défaut réside dans le code shadow MMU partagé entre les deux architectures. <a href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Campagne de cyberespionnage chinoise ciblant l'Inde</strong> : Des acteurs suspectés d'être liés à la Chine utilisent un faux utilitaire de déclaration fiscale indienne pour déployer le RAT DcRAT et voler des données sensibles. <a href="https://thehackernews.com/2026/07/suspected-china-nexus-hackers-use-fake.html">The Hacker News</a></li>
+<li><strong>Exploitation imminente de CVE-2026-20896 (Gitea)</strong> : Des acteurs malveillants scannent activement les images Docker Gitea 13 jours après la divulgation de cette faille critique (CVSS 9.8), qui exploite une confiance abusive dans l'en-tête `X-WEBAUTH-USER`. Correctif à appliquer sans délai. <a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Intensification des cyberattaques russes contre les médias ukrainiens</strong> : Les médias ukrainiens sont désormais des "cibles prioritaires" pour les hackers russes, avec deux attaques inédites récemment révélées contre des organisations de télévision. <a href="https://therecord.media/ukraine-media-organizations-priority-hacking-targets-russia">The Record</a></li>
+<li><strong>Violation de données chez un fabricant de dispositifs médicaux</strong> : Près de 4 millions de personnes sont notifiées après un accès non autorisé à des données incluant numéros de sécurité sociale et informations de santé. L'entreprise affirme n'avoir aucune preuve de publication ou d'exposition publique des données compromises. <a href="https://therecord.media/medical-device-maker-notifies-nearly-4-million-of-breach">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité du développement logiciel assisté par IA</strong> : L'accélération du cycle de développement par l'IA supprime les étapes où s'intégraient traditionnellement les décisions de sécurité, créant un angle mort dans la sécurisation du code produit. <a href="https://www.bleepingcomputer.com/news/security/software-is-now-written-at-the-speed-of-thought-security-isnt/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Risques de surface liés à des composants ordinaires</strong> : Le récapitulatif hebdomadaire souligne que les menaces récentes (botnets proxy, ransomwares navigateur, malware déguisé en PoC) exploitent des éléments banals comme des boîtiers de streaming, des champs de formulaire ou des dépendances de code. <a href="https://thehackernews.com/2026/07/monday-recap-proxy-botnets-browser.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Implications sécurité du protocole RCS via les enregistrements DNS NAPTR</strong> : Le déploiement croissant de RCS en remplacement du SMS s'appuie sur des enregistrements DNS NAPTR pour la découverte de service, une surface à connaître pour le filtrage et la supervision. <a href="https://isc.sans.edu/diary/rss/33124">SANS ISC</a></li>
+<li><strong>Démantèlement du service pirate HiAnime</strong> : Les autorités vietnamiennes ont arrêté sept suspects liés à l'exploitation de HiAnime, la plus grande plateforme de streaming illégal d'anime avant sa fermeture en juin. <a href="https://www.bleepingcomputer.com/news/security/vietnam-arrests-suspects-behind-hianime-anime-piracy-service/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>ANSSI : arrêt de la certification des produits sans chiffrement post-quantique</strong> : L'ANSSI cessera de certifier les produits de sécurité dépourvus de chiffrement résistant aux attaques quantiques, imposant de facto une migration accélérée aux administrations et OIV. <a href="https://www.schneier.com/blog/archives/2026/07/france-to-stop-certifying-non-quantum-safe-encryption.html">Schneier on Security</a></li>
+<li><strong>IA agentique : angle mort du Zero Trust et des contrôles d'identité</strong> : Les agents IA autonomes combinent une capacité d'exécution élevée à une absence totale de jugement, créant des failles dans les programmes Zero Trust existants. <a href="https://www.csoonline.com/article/4193263/the-agentic-blind-spots-in-your-zero-trust-program.html">CSO Online</a> · Selon CSO Online également, les contrôles d'identité classiques (creds statiques, privilèges permanents) sont inadaptés : il faut pouvoir autoriser, limiter et révoquer des permissions plusieurs fois au sein d'un même workflow agentique. <a href="https://www.csoonline.com/article/4193274/identity-the-operational-control-plane-for-agentic-ai.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Agent IA autonome : intrusion complète jusqu'à la rançon</strong> : Un agent IA a mené de bout en bout une campagne d'intrusion, d'adaptation en vol et d'extorsion après avoir exploité un serveur Langflow vulnérable — une démonstration concrète de l'accélération des opérations ransomware par les LLM. <a href="https://www.csoonline.com/article/4193195/this-ai-agent-autonomously-hacked-a-network-adapted-on-the-fly-and-demanded-a-ransom.html">CSO Online</a></li>
+<li><strong>Opérationnalisation de l'IA agentique : la sécurité toujours à la traîne</strong> : Depuis l'arrivée de ChatGPT, la gouvernance et la sécurité n'ont pas suivi le rythme de l'adoption, les utilisateurs exposant données corporate, financières et de santé sans contrôle. <a href="https://www.csoonline.com/article/4193287/operationalizing-agentic-ai-from-assisted-to-autonomous.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Faille dans Argo CD : risque sur les clusters Kubernetes</strong> : Une vulnérabilité découverte par Synacktiv dans le composant de l'outil Argo CD expose les clusters Kubernetes. Correctif à appliquer sans délai. <a href="https://www.lemondeinformatique.fr/actualites/lire-une-faille-dans-argo-cd-fragilise-les-clusters-kubernetes-100657.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>SaaS et SPOF : le risque de concentration des plateformes académiques</strong> : L'enseignement supérieur illustre le danger systémique de concentrer l'ensemble des opérations (cours, notes, identité) sur quelques plateformes SaaS qui deviennent autant de points de défaillance uniques. <a href="https://www.csoonline.com/article/4192380/single-points-of-failure-fail-the-saas-layer-is-not-an-exception.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Spoofing GPS dans la marine marchande</strong> : Les piratages de signaux GPS se multiplient contre les navires marchands, créant des perturbations opérationnelles significatives bien au-delà des zones de conflit. <a href="https://www.lemondeinformatique.fr/actualites/lire-le-piratage-de-gps-seme-la-zizanie-dans-la-marine-marchande-100644.html">Le Monde Informatique</a></li>
+<li><strong>JadePuffer : première attaque ransomware entièrement pilotée par LLM</strong> : Un acteur malveillant "agentique" a exploité une faille sur Langflow pour exfiltrer des données d'un serveur de production et chiffrer d'autres systèmes. <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack">Dark Reading</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>LeRobot v0.6.0 (Hugging Face)</strong> : introduction d'un pipeline "Imagine, Evaluate, Improve" pour l'apprentissage robotique, combinant génération de données synthétiques, évaluation automatique et affinage itératif des politiques. La release met l'accent sur la réduction du besoin en démonstrations humaines réelles. <a href="https://huggingface.co/blog/lerobot-release-v060">Hugging Face Blog</a></li>
+<li><strong>Stratégie de données chez Photoroom (Hugging Face)</strong> : Le quatrième volet de la série PRX détaille leur approche pour constituer et gérer les datasets d'entraînement, en se concentrant sur les méthodes de curation et de filtrage des données. <a href="https://huggingface.co/blog/Photoroom/prx-part4-data">Hugging Face Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Infrastructure RL multi-tours pour Amazon Nova</strong> : AWS documente le déploiement sur SageMaker HyperPod d'un pipeline event-driven en deux phases, où l'entraînement se déclenche automatiquement à l'upload de données dans S3 pour apprendre au modèle à interagir de façon séquentielle. <a href="https://aws.amazon.com/blogs/machine-learning/deploying-multi-turn-rl-infrastructure-for-amazon-nova-on-amazon-sagemaker-hyperpod/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>OCR et masquage de PII dans les images</strong> : Un pipeline combine le raisonnement visuel contextuel d'Amazon Nova avec SAM 3 de Meta (déployé sur SageMaker) pour la segmentation, et Textract pour l'OCR, afin de détecter et caviarder automatiquement des informations personnelles dans des images. <a href="https://aws.amazon.com/blogs/machine-learning/automatically-redact-pii-in-images-with-amazon-nova/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles ouverts au centre de la recherche (ICML 2026)</strong> : Une analyse des papiers acceptés à ICML montre que les modèles frontière ouverts et l'infrastructure ouverte sont devenus le socle de la recherche moderne en IA. <a href="https://blogs.nvidia.com/blog/open-models-icml-2026/">NVIDIA Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Nations et priorités stratégiques en IA</strong> : NVIDIA examine comment les États utilisent l'IA non seulement pour la productivité mais aussi pour protéger leurs données et développer des infrastructures souveraines dans le transport, la santé ou la communication. <a href="https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/">NVIDIA Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Intégration de MiniMax sur Amazon Bedrock</strong> : Présentation des modalités d'accès aux modèles MiniMax via Bedrock, couvrant les capacités, les tiers de service, le scaling de l'inférence on-demand et les différentes API disponibles. <a href="https://aws.amazon.com/blogs/machine-learning/run-minimax-models-on-amazon-bedrock/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Streaming MLflow pour les benchmarks SageMaker</strong> : Les jobs d'inférence optimisée et de benchmark sur SageMaker AI peuvent désormais streamer automatiquement métriques, paramètres et graphiques dans MLflow pour unifier le tracking des expériences. <a href="https://aws.amazon.com/blogs/machine-learning/streaming-benchmark-and-recommendation-results-to-mlflow-with-amazon-sagemaker-ai/">AWS Machine Learning</a></li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Reddit contre le spam généré par IA</strong> : La plateforme déploie ses propres LLM pour détecter et supprimer le spam, une pollution largement issue de l'usage abusif de ces mêmes modèles par des tiers. <a href="https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Valeur stratégique de l'IA : vos données, pas les modèles</strong> : Le modèle lui-même devient une commodité face à la multiplication des offres (modèles chinois ouverts, saturation des GPU). L'avantage concurrentiel réside désormais dans la maîtrise de vos données métier et la gouvernance que vous imposez à l'IA. Selon le JDN, cette bascule expose les entreprises qui ne comprennent pas les mécanismes sous-jacents des LLM et qui les utilisent comme de simples outils cloud, créant un risque de "cheval de Troie". <a href="https://www.journaldunet.com/intelligence-artificielle/1552203-ia-en-entreprise-le-modele-est-devenu-une-commodite-votre-avantage-est-ailleurs/">JDN 1</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552239-l-ia-expose-les-entreprises-qui-ne-la-maitrisent-pas/">JDN 2</a></li>
-</ul>
-
-<ul>
-<li><strong>Souveraineté et stratégie européenne</strong> : L'Europe ne doit pas imiter les stratégies américaines ou chinoises mais capitaliser sur ses atouts propres (énergie, données de confiance, quantique) pour rester dans la course. Parallèlement, l'ouverture par Google d'un labo IA au Ghana, hors zone francophone, souligne l'urgence pour les acteurs européens de structurer l'écosystème IA francophone avant un verrouillage total par les géants US. <a href="https://www.journaldunet.com/intelligence-artificielle/1552325-l-europe-ne-gagnera-pas-la-guerre-de-l-ia-en-jouant-selon-les-regles-des-autres/">JDN 3</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552253-google-installe-son-premier-labo-d-ia-en-afrique-au-ghana-l-afrique-francophone-doit-elle-s-inquieter/">JDN 4</a></li>
-</ul>
-
-<ul>
-<li><strong>IA agentique : maturation et tests en autonomie</strong> : Tableau (Salesforce) intègre l'IA agentique dans sa pile analytique, signalant l'arrivée de cette technologie dans les outils métier établis. En parallèle, le projet Emergence World étudie les comportements émergents d'agents IA laissés en totale autonomie dans un monde virtuel, un point d'attention pour la confiance à accorder à ces systèmes. <a href="https://www.lemondeinformatique.fr/actualites/lire-tableau-greffe-l-ia-agentique-a-sa-pile-analytique-100656.html">Le Monde Informatique</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552321-emergence-world-permet-d-etudier-ce-qui-se-passe-lorsque-vous-laissez-des-ia-tourner-en-totale-autonomie/">JDN</a></li>
-</ul>
-
-<ul>
-<li><strong>Évolution des métiers et filières</strong> : L'intégration de l'IA dans l'industrie ne détruit pas les emplois mais crée des métiers techniques augmentés ("Smart Trade"). La revalorisation de ces filières est présentée comme un levier direct de souveraineté face aux pénuries de compétences. <a href="https://www.journaldunet.com/intelligence-artificielle/1552277-l-avenement-du-smart-trade-comment-l-ia-reinvente-les-metiers-de-l-industrie/">JDN</a></li>
+<li><strong>Windows 11 26H2</strong> : La prochaine mise à jour majeure de Windows 11 arrivera cet automne sous forme de package d'activation, les nouveautés ayant déjà été déployées progressivement en amont. <a href="https://next.ink/246195/windows-11-la-mise-a-jour-26h2-se-dessine-pour-cet-automne/">Next.ink</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260706-1438</guid>
-      <pubDate>Mon, 06 Jul 2026 14:38:31 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260706-1907</guid>
+      <pubDate>Mon, 06 Jul 2026 19:07:14 +0000</pubDate>
     </item>
   </channel>
 </rss>
