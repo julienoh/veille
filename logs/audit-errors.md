@@ -40,3 +40,18 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-03 09:11 UTC | scoring | Sony signe un prix qui va ravir les fans de gaming sur cette (BFM Tech) | Rate limit fournisseur LLM atteint |
 | 2026-07-03 09:13 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 80 column 6 (char 2696)) |
 | 2026-07-06 14:32 UTC | scoring | How to Evaluate an AI SOC Platform in 2026: 6 Capabilities T (The Hacker News) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 08:30 UTC | scoring | Object-Centric Environment Modeling for Agentic Tasks (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 08:39 UTC | scoring | SWIFT: Spatio-temporal Wavelet Integrated Forecasting Framew (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 09:07 UTC | scoring | G2VD: Generalizable AI-Generated Video Detection via Counter (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 09:09 UTC | scoring | HamQASBench: A Hamiltonian-Informed Diagnostic Benchmark for (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 09:17 UTC | scoring | Correlation-Weighted Multi-Reward Optimization for Compositi (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 09:21 UTC | scoring | Saving GPU Hours in LLM Inference System Development and Onl (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 09:46 UTC | scoring | The Multiscale Single-Index Model: A Stylized Model for Hier (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 09:51 UTC | scoring | Directional Curvature from Armijo Backtracking: A Low-Cost S (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 09:58 UTC | scoring | KinEMbed: Decoding Kinematics from Electromyography via Cros (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 10:03 UTC | scoring | Weak-to-Strong Generalization via Direct On-Policy Distillat (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 10:05 UTC | scoring | CIPHER: Causal Intervention Pathways for Healthcare Equity a (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 10:08 UTC | scoring | HyperVAttention: Efficient Sparse Attention with Spatio-Temp (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 10:32 UTC | scoring | QEDBENCH: Quantifying the Alignment Gap in Automated Evaluat (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 10:39 UTC | scoring | Learning rate adaptive stochastic gradient descent optimizat (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-07 10:54 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 68 column 6 (char 2627)) |
