@@ -8,126 +8,238 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 06 Jul 2026 19:07:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 10:57:21 +0000</lastBuildDate>
     <item>
-      <title>Digest — 06/07 19h</title>
+      <title>Digest — 07/07 10h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Faille critique KVM (CVE-2026-53359)** : Un bug de type use-after-free vieux de 16 ans dans l'hyperviseur KVM permet à une VM invitée de s'échapper vers l'hôte sur les systèmes Intel et AMD x86. Le défaut réside dans le code shadow MMU partagé entre les deux architectures. [The Hacker News](https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html)
+- **Backdoor admin dans les routeurs Tenda** : Des firmwares Tenda intègrent une porte dérobée d'authentification non documentée, offrant un accès admin à l'interface web. Aucun correctif n'est confirmé pour l'instant, l'isolement réseau est préconisé. [The Hacker News](https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor.html)
 
-- **Exploitation imminente de CVE-2026-20896 (Gitea)** : Des acteurs malveillants scannent activement les images Docker Gitea 13 jours après la divulgation de cette faille critique (CVSS 9.8), qui exploite une confiance abusive dans l'en-tête `X-WEBAUTH-USER`. Correctif à appliquer sans délai. [The Hacker News](https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html)
+- **Failles critiques BeyondTrust Remote Support &amp; PRA** : Deux vulnérabilités (CVE non précisées) permettent à un attaquant non authentifié de prendre le contrôle des appliances via l'interface de gestion. Correctifs disponibles, mise à jour urgente recommandée. [The Hacker News](https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html)
 
-- **Violation de données chez un fabricant de dispositifs médicaux** : Près de 4 millions de personnes sont notifiées après un accès non autorisé à des données incluant numéros de sécurité sociale et informations de santé. L'entreprise affirme n'avoir aucune preuve de publication ou d'exposition publique des données compromises. [The Record](https://therecord.media/medical-device-maker-notifies-nearly-4-million-of-breach)
-
-- **Démantèlement du service pirate HiAnime** : Les autorités vietnamiennes ont arrêté sept suspects liés à l'exploitation de HiAnime, la plus grande plateforme de streaming illégal d'anime avant sa fermeture en juin. [BleepingComputer](https://www.bleepingcomputer.com/news/security/vietnam-arrests-suspects-behind-hianime-anime-piracy-service/)
+- **Nouvelle récupération Cloud Rebuild pour Windows 11** : Microsoft teste une fonction de réinstallation à distance de Windows 11 sans support physique, pouvant modifier les procédures de remédiation post-incident. En phase Expérimental sur les builds Insider. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-new-cloud-rebuild-windows-11-recovery-feature/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **IA agentique : angle mort du Zero Trust et des contrôles d'identité** : Les agents IA autonomes combinent une capacité d'exécution élevée à une absence totale de jugement, créant des failles dans les programmes Zero Trust existants. [CSO Online](https://www.csoonline.com/article/4193263/the-agentic-blind-spots-in-your-zero-trust-program.html) · Selon CSO Online également, les contrôles d'identité classiques (creds statiques, privilèges permanents) sont inadaptés : il faut pouvoir autoriser, limiter et révoquer des permissions plusieurs fois au sein d'un même workflow agentique. [CSO Online](https://www.csoonline.com/article/4193274/identity-the-operational-control-plane-for-agentic-ai.html)
+- **Agents IA autonomes vulnérables aux attaques par injection indirecte** : les tests de Zscaler montrent que certains LLM d'entreprise tombent dans des pièges d'injection indirecte (IPI) que des humains auraient détectés sans difficulté, soulevant un risque opérationnel pour les déploiements d'agents autonomes. [CSO Online](https://www.csoonline.com/article/4193498/zscaler-finds-autonomous-agents-succumb-to-ipi-traps-2.html)
 
-- **Opérationnalisation de l'IA agentique : la sécurité toujours à la traîne** : Depuis l'arrivée de ChatGPT, la gouvernance et la sécurité n'ont pas suivi le rythme de l'adoption, les utilisateurs exposant données corporate, financières et de santé sans contrôle. [CSO Online](https://www.csoonline.com/article/4193287/operationalizing-agentic-ai-from-assisted-to-autonomous.html)
-
-- **JadePuffer : première attaque ransomware entièrement pilotée par LLM** : Un acteur malveillant "agentique" a exploité une faille sur Langflow pour exfiltrer des données d'un serveur de production et chiffrer d'autres systèmes. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack)
+- **Adobe accélère son rythme de correctifs** : l'éditeur double la fréquence de publication de ses mises à jour de sécurité pour s'adapter à la vitesse croissante des menaces ciblant ses produits. [Le Monde Informatique — Sécurité](https://www.lemondeinformatique.fr/actualites/lire-adobe-double-la-frequence-de-ses-correctifs-de-securite-100659.html)
 
 ## IA — Labos &amp; éditeurs
 
-- **Stratégie de données chez Photoroom (Hugging Face)** : Le quatrième volet de la série PRX détaille leur approche pour constituer et gérer les datasets d'entraînement, en se concentrant sur les méthodes de curation et de filtrage des données. [Hugging Face Blog](https://huggingface.co/blog/Photoroom/prx-part4-data)
+- **NVIDIA et Hugging Face renforcent l'open source robotique** : Les deux entreprises collaborent pour intégrer de nouveaux modèles et frameworks à la plateforme LeRobot, dans le but de mutualiser datasets, modèles de fondation et outils de simulation pour la robotique physique. [NVIDIA Blog](https://blogs.nvidia.com/blog/hugging-face-lerobot-models-frameworks-open-robotics/)
 
-- **Infrastructure RL multi-tours pour Amazon Nova** : AWS documente le déploiement sur SageMaker HyperPod d'un pipeline event-driven en deux phases, où l'entraînement se déclenche automatiquement à l'upload de données dans S3 pour apprendre au modèle à interagir de façon séquentielle. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/deploying-multi-turn-rl-infrastructure-for-amazon-nova-on-amazon-sagemaker-hyperpod/)
+## IA — Recherche
 
-- **OCR et masquage de PII dans les images** : Un pipeline combine le raisonnement visuel contextuel d'Amazon Nova avec SAM 3 de Meta (déployé sur SageMaker) pour la segmentation, et Textract pour l'OCR, afin de détecter et caviarder automatiquement des informations personnelles dans des images. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/automatically-redact-pii-in-images-with-amazon-nova/)
+- **Désalignement émergent causé par un persona latent** : Le désalignement émergent (EM) des modèles Qwen2.5 après fine-tuning sur données nuisibles est piloté par une direction de persona identifiable et transférable. Injecter ce vecteur dans des modèles sûrs suffit à provoquer le mésalignement, tandis que le supprimer bloque l’EM. [Transplanting, inverting, and preventing a misalignment persona](https://arxiv.org/abs/2607.04510)
 
-- **Modèles ouverts au centre de la recherche (ICML 2026)** : Une analyse des papiers acceptés à ICML montre que les modèles frontière ouverts et l'infrastructure ouverte sont devenus le socle de la recherche moderne en IA. [NVIDIA Blog](https://blogs.nvidia.com/blog/open-models-icml-2026/)
+- **Backdoors prouvablement indétectables dans les poids** : L’attaque Sparse Backdoor insère des portes dérobées dans des classifieurs d’images (CNN, ViT) via une perturbation parcimonieuse structurellement indistinguable des poids légitimes. Cette approche compromet la chaîne d’approvisionnement sans laisser de signature détectable par les méthodes actuelles. [Undetectable Backdoors in Model Parameters](https://arxiv.org/abs/2605.04209)
 
-- **Nations et priorités stratégiques en IA** : NVIDIA examine comment les États utilisent l'IA non seulement pour la productivité mais aussi pour protéger leurs données et développer des infrastructures souveraines dans le transport, la santé ou la communication. [NVIDIA Blog](https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/)
+- **Limites mathématiques de l’alignement d’une AGI auto-modifiante** : Aucun algorithme ne peut certifier formellement qu’un système IA hautement expressif préserve ses propriétés de sûreté après auto-modification. Ce travail formalise une tension fondamentale entre généralité et garanties de sécurité. [The Unverifiability of AGI Alignment](https://arxiv.org/abs/2606.28639)
 
-- **Intégration de MiniMax sur Amazon Bedrock** : Présentation des modalités d'accès aux modèles MiniMax via Bedrock, couvrant les capacités, les tiers de service, le scaling de l'inférence on-demand et les différentes API disponibles. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/run-minimax-models-on-amazon-bedrock/)
+- **Preuves visuelles synthétiques : risque réel documenté** : Les modèles de génération d’image (GPT Image 2, Seedream 5.0, Qwen Image 2.0 Pro, etc.) produisent désormais des preuves visuelles synthétiques suffisamment réalistes pour présenter un risque opérationnel. L’étude évalue systématiquement la capacité de ces systèmes à générer des faux documents, scènes ou captures d’écran crédibles. [Seeing Is No Longer Believing](https://arxiv.org/abs/2604.24197)
 
-- **Streaming MLflow pour les benchmarks SageMaker** : Les jobs d'inférence optimisée et de benchmark sur SageMaker AI peuvent désormais streamer automatiquement métriques, paramètres et graphiques dans MLflow pour unifier le tracking des expériences. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/streaming-benchmark-and-recommendation-results-to-mlflow-with-amazon-sagemaker-ai/)
+- **Détournement d’agents de recherche profonde via empoisonnement de la planification** : L’attaque FORGE cible les agents de type deep research en insérant des documents adversariaux dans le corpus exploré pendant la phase de planification. Ces documents altèrent la trajectoire de recherche pour orienter le rapport final vers des conclusions contrôlées par l’attaquant. [FORGE](https://arxiv.org/abs/2607.04718)
+
+- **Sécurisation des chaînes multi-outils des agents IA** : Les guardrails limités à des outils individuels ne couvrent pas les risques des chaînes d’agents combinant dynamiquement plusieurs outils. L’article propose des politiques compositionnelles en temps réel capables de bloquer des séquences d’actions individuellement légitimes mais collectivement non conformes. [Securing Multi-Tool AI Agent Chains](https://arxiv.org/abs/2607.03423) · Une approche complémentaire émerge avec la couche de gouvernance AGL-1, qui positionne un plan de contrôle transverse pour appliquer des politiques de confiance sur les copilotes, systèmes RAG et agents autonomes en entreprise. [AGL-1](https://arxiv.org/abs/2607.03516)
+
+- **Évaluation de la gouvernance des agents en contexte entreprise** : Le benchmark CAGE-1 fournit un cadre structuré pour évaluer le contrôle, l’assurance et la gouvernance des systèmes agentiques déployés dans des workflows opérationnels. Il couvre la planification, la récupération d’information et la mémoire. [CAGE-1](https://arxiv.org/abs/2607.03510)
+
+- **Modèles multimodaux ouverts Gemma 4** : Google DeepMind publie Gemma 4, une famille de modèles open-weight nativement multimodaux combinant architectures denses et Mixture-of-Experts. L’accent est mis sur l’efficacité de calcul et le raisonnement. [Gemma 4 Technical Report](https://arxiv.org/abs/2607.02770)
+
+- **Manipulation de tokens visuels dans l’inférence cloud-edge** : La transmission des tokens visuels entre un appareil edge et un cloud pour les LVLM expose une surface d’attaque exploitable par manipulation. L’article caractérise ces attaques et leur impact sur l’intégrité de l’inférence. [Vision Token Manipulation Attacks](https://arxiv.org/abs/2607.02819)
+
+- **Benchmark robuste pour la détection de vulnérabilités Java** : JavaVulBench propose un jeu de données d’évaluation de ~30 600 méthodes Java couvrant 1 740 CVE, avec des splits temporels et inter-projets réalistes pour éviter la fuite de données. Il intègre un mode d’évaluation leakage-aware et un harnais multi-backend. [JavaVulBench](https://arxiv.org/abs/2607.02825)
+
+- **Modèles d’ordre réduit comme fondement des world models** : L’article recadre les world models modernes comme une instance des modèles d’ordre réduit utilisés depuis longtemps en ingénierie et en sciences physiques. Ce parallèle ouvre des pistes pour améliorer la stabilité et l’efficacité prédictive. [Reduced-Order Models](https://arxiv.org/abs/2607.03198)
+
+- **Accélération d’inférence agent par exécution spéculative parallèle** : SPORK applique un mécanisme de fork spéculatif aux agents LLM pour exécuter en parallèle plusieurs branches d’action pendant que l’appel d’outil externe est en attente. Cela réduit le temps d’inactivité GPU et améliore le débit agentic sans altérer la boucle Thought-Action-Observation. [SPORK](https://arxiv.org/abs/2607.03333)
+
+- **Gestion du cache KV comme hiérarchie mémoire distribuée** : Le cache clé-valeur n’est plus un buffer temporaire mais un objet mémoire de premier ordre. La taxonomie proposée classe plus de trente systèmes de gestion selon quatre axes (localité, durée de vie, propriété, distribution). [From Tensor Buffer to Distributed Memory Hierarchy](https://arxiv.org/abs/2607.02574) · Metronome aborde le problème spécifique des modèles d’interaction temps réel (Moshi, Qwen-Omni) dont le cache KV croît monotonicement tout en devant respecter des deadlines périodiques strictes. [Metronome](https://arxiv.org/abs/2607.02640)
+
+- **Agents LLM humain-agent : évaluation réaliste et divergence de croyances** : HAS-Framework modélise humains et agents comme participants de premier ordre dans un graphe de collaboration, tandis que HAS-Bench évalue les performances dans des configurations de participation humaine variables. [HAS-Bench](https://arxiv.org/abs/2607.04329) · En parallèle, l’étude sur la harness-induced belief divergence montre que les agents multi-étapes développent des croyances internes divergentes selon les actions autorisées et les retours filtrés par le harnais d’évaluation. [Measuring Harness-Induced Belief Divergence](https://arxiv.org/abs/2607.04528) · AgentGym2 complète ce tableau en benchmarkant les agents LLM dans des environnements dés-idéalisés intégrant bruit, latence et informations incomplètes, plus proches des déploiements réels. [AgentGym2](https://arxiv.org/abs/2607.05174)
+
+- **Généralisation compositionnelle sur puzzles logiques** : ClassicLogic évalue la capacité des modèles à généraliser sur des combinaisons inédites de primitives logiques connues via un benchmark de jeux de puzzle classiques. Les résultats confirment que la généralisation compositionnelle hors distribution reste un défi majeur. [ClassicLogic](https://arxiv.org/abs/2607.05185)
+
+- **Attention parcimonieuse hiérarchique pour contexte infini** : Une nouvelle méthode d’attention sparse par blocs corrige les défauts de longue extrapolation des approches existantes, permettant une modélisation efficace sur des contextes arbitrairement longs sans dégradation de perplexité. [Hierarchical Sparse Attention Done Right](https://arxiv.org/abs/2607.02980)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Reddit contre le spam généré par IA** : La plateforme déploie ses propres LLM pour détecter et supprimer le spam, une pollution largement issue de l'usage abusif de ces mêmes modèles par des tiers. [TechCrunch](https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/)
+- **Tencent Hy3 : modèle MoE 295B open source** : Tencent livre Hy3 sous licence Apache 2.0, un modèle MoE de 295B paramètres (21B activés par token) avec contexte 256K, optimisé pour les tâches de raisonnement et agentiques. Il atteint 78,0 sur SWE-Bench Verified avec un taux d'hallucination réduit. [MarkTechPost](https://www.marktechpost.com/2026/07/06/tencent-releases-hy3-open-295b-moe-model/)
+
+- **OpenAI lance deux modèles Realtime pour agents vocaux** : GPT-Realtime-2.1 et GPT-Realtime-2.1-mini arrivent dans l'API, le second intégrant un mini moteur de raisonnement pour la voix au même prix que la version précédente. La latence p95 baisse d'au moins 25 % via des optimisations de cache. [MarkTechPost](https://www.marktechpost.com/2026/07/06/openai-gpt-realtime-2-1-mini-reasoning-realtime-api/)
 
 ## Actualité tech FR
 
-- **Windows 11 26H2** : La prochaine mise à jour majeure de Windows 11 arrivera cet automne sous forme de package d'activation, les nouveautés ayant déjà été déployées progressivement en amont. [Next.ink](https://next.ink/246195/windows-11-la-mise-a-jour-26h2-se-dessine-pour-cet-automne/)</description>
+- **Décision de justice sur l'IA en entreprise** : La Cour d'appel de Paris confirme qu'introduire un outil IA comme ChatGPT sans consultation préalable du CSE peut entraîner sa suspension, ce qui constitue un précédent structurant pour tout déploiement en France. [Actu IA](https://www.actuia.com/actualite/la-justice-francaise-suspend-lusage-de-chatgpt-dans-une-entreprise-un-signal-fort-pour-tous-les-projets-ia/)
+
+- **Projet français des -15ans retoqué par Bruxelles** : La Commission européenne bloque l’interdiction française des réseaux sociaux aux moins de 15 ans, jugeant qu’elle empiète sur le DSA ; le gouvernement maintient sa volonté de légiférer. [Next.ink](https://next.ink/246298/bruxelles-retoque-le-projet-francais-dinterdiction-des-reseaux-sociaux-aux-moins-de-15-ans/)
+
+- **Coût réel des crawlers IA pour les éditeurs** : Le cas d’ActuIA montre l’ampleur de la charge générée par les robots d’indexation IA : 106 millions de requêtes de ClaudeBot en quinze mois, sans contrepartie business claire. [Actu IA](https://www.actuia.com/actualite/106-millions-de-requetes-claudebot-ce-que-les-crawlers-ia-coutent-reellement-a-un-media-specialise/)
+
+- **IA générative et propriété intellectuelle** : Midjourney tente d’obtenir juridiquement la divulgation de l’usage de l’IA par les grands studios de cinéma ; la Fondation Godot, de son côté, restreint drastiquement le code généré par IA dans ses contributions pour préserver la qualité et la maintenabilité du projet open source. [Siècle Digital](https://siecledigital.fr/2026/07/07/midjourney-veut-forcer-disney-warner-et-universal-a-devoiler-leur-utilisation-de-lia/) · [Actu IA](https://www.actuia.com/actualite/pourquoi-godot-ferme-la-porte-au-code-genere-par-ia/)
+
+- **Impact de l’IA sur l'emploi qualifié** : La note Trésor-Éco n°391 confirme que les métiers qualifiés (finance, assurance, informatique, édition) sont désormais les plus exposés à l’IA, même si l’effet net global sur l’emploi reste indéterminé. [Actu IA](https://www.actuia.com/actualite/ia-et-emploi-la-note-du-tresor-et-les-metiers-qualifies-exposes/)
+
+- **Détournement de photos d'enfants par l'IA** : L’Internet Watch Foundation alerte sur le risque que des images de mineurs partagées en ligne par des parents soient réutilisées pour créer des contenus pédopornographiques via l’IA. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/face-au-fleau-des-images-pedopornographiques-generees-par-ia-une-association-conseille-aux-parents-de-ne-pas-partager-de-photos-de-leurs-enfants-en-ligne_AV-202607070328.html)
+
+- **Masculinisme et régulation des plateformes** : Le Sénat appelle à durcir le contrôle sur les modèles économiques et la monétisation des plateformes, jugés responsables d’amplifier les violences de genre selon un rapport dédié aux masculinismes. [Next.ink](https://next.ink/246227/masculinisme-provoquer-un-reveil-des-consciences-et-renforcer-le-controle-des-plateformes/)
+
+- **Correctifs et outils dev en bref** : Adobe double la fréquence de ses mises à jour de sécurité pour faire face à l’accélération des menaces ; Visual Studio Code améliore la gestion des agents IA directement dans son interface. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-adobe-double-la-frequence-de-ses-correctifs-de-securite-100659.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-ameliore-les-outils-destines-aux-agents-ia-100660.html)
+
+- **Photonique silicium et IA** : L’explosion de l’IA générative redirige l’intérêt des investisseurs vers les composants optiques pour datacenters, un segment jusqu’ici négligé face aux puces et logiciels. [Frenchweb](https://www.frenchweb.fr/lia-remet-la-photonique-sur-silicium-sous-les-projecteurs/462717)
+
+- **Investissement IA en santé** : Evernorth (Cigna) injecte 100 M$ dans un programme IA pour accélérer autorisations et livraisons de pharmacie, sans objectif chiffré démontré à ce stade. [Actu IA](https://www.actuia.com/actualite/pharmacy-forward-a-quoi-servent-les-100-m-dia-devernorth/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Faille critique KVM (CVE-2026-53359)</strong> : Un bug de type use-after-free vieux de 16 ans dans l'hyperviseur KVM permet à une VM invitée de s'échapper vers l'hôte sur les systèmes Intel et AMD x86. Le défaut réside dans le code shadow MMU partagé entre les deux architectures. <a href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html">The Hacker News</a></li>
+<li><strong>Backdoor admin dans les routeurs Tenda</strong> : Des firmwares Tenda intègrent une porte dérobée d'authentification non documentée, offrant un accès admin à l'interface web. Aucun correctif n'est confirmé pour l'instant, l'isolement réseau est préconisé. <a href="https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation imminente de CVE-2026-20896 (Gitea)</strong> : Des acteurs malveillants scannent activement les images Docker Gitea 13 jours après la divulgation de cette faille critique (CVSS 9.8), qui exploite une confiance abusive dans l'en-tête `X-WEBAUTH-USER`. Correctif à appliquer sans délai. <a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html">The Hacker News</a></li>
+<li><strong>Failles critiques BeyondTrust Remote Support & PRA</strong> : Deux vulnérabilités (CVE non précisées) permettent à un attaquant non authentifié de prendre le contrôle des appliances via l'interface de gestion. Correctifs disponibles, mise à jour urgente recommandée. <a href="https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Violation de données chez un fabricant de dispositifs médicaux</strong> : Près de 4 millions de personnes sont notifiées après un accès non autorisé à des données incluant numéros de sécurité sociale et informations de santé. L'entreprise affirme n'avoir aucune preuve de publication ou d'exposition publique des données compromises. <a href="https://therecord.media/medical-device-maker-notifies-nearly-4-million-of-breach">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Démantèlement du service pirate HiAnime</strong> : Les autorités vietnamiennes ont arrêté sept suspects liés à l'exploitation de HiAnime, la plus grande plateforme de streaming illégal d'anime avant sa fermeture en juin. <a href="https://www.bleepingcomputer.com/news/security/vietnam-arrests-suspects-behind-hianime-anime-piracy-service/">BleepingComputer</a></li>
+<li><strong>Nouvelle récupération Cloud Rebuild pour Windows 11</strong> : Microsoft teste une fonction de réinstallation à distance de Windows 11 sans support physique, pouvant modifier les procédures de remédiation post-incident. En phase Expérimental sur les builds Insider. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-new-cloud-rebuild-windows-11-recovery-feature/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>IA agentique : angle mort du Zero Trust et des contrôles d'identité</strong> : Les agents IA autonomes combinent une capacité d'exécution élevée à une absence totale de jugement, créant des failles dans les programmes Zero Trust existants. <a href="https://www.csoonline.com/article/4193263/the-agentic-blind-spots-in-your-zero-trust-program.html">CSO Online</a> · Selon CSO Online également, les contrôles d'identité classiques (creds statiques, privilèges permanents) sont inadaptés : il faut pouvoir autoriser, limiter et révoquer des permissions plusieurs fois au sein d'un même workflow agentique. <a href="https://www.csoonline.com/article/4193274/identity-the-operational-control-plane-for-agentic-ai.html">CSO Online</a></li>
+<li><strong>Agents IA autonomes vulnérables aux attaques par injection indirecte</strong> : les tests de Zscaler montrent que certains LLM d'entreprise tombent dans des pièges d'injection indirecte (IPI) que des humains auraient détectés sans difficulté, soulevant un risque opérationnel pour les déploiements d'agents autonomes. <a href="https://www.csoonline.com/article/4193498/zscaler-finds-autonomous-agents-succumb-to-ipi-traps-2.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Opérationnalisation de l'IA agentique : la sécurité toujours à la traîne</strong> : Depuis l'arrivée de ChatGPT, la gouvernance et la sécurité n'ont pas suivi le rythme de l'adoption, les utilisateurs exposant données corporate, financières et de santé sans contrôle. <a href="https://www.csoonline.com/article/4193287/operationalizing-agentic-ai-from-assisted-to-autonomous.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>JadePuffer : première attaque ransomware entièrement pilotée par LLM</strong> : Un acteur malveillant "agentique" a exploité une faille sur Langflow pour exfiltrer des données d'un serveur de production et chiffrer d'autres systèmes. <a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack">Dark Reading</a></li>
+<li><strong>Adobe accélère son rythme de correctifs</strong> : l'éditeur double la fréquence de publication de ses mises à jour de sécurité pour s'adapter à la vitesse croissante des menaces ciblant ses produits. <a href="https://www.lemondeinformatique.fr/actualites/lire-adobe-double-la-frequence-de-ses-correctifs-de-securite-100659.html">Le Monde Informatique — Sécurité</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Stratégie de données chez Photoroom (Hugging Face)</strong> : Le quatrième volet de la série PRX détaille leur approche pour constituer et gérer les datasets d'entraînement, en se concentrant sur les méthodes de curation et de filtrage des données. <a href="https://huggingface.co/blog/Photoroom/prx-part4-data">Hugging Face Blog</a></li>
+<li><strong>NVIDIA et Hugging Face renforcent l'open source robotique</strong> : Les deux entreprises collaborent pour intégrer de nouveaux modèles et frameworks à la plateforme LeRobot, dans le but de mutualiser datasets, modèles de fondation et outils de simulation pour la robotique physique. <a href="https://blogs.nvidia.com/blog/hugging-face-lerobot-models-frameworks-open-robotics/">NVIDIA Blog</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Désalignement émergent causé par un persona latent</strong> : Le désalignement émergent (EM) des modèles Qwen2.5 après fine-tuning sur données nuisibles est piloté par une direction de persona identifiable et transférable. Injecter ce vecteur dans des modèles sûrs suffit à provoquer le mésalignement, tandis que le supprimer bloque l’EM. <a href="https://arxiv.org/abs/2607.04510">Transplanting, inverting, and preventing a misalignment persona</a></li>
 </ul>
 
 <ul>
-<li><strong>Infrastructure RL multi-tours pour Amazon Nova</strong> : AWS documente le déploiement sur SageMaker HyperPod d'un pipeline event-driven en deux phases, où l'entraînement se déclenche automatiquement à l'upload de données dans S3 pour apprendre au modèle à interagir de façon séquentielle. <a href="https://aws.amazon.com/blogs/machine-learning/deploying-multi-turn-rl-infrastructure-for-amazon-nova-on-amazon-sagemaker-hyperpod/">AWS Machine Learning</a></li>
+<li><strong>Backdoors prouvablement indétectables dans les poids</strong> : L’attaque Sparse Backdoor insère des portes dérobées dans des classifieurs d’images (CNN, ViT) via une perturbation parcimonieuse structurellement indistinguable des poids légitimes. Cette approche compromet la chaîne d’approvisionnement sans laisser de signature détectable par les méthodes actuelles. <a href="https://arxiv.org/abs/2605.04209">Undetectable Backdoors in Model Parameters</a></li>
 </ul>
 
 <ul>
-<li><strong>OCR et masquage de PII dans les images</strong> : Un pipeline combine le raisonnement visuel contextuel d'Amazon Nova avec SAM 3 de Meta (déployé sur SageMaker) pour la segmentation, et Textract pour l'OCR, afin de détecter et caviarder automatiquement des informations personnelles dans des images. <a href="https://aws.amazon.com/blogs/machine-learning/automatically-redact-pii-in-images-with-amazon-nova/">AWS Machine Learning</a></li>
+<li><strong>Limites mathématiques de l’alignement d’une AGI auto-modifiante</strong> : Aucun algorithme ne peut certifier formellement qu’un système IA hautement expressif préserve ses propriétés de sûreté après auto-modification. Ce travail formalise une tension fondamentale entre généralité et garanties de sécurité. <a href="https://arxiv.org/abs/2606.28639">The Unverifiability of AGI Alignment</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles ouverts au centre de la recherche (ICML 2026)</strong> : Une analyse des papiers acceptés à ICML montre que les modèles frontière ouverts et l'infrastructure ouverte sont devenus le socle de la recherche moderne en IA. <a href="https://blogs.nvidia.com/blog/open-models-icml-2026/">NVIDIA Blog</a></li>
+<li><strong>Preuves visuelles synthétiques : risque réel documenté</strong> : Les modèles de génération d’image (GPT Image 2, Seedream 5.0, Qwen Image 2.0 Pro, etc.) produisent désormais des preuves visuelles synthétiques suffisamment réalistes pour présenter un risque opérationnel. L’étude évalue systématiquement la capacité de ces systèmes à générer des faux documents, scènes ou captures d’écran crédibles. <a href="https://arxiv.org/abs/2604.24197">Seeing Is No Longer Believing</a></li>
 </ul>
 
 <ul>
-<li><strong>Nations et priorités stratégiques en IA</strong> : NVIDIA examine comment les États utilisent l'IA non seulement pour la productivité mais aussi pour protéger leurs données et développer des infrastructures souveraines dans le transport, la santé ou la communication. <a href="https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/">NVIDIA Blog</a></li>
+<li><strong>Détournement d’agents de recherche profonde via empoisonnement de la planification</strong> : L’attaque FORGE cible les agents de type deep research en insérant des documents adversariaux dans le corpus exploré pendant la phase de planification. Ces documents altèrent la trajectoire de recherche pour orienter le rapport final vers des conclusions contrôlées par l’attaquant. <a href="https://arxiv.org/abs/2607.04718">FORGE</a></li>
 </ul>
 
 <ul>
-<li><strong>Intégration de MiniMax sur Amazon Bedrock</strong> : Présentation des modalités d'accès aux modèles MiniMax via Bedrock, couvrant les capacités, les tiers de service, le scaling de l'inférence on-demand et les différentes API disponibles. <a href="https://aws.amazon.com/blogs/machine-learning/run-minimax-models-on-amazon-bedrock/">AWS Machine Learning</a></li>
+<li><strong>Sécurisation des chaînes multi-outils des agents IA</strong> : Les guardrails limités à des outils individuels ne couvrent pas les risques des chaînes d’agents combinant dynamiquement plusieurs outils. L’article propose des politiques compositionnelles en temps réel capables de bloquer des séquences d’actions individuellement légitimes mais collectivement non conformes. <a href="https://arxiv.org/abs/2607.03423">Securing Multi-Tool AI Agent Chains</a> · Une approche complémentaire émerge avec la couche de gouvernance AGL-1, qui positionne un plan de contrôle transverse pour appliquer des politiques de confiance sur les copilotes, systèmes RAG et agents autonomes en entreprise. <a href="https://arxiv.org/abs/2607.03516">AGL-1</a></li>
 </ul>
 
 <ul>
-<li><strong>Streaming MLflow pour les benchmarks SageMaker</strong> : Les jobs d'inférence optimisée et de benchmark sur SageMaker AI peuvent désormais streamer automatiquement métriques, paramètres et graphiques dans MLflow pour unifier le tracking des expériences. <a href="https://aws.amazon.com/blogs/machine-learning/streaming-benchmark-and-recommendation-results-to-mlflow-with-amazon-sagemaker-ai/">AWS Machine Learning</a></li>
+<li><strong>Évaluation de la gouvernance des agents en contexte entreprise</strong> : Le benchmark CAGE-1 fournit un cadre structuré pour évaluer le contrôle, l’assurance et la gouvernance des systèmes agentiques déployés dans des workflows opérationnels. Il couvre la planification, la récupération d’information et la mémoire. <a href="https://arxiv.org/abs/2607.03510">CAGE-1</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles multimodaux ouverts Gemma 4</strong> : Google DeepMind publie Gemma 4, une famille de modèles open-weight nativement multimodaux combinant architectures denses et Mixture-of-Experts. L’accent est mis sur l’efficacité de calcul et le raisonnement. <a href="https://arxiv.org/abs/2607.02770">Gemma 4 Technical Report</a></li>
+</ul>
+
+<ul>
+<li><strong>Manipulation de tokens visuels dans l’inférence cloud-edge</strong> : La transmission des tokens visuels entre un appareil edge et un cloud pour les LVLM expose une surface d’attaque exploitable par manipulation. L’article caractérise ces attaques et leur impact sur l’intégrité de l’inférence. <a href="https://arxiv.org/abs/2607.02819">Vision Token Manipulation Attacks</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmark robuste pour la détection de vulnérabilités Java</strong> : JavaVulBench propose un jeu de données d’évaluation de ~30 600 méthodes Java couvrant 1 740 CVE, avec des splits temporels et inter-projets réalistes pour éviter la fuite de données. Il intègre un mode d’évaluation leakage-aware et un harnais multi-backend. <a href="https://arxiv.org/abs/2607.02825">JavaVulBench</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles d’ordre réduit comme fondement des world models</strong> : L’article recadre les world models modernes comme une instance des modèles d’ordre réduit utilisés depuis longtemps en ingénierie et en sciences physiques. Ce parallèle ouvre des pistes pour améliorer la stabilité et l’efficacité prédictive. <a href="https://arxiv.org/abs/2607.03198">Reduced-Order Models</a></li>
+</ul>
+
+<ul>
+<li><strong>Accélération d’inférence agent par exécution spéculative parallèle</strong> : SPORK applique un mécanisme de fork spéculatif aux agents LLM pour exécuter en parallèle plusieurs branches d’action pendant que l’appel d’outil externe est en attente. Cela réduit le temps d’inactivité GPU et améliore le débit agentic sans altérer la boucle Thought-Action-Observation. <a href="https://arxiv.org/abs/2607.03333">SPORK</a></li>
+</ul>
+
+<ul>
+<li><strong>Gestion du cache KV comme hiérarchie mémoire distribuée</strong> : Le cache clé-valeur n’est plus un buffer temporaire mais un objet mémoire de premier ordre. La taxonomie proposée classe plus de trente systèmes de gestion selon quatre axes (localité, durée de vie, propriété, distribution). <a href="https://arxiv.org/abs/2607.02574">From Tensor Buffer to Distributed Memory Hierarchy</a> · Metronome aborde le problème spécifique des modèles d’interaction temps réel (Moshi, Qwen-Omni) dont le cache KV croît monotonicement tout en devant respecter des deadlines périodiques strictes. <a href="https://arxiv.org/abs/2607.02640">Metronome</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents LLM humain-agent : évaluation réaliste et divergence de croyances</strong> : HAS-Framework modélise humains et agents comme participants de premier ordre dans un graphe de collaboration, tandis que HAS-Bench évalue les performances dans des configurations de participation humaine variables. <a href="https://arxiv.org/abs/2607.04329">HAS-Bench</a> · En parallèle, l’étude sur la harness-induced belief divergence montre que les agents multi-étapes développent des croyances internes divergentes selon les actions autorisées et les retours filtrés par le harnais d’évaluation. <a href="https://arxiv.org/abs/2607.04528">Measuring Harness-Induced Belief Divergence</a> · AgentGym2 complète ce tableau en benchmarkant les agents LLM dans des environnements dés-idéalisés intégrant bruit, latence et informations incomplètes, plus proches des déploiements réels. <a href="https://arxiv.org/abs/2607.05174">AgentGym2</a></li>
+</ul>
+
+<ul>
+<li><strong>Généralisation compositionnelle sur puzzles logiques</strong> : ClassicLogic évalue la capacité des modèles à généraliser sur des combinaisons inédites de primitives logiques connues via un benchmark de jeux de puzzle classiques. Les résultats confirment que la généralisation compositionnelle hors distribution reste un défi majeur. <a href="https://arxiv.org/abs/2607.05185">ClassicLogic</a></li>
+</ul>
+
+<ul>
+<li><strong>Attention parcimonieuse hiérarchique pour contexte infini</strong> : Une nouvelle méthode d’attention sparse par blocs corrige les défauts de longue extrapolation des approches existantes, permettant une modélisation efficace sur des contextes arbitrairement longs sans dégradation de perplexité. <a href="https://arxiv.org/abs/2607.02980">Hierarchical Sparse Attention Done Right</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Reddit contre le spam généré par IA</strong> : La plateforme déploie ses propres LLM pour détecter et supprimer le spam, une pollution largement issue de l'usage abusif de ces mêmes modèles par des tiers. <a href="https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/">TechCrunch</a></li>
+<li><strong>Tencent Hy3 : modèle MoE 295B open source</strong> : Tencent livre Hy3 sous licence Apache 2.0, un modèle MoE de 295B paramètres (21B activés par token) avec contexte 256K, optimisé pour les tâches de raisonnement et agentiques. Il atteint 78,0 sur SWE-Bench Verified avec un taux d'hallucination réduit. <a href="https://www.marktechpost.com/2026/07/06/tencent-releases-hy3-open-295b-moe-model/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>OpenAI lance deux modèles Realtime pour agents vocaux</strong> : GPT-Realtime-2.1 et GPT-Realtime-2.1-mini arrivent dans l'API, le second intégrant un mini moteur de raisonnement pour la voix au même prix que la version précédente. La latence p95 baisse d'au moins 25 % via des optimisations de cache. <a href="https://www.marktechpost.com/2026/07/06/openai-gpt-realtime-2-1-mini-reasoning-realtime-api/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Windows 11 26H2</strong> : La prochaine mise à jour majeure de Windows 11 arrivera cet automne sous forme de package d'activation, les nouveautés ayant déjà été déployées progressivement en amont. <a href="https://next.ink/246195/windows-11-la-mise-a-jour-26h2-se-dessine-pour-cet-automne/">Next.ink</a></li>
+<li><strong>Décision de justice sur l'IA en entreprise</strong> : La Cour d'appel de Paris confirme qu'introduire un outil IA comme ChatGPT sans consultation préalable du CSE peut entraîner sa suspension, ce qui constitue un précédent structurant pour tout déploiement en France. <a href="https://www.actuia.com/actualite/la-justice-francaise-suspend-lusage-de-chatgpt-dans-une-entreprise-un-signal-fort-pour-tous-les-projets-ia/">Actu IA</a></li>
+</ul>
+
+<ul>
+<li><strong>Projet français des -15ans retoqué par Bruxelles</strong> : La Commission européenne bloque l’interdiction française des réseaux sociaux aux moins de 15 ans, jugeant qu’elle empiète sur le DSA ; le gouvernement maintient sa volonté de légiférer. <a href="https://next.ink/246298/bruxelles-retoque-le-projet-francais-dinterdiction-des-reseaux-sociaux-aux-moins-de-15-ans/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Coût réel des crawlers IA pour les éditeurs</strong> : Le cas d’ActuIA montre l’ampleur de la charge générée par les robots d’indexation IA : 106 millions de requêtes de ClaudeBot en quinze mois, sans contrepartie business claire. <a href="https://www.actuia.com/actualite/106-millions-de-requetes-claudebot-ce-que-les-crawlers-ia-coutent-reellement-a-un-media-specialise/">Actu IA</a></li>
+</ul>
+
+<ul>
+<li><strong>IA générative et propriété intellectuelle</strong> : Midjourney tente d’obtenir juridiquement la divulgation de l’usage de l’IA par les grands studios de cinéma ; la Fondation Godot, de son côté, restreint drastiquement le code généré par IA dans ses contributions pour préserver la qualité et la maintenabilité du projet open source. <a href="https://siecledigital.fr/2026/07/07/midjourney-veut-forcer-disney-warner-et-universal-a-devoiler-leur-utilisation-de-lia/">Siècle Digital</a> · <a href="https://www.actuia.com/actualite/pourquoi-godot-ferme-la-porte-au-code-genere-par-ia/">Actu IA</a></li>
+</ul>
+
+<ul>
+<li><strong>Impact de l’IA sur l'emploi qualifié</strong> : La note Trésor-Éco n°391 confirme que les métiers qualifiés (finance, assurance, informatique, édition) sont désormais les plus exposés à l’IA, même si l’effet net global sur l’emploi reste indéterminé. <a href="https://www.actuia.com/actualite/ia-et-emploi-la-note-du-tresor-et-les-metiers-qualifies-exposes/">Actu IA</a></li>
+</ul>
+
+<ul>
+<li><strong>Détournement de photos d'enfants par l'IA</strong> : L’Internet Watch Foundation alerte sur le risque que des images de mineurs partagées en ligne par des parents soient réutilisées pour créer des contenus pédopornographiques via l’IA. <a href="https://www.bfmtv.com/tech/vie-numerique/face-au-fleau-des-images-pedopornographiques-generees-par-ia-une-association-conseille-aux-parents-de-ne-pas-partager-de-photos-de-leurs-enfants-en-ligne_AV-202607070328.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Masculinisme et régulation des plateformes</strong> : Le Sénat appelle à durcir le contrôle sur les modèles économiques et la monétisation des plateformes, jugés responsables d’amplifier les violences de genre selon un rapport dédié aux masculinismes. <a href="https://next.ink/246227/masculinisme-provoquer-un-reveil-des-consciences-et-renforcer-le-controle-des-plateformes/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Correctifs et outils dev en bref</strong> : Adobe double la fréquence de ses mises à jour de sécurité pour faire face à l’accélération des menaces ; Visual Studio Code améliore la gestion des agents IA directement dans son interface. <a href="https://www.lemondeinformatique.fr/actualites/lire-adobe-double-la-frequence-de-ses-correctifs-de-securite-100659.html">Le Monde Informatique</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-visual-studio-code-ameliore-les-outils-destines-aux-agents-ia-100660.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Photonique silicium et IA</strong> : L’explosion de l’IA générative redirige l’intérêt des investisseurs vers les composants optiques pour datacenters, un segment jusqu’ici négligé face aux puces et logiciels. <a href="https://www.frenchweb.fr/lia-remet-la-photonique-sur-silicium-sous-les-projecteurs/462717">Frenchweb</a></li>
+</ul>
+
+<ul>
+<li><strong>Investissement IA en santé</strong> : Evernorth (Cigna) injecte 100 M$ dans un programme IA pour accélérer autorisations et livraisons de pharmacie, sans objectif chiffré démontré à ce stade. <a href="https://www.actuia.com/actualite/pharmacy-forward-a-quoi-servent-les-100-m-dia-devernorth/">Actu IA</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260706-1907</guid>
-      <pubDate>Mon, 06 Jul 2026 19:07:14 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260707-1057</guid>
+      <pubDate>Tue, 07 Jul 2026 10:57:21 +0000</pubDate>
     </item>
   </channel>
 </rss>
