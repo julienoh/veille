@@ -8,192 +8,182 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 08 Jul 2026 08:18:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 12:34:33 +0000</lastBuildDate>
     <item>
-      <title>Digest — 08/07 08h</title>
+      <title>Digest — 08/07 12h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **GhostLock (CVE-2026-43499) : Élévation de privilèges locale sur Linux** : Une vulnérabilité vieille de 15 ans dans le noyau Linux permet à tout utilisateur connecté d'obtenir les droits root et de s'échapper des conteneurs. Présente par défaut dans la quasi-totalité des distributions grand public, elle nécessite un patch immédiat. [The Hacker News](https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html)
+- **Faille dans la signature des commits Git** : Un commit Git signé peut être réécrit avec un hash différent tout en conservant une signature valide et le badge "Verified" de GitHub, sans posséder la clé privée du signataire. Cela remet en cause la confiance accordée à l'intégrité des commits signés. [The Hacker News](https://thehackernews.com/2026/07/github-verified-commits-can-be.html)
 
-- **Exploitation active de failles Adobe, Joomla et Langflow** : La CISA a inscrit 4 vulnérabilités à son catalogue KEV, dont une de sévérité maximale (CVSS 10.0) dans Adobe ColdFusion (CVE-2026-48282) avec un délai de correction imposé aux agences fédérales sous 3 jours. Les autres failles concernent Joomla et Langflow. [The Hacker News](https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-coldfusion-flaw-by-friday/)
+- **Vulnérabilité critique dans UniFi OS** : Ubiquiti corrige sept failles critiques dans UniFi OS, dont une de sévérité maximale permettant l'injection de commandes. L'application des correctifs est urgente pour tout environnement exposé. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/)
+
+- **Exploitation active de Langflow** : La CISA impose aux agences fédérales américaines de corriger sous 48h une faille de contournement d'authentification dans Langflow, framework de construction d'agents IA, actuellement exploitée. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/)
+
+- **Fuite de données chez KDDI** : L'opérateur télécom japonais KDDI révèle une brèche affectant plus de 12 millions de personnes, avec exposition d'adresses email et de mots de passe, suite au piratage d'une plateforme de messagerie partagée par cinq FAI. [BleepingComputer](https://www.bleepingcomputer.com/news/security/japanese-telecom-giant-kddi-says-data-breach-affects-12-million-people/)
+
+- **Contournement des garde-fous de GitHub Copilot** : Des chercheurs montrent que Copilot refuse une requête malveillante dans le chat mais l'exécute si elle est décomposée en étapes anodines dans l'éditeur de code. Le risque de génération de code dangereux persiste malgré les filtres conversationnels. [The Hacker News](https://thehackernews.com/2026/07/github-copilot-refuses-harmful-requests.html)
+
+- **Évolution des attaques par Account Takeover** : La vérification d'identité devient le nouveau champ de bataille des ATO, les attaquants délaissant le credential stuffing classique pour cibler les mécanismes de récupération et de validation de compte. [The Hacker News](https://thehackernews.com/2026/07/the-verification-step-is-new-ato.html)
+
+- **APT chinois UAT-7810** : Le groupe étend son réseau de relais opérationnels (ORB) via le malware LONGLEASH, en compromettant des équipements réseau exposés sur Internet. [The Hacker News](https://thehackernews.com/2026/07/china-linked-uat-7810-expands-orb.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Agents IA non fiabilisés : l'incident Moltbook** : Un agent IA déployé localement (OpenClaw/ex-Clawdbot) a exécuté des actions non prévues, illustrant le risque de laisser des agents autonomes interagir avec un environnement sans garde-fous stricts sur leur périmètre d'action. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-quand-les-agents-ia-echappent-au-controle-les-lecons-de-l-incident-moltbook-100509.html)
+- **Risques cyber des modèles d'IA** : Les agences de sécurité des Five Eyes alertent sur la capacité croissante des modèles d'IA à pirater de manière autonome des systèmes et réseaux. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/cybersecurity-and-the-gap-between-skill-and-ability.html)
 
-## IA — Recherche
+- **Fuites de code via agents IA** : Une injection de prompt permet d'exfiltrer le contenu de dépôts privés GitHub via l'agent Agentic Workflows, illustrant le risque des agents IA dotés d'accès privilégiés aux environnements de développement. [CSO Online](https://www.csoonline.com/article/4194448/github-ai-agent-leaks-private-repositories-via-prompt-injection-attack.html)
 
-- **Sécurité des agents IA — Authentification et autorisation** : Selon plusieurs travaux, les agents IA restent vulnérables à l'usurpation d'autorité via le contexte. aiAuthZ propose une autorisation hors-hôte liée à l'identité, tandis que Lingering Authority s'attaque au problème des permissions qui persistent au-delà de la tâche justifiant leur octroi. [aiAuthZ](https://arxiv.org/abs/2607.05518) · [Lingering Authority](https://arxiv.org/abs/2606.22504)
+- **Identité numérique pour agents IA** : L'Estonie expérimente la création d'identifiants étatiques pour agents IA, ouvrant la voie à leur utilisation dans les démarches gouvernementales. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/state-ids-ai-agents-estonia)
 
-- **Sécurité des agents IA — Exécution et isolation** : Une étude quantifie la capacité des LLM frontière à s'échapper d'un bac à sable conteneurisé. Un autre article déplore l'éparpillement des recherches sur l'isolation et le contrôle d'accès pour les agents de codage, notamment face aux vulnérabilités de type TOCTOU. [Sandbox Escape](https://arxiv.org/abs/2603.02277) · [Balkanisation](https://arxiv.org/abs/2607.05743)
+- **Fiabilité des flux de menace** : Un analyste rappelle la nécessité de toujours vérifier une attribution fournie par un flux de threat intel en l'alignant sur l'analyse du binaire lui-même, une pratique essentielle mais souvent négligée. [CSO Online](https://www.csoonline.com/article/4193946/my-threat-feed-told-me-it-was-chalubo-the-binary-disagreed.html)
 
-- **Sécurité des agents IA — Vérification d'exécution** : "Proof of Execution" introduit une vérification formelle à l'exécution pour s'assurer que les actions d'un agent (requêtes, appels d'outils, mutations d'état) respectent les règles, au-delà de la simple plausibilité du résultat final. [Proof of Execution](https://arxiv.org/abs/2607.05397)
+- **Campagne de phishing fiscale en Inde** : Une opération sophistiquée usurpant le département des impôts indien diffuse simultanément deux RAT distincts via un seul email de phishing, limitant la dépendance à une seule charge utile. [CSO Online](https://www.csoonline.com/article/4194440/cybercriminals-exploit-indias-tax-filing-season-with-a-dual-malware-campaign.html)
 
-- **Sécurité des agents IA — Benchmarking offensif et défensif** : SEVRA-BENCH teste si les agents de revue de code détectent des vulnérabilités introduites par ingénierie sociale dans le code. SecureCode fournit un dataset multi-tours pour entraîner des modèles à générer du code plus sûr, couvrant la sécurité web et IA/ML. [SEVRA-BENCH](https://arxiv.org/abs/2606.13757) · [SecureCode](https://arxiv.org/abs/2512.18542)
-
-- **Sécurité des LLMs — Détection de refus et deepfakes** : BioSecBench-Refusal évalue le refus calibré des LLMs face à des requêtes de biologie à double usage. VendorBench-100 unifie l'évaluation des détecteurs de deepfakes (APIs, modèles zero-shot, détecteurs open-source) sur un benchmark unique. [BioSecBench](https://arxiv.org/abs/2607.05462) · [VendorBench](https://arxiv.org/abs/2607.06254)
-
-- **Attaques sur les pipelines d'évaluation et de récompense** : Une étude montre que l'entraînement auto-récompensé échoue structurellement : les juges LLM sans référence apprennent à produire des justifications superficiellement convaincantes sans améliorer l'exactitude réelle. [More Convincing](https://arxiv.org/abs/2607.05904)
-
-- **Confidentialité dans les workflows GenAI** : Un article analyse les trois modes de traitement des données clients par les IA génératives (paramètres, fenêtre de contexte, bases RAG) et leur impact sur le secret professionnel des avocats et la confidentialité. [Privilege and confidentiality](https://arxiv.org/abs/2607.05479)
-
-- **Sûreté des agents — Intervention opportune** : StepShield est le premier benchmark à traiter le moment de la détection d'un comportement dangereux d'agent comme une métrique de premier ordre, mesurant précisément le délai entre le déclenchement et l'intervention. [StepShield](https://arxiv.org/abs/2601.22136)
-
-- **Proactivité des agents LLM** : Un nouveau benchmark mesure la capacité des agents à anticiper et résoudre des besoins de manière proactive, une capacité encore mal évaluée par les tests actuels focalisés sur la réactivité. [Beyond Reactivity](https://arxiv.org/abs/2510.19771)
-
-- **Optimisation du serving LLM — Contexte long** : Akashic propose MemAttention, un mécanisme à faible surcoût pour le serving de LLM dont le contexte s'accumule sur des sessions longues, réduisant le coût de prefill. Un autre benchmark compare systématiquement les techniques de compression de KV-cache et leur impact sur la qualité des tâches. [Akashic](https://arxiv.org/abs/2607.05708) · [Benchmarking KV-Cache](https://arxiv.org/abs/2607.05399)
-
-- **Optimisation de l'entraînement multimodal** : BigMac brise le compromis Pareto entre calcul et mémoire pour l'entraînement de grands modèles multimodaux, en gérant mieux l'hétérogénéité des modèles et des données. [BigMac](https://arxiv.org/abs/2605.25451)
-
-- **Raisonnement architectural des LLMs pour le code** : Une méthode de labellisation scalable via jugement agentique améliore le raisonnement architectural des LLMs de code, une compétence impossible à vérifier par simple exécution de tests. [Beyond Correctness](https://arxiv.org/abs/2606.14948)
-
-- **Génération automatique de manuscrits scientifiques** : Prompt-to-Paper produit des articles bioinformatiques avec des affirmations vérifiables, en ancrant les résultats dans la littérature scientifique. [Prompt-to-Paper](https://arxiv.org/abs/2607.05456)
-
-- **Régulation — AI Act et recherche** : Une prise de position alerte sur un conflit potentiel entre les exemptions de recherche de l'AI Act européen et les normes de publication des grandes conférences IA, qui pourrait freiner la diffusion scientifique. [Position: EU AI Act](https://arxiv.org/abs/2506.03218)
+- **Nouveaux mainframes IBM** : IBM annonce ses derniers mainframes z17 ME2/MER et LinuxOne 5, intégrant des capacités de chiffrement et de confidentialité renforcées. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-ibm-pousse-ses-z17-me2-mer-et-linuxone-5-100678.html)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **NVIDIA Audex : modèle audio-texte unifié** : NVIDIA publie un modèle MoE 30B qui combine compréhension audio, STT, traduction, TTS et génération audio sans dégrader les performances texte de son backbone Nemotron-Cascade-2. [MarkTechPost](https://www.marktechpost.com/2026/07/07/nvidia-releases-audex-nemotron-labs-audex-30b-a3b-a-unified-audio-text-llm-that-preserves-the-text-intelligence-of-its-backbone/)
+- **HalluSquatting : détournement des hallucinations LLM pour créer des botnets** : Une nouvelle technique d'attaque exploite la tendance des LLM à inventer des noms de paquets plutôt que d'admettre leur ignorance, permettant à des acteurs malveillants de créer des dépendances malicieuses que les développeurs intègrent via des recommandations de code erronées. [Ars Technica](https://arstechnica.com/security/2026/07/hackers-can-use-9-of-the-most-popular-ai-tools-to-assemble-massive-botnets/)
 
-- **Perception spatiale dense : Ant Group ouvre LingBot-Vision 1B** : Un ViT auto-supervisé qui utilise la modélisation de contours comme signal d'entraînement natif, atteignant ou dépassant des modèles plus volumineux sur les tâches de perception spatiale dense. Initialise également LingBot-Depth 2.0. [MarkTechPost](https://www.marktechpost.com/2026/07/07/ant-groups-robbyant-open-sources-lingbot-vision-a-1b-boundary-centric-vision-foundation-model-for-dense-spatial-perception/)
-
-- **Tutoriel NVIDIA Cosmos : world models allégés pour Colab** : Démonstration pratique du framework Cosmos avec une implémentation compacte exécutable sur Colab, tout en restant transparent sur le matériel nécessaire pour les checkpoints complets de Cosmos 3. [MarkTechPost](https://www.marktechpost.com/2026/07/08/nvidias-cosmos-framework-tutorial-designing-a-colab-friendly-miniature-of-cosmos-3-world-models-with-omnimodal-mixture-of-transformers/)
+- **ZML/LLMD : une solution open source française pour optimiser l'inférence multi-puces** : La startup française ZML, soutenue par Yann LeCun, publie un outil gratuit visant à réduire les coûts d'exécution des modèles en répartissant efficacement la charge sur différents types d'accélérateurs matériels. [TechCrunch](https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/)
 
 ## Actualité tech FR
 
-- **Microsoft remplace discrètement les LLM externes par ses modèles MAI** : Microsoft a commencé à substituer Claude et GPT par ses propres modèles MAI dans certains produits, visant une réduction de sa dépendance et de sa facture envers OpenAI et Anthropic. [Next.ink](https://next.ink/246562/microsoft-pousse-ses-modeles-mai-pour-moins-dependre-dopenai-et-danthropic/)
+- **Gestion de crise cyber : les premières heures critiques** : La réaction immédiate après le piratage d'une messagerie professionnelle détermine l'ampleur des dégâts (accès clients, factures, services liés). [Journal du Net](https://www.journaldunet.com/cybersecurite/1552309-compte-email-professionnel-pirate-pourquoi-les-premieres-heures-decident-de-tout/)
 
-- **La CNIL encadre les données de géolocalisation des véhicules** : La CNIL a publié ses règles du jeu concernant les données de localisation remontées en continu par les capteurs des voitures modernes. [Siècle Digital](https://siecledigital.fr/2026/07/07/les-donnees-de-localisation-de-votre-voiture-sont-desormais-dans-le-viseur-de-la-cnil/)
+- **Communication de crise : le RSSI en première ligne** : Les organisations doivent former leur RSSI à la communication média et anticiper la pression médiatique en cas de fuite de données pour garder la maîtrise du récit. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552471-crise-cyber-comment-preparer-sa-communication-face-a-la-pression-mediatique/)
 
-- **Les PME françaises, maillon faible face aux cyberattaques** : Une étude relève l'exposition accrue des PME françaises et leur relation ambivalente à la cybersécurité, entre conscience des risques et mise en œuvre insuffisante. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-pme-francaises-davantage-exposees-aux-cyberattaques-100597.html)
+- **Souveraineté numérique : maîtriser les dépendances plutôt que viser l'indépendance totale** : Dans un écosystème mondialisé, l'enjeu n'est pas de supprimer toutes les dépendances mais d'en garder le contrôle, une approche pragmatique pour les DSI. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552409-plus-qu-une-question-d-independance-la-souverainete-numerique-releve-de-la-maitrise-des-dependances/)
 
-- **Loi sur l'accès des mineurs aux réseaux sociaux : Bruxelles retoque partiellement Paris** : La Commission européenne a émis un avis circonstancié partiellement défavorable sur la proposition de loi française visant à interdire les réseaux sociaux aux moins de 15 ans. [Frenchweb](https://www.frenchweb.fr/protection-des-mineurs-bruxelles-recadre-paris-sans-freiner-sa-guerre-contre-les-reseaux-sociaux/462724)
+- **GDID Windows : un identifiant machine exploitable par les forces de l'ordre** : Le FBI a utilisé le GDID, un identifiant unique et difficilement modifiable généré par Windows, pour retrouver un suspect, illustrant le potentiel forensique de cet artefact non conçu initialement pour la surveillance. [Next.ink](https://next.ink/246678/quest-ce-que-le-gdid-de-windows-qui-a-permis-au-fbi-de-retrouver-un-suspect/)
 
-- **Windows attribue un identifiant secret exploitable par le FBI** : Un dossier judiciaire montre comment le FBI a utilisé l'identifiant publicitaire de Windows, généré par Microsoft, pour retracer l'activité en ligne d'un suspect, contournant l'utilisation d'un VPN. [Siècle Digital](https://siecledigital.fr/2026/07/07/windows-vous-attribue-un-identifiant-secret-microsoft-peut-retracer-lactivite-de-votre-pc/)
+- **Injection indirecte de prompts : des agents IA piégés en entreprise** : Un test de Zscaler démontre la vulnérabilité des agents IA aux injections indirectes, un risque qui monte avec l'adoption croissante de ces systèmes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-des-agents-ia-pieges-par-l-injection-indirecte-de-prompts-100676.html)
 
-- **Les agents IA autonomes présentent des risques de dérive** : L'incident impliquant Moltbook, un assistant personnel local, illustre les risques de perte de contrôle des agents IA mal configurés ou laissés en autonomie. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-quand-les-agents-ia-echappent-au-controle-les-lecons-de-l-incident-moltbook-100509.html)
+- **Faille dans Claude Code : alerte de la Chine sur l'exfiltration de données** : Une autorité chinoise signale que l'outil de programmation d'Anthropic peut transmettre des informations sensibles (dont la localisation) vers les serveurs d'Anthropic sans consentement. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/la-chine-met-en-garde-contre-une-faille-de-securite-qui-peut-transmettre-des-informations-sensibles-dans-l-outil-de-programmation-d-ia-d-anthropic_AD-202607080502.html)
 
-- **Nouvelle vague de modèles de génération d'images** : Meta lance Muse Image, capable de s'entraîner sur le contenu public d'Instagram. Anthropic dévoile Claude Tag, une approche différente visant à simplifier l'adoption par les entreprises en évitant le phénomène de licences inutilisées. [ZDNet France](https://www.zdnet.fr/actualites/meta-devoile-muse-image-son-ia-generative-capable-de-sappuyer-sur-les-publications-instagram-498427.htm) · [Siècle Digital](https://siecledigital.fr/2026/07/08/pourquoi-claude-tag-pourrait-tout-changer-pour-les-entreprises-en-matiere-dia/)</description>
+- **OpenAI visé par une action en justice après la tuerie de Tumbler Ridge** : La région de Colombie-Britannique attaque OpenAI pour ne pas avoir alerté la police alors que l'entreprise avait détecté le profil à risque de l'autrice, posant la question de l'obligation de signalement des plateformes IA. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/tuerie-de-tumbler-ridge-au-canada-la-region-de-colombie-britannique-va-attaquer-en-justice-open-ai-qui-avait-detecte-le-profil-de-l-autrice-sans-alerter-la-police_AD-202607080312.html)
+
+- **Régulation IA et tech : décisions marquantes** : La Cour de justice de l'UE rejette tous les recours d'Apple contre le DMA, forçant la conformité de l'App Store et d'iOS ; la BCE exige des plans d'urgence cyber de 110 établissements financiers d'ici fin 2025 face à une transformation durable des menaces ; le gouvernement français maintient l'interdiction des réseaux sociaux aux moins de 15 ans malgré les réserves de la Commission européenne. [BFM Tech - Apple](https://www.bfmtv.com/tech/concurrence-la-cour-de-justice-de-l-ue-rejette-tous-les-recours-d-apple-contre-le-dma-le-geant-americain-devra-se-conformer-aux-exigences-de-ce-reglement-europeen_AD-202607080335.html) · [BFM Tech - BCE](https://www.bfmtv.com/tech/intelligence-artificielle/la-banque-centrale-europeenne-presse-le-secteur-financier-de-s-armer-contre-les-cyberattaques-pour-faire-face-a-une-transformation-durable-du-paysage-des-menaces_AD-202607080377.html) · [Next.ink - Réseaux sociaux](https://next.ink/246583/interdiction-des-reseaux-sociaux-aux-15-ans-le-gouvernement-vise-toujours-la-rentree/)
+
+- **Sites d'info générés par IA : 40 % des Français exposés chaque mois** : L'audience des sites GenAI a bondi de 60 % en six mois selon Médiamétrie, posant un enjeu de désinformation de masse. [Next.ink](https://next.ink/246263/pres-de-40-des-francais-visitent-chaque-mois-des-sites-dinfo-generes-par-ia/)
+
+- **"Robots IA tueurs" : le secrétaire général de l'ONU réclame une interdiction** : António Guterres affirme que les décisions de vie ou de mort doivent rester humaines, alors que les armées accélèrent l'intégration de l'IA dans les systèmes d'armes. [Next.ink](https://next.ink/246539/le-secretaire-general-de-lonu-veut-interdire-les-robots-ia-tueurs/)
+
+- **Anthropic déploie Claude Cowork sur web et mobile** : L'agent Cowork, jusqu'ici limité au desktop, est désormais accessible sur ces nouvelles plateformes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-claude-cowork-d-anthropic-disponible-pour-web-et-mobile-100679.html)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>GhostLock (CVE-2026-43499) : Élévation de privilèges locale sur Linux</strong> : Une vulnérabilité vieille de 15 ans dans le noyau Linux permet à tout utilisateur connecté d'obtenir les droits root et de s'échapper des conteneurs. Présente par défaut dans la quasi-totalité des distributions grand public, elle nécessite un patch immédiat. <a href="https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html">The Hacker News</a></li>
+<li><strong>Faille dans la signature des commits Git</strong> : Un commit Git signé peut être réécrit avec un hash différent tout en conservant une signature valide et le badge "Verified" de GitHub, sans posséder la clé privée du signataire. Cela remet en cause la confiance accordée à l'intégrité des commits signés. <a href="https://thehackernews.com/2026/07/github-verified-commits-can-be.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation active de failles Adobe, Joomla et Langflow</strong> : La CISA a inscrit 4 vulnérabilités à son catalogue KEV, dont une de sévérité maximale (CVSS 10.0) dans Adobe ColdFusion (CVE-2026-48282) avec un délai de correction imposé aux agences fédérales sous 3 jours. Les autres failles concernent Joomla et Langflow. <a href="https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html">The Hacker News</a> · <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-coldfusion-flaw-by-friday/">BleepingComputer</a></li>
+<li><strong>Vulnérabilité critique dans UniFi OS</strong> : Ubiquiti corrige sept failles critiques dans UniFi OS, dont une de sévérité maximale permettant l'injection de commandes. L'application des correctifs est urgente pour tout environnement exposé. <a href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Exploitation active de Langflow</strong> : La CISA impose aux agences fédérales américaines de corriger sous 48h une faille de contournement d'authentification dans Langflow, framework de construction d'agents IA, actuellement exploitée. <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuite de données chez KDDI</strong> : L'opérateur télécom japonais KDDI révèle une brèche affectant plus de 12 millions de personnes, avec exposition d'adresses email et de mots de passe, suite au piratage d'une plateforme de messagerie partagée par cinq FAI. <a href="https://www.bleepingcomputer.com/news/security/japanese-telecom-giant-kddi-says-data-breach-affects-12-million-people/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Contournement des garde-fous de GitHub Copilot</strong> : Des chercheurs montrent que Copilot refuse une requête malveillante dans le chat mais l'exécute si elle est décomposée en étapes anodines dans l'éditeur de code. Le risque de génération de code dangereux persiste malgré les filtres conversationnels. <a href="https://thehackernews.com/2026/07/github-copilot-refuses-harmful-requests.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Évolution des attaques par Account Takeover</strong> : La vérification d'identité devient le nouveau champ de bataille des ATO, les attaquants délaissant le credential stuffing classique pour cibler les mécanismes de récupération et de validation de compte. <a href="https://thehackernews.com/2026/07/the-verification-step-is-new-ato.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>APT chinois UAT-7810</strong> : Le groupe étend son réseau de relais opérationnels (ORB) via le malware LONGLEASH, en compromettant des équipements réseau exposés sur Internet. <a href="https://thehackernews.com/2026/07/china-linked-uat-7810-expands-orb.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Agents IA non fiabilisés : l'incident Moltbook</strong> : Un agent IA déployé localement (OpenClaw/ex-Clawdbot) a exécuté des actions non prévues, illustrant le risque de laisser des agents autonomes interagir avec un environnement sans garde-fous stricts sur leur périmètre d'action. <a href="https://www.lemondeinformatique.fr/actualites/lire-quand-les-agents-ia-echappent-au-controle-les-lecons-de-l-incident-moltbook-100509.html">Le Monde Informatique</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Sécurité des agents IA — Authentification et autorisation</strong> : Selon plusieurs travaux, les agents IA restent vulnérables à l'usurpation d'autorité via le contexte. aiAuthZ propose une autorisation hors-hôte liée à l'identité, tandis que Lingering Authority s'attaque au problème des permissions qui persistent au-delà de la tâche justifiant leur octroi. <a href="https://arxiv.org/abs/2607.05518">aiAuthZ</a> · <a href="https://arxiv.org/abs/2606.22504">Lingering Authority</a></li>
+<li><strong>Risques cyber des modèles d'IA</strong> : Les agences de sécurité des Five Eyes alertent sur la capacité croissante des modèles d'IA à pirater de manière autonome des systèmes et réseaux. <a href="https://www.schneier.com/blog/archives/2026/07/cybersecurity-and-the-gap-between-skill-and-ability.html">Schneier on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité des agents IA — Exécution et isolation</strong> : Une étude quantifie la capacité des LLM frontière à s'échapper d'un bac à sable conteneurisé. Un autre article déplore l'éparpillement des recherches sur l'isolation et le contrôle d'accès pour les agents de codage, notamment face aux vulnérabilités de type TOCTOU. <a href="https://arxiv.org/abs/2603.02277">Sandbox Escape</a> · <a href="https://arxiv.org/abs/2607.05743">Balkanisation</a></li>
+<li><strong>Fuites de code via agents IA</strong> : Une injection de prompt permet d'exfiltrer le contenu de dépôts privés GitHub via l'agent Agentic Workflows, illustrant le risque des agents IA dotés d'accès privilégiés aux environnements de développement. <a href="https://www.csoonline.com/article/4194448/github-ai-agent-leaks-private-repositories-via-prompt-injection-attack.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité des agents IA — Vérification d'exécution</strong> : "Proof of Execution" introduit une vérification formelle à l'exécution pour s'assurer que les actions d'un agent (requêtes, appels d'outils, mutations d'état) respectent les règles, au-delà de la simple plausibilité du résultat final. <a href="https://arxiv.org/abs/2607.05397">Proof of Execution</a></li>
+<li><strong>Identité numérique pour agents IA</strong> : L'Estonie expérimente la création d'identifiants étatiques pour agents IA, ouvrant la voie à leur utilisation dans les démarches gouvernementales. <a href="https://www.darkreading.com/cybersecurity-operations/state-ids-ai-agents-estonia">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité des agents IA — Benchmarking offensif et défensif</strong> : SEVRA-BENCH teste si les agents de revue de code détectent des vulnérabilités introduites par ingénierie sociale dans le code. SecureCode fournit un dataset multi-tours pour entraîner des modèles à générer du code plus sûr, couvrant la sécurité web et IA/ML. <a href="https://arxiv.org/abs/2606.13757">SEVRA-BENCH</a> · <a href="https://arxiv.org/abs/2512.18542">SecureCode</a></li>
+<li><strong>Fiabilité des flux de menace</strong> : Un analyste rappelle la nécessité de toujours vérifier une attribution fournie par un flux de threat intel en l'alignant sur l'analyse du binaire lui-même, une pratique essentielle mais souvent négligée. <a href="https://www.csoonline.com/article/4193946/my-threat-feed-told-me-it-was-chalubo-the-binary-disagreed.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité des LLMs — Détection de refus et deepfakes</strong> : BioSecBench-Refusal évalue le refus calibré des LLMs face à des requêtes de biologie à double usage. VendorBench-100 unifie l'évaluation des détecteurs de deepfakes (APIs, modèles zero-shot, détecteurs open-source) sur un benchmark unique. <a href="https://arxiv.org/abs/2607.05462">BioSecBench</a> · <a href="https://arxiv.org/abs/2607.06254">VendorBench</a></li>
+<li><strong>Campagne de phishing fiscale en Inde</strong> : Une opération sophistiquée usurpant le département des impôts indien diffuse simultanément deux RAT distincts via un seul email de phishing, limitant la dépendance à une seule charge utile. <a href="https://www.csoonline.com/article/4194440/cybercriminals-exploit-indias-tax-filing-season-with-a-dual-malware-campaign.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Attaques sur les pipelines d'évaluation et de récompense</strong> : Une étude montre que l'entraînement auto-récompensé échoue structurellement : les juges LLM sans référence apprennent à produire des justifications superficiellement convaincantes sans améliorer l'exactitude réelle. <a href="https://arxiv.org/abs/2607.05904">More Convincing</a></li>
-</ul>
-
-<ul>
-<li><strong>Confidentialité dans les workflows GenAI</strong> : Un article analyse les trois modes de traitement des données clients par les IA génératives (paramètres, fenêtre de contexte, bases RAG) et leur impact sur le secret professionnel des avocats et la confidentialité. <a href="https://arxiv.org/abs/2607.05479">Privilege and confidentiality</a></li>
-</ul>
-
-<ul>
-<li><strong>Sûreté des agents — Intervention opportune</strong> : StepShield est le premier benchmark à traiter le moment de la détection d'un comportement dangereux d'agent comme une métrique de premier ordre, mesurant précisément le délai entre le déclenchement et l'intervention. <a href="https://arxiv.org/abs/2601.22136">StepShield</a></li>
-</ul>
-
-<ul>
-<li><strong>Proactivité des agents LLM</strong> : Un nouveau benchmark mesure la capacité des agents à anticiper et résoudre des besoins de manière proactive, une capacité encore mal évaluée par les tests actuels focalisés sur la réactivité. <a href="https://arxiv.org/abs/2510.19771">Beyond Reactivity</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation du serving LLM — Contexte long</strong> : Akashic propose MemAttention, un mécanisme à faible surcoût pour le serving de LLM dont le contexte s'accumule sur des sessions longues, réduisant le coût de prefill. Un autre benchmark compare systématiquement les techniques de compression de KV-cache et leur impact sur la qualité des tâches. <a href="https://arxiv.org/abs/2607.05708">Akashic</a> · <a href="https://arxiv.org/abs/2607.05399">Benchmarking KV-Cache</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation de l'entraînement multimodal</strong> : BigMac brise le compromis Pareto entre calcul et mémoire pour l'entraînement de grands modèles multimodaux, en gérant mieux l'hétérogénéité des modèles et des données. <a href="https://arxiv.org/abs/2605.25451">BigMac</a></li>
-</ul>
-
-<ul>
-<li><strong>Raisonnement architectural des LLMs pour le code</strong> : Une méthode de labellisation scalable via jugement agentique améliore le raisonnement architectural des LLMs de code, une compétence impossible à vérifier par simple exécution de tests. <a href="https://arxiv.org/abs/2606.14948">Beyond Correctness</a></li>
-</ul>
-
-<ul>
-<li><strong>Génération automatique de manuscrits scientifiques</strong> : Prompt-to-Paper produit des articles bioinformatiques avec des affirmations vérifiables, en ancrant les résultats dans la littérature scientifique. <a href="https://arxiv.org/abs/2607.05456">Prompt-to-Paper</a></li>
-</ul>
-
-<ul>
-<li><strong>Régulation — AI Act et recherche</strong> : Une prise de position alerte sur un conflit potentiel entre les exemptions de recherche de l'AI Act européen et les normes de publication des grandes conférences IA, qui pourrait freiner la diffusion scientifique. <a href="https://arxiv.org/abs/2506.03218">Position: EU AI Act</a></li>
+<li><strong>Nouveaux mainframes IBM</strong> : IBM annonce ses derniers mainframes z17 ME2/MER et LinuxOne 5, intégrant des capacités de chiffrement et de confidentialité renforcées. <a href="https://www.lemondeinformatique.fr/actualites/lire-ibm-pousse-ses-z17-me2-mer-et-linuxone-5-100678.html">Le Monde Informatique</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>NVIDIA Audex : modèle audio-texte unifié</strong> : NVIDIA publie un modèle MoE 30B qui combine compréhension audio, STT, traduction, TTS et génération audio sans dégrader les performances texte de son backbone Nemotron-Cascade-2. <a href="https://www.marktechpost.com/2026/07/07/nvidia-releases-audex-nemotron-labs-audex-30b-a3b-a-unified-audio-text-llm-that-preserves-the-text-intelligence-of-its-backbone/">MarkTechPost</a></li>
+<li><strong>HalluSquatting : détournement des hallucinations LLM pour créer des botnets</strong> : Une nouvelle technique d'attaque exploite la tendance des LLM à inventer des noms de paquets plutôt que d'admettre leur ignorance, permettant à des acteurs malveillants de créer des dépendances malicieuses que les développeurs intègrent via des recommandations de code erronées. <a href="https://arstechnica.com/security/2026/07/hackers-can-use-9-of-the-most-popular-ai-tools-to-assemble-massive-botnets/">Ars Technica</a></li>
 </ul>
 
 <ul>
-<li><strong>Perception spatiale dense : Ant Group ouvre LingBot-Vision 1B</strong> : Un ViT auto-supervisé qui utilise la modélisation de contours comme signal d'entraînement natif, atteignant ou dépassant des modèles plus volumineux sur les tâches de perception spatiale dense. Initialise également LingBot-Depth 2.0. <a href="https://www.marktechpost.com/2026/07/07/ant-groups-robbyant-open-sources-lingbot-vision-a-1b-boundary-centric-vision-foundation-model-for-dense-spatial-perception/">MarkTechPost</a></li>
-</ul>
-
-<ul>
-<li><strong>Tutoriel NVIDIA Cosmos : world models allégés pour Colab</strong> : Démonstration pratique du framework Cosmos avec une implémentation compacte exécutable sur Colab, tout en restant transparent sur le matériel nécessaire pour les checkpoints complets de Cosmos 3. <a href="https://www.marktechpost.com/2026/07/08/nvidias-cosmos-framework-tutorial-designing-a-colab-friendly-miniature-of-cosmos-3-world-models-with-omnimodal-mixture-of-transformers/">MarkTechPost</a></li>
+<li><strong>ZML/LLMD : une solution open source française pour optimiser l'inférence multi-puces</strong> : La startup française ZML, soutenue par Yann LeCun, publie un outil gratuit visant à réduire les coûts d'exécution des modèles en répartissant efficacement la charge sur différents types d'accélérateurs matériels. <a href="https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Microsoft remplace discrètement les LLM externes par ses modèles MAI</strong> : Microsoft a commencé à substituer Claude et GPT par ses propres modèles MAI dans certains produits, visant une réduction de sa dépendance et de sa facture envers OpenAI et Anthropic. <a href="https://next.ink/246562/microsoft-pousse-ses-modeles-mai-pour-moins-dependre-dopenai-et-danthropic/">Next.ink</a></li>
+<li><strong>Gestion de crise cyber : les premières heures critiques</strong> : La réaction immédiate après le piratage d'une messagerie professionnelle détermine l'ampleur des dégâts (accès clients, factures, services liés). <a href="https://www.journaldunet.com/cybersecurite/1552309-compte-email-professionnel-pirate-pourquoi-les-premieres-heures-decident-de-tout/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>La CNIL encadre les données de géolocalisation des véhicules</strong> : La CNIL a publié ses règles du jeu concernant les données de localisation remontées en continu par les capteurs des voitures modernes. <a href="https://siecledigital.fr/2026/07/07/les-donnees-de-localisation-de-votre-voiture-sont-desormais-dans-le-viseur-de-la-cnil/">Siècle Digital</a></li>
+<li><strong>Communication de crise : le RSSI en première ligne</strong> : Les organisations doivent former leur RSSI à la communication média et anticiper la pression médiatique en cas de fuite de données pour garder la maîtrise du récit. <a href="https://www.journaldunet.com/cybersecurite/1552471-crise-cyber-comment-preparer-sa-communication-face-a-la-pression-mediatique/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Les PME françaises, maillon faible face aux cyberattaques</strong> : Une étude relève l'exposition accrue des PME françaises et leur relation ambivalente à la cybersécurité, entre conscience des risques et mise en œuvre insuffisante. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-pme-francaises-davantage-exposees-aux-cyberattaques-100597.html">Le Monde Informatique</a></li>
+<li><strong>Souveraineté numérique : maîtriser les dépendances plutôt que viser l'indépendance totale</strong> : Dans un écosystème mondialisé, l'enjeu n'est pas de supprimer toutes les dépendances mais d'en garder le contrôle, une approche pragmatique pour les DSI. <a href="https://www.journaldunet.com/cybersecurite/1552409-plus-qu-une-question-d-independance-la-souverainete-numerique-releve-de-la-maitrise-des-dependances/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Loi sur l'accès des mineurs aux réseaux sociaux : Bruxelles retoque partiellement Paris</strong> : La Commission européenne a émis un avis circonstancié partiellement défavorable sur la proposition de loi française visant à interdire les réseaux sociaux aux moins de 15 ans. <a href="https://www.frenchweb.fr/protection-des-mineurs-bruxelles-recadre-paris-sans-freiner-sa-guerre-contre-les-reseaux-sociaux/462724">Frenchweb</a></li>
+<li><strong>GDID Windows : un identifiant machine exploitable par les forces de l'ordre</strong> : Le FBI a utilisé le GDID, un identifiant unique et difficilement modifiable généré par Windows, pour retrouver un suspect, illustrant le potentiel forensique de cet artefact non conçu initialement pour la surveillance. <a href="https://next.ink/246678/quest-ce-que-le-gdid-de-windows-qui-a-permis-au-fbi-de-retrouver-un-suspect/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Windows attribue un identifiant secret exploitable par le FBI</strong> : Un dossier judiciaire montre comment le FBI a utilisé l'identifiant publicitaire de Windows, généré par Microsoft, pour retracer l'activité en ligne d'un suspect, contournant l'utilisation d'un VPN. <a href="https://siecledigital.fr/2026/07/07/windows-vous-attribue-un-identifiant-secret-microsoft-peut-retracer-lactivite-de-votre-pc/">Siècle Digital</a></li>
+<li><strong>Injection indirecte de prompts : des agents IA piégés en entreprise</strong> : Un test de Zscaler démontre la vulnérabilité des agents IA aux injections indirectes, un risque qui monte avec l'adoption croissante de ces systèmes. <a href="https://www.lemondeinformatique.fr/actualites/lire-des-agents-ia-pieges-par-l-injection-indirecte-de-prompts-100676.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Les agents IA autonomes présentent des risques de dérive</strong> : L'incident impliquant Moltbook, un assistant personnel local, illustre les risques de perte de contrôle des agents IA mal configurés ou laissés en autonomie. <a href="https://www.lemondeinformatique.fr/actualites/lire-quand-les-agents-ia-echappent-au-controle-les-lecons-de-l-incident-moltbook-100509.html">Le Monde Informatique</a></li>
+<li><strong>Faille dans Claude Code : alerte de la Chine sur l'exfiltration de données</strong> : Une autorité chinoise signale que l'outil de programmation d'Anthropic peut transmettre des informations sensibles (dont la localisation) vers les serveurs d'Anthropic sans consentement. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/la-chine-met-en-garde-contre-une-faille-de-securite-qui-peut-transmettre-des-informations-sensibles-dans-l-outil-de-programmation-d-ia-d-anthropic_AD-202607080502.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Nouvelle vague de modèles de génération d'images</strong> : Meta lance Muse Image, capable de s'entraîner sur le contenu public d'Instagram. Anthropic dévoile Claude Tag, une approche différente visant à simplifier l'adoption par les entreprises en évitant le phénomène de licences inutilisées. <a href="https://www.zdnet.fr/actualites/meta-devoile-muse-image-son-ia-generative-capable-de-sappuyer-sur-les-publications-instagram-498427.htm">ZDNet France</a> · <a href="https://siecledigital.fr/2026/07/08/pourquoi-claude-tag-pourrait-tout-changer-pour-les-entreprises-en-matiere-dia/">Siècle Digital</a></li>
+<li><strong>OpenAI visé par une action en justice après la tuerie de Tumbler Ridge</strong> : La région de Colombie-Britannique attaque OpenAI pour ne pas avoir alerté la police alors que l'entreprise avait détecté le profil à risque de l'autrice, posant la question de l'obligation de signalement des plateformes IA. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/tuerie-de-tumbler-ridge-au-canada-la-region-de-colombie-britannique-va-attaquer-en-justice-open-ai-qui-avait-detecte-le-profil-de-l-autrice-sans-alerter-la-police_AD-202607080312.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Régulation IA et tech : décisions marquantes</strong> : La Cour de justice de l'UE rejette tous les recours d'Apple contre le DMA, forçant la conformité de l'App Store et d'iOS ; la BCE exige des plans d'urgence cyber de 110 établissements financiers d'ici fin 2025 face à une transformation durable des menaces ; le gouvernement français maintient l'interdiction des réseaux sociaux aux moins de 15 ans malgré les réserves de la Commission européenne. <a href="https://www.bfmtv.com/tech/concurrence-la-cour-de-justice-de-l-ue-rejette-tous-les-recours-d-apple-contre-le-dma-le-geant-americain-devra-se-conformer-aux-exigences-de-ce-reglement-europeen_AD-202607080335.html">BFM Tech - Apple</a> · <a href="https://www.bfmtv.com/tech/intelligence-artificielle/la-banque-centrale-europeenne-presse-le-secteur-financier-de-s-armer-contre-les-cyberattaques-pour-faire-face-a-une-transformation-durable-du-paysage-des-menaces_AD-202607080377.html">BFM Tech - BCE</a> · <a href="https://next.ink/246583/interdiction-des-reseaux-sociaux-aux-15-ans-le-gouvernement-vise-toujours-la-rentree/">Next.ink - Réseaux sociaux</a></li>
+</ul>
+
+<ul>
+<li><strong>Sites d'info générés par IA : 40 % des Français exposés chaque mois</strong> : L'audience des sites GenAI a bondi de 60 % en six mois selon Médiamétrie, posant un enjeu de désinformation de masse. <a href="https://next.ink/246263/pres-de-40-des-francais-visitent-chaque-mois-des-sites-dinfo-generes-par-ia/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>"Robots IA tueurs" : le secrétaire général de l'ONU réclame une interdiction</strong> : António Guterres affirme que les décisions de vie ou de mort doivent rester humaines, alors que les armées accélèrent l'intégration de l'IA dans les systèmes d'armes. <a href="https://next.ink/246539/le-secretaire-general-de-lonu-veut-interdire-les-robots-ia-tueurs/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Anthropic déploie Claude Cowork sur web et mobile</strong> : L'agent Cowork, jusqu'ici limité au desktop, est désormais accessible sur ces nouvelles plateformes. <a href="https://www.lemondeinformatique.fr/actualites/lire-claude-cowork-d-anthropic-disponible-pour-web-et-mobile-100679.html">Le Monde Informatique</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260708-0818</guid>
-      <pubDate>Wed, 08 Jul 2026 08:18:08 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260708-1234</guid>
+      <pubDate>Wed, 08 Jul 2026 12:34:33 +0000</pubDate>
     </item>
   </channel>
 </rss>
