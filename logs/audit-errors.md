@@ -56,3 +56,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-07 10:39 UTC | scoring | Learning rate adaptive stochastic gradient descent optimizat (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-07-07 10:54 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 68 column 6 (char 2627)) |
 | 2026-07-08 08:16 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2509)) |
+| 2026-07-09 09:29 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2621)) |
