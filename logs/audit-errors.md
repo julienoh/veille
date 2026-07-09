@@ -58,3 +58,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-08 08:16 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2509)) |
 | 2026-07-09 09:29 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2621)) |
 | 2026-07-09 13:59 UTC | scoring | Instagram et WhatsApp accueillent une nouvelle IA capable de (Siècle Digital) | Rate limit fournisseur LLM atteint |
+| 2026-07-09 18:55 UTC | scoring | Meta’s new AI chips will begin production in September (TechCrunch — AI) | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 5 column 175 (char 240)) |
