@@ -8,204 +8,210 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 09 Jul 2026 09:31:32 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 14:05:03 +0000</lastBuildDate>
     <item>
-      <title>Digest — 09/07 09h</title>
+      <title>Digest — 09/07 14h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Fuite de données chez AssuranceAmerica** : Une compromission des systèmes de l'assureur américain expose les données de près de 7 millions de conducteurs. [BleepingComputer](https://www.bleepingcomputer.com/news/security/assuranceamerica-data-breach-exposes-records-of-69-million-drivers/)
+- **Ransomware GodDamn ciblant les défenses endpoint** : Un nouveau ransomware exploite le driver kernel PoisonX pour désactiver les solutions de sécurité avant chiffrement. L'attaque vise spécifiquement les couches de protection endpoint pour opérer sans détection. [The Hacker News](https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html)
 
-- **Vulnérabilité zero-day Microsoft Defender « RoguePlanet »** : Microsoft a corrigé une faille zero-day dans Defender, divulguée après le Patch Tuesday de juin. L'exploitation était possible avant le déploiement du correctif. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-rogueplanet-defender-zero-day-vulnerability/)
+- **CVE-2026-50656 (RoguePlanet) dans Microsoft Defender** : Microsoft a corrigé une faille d'élévation de privilèges (CVSS 7.8) dans le moteur de protection anti-malware. L'exploitation permet d'obtenir des droits SYSTEM, le correctif arrivant un mois après la divulgation publique. [The Hacker News](https://thehackernews.com/2026/07/microsoft-patches-rogueplanet-defender.html)
 
-- **Agents de codage IA détournés pour exécuter du code malveillant** : Des preuves de concept montrent que des assistants de codage IA (Claude, et six outils concernés selon Wiz) peuvent être piégés pour exécuter du code attaquant sur la machine du développeur. L'attaque « Friendly Fire » leur fait analyser du code open-source piégé ; la faille « GhostApproval » exploite des liens symboliques pour écrire dans des fichiers sensibles après validation d'une modification anodine. [The Hacker News](https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html) · [The Hacker News](https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html)
+- **Retrait d'OWA Light sur Exchange Server** : Microsoft va désactiver la version allégée d'Outlook Web Access dans une future mise à jour d'Exchange. Les organisations utilisant ce client pour des postes à ressources limitées ou des navigateurs anciens doivent prévoir une alternative. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-owa-light-retirement-in-exchange-server/)
 
-- **Campagne de proxys résidentiels via de faux installateurs 7-Zip** : Le groupe « Lurking Lizard » opère depuis 2022 une infrastructure de plus de 230 domaines imitant des logiciels légitimes pour transformer les machines infectées en nœuds de proxy résidentiel. [The Hacker News](https://thehackernews.com/2026/07/fake-7-zip-installers-turn-devices-into.html)
+- **Retard de transposition de NIS2 : la France parmi les États visés** : La Commission européenne poursuit la France, l'Irlande, l'Espagne et les Pays-Bas pour non-transposition de la directive NIS2, avec plus de 20 mois de retard. Les entités critiques françaises restent dans l'attente du cadre juridique national. [The Record](https://therecord.media/eu-cyber-filing-ireland-spain-france-netherlands-nis2)
+
+- **Opération anti-fraude internationale : 5800 interpellations** : Une opération coordonnée dans 97 pays a conduit à l'arrestation de 5811 suspects et à la saisie de 293 millions de dollars d'avoirs illicites. L'action ciblait des réseaux de fraude en ligne à l'échelle mondiale. [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-arrests-5-800-suspects-in-global-anti-fraud-crackdown/)
+
+- **NSA : retour du nom TAO pour l'unité de piratage offensive** : L'Office of Computer Network Operations reprend l'appellation historique Tailored Access Operations. Ce changement cosmétique confirme la continuité des missions offensives de l'unité, inchangées malgré les précédentes revalorisations de nom. [The Record](https://therecord.media/nsa-revives-tao-name-for-elite-hacking-unit)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Zéro Trust : du discours à la mise en œuvre** : Alstom déploie une approche zero trust depuis 10 ans pour sécuriser ses projets data et IA, illustrant une adoption mature dans l'industrie française. En parallèle, une étude de Zero Networks montre que la majorité des entreprises reste exposée au risque de déplacement latéral, faute de segmentation réseau suffisante, par confort opérationnel. [Alstom](https://www.lemondeinformatique.fr/actualites/lire-alstom-muscle-ses-projets-data-et-ia-au-zero-trust-100682.html) · [CSO Online](https://www.csoonline.com/article/4194708/lateral-movement-risk-rises-as-enterprises-emphasize-convenience-over-containment.html)
+- **NIS 2 : procédure d'infraction contre la France** : La Commission européenne a engagé une procédure contre la France pour défaut de transposition de la directive NIS 2, qui renforce les obligations de gestion des risques cyber et de notification d'incidents. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-ue-poursuit-la-france-pour-non-transposition-de-la-directive-nis-2-100692.html)
 
-- **Restauration après ransomware : des techniques d'attaque qui évoluent** : Le ransomware "The Gentlemen" cible désormais activement la phase de restauration des données, compliquant la reprise d'activité même lorsque les sauvegardes existent. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-le-ransomware-the-gentlemen-perturbe-la-restauration-des-donnees-100688.html)
+- **Ransomware GodDamn et driver signé Microsoft** : Un driver noyau malveillant, signé par Microsoft, est exploité via la technique BYOVD (Bring Your Own Vulnerable Driver) par le ransomware GodDamn pour désactiver les solutions de sécurité sur les postes ciblés. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/goddamn-ransomware-byovd-smite-companies)
 
-- **Surestimation de la sécurité des outils collaboratifs en Europe** : Selon Dark Reading, un écart persiste entre la confiance affichée par les responsables sécurité européens et le niveau réel de protection de leurs plateformes de collaboration (messagerie, partage de fichiers, visioconférence). [Dark Reading](https://www.darkreading.com/cybersecurity-operations/european-organizations-collaboration-security-confidence-gap)
+- **Passerelles IA : nouveau vecteur de risque cloud** : Une intrusion cloud ayant mené à du cryptominage a mis en lumière le risque de concentration des privilèges au niveau des passerelles IA (type Amazon Bedrock), qui agrègent identités, permissions et accès aux modèles de fondation. [CSO Online](https://www.csoonline.com/article/4194984/attack-on-amazon-bedrock-linked-ai-gateway-highlights-new-cloud-security-risk.html)
 
-## IA — Recherche
+- **Identité des agents IA : un modèle de maturité en 6 étapes** : Un incident causé par un agent LLM doté d'une clé API long terme et sans MFA illustre l'urgence de structurer la gestion des identités non-humaines (NHI) pour les systèmes agentiques. [CSO Online](https://www.csoonline.com/article/4194548/agentic-ai-identity-a-6-stage-maturity-model-for-non-human-identities.html)
 
-- **Attaques par empoisonnement de la mémoire des agents** : Un agent IA doté de mémoire à long terme peut être compromis par des souvenirs malveillants persistants, capables de détourner ses actions sur des outils sensibles (email, calendrier, code). Ces attaques exploitent le rappel en continu du contexte corrompu. [Source](https://arxiv.org/abs/2607.06595)
+- **Détection : priorité à l'architecture de données** : Plusieurs analyses convergent pour affirmer que l'efficacité de la détection repose davantage sur la refonte de l'architecture et de la qualité des données que sur la sophistication des modèles de machine learning. [CSO Online (modèles)](https://www.csoonline.com/article/4194544/why-fixing-your-data-architecture-matters-more-than-upgrading-your-detection-models.html) · [CSO Online (identité IA)](https://www.csoonline.com/article/4194548/agentic-ai-identity-a-6-stage-maturity-model-for-non-human-identities.html)
 
-- **Sécurité des systèmes multi-agents** : Les règles de déploiement, et pas seulement les modèles, influencent causalement la sécurité collective. Une variation unique de règle peut modifier radicalement le comportement d'un groupe d'agents. Le "red-teaming institutionnel" teste ces effets. [Source](https://arxiv.org/abs/2607.07695) · Selon une autre étude, les attaques distribuées sur plusieurs agents déjouent les moniteurs de contrôle par instance, rendant la supervision centralisée inefficace. [Source](https://arxiv.org/abs/2607.07368) · Une troisième source confirme que l'agrégation d'effets dans les pipelines planificateur-exécuteur masque des mécanismes de risque distincts. [Source](https://arxiv.org/abs/2607.07097)
+- **Cyber Shield : le Royaume-Uni mise sur des agents IA autonomes** : Le NCSC britannique a dévoilé un plan pour déployer des agents IA capables de détecter et neutraliser des cyberattaques en temps réel sur les réseaux nationaux, visant une défense souveraine à la vitesse machine. [CSO Online](https://www.csoonline.com/article/4194997/uk-cyber-agency-unveils-ai-powered-cyber-shield-to-counter-attacks-at-machine-speed.html)
 
-- **Défis de sécurité et vie privée pour l'IA agentique** : Trente experts internationaux identifient les directions de recherche prioritaires. La dualité des usages (offensif/défensif) est un axe majeur, notamment la capacité des LLM à générer des malwares sophistiqués tout en améliorant les stratégies défensives. [Source](https://arxiv.org/abs/2607.06608) · [Source](https://arxiv.org/abs/2607.06963)
+- **GPT-5.6 : OpenAI lève les restrictions** : OpenAI a décidé de livrer sans restriction ses modèles GPT-5.6, une décision qui a suscité une certaine confusion quant à ses implications en matière de sécurité et d'usage. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-openai-decide-de-lancer-sans-restriction-les-modeles-gpt-56-100691.html)
 
-- **Économie de l'inférence et viabilité des modèles** : La flambée des prix de la mémoire DRAM/HBM et la divergence des coûts d'entraînement forcent une restructuration de l'industrie d'ici 2030. L'arrivée de modèles open-weight capables (type GLM-5.2) et les gains massifs en efficacité d'inférence (compression KV-cache quasi-limite de Shannon) redessinent l'équation de solvabilité des infrastructures. [Source](https://arxiv.org/abs/2607.07207)
+- **Impact linguistique des LLM** : Bruce Schneier alerte sur le fait que les LLM, entraînés quasi exclusivement sur de l'écrit, capturent une version appauvrie du langage humain et pourraient, en retour, modifier notre façon de parler en évinçant les spécificités de l'oral spontané. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/the-language-of-ai-could-change-how-humans-speak.html)
 
-- **Contrôle financier de l'IA agentique en entreprise** : L'effet "harnais" désigne l'impact direct de la conception de l'orchestration sur les coûts. Même avec des prix au token en baisse, la consommation par tâche augmente plus vite que la valeur produite, menaçant le retour sur investissement. [Source](https://arxiv.org/abs/2607.06906)
+- **Infoblox acquiert Kentik** : La consolidation du marché de l'observabilité réseau se poursuit avec le rachat de Kentik par Infoblox, renforçant les capacités d'analyse de performance et de sécurité réseau. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-infoblox-acquiert-kentik-pour-renforcer-l-observabilite-reseau-100696.html)
 
-- **Évaluation de l'intelligence au-delà de l'échelle humaine** : Les benchmarks rédigés par des humains saturent quand les modèles dépassent les capacités de leurs créateurs. Mesurer une intelligence surhumaine exige des tâches à la fois difficiles et vérifiables, un problème inhérent à l'évaluation absolue. [Source](https://arxiv.org/abs/2607.07040)
+## IA — Produits, agents &amp; dev tooling
 
-- **Identification des objets connectés par LLM** : L'analyse du trafic réseau métadonnées par un LLM permet d'identifier les appareils IoT à grande échelle dans des environnements non supervisés. Cette approche répond à un risque opérationnel concret de connaissance du parc. [Source](https://arxiv.org/abs/2510.13817)
-
-- **Évaluation des agents de codage en conditions réelles** : Le benchmark AgentLens évalue la trajectoire complète d'interaction, au-delà du simple succès/échec, afin de mesurer l'impact humain réel. Les métriques de processus deviennent aussi critiques que le résultat binaire de la tâche. [Source](https://arxiv.org/abs/2607.06624)
-
-- **Ancrage des relations spatiales dans les modèles compacts** : L'étude montre une "fuite d'instruction" dans les modèles qui conditionnent des ancres de référence pour placer des objets. Une correction par dynamique sans objectif explicite améliore l'ancrage sémantique. [Source](https://arxiv.org/abs/2607.06925)
-
-- **Optimisation du raisonnement par recherche en contexte** : Une théorie de la complexité d'échantillonnage modélise les limites du raisonnement itératif où le modèle critique et révise ses propres solutions. La recherche en contexte ne devient utile que si certaines conditions théoriques sont réunies. [Source](https://arxiv.org/abs/2607.06720)
-
-- **Calcul quantique pour la mise à jour de croyances** : QANTIS utilise un processeur quantique IBM Heron comme service de mise à jour calibrée des croyances pour systèmes autonomes. Cela permet d'estimer des probabilités d'événements rares dans des processus décisionnels partiellement observables. [Source](https://arxiv.org/abs/2607.06760)
-
-- **Modélisation de comportement client par jumeau numérique** : Un "Large Behavior Model" promptable simule les parcours clients en se fondant sur des données réelles, dépassant les approches purement prédictives ou les simulations non ancrées. [Source](https://arxiv.org/abs/2607.06993)
-
-- **Apprentissage de normes sociales pour la coordination humain-IA** : Les agents LLM améliorent leur compatibilité dans les interactions dynamiques en apprenant des normes implicites qui servent d'attentes partagées entre l'humain et la machine. [Source](https://arxiv.org/abs/2607.07021)
-
-- **Agents LLM et systèmes de calcul formel** : L'intégration d'un système de calcul formel (SageMath) avec un agent LLM de type ReAct s'avère efficace pour les mathématiques computationnelles et expérimentales, un domaine sous-exploré face à la preuve automatique de théorèmes. [Source](https://arxiv.org/abs/2607.06820)
+- **Automatisation SOC via RAG et n8n** : Un article détaille la construction d’un workflow de réponse à incident qui combine RAG, renseignement sur la menace et historique des incidents pour accélérer les enquêtes. [n8n Blog](https://blog.n8n.io/building-an-ai-powered-incident-response-workflow-in-n8n/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Extraction document structurée par schéma** : Datalab Lift adopte une approche directe de lecture des pages rendues pour restituer du JSON conforme à un schéma fourni, sans passer par une conversion intermédiaire en Markdown. [MarkTechPost](https://www.marktechpost.com/2026/07/09/datalab-lift-vs-the-field-how-a-9b-schema-first-extractor-compares-with-nuextract3-llamaextract-marker-and-docling/)
+- **Compression de LLM par NVIDIA** : NVIDIA livre une méthode d'élagage itératif (Iterative Puzzle) qui réduit un modèle MoE de 120,7B à 75,3B paramètres totaux tout en doublant le débit serveur, sans dégrader le débit utilisateur. [MarkTechPost](https://www.marktechpost.com/2026/07/09/nvidia-releases-nemotron-labs-3-puzzle-75b-a9b-a-compressed-hybrid-moe-llm-delivering-2-03x-server-throughput-at-matched-user-throughput/)
 
-- **Modèle open source pour manipulation robotique multi-plateformes** : Ant Group publie LingBot-VLA 2.0, un modèle vision-langage-action de 6B paramètres sous licence Apache 2.0, entraîné sur 60 000 heures de données couvrant 20 configurations de robots. [MarkTechPost](https://www.marktechpost.com/2026/07/08/lingbot-vla-2-0/)
+- **Character.AI lance des séries vidéo courtes** : La plateforme se diversifie au-delà du chatbot avec des vidéos verticales épisodiques interactives, ciblant le format "microdrama" sur mobile. [The Verge](https://www.theverge.com/entertainment/962897/character-ai-series-microdrama-vertical-video)
+
+- **FL Studio intègre un assistant de production musicale** : Le chatbot Gopher évolue d'un simple manuel interactif vers un assistant capable d'exécuter des actions dans le logiciel, et non plus seulement de donner des instructions. [The Verge](https://www.theverge.com/tech/963052/fl-studio-2026-music-daw-ai-chatbot)
 
 ## Actualité tech FR
 
-- **Compétences IA en décalage avec l'adoption** : L'IA se déploie rapidement en entreprise mais la montée en compétences des équipes ne suit pas, créant un goulet d'étranglement. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-ia-progresse-en-entreprise-mais-les-competences-peinent-a-suivre-100666.html)
+- **Chat Control : le Parlement européen prolonge la surveillance volontaire** : Le Parlement a voté la reconduction de la dérogation permettant aux plateformes de scanner volontairement les communications privées pour détecter des contenus pédocriminels, malgré 314 votes contre. [Next.ink](https://next.ink/246899/chat-control-le-parlement-europeen-retablit-la-surveillance-volontaire-des-messageries/)
 
-- **Échecs des projets d'IA agentique** : 42% des projets d'IA agentique échouent avant la production par manque de gouvernance ; Salesforce répond avec MuleSoft Omni Gateway pour encadrer les agents autonomes. [ZDNet France](https://www.zdnet.fr/actualites/zd-tech-face-aux-42-dechecs-des-projets-dia-salesforce-lance-une-solution-pour-encadrer-les-agents-autonomes-498185.htm)
+- **NIS2 : la Commission européenne attaque la France en justice** : La France accuse plus de 20 mois de retard dans la transposition de la directive NIS2 sur la cybersécurité ; la Commission saisit la CJUE, une procédure rare qui expose le pays à des sanctions financières. [Siècle Digital](https://siecledigital.fr/2026/07/09/la-france-est-trop-en-retard-sur-la-cybersecurite-leurope-lattaque-en-justice/)
 
-- **Déploiement plutôt que course aux modèles** : Le véritable enjeu n'est plus la performance des modèles mais leur mise en production à grande échelle pour générer un avantage concurrentiel. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552441-que-le-meilleur-modele-gagne-et-si-l-essentiel-c-etait-de-s-en-servir/)
+- **Doctolib passe en opt-out pour l'exploitation des données de santé en IA** : L'entreprise utilisera par défaut les données des utilisateurs pour sa R&amp;D en IA, en invoquant son intérêt légitime ; un formulaire d'opposition est disponible, sans consentement préalable. [Next.ink](https://next.ink/246817/doctolib-veut-utiliser-vos-donnees-pour-ses-recherches-en-ia-vous-pouvez-refuser/)
 
-- **Grok 4.5 et nouveaux modèles vocaux OpenAI** : xAI lance Grok 4.5 avec une stratégie de prix agressive sur les tokens, tandis qu'OpenAI dévoile de nouveaux modèles vocaux. [Next.ink](https://next.ink/246807/grok-4-5-casse-les-prix-gpt-live-donne-de-la-voix/)
+- **Droits voisins : l'Autorité de la concurrence somme Meta de négocier** : Les accords avec l'APIG et la DVP ayant expiré, les éditeurs français ne perçoivent plus de rémunération alors que leurs contenus continuent de circuler sur Facebook, Instagram et WhatsApp. [Siècle Digital](https://siecledigital.fr/2026/07/08/lautorite-de-la-concurrence-somme-meta-de-negocier-avec-la-presse-francaise/)
 
-- **Alstom renforce data et IA en zero trust** : Alstom structure ses projets data et IA sur une architecture zero trust network, adoptée depuis dix ans. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-alstom-muscle-ses-projets-data-et-ia-au-zero-trust-100682.html)
+- **Microsoft accélère sur l'IA native dans sa suite bureautique** : L'éditeur intègre discrètement ses propres modèles dans Excel et Outlook, réduisant sa dépendance à OpenAI pour les fonctionnalités IA de Microsoft 365. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-microsoft-pousse-ses-propres-modeles-dans-excel-et-outlook-100689.html)
 
-- **Meta investit dans un datacenter IA au Canada** : Meta pose les bases de son offre cloud avec un nouveau centre de données dédié à l'IA, poursuivant l'expansion mondiale de ses infrastructures. [ZDNet France](https://www.zdnet.fr/actualites/meta-pose-les-bases-de-son-offre-cloud-avec-un-centre-de-donnees-ia-au-canada-498487.htm)</description>
+- **OpenAI livre GPT-5.6 sans restriction** : Le modèle est mis à disposition de tous les utilisateurs sans limitation d'accès, une décision qui a suscité une certaine confusion quant au positionnement produit d'OpenAI. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-openai-decide-de-lancer-sans-restriction-les-modeles-gpt-56-100691.html)
+
+- **Google lance agents-cli pour créer des agents IA sans coder** : L'outil en ligne de commande génère, teste et prépare au déploiement un agent complet, ciblant les développeurs souhaitant prototyper rapidement sans infrastructure lourde. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552487-creer-un-agent-ia-complet-sans-coder-notre-test-du-nouvel-outil-de-google/)
+
+- **Formation IA : l'école Cube ouvre un campus virtuel** : Face au manque d'accompagnement des entreprises françaises sur l'IA, l'école lance une plateforme de formation immersive pour monter en compétence sur ces technologies. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-l-ecole-cube-ouvre-un-campus-virtuel-de-formation-a-l-ia-100694.html)
+
+- **TypeScript 7.0 : des gains de performance majeurs, pas de nouveautés sur le langage** : Microsoft livre une version centrée sur l'optimisation du compilateur, avec des hausses de performances significatives, sans évolution notable de la syntaxe ou du système de types. [Next.ink](https://next.ink/246879/microsoft-publie-typescript-7-0-avec-des-hausses-impressionnantes-de-performances/)
+
+- **Tuxedo OS quitte Ubuntu pour Debian, pointant les Snap et l'IA opaque** : L'équipe justifie ce fork par l'omniprésence des paquets Snap, une base LTS vieillissante et une feuille de route IA jugée peu transparente chez Canonical. [Next.ink](https://next.ink/246834/linux-la-mefiance-autour-dubuntu-et-de-ses-snap-reste-vive/)
+
+- **Apple sécurise 30 milliards de dollars de commandes chez Broadcom** : Malgré le remplacement des puces Wi-Fi Broadcom par sa propre puce N1 dans l'iPhone 17, Apple verrouille son approvisionnement pour éviter les pénuries sur d'autres composants. [Siècle Digital](https://siecledigital.fr/2026/07/08/apple-investit-30-milliards-de-dollars-pour-eviter-les-penuries-de-puces/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Fuite de données chez AssuranceAmerica</strong> : Une compromission des systèmes de l'assureur américain expose les données de près de 7 millions de conducteurs. <a href="https://www.bleepingcomputer.com/news/security/assuranceamerica-data-breach-exposes-records-of-69-million-drivers/">BleepingComputer</a></li>
+<li><strong>Ransomware GodDamn ciblant les défenses endpoint</strong> : Un nouveau ransomware exploite le driver kernel PoisonX pour désactiver les solutions de sécurité avant chiffrement. L'attaque vise spécifiquement les couches de protection endpoint pour opérer sans détection. <a href="https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Vulnérabilité zero-day Microsoft Defender « RoguePlanet »</strong> : Microsoft a corrigé une faille zero-day dans Defender, divulguée après le Patch Tuesday de juin. L'exploitation était possible avant le déploiement du correctif. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-rogueplanet-defender-zero-day-vulnerability/">BleepingComputer</a></li>
+<li><strong>CVE-2026-50656 (RoguePlanet) dans Microsoft Defender</strong> : Microsoft a corrigé une faille d'élévation de privilèges (CVSS 7.8) dans le moteur de protection anti-malware. L'exploitation permet d'obtenir des droits SYSTEM, le correctif arrivant un mois après la divulgation publique. <a href="https://thehackernews.com/2026/07/microsoft-patches-rogueplanet-defender.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents de codage IA détournés pour exécuter du code malveillant</strong> : Des preuves de concept montrent que des assistants de codage IA (Claude, et six outils concernés selon Wiz) peuvent être piégés pour exécuter du code attaquant sur la machine du développeur. L'attaque « Friendly Fire » leur fait analyser du code open-source piégé ; la faille « GhostApproval » exploite des liens symboliques pour écrire dans des fichiers sensibles après validation d'une modification anodine. <a href="https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html">The Hacker News</a> · <a href="https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html">The Hacker News</a></li>
+<li><strong>Retrait d'OWA Light sur Exchange Server</strong> : Microsoft va désactiver la version allégée d'Outlook Web Access dans une future mise à jour d'Exchange. Les organisations utilisant ce client pour des postes à ressources limitées ou des navigateurs anciens doivent prévoir une alternative. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-announces-owa-light-retirement-in-exchange-server/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Campagne de proxys résidentiels via de faux installateurs 7-Zip</strong> : Le groupe « Lurking Lizard » opère depuis 2022 une infrastructure de plus de 230 domaines imitant des logiciels légitimes pour transformer les machines infectées en nœuds de proxy résidentiel. <a href="https://thehackernews.com/2026/07/fake-7-zip-installers-turn-devices-into.html">The Hacker News</a></li>
+<li><strong>Retard de transposition de NIS2 : la France parmi les États visés</strong> : La Commission européenne poursuit la France, l'Irlande, l'Espagne et les Pays-Bas pour non-transposition de la directive NIS2, avec plus de 20 mois de retard. Les entités critiques françaises restent dans l'attente du cadre juridique national. <a href="https://therecord.media/eu-cyber-filing-ireland-spain-france-netherlands-nis2">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Opération anti-fraude internationale : 5800 interpellations</strong> : Une opération coordonnée dans 97 pays a conduit à l'arrestation de 5811 suspects et à la saisie de 293 millions de dollars d'avoirs illicites. L'action ciblait des réseaux de fraude en ligne à l'échelle mondiale. <a href="https://www.bleepingcomputer.com/news/security/police-arrests-5-800-suspects-in-global-anti-fraud-crackdown/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>NSA : retour du nom TAO pour l'unité de piratage offensive</strong> : L'Office of Computer Network Operations reprend l'appellation historique Tailored Access Operations. Ce changement cosmétique confirme la continuité des missions offensives de l'unité, inchangées malgré les précédentes revalorisations de nom. <a href="https://therecord.media/nsa-revives-tao-name-for-elite-hacking-unit">The Record</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Zéro Trust : du discours à la mise en œuvre</strong> : Alstom déploie une approche zero trust depuis 10 ans pour sécuriser ses projets data et IA, illustrant une adoption mature dans l'industrie française. En parallèle, une étude de Zero Networks montre que la majorité des entreprises reste exposée au risque de déplacement latéral, faute de segmentation réseau suffisante, par confort opérationnel. <a href="https://www.lemondeinformatique.fr/actualites/lire-alstom-muscle-ses-projets-data-et-ia-au-zero-trust-100682.html">Alstom</a> · <a href="https://www.csoonline.com/article/4194708/lateral-movement-risk-rises-as-enterprises-emphasize-convenience-over-containment.html">CSO Online</a></li>
+<li><strong>NIS 2 : procédure d'infraction contre la France</strong> : La Commission européenne a engagé une procédure contre la France pour défaut de transposition de la directive NIS 2, qui renforce les obligations de gestion des risques cyber et de notification d'incidents. <a href="https://www.lemondeinformatique.fr/actualites/lire-l-ue-poursuit-la-france-pour-non-transposition-de-la-directive-nis-2-100692.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Restauration après ransomware : des techniques d'attaque qui évoluent</strong> : Le ransomware "The Gentlemen" cible désormais activement la phase de restauration des données, compliquant la reprise d'activité même lorsque les sauvegardes existent. <a href="https://www.lemondeinformatique.fr/actualites/lire-le-ransomware-the-gentlemen-perturbe-la-restauration-des-donnees-100688.html">Le Monde Informatique</a></li>
+<li><strong>Ransomware GodDamn et driver signé Microsoft</strong> : Un driver noyau malveillant, signé par Microsoft, est exploité via la technique BYOVD (Bring Your Own Vulnerable Driver) par le ransomware GodDamn pour désactiver les solutions de sécurité sur les postes ciblés. <a href="https://www.darkreading.com/cyberattacks-data-breaches/goddamn-ransomware-byovd-smite-companies">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Surestimation de la sécurité des outils collaboratifs en Europe</strong> : Selon Dark Reading, un écart persiste entre la confiance affichée par les responsables sécurité européens et le niveau réel de protection de leurs plateformes de collaboration (messagerie, partage de fichiers, visioconférence). <a href="https://www.darkreading.com/cybersecurity-operations/european-organizations-collaboration-security-confidence-gap">Dark Reading</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Attaques par empoisonnement de la mémoire des agents</strong> : Un agent IA doté de mémoire à long terme peut être compromis par des souvenirs malveillants persistants, capables de détourner ses actions sur des outils sensibles (email, calendrier, code). Ces attaques exploitent le rappel en continu du contexte corrompu. <a href="https://arxiv.org/abs/2607.06595">Source</a></li>
+<li><strong>Passerelles IA : nouveau vecteur de risque cloud</strong> : Une intrusion cloud ayant mené à du cryptominage a mis en lumière le risque de concentration des privilèges au niveau des passerelles IA (type Amazon Bedrock), qui agrègent identités, permissions et accès aux modèles de fondation. <a href="https://www.csoonline.com/article/4194984/attack-on-amazon-bedrock-linked-ai-gateway-highlights-new-cloud-security-risk.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité des systèmes multi-agents</strong> : Les règles de déploiement, et pas seulement les modèles, influencent causalement la sécurité collective. Une variation unique de règle peut modifier radicalement le comportement d'un groupe d'agents. Le "red-teaming institutionnel" teste ces effets. <a href="https://arxiv.org/abs/2607.07695">Source</a> · Selon une autre étude, les attaques distribuées sur plusieurs agents déjouent les moniteurs de contrôle par instance, rendant la supervision centralisée inefficace. <a href="https://arxiv.org/abs/2607.07368">Source</a> · Une troisième source confirme que l'agrégation d'effets dans les pipelines planificateur-exécuteur masque des mécanismes de risque distincts. <a href="https://arxiv.org/abs/2607.07097">Source</a></li>
+<li><strong>Identité des agents IA : un modèle de maturité en 6 étapes</strong> : Un incident causé par un agent LLM doté d'une clé API long terme et sans MFA illustre l'urgence de structurer la gestion des identités non-humaines (NHI) pour les systèmes agentiques. <a href="https://www.csoonline.com/article/4194548/agentic-ai-identity-a-6-stage-maturity-model-for-non-human-identities.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Défis de sécurité et vie privée pour l'IA agentique</strong> : Trente experts internationaux identifient les directions de recherche prioritaires. La dualité des usages (offensif/défensif) est un axe majeur, notamment la capacité des LLM à générer des malwares sophistiqués tout en améliorant les stratégies défensives. <a href="https://arxiv.org/abs/2607.06608">Source</a> · <a href="https://arxiv.org/abs/2607.06963">Source</a></li>
+<li><strong>Détection : priorité à l'architecture de données</strong> : Plusieurs analyses convergent pour affirmer que l'efficacité de la détection repose davantage sur la refonte de l'architecture et de la qualité des données que sur la sophistication des modèles de machine learning. <a href="https://www.csoonline.com/article/4194544/why-fixing-your-data-architecture-matters-more-than-upgrading-your-detection-models.html">CSO Online (modèles)</a> · <a href="https://www.csoonline.com/article/4194548/agentic-ai-identity-a-6-stage-maturity-model-for-non-human-identities.html">CSO Online (identité IA)</a></li>
 </ul>
 
 <ul>
-<li><strong>Économie de l'inférence et viabilité des modèles</strong> : La flambée des prix de la mémoire DRAM/HBM et la divergence des coûts d'entraînement forcent une restructuration de l'industrie d'ici 2030. L'arrivée de modèles open-weight capables (type GLM-5.2) et les gains massifs en efficacité d'inférence (compression KV-cache quasi-limite de Shannon) redessinent l'équation de solvabilité des infrastructures. <a href="https://arxiv.org/abs/2607.07207">Source</a></li>
+<li><strong>Cyber Shield : le Royaume-Uni mise sur des agents IA autonomes</strong> : Le NCSC britannique a dévoilé un plan pour déployer des agents IA capables de détecter et neutraliser des cyberattaques en temps réel sur les réseaux nationaux, visant une défense souveraine à la vitesse machine. <a href="https://www.csoonline.com/article/4194997/uk-cyber-agency-unveils-ai-powered-cyber-shield-to-counter-attacks-at-machine-speed.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Contrôle financier de l'IA agentique en entreprise</strong> : L'effet "harnais" désigne l'impact direct de la conception de l'orchestration sur les coûts. Même avec des prix au token en baisse, la consommation par tâche augmente plus vite que la valeur produite, menaçant le retour sur investissement. <a href="https://arxiv.org/abs/2607.06906">Source</a></li>
+<li><strong>GPT-5.6 : OpenAI lève les restrictions</strong> : OpenAI a décidé de livrer sans restriction ses modèles GPT-5.6, une décision qui a suscité une certaine confusion quant à ses implications en matière de sécurité et d'usage. <a href="https://www.lemondeinformatique.fr/actualites/lire-openai-decide-de-lancer-sans-restriction-les-modeles-gpt-56-100691.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Évaluation de l'intelligence au-delà de l'échelle humaine</strong> : Les benchmarks rédigés par des humains saturent quand les modèles dépassent les capacités de leurs créateurs. Mesurer une intelligence surhumaine exige des tâches à la fois difficiles et vérifiables, un problème inhérent à l'évaluation absolue. <a href="https://arxiv.org/abs/2607.07040">Source</a></li>
+<li><strong>Impact linguistique des LLM</strong> : Bruce Schneier alerte sur le fait que les LLM, entraînés quasi exclusivement sur de l'écrit, capturent une version appauvrie du langage humain et pourraient, en retour, modifier notre façon de parler en évinçant les spécificités de l'oral spontané. <a href="https://www.schneier.com/blog/archives/2026/07/the-language-of-ai-could-change-how-humans-speak.html">Schneier on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Identification des objets connectés par LLM</strong> : L'analyse du trafic réseau métadonnées par un LLM permet d'identifier les appareils IoT à grande échelle dans des environnements non supervisés. Cette approche répond à un risque opérationnel concret de connaissance du parc. <a href="https://arxiv.org/abs/2510.13817">Source</a></li>
+<li><strong>Infoblox acquiert Kentik</strong> : La consolidation du marché de l'observabilité réseau se poursuit avec le rachat de Kentik par Infoblox, renforçant les capacités d'analyse de performance et de sécurité réseau. <a href="https://www.lemondeinformatique.fr/actualites/lire-infoblox-acquiert-kentik-pour-renforcer-l-observabilite-reseau-100696.html">Le Monde Informatique</a></li>
 </ul>
 
-<ul>
-<li><strong>Évaluation des agents de codage en conditions réelles</strong> : Le benchmark AgentLens évalue la trajectoire complète d'interaction, au-delà du simple succès/échec, afin de mesurer l'impact humain réel. Les métriques de processus deviennent aussi critiques que le résultat binaire de la tâche. <a href="https://arxiv.org/abs/2607.06624">Source</a></li>
-</ul>
+<h2>IA — Produits, agents & dev tooling</h2>
 
 <ul>
-<li><strong>Ancrage des relations spatiales dans les modèles compacts</strong> : L'étude montre une "fuite d'instruction" dans les modèles qui conditionnent des ancres de référence pour placer des objets. Une correction par dynamique sans objectif explicite améliore l'ancrage sémantique. <a href="https://arxiv.org/abs/2607.06925">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation du raisonnement par recherche en contexte</strong> : Une théorie de la complexité d'échantillonnage modélise les limites du raisonnement itératif où le modèle critique et révise ses propres solutions. La recherche en contexte ne devient utile que si certaines conditions théoriques sont réunies. <a href="https://arxiv.org/abs/2607.06720">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Calcul quantique pour la mise à jour de croyances</strong> : QANTIS utilise un processeur quantique IBM Heron comme service de mise à jour calibrée des croyances pour systèmes autonomes. Cela permet d'estimer des probabilités d'événements rares dans des processus décisionnels partiellement observables. <a href="https://arxiv.org/abs/2607.06760">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Modélisation de comportement client par jumeau numérique</strong> : Un "Large Behavior Model" promptable simule les parcours clients en se fondant sur des données réelles, dépassant les approches purement prédictives ou les simulations non ancrées. <a href="https://arxiv.org/abs/2607.06993">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage de normes sociales pour la coordination humain-IA</strong> : Les agents LLM améliorent leur compatibilité dans les interactions dynamiques en apprenant des normes implicites qui servent d'attentes partagées entre l'humain et la machine. <a href="https://arxiv.org/abs/2607.07021">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents LLM et systèmes de calcul formel</strong> : L'intégration d'un système de calcul formel (SageMath) avec un agent LLM de type ReAct s'avère efficace pour les mathématiques computationnelles et expérimentales, un domaine sous-exploré face à la preuve automatique de théorèmes. <a href="https://arxiv.org/abs/2607.06820">Source</a></li>
+<li><strong>Automatisation SOC via RAG et n8n</strong> : Un article détaille la construction d’un workflow de réponse à incident qui combine RAG, renseignement sur la menace et historique des incidents pour accélérer les enquêtes. <a href="https://blog.n8n.io/building-an-ai-powered-incident-response-workflow-in-n8n/">n8n Blog</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Extraction document structurée par schéma</strong> : Datalab Lift adopte une approche directe de lecture des pages rendues pour restituer du JSON conforme à un schéma fourni, sans passer par une conversion intermédiaire en Markdown. <a href="https://www.marktechpost.com/2026/07/09/datalab-lift-vs-the-field-how-a-9b-schema-first-extractor-compares-with-nuextract3-llamaextract-marker-and-docling/">MarkTechPost</a></li>
+<li><strong>Compression de LLM par NVIDIA</strong> : NVIDIA livre une méthode d'élagage itératif (Iterative Puzzle) qui réduit un modèle MoE de 120,7B à 75,3B paramètres totaux tout en doublant le débit serveur, sans dégrader le débit utilisateur. <a href="https://www.marktechpost.com/2026/07/09/nvidia-releases-nemotron-labs-3-puzzle-75b-a9b-a-compressed-hybrid-moe-llm-delivering-2-03x-server-throughput-at-matched-user-throughput/">MarkTechPost</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèle open source pour manipulation robotique multi-plateformes</strong> : Ant Group publie LingBot-VLA 2.0, un modèle vision-langage-action de 6B paramètres sous licence Apache 2.0, entraîné sur 60 000 heures de données couvrant 20 configurations de robots. <a href="https://www.marktechpost.com/2026/07/08/lingbot-vla-2-0/">MarkTechPost</a></li>
+<li><strong>Character.AI lance des séries vidéo courtes</strong> : La plateforme se diversifie au-delà du chatbot avec des vidéos verticales épisodiques interactives, ciblant le format "microdrama" sur mobile. <a href="https://www.theverge.com/entertainment/962897/character-ai-series-microdrama-vertical-video">The Verge</a></li>
+</ul>
+
+<ul>
+<li><strong>FL Studio intègre un assistant de production musicale</strong> : Le chatbot Gopher évolue d'un simple manuel interactif vers un assistant capable d'exécuter des actions dans le logiciel, et non plus seulement de donner des instructions. <a href="https://www.theverge.com/tech/963052/fl-studio-2026-music-daw-ai-chatbot">The Verge</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Compétences IA en décalage avec l'adoption</strong> : L'IA se déploie rapidement en entreprise mais la montée en compétences des équipes ne suit pas, créant un goulet d'étranglement. <a href="https://www.lemondeinformatique.fr/actualites/lire-l-ia-progresse-en-entreprise-mais-les-competences-peinent-a-suivre-100666.html">Le Monde Informatique</a></li>
+<li><strong>Chat Control : le Parlement européen prolonge la surveillance volontaire</strong> : Le Parlement a voté la reconduction de la dérogation permettant aux plateformes de scanner volontairement les communications privées pour détecter des contenus pédocriminels, malgré 314 votes contre. <a href="https://next.ink/246899/chat-control-le-parlement-europeen-retablit-la-surveillance-volontaire-des-messageries/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Échecs des projets d'IA agentique</strong> : 42% des projets d'IA agentique échouent avant la production par manque de gouvernance ; Salesforce répond avec MuleSoft Omni Gateway pour encadrer les agents autonomes. <a href="https://www.zdnet.fr/actualites/zd-tech-face-aux-42-dechecs-des-projets-dia-salesforce-lance-une-solution-pour-encadrer-les-agents-autonomes-498185.htm">ZDNet France</a></li>
+<li><strong>NIS2 : la Commission européenne attaque la France en justice</strong> : La France accuse plus de 20 mois de retard dans la transposition de la directive NIS2 sur la cybersécurité ; la Commission saisit la CJUE, une procédure rare qui expose le pays à des sanctions financières. <a href="https://siecledigital.fr/2026/07/09/la-france-est-trop-en-retard-sur-la-cybersecurite-leurope-lattaque-en-justice/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Déploiement plutôt que course aux modèles</strong> : Le véritable enjeu n'est plus la performance des modèles mais leur mise en production à grande échelle pour générer un avantage concurrentiel. <a href="https://www.journaldunet.com/intelligence-artificielle/1552441-que-le-meilleur-modele-gagne-et-si-l-essentiel-c-etait-de-s-en-servir/">Journal du Net</a></li>
+<li><strong>Doctolib passe en opt-out pour l'exploitation des données de santé en IA</strong> : L'entreprise utilisera par défaut les données des utilisateurs pour sa R&D en IA, en invoquant son intérêt légitime ; un formulaire d'opposition est disponible, sans consentement préalable. <a href="https://next.ink/246817/doctolib-veut-utiliser-vos-donnees-pour-ses-recherches-en-ia-vous-pouvez-refuser/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Grok 4.5 et nouveaux modèles vocaux OpenAI</strong> : xAI lance Grok 4.5 avec une stratégie de prix agressive sur les tokens, tandis qu'OpenAI dévoile de nouveaux modèles vocaux. <a href="https://next.ink/246807/grok-4-5-casse-les-prix-gpt-live-donne-de-la-voix/">Next.ink</a></li>
+<li><strong>Droits voisins : l'Autorité de la concurrence somme Meta de négocier</strong> : Les accords avec l'APIG et la DVP ayant expiré, les éditeurs français ne perçoivent plus de rémunération alors que leurs contenus continuent de circuler sur Facebook, Instagram et WhatsApp. <a href="https://siecledigital.fr/2026/07/08/lautorite-de-la-concurrence-somme-meta-de-negocier-avec-la-presse-francaise/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Alstom renforce data et IA en zero trust</strong> : Alstom structure ses projets data et IA sur une architecture zero trust network, adoptée depuis dix ans. <a href="https://www.lemondeinformatique.fr/actualites/lire-alstom-muscle-ses-projets-data-et-ia-au-zero-trust-100682.html">Le Monde Informatique</a></li>
+<li><strong>Microsoft accélère sur l'IA native dans sa suite bureautique</strong> : L'éditeur intègre discrètement ses propres modèles dans Excel et Outlook, réduisant sa dépendance à OpenAI pour les fonctionnalités IA de Microsoft 365. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-pousse-ses-propres-modeles-dans-excel-et-outlook-100689.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Meta investit dans un datacenter IA au Canada</strong> : Meta pose les bases de son offre cloud avec un nouveau centre de données dédié à l'IA, poursuivant l'expansion mondiale de ses infrastructures. <a href="https://www.zdnet.fr/actualites/meta-pose-les-bases-de-son-offre-cloud-avec-un-centre-de-donnees-ia-au-canada-498487.htm">ZDNet France</a></li>
+<li><strong>OpenAI livre GPT-5.6 sans restriction</strong> : Le modèle est mis à disposition de tous les utilisateurs sans limitation d'accès, une décision qui a suscité une certaine confusion quant au positionnement produit d'OpenAI. <a href="https://www.lemondeinformatique.fr/actualites/lire-openai-decide-de-lancer-sans-restriction-les-modeles-gpt-56-100691.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Google lance agents-cli pour créer des agents IA sans coder</strong> : L'outil en ligne de commande génère, teste et prépare au déploiement un agent complet, ciblant les développeurs souhaitant prototyper rapidement sans infrastructure lourde. <a href="https://www.journaldunet.com/intelligence-artificielle/1552487-creer-un-agent-ia-complet-sans-coder-notre-test-du-nouvel-outil-de-google/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Formation IA : l'école Cube ouvre un campus virtuel</strong> : Face au manque d'accompagnement des entreprises françaises sur l'IA, l'école lance une plateforme de formation immersive pour monter en compétence sur ces technologies. <a href="https://www.lemondeinformatique.fr/actualites/lire-l-ecole-cube-ouvre-un-campus-virtuel-de-formation-a-l-ia-100694.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>TypeScript 7.0 : des gains de performance majeurs, pas de nouveautés sur le langage</strong> : Microsoft livre une version centrée sur l'optimisation du compilateur, avec des hausses de performances significatives, sans évolution notable de la syntaxe ou du système de types. <a href="https://next.ink/246879/microsoft-publie-typescript-7-0-avec-des-hausses-impressionnantes-de-performances/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Tuxedo OS quitte Ubuntu pour Debian, pointant les Snap et l'IA opaque</strong> : L'équipe justifie ce fork par l'omniprésence des paquets Snap, une base LTS vieillissante et une feuille de route IA jugée peu transparente chez Canonical. <a href="https://next.ink/246834/linux-la-mefiance-autour-dubuntu-et-de-ses-snap-reste-vive/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Apple sécurise 30 milliards de dollars de commandes chez Broadcom</strong> : Malgré le remplacement des puces Wi-Fi Broadcom par sa propre puce N1 dans l'iPhone 17, Apple verrouille son approvisionnement pour éviter les pénuries sur d'autres composants. <a href="https://siecledigital.fr/2026/07/08/apple-investit-30-milliards-de-dollars-pour-eviter-les-penuries-de-puces/">Siècle Digital</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260709-0931</guid>
-      <pubDate>Thu, 09 Jul 2026 09:31:32 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260709-1405</guid>
+      <pubDate>Thu, 09 Jul 2026 14:05:03 +0000</pubDate>
     </item>
   </channel>
 </rss>
