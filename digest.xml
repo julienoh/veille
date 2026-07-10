@@ -8,192 +8,168 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 10 Jul 2026 08:58:10 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 13:23:42 +0000</lastBuildDate>
     <item>
-      <title>Digest — 10/07 08h</title>
+      <title>Digest — 10/07 13h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Condamnation d'un ex-négociateur ransomware** : Un ancien employé de DigitalMint a été condamné à 70 mois de prison pour avoir participé à des attaques BlackCat contre des entreprises américaines, exploitant sa connaissance du processus de réponse à incident pour maximiser les rançons. [BleepingComputer](https://www.bleepingcomputer.com/news/security/us-ransomware-negotiator-gets-4-years-in-prison-for-blackcat-attacks/)
+- **Déni de service sur serveurs HTTP/3 via XQUIC** : Une erreur d'une seule variable dans la bibliothèque XQUIC d'Alibaba permet à tout client distant de planter un serveur avec un trafic légitime, sans correctif disponible. [The Hacker News](https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html)
+
+- **Faille XSS critique dans Zimbra Classic Web Client** : Zimbra appelle à patcher d'urgence une vulnérabilité de type cross-site scripting affectant l'interface web classique de sa suite de collaboration. [BleepingComputer](https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/)
+
+- **Campagne de compromission WordPress via WP-SHELLSTORM** : Un serveur d'attaquants resté exposé a révélé l'outillage et les logs d'une opération visant plus de 1,4 million de sites, avec un nombre significatif de compromissions effectives. [The Hacker News](https://thehackernews.com/2026/07/exposed-hacker-server-reveals-wp.html)
+
+- **VPN Android gratuits : fuites de trafic et tracking massifs** : Sur 281 applications VPN gratuites analysées, une grande majorité présentent des défaillances de confidentialité (fuites DNS/IP, données non chiffrées, tracking), totalisant plus de 2,4 milliards d'installations. [The Hacker News](https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html)
+
+- **Détournement de comptes Microsoft 365 via fausses passkeys Entra** : Le groupe O-UNC-066 mène des attaques par vishing en incitant des utilisateurs à enregistrer une passkey malveillante sur leur compte pour exfiltrer des données. [The Hacker News](https://thehackernews.com/2026/07/hackers-use-fake-microsoft-entra.html)
+
+- **Vol de crypto-monnaies par faiblesse de génération de seed** : La faille "Ill Bloom" exploite une génération de phrase de récupération basée sur une entropie insuffisante dans certains wallets, permettant à des attaquants de drainer 3,1 millions de dollars. [The Hacker News](https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html)
+
+- **Gestion de surface d'attaque : l'écart entre inventaire réel et perçu** : Lumen Technologies illustre le passage de 17 000 à 1,1 million d'actifs identifiés, confirmant que la plupart des entreprises sous-estiment massivement leur surface d'exposition réelle. [The Hacker News](https://thehackernews.com/2026/07/from-17000-to-11-million-assets-how.html)
+
+- **Évasion de filtres IA par "comment stuffing" dans des pièces jointes HTML** : Une technique de phishing observée utilise des commentaires HTML surabondants dans une pièce jointe pour saturer et contourner les modèles de détection basés sur l'IA. [SANS ISC](https://isc.sans.edu/diary/rss/33144)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Responsabilité juridique des prestataires en cas de cyberattaque** : La jurisprudence française écarte désormais systématiquement la force majeure pour les cyberattaques, ce qui engage la responsabilité contractuelle du prestataire même en l'absence de faute prouvée. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-cyberattaques-le-prestataire-est-il-toujours-responsable-100690.html)
+- **Dette de sécurité** : Les organisations détectent les vulnérabilités plus vite qu'elles ne peuvent les corriger. Le CSO plaide pour une approche pragmatique visant à "brûler" cette dette en priorisant les risques qui impactent directement le business. [CSO Online](https://www.csoonline.com/article/4195135/the-business-case-for-burning-down-security-debt-a-practical-approach-for-cisos.html)
 
-- **Supervision des usages de GitHub Copilot dans Visual Studio** : Microsoft introduit un outil de contrôle pour suivre la consommation de Copilot, en réponse au passage à une facturation à l'usage qui exige un pilotage plus fin des licences par les DSI. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-visual-studio-scrute-l-usage-de-github-copilot-100698.html)
+- **Menace destructive GigaWiper** : Microsoft a détaillé un implant en Golang servant à la fois d'outil d'espionnage et d'essuie-glace (wiper) activable à distance. Il illustre une tendance où l'exfiltration et la destruction sont combinées dans un même malware. [CSO Online](https://www.csoonline.com/article/4195470/microsoft-uncovers-gigawiper-a-backdoor-designed-for-destruction-on-demand.html)
 
-## IA — Recherche
+- **Risques des outils d'IA pour le développement** : La version beta d'Agentic Workflows de GitHub est vulnérable aux injections de prompt, ce qui peut altérer le code généré. Par ailleurs, Dark Reading souligne que les gains de productivité annoncés pour l'IA coding sont à mettre en balance avec les coûts additionnels de remédiation de sécurité souvent sous-estimés. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-un-agent-ia-de-github-vulnerable-a-une-attaque-par-injection-de-prompt-100697.html) · [Dark Reading](https://www.darkreading.com/application-security/ai-coding-security-risks-productivity-gains)
 
-- **Sécurité du CoT et attaques par persuasion** : Le monitorage des chaînes de raisonnement (CoT) pour détecter des comportements désalignés peut être contourné par des attaques de persuasion qui diminuent son efficacité. [Persuasion Attacks Can Decrease Effectiveness of CoT Monitoring](https://arxiv.org/abs/2607.08066)
+- **Surveillance de masse par IA** : Bruce Schneier alerte sur un futur proche où la surveillance algorithmique enregistrera la moindre infraction dans l'espace public et privé, en liant ces données à l'identité des individus. Un enjeu de conformité et d'éthique à anticiper pour les DSI. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/ai-surveillance-and-social-progress.html)
 
-- **Agents LLM auto-évolutifs et optimisés** : Une approche de fabrication d'outils compile les étapes procédurales répétitives en fonctions réutilisables plutôt que de régénérer du code à chaque requête, réduisant latence et risques de fiabilité. [Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems](https://arxiv.org/abs/2607.08010) · Par ailleurs, faire évoluer dynamiquement le « harnais » (programme qui gère le contexte, les outils et la récupération d'erreurs) au moment du test améliore la robustesse des agents. [TTHE: Test-Time Harness Evolution](https://arxiv.org/abs/2607.08124)
+## IA — Labos &amp; éditeurs
 
-- **Fine-tuning continu sans oubli** : ReCoLoRA consolide récursivement les mises à jour LoRA successives en s'appuyant sur les propriétés spectrales des poids, limitant l'écrasement des tâches précédentes lors de l'adaptation à une séquence de tâches. [ReCoLoRA](https://arxiv.org/abs/2607.07719)
+- **Deutsche Telekom déploie l'IA à l'échelle du groupe** : L'opérateur intègre les modèles d'OpenAI dans ses opérations pour automatiser le service client, assister ses employés et optimiser la gestion du réseau, avec une refonte annoncée de son interface vocale. [OpenAI News](https://openai.com/index/deutsche-telekom)
 
-- **Optimisation de la fenêtre de contexte longue** : Jet-Long étend efficacement la longueur de contexte des LLM via un mécanisme dynamique bifocal de RoPE, ciblant les cas d'usage agents ou RAG où les traces accumulées dépassent largement les tailles standard. [Jet-Long](https://arxiv.org/abs/2607.07740) · Une autre approche, l'attention bloc-parcimonieuse, améliore le mécanisme de sélection top-k en ajoutant un seuillage basé sur l'incertitude pour ne pas écarter des blocs quasi-identiques en score. [Uncertainty-gated selection](https://arxiv.org/abs/2607.07724)
+## IA — Produits, agents &amp; dev tooling
 
-- **Robustesse et calibration des réseaux** : LiST entraîne des réseaux Lipschitz-contraints conciliant précision, robustesse et calibration, trois propriétés rarement réunies dans un même modèle. [LiST](https://arxiv.org/abs/2607.07745)
-
-- **Modèles fondation pour l'observation terrestre** : Un état des lieux identifie les verrous de scalabilité et de confiance pour les modèles fondation en observation de la Terre, un domaine où la généralisation multi-tâche reste difficile. [Scalable and Trustworthy Earth Observation FM](https://arxiv.org/abs/2607.07758)
-
-- **Explicabilité des graphes temporels** : Une méthode combine backtracking de mémoire et attribution topologique pour identifier les événements historiques ayant influencé une prédiction d'un réseau de neurones sur graphe temporel. [Temporal Graph Networks Explainability](https://arxiv.org/abs/2607.07716)
-
-- **ML fiable et optimisation combinatoire** : Une revue de littérature montre comment l'optimisation combinatoire peut apporter des garanties formelles de confiance (équité, robustesse, interprétabilité) aux modèles ML complexes. [Trustworthy ML via Combinatorial Optimization](https://arxiv.org/abs/2607.07762)
-
-- **Génération de code pour langages à faibles ressources** : Selective Left-Shift convertit du calcul de test time et une curation basée sur la difficulté en données d'entraînement pour améliorer les petits modèles de code sur des langages comme Julia. [Selective Left-Shift](https://arxiv.org/abs/2607.07748)
-
-- **Généralisation temporelle pour modèles physiques** : Des modèles de dynamique vidéo basés sur une formulation hamiltonienne permettent de prédire à des résolutions temporelles variables sans être figés à un pas de temps fixe, utile pour la planification hiérarchique. [Hamiltonian Video Dynamics](https://arxiv.org/abs/2607.07763)
-
-- **Optimisation de la liquidité sur le Lightning Network** : MPFlow traite le placement de canaux dans Bitcoin Lightning comme un problème d'optimisation combinatoire sous contrainte budgétaire et le résout par apprentissage par renforcement profond sur graphe. [MPFlow](https://arxiv.org/abs/2607.08703)
-
-- **Apprentissage de représentations multimodales pour le sommeil** : Omni-Sleep aligne les dynamiques du système nerveux central et autonome via un apprentissage contrastif hiérarchique pour fonder un modèle de sommeil unifié sur données polysomnographiques. [Omni-Sleep](https://arxiv.org/abs/2607.07720)
-
-- **Données tabulaires et multimodales** : Une étude montre que le choix de l'encodeur tabulaire (souvent un simple MLP) est un goulot d'étranglement majeur en apprentissage multimodal image-tableau, freinant la performance globale. [Encoder Choice for Tabular-Image](https://arxiv.org/abs/2607.07756)
-
-- **Généralisation d'architecture par auto-organisation** : MetaNCA s'inspire de l'auto-organisation biologique pour produire des architectures neuronales capables de généraliser au-delà de leur configuration d'entraînement. [MetaNCA](https://arxiv.org/abs/2607.07743)
-
-- **Modélisation des troubles psychologiques par RL** : Un espace transdiagnostique de phénotypes pathologiques est généré chez des agents RL, offrant un cadre pour étudier les modes de défaillance du contrôle affectif. [Transdiagnostic Space in RL Agents](https://arxiv.org/abs/2607.07753)
-
-- **Apprentissage d'opérateurs PDE par Transformers** : LLT introduit un Transformer linéaire local pour apprendre les opérateurs de solution d'EDP, combinant dépendances longues et efficacité computationnelle. [LLT](https://arxiv.org/abs/2607.07718) · SHIFT prédit la survie à partir de données génomiques hétérogènes et incomplètes entre institutions, un problème classique de déploiement multi-site. [SHIFT](https://arxiv.org/abs/2607.07725) · Une stratégie de mélange d'experts inspirée du quantique améliore la classification d'images par réseaux convolutifs. [Quantum-inspired Mixture of Experts](https://arxiv.org/abs/2607.07754)
-
-## IA &amp; Tech — Médias internationaux
-
-- **Modèle monde ouvert pour la robotique** : Ant Group (via Robbyant) publie LingBot-World-Infinity, un simulateur interactif de 14B paramètres basé sur la génération vidéo causale. Le mécanisme d'attention MoBA (mélange bidirectionnel et autorégressif) constitue l'innovation architecturale centrale. [MarkTechPost](https://www.marktechpost.com/2026/07/09/meet-lingbot-world-infinity-an-open-causal-world-model-with-an-agentic-harness/)
+- **Maturité des plateformes agentiques** : L'analyse de 75 capacités attendues d'un outil de développement d'agents montre que la gestion de l'identité, la fiabilité d'exécution et l'interprétation de l'intention restent des problèmes partiellement résolus, avec un écart persistant entre les fonctionnalités disponibles et les besoins réels. [n8n Blog](https://blog.n8n.io/agent-identity-reliable-execution-and-intent-are-only-half-way-solved/)
 
 ## Actualité tech FR
 
-- **Guerre des modèles IA : Meta et OpenAI attaquent sur les prix et les usages pros** : Meta lance Muse Spark 1.1 pour développeurs en misant sur un rapport performance/prix agressif, pendant qu'OpenAI réplique avec GPT-5.6 et un nouveau ChatGPT Travail ciblant directement les entreprises. [Next.ink](https://next.ink/246952/muse-spark-1-1-meta-agressif-sur-les-prix-pour-rattraper-les-cadors-de-lia/) · [ZDNet France](https://www.zdnet.fr/actualites/gpt-5-6-et-chatgpt-travail-openai-degaine-lartillerie-lourde-contre-anthropic-498537.htm#xtor=RSS-1)
+- **Régulation des plateformes** : Bruxelles estime, à titre préliminaire, que la conception de Facebook et Instagram favorise l'addiction et contrevient au règlement européen ; Meta va devoir modifier ses applications en profondeur. [Next.ink](https://next.ink/brief-article/risques-daddiction-bruxelles-veut-de-gros-changements-dans-facebook-et-instagram/)
 
-- **Souveraineté matérielle IA : Meta lance la production de ses propres puces** : Meta produira en septembre une puce IA maison (Iris) conçue avec Broadcom et fabriquée par TSMC, réduisant sa dépendance envers Nvidia. [ZDNet France](https://www.zdnet.fr/actualites/meta-defie-nvidia-en-lancant-la-production-de-ses-propres-puces-ia-498542.htm#xtor=RSS-1)
+- **Empreinte carbone de l'IA** : Les derniers rapports annuels montrent une explosion des émissions de gaz à effet de serre chez Microsoft (+25 %), Google et Amazon, portée par la multiplication des datacenters nécessaires à l'IA, ce qui rend inatteignables leurs promesses de neutralité carbone. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/une-hausse-de-25-chez-microsoft-18-chez-google-comment-la-course-a-l-ia-fait-exploser-le-bilan-carbone-des-geants-de-la-tech-et-condamne-leurs-promesses-de-neutralite-carbone_AV-202607100513.html)
 
-- **OpenAI accusé de rétention de preuves par des médias** : Des grands médias affirment qu'OpenAI a menti sur son incapacité à fouiller ses données d'entraînement, un ingénieur ayant révélé que ces recherches internes existaient déjà. [Siècle Digital](https://siecledigital.fr/2026/07/09/des-grands-medias-accusent-openai-davoir-dissimule-des-preuves-devant-la-justice/)
+- **IA offensive pour la découverte de vulnérabilités** : Microsoft détaille son usage intensif de grands modèles de langage pour automatiser la recherche de failles de sécurité dans ses logiciels. [Next.ink](https://next.ink/246980/microsoft-officialise-son-utilisation-intensive-de-lia-pour-la-decouverte-des-failles/)
 
-- **Régulation tech européenne : Apple perd une manche, Chat Control relancé** : Bruxelles a rejeté la demande d'Apple d'échapper au DMA (l'App Store et iOS restent soumis aux règles strictes), tandis que la proposition "Chat Control" d'analyse des messages privés n'a pas obtenu la majorité nécessaire pour être bloquée au Parlement et reste donc en vie. [Siècle Digital](https://siecledigital.fr/2026/07/10/liphone-ne-fera-pas-exception-apple-devra-respecter-les-regles-europeennes-sur-la-concurrence/) · [Siècle Digital](https://siecledigital.fr/2026/07/10/leurope-relance-chat-control-le-dispositif-controverse-danalyse-de-certains-messages-prives/)
+- **Injection de prompt sur agent GitHub** : La version bêta d'Agentic Workflows de GitHub est vulnérable à une attaque par injection de prompt, permettant de détourner le comportement de l'agent. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-un-agent-ia-de-github-vulnerable-a-une-attaque-par-injection-de-prompt-100697.html)
 
-- **Blocage des VPN pour la protection des mineurs en débat** : Le durcissement britannique sur la vérification d'âge relance en Europe les discussions sur le blocage des VPN, considérés par certains comme une faille, bien que les spécialistes les voient comme un contournement parmi d'autres. [Next.ink](https://next.ink/246853/bloquer-les-vpn-pour-proteger-les-mineurs-le-debat-prend-de-lampleur-en-europe/)
+- **Mise en conformité NIS2 et sécurité agentique** : Face aux délais de notification imposés par NIS2 (6h pour l'alerte ANSSI, 72h pour le rapport complet), le RSSI doit s'appuyer sur l'automatisation et des approches de sécurité agentique pour réagir dans les temps. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552465-securite-agentique-la-meilleure-defense-du-rssi-face-aux-delais-de-mise-en-conformite/)
 
-- **Transparence publicitaire : Google généralise le signalement des pubs générées par IA** : Google étend le marquage obligatoire des publicités créées via IA générative, reconnaissant l'impossibilité de les distinguer à l'œil nu. [Next.ink](https://next.ink/brief-article/google-generalise-le-signalement-des-publicites-generees-par-ia/)
+- **Fraude industrielle dans la logistique** : Le vol de fret évolue vers une fraude industrialisée mêlant usurpation d'identité, faux documents et IA, ce qui impose d'intégrer la sécurité au cœur des processus opérationnels. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552449-la-fraude-a-remonte-la-chaine-de-valeur-logistique-pour-s-installer-au-coeur-des-operations/)
 
-- **Visual Studio intègre un outil de contrôle d'usage de GitHub Copilot** : Suite au changement de facturation de GitHub, Microsoft donne aux développeurs un outil pour scruter l'utilisation de Copilot dans Visual Studio. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-visual-studio-scrute-l-usage-de-github-copilot-100698.html)</description>
+- **Cybersécurité et commande publique** : Les centrales d'achat deviennent un levier de résilience pour les acteurs publics, en facilitant l'accès à des prestations cyber référencées. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552433-cybersecurite-la-commande-publique-au-defi-de-la-resilience/)
+
+- **Adoption organisationnelle de l'IA en France** : Deux ans après l'explosion de l'IA générative, les dirigeants français ont intégré l'enjeu mais se heurtent désormais à des blocages organisationnels pour passer à l'échelle. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-face-a-l-ia-les-entreprises-confrontees-a-des-problemes-organisationnels-100673.html)
+
+- **Arrêt d'Atlas par OpenAI** : Moins d'un an après son lancement, OpenAI annonce l'arrêt de son navigateur IA Atlas ; certaines capacités agentiques sont redéployées dans l'application ChatGPT et son extension Chrome. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/moins-d-un-an-apres-son-lancement-open-ai-annonce-l-arret-d-atlas-son-navigateur-web-ia-certaines-de-ses-fonctions-continueront-d-exister-a-travers-l-application-chat-gpt_AV-202607100605.html)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Condamnation d'un ex-négociateur ransomware</strong> : Un ancien employé de DigitalMint a été condamné à 70 mois de prison pour avoir participé à des attaques BlackCat contre des entreprises américaines, exploitant sa connaissance du processus de réponse à incident pour maximiser les rançons. <a href="https://www.bleepingcomputer.com/news/security/us-ransomware-negotiator-gets-4-years-in-prison-for-blackcat-attacks/">BleepingComputer</a></li>
+<li><strong>Déni de service sur serveurs HTTP/3 via XQUIC</strong> : Une erreur d'une seule variable dans la bibliothèque XQUIC d'Alibaba permet à tout client distant de planter un serveur avec un trafic légitime, sans correctif disponible. <a href="https://thehackernews.com/2026/07/unpatched-xring-flaw-in-xquic-lets.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Faille XSS critique dans Zimbra Classic Web Client</strong> : Zimbra appelle à patcher d'urgence une vulnérabilité de type cross-site scripting affectant l'interface web classique de sa suite de collaboration. <a href="https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne de compromission WordPress via WP-SHELLSTORM</strong> : Un serveur d'attaquants resté exposé a révélé l'outillage et les logs d'une opération visant plus de 1,4 million de sites, avec un nombre significatif de compromissions effectives. <a href="https://thehackernews.com/2026/07/exposed-hacker-server-reveals-wp.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>VPN Android gratuits : fuites de trafic et tracking massifs</strong> : Sur 281 applications VPN gratuites analysées, une grande majorité présentent des défaillances de confidentialité (fuites DNS/IP, données non chiffrées, tracking), totalisant plus de 2,4 milliards d'installations. <a href="https://thehackernews.com/2026/07/study-of-281-free-android-vpn-apps.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Détournement de comptes Microsoft 365 via fausses passkeys Entra</strong> : Le groupe O-UNC-066 mène des attaques par vishing en incitant des utilisateurs à enregistrer une passkey malveillante sur leur compte pour exfiltrer des données. <a href="https://thehackernews.com/2026/07/hackers-use-fake-microsoft-entra.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Vol de crypto-monnaies par faiblesse de génération de seed</strong> : La faille "Ill Bloom" exploite une génération de phrase de récupération basée sur une entropie insuffisante dans certains wallets, permettant à des attaquants de drainer 3,1 millions de dollars. <a href="https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Gestion de surface d'attaque : l'écart entre inventaire réel et perçu</strong> : Lumen Technologies illustre le passage de 17 000 à 1,1 million d'actifs identifiés, confirmant que la plupart des entreprises sous-estiment massivement leur surface d'exposition réelle. <a href="https://thehackernews.com/2026/07/from-17000-to-11-million-assets-how.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Évasion de filtres IA par "comment stuffing" dans des pièces jointes HTML</strong> : Une technique de phishing observée utilise des commentaires HTML surabondants dans une pièce jointe pour saturer et contourner les modèles de détection basés sur l'IA. <a href="https://isc.sans.edu/diary/rss/33144">SANS ISC</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Responsabilité juridique des prestataires en cas de cyberattaque</strong> : La jurisprudence française écarte désormais systématiquement la force majeure pour les cyberattaques, ce qui engage la responsabilité contractuelle du prestataire même en l'absence de faute prouvée. <a href="https://www.lemondeinformatique.fr/actualites/lire-cyberattaques-le-prestataire-est-il-toujours-responsable-100690.html">Le Monde Informatique</a></li>
+<li><strong>Dette de sécurité</strong> : Les organisations détectent les vulnérabilités plus vite qu'elles ne peuvent les corriger. Le CSO plaide pour une approche pragmatique visant à "brûler" cette dette en priorisant les risques qui impactent directement le business. <a href="https://www.csoonline.com/article/4195135/the-business-case-for-burning-down-security-debt-a-practical-approach-for-cisos.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Supervision des usages de GitHub Copilot dans Visual Studio</strong> : Microsoft introduit un outil de contrôle pour suivre la consommation de Copilot, en réponse au passage à une facturation à l'usage qui exige un pilotage plus fin des licences par les DSI. <a href="https://www.lemondeinformatique.fr/actualites/lire-visual-studio-scrute-l-usage-de-github-copilot-100698.html">Le Monde Informatique</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Sécurité du CoT et attaques par persuasion</strong> : Le monitorage des chaînes de raisonnement (CoT) pour détecter des comportements désalignés peut être contourné par des attaques de persuasion qui diminuent son efficacité. <a href="https://arxiv.org/abs/2607.08066">Persuasion Attacks Can Decrease Effectiveness of CoT Monitoring</a></li>
+<li><strong>Menace destructive GigaWiper</strong> : Microsoft a détaillé un implant en Golang servant à la fois d'outil d'espionnage et d'essuie-glace (wiper) activable à distance. Il illustre une tendance où l'exfiltration et la destruction sont combinées dans un même malware. <a href="https://www.csoonline.com/article/4195470/microsoft-uncovers-gigawiper-a-backdoor-designed-for-destruction-on-demand.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents LLM auto-évolutifs et optimisés</strong> : Une approche de fabrication d'outils compile les étapes procédurales répétitives en fonctions réutilisables plutôt que de régénérer du code à chaque requête, réduisant latence et risques de fiabilité. <a href="https://arxiv.org/abs/2607.08010">Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems</a> · Par ailleurs, faire évoluer dynamiquement le « harnais » (programme qui gère le contexte, les outils et la récupération d'erreurs) au moment du test améliore la robustesse des agents. <a href="https://arxiv.org/abs/2607.08124">TTHE: Test-Time Harness Evolution</a></li>
+<li><strong>Risques des outils d'IA pour le développement</strong> : La version beta d'Agentic Workflows de GitHub est vulnérable aux injections de prompt, ce qui peut altérer le code généré. Par ailleurs, Dark Reading souligne que les gains de productivité annoncés pour l'IA coding sont à mettre en balance avec les coûts additionnels de remédiation de sécurité souvent sous-estimés. <a href="https://www.lemondeinformatique.fr/actualites/lire-un-agent-ia-de-github-vulnerable-a-une-attaque-par-injection-de-prompt-100697.html">Le Monde Informatique</a> · <a href="https://www.darkreading.com/application-security/ai-coding-security-risks-productivity-gains">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Fine-tuning continu sans oubli</strong> : ReCoLoRA consolide récursivement les mises à jour LoRA successives en s'appuyant sur les propriétés spectrales des poids, limitant l'écrasement des tâches précédentes lors de l'adaptation à une séquence de tâches. <a href="https://arxiv.org/abs/2607.07719">ReCoLoRA</a></li>
+<li><strong>Surveillance de masse par IA</strong> : Bruce Schneier alerte sur un futur proche où la surveillance algorithmique enregistrera la moindre infraction dans l'espace public et privé, en liant ces données à l'identité des individus. Un enjeu de conformité et d'éthique à anticiper pour les DSI. <a href="https://www.schneier.com/blog/archives/2026/07/ai-surveillance-and-social-progress.html">Schneier on Security</a></li>
 </ul>
 
+<h2>IA — Labos & éditeurs</h2>
+
 <ul>
-<li><strong>Optimisation de la fenêtre de contexte longue</strong> : Jet-Long étend efficacement la longueur de contexte des LLM via un mécanisme dynamique bifocal de RoPE, ciblant les cas d'usage agents ou RAG où les traces accumulées dépassent largement les tailles standard. <a href="https://arxiv.org/abs/2607.07740">Jet-Long</a> · Une autre approche, l'attention bloc-parcimonieuse, améliore le mécanisme de sélection top-k en ajoutant un seuillage basé sur l'incertitude pour ne pas écarter des blocs quasi-identiques en score. <a href="https://arxiv.org/abs/2607.07724">Uncertainty-gated selection</a></li>
+<li><strong>Deutsche Telekom déploie l'IA à l'échelle du groupe</strong> : L'opérateur intègre les modèles d'OpenAI dans ses opérations pour automatiser le service client, assister ses employés et optimiser la gestion du réseau, avec une refonte annoncée de son interface vocale. <a href="https://openai.com/index/deutsche-telekom">OpenAI News</a></li>
 </ul>
 
-<ul>
-<li><strong>Robustesse et calibration des réseaux</strong> : LiST entraîne des réseaux Lipschitz-contraints conciliant précision, robustesse et calibration, trois propriétés rarement réunies dans un même modèle. <a href="https://arxiv.org/abs/2607.07745">LiST</a></li>
-</ul>
+<h2>IA — Produits, agents & dev tooling</h2>
 
 <ul>
-<li><strong>Modèles fondation pour l'observation terrestre</strong> : Un état des lieux identifie les verrous de scalabilité et de confiance pour les modèles fondation en observation de la Terre, un domaine où la généralisation multi-tâche reste difficile. <a href="https://arxiv.org/abs/2607.07758">Scalable and Trustworthy Earth Observation FM</a></li>
-</ul>
-
-<ul>
-<li><strong>Explicabilité des graphes temporels</strong> : Une méthode combine backtracking de mémoire et attribution topologique pour identifier les événements historiques ayant influencé une prédiction d'un réseau de neurones sur graphe temporel. <a href="https://arxiv.org/abs/2607.07716">Temporal Graph Networks Explainability</a></li>
-</ul>
-
-<ul>
-<li><strong>ML fiable et optimisation combinatoire</strong> : Une revue de littérature montre comment l'optimisation combinatoire peut apporter des garanties formelles de confiance (équité, robustesse, interprétabilité) aux modèles ML complexes. <a href="https://arxiv.org/abs/2607.07762">Trustworthy ML via Combinatorial Optimization</a></li>
-</ul>
-
-<ul>
-<li><strong>Génération de code pour langages à faibles ressources</strong> : Selective Left-Shift convertit du calcul de test time et une curation basée sur la difficulté en données d'entraînement pour améliorer les petits modèles de code sur des langages comme Julia. <a href="https://arxiv.org/abs/2607.07748">Selective Left-Shift</a></li>
-</ul>
-
-<ul>
-<li><strong>Généralisation temporelle pour modèles physiques</strong> : Des modèles de dynamique vidéo basés sur une formulation hamiltonienne permettent de prédire à des résolutions temporelles variables sans être figés à un pas de temps fixe, utile pour la planification hiérarchique. <a href="https://arxiv.org/abs/2607.07763">Hamiltonian Video Dynamics</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation de la liquidité sur le Lightning Network</strong> : MPFlow traite le placement de canaux dans Bitcoin Lightning comme un problème d'optimisation combinatoire sous contrainte budgétaire et le résout par apprentissage par renforcement profond sur graphe. <a href="https://arxiv.org/abs/2607.08703">MPFlow</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage de représentations multimodales pour le sommeil</strong> : Omni-Sleep aligne les dynamiques du système nerveux central et autonome via un apprentissage contrastif hiérarchique pour fonder un modèle de sommeil unifié sur données polysomnographiques. <a href="https://arxiv.org/abs/2607.07720">Omni-Sleep</a></li>
-</ul>
-
-<ul>
-<li><strong>Données tabulaires et multimodales</strong> : Une étude montre que le choix de l'encodeur tabulaire (souvent un simple MLP) est un goulot d'étranglement majeur en apprentissage multimodal image-tableau, freinant la performance globale. <a href="https://arxiv.org/abs/2607.07756">Encoder Choice for Tabular-Image</a></li>
-</ul>
-
-<ul>
-<li><strong>Généralisation d'architecture par auto-organisation</strong> : MetaNCA s'inspire de l'auto-organisation biologique pour produire des architectures neuronales capables de généraliser au-delà de leur configuration d'entraînement. <a href="https://arxiv.org/abs/2607.07743">MetaNCA</a></li>
-</ul>
-
-<ul>
-<li><strong>Modélisation des troubles psychologiques par RL</strong> : Un espace transdiagnostique de phénotypes pathologiques est généré chez des agents RL, offrant un cadre pour étudier les modes de défaillance du contrôle affectif. <a href="https://arxiv.org/abs/2607.07753">Transdiagnostic Space in RL Agents</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage d'opérateurs PDE par Transformers</strong> : LLT introduit un Transformer linéaire local pour apprendre les opérateurs de solution d'EDP, combinant dépendances longues et efficacité computationnelle. <a href="https://arxiv.org/abs/2607.07718">LLT</a> · SHIFT prédit la survie à partir de données génomiques hétérogènes et incomplètes entre institutions, un problème classique de déploiement multi-site. <a href="https://arxiv.org/abs/2607.07725">SHIFT</a> · Une stratégie de mélange d'experts inspirée du quantique améliore la classification d'images par réseaux convolutifs. <a href="https://arxiv.org/abs/2607.07754">Quantum-inspired Mixture of Experts</a></li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Modèle monde ouvert pour la robotique</strong> : Ant Group (via Robbyant) publie LingBot-World-Infinity, un simulateur interactif de 14B paramètres basé sur la génération vidéo causale. Le mécanisme d'attention MoBA (mélange bidirectionnel et autorégressif) constitue l'innovation architecturale centrale. <a href="https://www.marktechpost.com/2026/07/09/meet-lingbot-world-infinity-an-open-causal-world-model-with-an-agentic-harness/">MarkTechPost</a></li>
+<li><strong>Maturité des plateformes agentiques</strong> : L'analyse de 75 capacités attendues d'un outil de développement d'agents montre que la gestion de l'identité, la fiabilité d'exécution et l'interprétation de l'intention restent des problèmes partiellement résolus, avec un écart persistant entre les fonctionnalités disponibles et les besoins réels. <a href="https://blog.n8n.io/agent-identity-reliable-execution-and-intent-are-only-half-way-solved/">n8n Blog</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Guerre des modèles IA : Meta et OpenAI attaquent sur les prix et les usages pros</strong> : Meta lance Muse Spark 1.1 pour développeurs en misant sur un rapport performance/prix agressif, pendant qu'OpenAI réplique avec GPT-5.6 et un nouveau ChatGPT Travail ciblant directement les entreprises. <a href="https://next.ink/246952/muse-spark-1-1-meta-agressif-sur-les-prix-pour-rattraper-les-cadors-de-lia/">Next.ink</a> · <a href="https://www.zdnet.fr/actualites/gpt-5-6-et-chatgpt-travail-openai-degaine-lartillerie-lourde-contre-anthropic-498537.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Régulation des plateformes</strong> : Bruxelles estime, à titre préliminaire, que la conception de Facebook et Instagram favorise l'addiction et contrevient au règlement européen ; Meta va devoir modifier ses applications en profondeur. <a href="https://next.ink/brief-article/risques-daddiction-bruxelles-veut-de-gros-changements-dans-facebook-et-instagram/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Souveraineté matérielle IA : Meta lance la production de ses propres puces</strong> : Meta produira en septembre une puce IA maison (Iris) conçue avec Broadcom et fabriquée par TSMC, réduisant sa dépendance envers Nvidia. <a href="https://www.zdnet.fr/actualites/meta-defie-nvidia-en-lancant-la-production-de-ses-propres-puces-ia-498542.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Empreinte carbone de l'IA</strong> : Les derniers rapports annuels montrent une explosion des émissions de gaz à effet de serre chez Microsoft (+25 %), Google et Amazon, portée par la multiplication des datacenters nécessaires à l'IA, ce qui rend inatteignables leurs promesses de neutralité carbone. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/une-hausse-de-25-chez-microsoft-18-chez-google-comment-la-course-a-l-ia-fait-exploser-le-bilan-carbone-des-geants-de-la-tech-et-condamne-leurs-promesses-de-neutralite-carbone_AV-202607100513.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>OpenAI accusé de rétention de preuves par des médias</strong> : Des grands médias affirment qu'OpenAI a menti sur son incapacité à fouiller ses données d'entraînement, un ingénieur ayant révélé que ces recherches internes existaient déjà. <a href="https://siecledigital.fr/2026/07/09/des-grands-medias-accusent-openai-davoir-dissimule-des-preuves-devant-la-justice/">Siècle Digital</a></li>
+<li><strong>IA offensive pour la découverte de vulnérabilités</strong> : Microsoft détaille son usage intensif de grands modèles de langage pour automatiser la recherche de failles de sécurité dans ses logiciels. <a href="https://next.ink/246980/microsoft-officialise-son-utilisation-intensive-de-lia-pour-la-decouverte-des-failles/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Régulation tech européenne : Apple perd une manche, Chat Control relancé</strong> : Bruxelles a rejeté la demande d'Apple d'échapper au DMA (l'App Store et iOS restent soumis aux règles strictes), tandis que la proposition "Chat Control" d'analyse des messages privés n'a pas obtenu la majorité nécessaire pour être bloquée au Parlement et reste donc en vie. <a href="https://siecledigital.fr/2026/07/10/liphone-ne-fera-pas-exception-apple-devra-respecter-les-regles-europeennes-sur-la-concurrence/">Siècle Digital</a> · <a href="https://siecledigital.fr/2026/07/10/leurope-relance-chat-control-le-dispositif-controverse-danalyse-de-certains-messages-prives/">Siècle Digital</a></li>
+<li><strong>Injection de prompt sur agent GitHub</strong> : La version bêta d'Agentic Workflows de GitHub est vulnérable à une attaque par injection de prompt, permettant de détourner le comportement de l'agent. <a href="https://www.lemondeinformatique.fr/actualites/lire-un-agent-ia-de-github-vulnerable-a-une-attaque-par-injection-de-prompt-100697.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Blocage des VPN pour la protection des mineurs en débat</strong> : Le durcissement britannique sur la vérification d'âge relance en Europe les discussions sur le blocage des VPN, considérés par certains comme une faille, bien que les spécialistes les voient comme un contournement parmi d'autres. <a href="https://next.ink/246853/bloquer-les-vpn-pour-proteger-les-mineurs-le-debat-prend-de-lampleur-en-europe/">Next.ink</a></li>
+<li><strong>Mise en conformité NIS2 et sécurité agentique</strong> : Face aux délais de notification imposés par NIS2 (6h pour l'alerte ANSSI, 72h pour le rapport complet), le RSSI doit s'appuyer sur l'automatisation et des approches de sécurité agentique pour réagir dans les temps. <a href="https://www.journaldunet.com/cybersecurite/1552465-securite-agentique-la-meilleure-defense-du-rssi-face-aux-delais-de-mise-en-conformite/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Transparence publicitaire : Google généralise le signalement des pubs générées par IA</strong> : Google étend le marquage obligatoire des publicités créées via IA générative, reconnaissant l'impossibilité de les distinguer à l'œil nu. <a href="https://next.ink/brief-article/google-generalise-le-signalement-des-publicites-generees-par-ia/">Next.ink</a></li>
+<li><strong>Fraude industrielle dans la logistique</strong> : Le vol de fret évolue vers une fraude industrialisée mêlant usurpation d'identité, faux documents et IA, ce qui impose d'intégrer la sécurité au cœur des processus opérationnels. <a href="https://www.journaldunet.com/cybersecurite/1552449-la-fraude-a-remonte-la-chaine-de-valeur-logistique-pour-s-installer-au-coeur-des-operations/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Visual Studio intègre un outil de contrôle d'usage de GitHub Copilot</strong> : Suite au changement de facturation de GitHub, Microsoft donne aux développeurs un outil pour scruter l'utilisation de Copilot dans Visual Studio. <a href="https://www.lemondeinformatique.fr/actualites/lire-visual-studio-scrute-l-usage-de-github-copilot-100698.html">Le Monde Informatique</a></li>
+<li><strong>Cybersécurité et commande publique</strong> : Les centrales d'achat deviennent un levier de résilience pour les acteurs publics, en facilitant l'accès à des prestations cyber référencées. <a href="https://www.journaldunet.com/cybersecurite/1552433-cybersecurite-la-commande-publique-au-defi-de-la-resilience/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Adoption organisationnelle de l'IA en France</strong> : Deux ans après l'explosion de l'IA générative, les dirigeants français ont intégré l'enjeu mais se heurtent désormais à des blocages organisationnels pour passer à l'échelle. <a href="https://www.lemondeinformatique.fr/actualites/lire-face-a-l-ia-les-entreprises-confrontees-a-des-problemes-organisationnels-100673.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Arrêt d'Atlas par OpenAI</strong> : Moins d'un an après son lancement, OpenAI annonce l'arrêt de son navigateur IA Atlas ; certaines capacités agentiques sont redéployées dans l'application ChatGPT et son extension Chrome. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/moins-d-un-an-apres-son-lancement-open-ai-annonce-l-arret-d-atlas-son-navigateur-web-ia-certaines-de-ses-fonctions-continueront-d-exister-a-travers-l-application-chat-gpt_AV-202607100605.html">BFM Tech</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260710-0858</guid>
-      <pubDate>Fri, 10 Jul 2026 08:58:10 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260710-1323</guid>
+      <pubDate>Fri, 10 Jul 2026 13:23:42 +0000</pubDate>
     </item>
   </channel>
 </rss>
