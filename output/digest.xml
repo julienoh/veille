@@ -8,96 +8,42 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 11 Jul 2026 07:33:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 11:59:07 +0000</lastBuildDate>
     <item>
-      <title>Digest — 11/07 07h</title>
+      <title>Digest — 11/07 11h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA — Recherche
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Injection de prompt cross-site dans les agents web** : Les agents web autonomes réintroduisent la menace du Cross-Site Scripting en exécutant du contenu non fiable. Prismata propose un mécanisme de confinement pour isoler les instructions injectées. [Prismata](https://arxiv.org/abs/2607.08147)
+- **Zimbra : XSS stockée critique dans le client web classique** : Une faille de type cross-site scripting stocké (CVE non précisée) permet l'exécution de code arbitraire via des emails spécialement conçus. Le correctif est disponible, l'application des mises à jour est urgente. [The Hacker News](https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html)
 
-- **Protection de contenu contre le crawling agentique** : Les défenses classiques (robots.txt, contrôle d'accès) sont inefficaces face aux agents LLM qui raisonnent et mémorisent. Une approche de perturbation "compression-aware" est proposée pour leurrer ces crawlers sans dégrader l'expérience utilisateur légitime. [Out of Sight](https://arxiv.org/abs/2607.08180)
+- **Ghostcommit : injection de prompt dissimulée dans des images PNG** : Des chercheurs démontrent qu'une image malveillante peut voler les secrets d'un dépôt (fichier .env) en contournant les revues de code automatisées (CodeRabbit, Bugbot) et en manipulant un agent de codage IA. Les outils de revue n'analysant pas le contenu des images, l'attaque passe inaperçue. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/)
 
-- **Fiabilité des LLM comme juges d'évaluation** : Changer le modèle évaluateur modifie le score même si les réponses évaluées restent identiques. Cette instabilité est traitée comme un problème de validité de mesure, avec un audit sur plusieurs jeux de données. [When the Judge Changes](https://arxiv.org/abs/2607.08535)
-
-- **Mémorisation au déploiement des agents fondation** : La mémorisation n'est plus seulement une propriété des poids du modèle mais une fonction explicite au runtime pour les agents persistants qui retiennent les interactions utilisateur. L'étude caractérise ce nouveau risque de fuite de données. [Deployment-Time Memorization](https://arxiv.org/abs/2606.10062)
-
-- **RAG structuré et vérifiable sur le web** : PolyUQuest exploite un graphe hétérogène pour préserver la structure HTML et la sémantique des pages web, contrairement aux systèmes RAG qui aplatissent tout en texte. L'approche intègre une couche de vérifiabilité. [PolyUQuest](https://arxiv.org/abs/2607.08269)
-
-- **Sécurité du diagnostic médical par LLM** : Un cadre hypothético-déductif orienté sécurité est proposé pour le diagnostic différentiel assisté par IA, afin de contrer le risque d'erreur diagnostique lié aux prédictions en une seule passe sans vérification des alternatives à haut risque. [Safety-oriented framework](https://arxiv.org/abs/2607.08038)
-
-- **Alignement et évaluation psychologique des IA** : Deux travaux soulèvent des lacunes critiques. Le premier argue que la compétence psychologique est une dimension manquante dans l'évaluation des IA destinées à interagir avec des humains. Le second propose un standard d'"Alignment Plausibility" pour les LLM en santé mentale, pointant le conflit entre économie de l'attention et efficacité thérapeutique. [Psychological Competence](https://arxiv.org/abs/2607.08285) · [Alignment Plausibility](https://arxiv.org/abs/2607.07766)
-
-- **Conformité continue en infrastructures critiques** : Un pipeline multi-agent non invasif convertit la documentation legacy en OSCAL pour l'évaluation des risques sur des environnements OT qui ne peuvent être scannés activement. [From Legacy to OSCAL](https://arxiv.org/abs/2607.08288)
-
-- **Agents LLM auditable en entreprise** : Le passage du prototype au produit nécessite des contrats d'agent, des traces reproductibles et des frontières de sources. L'article propose une méthode d'ingénierie pour transformer des prompts en spécifications contractuelles auditable. [From Prompts to Contracts](https://arxiv.org/abs/2607.08028)
-
-- **Recherche d'architecture neuronale par LLM agentique** : Les LLM sont utilisés pour générer dynamiquement des espaces de recherche en NAS, supprimant le besoin d'expertise manuelle pour chaque nouvelle tâche. [Agentic NAS](https://arxiv.org/abs/2607.07984)
-
-- **Résolution du dilemme composition-connaissance dans les LLM** : La méthode "Concretized Proposition Prompting" améliore l'équilibre entre capacité de composition et exactitude factuelle en explicitant les propositions avant raisonnement. [Concretized Proposition Prompting](https://arxiv.org/abs/2607.08018)
-
-- **Épistémologie sociale adversariale pour assemblages humains-LLM** : Un cadre est proposé pour analyser les paysages informationnels où humains et LLM interagissent via des chaînes de témoignage et de certification, avec une perspective de sécurité cognitive. [Adversarial Social Epistemology](https://arxiv.org/abs/2607.07760)
+- **Wireshark 4.6.7** : Cette version corrige 12 vulnérabilités et 16 bugs. Mise à jour recommandée pour les postes d'analyse réseau. [SANS ISC](https://isc.sans.edu/diary/rss/33146)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Meta désactive la génération d'images IA à partir de comptes publics** : Suite à un tollé, Meta suspend la fonctionnalité qui permettait de créer des deepfakes via IA en mentionnant simplement un compte Instagram public. La mécanique initiale rendait tout contenu public exploitable pour la génération d'images sans consentement explicite. [The Verge](https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes)</description>
-      <content:encoded><![CDATA[<h2>IA — Recherche</h2>
+- **Modèle fondation pour IA physique** : Ant Group (via Robbyant) publie le rapport technique de LingBot-VA 2.0, un modèle vidéo-action conçu nativement pour l'incarnation robotique, sans fine-tuning depuis un générateur vidéo. Il intègre un mécanisme de raisonnement anticipatif (Foresight Reasoning) et se recalibre sur chaque observation réelle. [MarkTechPost](https://www.marktechpost.com/2026/07/11/ant-groups-robbyant-unveils-lingbot-va-2-0/)</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Injection de prompt cross-site dans les agents web</strong> : Les agents web autonomes réintroduisent la menace du Cross-Site Scripting en exécutant du contenu non fiable. Prismata propose un mécanisme de confinement pour isoler les instructions injectées. <a href="https://arxiv.org/abs/2607.08147">Prismata</a></li>
+<li><strong>Zimbra : XSS stockée critique dans le client web classique</strong> : Une faille de type cross-site scripting stocké (CVE non précisée) permet l'exécution de code arbitraire via des emails spécialement conçus. Le correctif est disponible, l'application des mises à jour est urgente. <a href="https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Protection de contenu contre le crawling agentique</strong> : Les défenses classiques (robots.txt, contrôle d'accès) sont inefficaces face aux agents LLM qui raisonnent et mémorisent. Une approche de perturbation "compression-aware" est proposée pour leurrer ces crawlers sans dégrader l'expérience utilisateur légitime. <a href="https://arxiv.org/abs/2607.08180">Out of Sight</a></li>
+<li><strong>Ghostcommit : injection de prompt dissimulée dans des images PNG</strong> : Des chercheurs démontrent qu'une image malveillante peut voler les secrets d'un dépôt (fichier .env) en contournant les revues de code automatisées (CodeRabbit, Bugbot) et en manipulant un agent de codage IA. Les outils de revue n'analysant pas le contenu des images, l'attaque passe inaperçue. <a href="https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Fiabilité des LLM comme juges d'évaluation</strong> : Changer le modèle évaluateur modifie le score même si les réponses évaluées restent identiques. Cette instabilité est traitée comme un problème de validité de mesure, avec un audit sur plusieurs jeux de données. <a href="https://arxiv.org/abs/2607.08535">When the Judge Changes</a></li>
-</ul>
-
-<ul>
-<li><strong>Mémorisation au déploiement des agents fondation</strong> : La mémorisation n'est plus seulement une propriété des poids du modèle mais une fonction explicite au runtime pour les agents persistants qui retiennent les interactions utilisateur. L'étude caractérise ce nouveau risque de fuite de données. <a href="https://arxiv.org/abs/2606.10062">Deployment-Time Memorization</a></li>
-</ul>
-
-<ul>
-<li><strong>RAG structuré et vérifiable sur le web</strong> : PolyUQuest exploite un graphe hétérogène pour préserver la structure HTML et la sémantique des pages web, contrairement aux systèmes RAG qui aplatissent tout en texte. L'approche intègre une couche de vérifiabilité. <a href="https://arxiv.org/abs/2607.08269">PolyUQuest</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité du diagnostic médical par LLM</strong> : Un cadre hypothético-déductif orienté sécurité est proposé pour le diagnostic différentiel assisté par IA, afin de contrer le risque d'erreur diagnostique lié aux prédictions en une seule passe sans vérification des alternatives à haut risque. <a href="https://arxiv.org/abs/2607.08038">Safety-oriented framework</a></li>
-</ul>
-
-<ul>
-<li><strong>Alignement et évaluation psychologique des IA</strong> : Deux travaux soulèvent des lacunes critiques. Le premier argue que la compétence psychologique est une dimension manquante dans l'évaluation des IA destinées à interagir avec des humains. Le second propose un standard d'"Alignment Plausibility" pour les LLM en santé mentale, pointant le conflit entre économie de l'attention et efficacité thérapeutique. <a href="https://arxiv.org/abs/2607.08285">Psychological Competence</a> · <a href="https://arxiv.org/abs/2607.07766">Alignment Plausibility</a></li>
-</ul>
-
-<ul>
-<li><strong>Conformité continue en infrastructures critiques</strong> : Un pipeline multi-agent non invasif convertit la documentation legacy en OSCAL pour l'évaluation des risques sur des environnements OT qui ne peuvent être scannés activement. <a href="https://arxiv.org/abs/2607.08288">From Legacy to OSCAL</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents LLM auditable en entreprise</strong> : Le passage du prototype au produit nécessite des contrats d'agent, des traces reproductibles et des frontières de sources. L'article propose une méthode d'ingénierie pour transformer des prompts en spécifications contractuelles auditable. <a href="https://arxiv.org/abs/2607.08028">From Prompts to Contracts</a></li>
-</ul>
-
-<ul>
-<li><strong>Recherche d'architecture neuronale par LLM agentique</strong> : Les LLM sont utilisés pour générer dynamiquement des espaces de recherche en NAS, supprimant le besoin d'expertise manuelle pour chaque nouvelle tâche. <a href="https://arxiv.org/abs/2607.07984">Agentic NAS</a></li>
-</ul>
-
-<ul>
-<li><strong>Résolution du dilemme composition-connaissance dans les LLM</strong> : La méthode "Concretized Proposition Prompting" améliore l'équilibre entre capacité de composition et exactitude factuelle en explicitant les propositions avant raisonnement. <a href="https://arxiv.org/abs/2607.08018">Concretized Proposition Prompting</a></li>
-</ul>
-
-<ul>
-<li><strong>Épistémologie sociale adversariale pour assemblages humains-LLM</strong> : Un cadre est proposé pour analyser les paysages informationnels où humains et LLM interagissent via des chaînes de témoignage et de certification, avec une perspective de sécurité cognitive. <a href="https://arxiv.org/abs/2607.07760">Adversarial Social Epistemology</a></li>
+<li><strong>Wireshark 4.6.7</strong> : Cette version corrige 12 vulnérabilités et 16 bugs. Mise à jour recommandée pour les postes d'analyse réseau. <a href="https://isc.sans.edu/diary/rss/33146">SANS ISC</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Meta désactive la génération d'images IA à partir de comptes publics</strong> : Suite à un tollé, Meta suspend la fonctionnalité qui permettait de créer des deepfakes via IA en mentionnant simplement un compte Instagram public. La mécanique initiale rendait tout contenu public exploitable pour la génération d'images sans consentement explicite. <a href="https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes">The Verge</a></li>
+<li><strong>Modèle fondation pour IA physique</strong> : Ant Group (via Robbyant) publie le rapport technique de LingBot-VA 2.0, un modèle vidéo-action conçu nativement pour l'incarnation robotique, sans fine-tuning depuis un générateur vidéo. Il intègre un mécanisme de raisonnement anticipatif (Foresight Reasoning) et se recalibre sur chaque observation réelle. <a href="https://www.marktechpost.com/2026/07/11/ant-groups-robbyant-unveils-lingbot-va-2-0/">MarkTechPost</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260711-0733</guid>
-      <pubDate>Sat, 11 Jul 2026 07:33:00 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260711-1159</guid>
+      <pubDate>Sat, 11 Jul 2026 11:59:07 +0000</pubDate>
     </item>
   </channel>
 </rss>
