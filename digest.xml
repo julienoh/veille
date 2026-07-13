@@ -8,150 +8,138 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 13 Jul 2026 13:35:52 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 18:53:39 +0000</lastBuildDate>
     <item>
-      <title>Digest — 13/07 13h</title>
+      <title>Digest — 13/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Opérations de phishing Evilginx contre Microsoft 365** : Un serveur mal configuré a exposé trois campagnes actives utilisant Evilginx pour usurper l'authentification Microsoft 365. La découverte provient d'un serveur Python laissé accessible avec listing de répertoire activé. [The Hacker News](https://thehackernews.com/2026/07/misconfigured-server-reveals-three.html)
+- **Extensions Joomla compromises (RCE)** : La CISA alerte sur l'exploitation active de failles dans les extensions iCagenda et Balbooa Forms pour Joomla, permettant l'exécution de code à distance via upload arbitraire de fichiers. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/)
 
-- **Script PowerShell généré par IA pour reconnaissance Active Directory** : Un acteur malveillant a utilisé un script PowerShell vraisemblablement "vibe-codé" (généré par IA) pour énumérer les contrôleurs de domaine et cartographier utilisateurs, machines et domaines AD. [The Hacker News](https://thehackernews.com/2026/07/attacker-uses-suspected-ai-generated.html)
+- **Brèche tiers chez Lidl** : Lidl a notifié des clients en Allemagne, Belgique et Pays-Bas du vol de données personnelles suite au piratage d'un prestataire externe, rappelant le risque lié à la chaîne d'approvisionnement. [BleepingComputer](https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/)
 
-- **Sanctions et alertes coordonnées contre les cyberopérations russes** : L'UE et le Royaume-Uni ont adopté des sanctions conjointes contre des hackeurs du GRU et entités russes. En parallèle, les agences de cybersécurité américaines et alliées alertent sur des attaques russes exploitant des routeurs mal configurés pour infiltrer des infrastructures critiques. [BleepingComputer (Sanctions)](https://www.bleepingcomputer.com/news/security/eu-and-uk-hit-russia-with-first-joint-cyber-sanctions-package/) · [BleepingComputer (Alerte)](https://www.bleepingcomputer.com/news/security/us-and-allies-share-defense-tips-against-russian-hackers-targeting-critical-infrastructure/)
+- **Malware macOS CrashStealer** : Un nouvel infostealer en Swift natif contourne Gatekeeper via un dropper notarié, soulignant que la notarisation Apple n'est plus un gage de confiance face à des malwares validés. [The Hacker News](https://thehackernews.com/2026/07/crashstealer-macos-malware-uses.html)
 
-- **Démantèlement de la plateforme de spoofing vocal Russian Coms** : Cinq suspects ont été inculpés au Royaume-Uni à la suite d'une enquête sur Russian Coms, plateforme utilisée pour usurper l'identité de l'appelant et réaliser plus de 1,8 million d'appels frauduleux. [BleepingComputer](https://www.bleepingcomputer.com/news/security/uk-charges-suspects-linked-to-russian-coms-call-spoofing-platform/)
+- **Extension ModHeader retirée** : Google et Microsoft ont retiré ModHeader (1,6M d'installations) après la découverte d'un collecteur d'historique de navigation dormant, intégré dans la version officielle du store — un risque supply chain au sein même des extensions de confiance. [The Hacker News](https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html)
 
-- **Agents IA en SOC : complémentarité autonomie/copilotage** : Réflexion sur l'intégration d'IA autonome avec des copilotes analystes dans les SOC, illustrée par un cas concret chez un grand groupe où des gains ont été observés sur des investigations spécifiques. [The Hacker News](https://thehackernews.com/2026/07/thinking-fast-and-slow-in-soc-case-for.html)
+- **Phishing Microsoft 365 : Forg365** : Une nouvelle opération PhaaS combine phishing par code appareil, interception AitM, évasion anti-bot et création de leurres par IA pour compromettre des comptes Microsoft 365, avec accès post-compromission aux boîtes mail. [The Hacker News](https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html)
+
+- **Empoisonnement mémoire d'agents IA (MemGhost)** : Une attaque par simple email permet d'implanter un faux souvenir persistant chez un assistant IA, modifiant silencieusement son comportement lors des sessions futures — la confiance accordée aux agents constitue le vecteur. [The Hacker News](https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Vulnérabilité critique RabbitMQ sur la gestion des secrets OAuth** : Deux failles de contrôle d'accès dans le courtier de messages RabbitMQ permettent l'exposition de secrets OAuth et, dans certaines configurations, une prise de contrôle complète de l'infrastructure de messagerie. Les correctifs sont disponibles. [CSO Online](https://www.csoonline.com/article/4196093/rabbitmq-flaws-expose-oauth-secrets-risk-complete-takeover-of-the-broker.html)
+- **Fuite de secrets CISA : le risque reste le tiers contractant** : Une autopsie de la CISA révèle que des identifiants internes, dont des clés cloud, sont restés exposés sur un dépôt GitHub public pendant six mois à cause d'un sous-traitant. L'incident souligne la difficulté persistante de contrôler la surface d'exposition liée à la chaîne d'approvisionnement logicielle et humaine. [Krebs on Security](https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/)
 
-- **Gouvernance des incidents IA : le registre des risques ne suffit pas** : La distinction entre incident de sécurité et dysfonctionnement d'un modèle d'IA reste floue pour la plupart des organisations. Un simple registre des risques ne constitue pas un plan de réponse aux incidents opérationnel lorsque l'outil produit un résultat erroné dans un processus métier réel. [CSO Online](https://www.csoonline.com/article/4195703/your-ai-risk-register-is-not-an-incident-response-plan.html)
+- **GigaWiper : l'essuage modulaire et furtif** : Ce nouvel implant combine des fonctions de backdoor et de wiper issues de plusieurs familles de malwares, permettant à l'attaquant de personnaliser l'effet destructeur tout en réduisant sa propre empreinte opérationnelle. Il illustre la convergence entre sabotage et espionnage au sein d'un même outil. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/gigawiper-threat-actors-choose-their-own-destructive-attack)
 
-- **Leurre automatisé contre phishing par email** : Un système open source basé sur l'IA adopte des personas de victimes pour dialoguer avec les attaquants et collecter du renseignement sur leurs opérations. L'outil est destiné aux organisations et aux forces de l'ordre. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/turning-tables-email-scammers-scambuster)
+- **Sécurité de l'IA : l'émergence des Yellow Teams** : Des entreprises structurent des équipes dédiées à la fois à la défense et à l'attaque des systèmes d'IA, afin d'en évaluer le potentiel comme arme cyber et d'en anticiper les vulnérabilités. Cette approche vise à industrialiser la recherche sur les menaces liées à l'IA au-delà du simple exercice Red Team ponctuel. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/yellow-teams-defining-future-ai-security)
 
-- **Le mythe du contrôle total en cybersécurité** : L'analogie avec Jurassic Park rappelle que les systèmes complexes, aussi sophistiqués soient-ils, échappent inévitablement au contrôle de leurs concepteurs. Une leçon à intégrer dans l'architecture de sécurité plutôt que de poursuivre une illusion de maîtrise absolue. [CSO Online](https://www.csoonline.com/article/4195710/jurassic-park-cybersecurity-and-the-dangerous-myth-of-control.html)
+## IA — Labos &amp; éditeurs
+
+- **Contrôle d'accès granulaire pour agents multi-tenants sur Bedrock** : AWS publie le guide d'implémentation du "on-behalf-of token exchange" pour Bedrock AgentCore Gateway, permettant de propager l'identité et les permissions de l'utilisateur final dans des architectures agentiques multi-tenantes. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/implement-on-behalf-of-token-exchange-for-multi-tenant-agents-with-amazon-bedrock-agentcore-gateway/)
+
+- **Retour d'expérience agentique dans la santé** : Bluesight a mutualisé six produits de conformité santé en une solution agentique unique (Prism) via Bedrock AgentCore, avec un assistant déjà en production sur ControlCheck. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-solution-at-bluesight-with-amazon-bedrock/)
+
+- **Optimisation d'inférence GenAI en low-code** : SageMaker AI Studio propose désormais une interface graphique pour obtenir des recommandations d'inférence, sans avoir à manipuler les paramètres ni interpréter les benchmarks bruts via l'API. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/launching-ui-for-generative-ai-inference-recommendations-in-amazon-sagemaker-ai/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Agents IA : passer des échecs récurrents à l'entraînement ciblé** : Stanford propose TRACE, une méthode qui extrait les lacunes précises d'un agent à partir de ses propres trajectoires, crée un environnement RL synthétique par compétence défaillante, et entraîne un adaptateur LoRA dédié pour y remédier. Un mécanisme de routage entre experts gère l'exécution. [MarkTechPost](https://www.marktechpost.com/2026/07/13/stanford-researchers-introduce-trace/)
-- **Environnements d'entraînement agentique modulaires** : Prime Intellect livre Verifiers v1, qui découple la définition des tâches, la méthode d'évaluation et l'infrastructure d'exécution, avec un serveur proxy intégré pour capturer les traces utiles à l'entraînement par renforcement. [MarkTechPost](https://www.marktechpost.com/2026/07/13/prime-intellect-releases-verifiers-v1/)
-- **Crawlers d'agents IA : blocage par défaut à partir du 15 septembre** : Cloudflare va bloquer par défaut les bots qui récupèrent des pages en temps réel pour le compte d'un utilisateur. La mise en œuvre de la permission explicite devient un point technique à anticiper pour les fournisseurs de services d'agents. [AI News](https://www.artificialintelligence-news.com/news/ai-agent-crawlers-cloudflare-rules/)
+- **Injection de prompt défensive** : Des équipes de cybersécurité utilisent désormais le "context bombing", une injection de prompt massive, pour saturer et neutraliser les agents IA adverses avant qu'ils ne causent des dégâts. [Ars Technica](https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/)
+
+- **Recherche Anthropic sur l'interprétabilité** : Des travaux récents identifient des circuits neuronaux liés à la planification et à la tromperie dans Claude, mais l'étude montre aussi les limites actuelles de cette approche pour garantir la sécurité des modèles. [MIT Technology Review](https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/)
+
+- **Litige Apple contre OpenAI** : Apple accuse OpenAI d'avoir exigé que des ingénieurs candidats apportent des composants Apple non commercialisés et des échantillons de produits confidentiels lors d'entretiens d'embauche. [The Verge](https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims)
 
 ## Actualité tech FR
 
-- **Shadow AI et dépendances critiques en production** : L'adoption de l'IA en entreprise échappe au contrôle des DSI, créant un risque systémique. Parallèlement, la suspension de Claude Fable 5 et les coûts au token imprévisibles montrent que les modèles d'IA sont une dépendance critique à architecturer sérieusement, alors que la majorité des projets IA des PME/ETI restent bloqués au stade POC. [Journal du Net - Shadow AI](https://www.journaldunet.com/cybersecurite/1552583-shadow-ai-le-peril-invisible-au-coeur-des-entreprises-francaises/) · [Journal du Net - Assistants et API](https://www.journaldunet.com/intelligence-artificielle/1552603-assistants-et-api-ia-en-entreprise-lesquels-tiennent-la-charge-une-fois-en-prod/) · [Journal du Net - Vie après le POC](https://www.journaldunet.com/intelligence-artificielle/1552589-y-a-t-il-une-vie-apres-le-poc/)
+- **CNIL vs pixels espions** : La CNIL a publié ses recommandations sur les pixels de suivi dans les emails, poussant les marques à informer massivement leurs utilisateurs sur ces traceurs invisibles. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/pixels-espions-pixels-de-suivi-communications-personnalisation-pourquoi-les-marques-ont-elles-inonde-votre-boite-mail-ces-derniers-jours_AN-202607130484.html)
 
-- **Modèles d'affaires des LLM : risques de dépendance et de coûts** : Le vrai danger pour les entreprises n'est pas l'échec de l'IA mais son succès, qui expose à des monopoles, des dépendances fortes et une explosion des coûts. Amin Vahdat (Google) confirme que le coût d'inférence va bientôt dépasser celui d'entraînement, ce qui renforce l'enjeu de maîtrise des coûts en production. [Journal du Net - Modèles d'affaires](https://www.journaldunet.com/intelligence-artificielle/1552519-llm-les-modeles-d-affaires-qui-pourraient-pieger-votre-entreprise/) · [Journal du Net - Inférence](https://www.journaldunet.com/intelligence-artificielle/1552549-amin-vahdat-google-inference-coutera-bientot-plus-cher-que-l-entrainement-des-modeles/)
+- **Meta retire Muse Image d’Instagram** : Face aux critiques sur la vie privée, Meta suspend l’outil qui permettait de générer des images à partir des photos d’autres utilisateurs Instagram, une semaine seulement après son lancement. [Next.ink](https://next.ink/247193/muse-image-sous-le-feu-des-critiques-meta-fait-machine-arriere-dans-instagram/)
 
-- **IA dans le secteur public : nécessité d'une gouvernance cyber** : L'État investit massivement dans l'IA mais doit urgemment structurer une gouvernance cybersécurité adaptée pour transformer cet investissement en succès durable. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552527-ia-dans-les-services-publics-l-urgence-d-une-gouvernance-cyber-a-la-hauteur-des-ambitions-francaises/)
-
-- **Fraudes financières internes en entreprise** : Le président d'InterCERT France détaille des techniques de fraude financière interne sophistiquées observées dans les grandes entreprises, soulignant une menace sous-estimée. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552563-on-ne-mesure-pas-l-ampleur-de-la-fraude-financiere-dans-les-entreprises-j-ai-vu-des-choses-que-je-n-aurais-meme-pas-imaginees/)
-
-- **Fourniture de modèles d'IA avancés à des entités chinoises sous liste noire** : Google et OpenAI fournissent leurs modèles les plus performants à des filiales d'Alibaba, Baidu et Tencent, une pratique légale au regard des restrictions actuelles mais qui alarme Washington sur le risque de distillation des modèles. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/le-spectre-de-la-distillation-pourquoi-l-acces-d-alibaba-et-tencent-aux-modeles-americains-d-ia-de-pointe-affole-washington_AV-202607130296.html)
-
-- **Éditeurs de presse prêts à quitter Google** : Des grands éditeurs envisagent de bloquer l'indexation de leurs contenus par Google pour empêcher Gemini d'exploiter leurs articles dans ses réponses générées, remettant en cause le modèle de la recherche Google. [Next.ink](https://next.ink/247099/des-editeurs-pourraient-disparaitre-de-google-pour-proteger-leurs-contenus-de-gemini/)
-
-- **Bun réécrit en Rust via Claude Fable 5** : L'environnement d'exécution JavaScript Bun a converti l'intégralité de son code vers Rust en 11 jours grâce à l'IA, un exemple concret de productivité accélérée par l'assistance IA sur des projets de grande ampleur. [Next.ink](https://next.ink/247080/bun-presente-une-reecriture-integrale-en-rust-realisee-en-11-jours-avec-fable-5/)
-
-- **Évolutions Linux : dbus-broker, Wayland, support RHEL illimité** : Ubuntu 26.10 adopte dbus-broker par défaut pour améliorer les performances de D-Bus sans impact applicatif. Linux Mint 23 finalise sa session Wayland. Red Hat lance un support à durée illimitée payant pour toute version de RHEL. [Next.ink - Ubuntu](https://next.ink/247156/ubuntu-26-10-va-remplacer-le-vieux-dbus-daemon-par-dbus-broker/) · [Next.ink - Linux Mint](https://next.ink/brief-article/linux-mint-23-aura-enfin-une-session-wayland-finalisee/) · [ZDNet France](https://www.zdnet.fr/actualites/red-hat-invente-le-support-linux-a-duree-illimitee-mais-pas-gratuit-498569.htm)
-
-- **Protection des mineurs en ligne dans l'UE** : L'UE prépare des mesures pour un accès progressif et gradué des mineurs aux réseaux sociaux et plateformes, avec des propositions attendues après l'été. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/acces-interdit-progressif-ou-majorite-numerique-l-union-europeenne-envisage-des-mesures-contre-les-reseaux-sociaux-et-l-ia-pour-proteger-les-mineurs_AD-202607130396.html)
-
-- **Débat sur la bulle IA** : Une fracture se creuse entre la vision financière de l'IA (promesses et valorisations) et celle des opérationnels (industrialisation réelle), alimentant les interrogations sur la formation d'une bulle. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552611-ia-la-fracture-entre-ceux-qui-la-commentent-et-ceux-qui-la-mettent-au-travail/)</description>
+- **Interdiction des réseaux sociaux aux moins de 13 ans dans l’UE** : Un rapport commandé par Bruxelles recommande une interdiction d’accès aux plateformes sociales pour les moins de 13 ans, avec des mesures adaptées par tranche d’âge. [Next.ink](https://next.ink/247188/lue-prepare-le-terrain-pour-interdire-les-reseaux-sociaux-aux-moins-de-13-ans/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Opérations de phishing Evilginx contre Microsoft 365</strong> : Un serveur mal configuré a exposé trois campagnes actives utilisant Evilginx pour usurper l'authentification Microsoft 365. La découverte provient d'un serveur Python laissé accessible avec listing de répertoire activé. <a href="https://thehackernews.com/2026/07/misconfigured-server-reveals-three.html">The Hacker News</a></li>
+<li><strong>Extensions Joomla compromises (RCE)</strong> : La CISA alerte sur l'exploitation active de failles dans les extensions iCagenda et Balbooa Forms pour Joomla, permettant l'exécution de code à distance via upload arbitraire de fichiers. <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Script PowerShell généré par IA pour reconnaissance Active Directory</strong> : Un acteur malveillant a utilisé un script PowerShell vraisemblablement "vibe-codé" (généré par IA) pour énumérer les contrôleurs de domaine et cartographier utilisateurs, machines et domaines AD. <a href="https://thehackernews.com/2026/07/attacker-uses-suspected-ai-generated.html">The Hacker News</a></li>
+<li><strong>Brèche tiers chez Lidl</strong> : Lidl a notifié des clients en Allemagne, Belgique et Pays-Bas du vol de données personnelles suite au piratage d'un prestataire externe, rappelant le risque lié à la chaîne d'approvisionnement. <a href="https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Sanctions et alertes coordonnées contre les cyberopérations russes</strong> : L'UE et le Royaume-Uni ont adopté des sanctions conjointes contre des hackeurs du GRU et entités russes. En parallèle, les agences de cybersécurité américaines et alliées alertent sur des attaques russes exploitant des routeurs mal configurés pour infiltrer des infrastructures critiques. <a href="https://www.bleepingcomputer.com/news/security/eu-and-uk-hit-russia-with-first-joint-cyber-sanctions-package/">BleepingComputer (Sanctions)</a> · <a href="https://www.bleepingcomputer.com/news/security/us-and-allies-share-defense-tips-against-russian-hackers-targeting-critical-infrastructure/">BleepingComputer (Alerte)</a></li>
+<li><strong>Malware macOS CrashStealer</strong> : Un nouvel infostealer en Swift natif contourne Gatekeeper via un dropper notarié, soulignant que la notarisation Apple n'est plus un gage de confiance face à des malwares validés. <a href="https://thehackernews.com/2026/07/crashstealer-macos-malware-uses.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Démantèlement de la plateforme de spoofing vocal Russian Coms</strong> : Cinq suspects ont été inculpés au Royaume-Uni à la suite d'une enquête sur Russian Coms, plateforme utilisée pour usurper l'identité de l'appelant et réaliser plus de 1,8 million d'appels frauduleux. <a href="https://www.bleepingcomputer.com/news/security/uk-charges-suspects-linked-to-russian-coms-call-spoofing-platform/">BleepingComputer</a></li>
+<li><strong>Extension ModHeader retirée</strong> : Google et Microsoft ont retiré ModHeader (1,6M d'installations) après la découverte d'un collecteur d'historique de navigation dormant, intégré dans la version officielle du store — un risque supply chain au sein même des extensions de confiance. <a href="https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA en SOC : complémentarité autonomie/copilotage</strong> : Réflexion sur l'intégration d'IA autonome avec des copilotes analystes dans les SOC, illustrée par un cas concret chez un grand groupe où des gains ont été observés sur des investigations spécifiques. <a href="https://thehackernews.com/2026/07/thinking-fast-and-slow-in-soc-case-for.html">The Hacker News</a></li>
+<li><strong>Phishing Microsoft 365 : Forg365</strong> : Une nouvelle opération PhaaS combine phishing par code appareil, interception AitM, évasion anti-bot et création de leurres par IA pour compromettre des comptes Microsoft 365, avec accès post-compromission aux boîtes mail. <a href="https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Empoisonnement mémoire d'agents IA (MemGhost)</strong> : Une attaque par simple email permet d'implanter un faux souvenir persistant chez un assistant IA, modifiant silencieusement son comportement lors des sessions futures — la confiance accordée aux agents constitue le vecteur. <a href="https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Vulnérabilité critique RabbitMQ sur la gestion des secrets OAuth</strong> : Deux failles de contrôle d'accès dans le courtier de messages RabbitMQ permettent l'exposition de secrets OAuth et, dans certaines configurations, une prise de contrôle complète de l'infrastructure de messagerie. Les correctifs sont disponibles. <a href="https://www.csoonline.com/article/4196093/rabbitmq-flaws-expose-oauth-secrets-risk-complete-takeover-of-the-broker.html">CSO Online</a></li>
+<li><strong>Fuite de secrets CISA : le risque reste le tiers contractant</strong> : Une autopsie de la CISA révèle que des identifiants internes, dont des clés cloud, sont restés exposés sur un dépôt GitHub public pendant six mois à cause d'un sous-traitant. L'incident souligne la difficulté persistante de contrôler la surface d'exposition liée à la chaîne d'approvisionnement logicielle et humaine. <a href="https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/">Krebs on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Gouvernance des incidents IA : le registre des risques ne suffit pas</strong> : La distinction entre incident de sécurité et dysfonctionnement d'un modèle d'IA reste floue pour la plupart des organisations. Un simple registre des risques ne constitue pas un plan de réponse aux incidents opérationnel lorsque l'outil produit un résultat erroné dans un processus métier réel. <a href="https://www.csoonline.com/article/4195703/your-ai-risk-register-is-not-an-incident-response-plan.html">CSO Online</a></li>
+<li><strong>GigaWiper : l'essuage modulaire et furtif</strong> : Ce nouvel implant combine des fonctions de backdoor et de wiper issues de plusieurs familles de malwares, permettant à l'attaquant de personnaliser l'effet destructeur tout en réduisant sa propre empreinte opérationnelle. Il illustre la convergence entre sabotage et espionnage au sein d'un même outil. <a href="https://www.darkreading.com/cyberattacks-data-breaches/gigawiper-threat-actors-choose-their-own-destructive-attack">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Leurre automatisé contre phishing par email</strong> : Un système open source basé sur l'IA adopte des personas de victimes pour dialoguer avec les attaquants et collecter du renseignement sur leurs opérations. L'outil est destiné aux organisations et aux forces de l'ordre. <a href="https://www.darkreading.com/cyberattacks-data-breaches/turning-tables-email-scammers-scambuster">Dark Reading</a></li>
+<li><strong>Sécurité de l'IA : l'émergence des Yellow Teams</strong> : Des entreprises structurent des équipes dédiées à la fois à la défense et à l'attaque des systèmes d'IA, afin d'en évaluer le potentiel comme arme cyber et d'en anticiper les vulnérabilités. Cette approche vise à industrialiser la recherche sur les menaces liées à l'IA au-delà du simple exercice Red Team ponctuel. <a href="https://www.darkreading.com/cybersecurity-operations/yellow-teams-defining-future-ai-security">Dark Reading</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Contrôle d'accès granulaire pour agents multi-tenants sur Bedrock</strong> : AWS publie le guide d'implémentation du "on-behalf-of token exchange" pour Bedrock AgentCore Gateway, permettant de propager l'identité et les permissions de l'utilisateur final dans des architectures agentiques multi-tenantes. <a href="https://aws.amazon.com/blogs/machine-learning/implement-on-behalf-of-token-exchange-for-multi-tenant-agents-with-amazon-bedrock-agentcore-gateway/">AWS Machine Learning</a></li>
 </ul>
 
 <ul>
-<li><strong>Le mythe du contrôle total en cybersécurité</strong> : L'analogie avec Jurassic Park rappelle que les systèmes complexes, aussi sophistiqués soient-ils, échappent inévitablement au contrôle de leurs concepteurs. Une leçon à intégrer dans l'architecture de sécurité plutôt que de poursuivre une illusion de maîtrise absolue. <a href="https://www.csoonline.com/article/4195710/jurassic-park-cybersecurity-and-the-dangerous-myth-of-control.html">CSO Online</a></li>
+<li><strong>Retour d'expérience agentique dans la santé</strong> : Bluesight a mutualisé six produits de conformité santé en une solution agentique unique (Prism) via Bedrock AgentCore, avec un assistant déjà en production sur ControlCheck. <a href="https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-solution-at-bluesight-with-amazon-bedrock/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation d'inférence GenAI en low-code</strong> : SageMaker AI Studio propose désormais une interface graphique pour obtenir des recommandations d'inférence, sans avoir à manipuler les paramètres ni interpréter les benchmarks bruts via l'API. <a href="https://aws.amazon.com/blogs/machine-learning/launching-ui-for-generative-ai-inference-recommendations-in-amazon-sagemaker-ai/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Agents IA : passer des échecs récurrents à l'entraînement ciblé</strong> : Stanford propose TRACE, une méthode qui extrait les lacunes précises d'un agent à partir de ses propres trajectoires, crée un environnement RL synthétique par compétence défaillante, et entraîne un adaptateur LoRA dédié pour y remédier. Un mécanisme de routage entre experts gère l'exécution. <a href="https://www.marktechpost.com/2026/07/13/stanford-researchers-introduce-trace/">MarkTechPost</a></li>
-<li><strong>Environnements d'entraînement agentique modulaires</strong> : Prime Intellect livre Verifiers v1, qui découple la définition des tâches, la méthode d'évaluation et l'infrastructure d'exécution, avec un serveur proxy intégré pour capturer les traces utiles à l'entraînement par renforcement. <a href="https://www.marktechpost.com/2026/07/13/prime-intellect-releases-verifiers-v1/">MarkTechPost</a></li>
-<li><strong>Crawlers d'agents IA : blocage par défaut à partir du 15 septembre</strong> : Cloudflare va bloquer par défaut les bots qui récupèrent des pages en temps réel pour le compte d'un utilisateur. La mise en œuvre de la permission explicite devient un point technique à anticiper pour les fournisseurs de services d'agents. <a href="https://www.artificialintelligence-news.com/news/ai-agent-crawlers-cloudflare-rules/">AI News</a></li>
+<li><strong>Injection de prompt défensive</strong> : Des équipes de cybersécurité utilisent désormais le "context bombing", une injection de prompt massive, pour saturer et neutraliser les agents IA adverses avant qu'ils ne causent des dégâts. <a href="https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/">Ars Technica</a></li>
+</ul>
+
+<ul>
+<li><strong>Recherche Anthropic sur l'interprétabilité</strong> : Des travaux récents identifient des circuits neuronaux liés à la planification et à la tromperie dans Claude, mais l'étude montre aussi les limites actuelles de cette approche pour garantir la sécurité des modèles. <a href="https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/">MIT Technology Review</a></li>
+</ul>
+
+<ul>
+<li><strong>Litige Apple contre OpenAI</strong> : Apple accuse OpenAI d'avoir exigé que des ingénieurs candidats apportent des composants Apple non commercialisés et des échantillons de produits confidentiels lors d'entretiens d'embauche. <a href="https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims">The Verge</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Shadow AI et dépendances critiques en production</strong> : L'adoption de l'IA en entreprise échappe au contrôle des DSI, créant un risque systémique. Parallèlement, la suspension de Claude Fable 5 et les coûts au token imprévisibles montrent que les modèles d'IA sont une dépendance critique à architecturer sérieusement, alors que la majorité des projets IA des PME/ETI restent bloqués au stade POC. <a href="https://www.journaldunet.com/cybersecurite/1552583-shadow-ai-le-peril-invisible-au-coeur-des-entreprises-francaises/">Journal du Net - Shadow AI</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552603-assistants-et-api-ia-en-entreprise-lesquels-tiennent-la-charge-une-fois-en-prod/">Journal du Net - Assistants et API</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552589-y-a-t-il-une-vie-apres-le-poc/">Journal du Net - Vie après le POC</a></li>
+<li><strong>CNIL vs pixels espions</strong> : La CNIL a publié ses recommandations sur les pixels de suivi dans les emails, poussant les marques à informer massivement leurs utilisateurs sur ces traceurs invisibles. <a href="https://www.bfmtv.com/tech/vie-numerique/pixels-espions-pixels-de-suivi-communications-personnalisation-pourquoi-les-marques-ont-elles-inonde-votre-boite-mail-ces-derniers-jours_AN-202607130484.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles d'affaires des LLM : risques de dépendance et de coûts</strong> : Le vrai danger pour les entreprises n'est pas l'échec de l'IA mais son succès, qui expose à des monopoles, des dépendances fortes et une explosion des coûts. Amin Vahdat (Google) confirme que le coût d'inférence va bientôt dépasser celui d'entraînement, ce qui renforce l'enjeu de maîtrise des coûts en production. <a href="https://www.journaldunet.com/intelligence-artificielle/1552519-llm-les-modeles-d-affaires-qui-pourraient-pieger-votre-entreprise/">Journal du Net - Modèles d'affaires</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552549-amin-vahdat-google-inference-coutera-bientot-plus-cher-que-l-entrainement-des-modeles/">Journal du Net - Inférence</a></li>
+<li><strong>Meta retire Muse Image d’Instagram</strong> : Face aux critiques sur la vie privée, Meta suspend l’outil qui permettait de générer des images à partir des photos d’autres utilisateurs Instagram, une semaine seulement après son lancement. <a href="https://next.ink/247193/muse-image-sous-le-feu-des-critiques-meta-fait-machine-arriere-dans-instagram/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>IA dans le secteur public : nécessité d'une gouvernance cyber</strong> : L'État investit massivement dans l'IA mais doit urgemment structurer une gouvernance cybersécurité adaptée pour transformer cet investissement en succès durable. <a href="https://www.journaldunet.com/intelligence-artificielle/1552527-ia-dans-les-services-publics-l-urgence-d-une-gouvernance-cyber-a-la-hauteur-des-ambitions-francaises/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Fraudes financières internes en entreprise</strong> : Le président d'InterCERT France détaille des techniques de fraude financière interne sophistiquées observées dans les grandes entreprises, soulignant une menace sous-estimée. <a href="https://www.journaldunet.com/cybersecurite/1552563-on-ne-mesure-pas-l-ampleur-de-la-fraude-financiere-dans-les-entreprises-j-ai-vu-des-choses-que-je-n-aurais-meme-pas-imaginees/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Fourniture de modèles d'IA avancés à des entités chinoises sous liste noire</strong> : Google et OpenAI fournissent leurs modèles les plus performants à des filiales d'Alibaba, Baidu et Tencent, une pratique légale au regard des restrictions actuelles mais qui alarme Washington sur le risque de distillation des modèles. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/le-spectre-de-la-distillation-pourquoi-l-acces-d-alibaba-et-tencent-aux-modeles-americains-d-ia-de-pointe-affole-washington_AV-202607130296.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Éditeurs de presse prêts à quitter Google</strong> : Des grands éditeurs envisagent de bloquer l'indexation de leurs contenus par Google pour empêcher Gemini d'exploiter leurs articles dans ses réponses générées, remettant en cause le modèle de la recherche Google. <a href="https://next.ink/247099/des-editeurs-pourraient-disparaitre-de-google-pour-proteger-leurs-contenus-de-gemini/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Bun réécrit en Rust via Claude Fable 5</strong> : L'environnement d'exécution JavaScript Bun a converti l'intégralité de son code vers Rust en 11 jours grâce à l'IA, un exemple concret de productivité accélérée par l'assistance IA sur des projets de grande ampleur. <a href="https://next.ink/247080/bun-presente-une-reecriture-integrale-en-rust-realisee-en-11-jours-avec-fable-5/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Évolutions Linux : dbus-broker, Wayland, support RHEL illimité</strong> : Ubuntu 26.10 adopte dbus-broker par défaut pour améliorer les performances de D-Bus sans impact applicatif. Linux Mint 23 finalise sa session Wayland. Red Hat lance un support à durée illimitée payant pour toute version de RHEL. <a href="https://next.ink/247156/ubuntu-26-10-va-remplacer-le-vieux-dbus-daemon-par-dbus-broker/">Next.ink - Ubuntu</a> · <a href="https://next.ink/brief-article/linux-mint-23-aura-enfin-une-session-wayland-finalisee/">Next.ink - Linux Mint</a> · <a href="https://www.zdnet.fr/actualites/red-hat-invente-le-support-linux-a-duree-illimitee-mais-pas-gratuit-498569.htm">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Protection des mineurs en ligne dans l'UE</strong> : L'UE prépare des mesures pour un accès progressif et gradué des mineurs aux réseaux sociaux et plateformes, avec des propositions attendues après l'été. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/acces-interdit-progressif-ou-majorite-numerique-l-union-europeenne-envisage-des-mesures-contre-les-reseaux-sociaux-et-l-ia-pour-proteger-les-mineurs_AD-202607130396.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Débat sur la bulle IA</strong> : Une fracture se creuse entre la vision financière de l'IA (promesses et valorisations) et celle des opérationnels (industrialisation réelle), alimentant les interrogations sur la formation d'une bulle. <a href="https://www.journaldunet.com/intelligence-artificielle/1552611-ia-la-fracture-entre-ceux-qui-la-commentent-et-ceux-qui-la-mettent-au-travail/">Journal du Net</a></li>
+<li><strong>Interdiction des réseaux sociaux aux moins de 13 ans dans l’UE</strong> : Un rapport commandé par Bruxelles recommande une interdiction d’accès aux plateformes sociales pour les moins de 13 ans, avec des mesures adaptées par tranche d’âge. <a href="https://next.ink/247188/lue-prepare-le-terrain-pour-interdire-les-reseaux-sociaux-aux-moins-de-13-ans/">Next.ink</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260713-1335</guid>
-      <pubDate>Mon, 13 Jul 2026 13:35:52 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260713-1853</guid>
+      <pubDate>Mon, 13 Jul 2026 18:53:39 +0000</pubDate>
     </item>
   </channel>
 </rss>
