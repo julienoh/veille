@@ -8,30 +8,146 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 12 Jul 2026 18:04:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 09:01:38 +0000</lastBuildDate>
     <item>
-      <title>Digest — 12/07 18h</title>
+      <title>Digest — 13/07 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **RedHook Android — Nouvelle technique d'accès shell** : Le malware RedHook exploite désormais le débogage sans fil ADB pour obtenir un shell privilégié sur l'appareil, supprimant la nécessité d'une connexion physique préalable. [BleepingComputer](https://www.bleepingcomputer.com/news/security/redhook-android-malware-now-uses-wireless-adb-for-shell-access/)
+- **Extensions Joomla iCagenda et Balbooa Forms exploitées en zero-day** : La CISA a inscrit deux vulnérabilités de sévérité maximale touchant ces extensions Joomla au catalogue KEV, suite à une exploitation active avant correctif. [The Hacker News](https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html)
 
-## IA &amp; Tech — Médias internationaux
+- **Scanning actif ciblant les serveurs MCP et credentials d'assistants IA** : Le SANS ISC détecte une campagne de reconnaissance visant spécifiquement les instances Model Context Protocol et les jetons d'authentification associés aux assistants IA exposés. [SANS ISC](https://isc.sans.edu/diary/rss/33150)
 
-- **Héritage IA du projet Titan d'Apple** : L’abandon du véhicule autonome a permis le développement de processeurs orientés IA, désormais réutilisés dans les puces Apple Silicon. [The Verge](https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra)</description>
+## Cyber — Stratégie &amp; analyse
+
+- **IA et réduction des écarts de compétences en cybersécurité** : AWS démontre que l'IA compresse des tâches de sécurité (pentesting, rédaction de rapports, élaboration de détections) de plusieurs mois à quelques minutes, modifiant le rapport coût-temps des activités défensives. [CSO Online](https://www.csoonline.com/article/4195787/can-ai-narrow-cybersecuritys-class-divide.html)
+
+## IA — Recherche
+
+- **Agents LLM et injection de prompts** : Le Lambda Calculus pour LLM propose un cadre formel pour isoler les flux d'instructions et de données, empêchant qu'une donnée non fiable ne soit interprétée comme une commande. La vérification scopée pour l'évolution de contexte agentique répond à la contamination des instructions système persistantes lors de déploiements longs. [The LLMbda Calculus](https://arxiv.org/abs/2602.20064) · [Scoped Verification for Reliable Long-Horizon Agentic Context Evolution](https://arxiv.org/abs/2607.09175)
+
+- **Fiabilité du RAG médical** : Un RAG clinique peut passer les tests de grounding factuel tout en attribuant les preuves à la mauvaise entité (patient, pathologie). Ce défaut d'attribution est appelé "ancrage trompeur" et n'est pas détecté par les métriques d'évaluation standard. [Deceptive Grounding (cs.AI)](https://arxiv.org/abs/2607.09349) · [Deceptive Grounding (cs.LG)](https://arxiv.org/abs/2607.09349)
+
+- **Modèles agentiques compacts et performants** : Mach-Mind-4-Flash, un modèle de 35B paramètres (3B activés, architecture MoE), atteint des performances comparables à des modèles bien plus gros en n'optimisant que le post-entraînement, sans augmenter le pré-entraînement. [Mach-Mind-4-Flash Technical Report](https://arxiv.org/abs/2607.09375)
+
+- **Pilotage de contrôles de sécurité par LLM** : Un framework deep learning piloté par LLM est proposé pour le contrôle de sécurité en environnements IoT industriels, avec l'ambition de remplacer la supervision à base de règles par une compréhension sémantique. [Neuro-Agentic Control](https://arxiv.org/abs/2607.09076)
+
+- **Planification agents et recherche arborescente** : GATS améliore LATS en intégrant un world model dans une recherche arborescente augmentée par graphe pour réduire la dépendance à l'inférence LLM. KV-PRM accélère les Process Reward Models pour le multi-agents en évitant de ré-encoder tout l'historique à chaque étape, via un transfert de cache KV. [GATS](https://arxiv.org/abs/2607.08894) · [KV-PRM](https://arxiv.org/abs/2607.09153)
+
+- **Évaluation agents longue durée** : Un benchmark de tâches terminales longues (plusieurs heures, récompense dense) est introduit pour tester les agents au-delà des tâches courtes évaluées uniquement sur le résultat final. ARCANA propose un framework multi-agent pour les tâches de raisonnement visuel ARC-AGI-2 sous contraintes strictes de temps et de calcul. [Long-Horizon-Terminal-Bench](https://arxiv.org/abs/2607.08964) · [ARCANA](https://arxiv.org/abs/2607.09059)
+
+- **Contournement des moniteurs boîte blanche** : Une analyse mécanistique révèle que les moniteurs boîte blanche destinés à auditer les LLM peuvent être contournés et identifie les mécanismes sous-jacents pour renforcer les défenses. [Beyond Black-Box Obfuscation](https://arxiv.org/abs/2505.14300)
+
+- **Certification de robustesse adverse** : La robustesse adverse des perceptrons multicouches peut être réduite à un problème de parcours de treillis, posant un cadre théorique rigoureux pour la certification d'intervalles. [Interval Certifications for Multilayered Perceptrons](https://arxiv.org/abs/2607.08773)
+
+- **Formalisation sémantique des systèmes d'IA** : Un cadre sémantique est proposé pour décrire les systèmes d'IA comme des abstractions, permettant d'examiner la correction des représentations produites plutôt que de les prendre pour des faits. [Ceci n'est pas une pipe](https://arxiv.org/abs/2607.09489)
+
+- **Contrôle d'inférence des LLM** : La fiabilité des LLM dépend autant du contrôle au moment de l'inférence que des capacités du modèle. CogniConsole externalise ce contrôle via une abstraction formelle. [CogniConsole](https://arxiv.org/abs/2607.08774)
+
+- **Débats multi-agents en domaine juridique** : L-MAD évalue systématiquement les structures de débat multi-agents en raisonnement juridique, montrant leur potentiel mais aussi les limites dans ce domaine structuré et riche en connaissances. [L-MAD](https://arxiv.org/abs/2607.09099)
+
+- **Benchmarks médicaux réalistes** : MedRealMM est un benchmark multimodal pour la consultation médicale en ligne chinoise, basé sur des données réelles (conversations, images de patients) contrairement aux simulateurs synthétiques. [MedRealMM](https://arxiv.org/abs/2607.09142)
+
+- **Découverte scientifique et preuves formelles** : Un protocole d'évolution d'hypothèses vise à rendre les agents LLM audibles dans la découverte scientifique. OpenProver et la formalisation Lean assistée par IA traitent la preuve automatique de théorèmes (ATP) et la formalisation de résultats de recherche comme un jeu stratégique. [Toward Auditable AI Scientists](https://arxiv.org/abs/2607.09195) · [OpenProver](https://arxiv.org/abs/2607.09217) · [A Formalization of the Mean-Field Derivation](https://arxiv.org/abs/2607.08986)
+
+- **Détection d'anomalies réseau non supervisée** : AutoGraphAD applique des autoencodeurs variationnels sur graphes pour la détection d'anomalies réseau sans supervision, une approche alternative aux méthodes supervisées classiques de NIDS. [AutoGraphAD](https://arxiv.org/abs/2511.17113)
+
+## Actualité tech FR
+
+- **Expiration de la tolérance CNIL sur les pixels de suivi** : La date butoir du 14 juillet pour la mise en conformité des pratiques de tracking dans les emails a généré une vague de notifications, rappelant l'obligation de consentement pour ces traceurs. [Next.ink](https://next.ink/247137/pourquoi-tous-ces-emails-sur-les-pixels-de-suivi-et-comment-sen-proteger/)
+
+- **Nouveau risque "HalluSquatting" via l'IA générative** : Des chercheurs ont prouvé qu'un attaquant peut exploiter les hallucinations d'un modèle d'IA pour lui faire suggérer et distribuer des paquets logiciels malveillants, sans aucune interaction trompeuse avec l'utilisateur. [ZDNet France](https://www.zdnet.fr/actualites/hallusquatting-quand-les-hallucinations-de-lia-deviennent-une-porte-dentree-pour-les-hackers-498564.htm#xtor=RSS-1)
+
+- **Accélération des préparatifs pour la facturation électronique** : À l'approche de l'échéance du 1er septembre 2026, la recherche de solutions conformes s'intensifie, NTT Data venant d'obtenir le statut de Plateforme Agréée pour transformer cette obligation fiscale en levier opérationnel. [ZDNet France](https://www.zdnet.fr/actualites/zd-tech-a-quelques-mois-du-1er-septembre-2026-la-course-a-la-facturation-electronique-saccelere-498187.htm#xtor=RSS-1)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>RedHook Android — Nouvelle technique d'accès shell</strong> : Le malware RedHook exploite désormais le débogage sans fil ADB pour obtenir un shell privilégié sur l'appareil, supprimant la nécessité d'une connexion physique préalable. <a href="https://www.bleepingcomputer.com/news/security/redhook-android-malware-now-uses-wireless-adb-for-shell-access/">BleepingComputer</a></li>
+<li><strong>Extensions Joomla iCagenda et Balbooa Forms exploitées en zero-day</strong> : La CISA a inscrit deux vulnérabilités de sévérité maximale touchant ces extensions Joomla au catalogue KEV, suite à une exploitation active avant correctif. <a href="https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html">The Hacker News</a></li>
 </ul>
 
-<h2>IA & Tech — Médias internationaux</h2>
+<ul>
+<li><strong>Scanning actif ciblant les serveurs MCP et credentials d'assistants IA</strong> : Le SANS ISC détecte une campagne de reconnaissance visant spécifiquement les instances Model Context Protocol et les jetons d'authentification associés aux assistants IA exposés. <a href="https://isc.sans.edu/diary/rss/33150">SANS ISC</a></li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Héritage IA du projet Titan d'Apple</strong> : L’abandon du véhicule autonome a permis le développement de processeurs orientés IA, désormais réutilisés dans les puces Apple Silicon. <a href="https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra">The Verge</a></li>
+<li><strong>IA et réduction des écarts de compétences en cybersécurité</strong> : AWS démontre que l'IA compresse des tâches de sécurité (pentesting, rédaction de rapports, élaboration de détections) de plusieurs mois à quelques minutes, modifiant le rapport coût-temps des activités défensives. <a href="https://www.csoonline.com/article/4195787/can-ai-narrow-cybersecuritys-class-divide.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Agents LLM et injection de prompts</strong> : Le Lambda Calculus pour LLM propose un cadre formel pour isoler les flux d'instructions et de données, empêchant qu'une donnée non fiable ne soit interprétée comme une commande. La vérification scopée pour l'évolution de contexte agentique répond à la contamination des instructions système persistantes lors de déploiements longs. <a href="https://arxiv.org/abs/2602.20064">The LLMbda Calculus</a> · <a href="https://arxiv.org/abs/2607.09175">Scoped Verification for Reliable Long-Horizon Agentic Context Evolution</a></li>
+</ul>
+
+<ul>
+<li><strong>Fiabilité du RAG médical</strong> : Un RAG clinique peut passer les tests de grounding factuel tout en attribuant les preuves à la mauvaise entité (patient, pathologie). Ce défaut d'attribution est appelé "ancrage trompeur" et n'est pas détecté par les métriques d'évaluation standard. <a href="https://arxiv.org/abs/2607.09349">Deceptive Grounding (cs.AI)</a> · <a href="https://arxiv.org/abs/2607.09349">Deceptive Grounding (cs.LG)</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles agentiques compacts et performants</strong> : Mach-Mind-4-Flash, un modèle de 35B paramètres (3B activés, architecture MoE), atteint des performances comparables à des modèles bien plus gros en n'optimisant que le post-entraînement, sans augmenter le pré-entraînement. <a href="https://arxiv.org/abs/2607.09375">Mach-Mind-4-Flash Technical Report</a></li>
+</ul>
+
+<ul>
+<li><strong>Pilotage de contrôles de sécurité par LLM</strong> : Un framework deep learning piloté par LLM est proposé pour le contrôle de sécurité en environnements IoT industriels, avec l'ambition de remplacer la supervision à base de règles par une compréhension sémantique. <a href="https://arxiv.org/abs/2607.09076">Neuro-Agentic Control</a></li>
+</ul>
+
+<ul>
+<li><strong>Planification agents et recherche arborescente</strong> : GATS améliore LATS en intégrant un world model dans une recherche arborescente augmentée par graphe pour réduire la dépendance à l'inférence LLM. KV-PRM accélère les Process Reward Models pour le multi-agents en évitant de ré-encoder tout l'historique à chaque étape, via un transfert de cache KV. <a href="https://arxiv.org/abs/2607.08894">GATS</a> · <a href="https://arxiv.org/abs/2607.09153">KV-PRM</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation agents longue durée</strong> : Un benchmark de tâches terminales longues (plusieurs heures, récompense dense) est introduit pour tester les agents au-delà des tâches courtes évaluées uniquement sur le résultat final. ARCANA propose un framework multi-agent pour les tâches de raisonnement visuel ARC-AGI-2 sous contraintes strictes de temps et de calcul. <a href="https://arxiv.org/abs/2607.08964">Long-Horizon-Terminal-Bench</a> · <a href="https://arxiv.org/abs/2607.09059">ARCANA</a></li>
+</ul>
+
+<ul>
+<li><strong>Contournement des moniteurs boîte blanche</strong> : Une analyse mécanistique révèle que les moniteurs boîte blanche destinés à auditer les LLM peuvent être contournés et identifie les mécanismes sous-jacents pour renforcer les défenses. <a href="https://arxiv.org/abs/2505.14300">Beyond Black-Box Obfuscation</a></li>
+</ul>
+
+<ul>
+<li><strong>Certification de robustesse adverse</strong> : La robustesse adverse des perceptrons multicouches peut être réduite à un problème de parcours de treillis, posant un cadre théorique rigoureux pour la certification d'intervalles. <a href="https://arxiv.org/abs/2607.08773">Interval Certifications for Multilayered Perceptrons</a></li>
+</ul>
+
+<ul>
+<li><strong>Formalisation sémantique des systèmes d'IA</strong> : Un cadre sémantique est proposé pour décrire les systèmes d'IA comme des abstractions, permettant d'examiner la correction des représentations produites plutôt que de les prendre pour des faits. <a href="https://arxiv.org/abs/2607.09489">Ceci n'est pas une pipe</a></li>
+</ul>
+
+<ul>
+<li><strong>Contrôle d'inférence des LLM</strong> : La fiabilité des LLM dépend autant du contrôle au moment de l'inférence que des capacités du modèle. CogniConsole externalise ce contrôle via une abstraction formelle. <a href="https://arxiv.org/abs/2607.08774">CogniConsole</a></li>
+</ul>
+
+<ul>
+<li><strong>Débats multi-agents en domaine juridique</strong> : L-MAD évalue systématiquement les structures de débat multi-agents en raisonnement juridique, montrant leur potentiel mais aussi les limites dans ce domaine structuré et riche en connaissances. <a href="https://arxiv.org/abs/2607.09099">L-MAD</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmarks médicaux réalistes</strong> : MedRealMM est un benchmark multimodal pour la consultation médicale en ligne chinoise, basé sur des données réelles (conversations, images de patients) contrairement aux simulateurs synthétiques. <a href="https://arxiv.org/abs/2607.09142">MedRealMM</a></li>
+</ul>
+
+<ul>
+<li><strong>Découverte scientifique et preuves formelles</strong> : Un protocole d'évolution d'hypothèses vise à rendre les agents LLM audibles dans la découverte scientifique. OpenProver et la formalisation Lean assistée par IA traitent la preuve automatique de théorèmes (ATP) et la formalisation de résultats de recherche comme un jeu stratégique. <a href="https://arxiv.org/abs/2607.09195">Toward Auditable AI Scientists</a> · <a href="https://arxiv.org/abs/2607.09217">OpenProver</a> · <a href="https://arxiv.org/abs/2607.08986">A Formalization of the Mean-Field Derivation</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection d'anomalies réseau non supervisée</strong> : AutoGraphAD applique des autoencodeurs variationnels sur graphes pour la détection d'anomalies réseau sans supervision, une approche alternative aux méthodes supervisées classiques de NIDS. <a href="https://arxiv.org/abs/2511.17113">AutoGraphAD</a></li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Expiration de la tolérance CNIL sur les pixels de suivi</strong> : La date butoir du 14 juillet pour la mise en conformité des pratiques de tracking dans les emails a généré une vague de notifications, rappelant l'obligation de consentement pour ces traceurs. <a href="https://next.ink/247137/pourquoi-tous-ces-emails-sur-les-pixels-de-suivi-et-comment-sen-proteger/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Nouveau risque "HalluSquatting" via l'IA générative</strong> : Des chercheurs ont prouvé qu'un attaquant peut exploiter les hallucinations d'un modèle d'IA pour lui faire suggérer et distribuer des paquets logiciels malveillants, sans aucune interaction trompeuse avec l'utilisateur. <a href="https://www.zdnet.fr/actualites/hallusquatting-quand-les-hallucinations-de-lia-deviennent-une-porte-dentree-pour-les-hackers-498564.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>Accélération des préparatifs pour la facturation électronique</strong> : À l'approche de l'échéance du 1er septembre 2026, la recherche de solutions conformes s'intensifie, NTT Data venant d'obtenir le statut de Plateforme Agréée pour transformer cette obligation fiscale en levier opérationnel. <a href="https://www.zdnet.fr/actualites/zd-tech-a-quelques-mois-du-1er-septembre-2026-la-course-a-la-facturation-electronique-saccelere-498187.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260712-1804</guid>
-      <pubDate>Sun, 12 Jul 2026 18:04:36 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260713-0901</guid>
+      <pubDate>Mon, 13 Jul 2026 09:01:38 +0000</pubDate>
     </item>
   </channel>
 </rss>

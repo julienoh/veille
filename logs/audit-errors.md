@@ -61,3 +61,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-09 18:55 UTC | scoring | Meta’s new AI chips will begin production in September (TechCrunch — AI) | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 5 column 175 (char 240)) |
 | 2026-07-10 08:45 UTC | scoring | MultiFair: Multimodal Balanced Fairness-Aware Medical Classi (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-07-10 18:26 UTC | scoring | Six New U-Boot Flaws Could Let Malicious Images Crash Device (The Hacker News) | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 5 column 195 (char 262)) |
+| 2026-07-13 08:55 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2586)) |
