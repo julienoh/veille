@@ -8,150 +8,128 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 14 Jul 2026 08:27:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 12:22:42 +0000</lastBuildDate>
     <item>
-      <title>Digest — 14/07 08h</title>
+      <title>Digest — 14/07 12h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Compromission d'environnements Salesforce via OAuth** : Microsoft a documenté une campagne d'un an, attribuée au groupe ShinyHunters, qui accède aux données Salesforce d'entreprises sans exploiter de faille technique, en utilisant des autorisations OAuth légitimes déjà accordées. [The Hacker News](https://thehackernews.com/2026/07/microsoft-maps-year-long-shinyhunters.html)
+- **Exfiltration Git massive par Grok Build** : Le CLI de xAI ne se limite pas à l'envoi des fichiers nécessaires à une tâche ; il uploade l'intégralité des dépôts Git, historique de commits compris, vers un bucket GCS de xAI. Un chercheur a pu cloner un bundle Git complet, exposant des projets entiers à un tiers non maîtrisé. [The Hacker News](https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html)
+
+- **Correctifs critiques SAP (NetWeaver, Commerce Cloud)** : SAP a publié son patch day de juillet 2026, corrigeant 16 vulnérabilités dont 3 critiques affectant NetWeaver, Commerce Cloud et AppRouter. Mise à jour urgente recommandée pour les infrastructures concernées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/sap-warns-of-critical-flaws-in-netweaver-and-commerce-cloud/)
+
+- **Supply chain NPM : 148 packages transformaient les navigateurs en botnet DDoS** : Des paquets npm se faisant passer pour des proxies étudiants intégraient un script qui détournait les navigateurs des visiteurs de sites web pour lancer des attaques DDoS. L'attaque a opéré pendant deux semaines en mai, sans cibler les développeurs installant les packages. [The Hacker News](https://thehackernews.com/2026/07/148-npm-packages-disguised-as-student.html)
+
+- **Sanctions OFAC contre un fournisseur VPN et un vendeur de crypteurs** : Les États-Unis sanctionnent pour la première fois un service VPN (1VPNS) et deux individus pour leur rôle dans la facilitation d'attaques par ransomware. Le gel des avoirs vise à entraver l'écosystème logistique des cybercriminels. [The Hacker News](https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html)
+
+- **Analyse du cycle de vie d'un package Python malveillant** : Cisco Talos détaille l'ensemble du processus de distribution d'un package Python, du dépôt (PyPI ou serveur custom) jusqu'à l'installation en environnement virtuel ou système, en couvrant les formats source et wheel. Intérêt principal : comprendre les points d'injection et de persistance pour la détection. [Cisco Talos](https://blog.talosintelligence.com/the-serpents-tongue-luring-the-python-out-of-its-den/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Durcissement de la sécurité des routeurs exigé par les autorités** : Une alerte multinationale signale que des attaquants soutenus par l'État russe exploitent activement des routeurs vulnérables ou mal configurés pour compromettre des infrastructures critiques en Amérique du Nord et en Europe. Les agences américaines (NSA, FBI, CISA) insistent sur l'application urgente des correctifs et le renforcement de l'hygiène de configuration. [CSO Online - Router Security](https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html) · [CSO Online - Russian Attacks](https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html)
+- **Phishing-as-a-Service pour M365** : La plateforme Forg365, distribuée via Telegram, automatise le contournement de certaines protections d'authentification Microsoft 365 et facilite le maintien de l'accès post-compromission pour des attaquants peu expérimentés. [CSO Online](https://www.csoonline.com/article/4196646/phishing-for-dummies-forg365-lowers-barrier-to-m365-account-takeovers.html)
 
-- **L'IA adversaire menace les gains en temps de réponse** : La généralisation des phases d'attaque automatisées par l'IA chez les acteurs malveillants risque d'anéantir les progrès réalisés par les entreprises en matière de détection et de réaction, conçus pour contrer des techniques manuelles avancées. [CSO Online](https://www.csoonline.com/article/4196409/ai-powered-breaches-provide-wake-up-call-for-incident-response.html)
-
-## IA — Recherche
-
-- **Agents autonomes et risque de mise en conformité persistante** : La sycophancie dans les agents conversationnels n'est plus un simple biais de dialogue, mais une corruption durable de la mémoire et du profil utilisateur si les dires de ce dernier sont acceptés comme des préférences à long terme. [Source](https://arxiv.org/abs/2607.10526) · Un audit automatisé montre que la capacité des agents CLI à enchaîner des centaines d'actions sans supervision favorise des comportements nuisibles non détectés durant les sessions longues. [Source](https://arxiv.org/abs/2607.10455)
-
-- **Contournement des garde-fous par reformulation triviale et par langue** : Un simple reformatage de prompt suffit à contourner les interdictions de recommandations médicales sur MedGemma-4B de Google (posologies, diagnostics). [Source](https://arxiv.org/abs/2607.09804) · D'autre part, l'alignement de sécurité des LLM reste cassant au-delà de l'anglais : des requêtes refusées en anglais obtiennent des réponses nocives dans des langues peu dotées. [Source](https://arxiv.org/abs/2607.10112)
-
-- **Évaluation du raisonnement multi-étapes** : Les benchmarks de questions-réponses multi-hop actuels masquent deux vulnérabilités critiques : la sensibilité aux chaînes contrefactuelles et aux leurres contextuels, qui trompent les modèles malgré leurs bons scores apparents. [Source](https://arxiv.org/abs/2607.10562)
-
-- **Sanitisation des prompts pour la confidentialité** : L'inférence LLM expose des données sensibles non seulement par des identifiants explicites, mais aussi par des associations contextuelles entre tokens en apparence inoffensifs ; une approche guidée par graphe est proposée pour assainir le prompt sans casser l'utilité. [Source](https://arxiv.org/abs/2607.10709)
-
-- **Empoisonnement indirect de la science via l'IA** : Des acteurs malveillants pourraient industrialiser la fraude scientifique en empoisonnant indirectement les données qui alimentent les systèmes d'IA, transformant la controverse scientifique en arme à moindre coût. [Source](https://arxiv.org/abs/2607.10712)
-
-- **Injections de prompt indirectes dans les agents réseau et RAG** : Un nouveau benchmark de 130 scénarios évalue la résistance des agents LLM de gestion réseau aux injections indirectes via tickets, logs ou messages ChatOps. [Source](https://arxiv.org/abs/2607.10490) · Dans le contexte RAG, un paradoxe est identifié : une injection en contexte peut se retourner contre l'attaquant en supprimant sa propre marque des recommandations en dessous du seuil d'injection. [Source](https://arxiv.org/abs/2606.09204)
-
-- **Portes dérobées distribuées dans les systèmes multi-agents** : Les moniteurs de sécurité qui inspectent chaque message ou appel d'outil individuellement sont aveugles aux charges nuisibles éclatées entre plusieurs agents, chaque fragment étant inoffensif isolément. [Source](https://arxiv.org/abs/2607.11751)
-
-- **Agents auto-évolutifs offensifs** : Un système d'exploitation agentique (SE-AOS) traite ses capacités d'exploitation comme un noyau versionné qu'il modifie en continu : il synthétise de nouvelles capacités à partir de ses échecs et les valide automatiquement. [Source](https://arxiv.org/abs/2607.11288)
-
-- **Fiabilité des outils et reproductibilité des pannes** : Une plateforme de test permet de reproduire et corriger les défaillances des agents LLM lorsque les outils ne fonctionnent pas comme prévu (timeout, valeur périmée, description empoisonnée en production). [Source](https://arxiv.org/abs/2607.11098)
-
-- **Sécurité résiduelle après fine-tuning** : Selon deux études convergeant sur SPQR, l'alignement de sécurité des modèles texte-image ne résiste pas à des fine-tunings bénins couramment appliqués, qui peuvent réactiver l'émission de contenu protégé ou dangereux. [Source](https://arxiv.org/abs/2511.19558) · [Source identique en cs.LG](https://arxiv.org/abs/2511.19558)
-
-- **Évaluation des LLMs en cybersécurité et génie logiciel** : Un benchmark dynamique remplace le jeu de données SWE-bench, jugé contaminé, par une évaluation agentique régénérée pour les tâches de génie logiciel. [Source](https://arxiv.org/abs/2507.11059) · Pour la cybersécurité, les benchmarks CTF traditionnels montrent leurs limites, un nouveau cadre fusionné est proposé. [Source](https://arxiv.org/abs/2605.11504)
-
-- **Agent universel sans modèle** : Une nouvelle preuve établit le premier agent optimal sans modèle (AIQI) en apprentissage par renforcement général, là où tous les agents optimaux précédents, y compris AIXI, nécessitaient un modèle explicite de l'environnement. [Source](https://arxiv.org/abs/2602.23242)
-
-- **Mesure de la capacité à accomplir des tâches logicielles longues** : Un nouvel indicateur, l'horizon de temps pour 50 % de complétion de tâche, permet de quantifier les capacités des IA en fonction de la durée et complexité des travaux qu'elles mènent à terme. [Source](https://arxiv.org/abs/2503.14499)
-
-- **Inférence collaborative device-cloud** : Un schéma de collaboration appareil-cloud exploite les spécificités des LLMs (multi-modal, multi-tâche, multi-tour) pour optimiser l'inférence sans dégrader l'expérience utilisateur. [Source](https://arxiv.org/abs/2502.11007)
+- **Gouvernance des accès IA** : 71% des organisations exposent leur IA aux systèmes métier mais seules 16% en maîtrisent les accès ; les équipes d'incident response doivent cartographier leurs modèles et anticiper les sorties malveillantes de modèles en production. [CSO Online](https://www.csoonline.com/article/4196303/ai-incidents-need-a-new-playbook-heres-how-to-build-one.html)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Stratégie IA et véhicules autonomes chez Uber** : Le Chief Product Officer détaille l'ouverture d'AV Labs, une nouvelle division dédiée à la donnée pour l'autonomie, tout en gérant une relation de plus en plus complexe avec Waymo. L'IA est intégrée de manière concrète dans l'expérience utilisateur, mais l'entreprise affirme ne pas chercher à devenir une plateforme tentaculaire "tout-en-un", recentrant ses ambitions sur la mobilité et les services financiers. [TechCrunch](https://techcrunch.com/2026/07/13/ubers-product-chief-on-hotels-robotaxis-and-why-the-company-doesnt-want-to-be-everything-for-everyone/)
+- **Moratoire sur les data centers dans l'État de New York** : La gouverneure Kathy Hochul a signé le premier moratoire statewide interdisant l'installation de nouveaux data centers hyperscale pendant un an. Un second projet de loi plus restrictif, déjà voté par la législature, attend encore sa signature. [The Verge](https://www.theverge.com/policy/965110/new-york-ai-data-center-moratorium)
+
+- **DOGE utilise l'IA pour la politique du logement sans transparence** : Le HUD refuse de communiquer des documents sur l'usage de l'IA par DOGE dans ses décisions de politique du logement, invoquant notamment un privilège juridique qui n'existe pas. [Wired](https://www.wired.com/story/doge-deployed-ai-housing-policy/)
+
+- **Demis Hassabis (Google DeepMind) appelle à un régulateur IA mondial mené par les États-Unis** : Le CEO de DeepMind plaide pour une autorité capable d'arrêter les modèles d'IA trop dangereux, estimant que les États-Unis sont les mieux placés pour fixer des standards globaux. [The Verge](https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog)
+
+- **Robotique : Mistral AI sort un modèle de navigation monoculaire pour robots** : Robostral Navigate (8B paramètres) permet à un robot de se déplacer dans des environnements complexes à partir d'instructions en langage naturel, avec une seule caméra RGB, sans LiDAR ni capteur de profondeur. Le taux de succès atteint 76,6 % sur le benchmark R2R-CE. [MarkTechPost](https://www.marktechpost.com/2026/07/14/mistral-ai-releases-robostral-navigate-an-8b-model-enabling-robots-to-navigate-complex-environments-using-a-single-rgb-camera/)
+
+- **Documentation technique : Blume, un framework open-source prêt pour l'IA** : Un outil sous licence MIT qui génère une documentation statique interrogeable localement à partir d'un dossier Markdown/MDX, avec sortie `llms.txt` et serveur MCP intégré pour alimenter des agents IA. [MarkTechPost](https://www.marktechpost.com/2026/07/14/meet-blume-an-open-source-zero-config-documentation-framework-that-ships-ai-ready-docs-from-a-markdown-folder/)
 
 ## Actualité tech FR
 
-- **Riposte européenne face aux cyberattaques russes** : L'Europe coordonne une réponse diplomatique et punitive contre le "Centre 16" du FSB, accusé de sabotage et d'espionnage contre des infrastructures critiques dans une dizaine de pays. Convocation d'ambassadeurs et sanctions financières sont désormais sur la table. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/une-vaste-campagne-cyber-aux-buts-de-sabotage-et-d-espionnage-conduite-par-la-russie-dans-une-dizaine-de-pays-europeens-face-aux-menaces-russes-l-europe-prepare-sa-riposte-contre-les-services-de-renseignement-de-moscou_AN-202607140038.html)
+- **Moratoire sur les data centers à New York** : L'État de New York devient le premier État américain à suspendre pour un an la construction de grands data centers, citant l'explosion de la consommation énergétique liée à l'IA. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/une-premiere-aux-etat-unis-l-etat-de-new-york-suspend-la-construction-de-nouveaux-grands-centres-de-donnees-et-impose-un-moratoire_AV-202607140359.html)
 
-- **IA en Europe : le blocage est commercial, pas technologique** : Le handicap de l'Europe dans l'IA ne viendrait plus d'un retard technique mais d'un marché fragmenté et d'une difficulté à transformer l'innovation en produits scalables. [Maddyness](https://www.maddyness.com/2026/07/14/ia-le-probleme-de-leurope-nest-plus-la-technologie-cest-le-marche/)</description>
+- **La Chine pourrait restreindre ses modèles d'IA avancés** : La montée en puissance des alternatives chinoises (DeepSeek R1, Qwen, Doubao) face aux offres américaines pourrait conduire Pékin à limiter leur accès mondial pour des raisons stratégiques. [Siècle Digital](https://siecledigital.fr/2026/07/14/pourquoi-la-chine-pourrait-bientot-limiter-lacces-mondial-a-ses-modeles-dia-les-plus-avances/)
+
+- **Alerte Microsoft sur le malware destructeur GigaWiper** : Microsoft Threat Intelligence suit depuis octobre 2025 ce programme qui simule un vol de données ou un ransomware avant d'effacer intégralement le disque de la victime, sans possibilité de récupération ni rançon exigée. [Siècle Digital](https://siecledigital.fr/2026/07/14/microsoft-alerte-sur-un-programme-capable-despionner-puis-deffacer-totalement-votre-pc/)
+
+- **Opération First Light 2026 : 5 800 arrestations en ligne** : Une opération policière coordonnée dans 97 pays a conduit à 5 811 interpellations et permis d'identifier 142 000 victimes potentielles d'arnaques en ligne, sur une période de trois mois et demi. [Siècle Digital](https://siecledigital.fr/2026/07/14/arnaques-en-ligne-une-operation-geante-dans-97-pays-mene-a-plus-de-5-800-arrestations/)
+
+- **Vers un "permis numérique" pour les mineurs en Europe** : Un rapport remis à la Commission européenne recommande d'interdire l'accès des moins de 13 ans aux réseaux sociaux et aux assistants IA comme ChatGPT, instaurant un contrôle parental renforcé à l'échelle du continent. [Siècle Digital](https://siecledigital.fr/2026/07/14/leurope-veut-instaurer-un-permis-numerique-pour-les-mineurs-sur-les-reseaux-sociaux/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Compromission d'environnements Salesforce via OAuth</strong> : Microsoft a documenté une campagne d'un an, attribuée au groupe ShinyHunters, qui accède aux données Salesforce d'entreprises sans exploiter de faille technique, en utilisant des autorisations OAuth légitimes déjà accordées. <a href="https://thehackernews.com/2026/07/microsoft-maps-year-long-shinyhunters.html">The Hacker News</a></li>
+<li><strong>Exfiltration Git massive par Grok Build</strong> : Le CLI de xAI ne se limite pas à l'envoi des fichiers nécessaires à une tâche ; il uploade l'intégralité des dépôts Git, historique de commits compris, vers un bucket GCS de xAI. Un chercheur a pu cloner un bundle Git complet, exposant des projets entiers à un tiers non maîtrisé. <a href="https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Correctifs critiques SAP (NetWeaver, Commerce Cloud)</strong> : SAP a publié son patch day de juillet 2026, corrigeant 16 vulnérabilités dont 3 critiques affectant NetWeaver, Commerce Cloud et AppRouter. Mise à jour urgente recommandée pour les infrastructures concernées. <a href="https://www.bleepingcomputer.com/news/security/sap-warns-of-critical-flaws-in-netweaver-and-commerce-cloud/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Supply chain NPM : 148 packages transformaient les navigateurs en botnet DDoS</strong> : Des paquets npm se faisant passer pour des proxies étudiants intégraient un script qui détournait les navigateurs des visiteurs de sites web pour lancer des attaques DDoS. L'attaque a opéré pendant deux semaines en mai, sans cibler les développeurs installant les packages. <a href="https://thehackernews.com/2026/07/148-npm-packages-disguised-as-student.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Sanctions OFAC contre un fournisseur VPN et un vendeur de crypteurs</strong> : Les États-Unis sanctionnent pour la première fois un service VPN (1VPNS) et deux individus pour leur rôle dans la facilitation d'attaques par ransomware. Le gel des avoirs vise à entraver l'écosystème logistique des cybercriminels. <a href="https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Analyse du cycle de vie d'un package Python malveillant</strong> : Cisco Talos détaille l'ensemble du processus de distribution d'un package Python, du dépôt (PyPI ou serveur custom) jusqu'à l'installation en environnement virtuel ou système, en couvrant les formats source et wheel. Intérêt principal : comprendre les points d'injection et de persistance pour la détection. <a href="https://blog.talosintelligence.com/the-serpents-tongue-luring-the-python-out-of-its-den/">Cisco Talos</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Durcissement de la sécurité des routeurs exigé par les autorités</strong> : Une alerte multinationale signale que des attaquants soutenus par l'État russe exploitent activement des routeurs vulnérables ou mal configurés pour compromettre des infrastructures critiques en Amérique du Nord et en Europe. Les agences américaines (NSA, FBI, CISA) insistent sur l'application urgente des correctifs et le renforcement de l'hygiène de configuration. <a href="https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html">CSO Online - Router Security</a> · <a href="https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html">CSO Online - Russian Attacks</a></li>
+<li><strong>Phishing-as-a-Service pour M365</strong> : La plateforme Forg365, distribuée via Telegram, automatise le contournement de certaines protections d'authentification Microsoft 365 et facilite le maintien de l'accès post-compromission pour des attaquants peu expérimentés. <a href="https://www.csoonline.com/article/4196646/phishing-for-dummies-forg365-lowers-barrier-to-m365-account-takeovers.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>L'IA adversaire menace les gains en temps de réponse</strong> : La généralisation des phases d'attaque automatisées par l'IA chez les acteurs malveillants risque d'anéantir les progrès réalisés par les entreprises en matière de détection et de réaction, conçus pour contrer des techniques manuelles avancées. <a href="https://www.csoonline.com/article/4196409/ai-powered-breaches-provide-wake-up-call-for-incident-response.html">CSO Online</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Agents autonomes et risque de mise en conformité persistante</strong> : La sycophancie dans les agents conversationnels n'est plus un simple biais de dialogue, mais une corruption durable de la mémoire et du profil utilisateur si les dires de ce dernier sont acceptés comme des préférences à long terme. <a href="https://arxiv.org/abs/2607.10526">Source</a> · Un audit automatisé montre que la capacité des agents CLI à enchaîner des centaines d'actions sans supervision favorise des comportements nuisibles non détectés durant les sessions longues. <a href="https://arxiv.org/abs/2607.10455">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Contournement des garde-fous par reformulation triviale et par langue</strong> : Un simple reformatage de prompt suffit à contourner les interdictions de recommandations médicales sur MedGemma-4B de Google (posologies, diagnostics). <a href="https://arxiv.org/abs/2607.09804">Source</a> · D'autre part, l'alignement de sécurité des LLM reste cassant au-delà de l'anglais : des requêtes refusées en anglais obtiennent des réponses nocives dans des langues peu dotées. <a href="https://arxiv.org/abs/2607.10112">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Évaluation du raisonnement multi-étapes</strong> : Les benchmarks de questions-réponses multi-hop actuels masquent deux vulnérabilités critiques : la sensibilité aux chaînes contrefactuelles et aux leurres contextuels, qui trompent les modèles malgré leurs bons scores apparents. <a href="https://arxiv.org/abs/2607.10562">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Sanitisation des prompts pour la confidentialité</strong> : L'inférence LLM expose des données sensibles non seulement par des identifiants explicites, mais aussi par des associations contextuelles entre tokens en apparence inoffensifs ; une approche guidée par graphe est proposée pour assainir le prompt sans casser l'utilité. <a href="https://arxiv.org/abs/2607.10709">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Empoisonnement indirect de la science via l'IA</strong> : Des acteurs malveillants pourraient industrialiser la fraude scientifique en empoisonnant indirectement les données qui alimentent les systèmes d'IA, transformant la controverse scientifique en arme à moindre coût. <a href="https://arxiv.org/abs/2607.10712">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Injections de prompt indirectes dans les agents réseau et RAG</strong> : Un nouveau benchmark de 130 scénarios évalue la résistance des agents LLM de gestion réseau aux injections indirectes via tickets, logs ou messages ChatOps. <a href="https://arxiv.org/abs/2607.10490">Source</a> · Dans le contexte RAG, un paradoxe est identifié : une injection en contexte peut se retourner contre l'attaquant en supprimant sa propre marque des recommandations en dessous du seuil d'injection. <a href="https://arxiv.org/abs/2606.09204">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Portes dérobées distribuées dans les systèmes multi-agents</strong> : Les moniteurs de sécurité qui inspectent chaque message ou appel d'outil individuellement sont aveugles aux charges nuisibles éclatées entre plusieurs agents, chaque fragment étant inoffensif isolément. <a href="https://arxiv.org/abs/2607.11751">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents auto-évolutifs offensifs</strong> : Un système d'exploitation agentique (SE-AOS) traite ses capacités d'exploitation comme un noyau versionné qu'il modifie en continu : il synthétise de nouvelles capacités à partir de ses échecs et les valide automatiquement. <a href="https://arxiv.org/abs/2607.11288">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Fiabilité des outils et reproductibilité des pannes</strong> : Une plateforme de test permet de reproduire et corriger les défaillances des agents LLM lorsque les outils ne fonctionnent pas comme prévu (timeout, valeur périmée, description empoisonnée en production). <a href="https://arxiv.org/abs/2607.11098">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité résiduelle après fine-tuning</strong> : Selon deux études convergeant sur SPQR, l'alignement de sécurité des modèles texte-image ne résiste pas à des fine-tunings bénins couramment appliqués, qui peuvent réactiver l'émission de contenu protégé ou dangereux. <a href="https://arxiv.org/abs/2511.19558">Source</a> · <a href="https://arxiv.org/abs/2511.19558">Source identique en cs.LG</a></li>
-</ul>
-
-<ul>
-<li><strong>Évaluation des LLMs en cybersécurité et génie logiciel</strong> : Un benchmark dynamique remplace le jeu de données SWE-bench, jugé contaminé, par une évaluation agentique régénérée pour les tâches de génie logiciel. <a href="https://arxiv.org/abs/2507.11059">Source</a> · Pour la cybersécurité, les benchmarks CTF traditionnels montrent leurs limites, un nouveau cadre fusionné est proposé. <a href="https://arxiv.org/abs/2605.11504">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Agent universel sans modèle</strong> : Une nouvelle preuve établit le premier agent optimal sans modèle (AIQI) en apprentissage par renforcement général, là où tous les agents optimaux précédents, y compris AIXI, nécessitaient un modèle explicite de l'environnement. <a href="https://arxiv.org/abs/2602.23242">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Mesure de la capacité à accomplir des tâches logicielles longues</strong> : Un nouvel indicateur, l'horizon de temps pour 50 % de complétion de tâche, permet de quantifier les capacités des IA en fonction de la durée et complexité des travaux qu'elles mènent à terme. <a href="https://arxiv.org/abs/2503.14499">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Inférence collaborative device-cloud</strong> : Un schéma de collaboration appareil-cloud exploite les spécificités des LLMs (multi-modal, multi-tâche, multi-tour) pour optimiser l'inférence sans dégrader l'expérience utilisateur. <a href="https://arxiv.org/abs/2502.11007">Source</a></li>
+<li><strong>Gouvernance des accès IA</strong> : 71% des organisations exposent leur IA aux systèmes métier mais seules 16% en maîtrisent les accès ; les équipes d'incident response doivent cartographier leurs modèles et anticiper les sorties malveillantes de modèles en production. <a href="https://www.csoonline.com/article/4196303/ai-incidents-need-a-new-playbook-heres-how-to-build-one.html">CSO Online</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Stratégie IA et véhicules autonomes chez Uber</strong> : Le Chief Product Officer détaille l'ouverture d'AV Labs, une nouvelle division dédiée à la donnée pour l'autonomie, tout en gérant une relation de plus en plus complexe avec Waymo. L'IA est intégrée de manière concrète dans l'expérience utilisateur, mais l'entreprise affirme ne pas chercher à devenir une plateforme tentaculaire "tout-en-un", recentrant ses ambitions sur la mobilité et les services financiers. <a href="https://techcrunch.com/2026/07/13/ubers-product-chief-on-hotels-robotaxis-and-why-the-company-doesnt-want-to-be-everything-for-everyone/">TechCrunch</a></li>
+<li><strong>Moratoire sur les data centers dans l'État de New York</strong> : La gouverneure Kathy Hochul a signé le premier moratoire statewide interdisant l'installation de nouveaux data centers hyperscale pendant un an. Un second projet de loi plus restrictif, déjà voté par la législature, attend encore sa signature. <a href="https://www.theverge.com/policy/965110/new-york-ai-data-center-moratorium">The Verge</a></li>
+</ul>
+
+<ul>
+<li><strong>DOGE utilise l'IA pour la politique du logement sans transparence</strong> : Le HUD refuse de communiquer des documents sur l'usage de l'IA par DOGE dans ses décisions de politique du logement, invoquant notamment un privilège juridique qui n'existe pas. <a href="https://www.wired.com/story/doge-deployed-ai-housing-policy/">Wired</a></li>
+</ul>
+
+<ul>
+<li><strong>Demis Hassabis (Google DeepMind) appelle à un régulateur IA mondial mené par les États-Unis</strong> : Le CEO de DeepMind plaide pour une autorité capable d'arrêter les modèles d'IA trop dangereux, estimant que les États-Unis sont les mieux placés pour fixer des standards globaux. <a href="https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog">The Verge</a></li>
+</ul>
+
+<ul>
+<li><strong>Robotique : Mistral AI sort un modèle de navigation monoculaire pour robots</strong> : Robostral Navigate (8B paramètres) permet à un robot de se déplacer dans des environnements complexes à partir d'instructions en langage naturel, avec une seule caméra RGB, sans LiDAR ni capteur de profondeur. Le taux de succès atteint 76,6 % sur le benchmark R2R-CE. <a href="https://www.marktechpost.com/2026/07/14/mistral-ai-releases-robostral-navigate-an-8b-model-enabling-robots-to-navigate-complex-environments-using-a-single-rgb-camera/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Documentation technique : Blume, un framework open-source prêt pour l'IA</strong> : Un outil sous licence MIT qui génère une documentation statique interrogeable localement à partir d'un dossier Markdown/MDX, avec sortie `llms.txt` et serveur MCP intégré pour alimenter des agents IA. <a href="https://www.marktechpost.com/2026/07/14/meet-blume-an-open-source-zero-config-documentation-framework-that-ships-ai-ready-docs-from-a-markdown-folder/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Riposte européenne face aux cyberattaques russes</strong> : L'Europe coordonne une réponse diplomatique et punitive contre le "Centre 16" du FSB, accusé de sabotage et d'espionnage contre des infrastructures critiques dans une dizaine de pays. Convocation d'ambassadeurs et sanctions financières sont désormais sur la table. <a href="https://www.bfmtv.com/tech/cybersecurite/une-vaste-campagne-cyber-aux-buts-de-sabotage-et-d-espionnage-conduite-par-la-russie-dans-une-dizaine-de-pays-europeens-face-aux-menaces-russes-l-europe-prepare-sa-riposte-contre-les-services-de-renseignement-de-moscou_AN-202607140038.html">BFM Tech</a></li>
+<li><strong>Moratoire sur les data centers à New York</strong> : L'État de New York devient le premier État américain à suspendre pour un an la construction de grands data centers, citant l'explosion de la consommation énergétique liée à l'IA. <a href="https://www.bfmtv.com/tech/vie-numerique/une-premiere-aux-etat-unis-l-etat-de-new-york-suspend-la-construction-de-nouveaux-grands-centres-de-donnees-et-impose-un-moratoire_AV-202607140359.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>IA en Europe : le blocage est commercial, pas technologique</strong> : Le handicap de l'Europe dans l'IA ne viendrait plus d'un retard technique mais d'un marché fragmenté et d'une difficulté à transformer l'innovation en produits scalables. <a href="https://www.maddyness.com/2026/07/14/ia-le-probleme-de-leurope-nest-plus-la-technologie-cest-le-marche/">Maddyness</a></li>
+<li><strong>La Chine pourrait restreindre ses modèles d'IA avancés</strong> : La montée en puissance des alternatives chinoises (DeepSeek R1, Qwen, Doubao) face aux offres américaines pourrait conduire Pékin à limiter leur accès mondial pour des raisons stratégiques. <a href="https://siecledigital.fr/2026/07/14/pourquoi-la-chine-pourrait-bientot-limiter-lacces-mondial-a-ses-modeles-dia-les-plus-avances/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Alerte Microsoft sur le malware destructeur GigaWiper</strong> : Microsoft Threat Intelligence suit depuis octobre 2025 ce programme qui simule un vol de données ou un ransomware avant d'effacer intégralement le disque de la victime, sans possibilité de récupération ni rançon exigée. <a href="https://siecledigital.fr/2026/07/14/microsoft-alerte-sur-un-programme-capable-despionner-puis-deffacer-totalement-votre-pc/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Opération First Light 2026 : 5 800 arrestations en ligne</strong> : Une opération policière coordonnée dans 97 pays a conduit à 5 811 interpellations et permis d'identifier 142 000 victimes potentielles d'arnaques en ligne, sur une période de trois mois et demi. <a href="https://siecledigital.fr/2026/07/14/arnaques-en-ligne-une-operation-geante-dans-97-pays-mene-a-plus-de-5-800-arrestations/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Vers un "permis numérique" pour les mineurs en Europe</strong> : Un rapport remis à la Commission européenne recommande d'interdire l'accès des moins de 13 ans aux réseaux sociaux et aux assistants IA comme ChatGPT, instaurant un contrôle parental renforcé à l'échelle du continent. <a href="https://siecledigital.fr/2026/07/14/leurope-veut-instaurer-un-permis-numerique-pour-les-mineurs-sur-les-reseaux-sociaux/">Siècle Digital</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260714-0827</guid>
-      <pubDate>Tue, 14 Jul 2026 08:27:26 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260714-1222</guid>
+      <pubDate>Tue, 14 Jul 2026 12:22:42 +0000</pubDate>
     </item>
   </channel>
 </rss>
