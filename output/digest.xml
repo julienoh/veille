@@ -8,128 +8,180 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 14 Jul 2026 12:22:42 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 18:15:44 +0000</lastBuildDate>
     <item>
-      <title>Digest — 14/07 12h</title>
+      <title>Digest — 14/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Exfiltration Git massive par Grok Build** : Le CLI de xAI ne se limite pas à l'envoi des fichiers nécessaires à une tâche ; il uploade l'intégralité des dépôts Git, historique de commits compris, vers un bucket GCS de xAI. Un chercheur a pu cloner un bundle Git complet, exposant des projets entiers à un tiers non maîtrisé. [The Hacker News](https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html)
+- **Patch Tuesday record : 570 failles Microsoft, 3 zero-days** : Le correctif mensuel de juillet 2026 corrige un volume record de 570 vulnérabilités, dont deux déjà exploitées activement et une divulguée publiquement. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/)
 
-- **Correctifs critiques SAP (NetWeaver, Commerce Cloud)** : SAP a publié son patch day de juillet 2026, corrigeant 16 vulnérabilités dont 3 critiques affectant NetWeaver, Commerce Cloud et AppRouter. Mise à jour urgente recommandée pour les infrastructures concernées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/sap-warns-of-critical-flaws-in-netweaver-and-commerce-cloud/)
+- **ShareFile : zero-day confirmé, correctif disponible** : Progress Software confirme qu'une faille zero-day de sévérité élevée a motivé l'arrêt d'urgence des Storage Zone Controllers la semaine dernière ; un correctif est publié. [BleepingComputer](https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/)
 
-- **Supply chain NPM : 148 packages transformaient les navigateurs en botnet DDoS** : Des paquets npm se faisant passer pour des proxies étudiants intégraient un script qui détournait les navigateurs des visiteurs de sites web pour lancer des attaques DDoS. L'attaque a opéré pendant deux semaines en mai, sans cibler les développeurs installant les packages. [The Hacker News](https://thehackernews.com/2026/07/148-npm-packages-disguised-as-student.html)
+- **RabbitMQ : fuite de secrets OAuth et contournement de tenants** : Deux failles de contrôle d'accès dans le courtier de messages RabbitMQ permettent de dérober des secrets OAuth et de franchir les frontières entre tenants. [The Hacker News](https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html)
 
-- **Sanctions OFAC contre un fournisseur VPN et un vendeur de crypteurs** : Les États-Unis sanctionnent pour la première fois un service VPN (1VPNS) et deux individus pour leur rôle dans la facilitation d'attaques par ransomware. Le gel des avoirs vise à entraver l'écosystème logistique des cybercriminels. [The Hacker News](https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html)
+- **OAuth Client ID Spoofing ciblant Microsoft Entra ID** : Au moins deux acteurs malveillants exploitent une technique d'usurpation d'ID client OAuth pour valider des comptes et tester des identifiants volés dans des environnements Entra ID sans générer d'événement de connexion. [The Hacker News](https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html)
 
-- **Analyse du cycle de vie d'un package Python malveillant** : Cisco Talos détaille l'ensemble du processus de distribution d'un package Python, du dépôt (PyPI ou serveur custom) jusqu'à l'installation en environnement virtuel ou système, en couvrant les formats source et wheel. Intérêt principal : comprendre les points d'injection et de persistance pour la détection. [Cisco Talos](https://blog.talosintelligence.com/the-serpents-tongue-luring-the-python-out-of-its-den/)
+- **Phishing MFA-bypass ciblant Microsoft 365** : Deux nouveaux kits de phishing (Jalisco et OmegaLord) intègrent des techniques de contournement d'authentification multifacteur pour compromettre des comptes Microsoft 365. [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-phishing-kits-target-microsoft-365-accounts-evade-mfa/)
+
+- **Campagne de phishing ciblant les utilisateurs de gestionnaires de mots de passe** : LastPass et Bitwarden font l'objet d'une campagne active utilisant de fausses alertes de sécurité pour rediriger les victimes vers des sites frauduleux. [BleepingComputer](https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/)
+
+- **Secure Boot contourné via 11 shims UEFI Linux signés Microsoft** : Onze anciennes applications UEFI signées par Microsoft peuvent être détournées pour exécuter du code non fiable avant le démarrage du système, contournant ainsi le Secure Boot. [The Hacker News](https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html)
+
+- **LabubaRAT : un RAT Rust se fait passer pour un logiciel NVIDIA** : Un trojan d'accès à distance inédit, développé en Rust, usurpe l'identité de logiciels NVIDIA pour établir une persistance discrète sur les postes Windows. [The Hacker News](https://thehackernews.com/2026/07/labubarat-masquerades-as-nvidia.html)
+
+- **Espionnage russe via caméras connectées en Europe** : Les services néerlandais rapportent qu'une agence russe compromet des caméras IP à travers l'Europe pour surveiller la logistique de l'OTAN et les troupes ukrainiennes. [The Record](https://therecord.media/russian-intelligence-compromising-cameras-nato-ukraine-netherlands)
+
+- **Extensions de wallets crypto : fuites d'adresses et pistage inter-sites** : Une étude sur 85 extensions de navigateur révèle que la plupart communiquent avec les sites et les nœuds blockchain d'une manière qui permet de lier les adresses d'un même utilisateur et de le pister. [The Hacker News](https://thehackernews.com/2026/07/study-of-85-crypto-wallet-extensions.html)
+
+- **Microsoft Entra ID : les passkeys deviendront l'authentification par défaut en septembre 2026** : Ce changement réduira la surface d'exposition au phishing par vol de mot de passe pour les environnements d'entreprise utilisant Entra ID. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-entra-id-gets-passkeys-default-authentication-starting-september/)
+
+- **Validation de l'exploitabilité sans exécution de code malveillant** : Picus détaille une méthode de chaînage TTP permettant de déterminer si une vulnérabilité est exploitable dans un environnement donné sans lancer d'exploit, utile pour les systèmes critiques. [BleepingComputer](https://www.bleepingcomputer.com/news/security/you-dont-have-to-run-an-exploit-to-know-if-youre-vulnerable/)
+
+- **Finlande : notice Interpol pour le pirate de la psychothérapie Vastaamo** : Le suspect de la fuite massive de dossiers de patients est recherché ; son avocat indique qu'il se trouverait hors de Finlande. [The Record](https://therecord.media/finland-issues-wanted-notice-for-hacker-vastaamo-breach)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Phishing-as-a-Service pour M365** : La plateforme Forg365, distribuée via Telegram, automatise le contournement de certaines protections d'authentification Microsoft 365 et facilite le maintien de l'accès post-compromission pour des attaquants peu expérimentés. [CSO Online](https://www.csoonline.com/article/4196646/phishing-for-dummies-forg365-lowers-barrier-to-m365-account-takeovers.html)
+- **Vulnérabilité persistante dans Cursor IDE** : La faille signalée en décembre 2024 permettant l'exécution automatique de code malveillant via des dépôts empoisonnés n'est toujours pas corrigée. L'exploitation repose sur l'absence de validation des prompts intégrés dans les projets partagés. [Dark Reading](https://www.darkreading.com/application-security/cursor-ide-malicious-code-poisoned-repos)
 
-- **Gouvernance des accès IA** : 71% des organisations exposent leur IA aux systèmes métier mais seules 16% en maîtrisent les accès ; les équipes d'incident response doivent cartographier leurs modèles et anticiper les sorties malveillantes de modèles en production. [CSO Online](https://www.csoonline.com/article/4196303/ai-incidents-need-a-new-playbook-heres-how-to-build-one.html)
+- **Régulation de l'IA frontière** : Plusieurs États américains tentent de légiférer sur la transparence des modèles d'IA avancés, alors que ces systèmes gagnent en autonomie et échappent à la supervision humaine. Le débat porte sur l'encadrement d'une technologie déjà largement déployée. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/frontier-ai-genie-out-of-bottle-where-rulebook)
+
+- **Industrialisation de ClickFix** : La technique d'ingénierie sociale, désormais disponible en location à grande échelle, contourne les antivirus et EDR classiques. La détection repose principalement sur des règles YARA ciblant les scripts et commandes PowerShell caractéristiques. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/clickfixs-ecosystem-demands-new-defense)
+
+## IA — Labos &amp; éditeurs
+
+- **Modèles ouverts et souveraineté** : NVIDIA positionne ses modèles Nemotron comme une réponse aux besoins de contrôle et de personnalisation des entreprises et des États, en mettant l'accent sur la confiance et l'adaptation aux domaines métier. [NVIDIA Blog](https://blogs.nvidia.com/blog/nemotron-open-models-ai-trust-control-customize/)
+
+- **Efficacité énergétique des infrastructures IA** : Le ratio performance par watt devient l'indicateur clé de rentabilité des usines à tokens, car il détermine directement le revenu généré dans une enveloppe de puissance fixe. [NVIDIA Blog](https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/)
+
+- **Agents pour l'automatisation des tests logiciels** : AWS détaille l'intégration d'agents (Nova Act) dans les pipelines CI/CD pour paralléliser les tests de régression et l'analyse de flux utilisateur à grande échelle. [AWS - QA automation](https://aws.amazon.com/blogs/machine-learning/accelerating-software-delivery-with-agentic-qa-automation-using-amazon-nova-act-part-2/) · [AWS - UX testing](https://aws.amazon.com/blogs/machine-learning/scaling-ux-testing-with-amazon-nova-act-a-new-approach-to-user-flow-analysis/)
+
+- **IA générative en santé** : Flo Health a industrialisé un système de revue de contenu médical sur Amazon Bedrock, tandis que ScienceSoft a déployé un planificateur vocal conforme HIPAA en combinant Amazon Nova Sonic et Bedrock Guardrails. [AWS - Flo Health](https://aws.amazon.com/blogs/machine-learning/scaling-medical-content-review-at-flo-health-with-amazon-bedrock-part-2/) · [AWS - ScienceSoft](https://aws.amazon.com/blogs/machine-learning/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws/)
+
+## IA — Produits, agents &amp; dev tooling
+
+- **Claude Code vs n8n — choix d'outillage** : La décision repose sur cinq critères pragmatiques : nature déterministe ou non du workflow, besoin d'intégrations externes, fréquence d'exécution, niveau technique de l'utilisateur final et importance de la traçabilité. Les deux outils sont complémentaires et souvent utilisés conjointement. [n8n Blog](https://blog.n8n.io/should-i-use-claude-code-or-n8n/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Moratoire sur les data centers dans l'État de New York** : La gouverneure Kathy Hochul a signé le premier moratoire statewide interdisant l'installation de nouveaux data centers hyperscale pendant un an. Un second projet de loi plus restrictif, déjà voté par la législature, attend encore sa signature. [The Verge](https://www.theverge.com/policy/965110/new-york-ai-data-center-moratorium)
+- **Régulation de l'IA frontière** : Le CEO de DeepMind propose un organisme de normalisation indépendant, sur le modèle de la FINRA, pour tester les modèles d'IA frontière avant leur mise sur le marché. [TechCrunch](https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/)
 
-- **DOGE utilise l'IA pour la politique du logement sans transparence** : Le HUD refuse de communiquer des documents sur l'usage de l'IA par DOGE dans ses décisions de politique du logement, invoquant notamment un privilège juridique qui n'existe pas. [Wired](https://www.wired.com/story/doge-deployed-ai-housing-policy/)
+- **Moratoire sur les datacenters dans l'État de New York** : L'État de New York suspend les autorisations de nouveaux grands datacenters, invoquant la pression sur le réseau électrique, les ressources en eau et le contrôle local face à l'explosion de la demande liée à l'IA. [TechCrunch](https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/)
 
-- **Demis Hassabis (Google DeepMind) appelle à un régulateur IA mondial mené par les États-Unis** : Le CEO de DeepMind plaide pour une autorité capable d'arrêter les modèles d'IA trop dangereux, estimant que les États-Unis sont les mieux placés pour fixer des standards globaux. [The Verge](https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog)
+- **Budgétisation des tokens IA en entreprise** : Meta anticipe un plafonnement de la consommation de tokens par ingénieur, traitant l'usage des outils d'IA comme une charge d'exploitation au même titre que la masse salariale. [TechCrunch](https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/)
 
-- **Robotique : Mistral AI sort un modèle de navigation monoculaire pour robots** : Robostral Navigate (8B paramètres) permet à un robot de se déplacer dans des environnements complexes à partir d'instructions en langage naturel, avec une seule caméra RGB, sans LiDAR ni capteur de profondeur. Le taux de succès atteint 76,6 % sur le benchmark R2R-CE. [MarkTechPost](https://www.marktechpost.com/2026/07/14/mistral-ai-releases-robostral-navigate-an-8b-model-enabling-robots-to-navigate-complex-environments-using-a-single-rgb-camera/)
-
-- **Documentation technique : Blume, un framework open-source prêt pour l'IA** : Un outil sous licence MIT qui génère une documentation statique interrogeable localement à partir d'un dossier Markdown/MDX, avec sortie `llms.txt` et serveur MCP intégré pour alimenter des agents IA. [MarkTechPost](https://www.marktechpost.com/2026/07/14/meet-blume-an-open-source-zero-config-documentation-framework-that-ships-ai-ready-docs-from-a-markdown-folder/)
-
-## Actualité tech FR
-
-- **Moratoire sur les data centers à New York** : L'État de New York devient le premier État américain à suspendre pour un an la construction de grands data centers, citant l'explosion de la consommation énergétique liée à l'IA. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/une-premiere-aux-etat-unis-l-etat-de-new-york-suspend-la-construction-de-nouveaux-grands-centres-de-donnees-et-impose-un-moratoire_AV-202607140359.html)
-
-- **La Chine pourrait restreindre ses modèles d'IA avancés** : La montée en puissance des alternatives chinoises (DeepSeek R1, Qwen, Doubao) face aux offres américaines pourrait conduire Pékin à limiter leur accès mondial pour des raisons stratégiques. [Siècle Digital](https://siecledigital.fr/2026/07/14/pourquoi-la-chine-pourrait-bientot-limiter-lacces-mondial-a-ses-modeles-dia-les-plus-avances/)
-
-- **Alerte Microsoft sur le malware destructeur GigaWiper** : Microsoft Threat Intelligence suit depuis octobre 2025 ce programme qui simule un vol de données ou un ransomware avant d'effacer intégralement le disque de la victime, sans possibilité de récupération ni rançon exigée. [Siècle Digital](https://siecledigital.fr/2026/07/14/microsoft-alerte-sur-un-programme-capable-despionner-puis-deffacer-totalement-votre-pc/)
-
-- **Opération First Light 2026 : 5 800 arrestations en ligne** : Une opération policière coordonnée dans 97 pays a conduit à 5 811 interpellations et permis d'identifier 142 000 victimes potentielles d'arnaques en ligne, sur une période de trois mois et demi. [Siècle Digital](https://siecledigital.fr/2026/07/14/arnaques-en-ligne-une-operation-geante-dans-97-pays-mene-a-plus-de-5-800-arrestations/)
-
-- **Vers un "permis numérique" pour les mineurs en Europe** : Un rapport remis à la Commission européenne recommande d'interdire l'accès des moins de 13 ans aux réseaux sociaux et aux assistants IA comme ChatGPT, instaurant un contrôle parental renforcé à l'échelle du continent. [Siècle Digital](https://siecledigital.fr/2026/07/14/leurope-veut-instaurer-un-permis-numerique-pour-les-mineurs-sur-les-reseaux-sociaux/)</description>
+- **Bascule du marché vers les modèles ouverts** : Le CEO de Hugging Face constate que les entreprises privilégient désormais les modèles ouverts pour des raisons de coût, d'accessibilité et de contrôle, remettant en question la pertinence de la course aux modèles frontière pour les usages en production. [TechCrunch](https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exfiltration Git massive par Grok Build</strong> : Le CLI de xAI ne se limite pas à l'envoi des fichiers nécessaires à une tâche ; il uploade l'intégralité des dépôts Git, historique de commits compris, vers un bucket GCS de xAI. Un chercheur a pu cloner un bundle Git complet, exposant des projets entiers à un tiers non maîtrisé. <a href="https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html">The Hacker News</a></li>
+<li><strong>Patch Tuesday record : 570 failles Microsoft, 3 zero-days</strong> : Le correctif mensuel de juillet 2026 corrige un volume record de 570 vulnérabilités, dont deux déjà exploitées activement et une divulguée publiquement. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Correctifs critiques SAP (NetWeaver, Commerce Cloud)</strong> : SAP a publié son patch day de juillet 2026, corrigeant 16 vulnérabilités dont 3 critiques affectant NetWeaver, Commerce Cloud et AppRouter. Mise à jour urgente recommandée pour les infrastructures concernées. <a href="https://www.bleepingcomputer.com/news/security/sap-warns-of-critical-flaws-in-netweaver-and-commerce-cloud/">BleepingComputer</a></li>
+<li><strong>ShareFile : zero-day confirmé, correctif disponible</strong> : Progress Software confirme qu'une faille zero-day de sévérité élevée a motivé l'arrêt d'urgence des Storage Zone Controllers la semaine dernière ; un correctif est publié. <a href="https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Supply chain NPM : 148 packages transformaient les navigateurs en botnet DDoS</strong> : Des paquets npm se faisant passer pour des proxies étudiants intégraient un script qui détournait les navigateurs des visiteurs de sites web pour lancer des attaques DDoS. L'attaque a opéré pendant deux semaines en mai, sans cibler les développeurs installant les packages. <a href="https://thehackernews.com/2026/07/148-npm-packages-disguised-as-student.html">The Hacker News</a></li>
+<li><strong>RabbitMQ : fuite de secrets OAuth et contournement de tenants</strong> : Deux failles de contrôle d'accès dans le courtier de messages RabbitMQ permettent de dérober des secrets OAuth et de franchir les frontières entre tenants. <a href="https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Sanctions OFAC contre un fournisseur VPN et un vendeur de crypteurs</strong> : Les États-Unis sanctionnent pour la première fois un service VPN (1VPNS) et deux individus pour leur rôle dans la facilitation d'attaques par ransomware. Le gel des avoirs vise à entraver l'écosystème logistique des cybercriminels. <a href="https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html">The Hacker News</a></li>
+<li><strong>OAuth Client ID Spoofing ciblant Microsoft Entra ID</strong> : Au moins deux acteurs malveillants exploitent une technique d'usurpation d'ID client OAuth pour valider des comptes et tester des identifiants volés dans des environnements Entra ID sans générer d'événement de connexion. <a href="https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Analyse du cycle de vie d'un package Python malveillant</strong> : Cisco Talos détaille l'ensemble du processus de distribution d'un package Python, du dépôt (PyPI ou serveur custom) jusqu'à l'installation en environnement virtuel ou système, en couvrant les formats source et wheel. Intérêt principal : comprendre les points d'injection et de persistance pour la détection. <a href="https://blog.talosintelligence.com/the-serpents-tongue-luring-the-python-out-of-its-den/">Cisco Talos</a></li>
+<li><strong>Phishing MFA-bypass ciblant Microsoft 365</strong> : Deux nouveaux kits de phishing (Jalisco et OmegaLord) intègrent des techniques de contournement d'authentification multifacteur pour compromettre des comptes Microsoft 365. <a href="https://www.bleepingcomputer.com/news/security/new-phishing-kits-target-microsoft-365-accounts-evade-mfa/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne de phishing ciblant les utilisateurs de gestionnaires de mots de passe</strong> : LastPass et Bitwarden font l'objet d'une campagne active utilisant de fausses alertes de sécurité pour rediriger les victimes vers des sites frauduleux. <a href="https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Secure Boot contourné via 11 shims UEFI Linux signés Microsoft</strong> : Onze anciennes applications UEFI signées par Microsoft peuvent être détournées pour exécuter du code non fiable avant le démarrage du système, contournant ainsi le Secure Boot. <a href="https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>LabubaRAT : un RAT Rust se fait passer pour un logiciel NVIDIA</strong> : Un trojan d'accès à distance inédit, développé en Rust, usurpe l'identité de logiciels NVIDIA pour établir une persistance discrète sur les postes Windows. <a href="https://thehackernews.com/2026/07/labubarat-masquerades-as-nvidia.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Espionnage russe via caméras connectées en Europe</strong> : Les services néerlandais rapportent qu'une agence russe compromet des caméras IP à travers l'Europe pour surveiller la logistique de l'OTAN et les troupes ukrainiennes. <a href="https://therecord.media/russian-intelligence-compromising-cameras-nato-ukraine-netherlands">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Extensions de wallets crypto : fuites d'adresses et pistage inter-sites</strong> : Une étude sur 85 extensions de navigateur révèle que la plupart communiquent avec les sites et les nœuds blockchain d'une manière qui permet de lier les adresses d'un même utilisateur et de le pister. <a href="https://thehackernews.com/2026/07/study-of-85-crypto-wallet-extensions.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Microsoft Entra ID : les passkeys deviendront l'authentification par défaut en septembre 2026</strong> : Ce changement réduira la surface d'exposition au phishing par vol de mot de passe pour les environnements d'entreprise utilisant Entra ID. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-entra-id-gets-passkeys-default-authentication-starting-september/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Validation de l'exploitabilité sans exécution de code malveillant</strong> : Picus détaille une méthode de chaînage TTP permettant de déterminer si une vulnérabilité est exploitable dans un environnement donné sans lancer d'exploit, utile pour les systèmes critiques. <a href="https://www.bleepingcomputer.com/news/security/you-dont-have-to-run-an-exploit-to-know-if-youre-vulnerable/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Finlande : notice Interpol pour le pirate de la psychothérapie Vastaamo</strong> : Le suspect de la fuite massive de dossiers de patients est recherché ; son avocat indique qu'il se trouverait hors de Finlande. <a href="https://therecord.media/finland-issues-wanted-notice-for-hacker-vastaamo-breach">The Record</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Phishing-as-a-Service pour M365</strong> : La plateforme Forg365, distribuée via Telegram, automatise le contournement de certaines protections d'authentification Microsoft 365 et facilite le maintien de l'accès post-compromission pour des attaquants peu expérimentés. <a href="https://www.csoonline.com/article/4196646/phishing-for-dummies-forg365-lowers-barrier-to-m365-account-takeovers.html">CSO Online</a></li>
+<li><strong>Vulnérabilité persistante dans Cursor IDE</strong> : La faille signalée en décembre 2024 permettant l'exécution automatique de code malveillant via des dépôts empoisonnés n'est toujours pas corrigée. L'exploitation repose sur l'absence de validation des prompts intégrés dans les projets partagés. <a href="https://www.darkreading.com/application-security/cursor-ide-malicious-code-poisoned-repos">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Gouvernance des accès IA</strong> : 71% des organisations exposent leur IA aux systèmes métier mais seules 16% en maîtrisent les accès ; les équipes d'incident response doivent cartographier leurs modèles et anticiper les sorties malveillantes de modèles en production. <a href="https://www.csoonline.com/article/4196303/ai-incidents-need-a-new-playbook-heres-how-to-build-one.html">CSO Online</a></li>
+<li><strong>Régulation de l'IA frontière</strong> : Plusieurs États américains tentent de légiférer sur la transparence des modèles d'IA avancés, alors que ces systèmes gagnent en autonomie et échappent à la supervision humaine. Le débat porte sur l'encadrement d'une technologie déjà largement déployée. <a href="https://www.darkreading.com/cybersecurity-operations/frontier-ai-genie-out-of-bottle-where-rulebook">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Industrialisation de ClickFix</strong> : La technique d'ingénierie sociale, désormais disponible en location à grande échelle, contourne les antivirus et EDR classiques. La détection repose principalement sur des règles YARA ciblant les scripts et commandes PowerShell caractéristiques. <a href="https://www.darkreading.com/cyberattacks-data-breaches/clickfixs-ecosystem-demands-new-defense">Dark Reading</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Modèles ouverts et souveraineté</strong> : NVIDIA positionne ses modèles Nemotron comme une réponse aux besoins de contrôle et de personnalisation des entreprises et des États, en mettant l'accent sur la confiance et l'adaptation aux domaines métier. <a href="https://blogs.nvidia.com/blog/nemotron-open-models-ai-trust-control-customize/">NVIDIA Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Efficacité énergétique des infrastructures IA</strong> : Le ratio performance par watt devient l'indicateur clé de rentabilité des usines à tokens, car il détermine directement le revenu généré dans une enveloppe de puissance fixe. <a href="https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/">NVIDIA Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents pour l'automatisation des tests logiciels</strong> : AWS détaille l'intégration d'agents (Nova Act) dans les pipelines CI/CD pour paralléliser les tests de régression et l'analyse de flux utilisateur à grande échelle. <a href="https://aws.amazon.com/blogs/machine-learning/accelerating-software-delivery-with-agentic-qa-automation-using-amazon-nova-act-part-2/">AWS - QA automation</a> · <a href="https://aws.amazon.com/blogs/machine-learning/scaling-ux-testing-with-amazon-nova-act-a-new-approach-to-user-flow-analysis/">AWS - UX testing</a></li>
+</ul>
+
+<ul>
+<li><strong>IA générative en santé</strong> : Flo Health a industrialisé un système de revue de contenu médical sur Amazon Bedrock, tandis que ScienceSoft a déployé un planificateur vocal conforme HIPAA en combinant Amazon Nova Sonic et Bedrock Guardrails. <a href="https://aws.amazon.com/blogs/machine-learning/scaling-medical-content-review-at-flo-health-with-amazon-bedrock-part-2/">AWS - Flo Health</a> · <a href="https://aws.amazon.com/blogs/machine-learning/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws/">AWS - ScienceSoft</a></li>
+</ul>
+
+<h2>IA — Produits, agents & dev tooling</h2>
+
+<ul>
+<li><strong>Claude Code vs n8n — choix d'outillage</strong> : La décision repose sur cinq critères pragmatiques : nature déterministe ou non du workflow, besoin d'intégrations externes, fréquence d'exécution, niveau technique de l'utilisateur final et importance de la traçabilité. Les deux outils sont complémentaires et souvent utilisés conjointement. <a href="https://blog.n8n.io/should-i-use-claude-code-or-n8n/">n8n Blog</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Moratoire sur les data centers dans l'État de New York</strong> : La gouverneure Kathy Hochul a signé le premier moratoire statewide interdisant l'installation de nouveaux data centers hyperscale pendant un an. Un second projet de loi plus restrictif, déjà voté par la législature, attend encore sa signature. <a href="https://www.theverge.com/policy/965110/new-york-ai-data-center-moratorium">The Verge</a></li>
+<li><strong>Régulation de l'IA frontière</strong> : Le CEO de DeepMind propose un organisme de normalisation indépendant, sur le modèle de la FINRA, pour tester les modèles d'IA frontière avant leur mise sur le marché. <a href="https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>DOGE utilise l'IA pour la politique du logement sans transparence</strong> : Le HUD refuse de communiquer des documents sur l'usage de l'IA par DOGE dans ses décisions de politique du logement, invoquant notamment un privilège juridique qui n'existe pas. <a href="https://www.wired.com/story/doge-deployed-ai-housing-policy/">Wired</a></li>
+<li><strong>Moratoire sur les datacenters dans l'État de New York</strong> : L'État de New York suspend les autorisations de nouveaux grands datacenters, invoquant la pression sur le réseau électrique, les ressources en eau et le contrôle local face à l'explosion de la demande liée à l'IA. <a href="https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>Demis Hassabis (Google DeepMind) appelle à un régulateur IA mondial mené par les États-Unis</strong> : Le CEO de DeepMind plaide pour une autorité capable d'arrêter les modèles d'IA trop dangereux, estimant que les États-Unis sont les mieux placés pour fixer des standards globaux. <a href="https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog">The Verge</a></li>
+<li><strong>Budgétisation des tokens IA en entreprise</strong> : Meta anticipe un plafonnement de la consommation de tokens par ingénieur, traitant l'usage des outils d'IA comme une charge d'exploitation au même titre que la masse salariale. <a href="https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>Robotique : Mistral AI sort un modèle de navigation monoculaire pour robots</strong> : Robostral Navigate (8B paramètres) permet à un robot de se déplacer dans des environnements complexes à partir d'instructions en langage naturel, avec une seule caméra RGB, sans LiDAR ni capteur de profondeur. Le taux de succès atteint 76,6 % sur le benchmark R2R-CE. <a href="https://www.marktechpost.com/2026/07/14/mistral-ai-releases-robostral-navigate-an-8b-model-enabling-robots-to-navigate-complex-environments-using-a-single-rgb-camera/">MarkTechPost</a></li>
-</ul>
-
-<ul>
-<li><strong>Documentation technique : Blume, un framework open-source prêt pour l'IA</strong> : Un outil sous licence MIT qui génère une documentation statique interrogeable localement à partir d'un dossier Markdown/MDX, avec sortie `llms.txt` et serveur MCP intégré pour alimenter des agents IA. <a href="https://www.marktechpost.com/2026/07/14/meet-blume-an-open-source-zero-config-documentation-framework-that-ships-ai-ready-docs-from-a-markdown-folder/">MarkTechPost</a></li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Moratoire sur les data centers à New York</strong> : L'État de New York devient le premier État américain à suspendre pour un an la construction de grands data centers, citant l'explosion de la consommation énergétique liée à l'IA. <a href="https://www.bfmtv.com/tech/vie-numerique/une-premiere-aux-etat-unis-l-etat-de-new-york-suspend-la-construction-de-nouveaux-grands-centres-de-donnees-et-impose-un-moratoire_AV-202607140359.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>La Chine pourrait restreindre ses modèles d'IA avancés</strong> : La montée en puissance des alternatives chinoises (DeepSeek R1, Qwen, Doubao) face aux offres américaines pourrait conduire Pékin à limiter leur accès mondial pour des raisons stratégiques. <a href="https://siecledigital.fr/2026/07/14/pourquoi-la-chine-pourrait-bientot-limiter-lacces-mondial-a-ses-modeles-dia-les-plus-avances/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Alerte Microsoft sur le malware destructeur GigaWiper</strong> : Microsoft Threat Intelligence suit depuis octobre 2025 ce programme qui simule un vol de données ou un ransomware avant d'effacer intégralement le disque de la victime, sans possibilité de récupération ni rançon exigée. <a href="https://siecledigital.fr/2026/07/14/microsoft-alerte-sur-un-programme-capable-despionner-puis-deffacer-totalement-votre-pc/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Opération First Light 2026 : 5 800 arrestations en ligne</strong> : Une opération policière coordonnée dans 97 pays a conduit à 5 811 interpellations et permis d'identifier 142 000 victimes potentielles d'arnaques en ligne, sur une période de trois mois et demi. <a href="https://siecledigital.fr/2026/07/14/arnaques-en-ligne-une-operation-geante-dans-97-pays-mene-a-plus-de-5-800-arrestations/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Vers un "permis numérique" pour les mineurs en Europe</strong> : Un rapport remis à la Commission européenne recommande d'interdire l'accès des moins de 13 ans aux réseaux sociaux et aux assistants IA comme ChatGPT, instaurant un contrôle parental renforcé à l'échelle du continent. <a href="https://siecledigital.fr/2026/07/14/leurope-veut-instaurer-un-permis-numerique-pour-les-mineurs-sur-les-reseaux-sociaux/">Siècle Digital</a></li>
+<li><strong>Bascule du marché vers les modèles ouverts</strong> : Le CEO de Hugging Face constate que les entreprises privilégient désormais les modèles ouverts pour des raisons de coût, d'accessibilité et de contrôle, remettant en question la pertinence de la course aux modèles frontière pour les usages en production. <a href="https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/">TechCrunch</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260714-1222</guid>
-      <pubDate>Tue, 14 Jul 2026 12:22:42 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260714-1815</guid>
+      <pubDate>Tue, 14 Jul 2026 18:15:44 +0000</pubDate>
     </item>
   </channel>
 </rss>
