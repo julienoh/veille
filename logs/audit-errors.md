@@ -62,3 +62,29 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-10 08:45 UTC | scoring | MultiFair: Multimodal Balanced Fairness-Aware Medical Classi (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-07-10 18:26 UTC | scoring | Six New U-Boot Flaws Could Let Malicious Images Crash Device (The Hacker News) | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 5 column 195 (char 262)) |
 | 2026-07-13 08:55 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2586)) |
+| 2026-07-14 07:28 UTC | scoring | An Autonomous Scientific Knowledge Generation Framework for  (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:32 UTC | scoring | VINE: Taming Generative Control Policies for Reinforcement L (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:37 UTC | scoring | Enhancing LLMs through human feedback: a journey towards sel (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:38 UTC | scoring | PRISM Edit: One Vector for All Temporal Answers (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:38 UTC | scoring | A Glimpse into Long-term Physical Coexistence with Intellige (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:38 UTC | scoring | Agentic Routing: The Harness-Native Data Flywheel (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:39 UTC | scoring | Agentic Skill Optimization over Lie Algebroids (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:39 UTC | scoring | CDFM: Towards a General-Purpose Causal Discovery Foundation  (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:40 UTC | scoring | Agent Hacks Agent: Autoresearch for Production-Agent Red-Tea (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:42 UTC | scoring | Trojan Horse Prompting: Jailbreaking Conversational Multimod (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:45 UTC | scoring | Emotion Recognition in Signers (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:47 UTC | scoring | How Annotation Trains Annotators: Competence Development in  (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 07:50 UTC | scoring | What Context Does a Coding Agent Actually Need to Act? (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:00 UTC | scoring | HyperSafe: Inference-Time Safety Recovery for Fine-Tuned Lan (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:00 UTC | scoring | CDFM: Towards a General-Purpose Causal Discovery Foundation  (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:00 UTC | scoring | Advancing Optimal Subset Oracle via Learning Relaxation of N (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:03 UTC | scoring | Transfer Learning Across Policy Regimes in Adaptive Multi-Ag (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:03 UTC | scoring | Interpreting Latent CoT Reasoning as Dynamical Systems (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:04 UTC | scoring | Unified Backbone Refinement for Diffusion Models via Interna (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:04 UTC | scoring | Knowledge-Constrained Shape Optimization with a Mixture-of-E (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:04 UTC | scoring | A Risk-Field Enhanced Closed-Loop Digital Twin Framework for (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:05 UTC | scoring | Inverse-IMPRESSION: A Graph-based Platform for Molecular Str (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:07 UTC | scoring | One mechanism for many mental spaces: a shared router over a (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:07 UTC | scoring | Gradient-Skipping Relevance Propagation for Efficient Explai (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:07 UTC | scoring | TVT-PAPD: Pathology-Aware Prototype Distillation for Self-Su (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-07-14 08:26 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 62 column 6 (char 2374)) |

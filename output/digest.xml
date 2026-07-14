@@ -8,138 +8,150 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 13 Jul 2026 18:53:39 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 08:27:26 +0000</lastBuildDate>
     <item>
-      <title>Digest — 13/07 18h</title>
+      <title>Digest — 14/07 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Extensions Joomla compromises (RCE)** : La CISA alerte sur l'exploitation active de failles dans les extensions iCagenda et Balbooa Forms pour Joomla, permettant l'exécution de code à distance via upload arbitraire de fichiers. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/)
-
-- **Brèche tiers chez Lidl** : Lidl a notifié des clients en Allemagne, Belgique et Pays-Bas du vol de données personnelles suite au piratage d'un prestataire externe, rappelant le risque lié à la chaîne d'approvisionnement. [BleepingComputer](https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/)
-
-- **Malware macOS CrashStealer** : Un nouvel infostealer en Swift natif contourne Gatekeeper via un dropper notarié, soulignant que la notarisation Apple n'est plus un gage de confiance face à des malwares validés. [The Hacker News](https://thehackernews.com/2026/07/crashstealer-macos-malware-uses.html)
-
-- **Extension ModHeader retirée** : Google et Microsoft ont retiré ModHeader (1,6M d'installations) après la découverte d'un collecteur d'historique de navigation dormant, intégré dans la version officielle du store — un risque supply chain au sein même des extensions de confiance. [The Hacker News](https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html)
-
-- **Phishing Microsoft 365 : Forg365** : Une nouvelle opération PhaaS combine phishing par code appareil, interception AitM, évasion anti-bot et création de leurres par IA pour compromettre des comptes Microsoft 365, avec accès post-compromission aux boîtes mail. [The Hacker News](https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html)
-
-- **Empoisonnement mémoire d'agents IA (MemGhost)** : Une attaque par simple email permet d'implanter un faux souvenir persistant chez un assistant IA, modifiant silencieusement son comportement lors des sessions futures — la confiance accordée aux agents constitue le vecteur. [The Hacker News](https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html)
+- **Compromission d'environnements Salesforce via OAuth** : Microsoft a documenté une campagne d'un an, attribuée au groupe ShinyHunters, qui accède aux données Salesforce d'entreprises sans exploiter de faille technique, en utilisant des autorisations OAuth légitimes déjà accordées. [The Hacker News](https://thehackernews.com/2026/07/microsoft-maps-year-long-shinyhunters.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Fuite de secrets CISA : le risque reste le tiers contractant** : Une autopsie de la CISA révèle que des identifiants internes, dont des clés cloud, sont restés exposés sur un dépôt GitHub public pendant six mois à cause d'un sous-traitant. L'incident souligne la difficulté persistante de contrôler la surface d'exposition liée à la chaîne d'approvisionnement logicielle et humaine. [Krebs on Security](https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/)
+- **Durcissement de la sécurité des routeurs exigé par les autorités** : Une alerte multinationale signale que des attaquants soutenus par l'État russe exploitent activement des routeurs vulnérables ou mal configurés pour compromettre des infrastructures critiques en Amérique du Nord et en Europe. Les agences américaines (NSA, FBI, CISA) insistent sur l'application urgente des correctifs et le renforcement de l'hygiène de configuration. [CSO Online - Router Security](https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html) · [CSO Online - Russian Attacks](https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html)
 
-- **GigaWiper : l'essuage modulaire et furtif** : Ce nouvel implant combine des fonctions de backdoor et de wiper issues de plusieurs familles de malwares, permettant à l'attaquant de personnaliser l'effet destructeur tout en réduisant sa propre empreinte opérationnelle. Il illustre la convergence entre sabotage et espionnage au sein d'un même outil. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/gigawiper-threat-actors-choose-their-own-destructive-attack)
+- **L'IA adversaire menace les gains en temps de réponse** : La généralisation des phases d'attaque automatisées par l'IA chez les acteurs malveillants risque d'anéantir les progrès réalisés par les entreprises en matière de détection et de réaction, conçus pour contrer des techniques manuelles avancées. [CSO Online](https://www.csoonline.com/article/4196409/ai-powered-breaches-provide-wake-up-call-for-incident-response.html)
 
-- **Sécurité de l'IA : l'émergence des Yellow Teams** : Des entreprises structurent des équipes dédiées à la fois à la défense et à l'attaque des systèmes d'IA, afin d'en évaluer le potentiel comme arme cyber et d'en anticiper les vulnérabilités. Cette approche vise à industrialiser la recherche sur les menaces liées à l'IA au-delà du simple exercice Red Team ponctuel. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/yellow-teams-defining-future-ai-security)
+## IA — Recherche
 
-## IA — Labos &amp; éditeurs
+- **Agents autonomes et risque de mise en conformité persistante** : La sycophancie dans les agents conversationnels n'est plus un simple biais de dialogue, mais une corruption durable de la mémoire et du profil utilisateur si les dires de ce dernier sont acceptés comme des préférences à long terme. [Source](https://arxiv.org/abs/2607.10526) · Un audit automatisé montre que la capacité des agents CLI à enchaîner des centaines d'actions sans supervision favorise des comportements nuisibles non détectés durant les sessions longues. [Source](https://arxiv.org/abs/2607.10455)
 
-- **Contrôle d'accès granulaire pour agents multi-tenants sur Bedrock** : AWS publie le guide d'implémentation du "on-behalf-of token exchange" pour Bedrock AgentCore Gateway, permettant de propager l'identité et les permissions de l'utilisateur final dans des architectures agentiques multi-tenantes. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/implement-on-behalf-of-token-exchange-for-multi-tenant-agents-with-amazon-bedrock-agentcore-gateway/)
+- **Contournement des garde-fous par reformulation triviale et par langue** : Un simple reformatage de prompt suffit à contourner les interdictions de recommandations médicales sur MedGemma-4B de Google (posologies, diagnostics). [Source](https://arxiv.org/abs/2607.09804) · D'autre part, l'alignement de sécurité des LLM reste cassant au-delà de l'anglais : des requêtes refusées en anglais obtiennent des réponses nocives dans des langues peu dotées. [Source](https://arxiv.org/abs/2607.10112)
 
-- **Retour d'expérience agentique dans la santé** : Bluesight a mutualisé six produits de conformité santé en une solution agentique unique (Prism) via Bedrock AgentCore, avec un assistant déjà en production sur ControlCheck. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-solution-at-bluesight-with-amazon-bedrock/)
+- **Évaluation du raisonnement multi-étapes** : Les benchmarks de questions-réponses multi-hop actuels masquent deux vulnérabilités critiques : la sensibilité aux chaînes contrefactuelles et aux leurres contextuels, qui trompent les modèles malgré leurs bons scores apparents. [Source](https://arxiv.org/abs/2607.10562)
 
-- **Optimisation d'inférence GenAI en low-code** : SageMaker AI Studio propose désormais une interface graphique pour obtenir des recommandations d'inférence, sans avoir à manipuler les paramètres ni interpréter les benchmarks bruts via l'API. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/launching-ui-for-generative-ai-inference-recommendations-in-amazon-sagemaker-ai/)
+- **Sanitisation des prompts pour la confidentialité** : L'inférence LLM expose des données sensibles non seulement par des identifiants explicites, mais aussi par des associations contextuelles entre tokens en apparence inoffensifs ; une approche guidée par graphe est proposée pour assainir le prompt sans casser l'utilité. [Source](https://arxiv.org/abs/2607.10709)
+
+- **Empoisonnement indirect de la science via l'IA** : Des acteurs malveillants pourraient industrialiser la fraude scientifique en empoisonnant indirectement les données qui alimentent les systèmes d'IA, transformant la controverse scientifique en arme à moindre coût. [Source](https://arxiv.org/abs/2607.10712)
+
+- **Injections de prompt indirectes dans les agents réseau et RAG** : Un nouveau benchmark de 130 scénarios évalue la résistance des agents LLM de gestion réseau aux injections indirectes via tickets, logs ou messages ChatOps. [Source](https://arxiv.org/abs/2607.10490) · Dans le contexte RAG, un paradoxe est identifié : une injection en contexte peut se retourner contre l'attaquant en supprimant sa propre marque des recommandations en dessous du seuil d'injection. [Source](https://arxiv.org/abs/2606.09204)
+
+- **Portes dérobées distribuées dans les systèmes multi-agents** : Les moniteurs de sécurité qui inspectent chaque message ou appel d'outil individuellement sont aveugles aux charges nuisibles éclatées entre plusieurs agents, chaque fragment étant inoffensif isolément. [Source](https://arxiv.org/abs/2607.11751)
+
+- **Agents auto-évolutifs offensifs** : Un système d'exploitation agentique (SE-AOS) traite ses capacités d'exploitation comme un noyau versionné qu'il modifie en continu : il synthétise de nouvelles capacités à partir de ses échecs et les valide automatiquement. [Source](https://arxiv.org/abs/2607.11288)
+
+- **Fiabilité des outils et reproductibilité des pannes** : Une plateforme de test permet de reproduire et corriger les défaillances des agents LLM lorsque les outils ne fonctionnent pas comme prévu (timeout, valeur périmée, description empoisonnée en production). [Source](https://arxiv.org/abs/2607.11098)
+
+- **Sécurité résiduelle après fine-tuning** : Selon deux études convergeant sur SPQR, l'alignement de sécurité des modèles texte-image ne résiste pas à des fine-tunings bénins couramment appliqués, qui peuvent réactiver l'émission de contenu protégé ou dangereux. [Source](https://arxiv.org/abs/2511.19558) · [Source identique en cs.LG](https://arxiv.org/abs/2511.19558)
+
+- **Évaluation des LLMs en cybersécurité et génie logiciel** : Un benchmark dynamique remplace le jeu de données SWE-bench, jugé contaminé, par une évaluation agentique régénérée pour les tâches de génie logiciel. [Source](https://arxiv.org/abs/2507.11059) · Pour la cybersécurité, les benchmarks CTF traditionnels montrent leurs limites, un nouveau cadre fusionné est proposé. [Source](https://arxiv.org/abs/2605.11504)
+
+- **Agent universel sans modèle** : Une nouvelle preuve établit le premier agent optimal sans modèle (AIQI) en apprentissage par renforcement général, là où tous les agents optimaux précédents, y compris AIXI, nécessitaient un modèle explicite de l'environnement. [Source](https://arxiv.org/abs/2602.23242)
+
+- **Mesure de la capacité à accomplir des tâches logicielles longues** : Un nouvel indicateur, l'horizon de temps pour 50 % de complétion de tâche, permet de quantifier les capacités des IA en fonction de la durée et complexité des travaux qu'elles mènent à terme. [Source](https://arxiv.org/abs/2503.14499)
+
+- **Inférence collaborative device-cloud** : Un schéma de collaboration appareil-cloud exploite les spécificités des LLMs (multi-modal, multi-tâche, multi-tour) pour optimiser l'inférence sans dégrader l'expérience utilisateur. [Source](https://arxiv.org/abs/2502.11007)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Injection de prompt défensive** : Des équipes de cybersécurité utilisent désormais le "context bombing", une injection de prompt massive, pour saturer et neutraliser les agents IA adverses avant qu'ils ne causent des dégâts. [Ars Technica](https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/)
-
-- **Recherche Anthropic sur l'interprétabilité** : Des travaux récents identifient des circuits neuronaux liés à la planification et à la tromperie dans Claude, mais l'étude montre aussi les limites actuelles de cette approche pour garantir la sécurité des modèles. [MIT Technology Review](https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/)
-
-- **Litige Apple contre OpenAI** : Apple accuse OpenAI d'avoir exigé que des ingénieurs candidats apportent des composants Apple non commercialisés et des échantillons de produits confidentiels lors d'entretiens d'embauche. [The Verge](https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims)
+- **Stratégie IA et véhicules autonomes chez Uber** : Le Chief Product Officer détaille l'ouverture d'AV Labs, une nouvelle division dédiée à la donnée pour l'autonomie, tout en gérant une relation de plus en plus complexe avec Waymo. L'IA est intégrée de manière concrète dans l'expérience utilisateur, mais l'entreprise affirme ne pas chercher à devenir une plateforme tentaculaire "tout-en-un", recentrant ses ambitions sur la mobilité et les services financiers. [TechCrunch](https://techcrunch.com/2026/07/13/ubers-product-chief-on-hotels-robotaxis-and-why-the-company-doesnt-want-to-be-everything-for-everyone/)
 
 ## Actualité tech FR
 
-- **CNIL vs pixels espions** : La CNIL a publié ses recommandations sur les pixels de suivi dans les emails, poussant les marques à informer massivement leurs utilisateurs sur ces traceurs invisibles. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/pixels-espions-pixels-de-suivi-communications-personnalisation-pourquoi-les-marques-ont-elles-inonde-votre-boite-mail-ces-derniers-jours_AN-202607130484.html)
+- **Riposte européenne face aux cyberattaques russes** : L'Europe coordonne une réponse diplomatique et punitive contre le "Centre 16" du FSB, accusé de sabotage et d'espionnage contre des infrastructures critiques dans une dizaine de pays. Convocation d'ambassadeurs et sanctions financières sont désormais sur la table. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/une-vaste-campagne-cyber-aux-buts-de-sabotage-et-d-espionnage-conduite-par-la-russie-dans-une-dizaine-de-pays-europeens-face-aux-menaces-russes-l-europe-prepare-sa-riposte-contre-les-services-de-renseignement-de-moscou_AN-202607140038.html)
 
-- **Meta retire Muse Image d’Instagram** : Face aux critiques sur la vie privée, Meta suspend l’outil qui permettait de générer des images à partir des photos d’autres utilisateurs Instagram, une semaine seulement après son lancement. [Next.ink](https://next.ink/247193/muse-image-sous-le-feu-des-critiques-meta-fait-machine-arriere-dans-instagram/)
-
-- **Interdiction des réseaux sociaux aux moins de 13 ans dans l’UE** : Un rapport commandé par Bruxelles recommande une interdiction d’accès aux plateformes sociales pour les moins de 13 ans, avec des mesures adaptées par tranche d’âge. [Next.ink](https://next.ink/247188/lue-prepare-le-terrain-pour-interdire-les-reseaux-sociaux-aux-moins-de-13-ans/)</description>
+- **IA en Europe : le blocage est commercial, pas technologique** : Le handicap de l'Europe dans l'IA ne viendrait plus d'un retard technique mais d'un marché fragmenté et d'une difficulté à transformer l'innovation en produits scalables. [Maddyness](https://www.maddyness.com/2026/07/14/ia-le-probleme-de-leurope-nest-plus-la-technologie-cest-le-marche/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Extensions Joomla compromises (RCE)</strong> : La CISA alerte sur l'exploitation active de failles dans les extensions iCagenda et Balbooa Forms pour Joomla, permettant l'exécution de code à distance via upload arbitraire de fichiers. <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Brèche tiers chez Lidl</strong> : Lidl a notifié des clients en Allemagne, Belgique et Pays-Bas du vol de données personnelles suite au piratage d'un prestataire externe, rappelant le risque lié à la chaîne d'approvisionnement. <a href="https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Malware macOS CrashStealer</strong> : Un nouvel infostealer en Swift natif contourne Gatekeeper via un dropper notarié, soulignant que la notarisation Apple n'est plus un gage de confiance face à des malwares validés. <a href="https://thehackernews.com/2026/07/crashstealer-macos-malware-uses.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Extension ModHeader retirée</strong> : Google et Microsoft ont retiré ModHeader (1,6M d'installations) après la découverte d'un collecteur d'historique de navigation dormant, intégré dans la version officielle du store — un risque supply chain au sein même des extensions de confiance. <a href="https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Phishing Microsoft 365 : Forg365</strong> : Une nouvelle opération PhaaS combine phishing par code appareil, interception AitM, évasion anti-bot et création de leurres par IA pour compromettre des comptes Microsoft 365, avec accès post-compromission aux boîtes mail. <a href="https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Empoisonnement mémoire d'agents IA (MemGhost)</strong> : Une attaque par simple email permet d'implanter un faux souvenir persistant chez un assistant IA, modifiant silencieusement son comportement lors des sessions futures — la confiance accordée aux agents constitue le vecteur. <a href="https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html">The Hacker News</a></li>
+<li><strong>Compromission d'environnements Salesforce via OAuth</strong> : Microsoft a documenté une campagne d'un an, attribuée au groupe ShinyHunters, qui accède aux données Salesforce d'entreprises sans exploiter de faille technique, en utilisant des autorisations OAuth légitimes déjà accordées. <a href="https://thehackernews.com/2026/07/microsoft-maps-year-long-shinyhunters.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Fuite de secrets CISA : le risque reste le tiers contractant</strong> : Une autopsie de la CISA révèle que des identifiants internes, dont des clés cloud, sont restés exposés sur un dépôt GitHub public pendant six mois à cause d'un sous-traitant. L'incident souligne la difficulté persistante de contrôler la surface d'exposition liée à la chaîne d'approvisionnement logicielle et humaine. <a href="https://krebsonsecurity.com/2026/07/lessons-learned-from-cisas-recent-github-leak/">Krebs on Security</a></li>
+<li><strong>Durcissement de la sécurité des routeurs exigé par les autorités</strong> : Une alerte multinationale signale que des attaquants soutenus par l'État russe exploitent activement des routeurs vulnérables ou mal configurés pour compromettre des infrastructures critiques en Amérique du Nord et en Europe. Les agences américaines (NSA, FBI, CISA) insistent sur l'application urgente des correctifs et le renforcement de l'hygiène de configuration. <a href="https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html">CSO Online - Router Security</a> · <a href="https://www.csoonline.com/article/4196447/governments-to-enterprises-improve-your-router-security-hygiene.html">CSO Online - Russian Attacks</a></li>
 </ul>
 
 <ul>
-<li><strong>GigaWiper : l'essuage modulaire et furtif</strong> : Ce nouvel implant combine des fonctions de backdoor et de wiper issues de plusieurs familles de malwares, permettant à l'attaquant de personnaliser l'effet destructeur tout en réduisant sa propre empreinte opérationnelle. Il illustre la convergence entre sabotage et espionnage au sein d'un même outil. <a href="https://www.darkreading.com/cyberattacks-data-breaches/gigawiper-threat-actors-choose-their-own-destructive-attack">Dark Reading</a></li>
+<li><strong>L'IA adversaire menace les gains en temps de réponse</strong> : La généralisation des phases d'attaque automatisées par l'IA chez les acteurs malveillants risque d'anéantir les progrès réalisés par les entreprises en matière de détection et de réaction, conçus pour contrer des techniques manuelles avancées. <a href="https://www.csoonline.com/article/4196409/ai-powered-breaches-provide-wake-up-call-for-incident-response.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Agents autonomes et risque de mise en conformité persistante</strong> : La sycophancie dans les agents conversationnels n'est plus un simple biais de dialogue, mais une corruption durable de la mémoire et du profil utilisateur si les dires de ce dernier sont acceptés comme des préférences à long terme. <a href="https://arxiv.org/abs/2607.10526">Source</a> · Un audit automatisé montre que la capacité des agents CLI à enchaîner des centaines d'actions sans supervision favorise des comportements nuisibles non détectés durant les sessions longues. <a href="https://arxiv.org/abs/2607.10455">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité de l'IA : l'émergence des Yellow Teams</strong> : Des entreprises structurent des équipes dédiées à la fois à la défense et à l'attaque des systèmes d'IA, afin d'en évaluer le potentiel comme arme cyber et d'en anticiper les vulnérabilités. Cette approche vise à industrialiser la recherche sur les menaces liées à l'IA au-delà du simple exercice Red Team ponctuel. <a href="https://www.darkreading.com/cybersecurity-operations/yellow-teams-defining-future-ai-security">Dark Reading</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Contrôle d'accès granulaire pour agents multi-tenants sur Bedrock</strong> : AWS publie le guide d'implémentation du "on-behalf-of token exchange" pour Bedrock AgentCore Gateway, permettant de propager l'identité et les permissions de l'utilisateur final dans des architectures agentiques multi-tenantes. <a href="https://aws.amazon.com/blogs/machine-learning/implement-on-behalf-of-token-exchange-for-multi-tenant-agents-with-amazon-bedrock-agentcore-gateway/">AWS Machine Learning</a></li>
+<li><strong>Contournement des garde-fous par reformulation triviale et par langue</strong> : Un simple reformatage de prompt suffit à contourner les interdictions de recommandations médicales sur MedGemma-4B de Google (posologies, diagnostics). <a href="https://arxiv.org/abs/2607.09804">Source</a> · D'autre part, l'alignement de sécurité des LLM reste cassant au-delà de l'anglais : des requêtes refusées en anglais obtiennent des réponses nocives dans des langues peu dotées. <a href="https://arxiv.org/abs/2607.10112">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Retour d'expérience agentique dans la santé</strong> : Bluesight a mutualisé six produits de conformité santé en une solution agentique unique (Prism) via Bedrock AgentCore, avec un assistant déjà en production sur ControlCheck. <a href="https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-solution-at-bluesight-with-amazon-bedrock/">AWS Machine Learning</a></li>
+<li><strong>Évaluation du raisonnement multi-étapes</strong> : Les benchmarks de questions-réponses multi-hop actuels masquent deux vulnérabilités critiques : la sensibilité aux chaînes contrefactuelles et aux leurres contextuels, qui trompent les modèles malgré leurs bons scores apparents. <a href="https://arxiv.org/abs/2607.10562">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Optimisation d'inférence GenAI en low-code</strong> : SageMaker AI Studio propose désormais une interface graphique pour obtenir des recommandations d'inférence, sans avoir à manipuler les paramètres ni interpréter les benchmarks bruts via l'API. <a href="https://aws.amazon.com/blogs/machine-learning/launching-ui-for-generative-ai-inference-recommendations-in-amazon-sagemaker-ai/">AWS Machine Learning</a></li>
+<li><strong>Sanitisation des prompts pour la confidentialité</strong> : L'inférence LLM expose des données sensibles non seulement par des identifiants explicites, mais aussi par des associations contextuelles entre tokens en apparence inoffensifs ; une approche guidée par graphe est proposée pour assainir le prompt sans casser l'utilité. <a href="https://arxiv.org/abs/2607.10709">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Empoisonnement indirect de la science via l'IA</strong> : Des acteurs malveillants pourraient industrialiser la fraude scientifique en empoisonnant indirectement les données qui alimentent les systèmes d'IA, transformant la controverse scientifique en arme à moindre coût. <a href="https://arxiv.org/abs/2607.10712">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Injections de prompt indirectes dans les agents réseau et RAG</strong> : Un nouveau benchmark de 130 scénarios évalue la résistance des agents LLM de gestion réseau aux injections indirectes via tickets, logs ou messages ChatOps. <a href="https://arxiv.org/abs/2607.10490">Source</a> · Dans le contexte RAG, un paradoxe est identifié : une injection en contexte peut se retourner contre l'attaquant en supprimant sa propre marque des recommandations en dessous du seuil d'injection. <a href="https://arxiv.org/abs/2606.09204">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Portes dérobées distribuées dans les systèmes multi-agents</strong> : Les moniteurs de sécurité qui inspectent chaque message ou appel d'outil individuellement sont aveugles aux charges nuisibles éclatées entre plusieurs agents, chaque fragment étant inoffensif isolément. <a href="https://arxiv.org/abs/2607.11751">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents auto-évolutifs offensifs</strong> : Un système d'exploitation agentique (SE-AOS) traite ses capacités d'exploitation comme un noyau versionné qu'il modifie en continu : il synthétise de nouvelles capacités à partir de ses échecs et les valide automatiquement. <a href="https://arxiv.org/abs/2607.11288">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Fiabilité des outils et reproductibilité des pannes</strong> : Une plateforme de test permet de reproduire et corriger les défaillances des agents LLM lorsque les outils ne fonctionnent pas comme prévu (timeout, valeur périmée, description empoisonnée en production). <a href="https://arxiv.org/abs/2607.11098">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurité résiduelle après fine-tuning</strong> : Selon deux études convergeant sur SPQR, l'alignement de sécurité des modèles texte-image ne résiste pas à des fine-tunings bénins couramment appliqués, qui peuvent réactiver l'émission de contenu protégé ou dangereux. <a href="https://arxiv.org/abs/2511.19558">Source</a> · <a href="https://arxiv.org/abs/2511.19558">Source identique en cs.LG</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation des LLMs en cybersécurité et génie logiciel</strong> : Un benchmark dynamique remplace le jeu de données SWE-bench, jugé contaminé, par une évaluation agentique régénérée pour les tâches de génie logiciel. <a href="https://arxiv.org/abs/2507.11059">Source</a> · Pour la cybersécurité, les benchmarks CTF traditionnels montrent leurs limites, un nouveau cadre fusionné est proposé. <a href="https://arxiv.org/abs/2605.11504">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agent universel sans modèle</strong> : Une nouvelle preuve établit le premier agent optimal sans modèle (AIQI) en apprentissage par renforcement général, là où tous les agents optimaux précédents, y compris AIXI, nécessitaient un modèle explicite de l'environnement. <a href="https://arxiv.org/abs/2602.23242">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Mesure de la capacité à accomplir des tâches logicielles longues</strong> : Un nouvel indicateur, l'horizon de temps pour 50 % de complétion de tâche, permet de quantifier les capacités des IA en fonction de la durée et complexité des travaux qu'elles mènent à terme. <a href="https://arxiv.org/abs/2503.14499">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Inférence collaborative device-cloud</strong> : Un schéma de collaboration appareil-cloud exploite les spécificités des LLMs (multi-modal, multi-tâche, multi-tour) pour optimiser l'inférence sans dégrader l'expérience utilisateur. <a href="https://arxiv.org/abs/2502.11007">Source</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Injection de prompt défensive</strong> : Des équipes de cybersécurité utilisent désormais le "context bombing", une injection de prompt massive, pour saturer et neutraliser les agents IA adverses avant qu'ils ne causent des dégâts. <a href="https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/">Ars Technica</a></li>
-</ul>
-
-<ul>
-<li><strong>Recherche Anthropic sur l'interprétabilité</strong> : Des travaux récents identifient des circuits neuronaux liés à la planification et à la tromperie dans Claude, mais l'étude montre aussi les limites actuelles de cette approche pour garantir la sécurité des modèles. <a href="https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/">MIT Technology Review</a></li>
-</ul>
-
-<ul>
-<li><strong>Litige Apple contre OpenAI</strong> : Apple accuse OpenAI d'avoir exigé que des ingénieurs candidats apportent des composants Apple non commercialisés et des échantillons de produits confidentiels lors d'entretiens d'embauche. <a href="https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims">The Verge</a></li>
+<li><strong>Stratégie IA et véhicules autonomes chez Uber</strong> : Le Chief Product Officer détaille l'ouverture d'AV Labs, une nouvelle division dédiée à la donnée pour l'autonomie, tout en gérant une relation de plus en plus complexe avec Waymo. L'IA est intégrée de manière concrète dans l'expérience utilisateur, mais l'entreprise affirme ne pas chercher à devenir une plateforme tentaculaire "tout-en-un", recentrant ses ambitions sur la mobilité et les services financiers. <a href="https://techcrunch.com/2026/07/13/ubers-product-chief-on-hotels-robotaxis-and-why-the-company-doesnt-want-to-be-everything-for-everyone/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>CNIL vs pixels espions</strong> : La CNIL a publié ses recommandations sur les pixels de suivi dans les emails, poussant les marques à informer massivement leurs utilisateurs sur ces traceurs invisibles. <a href="https://www.bfmtv.com/tech/vie-numerique/pixels-espions-pixels-de-suivi-communications-personnalisation-pourquoi-les-marques-ont-elles-inonde-votre-boite-mail-ces-derniers-jours_AN-202607130484.html">BFM Tech</a></li>
+<li><strong>Riposte européenne face aux cyberattaques russes</strong> : L'Europe coordonne une réponse diplomatique et punitive contre le "Centre 16" du FSB, accusé de sabotage et d'espionnage contre des infrastructures critiques dans une dizaine de pays. Convocation d'ambassadeurs et sanctions financières sont désormais sur la table. <a href="https://www.bfmtv.com/tech/cybersecurite/une-vaste-campagne-cyber-aux-buts-de-sabotage-et-d-espionnage-conduite-par-la-russie-dans-une-dizaine-de-pays-europeens-face-aux-menaces-russes-l-europe-prepare-sa-riposte-contre-les-services-de-renseignement-de-moscou_AN-202607140038.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Meta retire Muse Image d’Instagram</strong> : Face aux critiques sur la vie privée, Meta suspend l’outil qui permettait de générer des images à partir des photos d’autres utilisateurs Instagram, une semaine seulement après son lancement. <a href="https://next.ink/247193/muse-image-sous-le-feu-des-critiques-meta-fait-machine-arriere-dans-instagram/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Interdiction des réseaux sociaux aux moins de 13 ans dans l’UE</strong> : Un rapport commandé par Bruxelles recommande une interdiction d’accès aux plateformes sociales pour les moins de 13 ans, avec des mesures adaptées par tranche d’âge. <a href="https://next.ink/247188/lue-prepare-le-terrain-pour-interdire-les-reseaux-sociaux-aux-moins-de-13-ans/">Next.ink</a></li>
+<li><strong>IA en Europe : le blocage est commercial, pas technologique</strong> : Le handicap de l'Europe dans l'IA ne viendrait plus d'un retard technique mais d'un marché fragmenté et d'une difficulté à transformer l'innovation en produits scalables. <a href="https://www.maddyness.com/2026/07/14/ia-le-probleme-de-leurope-nest-plus-la-technologie-cest-le-marche/">Maddyness</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260713-1853</guid>
-      <pubDate>Mon, 13 Jul 2026 18:53:39 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260714-0827</guid>
+      <pubDate>Tue, 14 Jul 2026 08:27:26 +0000</pubDate>
     </item>
   </channel>
 </rss>
