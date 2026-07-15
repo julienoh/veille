@@ -8,180 +8,152 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 14 Jul 2026 18:15:44 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 07:41:40 +0000</lastBuildDate>
     <item>
-      <title>Digest — 14/07 18h</title>
+      <title>Digest — 15/07 07h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Patch Tuesday record : 570 failles Microsoft, 3 zero-days** : Le correctif mensuel de juillet 2026 corrige un volume record de 570 vulnérabilités, dont deux déjà exploitées activement et une divulguée publiquement. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/)
+- **SonicWall SMA 1000 : deux zero-days exploitées activement** : SonicWall confirme l'exploitation en conditions réelles de deux failles zero-day sur les appliances SMA 1000. La plus critique (CVE-2026-15409, CVSS 10.0) permet l'exécution de commandes à distance avec les privilèges administrateur. Un correctif est à appliquer immédiatement. [The Hacker News](https://thehackernews.com/2026/07/two-sonicwall-sma-1000-zero-days.html)
 
-- **ShareFile : zero-day confirmé, correctif disponible** : Progress Software confirme qu'une faille zero-day de sévérité élevée a motivé l'arrêt d'urgence des Storage Zone Controllers la semaine dernière ; un correctif est publié. [BleepingComputer](https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/)
-
-- **RabbitMQ : fuite de secrets OAuth et contournement de tenants** : Deux failles de contrôle d'accès dans le courtier de messages RabbitMQ permettent de dérober des secrets OAuth et de franchir les frontières entre tenants. [The Hacker News](https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html)
-
-- **OAuth Client ID Spoofing ciblant Microsoft Entra ID** : Au moins deux acteurs malveillants exploitent une technique d'usurpation d'ID client OAuth pour valider des comptes et tester des identifiants volés dans des environnements Entra ID sans générer d'événement de connexion. [The Hacker News](https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html)
-
-- **Phishing MFA-bypass ciblant Microsoft 365** : Deux nouveaux kits de phishing (Jalisco et OmegaLord) intègrent des techniques de contournement d'authentification multifacteur pour compromettre des comptes Microsoft 365. [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-phishing-kits-target-microsoft-365-accounts-evade-mfa/)
-
-- **Campagne de phishing ciblant les utilisateurs de gestionnaires de mots de passe** : LastPass et Bitwarden font l'objet d'une campagne active utilisant de fausses alertes de sécurité pour rediriger les victimes vers des sites frauduleux. [BleepingComputer](https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/)
-
-- **Secure Boot contourné via 11 shims UEFI Linux signés Microsoft** : Onze anciennes applications UEFI signées par Microsoft peuvent être détournées pour exécuter du code non fiable avant le démarrage du système, contournant ainsi le Secure Boot. [The Hacker News](https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html)
-
-- **LabubaRAT : un RAT Rust se fait passer pour un logiciel NVIDIA** : Un trojan d'accès à distance inédit, développé en Rust, usurpe l'identité de logiciels NVIDIA pour établir une persistance discrète sur les postes Windows. [The Hacker News](https://thehackernews.com/2026/07/labubarat-masquerades-as-nvidia.html)
-
-- **Espionnage russe via caméras connectées en Europe** : Les services néerlandais rapportent qu'une agence russe compromet des caméras IP à travers l'Europe pour surveiller la logistique de l'OTAN et les troupes ukrainiennes. [The Record](https://therecord.media/russian-intelligence-compromising-cameras-nato-ukraine-netherlands)
-
-- **Extensions de wallets crypto : fuites d'adresses et pistage inter-sites** : Une étude sur 85 extensions de navigateur révèle que la plupart communiquent avec les sites et les nœuds blockchain d'une manière qui permet de lier les adresses d'un même utilisateur et de le pister. [The Hacker News](https://thehackernews.com/2026/07/study-of-85-crypto-wallet-extensions.html)
-
-- **Microsoft Entra ID : les passkeys deviendront l'authentification par défaut en septembre 2026** : Ce changement réduira la surface d'exposition au phishing par vol de mot de passe pour les environnements d'entreprise utilisant Entra ID. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-entra-id-gets-passkeys-default-authentication-starting-september/)
-
-- **Validation de l'exploitabilité sans exécution de code malveillant** : Picus détaille une méthode de chaînage TTP permettant de déterminer si une vulnérabilité est exploitable dans un environnement donné sans lancer d'exploit, utile pour les systèmes critiques. [BleepingComputer](https://www.bleepingcomputer.com/news/security/you-dont-have-to-run-an-exploit-to-know-if-youre-vulnerable/)
-
-- **Finlande : notice Interpol pour le pirate de la psychothérapie Vastaamo** : Le suspect de la fuite massive de dossiers de patients est recherché ; son avocat indique qu'il se trouverait hors de Finlande. [The Record](https://therecord.media/finland-issues-wanted-notice-for-hacker-vastaamo-breach)
+- **SANS ISC Stormcast** : Le podcast quotidien du SANS Internet Storm Center est disponible, couvrant l'actualité des menaces et les indicateurs de compromission du jour. [SANS ISC](https://isc.sans.edu/diary/rss/33158)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Vulnérabilité persistante dans Cursor IDE** : La faille signalée en décembre 2024 permettant l'exécution automatique de code malveillant via des dépôts empoisonnés n'est toujours pas corrigée. L'exploitation repose sur l'absence de validation des prompts intégrés dans les projets partagés. [Dark Reading](https://www.darkreading.com/application-security/cursor-ide-malicious-code-poisoned-repos)
+- **Microsoft : record de correctifs et pression sur l'authentification** : Microsoft a publié un volume mensuel record de 569 correctifs (dont 59 critiques), une tendance haussière que l'éditeur attribue lui-même à l'usage de modèles d'IA pour la découverte de vulnérabilités. Parallèlement, l'entreprise va imposer les passkeys comme méthode d'authentification par défaut dans Microsoft Entra ID à partir de septembre, forçant la main aux entreprises encore hésitantes. [CSO Online - correctifs](https://www.csoonline.com/article/4196940/patch-tuesday-roundup-microsoft-fixes-a-monthly-record-569-holes-sap-patches-a-critical-memory-corruption-bug.html) · [CSO Online - passkeys](https://www.csoonline.com/article/4197086/microsoft-is-forcing-an-enterprise-transition-to-passkeys-2.html)
 
-- **Régulation de l'IA frontière** : Plusieurs États américains tentent de légiférer sur la transparence des modèles d'IA avancés, alors que ces systèmes gagnent en autonomie et échappent à la supervision humaine. Le débat porte sur l'encadrement d'une technologie déjà largement déployée. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/frontier-ai-genie-out-of-bottle-where-rulebook)
+- **Compétences des ingénieurs sécurité** : Au-delà de la maîtrise technique, les ingénieurs sécurité les plus performants se distinguent par leur capacité à communiquer avec les métiers, à comprendre l'architecture d'entreprise dans sa globalité et à anticiper les contraintes opérationnelles lors de la conception des systèmes. [CSO Online](https://www.csoonline.com/article/4196428/7-skills-and-traits-of-elite-security-engineers.html)
 
-- **Industrialisation de ClickFix** : La technique d'ingénierie sociale, désormais disponible en location à grande échelle, contourne les antivirus et EDR classiques. La détection repose principalement sur des règles YARA ciblant les scripts et commandes PowerShell caractéristiques. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/clickfixs-ecosystem-demands-new-defense)
+## IA — Recherche
 
-## IA — Labos &amp; éditeurs
+- **Compression de cache KV pour LLMs** : Plusieurs approches émergent pour réduire le coût mémoire du cache clé-valeur en inférence. JoLT combine les décompositions Tucker et Johnson-Lindenstrauss pour atteindre une compression quasi sans perte. Un second article souligne que les benchmarks actuels sont biaisés car ils évaluent la compression en mode "query-aware" (requête incluse dans le contexte) ; en situation réelle de réutilisation d'un cache compressé pour de multiples requêtes, le classement des méthodes change radicalement. [JoLT](https://arxiv.org/abs/2607.12550) · [Audit de ranking](https://arxiv.org/abs/2607.11942)
 
-- **Modèles ouverts et souveraineté** : NVIDIA positionne ses modèles Nemotron comme une réponse aux besoins de contrôle et de personnalisation des entreprises et des États, en mettant l'accent sur la confiance et l'adaptation aux domaines métier. [NVIDIA Blog](https://blogs.nvidia.com/blog/nemotron-open-models-ai-trust-control-customize/)
+- **Exécution spéculative pour agents LLM** : Une méthode permet à un petit modèle de prédire et pré-lancer l'étape suivante d'un agent pendant les temps morts de l'environnement, en conservant une mémoire entre les tâches, contrairement aux approches « stateless » existantes. Cela accélère les agents sans perte de qualité. [Speculate with Memory](https://arxiv.org/abs/2607.12236)
 
-- **Efficacité énergétique des infrastructures IA** : Le ratio performance par watt devient l'indicateur clé de rentabilité des usines à tokens, car il détermine directement le revenu généré dans une enveloppe de puissance fixe. [NVIDIA Blog](https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/)
+- **Attention linéaire et suivi d'état** : L'attention "Semidirect Fourier Delta" introduit un contrôle de phase pour améliorer la mémoire à long terme des modèles à attention linéaire, dont l'état récurrent fixe limite le suivi exact de l'état. [SFDA](https://arxiv.org/abs/2607.11897)
 
-- **Agents pour l'automatisation des tests logiciels** : AWS détaille l'intégration d'agents (Nova Act) dans les pipelines CI/CD pour paralléliser les tests de régression et l'analyse de flux utilisateur à grande échelle. [AWS - QA automation](https://aws.amazon.com/blogs/machine-learning/accelerating-software-delivery-with-agentic-qa-automation-using-amazon-nova-act-part-2/) · [AWS - UX testing](https://aws.amazon.com/blogs/machine-learning/scaling-ux-testing-with-amazon-nova-act-a-new-approach-to-user-flow-analysis/)
+- **Fine-tuning efficient en mémoire** : CARE-LoRA compresse les activations durant le fine-tuning LoRA pour réduire l'empreinte mémoire tout en maintenant la qualité, répondant aux limites des budgets GPU restreints pour les grands modèles. [CARE-LoRA](https://arxiv.org/abs/2607.11940)
 
-- **IA générative en santé** : Flo Health a industrialisé un système de revue de contenu médical sur Amazon Bedrock, tandis que ScienceSoft a déployé un planificateur vocal conforme HIPAA en combinant Amazon Nova Sonic et Bedrock Guardrails. [AWS - Flo Health](https://aws.amazon.com/blogs/machine-learning/scaling-medical-content-review-at-flo-health-with-amazon-bedrock-part-2/) · [AWS - ScienceSoft](https://aws.amazon.com/blogs/machine-learning/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws/)
+- **Fiabilité de l'évaluation en détection d'anomalies** : Après l'abandon du "point-adjustment" qui gonflait artificiellement les scores F1, les métriques de remplacement (PA%K, range-based) sont à leur tour soumises à un stress-test adversarial. L'étude révèle leurs failles résiduelles et propose un benchmark plus robuste pour les séries temporelles. [Stress-test TSAD](https://arxiv.org/abs/2607.11969)
 
-## IA — Produits, agents &amp; dev tooling
+- **Apprentissage par renforcement et shortcuts** : Un instrument "white-box" basé sur des automates cachés permet de déterminer précisément si un agent RL apprend l'état latent réel de sa tâche ou un simple raccourci corrélé à la récompense. La frontière dépend du groupe de symétrie sous-jacent au langage de l'environnement. [Hidden-Automaton](https://arxiv.org/abs/2607.11953)
 
-- **Claude Code vs n8n — choix d'outillage** : La décision repose sur cinq critères pragmatiques : nature déterministe ou non du workflow, besoin d'intégrations externes, fréquence d'exécution, niveau technique de l'utilisateur final et importance de la traçabilité. Les deux outils sont complémentaires et souvent utilisés conjointement. [n8n Blog](https://blog.n8n.io/should-i-use-claude-code-or-n8n/)
+- **Évaluation de l'effondrement neural** : Un protocole audité détecte des "empreintes fonctionnelles" spécifiques à un donneur au-delà de l'effondrement neural (Neural Collapse), en s'affranchissant de la liberté de coordonnées qui empêche la comparaison directe entre réseaux entraînés indépendamment. [Neural Collapse](https://arxiv.org/abs/2607.11967)
 
-## IA &amp; Tech — Médias internationaux
+- **Détection de fuite de données en santé** : Une revue systématique des modèles ML pour la prédiction précoce de la maladie rénale chronique montre que l'instabilité des prédicteurs et les fuites de données invalident une part significative des résultats publiés. [CKD review](https://arxiv.org/abs/2607.11963)
 
-- **Régulation de l'IA frontière** : Le CEO de DeepMind propose un organisme de normalisation indépendant, sur le modèle de la FINRA, pour tester les modèles d'IA frontière avant leur mise sur le marché. [TechCrunch](https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/)
+- **Apprentissage semi-supervisé sans hypothèse distributionnelle** : Une généralisation du "PNU learning" étend l'apprentissage semi-supervisé sans dépendance aux hypothèses de distribution au cas multi-classes, via une réécriture du risque. [Risk Rewrite SSL](https://arxiv.org/abs/2607.11947)
 
-- **Moratoire sur les datacenters dans l'État de New York** : L'État de New York suspend les autorisations de nouveaux grands datacenters, invoquant la pression sur le réseau électrique, les ressources en eau et le contrôle local face à l'explosion de la demande liée à l'IA. [TechCrunch](https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/)
+- **Prévision de pollution aux particules fines** : OmniPMNet fait le pont entre les prévisions ponctuelles (stations) et les champs continus (grilles) pour le PM10, en combinant modèles de transport chimique et réseaux de neurones sur graphe, particulièrement durant les tempêtes de poussière. [OmniPMNet](https://arxiv.org/abs/2607.11896)
 
-- **Budgétisation des tokens IA en entreprise** : Meta anticipe un plafonnement de la consommation de tokens par ingénieur, traitant l'usage des outils d'IA comme une charge d'exploitation au même titre que la masse salariale. [TechCrunch](https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/)
+- **Apprentissage in-context auto-évolutif** : Un framework ICL améliore la conception de beamforming dans les systèmes MU-MISO en intégrant directement les pilotes dans un transformer, avec une capacité d'auto-évolution. [Self-Evolving ICL](https://arxiv.org/abs/2607.11970)
 
-- **Bascule du marché vers les modèles ouverts** : Le CEO de Hugging Face constate que les entreprises privilégient désormais les modèles ouverts pour des raisons de coût, d'accessibilité et de contrôle, remettant en question la pertinence de la course aux modèles frontière pour les usages en production. [TechCrunch](https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/)</description>
+- **Détection de raccourcis en vision industrielle** : Les réseaux de profilométrie par projection de franges apprennent un raccourci basé sur les contours d'objets plutôt que sur la phase des franges. L'article propose une méthode de réparation sur un benchmark synthétique de 15 600 images. [FPP Shortcuts](https://arxiv.org/abs/2607.11928)
+
+- **Théorie de l'information pour la réflexion des systèmes intelligents** : La "Mirror Theory" est rendue opérationnelle via l'entropie de chemin viable (VPE), qui mesure la capacité d'un système à soutenir des continuations cohérentes sous réflexion répétée. [Mirror Horizon](https://arxiv.org/abs/2607.11937)
+
+## Actualité tech FR
+
+- **Patch Tuesday record pour Microsoft** : 570 vulnérabilités corrigées en un seul mois, dont deux déjà exploitées activement. Cette montée en charge fait suite à l'intégration de l'IA dans les processus de révision du code chez l'éditeur. [Next.ink](https://next.ink/brief-article/un-patch-tuesday-record-pour-windows-570-failles-colmatees-dont-deux-deja-exploitees/)
+
+- **Batteries remplaçables : exemption élargie** : La Commission européenne exempte les montres, lunettes connectées et autres petits appareils portables de l'obligation de batterie facilement retirable par l'utilisateur. Le règlement reste applicable aux smartphones et tablettes. [Next.ink](https://next.ink/247246/batterie-remplacable-bruxelles-elargit-lexemption-aux-montres-et-lunettes-connectees/)
+
+- **IA et propriété intellectuelle** : Google visé par une plainte d'éditeurs dont Hachette pour avoir entraîné Gemini sur des millions de livres protégés sans autorisation. En parallèle, le patron de DeepMind plaide pour un organisme d'autorégulation piloté par les États-Unis afin d'encadrer l'évaluation des modèles d'IA de pointe avant mise sur le marché. [Next.ink](https://next.ink/brief-article/google-accuse-davoir-entraine-gemini-avec-des-millions-de-livres-sans-autorisation/) · [ZDNet France](https://www.zdnet.fr/actualites/le-patron-de-google-deepmind-veut-un-organisme-dautoregulation-mene-par-les-etats-unis-pour-lia-de-pointe-498612.htm#xtor=RSS-1)
+
+- **Robotique open source** : Nvidia et Hugging Face annoncent au salon Machina l'intégration de technologies Nvidia dans LeRobot, la plateforme open source de Hugging Face dédiée à la robotique, visant à fournir aux développeurs une stack complète. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552629-nous-voulons-donner-aux-developpeurs-en-robotique-tout-ce-dont-ils-ont-besoin)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Patch Tuesday record : 570 failles Microsoft, 3 zero-days</strong> : Le correctif mensuel de juillet 2026 corrige un volume record de 570 vulnérabilités, dont deux déjà exploitées activement et une divulguée publiquement. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/">BleepingComputer</a></li>
+<li><strong>SonicWall SMA 1000 : deux zero-days exploitées activement</strong> : SonicWall confirme l'exploitation en conditions réelles de deux failles zero-day sur les appliances SMA 1000. La plus critique (CVE-2026-15409, CVSS 10.0) permet l'exécution de commandes à distance avec les privilèges administrateur. Un correctif est à appliquer immédiatement. <a href="https://thehackernews.com/2026/07/two-sonicwall-sma-1000-zero-days.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>ShareFile : zero-day confirmé, correctif disponible</strong> : Progress Software confirme qu'une faille zero-day de sévérité élevée a motivé l'arrêt d'urgence des Storage Zone Controllers la semaine dernière ; un correctif est publié. <a href="https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>RabbitMQ : fuite de secrets OAuth et contournement de tenants</strong> : Deux failles de contrôle d'accès dans le courtier de messages RabbitMQ permettent de dérober des secrets OAuth et de franchir les frontières entre tenants. <a href="https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>OAuth Client ID Spoofing ciblant Microsoft Entra ID</strong> : Au moins deux acteurs malveillants exploitent une technique d'usurpation d'ID client OAuth pour valider des comptes et tester des identifiants volés dans des environnements Entra ID sans générer d'événement de connexion. <a href="https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Phishing MFA-bypass ciblant Microsoft 365</strong> : Deux nouveaux kits de phishing (Jalisco et OmegaLord) intègrent des techniques de contournement d'authentification multifacteur pour compromettre des comptes Microsoft 365. <a href="https://www.bleepingcomputer.com/news/security/new-phishing-kits-target-microsoft-365-accounts-evade-mfa/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Campagne de phishing ciblant les utilisateurs de gestionnaires de mots de passe</strong> : LastPass et Bitwarden font l'objet d'une campagne active utilisant de fausses alertes de sécurité pour rediriger les victimes vers des sites frauduleux. <a href="https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Secure Boot contourné via 11 shims UEFI Linux signés Microsoft</strong> : Onze anciennes applications UEFI signées par Microsoft peuvent être détournées pour exécuter du code non fiable avant le démarrage du système, contournant ainsi le Secure Boot. <a href="https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>LabubaRAT : un RAT Rust se fait passer pour un logiciel NVIDIA</strong> : Un trojan d'accès à distance inédit, développé en Rust, usurpe l'identité de logiciels NVIDIA pour établir une persistance discrète sur les postes Windows. <a href="https://thehackernews.com/2026/07/labubarat-masquerades-as-nvidia.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Espionnage russe via caméras connectées en Europe</strong> : Les services néerlandais rapportent qu'une agence russe compromet des caméras IP à travers l'Europe pour surveiller la logistique de l'OTAN et les troupes ukrainiennes. <a href="https://therecord.media/russian-intelligence-compromising-cameras-nato-ukraine-netherlands">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Extensions de wallets crypto : fuites d'adresses et pistage inter-sites</strong> : Une étude sur 85 extensions de navigateur révèle que la plupart communiquent avec les sites et les nœuds blockchain d'une manière qui permet de lier les adresses d'un même utilisateur et de le pister. <a href="https://thehackernews.com/2026/07/study-of-85-crypto-wallet-extensions.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Microsoft Entra ID : les passkeys deviendront l'authentification par défaut en septembre 2026</strong> : Ce changement réduira la surface d'exposition au phishing par vol de mot de passe pour les environnements d'entreprise utilisant Entra ID. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-entra-id-gets-passkeys-default-authentication-starting-september/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Validation de l'exploitabilité sans exécution de code malveillant</strong> : Picus détaille une méthode de chaînage TTP permettant de déterminer si une vulnérabilité est exploitable dans un environnement donné sans lancer d'exploit, utile pour les systèmes critiques. <a href="https://www.bleepingcomputer.com/news/security/you-dont-have-to-run-an-exploit-to-know-if-youre-vulnerable/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Finlande : notice Interpol pour le pirate de la psychothérapie Vastaamo</strong> : Le suspect de la fuite massive de dossiers de patients est recherché ; son avocat indique qu'il se trouverait hors de Finlande. <a href="https://therecord.media/finland-issues-wanted-notice-for-hacker-vastaamo-breach">The Record</a></li>
+<li><strong>SANS ISC Stormcast</strong> : Le podcast quotidien du SANS Internet Storm Center est disponible, couvrant l'actualité des menaces et les indicateurs de compromission du jour. <a href="https://isc.sans.edu/diary/rss/33158">SANS ISC</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Vulnérabilité persistante dans Cursor IDE</strong> : La faille signalée en décembre 2024 permettant l'exécution automatique de code malveillant via des dépôts empoisonnés n'est toujours pas corrigée. L'exploitation repose sur l'absence de validation des prompts intégrés dans les projets partagés. <a href="https://www.darkreading.com/application-security/cursor-ide-malicious-code-poisoned-repos">Dark Reading</a></li>
+<li><strong>Microsoft : record de correctifs et pression sur l'authentification</strong> : Microsoft a publié un volume mensuel record de 569 correctifs (dont 59 critiques), une tendance haussière que l'éditeur attribue lui-même à l'usage de modèles d'IA pour la découverte de vulnérabilités. Parallèlement, l'entreprise va imposer les passkeys comme méthode d'authentification par défaut dans Microsoft Entra ID à partir de septembre, forçant la main aux entreprises encore hésitantes. <a href="https://www.csoonline.com/article/4196940/patch-tuesday-roundup-microsoft-fixes-a-monthly-record-569-holes-sap-patches-a-critical-memory-corruption-bug.html">CSO Online - correctifs</a> · <a href="https://www.csoonline.com/article/4197086/microsoft-is-forcing-an-enterprise-transition-to-passkeys-2.html">CSO Online - passkeys</a></li>
 </ul>
 
 <ul>
-<li><strong>Régulation de l'IA frontière</strong> : Plusieurs États américains tentent de légiférer sur la transparence des modèles d'IA avancés, alors que ces systèmes gagnent en autonomie et échappent à la supervision humaine. Le débat porte sur l'encadrement d'une technologie déjà largement déployée. <a href="https://www.darkreading.com/cybersecurity-operations/frontier-ai-genie-out-of-bottle-where-rulebook">Dark Reading</a></li>
+<li><strong>Compétences des ingénieurs sécurité</strong> : Au-delà de la maîtrise technique, les ingénieurs sécurité les plus performants se distinguent par leur capacité à communiquer avec les métiers, à comprendre l'architecture d'entreprise dans sa globalité et à anticiper les contraintes opérationnelles lors de la conception des systèmes. <a href="https://www.csoonline.com/article/4196428/7-skills-and-traits-of-elite-security-engineers.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Compression de cache KV pour LLMs</strong> : Plusieurs approches émergent pour réduire le coût mémoire du cache clé-valeur en inférence. JoLT combine les décompositions Tucker et Johnson-Lindenstrauss pour atteindre une compression quasi sans perte. Un second article souligne que les benchmarks actuels sont biaisés car ils évaluent la compression en mode "query-aware" (requête incluse dans le contexte) ; en situation réelle de réutilisation d'un cache compressé pour de multiples requêtes, le classement des méthodes change radicalement. <a href="https://arxiv.org/abs/2607.12550">JoLT</a> · <a href="https://arxiv.org/abs/2607.11942">Audit de ranking</a></li>
 </ul>
 
 <ul>
-<li><strong>Industrialisation de ClickFix</strong> : La technique d'ingénierie sociale, désormais disponible en location à grande échelle, contourne les antivirus et EDR classiques. La détection repose principalement sur des règles YARA ciblant les scripts et commandes PowerShell caractéristiques. <a href="https://www.darkreading.com/cyberattacks-data-breaches/clickfixs-ecosystem-demands-new-defense">Dark Reading</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Modèles ouverts et souveraineté</strong> : NVIDIA positionne ses modèles Nemotron comme une réponse aux besoins de contrôle et de personnalisation des entreprises et des États, en mettant l'accent sur la confiance et l'adaptation aux domaines métier. <a href="https://blogs.nvidia.com/blog/nemotron-open-models-ai-trust-control-customize/">NVIDIA Blog</a></li>
+<li><strong>Exécution spéculative pour agents LLM</strong> : Une méthode permet à un petit modèle de prédire et pré-lancer l'étape suivante d'un agent pendant les temps morts de l'environnement, en conservant une mémoire entre les tâches, contrairement aux approches « stateless » existantes. Cela accélère les agents sans perte de qualité. <a href="https://arxiv.org/abs/2607.12236">Speculate with Memory</a></li>
 </ul>
 
 <ul>
-<li><strong>Efficacité énergétique des infrastructures IA</strong> : Le ratio performance par watt devient l'indicateur clé de rentabilité des usines à tokens, car il détermine directement le revenu généré dans une enveloppe de puissance fixe. <a href="https://blogs.nvidia.com/blog/performance-per-watt-ai-infrastructure-efficiency/">NVIDIA Blog</a></li>
+<li><strong>Attention linéaire et suivi d'état</strong> : L'attention "Semidirect Fourier Delta" introduit un contrôle de phase pour améliorer la mémoire à long terme des modèles à attention linéaire, dont l'état récurrent fixe limite le suivi exact de l'état. <a href="https://arxiv.org/abs/2607.11897">SFDA</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents pour l'automatisation des tests logiciels</strong> : AWS détaille l'intégration d'agents (Nova Act) dans les pipelines CI/CD pour paralléliser les tests de régression et l'analyse de flux utilisateur à grande échelle. <a href="https://aws.amazon.com/blogs/machine-learning/accelerating-software-delivery-with-agentic-qa-automation-using-amazon-nova-act-part-2/">AWS - QA automation</a> · <a href="https://aws.amazon.com/blogs/machine-learning/scaling-ux-testing-with-amazon-nova-act-a-new-approach-to-user-flow-analysis/">AWS - UX testing</a></li>
+<li><strong>Fine-tuning efficient en mémoire</strong> : CARE-LoRA compresse les activations durant le fine-tuning LoRA pour réduire l'empreinte mémoire tout en maintenant la qualité, répondant aux limites des budgets GPU restreints pour les grands modèles. <a href="https://arxiv.org/abs/2607.11940">CARE-LoRA</a></li>
 </ul>
 
 <ul>
-<li><strong>IA générative en santé</strong> : Flo Health a industrialisé un système de revue de contenu médical sur Amazon Bedrock, tandis que ScienceSoft a déployé un planificateur vocal conforme HIPAA en combinant Amazon Nova Sonic et Bedrock Guardrails. <a href="https://aws.amazon.com/blogs/machine-learning/scaling-medical-content-review-at-flo-health-with-amazon-bedrock-part-2/">AWS - Flo Health</a> · <a href="https://aws.amazon.com/blogs/machine-learning/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws/">AWS - ScienceSoft</a></li>
-</ul>
-
-<h2>IA — Produits, agents & dev tooling</h2>
-
-<ul>
-<li><strong>Claude Code vs n8n — choix d'outillage</strong> : La décision repose sur cinq critères pragmatiques : nature déterministe ou non du workflow, besoin d'intégrations externes, fréquence d'exécution, niveau technique de l'utilisateur final et importance de la traçabilité. Les deux outils sont complémentaires et souvent utilisés conjointement. <a href="https://blog.n8n.io/should-i-use-claude-code-or-n8n/">n8n Blog</a></li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Régulation de l'IA frontière</strong> : Le CEO de DeepMind propose un organisme de normalisation indépendant, sur le modèle de la FINRA, pour tester les modèles d'IA frontière avant leur mise sur le marché. <a href="https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/">TechCrunch</a></li>
+<li><strong>Fiabilité de l'évaluation en détection d'anomalies</strong> : Après l'abandon du "point-adjustment" qui gonflait artificiellement les scores F1, les métriques de remplacement (PA%K, range-based) sont à leur tour soumises à un stress-test adversarial. L'étude révèle leurs failles résiduelles et propose un benchmark plus robuste pour les séries temporelles. <a href="https://arxiv.org/abs/2607.11969">Stress-test TSAD</a></li>
 </ul>
 
 <ul>
-<li><strong>Moratoire sur les datacenters dans l'État de New York</strong> : L'État de New York suspend les autorisations de nouveaux grands datacenters, invoquant la pression sur le réseau électrique, les ressources en eau et le contrôle local face à l'explosion de la demande liée à l'IA. <a href="https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/">TechCrunch</a></li>
+<li><strong>Apprentissage par renforcement et shortcuts</strong> : Un instrument "white-box" basé sur des automates cachés permet de déterminer précisément si un agent RL apprend l'état latent réel de sa tâche ou un simple raccourci corrélé à la récompense. La frontière dépend du groupe de symétrie sous-jacent au langage de l'environnement. <a href="https://arxiv.org/abs/2607.11953">Hidden-Automaton</a></li>
 </ul>
 
 <ul>
-<li><strong>Budgétisation des tokens IA en entreprise</strong> : Meta anticipe un plafonnement de la consommation de tokens par ingénieur, traitant l'usage des outils d'IA comme une charge d'exploitation au même titre que la masse salariale. <a href="https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/">TechCrunch</a></li>
+<li><strong>Évaluation de l'effondrement neural</strong> : Un protocole audité détecte des "empreintes fonctionnelles" spécifiques à un donneur au-delà de l'effondrement neural (Neural Collapse), en s'affranchissant de la liberté de coordonnées qui empêche la comparaison directe entre réseaux entraînés indépendamment. <a href="https://arxiv.org/abs/2607.11967">Neural Collapse</a></li>
 </ul>
 
 <ul>
-<li><strong>Bascule du marché vers les modèles ouverts</strong> : Le CEO de Hugging Face constate que les entreprises privilégient désormais les modèles ouverts pour des raisons de coût, d'accessibilité et de contrôle, remettant en question la pertinence de la course aux modèles frontière pour les usages en production. <a href="https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/">TechCrunch</a></li>
+<li><strong>Détection de fuite de données en santé</strong> : Une revue systématique des modèles ML pour la prédiction précoce de la maladie rénale chronique montre que l'instabilité des prédicteurs et les fuites de données invalident une part significative des résultats publiés. <a href="https://arxiv.org/abs/2607.11963">CKD review</a></li>
+</ul>
+
+<ul>
+<li><strong>Apprentissage semi-supervisé sans hypothèse distributionnelle</strong> : Une généralisation du "PNU learning" étend l'apprentissage semi-supervisé sans dépendance aux hypothèses de distribution au cas multi-classes, via une réécriture du risque. <a href="https://arxiv.org/abs/2607.11947">Risk Rewrite SSL</a></li>
+</ul>
+
+<ul>
+<li><strong>Prévision de pollution aux particules fines</strong> : OmniPMNet fait le pont entre les prévisions ponctuelles (stations) et les champs continus (grilles) pour le PM10, en combinant modèles de transport chimique et réseaux de neurones sur graphe, particulièrement durant les tempêtes de poussière. <a href="https://arxiv.org/abs/2607.11896">OmniPMNet</a></li>
+</ul>
+
+<ul>
+<li><strong>Apprentissage in-context auto-évolutif</strong> : Un framework ICL améliore la conception de beamforming dans les systèmes MU-MISO en intégrant directement les pilotes dans un transformer, avec une capacité d'auto-évolution. <a href="https://arxiv.org/abs/2607.11970">Self-Evolving ICL</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de raccourcis en vision industrielle</strong> : Les réseaux de profilométrie par projection de franges apprennent un raccourci basé sur les contours d'objets plutôt que sur la phase des franges. L'article propose une méthode de réparation sur un benchmark synthétique de 15 600 images. <a href="https://arxiv.org/abs/2607.11928">FPP Shortcuts</a></li>
+</ul>
+
+<ul>
+<li><strong>Théorie de l'information pour la réflexion des systèmes intelligents</strong> : La "Mirror Theory" est rendue opérationnelle via l'entropie de chemin viable (VPE), qui mesure la capacité d'un système à soutenir des continuations cohérentes sous réflexion répétée. <a href="https://arxiv.org/abs/2607.11937">Mirror Horizon</a></li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Patch Tuesday record pour Microsoft</strong> : 570 vulnérabilités corrigées en un seul mois, dont deux déjà exploitées activement. Cette montée en charge fait suite à l'intégration de l'IA dans les processus de révision du code chez l'éditeur. <a href="https://next.ink/brief-article/un-patch-tuesday-record-pour-windows-570-failles-colmatees-dont-deux-deja-exploitees/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Batteries remplaçables : exemption élargie</strong> : La Commission européenne exempte les montres, lunettes connectées et autres petits appareils portables de l'obligation de batterie facilement retirable par l'utilisateur. Le règlement reste applicable aux smartphones et tablettes. <a href="https://next.ink/247246/batterie-remplacable-bruxelles-elargit-lexemption-aux-montres-et-lunettes-connectees/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>IA et propriété intellectuelle</strong> : Google visé par une plainte d'éditeurs dont Hachette pour avoir entraîné Gemini sur des millions de livres protégés sans autorisation. En parallèle, le patron de DeepMind plaide pour un organisme d'autorégulation piloté par les États-Unis afin d'encadrer l'évaluation des modèles d'IA de pointe avant mise sur le marché. <a href="https://next.ink/brief-article/google-accuse-davoir-entraine-gemini-avec-des-millions-de-livres-sans-autorisation/">Next.ink</a> · <a href="https://www.zdnet.fr/actualites/le-patron-de-google-deepmind-veut-un-organisme-dautoregulation-mene-par-les-etats-unis-pour-lia-de-pointe-498612.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>Robotique open source</strong> : Nvidia et Hugging Face annoncent au salon Machina l'intégration de technologies Nvidia dans LeRobot, la plateforme open source de Hugging Face dédiée à la robotique, visant à fournir aux développeurs une stack complète. <a href="https://www.journaldunet.com/intelligence-artificielle/1552629-nous-voulons-donner-aux-developpeurs-en-robotique-tout-ce-dont-ils-ont-besoin">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260714-1815</guid>
-      <pubDate>Tue, 14 Jul 2026 18:15:44 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260715-0741</guid>
+      <pubDate>Wed, 15 Jul 2026 07:41:40 +0000</pubDate>
     </item>
   </channel>
 </rss>
