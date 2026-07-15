@@ -8,152 +8,140 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 15 Jul 2026 07:41:40 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 12:25:18 +0000</lastBuildDate>
     <item>
-      <title>Digest — 15/07 07h</title>
+      <title>Digest — 15/07 12h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **SonicWall SMA 1000 : deux zero-days exploitées activement** : SonicWall confirme l'exploitation en conditions réelles de deux failles zero-day sur les appliances SMA 1000. La plus critique (CVE-2026-15409, CVSS 10.0) permet l'exécution de commandes à distance avec les privilèges administrateur. Un correctif est à appliquer immédiatement. [The Hacker News](https://thehackernews.com/2026/07/two-sonicwall-sma-1000-zero-days.html)
+- **Exécution de code via Cursor sur Windows** : L'IDE Cursor exécute automatiquement un binaire `git.exe` présent à la racine d'un dépôt cloné, sans avertissement ni interaction utilisateur. Un dépôt malveillant peut ainsi compromettre la machine et accéder aux clés SSH et au code source. [The Hacker News](https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html)
 
-- **SANS ISC Stormcast** : Le podcast quotidien du SANS Internet Storm Center est disponible, couvrant l'actualité des menaces et les indicateurs de compromission du jour. [SANS ISC](https://isc.sans.edu/diary/rss/33158)
+- **Paquets npm @asyncapi compromis** : Quatre paquets de l'organisation @asyncapi ont été modifiés pour distribuer un loader de botnet multi-étapes. Les versions concernées sont à retirer immédiatement des pipelines et des dépendances. [The Hacker News](https://thehackernews.com/2026/07/compromised-asyncapi-npm-packages.html)
+
+- **Exploitation active de failles SharePoint** : La CISA alerte sur trois vulnérabilités SharePoint activement exploitées pour compromettre des instances on-premises exposées sur Internet. Le correctif est à appliquer sans délai. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-patch-actively-exploited-sharepoint-flaws/)
+
+- **Blocage de mises à jour Windows 11 sur certains Dell** : Microsoft bloque le déploiement des correctifs de sécurité du mois sur des appareils Dell en raison de problèmes d'extinction et de performances. Vérifier l'éligibilité des postes concernés avant de forcer la mise à jour. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-some-dell-devices-shut-down-after-windows-update/)
+
+- **Inculpation d'opérateurs russes d'hébergement bulletproof** : Trois ressortissants russes sont accusés d'avoir fourni des services d'hébergement à des gangs de ransomware, causant plus de 62 millions de dollars de dommages. L'action judiciaire vise à perturber l'infrastructure de soutien aux opérations cybercriminelles. [BleepingComputer](https://www.bleepingcomputer.com/news/security/us-charges-alleged-russian-bulletproof-hosting-service-operators/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Microsoft : record de correctifs et pression sur l'authentification** : Microsoft a publié un volume mensuel record de 569 correctifs (dont 59 critiques), une tendance haussière que l'éditeur attribue lui-même à l'usage de modèles d'IA pour la découverte de vulnérabilités. Parallèlement, l'entreprise va imposer les passkeys comme méthode d'authentification par défaut dans Microsoft Entra ID à partir de septembre, forçant la main aux entreprises encore hésitantes. [CSO Online - correctifs](https://www.csoonline.com/article/4196940/patch-tuesday-roundup-microsoft-fixes-a-monthly-record-569-holes-sap-patches-a-critical-memory-corruption-bug.html) · [CSO Online - passkeys](https://www.csoonline.com/article/4197086/microsoft-is-forcing-an-enterprise-transition-to-passkeys-2.html)
+- **Extension Claude pour Chrome : vulnérabilités persistantes** : Deux failles signalées à Anthropic il y a plusieurs mois restent exploitables, permettant à une extension malveillante d'abuser des privilèges de l'IA. [CSO Online](https://www.csoonline.com/article/4197325/new-bugs-in-claude-for-chrome-allow-extensions-to-abuse-ai-privileges.html)
 
-- **Compétences des ingénieurs sécurité** : Au-delà de la maîtrise technique, les ingénieurs sécurité les plus performants se distinguent par leur capacité à communiquer avec les métiers, à comprendre l'architecture d'entreprise dans sa globalité et à anticiper les contraintes opérationnelles lors de la conception des systèmes. [CSO Online](https://www.csoonline.com/article/4196428/7-skills-and-traits-of-elite-security-engineers.html)
+- **Coupe du Monde 2026 : risque endpoint dans les stades** : La connexion simultanée de 80 000 spectateurs transforme chaque stade en environnement endpoint chaotique, posant des défis de cybersécurité qui dépassent les enjeux de sécurité physique. [CSO Online](https://www.csoonline.com/article/4196827/when-80000-fans-log-on-at-once-the-2026-world-cups-unique-cybersecurity-issues.html)
 
-## IA — Recherche
+- **Écran vidéo capable de capturer des images** : Des chercheurs de l'ETH Zurich ont conçu un pixel "Fourier" qui émet et détecte simultanément la lumière, brouillant la frontière entre affichage et caméra — un vecteur de surveillance inédit à surveiller. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/a-video-screen-that-is-also-a-camera.html)
 
-- **Compression de cache KV pour LLMs** : Plusieurs approches émergent pour réduire le coût mémoire du cache clé-valeur en inférence. JoLT combine les décompositions Tucker et Johnson-Lindenstrauss pour atteindre une compression quasi sans perte. Un second article souligne que les benchmarks actuels sont biaisés car ils évaluent la compression en mode "query-aware" (requête incluse dans le contexte) ; en situation réelle de réutilisation d'un cache compressé pour de multiples requêtes, le classement des méthodes change radicalement. [JoLT](https://arxiv.org/abs/2607.12550) · [Audit de ranking](https://arxiv.org/abs/2607.11942)
+- **Nigeria : notification obligatoire des cyberattaques** : Le pays renforce son arsenal réglementaire en imposant aux organisations de déclarer les incidents, s'alignant sur la tendance mondiale à la transparence imposée. [Dark Reading](https://www.darkreading.com/cyber-risk/nigeria-cybersecurity-efforts-cybercriminals-profits)
 
-- **Exécution spéculative pour agents LLM** : Une méthode permet à un petit modèle de prédire et pré-lancer l'étape suivante d'un agent pendant les temps morts de l'environnement, en conservant une mémoire entre les tâches, contrairement aux approches « stateless » existantes. Cela accélère les agents sans perte de qualité. [Speculate with Memory](https://arxiv.org/abs/2607.12236)
+- **Déséquilibre prévention / détection dans l'industrie** : Un constat partagé pointe une dérive du marché cybersécurité vers des outils de détection au détriment de la prévention, alors que cette dernière reste plus rentable et plus efficace sur le modèle médical. [CSO Online](https://www.csoonline.com/article/4196818/cybersecurity-needs-more-prevention-and-less-reliance-on-cure.html)
 
-- **Attention linéaire et suivi d'état** : L'attention "Semidirect Fourier Delta" introduit un contrôle de phase pour améliorer la mémoire à long terme des modèles à attention linéaire, dont l'état récurrent fixe limite le suivi exact de l'état. [SFDA](https://arxiv.org/abs/2607.11897)
+## IA &amp; Tech — Médias internationaux
 
-- **Fine-tuning efficient en mémoire** : CARE-LoRA compresse les activations durant le fine-tuning LoRA pour réduire l'empreinte mémoire tout en maintenant la qualité, répondant aux limites des budgets GPU restreints pour les grands modèles. [CARE-LoRA](https://arxiv.org/abs/2607.11940)
-
-- **Fiabilité de l'évaluation en détection d'anomalies** : Après l'abandon du "point-adjustment" qui gonflait artificiellement les scores F1, les métriques de remplacement (PA%K, range-based) sont à leur tour soumises à un stress-test adversarial. L'étude révèle leurs failles résiduelles et propose un benchmark plus robuste pour les séries temporelles. [Stress-test TSAD](https://arxiv.org/abs/2607.11969)
-
-- **Apprentissage par renforcement et shortcuts** : Un instrument "white-box" basé sur des automates cachés permet de déterminer précisément si un agent RL apprend l'état latent réel de sa tâche ou un simple raccourci corrélé à la récompense. La frontière dépend du groupe de symétrie sous-jacent au langage de l'environnement. [Hidden-Automaton](https://arxiv.org/abs/2607.11953)
-
-- **Évaluation de l'effondrement neural** : Un protocole audité détecte des "empreintes fonctionnelles" spécifiques à un donneur au-delà de l'effondrement neural (Neural Collapse), en s'affranchissant de la liberté de coordonnées qui empêche la comparaison directe entre réseaux entraînés indépendamment. [Neural Collapse](https://arxiv.org/abs/2607.11967)
-
-- **Détection de fuite de données en santé** : Une revue systématique des modèles ML pour la prédiction précoce de la maladie rénale chronique montre que l'instabilité des prédicteurs et les fuites de données invalident une part significative des résultats publiés. [CKD review](https://arxiv.org/abs/2607.11963)
-
-- **Apprentissage semi-supervisé sans hypothèse distributionnelle** : Une généralisation du "PNU learning" étend l'apprentissage semi-supervisé sans dépendance aux hypothèses de distribution au cas multi-classes, via une réécriture du risque. [Risk Rewrite SSL](https://arxiv.org/abs/2607.11947)
-
-- **Prévision de pollution aux particules fines** : OmniPMNet fait le pont entre les prévisions ponctuelles (stations) et les champs continus (grilles) pour le PM10, en combinant modèles de transport chimique et réseaux de neurones sur graphe, particulièrement durant les tempêtes de poussière. [OmniPMNet](https://arxiv.org/abs/2607.11896)
-
-- **Apprentissage in-context auto-évolutif** : Un framework ICL améliore la conception de beamforming dans les systèmes MU-MISO en intégrant directement les pilotes dans un transformer, avec une capacité d'auto-évolution. [Self-Evolving ICL](https://arxiv.org/abs/2607.11970)
-
-- **Détection de raccourcis en vision industrielle** : Les réseaux de profilométrie par projection de franges apprennent un raccourci basé sur les contours d'objets plutôt que sur la phase des franges. L'article propose une méthode de réparation sur un benchmark synthétique de 15 600 images. [FPP Shortcuts](https://arxiv.org/abs/2607.11928)
-
-- **Théorie de l'information pour la réflexion des systèmes intelligents** : La "Mirror Theory" est rendue opérationnelle via l'entropie de chemin viable (VPE), qui mesure la capacité d'un système à soutenir des continuations cohérentes sous réflexion répétée. [Mirror Horizon](https://arxiv.org/abs/2607.11937)
+- **Agents IA sur l'internet ouvert** : Vint Cerf, co-créateur de TCP/IP, travaille sur un standard d'identification des agents IA autonomes circulant sur l'internet public, afin de les rendre traçables et interopérables. [TechCrunch](https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/)
 
 ## Actualité tech FR
 
-- **Patch Tuesday record pour Microsoft** : 570 vulnérabilités corrigées en un seul mois, dont deux déjà exploitées activement. Cette montée en charge fait suite à l'intégration de l'IA dans les processus de révision du code chez l'éditeur. [Next.ink](https://next.ink/brief-article/un-patch-tuesday-record-pour-windows-570-failles-colmatees-dont-deux-deja-exploitees/)
+- **Grok Build exfiltrait du code sans consentement** : L'assistant de codage de SpaceXAI envoyait automatiquement des dépôts entiers vers le cloud, sans avertir ni obtenir l'accord des développeurs. L'entreprise a reconnu le problème et promis la suppression des données distantes. [Next.ink](https://next.ink/247278/grok-build-envoyait-des-depots-vers-le-cloud-sans-le-consentement-des-developpeurs/)
 
-- **Batteries remplaçables : exemption élargie** : La Commission européenne exempte les montres, lunettes connectées et autres petits appareils portables de l'obligation de batterie facilement retirable par l'utilisateur. Le règlement reste applicable aux smartphones et tablettes. [Next.ink](https://next.ink/247246/batterie-remplacable-bruxelles-elargit-lexemption-aux-montres-et-lunettes-connectees/)
+- **Google plaide contre les blocages DNS/IP massifs en Europe** : Le groupe estime que les mesures anti-piratage ciblant les DNS, VPN, CDN ou adresses IP sont inefficaces et risquent de bloquer des millions de services légitimes. Il demande à Bruxelles une approche plus proportionnée. [Next.ink](https://next.ink/247226/google-soppose-aux-blocages-massifs-de-sites-pirates-en-europe/)
 
-- **IA et propriété intellectuelle** : Google visé par une plainte d'éditeurs dont Hachette pour avoir entraîné Gemini sur des millions de livres protégés sans autorisation. En parallèle, le patron de DeepMind plaide pour un organisme d'autorégulation piloté par les États-Unis afin d'encadrer l'évaluation des modèles d'IA de pointe avant mise sur le marché. [Next.ink](https://next.ink/brief-article/google-accuse-davoir-entraine-gemini-avec-des-millions-de-livres-sans-autorisation/) · [ZDNet France](https://www.zdnet.fr/actualites/le-patron-de-google-deepmind-veut-un-organisme-dautoregulation-mene-par-les-etats-unis-pour-lia-de-pointe-498612.htm#xtor=RSS-1)
+- **Royaume-Uni : couvre-feu numérique pour les 16-17 ans** : Après l'interdiction des réseaux sociaux aux moins de 16 ans, le gouvernement britannique impose un blocage d'accès entre minuit et 6h pour les mineurs de 16 et 17 ans, ciblant les fonctions addictives des plateformes. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/apres-l-interdiction-des-reseaux-sociaux-aux-moins-de-16-ans-le-royaume-uni-annonce-un-couvre-feu-numerique-pour-les-mineurs-de-plus-de-16-ans_AD-202607150325.html)
 
-- **Robotique open source** : Nvidia et Hugging Face annoncent au salon Machina l'intégration de technologies Nvidia dans LeRobot, la plateforme open source de Hugging Face dédiée à la robotique, visant à fournir aux développeurs une stack complète. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552629-nous-voulons-donner-aux-developpeurs-en-robotique-tout-ce-dont-ils-ont-besoin)</description>
+- **Contrôle fiscal des terminaux de paiement : 7 500 € d'amende par appareil** : Depuis le 27 juin 2026, l'administration fiscale peut contrôler les terminaux sans préavis. L'absence de présentation d'un appareil expose l'entreprise à une amende de 7 500 € par terminal. [Journal du Net](https://www.journaldunet.com/management/commercial/1552623-terminaux-de-paiement-ce-nouveau-controle-fiscal-qui-peut-couter-7-500-euros-par-appareil/)
+
+- **ASML relève ses prévisions grâce au boom de l'IA** : Le fabricant néerlandais de machines de photolithographie publie des résultats trimestriels supérieurs aux attentes, porté par la demande en semi-conducteurs pour l'intelligence artificielle. [ZDNet France](https://www.zdnet.fr/actualites/asml-depasse-les-attentes-au-deuxieme-trimestre-grace-au-boom-de-lia-et-releve-ses-previsions-annuelles-498619.htm#xtor=RSS-1)
+
+- **Le patron de Google Deepmind appelle à une autorité de régulation des modèles d'IA puissants** : Demis Hassabis propose la création d'une autorité chargée de tester les modèles d'IA les plus avancés avant leur mise sur le marché, pour anticiper les risques liés à l'IA générale. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/des-choix-qui-faconneront-la-prochaine-phase-de-l-histoire-de-notre-civilisation-le-patron-de-l-ia-de-google-appelle-a-la-creation-d-une-autorite-chargee-de-mieux-reguler-les-modeles-les-plus-puissants_AV-202607150400.html)
+
+- **Des hackers iraniens ont exploité la géolocalisation de soldats US pour cibler des bases** : Des données divulguées montrent que l'Iran a mené des opérations cyber visant à localiser des militaires américains via des vulnérabilités des réseaux téléphoniques, suscitant l'inquiétude de chercheurs et d'élus américains. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/l-iran-a-fait-preuve-d-une-grande-creativite-ces-dernieres-annees-les-hackers-iraniens-auraient-utilise-la-geolocalisation-des-telephones-de-soldats-americains-pour-cibler-et-frapper-des-bases-dans-le-golfe-persique_AN-202607150337.html)
+
+- **Un chantier Meta contamine les eaux usées d'une ville américaine** : Un contrôle de routine a détecté la bactérie multirésistante *Cupriavidus gilardii* dans les canalisations de Cheyenne, provenant d'un chantier de l'entreprise. [Siècle Digital](https://siecledigital.fr/2026/07/15/un-chantier-meta-contamine-les-eaux-usees-dune-ville-americaine-avec-une-bacterie-multiresistante/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>SonicWall SMA 1000 : deux zero-days exploitées activement</strong> : SonicWall confirme l'exploitation en conditions réelles de deux failles zero-day sur les appliances SMA 1000. La plus critique (CVE-2026-15409, CVSS 10.0) permet l'exécution de commandes à distance avec les privilèges administrateur. Un correctif est à appliquer immédiatement. <a href="https://thehackernews.com/2026/07/two-sonicwall-sma-1000-zero-days.html">The Hacker News</a></li>
+<li><strong>Exécution de code via Cursor sur Windows</strong> : L'IDE Cursor exécute automatiquement un binaire `git.exe` présent à la racine d'un dépôt cloné, sans avertissement ni interaction utilisateur. Un dépôt malveillant peut ainsi compromettre la machine et accéder aux clés SSH et au code source. <a href="https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>SANS ISC Stormcast</strong> : Le podcast quotidien du SANS Internet Storm Center est disponible, couvrant l'actualité des menaces et les indicateurs de compromission du jour. <a href="https://isc.sans.edu/diary/rss/33158">SANS ISC</a></li>
+<li><strong>Paquets npm @asyncapi compromis</strong> : Quatre paquets de l'organisation @asyncapi ont été modifiés pour distribuer un loader de botnet multi-étapes. Les versions concernées sont à retirer immédiatement des pipelines et des dépendances. <a href="https://thehackernews.com/2026/07/compromised-asyncapi-npm-packages.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Exploitation active de failles SharePoint</strong> : La CISA alerte sur trois vulnérabilités SharePoint activement exploitées pour compromettre des instances on-premises exposées sur Internet. Le correctif est à appliquer sans délai. <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-patch-actively-exploited-sharepoint-flaws/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Blocage de mises à jour Windows 11 sur certains Dell</strong> : Microsoft bloque le déploiement des correctifs de sécurité du mois sur des appareils Dell en raison de problèmes d'extinction et de performances. Vérifier l'éligibilité des postes concernés avant de forcer la mise à jour. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-some-dell-devices-shut-down-after-windows-update/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Inculpation d'opérateurs russes d'hébergement bulletproof</strong> : Trois ressortissants russes sont accusés d'avoir fourni des services d'hébergement à des gangs de ransomware, causant plus de 62 millions de dollars de dommages. L'action judiciaire vise à perturber l'infrastructure de soutien aux opérations cybercriminelles. <a href="https://www.bleepingcomputer.com/news/security/us-charges-alleged-russian-bulletproof-hosting-service-operators/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Microsoft : record de correctifs et pression sur l'authentification</strong> : Microsoft a publié un volume mensuel record de 569 correctifs (dont 59 critiques), une tendance haussière que l'éditeur attribue lui-même à l'usage de modèles d'IA pour la découverte de vulnérabilités. Parallèlement, l'entreprise va imposer les passkeys comme méthode d'authentification par défaut dans Microsoft Entra ID à partir de septembre, forçant la main aux entreprises encore hésitantes. <a href="https://www.csoonline.com/article/4196940/patch-tuesday-roundup-microsoft-fixes-a-monthly-record-569-holes-sap-patches-a-critical-memory-corruption-bug.html">CSO Online - correctifs</a> · <a href="https://www.csoonline.com/article/4197086/microsoft-is-forcing-an-enterprise-transition-to-passkeys-2.html">CSO Online - passkeys</a></li>
+<li><strong>Extension Claude pour Chrome : vulnérabilités persistantes</strong> : Deux failles signalées à Anthropic il y a plusieurs mois restent exploitables, permettant à une extension malveillante d'abuser des privilèges de l'IA. <a href="https://www.csoonline.com/article/4197325/new-bugs-in-claude-for-chrome-allow-extensions-to-abuse-ai-privileges.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Compétences des ingénieurs sécurité</strong> : Au-delà de la maîtrise technique, les ingénieurs sécurité les plus performants se distinguent par leur capacité à communiquer avec les métiers, à comprendre l'architecture d'entreprise dans sa globalité et à anticiper les contraintes opérationnelles lors de la conception des systèmes. <a href="https://www.csoonline.com/article/4196428/7-skills-and-traits-of-elite-security-engineers.html">CSO Online</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Compression de cache KV pour LLMs</strong> : Plusieurs approches émergent pour réduire le coût mémoire du cache clé-valeur en inférence. JoLT combine les décompositions Tucker et Johnson-Lindenstrauss pour atteindre une compression quasi sans perte. Un second article souligne que les benchmarks actuels sont biaisés car ils évaluent la compression en mode "query-aware" (requête incluse dans le contexte) ; en situation réelle de réutilisation d'un cache compressé pour de multiples requêtes, le classement des méthodes change radicalement. <a href="https://arxiv.org/abs/2607.12550">JoLT</a> · <a href="https://arxiv.org/abs/2607.11942">Audit de ranking</a></li>
+<li><strong>Coupe du Monde 2026 : risque endpoint dans les stades</strong> : La connexion simultanée de 80 000 spectateurs transforme chaque stade en environnement endpoint chaotique, posant des défis de cybersécurité qui dépassent les enjeux de sécurité physique. <a href="https://www.csoonline.com/article/4196827/when-80000-fans-log-on-at-once-the-2026-world-cups-unique-cybersecurity-issues.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Exécution spéculative pour agents LLM</strong> : Une méthode permet à un petit modèle de prédire et pré-lancer l'étape suivante d'un agent pendant les temps morts de l'environnement, en conservant une mémoire entre les tâches, contrairement aux approches « stateless » existantes. Cela accélère les agents sans perte de qualité. <a href="https://arxiv.org/abs/2607.12236">Speculate with Memory</a></li>
+<li><strong>Écran vidéo capable de capturer des images</strong> : Des chercheurs de l'ETH Zurich ont conçu un pixel "Fourier" qui émet et détecte simultanément la lumière, brouillant la frontière entre affichage et caméra — un vecteur de surveillance inédit à surveiller. <a href="https://www.schneier.com/blog/archives/2026/07/a-video-screen-that-is-also-a-camera.html">Schneier on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Attention linéaire et suivi d'état</strong> : L'attention "Semidirect Fourier Delta" introduit un contrôle de phase pour améliorer la mémoire à long terme des modèles à attention linéaire, dont l'état récurrent fixe limite le suivi exact de l'état. <a href="https://arxiv.org/abs/2607.11897">SFDA</a></li>
+<li><strong>Nigeria : notification obligatoire des cyberattaques</strong> : Le pays renforce son arsenal réglementaire en imposant aux organisations de déclarer les incidents, s'alignant sur la tendance mondiale à la transparence imposée. <a href="https://www.darkreading.com/cyber-risk/nigeria-cybersecurity-efforts-cybercriminals-profits">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Fine-tuning efficient en mémoire</strong> : CARE-LoRA compresse les activations durant le fine-tuning LoRA pour réduire l'empreinte mémoire tout en maintenant la qualité, répondant aux limites des budgets GPU restreints pour les grands modèles. <a href="https://arxiv.org/abs/2607.11940">CARE-LoRA</a></li>
+<li><strong>Déséquilibre prévention / détection dans l'industrie</strong> : Un constat partagé pointe une dérive du marché cybersécurité vers des outils de détection au détriment de la prévention, alors que cette dernière reste plus rentable et plus efficace sur le modèle médical. <a href="https://www.csoonline.com/article/4196818/cybersecurity-needs-more-prevention-and-less-reliance-on-cure.html">CSO Online</a></li>
 </ul>
 
-<ul>
-<li><strong>Fiabilité de l'évaluation en détection d'anomalies</strong> : Après l'abandon du "point-adjustment" qui gonflait artificiellement les scores F1, les métriques de remplacement (PA%K, range-based) sont à leur tour soumises à un stress-test adversarial. L'étude révèle leurs failles résiduelles et propose un benchmark plus robuste pour les séries temporelles. <a href="https://arxiv.org/abs/2607.11969">Stress-test TSAD</a></li>
-</ul>
+<h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Apprentissage par renforcement et shortcuts</strong> : Un instrument "white-box" basé sur des automates cachés permet de déterminer précisément si un agent RL apprend l'état latent réel de sa tâche ou un simple raccourci corrélé à la récompense. La frontière dépend du groupe de symétrie sous-jacent au langage de l'environnement. <a href="https://arxiv.org/abs/2607.11953">Hidden-Automaton</a></li>
-</ul>
-
-<ul>
-<li><strong>Évaluation de l'effondrement neural</strong> : Un protocole audité détecte des "empreintes fonctionnelles" spécifiques à un donneur au-delà de l'effondrement neural (Neural Collapse), en s'affranchissant de la liberté de coordonnées qui empêche la comparaison directe entre réseaux entraînés indépendamment. <a href="https://arxiv.org/abs/2607.11967">Neural Collapse</a></li>
-</ul>
-
-<ul>
-<li><strong>Détection de fuite de données en santé</strong> : Une revue systématique des modèles ML pour la prédiction précoce de la maladie rénale chronique montre que l'instabilité des prédicteurs et les fuites de données invalident une part significative des résultats publiés. <a href="https://arxiv.org/abs/2607.11963">CKD review</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage semi-supervisé sans hypothèse distributionnelle</strong> : Une généralisation du "PNU learning" étend l'apprentissage semi-supervisé sans dépendance aux hypothèses de distribution au cas multi-classes, via une réécriture du risque. <a href="https://arxiv.org/abs/2607.11947">Risk Rewrite SSL</a></li>
-</ul>
-
-<ul>
-<li><strong>Prévision de pollution aux particules fines</strong> : OmniPMNet fait le pont entre les prévisions ponctuelles (stations) et les champs continus (grilles) pour le PM10, en combinant modèles de transport chimique et réseaux de neurones sur graphe, particulièrement durant les tempêtes de poussière. <a href="https://arxiv.org/abs/2607.11896">OmniPMNet</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage in-context auto-évolutif</strong> : Un framework ICL améliore la conception de beamforming dans les systèmes MU-MISO en intégrant directement les pilotes dans un transformer, avec une capacité d'auto-évolution. <a href="https://arxiv.org/abs/2607.11970">Self-Evolving ICL</a></li>
-</ul>
-
-<ul>
-<li><strong>Détection de raccourcis en vision industrielle</strong> : Les réseaux de profilométrie par projection de franges apprennent un raccourci basé sur les contours d'objets plutôt que sur la phase des franges. L'article propose une méthode de réparation sur un benchmark synthétique de 15 600 images. <a href="https://arxiv.org/abs/2607.11928">FPP Shortcuts</a></li>
-</ul>
-
-<ul>
-<li><strong>Théorie de l'information pour la réflexion des systèmes intelligents</strong> : La "Mirror Theory" est rendue opérationnelle via l'entropie de chemin viable (VPE), qui mesure la capacité d'un système à soutenir des continuations cohérentes sous réflexion répétée. <a href="https://arxiv.org/abs/2607.11937">Mirror Horizon</a></li>
+<li><strong>Agents IA sur l'internet ouvert</strong> : Vint Cerf, co-créateur de TCP/IP, travaille sur un standard d'identification des agents IA autonomes circulant sur l'internet public, afin de les rendre traçables et interopérables. <a href="https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Patch Tuesday record pour Microsoft</strong> : 570 vulnérabilités corrigées en un seul mois, dont deux déjà exploitées activement. Cette montée en charge fait suite à l'intégration de l'IA dans les processus de révision du code chez l'éditeur. <a href="https://next.ink/brief-article/un-patch-tuesday-record-pour-windows-570-failles-colmatees-dont-deux-deja-exploitees/">Next.ink</a></li>
+<li><strong>Grok Build exfiltrait du code sans consentement</strong> : L'assistant de codage de SpaceXAI envoyait automatiquement des dépôts entiers vers le cloud, sans avertir ni obtenir l'accord des développeurs. L'entreprise a reconnu le problème et promis la suppression des données distantes. <a href="https://next.ink/247278/grok-build-envoyait-des-depots-vers-le-cloud-sans-le-consentement-des-developpeurs/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Batteries remplaçables : exemption élargie</strong> : La Commission européenne exempte les montres, lunettes connectées et autres petits appareils portables de l'obligation de batterie facilement retirable par l'utilisateur. Le règlement reste applicable aux smartphones et tablettes. <a href="https://next.ink/247246/batterie-remplacable-bruxelles-elargit-lexemption-aux-montres-et-lunettes-connectees/">Next.ink</a></li>
+<li><strong>Google plaide contre les blocages DNS/IP massifs en Europe</strong> : Le groupe estime que les mesures anti-piratage ciblant les DNS, VPN, CDN ou adresses IP sont inefficaces et risquent de bloquer des millions de services légitimes. Il demande à Bruxelles une approche plus proportionnée. <a href="https://next.ink/247226/google-soppose-aux-blocages-massifs-de-sites-pirates-en-europe/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>IA et propriété intellectuelle</strong> : Google visé par une plainte d'éditeurs dont Hachette pour avoir entraîné Gemini sur des millions de livres protégés sans autorisation. En parallèle, le patron de DeepMind plaide pour un organisme d'autorégulation piloté par les États-Unis afin d'encadrer l'évaluation des modèles d'IA de pointe avant mise sur le marché. <a href="https://next.ink/brief-article/google-accuse-davoir-entraine-gemini-avec-des-millions-de-livres-sans-autorisation/">Next.ink</a> · <a href="https://www.zdnet.fr/actualites/le-patron-de-google-deepmind-veut-un-organisme-dautoregulation-mene-par-les-etats-unis-pour-lia-de-pointe-498612.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Royaume-Uni : couvre-feu numérique pour les 16-17 ans</strong> : Après l'interdiction des réseaux sociaux aux moins de 16 ans, le gouvernement britannique impose un blocage d'accès entre minuit et 6h pour les mineurs de 16 et 17 ans, ciblant les fonctions addictives des plateformes. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/apres-l-interdiction-des-reseaux-sociaux-aux-moins-de-16-ans-le-royaume-uni-annonce-un-couvre-feu-numerique-pour-les-mineurs-de-plus-de-16-ans_AD-202607150325.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Robotique open source</strong> : Nvidia et Hugging Face annoncent au salon Machina l'intégration de technologies Nvidia dans LeRobot, la plateforme open source de Hugging Face dédiée à la robotique, visant à fournir aux développeurs une stack complète. <a href="https://www.journaldunet.com/intelligence-artificielle/1552629-nous-voulons-donner-aux-developpeurs-en-robotique-tout-ce-dont-ils-ont-besoin">Journal du Net</a></li>
+<li><strong>Contrôle fiscal des terminaux de paiement : 7 500 € d'amende par appareil</strong> : Depuis le 27 juin 2026, l'administration fiscale peut contrôler les terminaux sans préavis. L'absence de présentation d'un appareil expose l'entreprise à une amende de 7 500 € par terminal. <a href="https://www.journaldunet.com/management/commercial/1552623-terminaux-de-paiement-ce-nouveau-controle-fiscal-qui-peut-couter-7-500-euros-par-appareil/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>ASML relève ses prévisions grâce au boom de l'IA</strong> : Le fabricant néerlandais de machines de photolithographie publie des résultats trimestriels supérieurs aux attentes, porté par la demande en semi-conducteurs pour l'intelligence artificielle. <a href="https://www.zdnet.fr/actualites/asml-depasse-les-attentes-au-deuxieme-trimestre-grace-au-boom-de-lia-et-releve-ses-previsions-annuelles-498619.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>Le patron de Google Deepmind appelle à une autorité de régulation des modèles d'IA puissants</strong> : Demis Hassabis propose la création d'une autorité chargée de tester les modèles d'IA les plus avancés avant leur mise sur le marché, pour anticiper les risques liés à l'IA générale. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/des-choix-qui-faconneront-la-prochaine-phase-de-l-histoire-de-notre-civilisation-le-patron-de-l-ia-de-google-appelle-a-la-creation-d-une-autorite-chargee-de-mieux-reguler-les-modeles-les-plus-puissants_AV-202607150400.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Des hackers iraniens ont exploité la géolocalisation de soldats US pour cibler des bases</strong> : Des données divulguées montrent que l'Iran a mené des opérations cyber visant à localiser des militaires américains via des vulnérabilités des réseaux téléphoniques, suscitant l'inquiétude de chercheurs et d'élus américains. <a href="https://www.bfmtv.com/tech/cybersecurite/l-iran-a-fait-preuve-d-une-grande-creativite-ces-dernieres-annees-les-hackers-iraniens-auraient-utilise-la-geolocalisation-des-telephones-de-soldats-americains-pour-cibler-et-frapper-des-bases-dans-le-golfe-persique_AN-202607150337.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Un chantier Meta contamine les eaux usées d'une ville américaine</strong> : Un contrôle de routine a détecté la bactérie multirésistante *Cupriavidus gilardii* dans les canalisations de Cheyenne, provenant d'un chantier de l'entreprise. <a href="https://siecledigital.fr/2026/07/15/un-chantier-meta-contamine-les-eaux-usees-dune-ville-americaine-avec-une-bacterie-multiresistante/">Siècle Digital</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260715-0741</guid>
-      <pubDate>Wed, 15 Jul 2026 07:41:40 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260715-1225</guid>
+      <pubDate>Wed, 15 Jul 2026 12:25:18 +0000</pubDate>
     </item>
   </channel>
 </rss>
