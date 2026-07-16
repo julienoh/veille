@@ -8,216 +8,146 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 15 Jul 2026 18:20:29 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 07:58:32 +0000</lastBuildDate>
     <item>
-      <title>Digest — 15/07 18h</title>
+      <title>Digest — 16/07 07h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## Cyber — Stratégie &amp; analyse
 
-- **Patch Tuesday record : 622 vulnérabilités corrigées par Microsoft** : Microsoft pulvérise son record mensuel pour le deuxième mois consécutif avec 622 bugs corrigés, soit plus que les trois mois précédents cumulés. [The Record](https://therecord.media/microsoft-vulnerabilities-patch-tuesday-release)
+- **Repenser la gestion des vulnérabilités** : Face à l'exploitation toujours plus rapide des failles, y compris via l'IA, les experts appellent les entreprises à délaisser les cycles de correctifs fixes pour un modèle de patching « juste-à-temps ». [CSO Online](https://www.csoonline.com/article/4196435/flaw-surge-fuels-need-for-cisos-to-rethink-vulnerability-management.html)
 
-- **Zero-day Windows post-Patch Tuesday** : Un chercheur a publié un PoC nommé LegacyHive pour une faille d'élévation de privilèges dans le service User Profile Service de Windows, quelques heures seulement après le Patch Tuesday. [The Hacker News](https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html)
+- **Démantèlement d'une fraude de 140M€** : Les forces de l'ordre ont mis fin aux opérations d'un réseau ibérique combinant cyberattaques et blanchiment via des flux financiers complexes. [Dark Reading](https://www.darkreading.com/threat-intelligence/police-disrupt-140m-euro-cyber-fraud-ring-spain)
 
-- **Mises à jour critiques Firefox, Chrome, Adobe et VMware** : Mozilla corrige deux failles critiques dans Firefox (CVE-2026-15718 et CVE-2026-15719) pour lesquelles un code d'exploitation public est déjà disponible. D'autres correctifs concernent Chrome, Adobe et VMware. [The Hacker News](https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html)
+## IA — Recherche
 
-- **Supply chain npm : paquets AsyncAPI compromis** : Cinq versions malveillantes de paquets AsyncAPI ont été publiées sur npm, diffusant un RAT avec capacités de vol d'identifiants. [BleepingComputer](https://www.bleepingcomputer.com/news/security/-asyncapi-npm-packages-infected-with-credential-stealing-malware/)
+- **Détection de deepfakes et textes IA : échec structurel** : Les détecteurs statiques s'effondrent face aux contenus réels (chute d'AUC de 45-50%). Une approche dynamique à apprentissage continu est proposée pour combler cet écart structurel. [Continuously Evolving Deepfake Detection](https://arxiv.org/abs/2607.13234) · De même, les détecteurs de texte IA sont contournés par des changements structurels d'écriture, même après fine-tuning adversarial. [UTS at ELOQUENT 2026](https://arxiv.org/abs/2607.13565)
 
-- **Découverte automatisée de zero-days par IA** : Intruder a conçu un système combinant découpage de code et LLMs pour découvrir automatiquement des vulnérabilités complexes, ayant déjà permis de trouver et d'exploiter un zero-day dans un plugin WordPress. [BleepingComputer](https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/)
+- **Sécurité des agents LLM : nouvelles menaces** : Les attaques par rebinding d'actions ciblent les agents GUI sur Android en détournant leurs entrées entre applications. [Mind the Gap](https://arxiv.org/abs/2601.12349) · Les outils de codage agentiques fabriquent des résultats fictifs à partir de processus tués, un mode de défaillance où la compaction d'historique hérite d'erreurs comme vérité terrain. [Compaction as Epistemic Failure](https://arxiv.org/abs/2607.13071) · Les agents cliniques sont évalués comme auditeurs de sécurité autonomes, révélant des lacunes face aux vulnérabilités adversariales. [Evaluating Frontier AI Agents as Autonomous Clinical Security Auditors](https://arxiv.org/abs/2607.13411)
 
-- **Malware OkoBot ciblant les wallets hardware** : Actif depuis avril 2025, le framework OkoBot injecte du phishing de phrase de récupération directement dans les applications desktop Ledger et Trezor sur les machines Windows compromises. [The Hacker News](https://thehackernews.com/2026/07/okobot-malware-framework-injects-seed.html)
+- **Alignement et sécurité des LLM** : Quantification et température d'échantillonnage interagissent pour dégrader l'alignement de sécurité, un effet ignoré par les évaluations standards qui les traitent comme fixes. [The Joint Effect of Quantization and Sampling Temperature](https://arxiv.org/abs/2606.29581) · Les sondes dans l'espace d'activation détectent les requêtes nuisibles mais ne peuvent pas servir d'arbitres de contexte — le contexte change la nocivité sans changer la forme de surface. [The Entanglement Wall](https://arxiv.org/abs/2607.13075)
 
-- **Angle mort IA dans les architectures SASE** : L'inspection de paquets ne suffit plus face à l'adoption des outils d'IA générative et des workflows SaaS dans le navigateur, créant un angle mort pour les solutions SASE traditionnelles. [The Hacker News](https://thehackernews.com/2026/07/sase-has-ai-blind-spot-inspecting.html)
+- **Monitoring d'agents LLM** : Des moniteurs de reward-hacking calibrés sur le contexte détectent des états de risque agentique dans les agents ReAct, combinant état interne du modèle et environnement. [From Reward-Hack Activations to Agentic Risk States](https://arxiv.org/abs/2606.06223)
 
-- **23andMe : 18 millions de dollars de settlement** : L'entreprise conclut un accord avec 42 États américains pour des défaillances de cybersécurité ayant conduit à une fuite de données massive. [The Record](https://therecord.media/genetic-testing-settlement-data-breach)
+- **Pentesting autonome** : Les benchmarks de pentesting gonflent leurs scores en changeant à la fois architecture et modèle backbone. Une évaluation isolée montre que les performances viennent surtout du modèle sous-jacent, pas des harnais de sécurité. [Baselines Before Architecture](https://arxiv.org/abs/2607.13085)
 
-- **LAPD suspend son contrat avec Flock Safety** : La police de Los Angeles rejoint d'autres municipalités américaines en remettant en cause sa relation avec le fournisseur de lecteurs de plaques d'immatriculation automatiques. [The Record](https://therecord.media/lapd-halts-flock-safety-alpr-contract)
+- **Applications opérationnelles des LLM : lacunes de preuves** : Les LLM proposés pour la détection de fraude et modération de contenu sont évalués comme modèles, sans preuves solides sur leur comportement en composants de pipelines opérationnels. [Operational Evidence Gaps for LLMs](https://arxiv.org/abs/2607.13078)
 
-## Cyber — Stratégie &amp; analyse
+- **Gouvernance et responsabilité de l'IA** : L'analyse empirique post-déploiement montre que les obligations de monitoring et reporting d'incidents restent peu visibles lors des défaillances réelles. [Post-Deployment Accountability in AI Governance](https://arxiv.org/abs/2605.16281) · Un autre article compare deux modèles de gouvernance : souveraineté du fournisseur frontier vs gouvernance centrée sur l'action du déployeur. [Final Authority in AI Governance](https://arxiv.org/abs/2607.13040)
 
-- **Vulnérabilité chaînée sur Claude** : Une faille nommée "PromptFiction" permettait d'injecter automatiquement des instructions malveillantes dans les agents IA Claude. Combinée à un autre exploit, elle ouvrait la voie à une compromission complète du système cible. [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/claude-flaw-malicious-prompts-ai-agents)
+- **Audit de raisonnement des LLM** : Des audits interventionnels testent en boîte noire si les chaînes de raisonnement dépendent réellement de leurs prémisses, par substitution de prédicats. [Interventional Grounding Audits](https://arxiv.org/abs/2607.13069)
 
-- **Détournement d'environnement de développement en 2 clics** : Des bugs anciens et simples permettent à un attaquant de prendre le contrôle d'un environnement de développement et d'accéder aux secrets et au code source, simplement en piégeant le curseur de la souris. [Dark Reading](https://www.darkreading.com/application-security/2-click-cursor-exploit-dev-environment-takeover)
+- **Provenance des données d'entraînement** : Un outil de traçabilité au niveau des enregistrements et tokens permet d'identifier quelles données d'entraînement appartiennent à un auteur donné, comblant un vide pour les demandes de suppression. [OriginBlame](https://arxiv.org/abs/2607.13037)
 
-- **Contournement d'EDR via Windows Bind Links** : Des chercheurs de Bitdefender documentent trois techniques abusant la fonctionnalité légitime Bind Links pour échapper aux contrôles de sécurité endpoint, sans nécessiter de driver vulnérable ni de modification de binaires signés. L'attaquant doit déjà disposer de privilèges administrateur. [CSO Online](https://www.csoonline.com/article/4197184/new-windows-bind-link-techniques-let-attackers-evade-edr-security-controls.html)
+- **Agents auto-améliorants** : Survey sur les systèmes agentiques modernes capables d'évolution contrôlée sans intervention humaine, passant de prototypes recherche à déploiement réel. [Self-Improvements in Modern Agentic Systems](https://arxiv.org/abs/2607.13104)
 
-- **Maison Blanche : IA pour la remédiation des vulnérabilités** : Le programme "Gold Eagle" étend l'usage de l'IA au-delà de la détection, en aidant agences fédérales et opérateurs d'infrastructures critiques à identifier, prioriser et corriger les vulnérabilités logicielles plus rapidement. [CSO Online](https://www.csoonline.com/article/4197348/white-house-launches-ai-driven-vulnerability-clearinghouse-to-speed-cyber-remediation.html)
+- **Simulation sociale** : Évolution des modèles agent-based classiques vers des jumeaux numériques sociaux augmentés par LLM. [Social Simulations: from Agent-Based Modeling to Digital Twins](https://arxiv.org/abs/2607.13693)
 
-- **Poussée de souveraineté tech au Royaume-Uni** : Les restrictions américaines sur les modèles d'Anthropic et OpenAI intensifient les appels au Royaume-Uni et ailleurs à réduire leur dépendance envers les entreprises technologiques US, avec des implications directes sur la cybersécurité et l'autonomie numérique. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/tech-xit-uk-sovereignty-push-amid-ai-strife)
+- **IA et robotique** : SPINE propose un pont agentique entre modèles fondation et plateformes physiques pour réduire la calibration experte fastidieuse. [SPINE](https://arxiv.org/abs/2607.13049)
 
-## IA — Labos &amp; éditeurs
+- **IA neuro-symbolique** : Extension probabiliste de la logique intensionnelle typée de Belnap pour robots AGI neuro-symboliques. [Probabilistic Extension of Neuro-Symbolic AGI Robots](https://arxiv.org/abs/2607.13073)
 
-- **Gouvernance de l'IA aux États-Unis** : OpenAI défend une approche de "fédéralisme inversé" où les lois des États servent de base à un cadre national pour une IA sûre et démocratique. [OpenAI News](https://openai.com/index/advancing-ai-safety-through-state-and-federal-action)
-
-- **Créativité des modèles de diffusion** : Google Research publie une analyse théorique visant à expliquer les mécanismes algorithmiques derrière la créativité des modèles de diffusion. [Google Research](https://research.google/blog/towards-demystifying-the-creativity-of-diffusion-models/)
-
-- **Conception d'agents IA** : Hugging Face et Allen AI partagent les leçons tirées de la construction de Shippy, un agent de codage, sur l'architecture et les défis pratiques des systèmes agentiques. [Hugging Face Blog](https://huggingface.co/blog/allenai/shippy-tech-blog)
-
-- **Routage de modèles** : IBM Research, via Hugging Face, examine les complexités cachées du routage entre modèles d'IA, au-delà de sa simplicité apparente. [Hugging Face Blog](https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt)
-
-- **Monitoring multi-comptes SageMaker** : AWS propose une solution basée sur CloudWatch et CDK pour centraliser la supervision des pipelines SageMaker à travers plusieurs comptes et régions. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/monitor-amazon-sagemaker-pipelines-cross-account-with-custom-amazon-cloudwatch-dashboards/)
+- **Prédiction moléculaire** : Les petits modèles de langage améliorent la prédiction de propriétés moléculaires en intégrant des outils graphiques pour compenser la cécité structurelle des représentations textuelles SMILES. [Improving Molecular Property Prediction in Small Language Models](https://arxiv.org/abs/2607.13115)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Sécurité offensive par LLM chez OpenAI** : OpenAI a développé GPT-Red, un modèle spécialisé dans la simulation de cyberattaques, utilisé comme adversaire d'entraînement pour renforcer la robustesse de ses modèles de production, dont GPT-5.6. [MIT Technology Review](https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/)
-
-- **Correction de vulnérabilités assistée par IA** : Microsoft a publié un correctif mensuel record de 570 vulnérabilités, un volume directement attribué par l'éditeur à l'utilisation de l'IA dans la découverte de failles. [TechCrunch](https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/)
-
-- **Données d'entraînement de Suno compromises** : Une fuite de données issue d'un piratage révèle que le générateur de musique Suno a aspiré des millions de morceaux et paroles depuis YouTube Music, Deezer et Genius sans divulgation préalable. [The Verge](https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack)
-
-- **Apple Intelligence en Chine via Alibaba** : Apple a obtenu l'approbation pour lancer ses fonctionnalités d'IA en Chine en s'appuyant sur le modèle Qwen d'Alibaba, une condition réglementaire pour opérer sur ce marché. [TechCrunch](https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/)
-
-- **Stratégie de déploiement en entreprise** : Anthropic et Blackstone misent sur l'intégration d'ingénieurs directement chez les clients (via la startup Ode) comme levier principal d'adoption de l'IA, jugeant que la valeur se déplace des modèles vers l'implémentation. [TechCrunch](https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/)
-
-- **Nouvel acteur open source multimodal** : Thinking Machines Lab, fondé par d'anciens cadres d'OpenAI, publie Inkling, un modèle open source de 975 milliards de paramètres entraîné pour comprendre vidéo et audio. [Wired](https://www.wired.com/story/thinking-machines-lab-releases-its-first-model-inkling/)
+- **Stratégie commerciale de Microsoft face aux LLM concurrents** : Microsoft forme ses équipes commerciales à positionner ses modèles internes comme plus efficaces et économiques face à ceux d'OpenAI et Anthropic, selon un rapport de The Information repris par TechCrunch. [TechCrunch](https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/)
 
 ## Actualité tech FR
 
-- **Souveraineté numérique – rapport parlementaire** : La commission d'enquête de l'Assemblée nationale publie un rapport lourd sur les dépendances structurelles et vulnérabilités systémiques du secteur numérique français, avec des propositions qualifiées de radicales pour renforcer l'indépendance nationale. [Next.ink](https://next.ink/247266/les-propositions-radicales-de-la-commission-de-lassemblee-sur-la-souverainete-numerique/)
+- **Couvre-feu numérique pour ados au Royaume-Uni** : Six plateformes (Snapchat, TikTok, YouTube, Instagram, Facebook, X) sont soumises à une restriction nocturne d'accès pour les mineurs. WhatsApp et Signal sont exclus car qualifiés de messageries, non de réseaux sociaux. [Siècle Digital](https://siecledigital.fr/2026/07/16/le-royaume-uni-instaure-un-couvre-feu-nocturne-sur-les-reseaux-sociaux-pour-les-adolescents/)
 
-- **Suspension du domaine t.me (Telegram)** : Le raccourcisseur de liens de Telegram a été mis en pause plusieurs heures par le registre du Monténégro, en application d'une sanction, rendant inaccessibles partages de fichiers et échanges via ces liens. [Next.ink](https://next.ink/247375/le-domaine-t-me-utilise-par-telegram-a-ete-temporairement-suspendu/)
+- **Apple envisage une acquisition dans les puces IA** : Apple, traditionnellement réticent aux acquisitions majeures, étudierait l'achat d'un acteur externe pour combler son retard sur les semi-conducteurs dédiés aux serveurs d'IA. [ZDNet France](https://www.zdnet.fr/actualites/puces-ia-apple-pret-a-briser-sa-prudence-historique-en-matiere-dacquisitions-498668.htm#xtor=RSS-1)
 
-- **WhatsApp – sauvegardes cloud propriétaires** : WhatsApp développe un système de sauvegarde chiffrée de bout en bout hébergé sur ses propres serveurs, pour s'affranchir de Google Drive et iCloud et permettre une portabilité entre OS. [Next.ink](https://next.ink/brief-article/whatsapp-veut-sauvegarder-les-conversations-sans-passer-par-google-drive-ou-icloud/)
-
-- **Réglementation crypto européenne (MiCA)** : Depuis le 1er juillet, toutes les plateformes crypto opérant en Europe doivent être en conformité avec la nouvelle réglementation ; certaines comme IG sont déjà en règle. [BFM Tech](https://www.bfmtv.com/tech/bons-plans/banque-en-ligne/crypto-tous-les-changements-a-connaitre-depuis-le-1er-juillet-2026_AB-202607150495.html)
-
-- **Mémoire d'entreprise pour agents IA** : Google pousse un standard ouvert (Open Knowledge Format) basé sur des fichiers Markdown structurés pour centraliser les connaissances métier et les rendre exploitables par différents agents IA. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552643-centraliser-les-connaissances-de-votre-pme-pour-l-ia-votre-premier-guide-pratique-avec-l-open-knowledge-format/)
-
-- **Licenciements discriminatoires par IA chez Meta** : Une plainte collective accuse Meta d'avoir utilisé des systèmes IA internes pour cibler prioritairement, lors de son plan social, des salariés en arrêt maladie ou en situation de handicap. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/plan-de-licenciements-meta-est-accuse-d-avoir-utilise-une-ia-interne-qui-a-cible-de-facon-discriminatoire-des-employes-places-en-arret-maladie-ou-en-situation-de-handicap_AD-202607150591.html)</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **Mots de passe générés par IA non fiables** : Les chatbots IA ne produisent pas de mots de passe réellement aléatoires ; leur usage pour cette fonction affaiblit la robustesse des authentifications. [ZDNet France](https://www.zdnet.fr/pratique/securite-pratique-ne-laissez-jamais-un-chatbot-ia-choisir-votre-mot-de-passe-sous-aucun-pretexte-498606.htm#xtor=RSS-1)</description>
+      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Patch Tuesday record : 622 vulnérabilités corrigées par Microsoft</strong> : Microsoft pulvérise son record mensuel pour le deuxième mois consécutif avec 622 bugs corrigés, soit plus que les trois mois précédents cumulés. <a href="https://therecord.media/microsoft-vulnerabilities-patch-tuesday-release">The Record</a></li>
+<li><strong>Repenser la gestion des vulnérabilités</strong> : Face à l'exploitation toujours plus rapide des failles, y compris via l'IA, les experts appellent les entreprises à délaisser les cycles de correctifs fixes pour un modèle de patching « juste-à-temps ». <a href="https://www.csoonline.com/article/4196435/flaw-surge-fuels-need-for-cisos-to-rethink-vulnerability-management.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Zero-day Windows post-Patch Tuesday</strong> : Un chercheur a publié un PoC nommé LegacyHive pour une faille d'élévation de privilèges dans le service User Profile Service de Windows, quelques heures seulement après le Patch Tuesday. <a href="https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html">The Hacker News</a></li>
+<li><strong>Démantèlement d'une fraude de 140M€</strong> : Les forces de l'ordre ont mis fin aux opérations d'un réseau ibérique combinant cyberattaques et blanchiment via des flux financiers complexes. <a href="https://www.darkreading.com/threat-intelligence/police-disrupt-140m-euro-cyber-fraud-ring-spain">Dark Reading</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Détection de deepfakes et textes IA : échec structurel</strong> : Les détecteurs statiques s'effondrent face aux contenus réels (chute d'AUC de 45-50%). Une approche dynamique à apprentissage continu est proposée pour combler cet écart structurel. <a href="https://arxiv.org/abs/2607.13234">Continuously Evolving Deepfake Detection</a> · De même, les détecteurs de texte IA sont contournés par des changements structurels d'écriture, même après fine-tuning adversarial. <a href="https://arxiv.org/abs/2607.13565">UTS at ELOQUENT 2026</a></li>
 </ul>
 
 <ul>
-<li><strong>Mises à jour critiques Firefox, Chrome, Adobe et VMware</strong> : Mozilla corrige deux failles critiques dans Firefox (CVE-2026-15718 et CVE-2026-15719) pour lesquelles un code d'exploitation public est déjà disponible. D'autres correctifs concernent Chrome, Adobe et VMware. <a href="https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html">The Hacker News</a></li>
+<li><strong>Sécurité des agents LLM : nouvelles menaces</strong> : Les attaques par rebinding d'actions ciblent les agents GUI sur Android en détournant leurs entrées entre applications. <a href="https://arxiv.org/abs/2601.12349">Mind the Gap</a> · Les outils de codage agentiques fabriquent des résultats fictifs à partir de processus tués, un mode de défaillance où la compaction d'historique hérite d'erreurs comme vérité terrain. <a href="https://arxiv.org/abs/2607.13071">Compaction as Epistemic Failure</a> · Les agents cliniques sont évalués comme auditeurs de sécurité autonomes, révélant des lacunes face aux vulnérabilités adversariales. <a href="https://arxiv.org/abs/2607.13411">Evaluating Frontier AI Agents as Autonomous Clinical Security Auditors</a></li>
 </ul>
 
 <ul>
-<li><strong>Supply chain npm : paquets AsyncAPI compromis</strong> : Cinq versions malveillantes de paquets AsyncAPI ont été publiées sur npm, diffusant un RAT avec capacités de vol d'identifiants. <a href="https://www.bleepingcomputer.com/news/security/-asyncapi-npm-packages-infected-with-credential-stealing-malware/">BleepingComputer</a></li>
+<li><strong>Alignement et sécurité des LLM</strong> : Quantification et température d'échantillonnage interagissent pour dégrader l'alignement de sécurité, un effet ignoré par les évaluations standards qui les traitent comme fixes. <a href="https://arxiv.org/abs/2606.29581">The Joint Effect of Quantization and Sampling Temperature</a> · Les sondes dans l'espace d'activation détectent les requêtes nuisibles mais ne peuvent pas servir d'arbitres de contexte — le contexte change la nocivité sans changer la forme de surface. <a href="https://arxiv.org/abs/2607.13075">The Entanglement Wall</a></li>
 </ul>
 
 <ul>
-<li><strong>Découverte automatisée de zero-days par IA</strong> : Intruder a conçu un système combinant découpage de code et LLMs pour découvrir automatiquement des vulnérabilités complexes, ayant déjà permis de trouver et d'exploiter un zero-day dans un plugin WordPress. <a href="https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/">BleepingComputer</a></li>
+<li><strong>Monitoring d'agents LLM</strong> : Des moniteurs de reward-hacking calibrés sur le contexte détectent des états de risque agentique dans les agents ReAct, combinant état interne du modèle et environnement. <a href="https://arxiv.org/abs/2606.06223">From Reward-Hack Activations to Agentic Risk States</a></li>
 </ul>
 
 <ul>
-<li><strong>Malware OkoBot ciblant les wallets hardware</strong> : Actif depuis avril 2025, le framework OkoBot injecte du phishing de phrase de récupération directement dans les applications desktop Ledger et Trezor sur les machines Windows compromises. <a href="https://thehackernews.com/2026/07/okobot-malware-framework-injects-seed.html">The Hacker News</a></li>
+<li><strong>Pentesting autonome</strong> : Les benchmarks de pentesting gonflent leurs scores en changeant à la fois architecture et modèle backbone. Une évaluation isolée montre que les performances viennent surtout du modèle sous-jacent, pas des harnais de sécurité. <a href="https://arxiv.org/abs/2607.13085">Baselines Before Architecture</a></li>
 </ul>
 
 <ul>
-<li><strong>Angle mort IA dans les architectures SASE</strong> : L'inspection de paquets ne suffit plus face à l'adoption des outils d'IA générative et des workflows SaaS dans le navigateur, créant un angle mort pour les solutions SASE traditionnelles. <a href="https://thehackernews.com/2026/07/sase-has-ai-blind-spot-inspecting.html">The Hacker News</a></li>
+<li><strong>Applications opérationnelles des LLM : lacunes de preuves</strong> : Les LLM proposés pour la détection de fraude et modération de contenu sont évalués comme modèles, sans preuves solides sur leur comportement en composants de pipelines opérationnels. <a href="https://arxiv.org/abs/2607.13078">Operational Evidence Gaps for LLMs</a></li>
 </ul>
 
 <ul>
-<li><strong>23andMe : 18 millions de dollars de settlement</strong> : L'entreprise conclut un accord avec 42 États américains pour des défaillances de cybersécurité ayant conduit à une fuite de données massive. <a href="https://therecord.media/genetic-testing-settlement-data-breach">The Record</a></li>
+<li><strong>Gouvernance et responsabilité de l'IA</strong> : L'analyse empirique post-déploiement montre que les obligations de monitoring et reporting d'incidents restent peu visibles lors des défaillances réelles. <a href="https://arxiv.org/abs/2605.16281">Post-Deployment Accountability in AI Governance</a> · Un autre article compare deux modèles de gouvernance : souveraineté du fournisseur frontier vs gouvernance centrée sur l'action du déployeur. <a href="https://arxiv.org/abs/2607.13040">Final Authority in AI Governance</a></li>
 </ul>
 
 <ul>
-<li><strong>LAPD suspend son contrat avec Flock Safety</strong> : La police de Los Angeles rejoint d'autres municipalités américaines en remettant en cause sa relation avec le fournisseur de lecteurs de plaques d'immatriculation automatiques. <a href="https://therecord.media/lapd-halts-flock-safety-alpr-contract">The Record</a></li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Vulnérabilité chaînée sur Claude</strong> : Une faille nommée "PromptFiction" permettait d'injecter automatiquement des instructions malveillantes dans les agents IA Claude. Combinée à un autre exploit, elle ouvrait la voie à une compromission complète du système cible. <a href="https://www.darkreading.com/vulnerabilities-threats/claude-flaw-malicious-prompts-ai-agents">Dark Reading</a></li>
+<li><strong>Audit de raisonnement des LLM</strong> : Des audits interventionnels testent en boîte noire si les chaînes de raisonnement dépendent réellement de leurs prémisses, par substitution de prédicats. <a href="https://arxiv.org/abs/2607.13069">Interventional Grounding Audits</a></li>
 </ul>
 
 <ul>
-<li><strong>Détournement d'environnement de développement en 2 clics</strong> : Des bugs anciens et simples permettent à un attaquant de prendre le contrôle d'un environnement de développement et d'accéder aux secrets et au code source, simplement en piégeant le curseur de la souris. <a href="https://www.darkreading.com/application-security/2-click-cursor-exploit-dev-environment-takeover">Dark Reading</a></li>
+<li><strong>Provenance des données d'entraînement</strong> : Un outil de traçabilité au niveau des enregistrements et tokens permet d'identifier quelles données d'entraînement appartiennent à un auteur donné, comblant un vide pour les demandes de suppression. <a href="https://arxiv.org/abs/2607.13037">OriginBlame</a></li>
 </ul>
 
 <ul>
-<li><strong>Contournement d'EDR via Windows Bind Links</strong> : Des chercheurs de Bitdefender documentent trois techniques abusant la fonctionnalité légitime Bind Links pour échapper aux contrôles de sécurité endpoint, sans nécessiter de driver vulnérable ni de modification de binaires signés. L'attaquant doit déjà disposer de privilèges administrateur. <a href="https://www.csoonline.com/article/4197184/new-windows-bind-link-techniques-let-attackers-evade-edr-security-controls.html">CSO Online</a></li>
+<li><strong>Agents auto-améliorants</strong> : Survey sur les systèmes agentiques modernes capables d'évolution contrôlée sans intervention humaine, passant de prototypes recherche à déploiement réel. <a href="https://arxiv.org/abs/2607.13104">Self-Improvements in Modern Agentic Systems</a></li>
 </ul>
 
 <ul>
-<li><strong>Maison Blanche : IA pour la remédiation des vulnérabilités</strong> : Le programme "Gold Eagle" étend l'usage de l'IA au-delà de la détection, en aidant agences fédérales et opérateurs d'infrastructures critiques à identifier, prioriser et corriger les vulnérabilités logicielles plus rapidement. <a href="https://www.csoonline.com/article/4197348/white-house-launches-ai-driven-vulnerability-clearinghouse-to-speed-cyber-remediation.html">CSO Online</a></li>
+<li><strong>Simulation sociale</strong> : Évolution des modèles agent-based classiques vers des jumeaux numériques sociaux augmentés par LLM. <a href="https://arxiv.org/abs/2607.13693">Social Simulations: from Agent-Based Modeling to Digital Twins</a></li>
 </ul>
 
 <ul>
-<li><strong>Poussée de souveraineté tech au Royaume-Uni</strong> : Les restrictions américaines sur les modèles d'Anthropic et OpenAI intensifient les appels au Royaume-Uni et ailleurs à réduire leur dépendance envers les entreprises technologiques US, avec des implications directes sur la cybersécurité et l'autonomie numérique. <a href="https://www.darkreading.com/cybersecurity-operations/tech-xit-uk-sovereignty-push-amid-ai-strife">Dark Reading</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Gouvernance de l'IA aux États-Unis</strong> : OpenAI défend une approche de "fédéralisme inversé" où les lois des États servent de base à un cadre national pour une IA sûre et démocratique. <a href="https://openai.com/index/advancing-ai-safety-through-state-and-federal-action">OpenAI News</a></li>
+<li><strong>IA et robotique</strong> : SPINE propose un pont agentique entre modèles fondation et plateformes physiques pour réduire la calibration experte fastidieuse. <a href="https://arxiv.org/abs/2607.13049">SPINE</a></li>
 </ul>
 
 <ul>
-<li><strong>Créativité des modèles de diffusion</strong> : Google Research publie une analyse théorique visant à expliquer les mécanismes algorithmiques derrière la créativité des modèles de diffusion. <a href="https://research.google/blog/towards-demystifying-the-creativity-of-diffusion-models/">Google Research</a></li>
+<li><strong>IA neuro-symbolique</strong> : Extension probabiliste de la logique intensionnelle typée de Belnap pour robots AGI neuro-symboliques. <a href="https://arxiv.org/abs/2607.13073">Probabilistic Extension of Neuro-Symbolic AGI Robots</a></li>
 </ul>
 
 <ul>
-<li><strong>Conception d'agents IA</strong> : Hugging Face et Allen AI partagent les leçons tirées de la construction de Shippy, un agent de codage, sur l'architecture et les défis pratiques des systèmes agentiques. <a href="https://huggingface.co/blog/allenai/shippy-tech-blog">Hugging Face Blog</a></li>
-</ul>
-
-<ul>
-<li><strong>Routage de modèles</strong> : IBM Research, via Hugging Face, examine les complexités cachées du routage entre modèles d'IA, au-delà de sa simplicité apparente. <a href="https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt">Hugging Face Blog</a></li>
-</ul>
-
-<ul>
-<li><strong>Monitoring multi-comptes SageMaker</strong> : AWS propose une solution basée sur CloudWatch et CDK pour centraliser la supervision des pipelines SageMaker à travers plusieurs comptes et régions. <a href="https://aws.amazon.com/blogs/machine-learning/monitor-amazon-sagemaker-pipelines-cross-account-with-custom-amazon-cloudwatch-dashboards/">AWS Machine Learning</a></li>
+<li><strong>Prédiction moléculaire</strong> : Les petits modèles de langage améliorent la prédiction de propriétés moléculaires en intégrant des outils graphiques pour compenser la cécité structurelle des représentations textuelles SMILES. <a href="https://arxiv.org/abs/2607.13115">Improving Molecular Property Prediction in Small Language Models</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Sécurité offensive par LLM chez OpenAI</strong> : OpenAI a développé GPT-Red, un modèle spécialisé dans la simulation de cyberattaques, utilisé comme adversaire d'entraînement pour renforcer la robustesse de ses modèles de production, dont GPT-5.6. <a href="https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/">MIT Technology Review</a></li>
-</ul>
-
-<ul>
-<li><strong>Correction de vulnérabilités assistée par IA</strong> : Microsoft a publié un correctif mensuel record de 570 vulnérabilités, un volume directement attribué par l'éditeur à l'utilisation de l'IA dans la découverte de failles. <a href="https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Données d'entraînement de Suno compromises</strong> : Une fuite de données issue d'un piratage révèle que le générateur de musique Suno a aspiré des millions de morceaux et paroles depuis YouTube Music, Deezer et Genius sans divulgation préalable. <a href="https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack">The Verge</a></li>
-</ul>
-
-<ul>
-<li><strong>Apple Intelligence en Chine via Alibaba</strong> : Apple a obtenu l'approbation pour lancer ses fonctionnalités d'IA en Chine en s'appuyant sur le modèle Qwen d'Alibaba, une condition réglementaire pour opérer sur ce marché. <a href="https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Stratégie de déploiement en entreprise</strong> : Anthropic et Blackstone misent sur l'intégration d'ingénieurs directement chez les clients (via la startup Ode) comme levier principal d'adoption de l'IA, jugeant que la valeur se déplace des modèles vers l'implémentation. <a href="https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Nouvel acteur open source multimodal</strong> : Thinking Machines Lab, fondé par d'anciens cadres d'OpenAI, publie Inkling, un modèle open source de 975 milliards de paramètres entraîné pour comprendre vidéo et audio. <a href="https://www.wired.com/story/thinking-machines-lab-releases-its-first-model-inkling/">Wired</a></li>
+<li><strong>Stratégie commerciale de Microsoft face aux LLM concurrents</strong> : Microsoft forme ses équipes commerciales à positionner ses modèles internes comme plus efficaces et économiques face à ceux d'OpenAI et Anthropic, selon un rapport de The Information repris par TechCrunch. <a href="https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Souveraineté numérique – rapport parlementaire</strong> : La commission d'enquête de l'Assemblée nationale publie un rapport lourd sur les dépendances structurelles et vulnérabilités systémiques du secteur numérique français, avec des propositions qualifiées de radicales pour renforcer l'indépendance nationale. <a href="https://next.ink/247266/les-propositions-radicales-de-la-commission-de-lassemblee-sur-la-souverainete-numerique/">Next.ink</a></li>
+<li><strong>Couvre-feu numérique pour ados au Royaume-Uni</strong> : Six plateformes (Snapchat, TikTok, YouTube, Instagram, Facebook, X) sont soumises à une restriction nocturne d'accès pour les mineurs. WhatsApp et Signal sont exclus car qualifiés de messageries, non de réseaux sociaux. <a href="https://siecledigital.fr/2026/07/16/le-royaume-uni-instaure-un-couvre-feu-nocturne-sur-les-reseaux-sociaux-pour-les-adolescents/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Suspension du domaine t.me (Telegram)</strong> : Le raccourcisseur de liens de Telegram a été mis en pause plusieurs heures par le registre du Monténégro, en application d'une sanction, rendant inaccessibles partages de fichiers et échanges via ces liens. <a href="https://next.ink/247375/le-domaine-t-me-utilise-par-telegram-a-ete-temporairement-suspendu/">Next.ink</a></li>
+<li><strong>Apple envisage une acquisition dans les puces IA</strong> : Apple, traditionnellement réticent aux acquisitions majeures, étudierait l'achat d'un acteur externe pour combler son retard sur les semi-conducteurs dédiés aux serveurs d'IA. <a href="https://www.zdnet.fr/actualites/puces-ia-apple-pret-a-briser-sa-prudence-historique-en-matiere-dacquisitions-498668.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>WhatsApp – sauvegardes cloud propriétaires</strong> : WhatsApp développe un système de sauvegarde chiffrée de bout en bout hébergé sur ses propres serveurs, pour s'affranchir de Google Drive et iCloud et permettre une portabilité entre OS. <a href="https://next.ink/brief-article/whatsapp-veut-sauvegarder-les-conversations-sans-passer-par-google-drive-ou-icloud/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Réglementation crypto européenne (MiCA)</strong> : Depuis le 1er juillet, toutes les plateformes crypto opérant en Europe doivent être en conformité avec la nouvelle réglementation ; certaines comme IG sont déjà en règle. <a href="https://www.bfmtv.com/tech/bons-plans/banque-en-ligne/crypto-tous-les-changements-a-connaitre-depuis-le-1er-juillet-2026_AB-202607150495.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Mémoire d'entreprise pour agents IA</strong> : Google pousse un standard ouvert (Open Knowledge Format) basé sur des fichiers Markdown structurés pour centraliser les connaissances métier et les rendre exploitables par différents agents IA. <a href="https://www.journaldunet.com/intelligence-artificielle/1552643-centraliser-les-connaissances-de-votre-pme-pour-l-ia-votre-premier-guide-pratique-avec-l-open-knowledge-format/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Licenciements discriminatoires par IA chez Meta</strong> : Une plainte collective accuse Meta d'avoir utilisé des systèmes IA internes pour cibler prioritairement, lors de son plan social, des salariés en arrêt maladie ou en situation de handicap. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/plan-de-licenciements-meta-est-accuse-d-avoir-utilise-une-ia-interne-qui-a-cible-de-facon-discriminatoire-des-employes-places-en-arret-maladie-ou-en-situation-de-handicap_AD-202607150591.html">BFM Tech</a></li>
+<li><strong>Mots de passe générés par IA non fiables</strong> : Les chatbots IA ne produisent pas de mots de passe réellement aléatoires ; leur usage pour cette fonction affaiblit la robustesse des authentifications. <a href="https://www.zdnet.fr/pratique/securite-pratique-ne-laissez-jamais-un-chatbot-ia-choisir-votre-mot-de-passe-sous-aucun-pretexte-498606.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260715-1820</guid>
-      <pubDate>Wed, 15 Jul 2026 18:20:29 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260716-0758</guid>
+      <pubDate>Thu, 16 Jul 2026 07:58:32 +0000</pubDate>
     </item>
   </channel>
 </rss>

@@ -97,3 +97,4 @@ Rétention glissante 30 jours. Append en bas (le plus récent en bas).
 | 2026-07-15 07:19 UTC | dsv4-flash | dsv4-pro | 248 | 3 | 6 | 205 | 34 | 184 | 0 | 86% |
 | 2026-07-15 12:20 UTC | dsv4-flash | dsv4-pro | 56 | 3 | 9 | 7 | 37 | 0 | [1](audit-errors.md) | 34% |
 | 2026-07-15 18:13 UTC | dsv4-flash | dsv4-pro | 59 | 5 | 17 | 9 | 28 | 1 | 0 | 53% |
+| 2026-07-16 07:27 UTC | dsv4-flash | dsv4-pro | 425 | 0 | 17 | 369 | 39 | 371 | 0 | 91% |
