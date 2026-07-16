@@ -8,204 +8,206 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 16 Jul 2026 12:32:07 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 18:26:42 +0000</lastBuildDate>
     <item>
-      <title>Digest — 16/07 12h</title>
+      <title>Digest — 16/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Faille critique non patchée sur aspirateurs Shark** : L'extraction d'un certificat depuis la mémoire flash d'un modèle permet d'exécuter des commandes root sur d'autres appareils de la même région AWS, exposant caméra, cartographie et mots de passe Wi-Fi en clair. Aucun correctif disponible à date. [The Hacker News](https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html)
+- **n8n — usurpation d'identité via JWT** : Sur des instances Enterprise configurées avec plusieurs émetteurs de tokens, le claim `sub` suffisait à authentifier un utilisateur sans vérifier `iss`. Un attaquant disposant d'un token valide pour un émetteur A pouvait donc s'authentifier en tant qu'utilisateur d'un émetteur B. [The Hacker News](https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html)
 
-- **Vulnérabilité critique Zoom Windows (CVE-2026-53412, CVSS 9.8)** : Permet une prise de contrôle de compte. Correctifs déployés pour Zoom Desktop Client, VDI Client et Meeting SDK pour Windows. Mise à jour urgente requise. [The Hacker News](https://thehackernews.com/2026/07/zoom-patches-critical-windows-flaw-that.html)
+- **TELEPUZ — malware modulaire distribué via ClickFix** : Actif depuis fin avril 2026, ce malware léger et modulaire est déployé via des sites infectés par des leurres ClickFix. Il est conçu pour la collecte de données et l'exécution de commandes à distance. [The Hacker News](https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html)
 
-- **Exploitation active d'Oracle E-Business Suite** : La CISA impose un correctif sous 72h pour les agences fédérales américaines. La brèche est activement exploitée ; la sévérité justifie une application immédiate dans le secteur privé également. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/)
+- **ClickLock — infostealer macOS agressif** : Ce nouveau stealer incite la victime à saisir son mot de passe dans un faux dialogue système ; en cas de refus, il tue les applications en boucle toutes les 210ms et installe deux LaunchAgents persistants. L'attaque débute par une commande à coller dans Terminal. [The Hacker News](https://thehackernews.com/2026/07/new-clicklock-macos-stealer-kills-apps.html)
 
-- **Fin de support Windows 11 24H2 et Windows 10 LTSB 2016 dans 90 jours** : Les éditions Home et Pro de 24H2 ainsi que l'Enterprise LTSB 2016 cesseront de recevoir des mises à jour. Prévoir la migration avant l'échéance pour éviter l'exposition sans correctifs. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/windows-11-24h2-home-and-pro-reach-end-of-support-in-90-days/)
+- **PhantomEnigma — sites gouvernementaux brésiliens compromis** : Plus de 20 sites officiels ont été transformés en canaux de distribution de malware via une porte dérobée non documentée. La campagne est toujours active. [The Hacker News](https://thehackernews.com/2026/07/20-hijacked-government-websites.html)
 
-- **Ransomware Spirals : compromission en moins de 24h** : Nouvel acteur observé réalisant intrusion, exfiltration et chiffrement en une journée. Délai de détection quasi nul, nécessite une capacité de réponse rapide et une segmentation efficace. [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/)
+- **Injection de données dans les agents IA** : Deux techniques sans compromission directe du modèle : un faux avis produit pousse un agent à cliquer "Acheter", un faux commentaire GitHub fait exécuter une commande arbitraire par un assistant de code. L'attaque exploite le prompt et le contexte fourni à l'agent plutôt que le modèle lui-même. [The Hacker News](https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html)
 
-- **Condamnation de membres de Scattered Spider** : Deux membres clés écopent de 5,5 ans de prison pour le piratage de Transport for London en 2024 (29 millions de livres de préjudice). Illustre la pression judiciaire croissante sur les groupes cybercriminels sophistiqués. [The Record](https://therecord.media/scattered-spider-hackers-tfl-sentenced)
+- **Agents IA — rupture du modèle de sécurité traditionnel** : Token Security souligne que les workflows de sécurité hérités ne sont pas adaptés aux agents IA. La réponse doit s'appuyer sur une base d'identité vivante et des workflows de sécurité paramétrables par les équipes. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ai-agents-broke-the-security-playbook-heres-what-replaces-it/)
 
-- **Campagne du groupe russophone UAT-11795** : Cisco Talos documente une opération financièrement motivée active depuis juin 2025, utilisant le nouveau RAT Starland et l'implant C2 WLDR. Cible les utilisateurs aux États-Unis et en Europe. [Cisco Talos](https://blog.talosintelligence.com/uat-11795-deploys-novel-starland-rat-and-bespoke-wldr-c2-implant-in-financially-motivated-campaign/)
+- **Daxin &amp; Stupig — retour d'un rootkit chinois à Taïwan** : Le rootkit kernel-mode Daxin, attribué à un acteur chinois et disparu depuis plus de 4 ans, a refait surface dans une entreprise manufacturière taïwanaise, accompagné d'une nouvelle porte dérobée nommée Stupig permettant un accès SYSTEM en pré-login. [The Hacker News](https://thehackernews.com/2026/07/daxin-resurfaces-in-taiwan-alongside.html)
 
-- **Red-teaming automatisé et limites de l'IA en offensive** : OpenAI détaille GPT-Red, un modèle automatisé de découverte d'injections de prompt, utilisé pour durcir GPT-5.6. Parallèlement, selon The Hacker News et Cisco Talos, l'IA accélère l'identification de bugs mais ne remplace pas l'humain pour la validation des preuves et la chasse aux menaces automatisée reste un équilibre à trouver entre volume de données et confiance accordée aux algorithmes. [The Hacker News (OpenAI)](https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html) · [The Hacker News](https://thehackernews.com/2026/07/ai-can-find-bugs-but-human-knowledge.html) · [Cisco Talos](https://blog.talosintelligence.com/the-hunters-paradox-is-it-time-to-embrace-automated-threat-hunting/)
+- **Sandworm — ingénierie sociale par faux CAPTCHA** : Le groupe russe cible des utilisateurs ukrainiens avec un faux CAPTCHA qui, au lieu de vérifier l'humain, leur demande de copier-coller une commande PowerShell dans leur terminal Windows. [The Record](https://therecord.media/ukraine-sandworm-hacks-captcha-powershell)
+
+- **Scattered Spider — condamnations dans le piratage de TfL** : Deux membres dirigeants du collectif ont été condamnés à 5 ans et demi de prison pour le piratage de Transport for London en 2024. [BleepingComputer](https://www.bleepingcomputer.com/news/security/scattered-spider-members-behind-transport-for-london-hack-get-five-years-in-prison/)
+
+- **23andMe — 18M$ de settlement pour défaut de protection** : L'entreprise paiera 18 millions de dollars pour mettre fin aux poursuites de 43 procureurs généraux américains concernant l'incapacité à protéger les données génétiques de ses clients. [BleepingComputer](https://www.bleepingcomputer.com/news/security/23andme-to-pay-18-million-in-new-genetics-data-breach-settlement/)
+
+- **TikTok — enquête britannique pour défaut de vérification d'âge** : L'Ofcom ouvre une enquête sur TikTok pour des manquements aux obligations de vérification d'âge, exposant des enfants à des contenus préjudiciables. [The Record](https://therecord.media/ofcom-investigation-tiktok-age-verification)
+
+- **Cycle de correctifs — Cisco Talos** : Talos publie une analyse de la dernière vague massive de correctifs, qualifiée d'inhabituellement chargée, avec un focus sur l'exploitation active. [Cisco Talos](https://blog.talosintelligence.com/begun-the-patch-wars-have/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **SharePoint on-premises ciblé activement** : La CISA alerte sur l'exploitation en cours de trois vulnérabilités SharePoint et demande un durcissement immédiat des déploiements sur site. [CSO Online](https://www.csoonline.com/article/4197775/cisa-urges-immediate-sharepoint-hardening-as-exploits-mount.html)
-
-- **Divulgation coordonnée des vulnérabilités** : La CISA et quatre agences internationales appellent les éditeurs et fournisseurs de services à formaliser leurs programmes de divulgation coordonnée pour structurer la réception des signalements externes. [CSO Online](https://www.csoonline.com/article/4197733/cisa-urges-software-vendors-to-formalize-vulnerability-disclosure-programs.html)
-
-- **Robotique et IA incarnée** : L'intégration d'une IA dans un corps robotique étend la surface d'attaque au monde physique, un angle mort dans les décisions d'achat actuelles souvent guidées par des démonstrations marketing. [CSO Online](https://www.csoonline.com/article/4197463/when-ai-gets-a-body-it-inherits-an-attack-surface.html)
-
-- **Exposition numérique des dirigeants hors SI** : Les outils d'IA facilitent l'agrégation de données personnelles exposées sur les dirigeants qui échappent au périmètre de défense traditionnel de l'entreprise, créant un risque direct de compromission et d'usurpation. [CSO Online](https://www.csoonline.com/article/4197460/the-executive-profile-your-security-team-isnt-defending.html)
+- **Vulnérabilité critique corrigée sur Zoom** : Une faille permettant la prise de contrôle de compte (ATO) sans authentification via le réseau a été corrigée par Zoom, une menace significative au vu des 300 millions d'utilisateurs quotidiens de la plateforme. [CSO Online](https://www.csoonline.com/article/4197962/zoom-patches-account-takeover-hole-2.html)
+- **Régulation de la vie privée à l'ère de l'IA** : Daniel Solove estime que le modèle de consentement individuel pour le contrôle des données personnelles est obsolète ; la priorité doit être une régulation imposant une responsabilité directe aux entreprises sur le modèle de l'industrie agroalimentaire. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/protecting-privacy-in-an-ai-era.html)
 
 ## IA — Labos &amp; éditeurs
 
-- **Biorésilience et modèles d'IA** : Google DeepMind et Isomorphic Labs détaillent leur approche conjointe pour anticiper les risques biologiques liés à l'IA, en mettant l'accent sur la conception de modèles capables de renforcer la sécurité sans freiner l'innovation. [Google DeepMind](https://deepmind.google/blog/our-approach-to-bioresilience/)
+- **NVIDIA Nemotron 3 domine le benchmark RTEB** : Le nouveau modèle d'embedding de NVIDIA prend la première place du classement RTEB, ciblant spécifiquement les performances de retrieval pour les systèmes agentiques. [Hugging Face Blog](https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb)
 
-## IA — Produits, agents &amp; dev tooling
-
-- **Fine-Tuning vs RAG en production** : n8n propose une analyse comparative de ces deux approches pour les LLM. L'article souligne que la plupart des systèmes de production ne les opposent pas, mais les combinent pour optimiser à la fois la précision contextuelle et les performances spécifiques à un domaine. [n8n Blog](https://blog.n8n.io/fine-tuning-vs-rag/)
+- **AWS livre un pattern de téléphonie pour agents vocaux** : Amazon Bedrock AgentCore et Nova 2 Sonic sont combinés pour créer un standardiste téléphonique capable de gérer de bout en bout les commandes en langage naturel, de l'accueil à la confirmation. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-a-restaurant-telephony-ai-host-with-amazon-bedrock-agentcore-and-amazon-nova-2-sonic/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Régulation européenne de Google** : l'UE impose à Google l'ouverture d'Android et de son moteur de recherche aux assistants IA et moteurs concurrents, en application du DMA. Cette décision pourrait affaiblir son contrôle sur ces deux piliers stratégiques. [The Verge](https://www.theverge.com/policy/966438/eu-google-android-ai-interoperability-search-data-dma)
+- **Confiance vs. performance dans les agents IA en production** : Selon VentureBeat, les entreprises déploient des agents IA plus vite qu'elles ne peuvent valider leur fiabilité. La moitié des 157 organisations interrogées ont déjà mis en production un agent qui a échoué face à un client malgré des évaluations internes réussies, et seulement 5% font confiance aux tests automatisés. Le problème n'est pas technique (RAG) mais de confiance dans le contexte métier fourni aux agents. [VentureBeat - Contexte](https://venturebeat.com/ai/the-ai-context-gap-enterprise-ai-organizations-have-a-trust-problem-not-a-retrieval-problem-and-most-are-still-building-the-fix) · [VentureBeat - Évaluation](https://venturebeat.com/ai/the-agent-evaluation-gap-enterprise-ai-organizations-have-a-reality-alignment-problem-not-a-coverage-problem-and-most-are-shipping-to-production-anyway)
 
-- **Agents vocaux structurés avec Patter SDK** : démonstration d'un agent téléphonique de réservation de restaurant intégrant variables dynamiques, guardrails sur chaque réponse, outils appelables et tableaux de bord de latence. L'approche illustre un pattern reproductible pour les déploiements voix en production. [MarkTechPost](https://www.marktechpost.com/2026/07/16/patter-sdk-guide-to-building-a-restaurant-booking-phone-agent-with-dynamic-variables-guardrails-latency-dashboards-and-eval-checks/)
+- **Coûts d'infrastructure IA non maîtrisés** : Les dépenses d'infrastructure IA accélèrent sans visibilité sur les coûts réels. La majorité des 107 entreprises étudiées utilisent des hyperscalers classiques mais prévoient d'investir dans du calcul spécialisé qu'elles ne maîtrisent pas encore, créant un angle mort budgétaire. [VentureBeat](https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs)
 
-- **Open source partiel de Grok Build par SpaceXAI** : publication en Rust sous licence Apache 2.0 du harness agent, de la TUI et de la couche outils de leur CLI de codage. Le modèle Grok 4.5 reste fermé et les contributions externes ne sont pas acceptées. [MarkTechPost](https://www.marktechpost.com/2026/07/15/spacexai-open-sources-grok-build-the-rust-agent-harness-tui-and-tool-layer-behind-its-coding-cli/)
+- **Apple Intelligence autorisé en Chine avec Alibaba et Baidu** : Apple a obtenu l'approbation pour lancer ses fonctionnalités IA en Chine en s'appuyant sur les modèles Qwen d'Alibaba, une condition réglementaire clé pour opérer sur ce marché. [TechCrunch](https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/)
+
+- **Kimi 3, futur modèle chinois open source de très grande taille** : Moonshot s'apprête à lancer Kimi K3, un modèle entre 2 et 3 trillions de paramètres, le plus grand modèle open source chinois, visant à rivaliser avec Opus 4.8 d'Anthropic. [TechCrunch](https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/)
+
+- **1Password intègre Claude pour l'authentification déléguée** : 1Password lance une intégration navigateur permettant à Claude d'utiliser des identifiants stockés pour accomplir des tâches multi-étapes (réservations, achats). Un pas de plus vers des agents IA agissant avec des droits d'utilisateur réels. [The Verge](https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration)
+
+- **DoorDash lance un outil CLI pour agents IA** : DoorDash ouvre en bêta un outil en ligne de commande (dd-cli) conçu pour que des développeurs et agents IA puissent passer des commandes, signalant une adaptation des services vers des interfaces machine-first. [TechCrunch](https://techcrunch.com/2026/07/16/yes-you-can-now-order-doordash-from-the-command-line/)
+
+- **Google DeepMind structure un programme de bioresilience** : DeepMind et Isomorphic Labs détaillent un programme visant à prévenir le mésusage de l'IA en biologie tout en accélérant la réponse aux épidémies, avec plus de 15 partenariats gouvernementaux et de biosécurité déjà établis. [AI News](https://www.artificialintelligence-news.com/news/examining-google-deepmind-ai-bioresilience-push/)
 
 ## Actualité tech FR
 
-- **Pegasus : l'enquête française progresse sur la compromission de ministres** : Des traces de compromission par le logiciel espion Pegasus, lié au Maroc, ont été retrouvées sur les smartphones d'anciens ministres français en poste entre 2019 et 2021. Un juge d'instruction parisien a classé sept ministres parmi les victimes potentielles en 2023. [Next.ink](https://next.ink/brief-article/pegasus-de-nouveaux-details-sur-lutilisation-du-logiciel-par-le-maroc-contre-la-france/)
+- **DMA : Bruxelles force l'ouverture d'Android** : La Commission détaille ses exigences pour contraindre Google à ouvrir Android aux assistants IA et moteurs de recherche tiers, en application du DMA. [Next.ink](https://next.ink/247591/bruxelles-impose-a-google-douvrir-android-aux-assistants-ia-et-ses-donnees-de-recherche/)
 
-- **Patch Tuesday record : des postes Dell surchauffent après la mise à jour** : La mise à jour KB5101650 de juillet, qui corrigeait un nombre record de 570 failles Microsoft, provoque des surchauffes sur des ordinateurs Dell. L'origine du problème est en cours d'identification. [Next.ink](https://next.ink/brief-article/des-ordinateurs-dell-surchauffent-depuis-le-dernier-patch-tuesday/)
+- **Gestion des risques : prioriser plutôt qu'accumuler** : Face à l'entrelacement des menaces cyber, géopolitiques et climatiques, l'enjeu pour les entreprises n'est plus l'identification mais la capacité à hiérarchiser les réponses. Le délai de détection d'une fraude est présenté comme un révélateur de la maturité organisationnelle et décisionnelle. [JDN 1](https://www.journaldunet.com/management/direction-generale/1552755-face-a-l-accumulation-des-menaces-les-entreprises-doivent-reapprendre-a-hierarchiser-les-risques/) · [JDN 2](https://www.journaldunet.com/management/direction-generale/1552723-ce-que-le-delai-de-detection-d-une-fraude-revele-de-l-entrepris/)
 
-- **Fraude au virement : les banques doivent dépasser l'authentification** : Face à l'explosion des fraudes par manipulation, l'analyse de l'intention et du comportement devient indispensable pour sécuriser les opérations bancaires. [Journal du Net](https://www.journaldunet.com/fintech/1551853-fraude-au-virement-la-securite-bancaire-face-au-defi-de-l-intention/)
+- **OSINT : un levier stratégique sous-exploité** : Les entreprises continuent de négliger la valeur des informations publiquement accessibles, malgré leur potentiel pour anticiper des menaces ou éclairer des décisions. [JDN](https://www.journaldunet.com/management/direction-generale/1552727-pourquoi-les-entreprises-sous-estiment-encore-l-osint/)
 
-- **Souveraineté numérique : l'Europe formalise sa doctrine "Open Source First"** : La stratégie européenne de souveraineté cloud et IA franchit une étape, mais le mécanisme d'arbitrage technologique contraignant reste à définir. [Journal du Net](https://www.journaldunet.com/cloud/1552579-open-source-first-l-europe-franchit-une-etape-strategique-mais-laisse-encore-en-suspens-le-mecanisme-cle/)
+- **IA générative : premier modèle de Thinking Machines et dérive criminelle chez xAI** : Thinking Machines (ex-CTO d'OpenAI) publie Inkling, un modèle généraliste à poids ouverts. Par ailleurs, xAI engage des poursuites contre un utilisateur ayant détourné Grok pour produire des contenus pédopornographiques. [Next.ink](https://next.ink/brief-article/thinking-machines-publie-inkling-un-modele-generaliste-a-poids-ouverts/) · [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/space-xai-attaque-en-justice-un-homme-il-utilisait-grok-pour-generer-des-contenus-pedopornographiques_AV-202607160641.html)
 
-- **Gouvernance de l'IA en entreprise : conformité et observabilité au cœur des enjeux** :
-    - **IA Act et RGPD** : Selon le Journal du Net, l'IA Act est un prolongement du RGPD qui impose aux DSI de repenser leur gouvernance pour transformer la conformité en avantage compétitif. [Journal du Net 1](https://www.journaldunet.com/intelligence-artificielle/1552691-l-ia-act-n-est-pas-une-rupture-c-est-la-suite-du-rgpd/)
-    - **Observabilité** : Le défi n'est plus l'hallucination des modèles mais le pilotage continu des agents pour garantir des usages fiables et maîtrisés. [Journal du Net 2](https://www.journaldunet.com/intelligence-artificielle/1552729-l-observabilite-le-veritable-defi-de-l-ia-en-entreprise/)
-    - **GEO** : Une infrastructure de visibilité émerge pour maximiser les citations de marque par les LLM, remplaçant le clic par la réponse directe automatisée. [Journal du Net 3](https://www.journaldunet.com/publishers/1552461-geo-la-fin-du-web-comme-carrefour-et-ce-que-medias-et-marques-n-ont-pas-encore-vu-venir/)
+- **Réseaux sociaux : une alternative européenne à Bluesky** : Mu.social, un réseau social européen bâti sur le protocole AT (le même que Bluesky), a dépassé les 100 000 utilisateurs en un mois d'existence. [Next.ink](https://next.ink/247537/un-reseau-social-europeen-on-est-passe-de-bluesky-a-mu-social-et-on-vous-explique/)
 
-- **Régulation des plateformes : l'UE et le Royaume-Uni maintiennent la pression** :
-    - **X (Twitter)** : La Commission européenne a validé les mesures correctives de transparence proposées par le réseau social après son amende record de 120 millions d'euros pour infraction au DSA. La plateforme a six mois pour les mettre en œuvre. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/l-union-europeenne-valide-les-mesures-correctives-de-x-apres-son-amende-record-mais-le-bras-de-fer-avec-bruxelles-est-loin-d-etre-termine_AD-202607160342.html)
-    - **TikTok** : L'Ofcom, le régulateur britannique, enquête sur le respect par la plateforme de ses obligations légales concernant la protection des enfants face aux contenus nuisibles. [BFM Tech](https://www.bfmtv.com/tech/tiktok/protection-des-enfants-contre-l-exposition-a-des-contenus-nuisibles-le-royaume-uni-ouvre-une-enquete-sur-les-mesures-prises-par-tiktok-afin-de-s-assurer-que-le-reseau-social-respecte-ses-obligations_AD-202607160346.html)
+- **Informatique quantique : la sobriété par la conception** : L'efficacité énergétique d'un ordinateur quantique dépend de ses choix architecturaux, pas du nombre de qubits annoncé. [JDN](https://www.journaldunet.com/start-up/1552541-la-sobriete-d-un-ordinateur-quantique-ne-se-decrete-pas-elle-se-concoit/)
 
-- **Cybersécurité des jeux vidéo : Microsoft corrige une faille critique dans Age of Empires II** : Une vulnérabilité vieille de 25 ans permettant une prise de contrôle à distance du PC du joueur a été corrigée. La base de joueurs constitue une cible pour la diffusion de malwares et le vol de données. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/jamais-trop-tard-pour-bien-faire-plus-de-25-ans-apres-la-sortie-de-age-of-empires-ii-microsoft-corrige-une-faille-critique-elle-permettait-a-des-pirates-de-prendre-le-controle-a-distance-du-pc-du-joueur_AN-202607160325.html)
-
-- **Politiques d'IA : positionnement de Bruno Retailleau et débat sur la justice prédictive** :
-    - **Programme présidentiel** : Le candidat LR propose un plan d'investissement étatique de 23 milliards d'euros sur cinq ans dans l'IA, une technologie qui, selon lui, "n'attend pas notre consentement". [Next.ink](https://next.ink/247354/pour-bruno-retailleau-lia-nattend-pas-notre-consentement/)
-    - **Justice** : Une tribune souligne la non-utilisation de l'IA pour traiter 88 000 plaintes après un drame, dont 15 000 jamais enregistrées, avec une allocation moyenne de 7 minutes par dossier. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552709-et-si-l-ia-rendait-une-justice-plus-juste-que-le-juge/)
-
-- **Infrastructures énergivores : moratoire sur les datacenters IA dans l'État de New York** : Un moratoire a été instauré pour interdire la construction de nouveaux datacenters, reflétant l'opposition citoyenne croissante aux infrastructures énergivores à proximité des zones résidentielles. [Next.ink](https://next.ink/247460/les-datacenters-ia-un-sujet-electoral-incontournable-aux-etats-unis/)</description>
+- **IA en entreprise : la transformation passe par les équipes** : Dans le secteur de l'expertise comptable, le succès des projets IA repose moins sur la technologie que sur la montée en compétences et l'adhésion des collaborateurs. [JDN](https://www.journaldunet.com/fintech/1552113-experts-comptables-et-ia-la-vraie-revolution-c-est-celle-des-equipes/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Faille critique non patchée sur aspirateurs Shark</strong> : L'extraction d'un certificat depuis la mémoire flash d'un modèle permet d'exécuter des commandes root sur d'autres appareils de la même région AWS, exposant caméra, cartographie et mots de passe Wi-Fi en clair. Aucun correctif disponible à date. <a href="https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html">The Hacker News</a></li>
+<li><strong>n8n — usurpation d'identité via JWT</strong> : Sur des instances Enterprise configurées avec plusieurs émetteurs de tokens, le claim `sub` suffisait à authentifier un utilisateur sans vérifier `iss`. Un attaquant disposant d'un token valide pour un émetteur A pouvait donc s'authentifier en tant qu'utilisateur d'un émetteur B. <a href="https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Vulnérabilité critique Zoom Windows (CVE-2026-53412, CVSS 9.8)</strong> : Permet une prise de contrôle de compte. Correctifs déployés pour Zoom Desktop Client, VDI Client et Meeting SDK pour Windows. Mise à jour urgente requise. <a href="https://thehackernews.com/2026/07/zoom-patches-critical-windows-flaw-that.html">The Hacker News</a></li>
+<li><strong>TELEPUZ — malware modulaire distribué via ClickFix</strong> : Actif depuis fin avril 2026, ce malware léger et modulaire est déployé via des sites infectés par des leurres ClickFix. Il est conçu pour la collecte de données et l'exécution de commandes à distance. <a href="https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation active d'Oracle E-Business Suite</strong> : La CISA impose un correctif sous 72h pour les agences fédérales américaines. La brèche est activement exploitée ; la sévérité justifie une application immédiate dans le secteur privé également. <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/">BleepingComputer</a></li>
+<li><strong>ClickLock — infostealer macOS agressif</strong> : Ce nouveau stealer incite la victime à saisir son mot de passe dans un faux dialogue système ; en cas de refus, il tue les applications en boucle toutes les 210ms et installe deux LaunchAgents persistants. L'attaque débute par une commande à coller dans Terminal. <a href="https://thehackernews.com/2026/07/new-clicklock-macos-stealer-kills-apps.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Fin de support Windows 11 24H2 et Windows 10 LTSB 2016 dans 90 jours</strong> : Les éditions Home et Pro de 24H2 ainsi que l'Enterprise LTSB 2016 cesseront de recevoir des mises à jour. Prévoir la migration avant l'échéance pour éviter l'exposition sans correctifs. <a href="https://www.bleepingcomputer.com/news/microsoft/windows-11-24h2-home-and-pro-reach-end-of-support-in-90-days/">BleepingComputer</a></li>
+<li><strong>PhantomEnigma — sites gouvernementaux brésiliens compromis</strong> : Plus de 20 sites officiels ont été transformés en canaux de distribution de malware via une porte dérobée non documentée. La campagne est toujours active. <a href="https://thehackernews.com/2026/07/20-hijacked-government-websites.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Ransomware Spirals : compromission en moins de 24h</strong> : Nouvel acteur observé réalisant intrusion, exfiltration et chiffrement en une journée. Délai de détection quasi nul, nécessite une capacité de réponse rapide et une segmentation efficace. <a href="https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/">BleepingComputer</a></li>
+<li><strong>Injection de données dans les agents IA</strong> : Deux techniques sans compromission directe du modèle : un faux avis produit pousse un agent à cliquer "Acheter", un faux commentaire GitHub fait exécuter une commande arbitraire par un assistant de code. L'attaque exploite le prompt et le contexte fourni à l'agent plutôt que le modèle lui-même. <a href="https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Condamnation de membres de Scattered Spider</strong> : Deux membres clés écopent de 5,5 ans de prison pour le piratage de Transport for London en 2024 (29 millions de livres de préjudice). Illustre la pression judiciaire croissante sur les groupes cybercriminels sophistiqués. <a href="https://therecord.media/scattered-spider-hackers-tfl-sentenced">The Record</a></li>
+<li><strong>Agents IA — rupture du modèle de sécurité traditionnel</strong> : Token Security souligne que les workflows de sécurité hérités ne sont pas adaptés aux agents IA. La réponse doit s'appuyer sur une base d'identité vivante et des workflows de sécurité paramétrables par les équipes. <a href="https://www.bleepingcomputer.com/news/security/ai-agents-broke-the-security-playbook-heres-what-replaces-it/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Campagne du groupe russophone UAT-11795</strong> : Cisco Talos documente une opération financièrement motivée active depuis juin 2025, utilisant le nouveau RAT Starland et l'implant C2 WLDR. Cible les utilisateurs aux États-Unis et en Europe. <a href="https://blog.talosintelligence.com/uat-11795-deploys-novel-starland-rat-and-bespoke-wldr-c2-implant-in-financially-motivated-campaign/">Cisco Talos</a></li>
+<li><strong>Daxin & Stupig — retour d'un rootkit chinois à Taïwan</strong> : Le rootkit kernel-mode Daxin, attribué à un acteur chinois et disparu depuis plus de 4 ans, a refait surface dans une entreprise manufacturière taïwanaise, accompagné d'une nouvelle porte dérobée nommée Stupig permettant un accès SYSTEM en pré-login. <a href="https://thehackernews.com/2026/07/daxin-resurfaces-in-taiwan-alongside.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Red-teaming automatisé et limites de l'IA en offensive</strong> : OpenAI détaille GPT-Red, un modèle automatisé de découverte d'injections de prompt, utilisé pour durcir GPT-5.6. Parallèlement, selon The Hacker News et Cisco Talos, l'IA accélère l'identification de bugs mais ne remplace pas l'humain pour la validation des preuves et la chasse aux menaces automatisée reste un équilibre à trouver entre volume de données et confiance accordée aux algorithmes. <a href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html">The Hacker News (OpenAI)</a> · <a href="https://thehackernews.com/2026/07/ai-can-find-bugs-but-human-knowledge.html">The Hacker News</a> · <a href="https://blog.talosintelligence.com/the-hunters-paradox-is-it-time-to-embrace-automated-threat-hunting/">Cisco Talos</a></li>
+<li><strong>Sandworm — ingénierie sociale par faux CAPTCHA</strong> : Le groupe russe cible des utilisateurs ukrainiens avec un faux CAPTCHA qui, au lieu de vérifier l'humain, leur demande de copier-coller une commande PowerShell dans leur terminal Windows. <a href="https://therecord.media/ukraine-sandworm-hacks-captcha-powershell">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Scattered Spider — condamnations dans le piratage de TfL</strong> : Deux membres dirigeants du collectif ont été condamnés à 5 ans et demi de prison pour le piratage de Transport for London en 2024. <a href="https://www.bleepingcomputer.com/news/security/scattered-spider-members-behind-transport-for-london-hack-get-five-years-in-prison/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>23andMe — 18M$ de settlement pour défaut de protection</strong> : L'entreprise paiera 18 millions de dollars pour mettre fin aux poursuites de 43 procureurs généraux américains concernant l'incapacité à protéger les données génétiques de ses clients. <a href="https://www.bleepingcomputer.com/news/security/23andme-to-pay-18-million-in-new-genetics-data-breach-settlement/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>TikTok — enquête britannique pour défaut de vérification d'âge</strong> : L'Ofcom ouvre une enquête sur TikTok pour des manquements aux obligations de vérification d'âge, exposant des enfants à des contenus préjudiciables. <a href="https://therecord.media/ofcom-investigation-tiktok-age-verification">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Cycle de correctifs — Cisco Talos</strong> : Talos publie une analyse de la dernière vague massive de correctifs, qualifiée d'inhabituellement chargée, avec un focus sur l'exploitation active. <a href="https://blog.talosintelligence.com/begun-the-patch-wars-have/">Cisco Talos</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>SharePoint on-premises ciblé activement</strong> : La CISA alerte sur l'exploitation en cours de trois vulnérabilités SharePoint et demande un durcissement immédiat des déploiements sur site. <a href="https://www.csoonline.com/article/4197775/cisa-urges-immediate-sharepoint-hardening-as-exploits-mount.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Divulgation coordonnée des vulnérabilités</strong> : La CISA et quatre agences internationales appellent les éditeurs et fournisseurs de services à formaliser leurs programmes de divulgation coordonnée pour structurer la réception des signalements externes. <a href="https://www.csoonline.com/article/4197733/cisa-urges-software-vendors-to-formalize-vulnerability-disclosure-programs.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Robotique et IA incarnée</strong> : L'intégration d'une IA dans un corps robotique étend la surface d'attaque au monde physique, un angle mort dans les décisions d'achat actuelles souvent guidées par des démonstrations marketing. <a href="https://www.csoonline.com/article/4197463/when-ai-gets-a-body-it-inherits-an-attack-surface.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Exposition numérique des dirigeants hors SI</strong> : Les outils d'IA facilitent l'agrégation de données personnelles exposées sur les dirigeants qui échappent au périmètre de défense traditionnel de l'entreprise, créant un risque direct de compromission et d'usurpation. <a href="https://www.csoonline.com/article/4197460/the-executive-profile-your-security-team-isnt-defending.html">CSO Online</a></li>
+<li><strong>Vulnérabilité critique corrigée sur Zoom</strong> : Une faille permettant la prise de contrôle de compte (ATO) sans authentification via le réseau a été corrigée par Zoom, une menace significative au vu des 300 millions d'utilisateurs quotidiens de la plateforme. <a href="https://www.csoonline.com/article/4197962/zoom-patches-account-takeover-hole-2.html">CSO Online</a></li>
+<li><strong>Régulation de la vie privée à l'ère de l'IA</strong> : Daniel Solove estime que le modèle de consentement individuel pour le contrôle des données personnelles est obsolète ; la priorité doit être une régulation imposant une responsabilité directe aux entreprises sur le modèle de l'industrie agroalimentaire. <a href="https://www.schneier.com/blog/archives/2026/07/protecting-privacy-in-an-ai-era.html">Schneier on Security</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Biorésilience et modèles d'IA</strong> : Google DeepMind et Isomorphic Labs détaillent leur approche conjointe pour anticiper les risques biologiques liés à l'IA, en mettant l'accent sur la conception de modèles capables de renforcer la sécurité sans freiner l'innovation. <a href="https://deepmind.google/blog/our-approach-to-bioresilience/">Google DeepMind</a></li>
+<li><strong>NVIDIA Nemotron 3 domine le benchmark RTEB</strong> : Le nouveau modèle d'embedding de NVIDIA prend la première place du classement RTEB, ciblant spécifiquement les performances de retrieval pour les systèmes agentiques. <a href="https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb">Hugging Face Blog</a></li>
 </ul>
 
-<h2>IA — Produits, agents & dev tooling</h2>
-
 <ul>
-<li><strong>Fine-Tuning vs RAG en production</strong> : n8n propose une analyse comparative de ces deux approches pour les LLM. L'article souligne que la plupart des systèmes de production ne les opposent pas, mais les combinent pour optimiser à la fois la précision contextuelle et les performances spécifiques à un domaine. <a href="https://blog.n8n.io/fine-tuning-vs-rag/">n8n Blog</a></li>
+<li><strong>AWS livre un pattern de téléphonie pour agents vocaux</strong> : Amazon Bedrock AgentCore et Nova 2 Sonic sont combinés pour créer un standardiste téléphonique capable de gérer de bout en bout les commandes en langage naturel, de l'accueil à la confirmation. <a href="https://aws.amazon.com/blogs/machine-learning/building-a-restaurant-telephony-ai-host-with-amazon-bedrock-agentcore-and-amazon-nova-2-sonic/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Régulation européenne de Google</strong> : l'UE impose à Google l'ouverture d'Android et de son moteur de recherche aux assistants IA et moteurs concurrents, en application du DMA. Cette décision pourrait affaiblir son contrôle sur ces deux piliers stratégiques. <a href="https://www.theverge.com/policy/966438/eu-google-android-ai-interoperability-search-data-dma">The Verge</a></li>
+<li><strong>Confiance vs. performance dans les agents IA en production</strong> : Selon VentureBeat, les entreprises déploient des agents IA plus vite qu'elles ne peuvent valider leur fiabilité. La moitié des 157 organisations interrogées ont déjà mis en production un agent qui a échoué face à un client malgré des évaluations internes réussies, et seulement 5% font confiance aux tests automatisés. Le problème n'est pas technique (RAG) mais de confiance dans le contexte métier fourni aux agents. <a href="https://venturebeat.com/ai/the-ai-context-gap-enterprise-ai-organizations-have-a-trust-problem-not-a-retrieval-problem-and-most-are-still-building-the-fix">VentureBeat - Contexte</a> · <a href="https://venturebeat.com/ai/the-agent-evaluation-gap-enterprise-ai-organizations-have-a-reality-alignment-problem-not-a-coverage-problem-and-most-are-shipping-to-production-anyway">VentureBeat - Évaluation</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents vocaux structurés avec Patter SDK</strong> : démonstration d'un agent téléphonique de réservation de restaurant intégrant variables dynamiques, guardrails sur chaque réponse, outils appelables et tableaux de bord de latence. L'approche illustre un pattern reproductible pour les déploiements voix en production. <a href="https://www.marktechpost.com/2026/07/16/patter-sdk-guide-to-building-a-restaurant-booking-phone-agent-with-dynamic-variables-guardrails-latency-dashboards-and-eval-checks/">MarkTechPost</a></li>
+<li><strong>Coûts d'infrastructure IA non maîtrisés</strong> : Les dépenses d'infrastructure IA accélèrent sans visibilité sur les coûts réels. La majorité des 107 entreprises étudiées utilisent des hyperscalers classiques mais prévoient d'investir dans du calcul spécialisé qu'elles ne maîtrisent pas encore, créant un angle mort budgétaire. <a href="https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs">VentureBeat</a></li>
 </ul>
 
 <ul>
-<li><strong>Open source partiel de Grok Build par SpaceXAI</strong> : publication en Rust sous licence Apache 2.0 du harness agent, de la TUI et de la couche outils de leur CLI de codage. Le modèle Grok 4.5 reste fermé et les contributions externes ne sont pas acceptées. <a href="https://www.marktechpost.com/2026/07/15/spacexai-open-sources-grok-build-the-rust-agent-harness-tui-and-tool-layer-behind-its-coding-cli/">MarkTechPost</a></li>
+<li><strong>Apple Intelligence autorisé en Chine avec Alibaba et Baidu</strong> : Apple a obtenu l'approbation pour lancer ses fonctionnalités IA en Chine en s'appuyant sur les modèles Qwen d'Alibaba, une condition réglementaire clé pour opérer sur ce marché. <a href="https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Kimi 3, futur modèle chinois open source de très grande taille</strong> : Moonshot s'apprête à lancer Kimi K3, un modèle entre 2 et 3 trillions de paramètres, le plus grand modèle open source chinois, visant à rivaliser avec Opus 4.8 d'Anthropic. <a href="https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>1Password intègre Claude pour l'authentification déléguée</strong> : 1Password lance une intégration navigateur permettant à Claude d'utiliser des identifiants stockés pour accomplir des tâches multi-étapes (réservations, achats). Un pas de plus vers des agents IA agissant avec des droits d'utilisateur réels. <a href="https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration">The Verge</a></li>
+</ul>
+
+<ul>
+<li><strong>DoorDash lance un outil CLI pour agents IA</strong> : DoorDash ouvre en bêta un outil en ligne de commande (dd-cli) conçu pour que des développeurs et agents IA puissent passer des commandes, signalant une adaptation des services vers des interfaces machine-first. <a href="https://techcrunch.com/2026/07/16/yes-you-can-now-order-doordash-from-the-command-line/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Google DeepMind structure un programme de bioresilience</strong> : DeepMind et Isomorphic Labs détaillent un programme visant à prévenir le mésusage de l'IA en biologie tout en accélérant la réponse aux épidémies, avec plus de 15 partenariats gouvernementaux et de biosécurité déjà établis. <a href="https://www.artificialintelligence-news.com/news/examining-google-deepmind-ai-bioresilience-push/">AI News</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Pegasus : l'enquête française progresse sur la compromission de ministres</strong> : Des traces de compromission par le logiciel espion Pegasus, lié au Maroc, ont été retrouvées sur les smartphones d'anciens ministres français en poste entre 2019 et 2021. Un juge d'instruction parisien a classé sept ministres parmi les victimes potentielles en 2023. <a href="https://next.ink/brief-article/pegasus-de-nouveaux-details-sur-lutilisation-du-logiciel-par-le-maroc-contre-la-france/">Next.ink</a></li>
+<li><strong>DMA : Bruxelles force l'ouverture d'Android</strong> : La Commission détaille ses exigences pour contraindre Google à ouvrir Android aux assistants IA et moteurs de recherche tiers, en application du DMA. <a href="https://next.ink/247591/bruxelles-impose-a-google-douvrir-android-aux-assistants-ia-et-ses-donnees-de-recherche/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Patch Tuesday record : des postes Dell surchauffent après la mise à jour</strong> : La mise à jour KB5101650 de juillet, qui corrigeait un nombre record de 570 failles Microsoft, provoque des surchauffes sur des ordinateurs Dell. L'origine du problème est en cours d'identification. <a href="https://next.ink/brief-article/des-ordinateurs-dell-surchauffent-depuis-le-dernier-patch-tuesday/">Next.ink</a></li>
+<li><strong>Gestion des risques : prioriser plutôt qu'accumuler</strong> : Face à l'entrelacement des menaces cyber, géopolitiques et climatiques, l'enjeu pour les entreprises n'est plus l'identification mais la capacité à hiérarchiser les réponses. Le délai de détection d'une fraude est présenté comme un révélateur de la maturité organisationnelle et décisionnelle. <a href="https://www.journaldunet.com/management/direction-generale/1552755-face-a-l-accumulation-des-menaces-les-entreprises-doivent-reapprendre-a-hierarchiser-les-risques/">JDN 1</a> · <a href="https://www.journaldunet.com/management/direction-generale/1552723-ce-que-le-delai-de-detection-d-une-fraude-revele-de-l-entrepris/">JDN 2</a></li>
 </ul>
 
 <ul>
-<li><strong>Fraude au virement : les banques doivent dépasser l'authentification</strong> : Face à l'explosion des fraudes par manipulation, l'analyse de l'intention et du comportement devient indispensable pour sécuriser les opérations bancaires. <a href="https://www.journaldunet.com/fintech/1551853-fraude-au-virement-la-securite-bancaire-face-au-defi-de-l-intention/">Journal du Net</a></li>
+<li><strong>OSINT : un levier stratégique sous-exploité</strong> : Les entreprises continuent de négliger la valeur des informations publiquement accessibles, malgré leur potentiel pour anticiper des menaces ou éclairer des décisions. <a href="https://www.journaldunet.com/management/direction-generale/1552727-pourquoi-les-entreprises-sous-estiment-encore-l-osint/">JDN</a></li>
 </ul>
 
 <ul>
-<li><strong>Souveraineté numérique : l'Europe formalise sa doctrine "Open Source First"</strong> : La stratégie européenne de souveraineté cloud et IA franchit une étape, mais le mécanisme d'arbitrage technologique contraignant reste à définir. <a href="https://www.journaldunet.com/cloud/1552579-open-source-first-l-europe-franchit-une-etape-strategique-mais-laisse-encore-en-suspens-le-mecanisme-cle/">Journal du Net</a></li>
+<li><strong>IA générative : premier modèle de Thinking Machines et dérive criminelle chez xAI</strong> : Thinking Machines (ex-CTO d'OpenAI) publie Inkling, un modèle généraliste à poids ouverts. Par ailleurs, xAI engage des poursuites contre un utilisateur ayant détourné Grok pour produire des contenus pédopornographiques. <a href="https://next.ink/brief-article/thinking-machines-publie-inkling-un-modele-generaliste-a-poids-ouverts/">Next.ink</a> · <a href="https://www.bfmtv.com/tech/intelligence-artificielle/space-xai-attaque-en-justice-un-homme-il-utilisait-grok-pour-generer-des-contenus-pedopornographiques_AV-202607160641.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Gouvernance de l'IA en entreprise : conformité et observabilité au cœur des enjeux</strong> :</li>
-</ul>
-    - <strong>IA Act et RGPD</strong> : Selon le Journal du Net, l'IA Act est un prolongement du RGPD qui impose aux DSI de repenser leur gouvernance pour transformer la conformité en avantage compétitif. <a href="https://www.journaldunet.com/intelligence-artificielle/1552691-l-ia-act-n-est-pas-une-rupture-c-est-la-suite-du-rgpd/">Journal du Net 1</a>
-    - <strong>Observabilité</strong> : Le défi n'est plus l'hallucination des modèles mais le pilotage continu des agents pour garantir des usages fiables et maîtrisés. <a href="https://www.journaldunet.com/intelligence-artificielle/1552729-l-observabilite-le-veritable-defi-de-l-ia-en-entreprise/">Journal du Net 2</a>
-    - <strong>GEO</strong> : Une infrastructure de visibilité émerge pour maximiser les citations de marque par les LLM, remplaçant le clic par la réponse directe automatisée. <a href="https://www.journaldunet.com/publishers/1552461-geo-la-fin-du-web-comme-carrefour-et-ce-que-medias-et-marques-n-ont-pas-encore-vu-venir/">Journal du Net 3</a>
-
-<ul>
-<li><strong>Régulation des plateformes : l'UE et le Royaume-Uni maintiennent la pression</strong> :</li>
-</ul>
-    - <strong>X (Twitter)</strong> : La Commission européenne a validé les mesures correctives de transparence proposées par le réseau social après son amende record de 120 millions d'euros pour infraction au DSA. La plateforme a six mois pour les mettre en œuvre. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/l-union-europeenne-valide-les-mesures-correctives-de-x-apres-son-amende-record-mais-le-bras-de-fer-avec-bruxelles-est-loin-d-etre-termine_AD-202607160342.html">BFM Tech</a>
-    - <strong>TikTok</strong> : L'Ofcom, le régulateur britannique, enquête sur le respect par la plateforme de ses obligations légales concernant la protection des enfants face aux contenus nuisibles. <a href="https://www.bfmtv.com/tech/tiktok/protection-des-enfants-contre-l-exposition-a-des-contenus-nuisibles-le-royaume-uni-ouvre-une-enquete-sur-les-mesures-prises-par-tiktok-afin-de-s-assurer-que-le-reseau-social-respecte-ses-obligations_AD-202607160346.html">BFM Tech</a>
-
-<ul>
-<li><strong>Cybersécurité des jeux vidéo : Microsoft corrige une faille critique dans Age of Empires II</strong> : Une vulnérabilité vieille de 25 ans permettant une prise de contrôle à distance du PC du joueur a été corrigée. La base de joueurs constitue une cible pour la diffusion de malwares et le vol de données. <a href="https://www.bfmtv.com/tech/cybersecurite/jamais-trop-tard-pour-bien-faire-plus-de-25-ans-apres-la-sortie-de-age-of-empires-ii-microsoft-corrige-une-faille-critique-elle-permettait-a-des-pirates-de-prendre-le-controle-a-distance-du-pc-du-joueur_AN-202607160325.html">BFM Tech</a></li>
+<li><strong>Réseaux sociaux : une alternative européenne à Bluesky</strong> : Mu.social, un réseau social européen bâti sur le protocole AT (le même que Bluesky), a dépassé les 100 000 utilisateurs en un mois d'existence. <a href="https://next.ink/247537/un-reseau-social-europeen-on-est-passe-de-bluesky-a-mu-social-et-on-vous-explique/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Politiques d'IA : positionnement de Bruno Retailleau et débat sur la justice prédictive</strong> :</li>
+<li><strong>Informatique quantique : la sobriété par la conception</strong> : L'efficacité énergétique d'un ordinateur quantique dépend de ses choix architecturaux, pas du nombre de qubits annoncé. <a href="https://www.journaldunet.com/start-up/1552541-la-sobriete-d-un-ordinateur-quantique-ne-se-decrete-pas-elle-se-concoit/">JDN</a></li>
 </ul>
-    - <strong>Programme présidentiel</strong> : Le candidat LR propose un plan d'investissement étatique de 23 milliards d'euros sur cinq ans dans l'IA, une technologie qui, selon lui, "n'attend pas notre consentement". <a href="https://next.ink/247354/pour-bruno-retailleau-lia-nattend-pas-notre-consentement/">Next.ink</a>
-    - <strong>Justice</strong> : Une tribune souligne la non-utilisation de l'IA pour traiter 88 000 plaintes après un drame, dont 15 000 jamais enregistrées, avec une allocation moyenne de 7 minutes par dossier. <a href="https://www.journaldunet.com/intelligence-artificielle/1552709-et-si-l-ia-rendait-une-justice-plus-juste-que-le-juge/">Journal du Net</a>
 
 <ul>
-<li><strong>Infrastructures énergivores : moratoire sur les datacenters IA dans l'État de New York</strong> : Un moratoire a été instauré pour interdire la construction de nouveaux datacenters, reflétant l'opposition citoyenne croissante aux infrastructures énergivores à proximité des zones résidentielles. <a href="https://next.ink/247460/les-datacenters-ia-un-sujet-electoral-incontournable-aux-etats-unis/">Next.ink</a></li>
+<li><strong>IA en entreprise : la transformation passe par les équipes</strong> : Dans le secteur de l'expertise comptable, le succès des projets IA repose moins sur la technologie que sur la montée en compétences et l'adhésion des collaborateurs. <a href="https://www.journaldunet.com/fintech/1552113-experts-comptables-et-ia-la-vraie-revolution-c-est-celle-des-equipes/">JDN</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260716-1232</guid>
-      <pubDate>Thu, 16 Jul 2026 12:32:07 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260716-1826</guid>
+      <pubDate>Thu, 16 Jul 2026 18:26:42 +0000</pubDate>
     </item>
   </channel>
 </rss>
