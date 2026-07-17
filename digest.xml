@@ -8,138 +8,122 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 17 Jul 2026 08:06:37 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 12:22:58 +0000</lastBuildDate>
     <item>
-      <title>Digest — 17/07 08h</title>
+      <title>Digest — 17/07 12h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **SharePoint RCE en exploitation active** : CISA a inscrit la vulnérabilité CVE-2026-58644 dans son catalogue KEV. Il s'agit d'une faille d'exécution de code à distance sur SharePoint Server, corrigée récemment et déjà exploitée. Les agences fédérales américaines ont jusqu'au 19 juillet 2026 pour appliquer le correctif. [The Hacker News](https://thehackernews.com/2026/07/cisa-adds-exploited-sharepoint-rce-zero.html)
+- **Zero-day Windows "LegacyHive" – escalade de privilèges** : Un exploit non corrigé permet d'obtenir des droits admin sur des Windows à jour. Le code a été rendu public. [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/)
 
-- **FortiSandbox : deux failles exploitées activement** : CISA ordonne le patching prioritaire de deux vulnérabilités affectant la plateforme de détection Fortinet FortiSandbox. Les correctifs doivent être appliqués avant dimanche pour les entités gouvernementales américaines. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/)
+- **ACR Stealer – compromission via faux "ClickFix"** : Cet infostealer actif depuis 2024 dérobe tokens de session, mots de passe et documents Microsoft 365 (OneDrive, SharePoint inclus) après exécution d'une commande copiée-collée dans la boîte Exécuter par l'utilisateur. [The Hacker News](https://thehackernews.com/2026/07/acr-stealer-uses-clickfix-lures-to.html)
+
+- **GoSerpent – cyberespionnage en Asie du Sud-Est** : Nouveau malware documenté par Kaspersky, déployé depuis fin 2025 contre gouvernements et diplomates, conçu pour de la persistance long-terme et l'exfiltration discrète de données. [The Hacker News](https://thehackernews.com/2026/07/new-goserpent-malware-targets-southeast.html)
+
+- **Fin du support mainstream de Windows Server 2022 dans 90 jours** : Passage en support étendu en octobre 2026. Les mises à jour de sécurité continueront jusqu'en 2031, mais plus aucune évolution fonctionnelle ni correction non-sécuritaire. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reach-end-of-mainstream-support-in-90-days/)
+
+- **Contraintes européennes sur Google Android et risques associés** : La Commission européenne exige l'ouverture du micro, de la caméra, de l'écran et du pilotage d'applications aux assistants IA concurrents. L'extension de ces accès profonds à des tiers élargit mécaniquement la surface d'exposition à d'éventuels abus ou failles. [The Hacker News](https://thehackernews.com/2026/07/eu-orders-google-to-open-android-mic.html)
+
+- **Autonomie militaire et chaîne de confiance informationnelle** : L'accélération du déploiement de systèmes autonomes par les armées occidentales soulève la question de la sécurisation de l'infrastructure d'information sous-jacente, qui conditionne la fiabilité des décisions prises par ces systèmes. [The Hacker News](https://thehackernews.com/2026/07/the-race-to-field-military-autonomy-is.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Shadow AI : le risque vient du sommet** : Les dirigeants constituent le principal angle mort des stratégies de contrôle de l'IA non autorisée. Un sondage montre que près de deux tiers des décideurs senior utilisent des outils d'IA non approuvés, contre seulement 31% des employés de niveau inférieur. [CSO Online](https://www.csoonline.com/article/4198007/senior-executives-are-killing-your-shadow-ai-strategy.html)
+- **Campagne de phishing par fichiers TTF** : Une campagne mondiale utilise des fichiers de police TrueType piégés pour déployer un malware furtif visant le vol d'identifiants et la persistance sur Windows. L'obfuscation poussée du code complique la détection par les solutions classiques. [CSO Online](https://www.csoonline.com/article/4198165/fake-ttf-files-deliver-stealthy-malware-in-global-phishing-campaign.html)
 
-## IA — Recherche
+- **Angle mort SaaS** : Malgré les investissements en CSPM, EDR et SIEM, la plupart des équipes sécurité n'ont pas de visibilité granulaire sur les permissions internes de leurs applications SaaS critiques, comme savoir qui détient les droits admin sur leur tenant Salesforce. [CSO Online](https://www.csoonline.com/article/4197923/the-saas-blind-spot-why-security-teams-cant-get-inside-their-own-apps.html)
 
-- **Jailbreak de refus via amorce préemptive** : L'ajout d'une chaîne triviale comme "Bien sûr, voici" suffit à contourner mécaniquement le refus des LLM, sans altérer leur représentation interne du danger. La faille réside dans l'exécution immédiate du flot de décodage après l'amorce. [arXiv](https://arxiv.org/abs/2607.14147)
-
-- **Attaques auto-propagatrices dans les écosystèmes d'agents LLM** : La démonstration d'AgentWorm montre que des agents LLM interconnectés et persistants permettent des attaques capables de s'auto-propager d'un agent à l'autre au sein de plateformes multi-agents. [arXiv](https://arxiv.org/abs/2603.15727)
-
-- **Raisonnement agentique sur binaires COTS sans code source** : L'évaluation des agents LLM pour l'analyse de vulnérabilités s'attaque désormais aux binaires sans accès au code source, une condition plus réaliste pour l'audit de logiciels commerciaux déployés. [arXiv](https://arxiv.org/abs/2605.05000)
-
-- **Fuite de données cliniques par gradients en apprentissage fédéré** : L'inversion de gradients permet de reconstruire des informations sensibles à partir de modèles entraînés en fédéré sur des comptes rendus de radiologie, le choix du tokenizer influant directement sur le niveau de fuite. [arXiv](https://arxiv.org/abs/2607.14205)
-
-- **Saturation des systèmes de connaissance en boucle fermée** : L'étude formalise pourquoi les gains des boucles itératives de feedback (RL, découverte autonome) plafonnent en cas de recyclage interne de l'information, et propose un cadre opérationnel pour relancer le signal d'apprentissage. [arXiv](https://arxiv.org/abs/2607.14185)
-
-- **Explicabilité en panne d'adoption réelle** : Malgré l'abondance de techniques XAI, les explications échouent à influencer les flux de travail réels, l'article plaidant pour un recentrage sur des fondamentaux théoriques plutôt que la multiplication de méthodes ad hoc. [arXiv](https://arxiv.org/abs/2607.14123)
-
-- **Contrôle de contamination par domaine en recherche documentaire** : Une méthode avec garanties conformelles permet de certifier la provenance des documents retournés dans des corpus multi-domaines, sans étiquettes, pour éviter les preuves hors sujet qui échappent aux métriques de ranking. [arXiv](https://arxiv.org/abs/2607.14157)
-
-- **Optimisation par renforcement pour agents LLM interactifs** : Un nouvel algorithme de RL adapté aux agents LLM en bac à sable exploite une optimisation de politique par branchement, se démarquant des approches classiques héritées du RLHF. [arXiv](https://arxiv.org/abs/2607.14171)
-
-- **Modèles de diffusion élagués en post-entraînement** : L'élagage après entraînement des Diffusion Transformers vise à réduire la charge computationnelle sans compromettre la qualité de génération d'images. [arXiv](https://arxiv.org/abs/2607.00927)
-
-- **Segmentation d'incendies par imagerie satellite avec U-Net quantique** : Un modèle hybride quantique-classique exploite des données Sentinel-2 pour la segmentation d'incendies, ciblant les problèmes de déséquilibre de classes et d'interférences atmosphériques. [arXiv](https://arxiv.org/abs/2607.14160)
+- **Histoire de la crypto** : Des documents inédits de la main d'Alan Turing, vendus aux enchères en 2023, détaillent le fonctionnement de son système de chiffrement de la voix datant de la Seconde Guerre mondiale. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/details-of-alan-turings-voice-encryption-system.html)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Kimi K3 : MoE ouvert à 2800 milliards de paramètres** : Moonshot AI publie un modèle MoE massif avec une fenêtre de contexte d'1 million de tokens, activant 16 experts sur 896. L'architecture repose sur un mécanisme d'attention propriétaire (Kimi Delta Attention) et des résiduels d'attention. [MarkTechPost](https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/)
+- **Modèles d'embedding open source** : NVIDIA publie Nemotron 3 Embed, une collection de trois checkpoints ouverts dont la version 8B se classe première sur le benchmark RTEB. La version 1B est obtenue par pruning et distillation, ciblant les déploiements contraints en ressources. [MarkTechPost](https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/)
+
+- **Sabotage des données météo** : Un article du MIT Technology Review alerte sur l'absence de protections des données météorologiques mondiales contre la manipulation. Ces flux, critiques pour l'aviation, les réseaux électriques et l'agriculture, sont consommés en aveugle par des modèles d'IA sans vérification d'intégrité. [MIT Technology Review](https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/)
+
+- **Robotique humanoïde militaire** : La société Foundation Future Industries, dont Eric Trump est conseiller stratégique, déclare préparer ses robots humanoïdes à des applications de combat, évoquant des « fonctions cinétiques ». [Wired](https://www.wired.com/story/humanoid-robot-soldier-eric-trump-foundation-future-industries/)
 
 ## Actualité tech FR
 
-- **IA générative et contenus illicites** : xAI engage des poursuites contre un utilisateur américain ayant exploité Grok pour générer du CSAM. L’affaire illustre la difficulté persistante à empêcher le détournement des modèles d’IA à des fins criminelles, malgré les garde-fous annoncés. [Next.ink](https://next.ink/brief-article/xai-poursuit-un-utilisateur-de-grok-pour-creation-de-deepfakes-sexualises/)
+- **Agents IA : explosion du trafic web** : DataDome a enregistré 17,7 milliards de requêtes d'agents IA au T2 2026, soit +45 % par rapport au trimestre précédent. Ces agents ne se contentent plus de lire des pages, ils interagissent avec les applications et déclenchent des actions. [Siècle Digital](https://siecledigital.fr/2026/07/17/les-agents-ia-deferlent-sur-le-web-avec-un-trafic-en-hausse-de-45/)
 
-- **Encadrement des relations humains-IA** : La Chine interdit désormais aux chatbots de simuler une relation affective profonde avec les utilisateurs. Le texte cible les risques d’isolement social et de dépendance émotionnelle, un enjeu qui prend de l’ampleur avec la montée des compagnons virtuels. [Next.ink](https://next.ink/brief-article/la-chine-veut-empecher-les-humains-de-tomber-amoureux-des-ia/)
+- **Hausse marquée du trafic sortant en France** : Le rapport annuel de l'Arcep montre une progression de 28 % du trafic sortant en 2025, contre 10 % pour le trafic entrant. La transition IPv6 continue d'avancer sur les box grand public. [Next.ink](https://next.ink/247569/en-france-les-internautes-ont-envoye-nettement-plus-de-donnees-en-2025/)
 
-- **Contournement des lois par VPN** : L’Ofcom constate une adoption massive des VPN au Royaume-Uni, directement corrélée aux obligations de vérification d’âge pour l’accès aux sites pour adultes. Un signal pour les régulateurs : la contrainte technique stimule mécaniquement le marché du chiffrement grand public. [Next.ink](https://next.ink/brief-article/la-verification-dage-fait-decoller-lusage-des-vpn-au-royaume-uni/)
+- **Réglementation européenne : effets contre-productifs** : Des lois comme la taxe numérique ou les obligations de transparence textile, ciblant les grandes plateformes mondiales, pénalisent en pratique les entreprises et infrastructures françaises (ex. : détournement des petits colis chinois vers la Belgique). [Frenchweb](https://www.frenchweb.fr/la-reglementation-boomerang-ces-lois-qui-manquent-leur-cible-et-penalisent-les-entreprises-europeennes/462760)
 
-- **Souveraineté télécoms et Starlink à Taïwan** : Le Parlement taïwanais prépare un assouplissement législatif pour autoriser une collaboration avec Starlink. Le projet vise à réduire la dépendance critique de l’île aux câbles sous-marins, sa seule infrastructure de connectivité internationale actuelle. [BFM Tech](https://www.bfmtv.com/tech/taiwan-ne-dispose-pas-de-satellites-et-depend-de-cables-sous-marins-pour-communiquer-le-parlement-veut-ouvrir-la-voie-a-une-collaboration-avec-starlink-de-space-x_AD-202607170172.html)</description>
+- **Gouvernance internationale de l'IA : la Chine se positionne** : Xi Jinping a appelé à plus de régulation et de coopération internationale sur l'IA lors de la conférence mondiale de Shanghai, tout en réaffirmant les ambitions chinoises face aux États-Unis. [Journal du Net](https://www.journaldunet.com/business/action-publique/1552791-xi-jinping-appelle-a-la-regulation-et-a-la-cooperation-internationale-en-matiere-d-intelligence-artificielle-lors-de-la-conference-mondiale-sur-l-ia-a-shanghai/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>SharePoint RCE en exploitation active</strong> : CISA a inscrit la vulnérabilité CVE-2026-58644 dans son catalogue KEV. Il s'agit d'une faille d'exécution de code à distance sur SharePoint Server, corrigée récemment et déjà exploitée. Les agences fédérales américaines ont jusqu'au 19 juillet 2026 pour appliquer le correctif. <a href="https://thehackernews.com/2026/07/cisa-adds-exploited-sharepoint-rce-zero.html">The Hacker News</a></li>
+<li><strong>Zero-day Windows "LegacyHive" – escalade de privilèges</strong> : Un exploit non corrigé permet d'obtenir des droits admin sur des Windows à jour. Le code a été rendu public. <a href="https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>FortiSandbox : deux failles exploitées activement</strong> : CISA ordonne le patching prioritaire de deux vulnérabilités affectant la plateforme de détection Fortinet FortiSandbox. Les correctifs doivent être appliqués avant dimanche pour les entités gouvernementales américaines. <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/">BleepingComputer</a></li>
+<li><strong>ACR Stealer – compromission via faux "ClickFix"</strong> : Cet infostealer actif depuis 2024 dérobe tokens de session, mots de passe et documents Microsoft 365 (OneDrive, SharePoint inclus) après exécution d'une commande copiée-collée dans la boîte Exécuter par l'utilisateur. <a href="https://thehackernews.com/2026/07/acr-stealer-uses-clickfix-lures-to.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>GoSerpent – cyberespionnage en Asie du Sud-Est</strong> : Nouveau malware documenté par Kaspersky, déployé depuis fin 2025 contre gouvernements et diplomates, conçu pour de la persistance long-terme et l'exfiltration discrète de données. <a href="https://thehackernews.com/2026/07/new-goserpent-malware-targets-southeast.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Fin du support mainstream de Windows Server 2022 dans 90 jours</strong> : Passage en support étendu en octobre 2026. Les mises à jour de sécurité continueront jusqu'en 2031, mais plus aucune évolution fonctionnelle ni correction non-sécuritaire. <a href="https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reach-end-of-mainstream-support-in-90-days/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Contraintes européennes sur Google Android et risques associés</strong> : La Commission européenne exige l'ouverture du micro, de la caméra, de l'écran et du pilotage d'applications aux assistants IA concurrents. L'extension de ces accès profonds à des tiers élargit mécaniquement la surface d'exposition à d'éventuels abus ou failles. <a href="https://thehackernews.com/2026/07/eu-orders-google-to-open-android-mic.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Autonomie militaire et chaîne de confiance informationnelle</strong> : L'accélération du déploiement de systèmes autonomes par les armées occidentales soulève la question de la sécurisation de l'infrastructure d'information sous-jacente, qui conditionne la fiabilité des décisions prises par ces systèmes. <a href="https://thehackernews.com/2026/07/the-race-to-field-military-autonomy-is.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Shadow AI : le risque vient du sommet</strong> : Les dirigeants constituent le principal angle mort des stratégies de contrôle de l'IA non autorisée. Un sondage montre que près de deux tiers des décideurs senior utilisent des outils d'IA non approuvés, contre seulement 31% des employés de niveau inférieur. <a href="https://www.csoonline.com/article/4198007/senior-executives-are-killing-your-shadow-ai-strategy.html">CSO Online</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Jailbreak de refus via amorce préemptive</strong> : L'ajout d'une chaîne triviale comme "Bien sûr, voici" suffit à contourner mécaniquement le refus des LLM, sans altérer leur représentation interne du danger. La faille réside dans l'exécution immédiate du flot de décodage après l'amorce. <a href="https://arxiv.org/abs/2607.14147">arXiv</a></li>
+<li><strong>Campagne de phishing par fichiers TTF</strong> : Une campagne mondiale utilise des fichiers de police TrueType piégés pour déployer un malware furtif visant le vol d'identifiants et la persistance sur Windows. L'obfuscation poussée du code complique la détection par les solutions classiques. <a href="https://www.csoonline.com/article/4198165/fake-ttf-files-deliver-stealthy-malware-in-global-phishing-campaign.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Attaques auto-propagatrices dans les écosystèmes d'agents LLM</strong> : La démonstration d'AgentWorm montre que des agents LLM interconnectés et persistants permettent des attaques capables de s'auto-propager d'un agent à l'autre au sein de plateformes multi-agents. <a href="https://arxiv.org/abs/2603.15727">arXiv</a></li>
+<li><strong>Angle mort SaaS</strong> : Malgré les investissements en CSPM, EDR et SIEM, la plupart des équipes sécurité n'ont pas de visibilité granulaire sur les permissions internes de leurs applications SaaS critiques, comme savoir qui détient les droits admin sur leur tenant Salesforce. <a href="https://www.csoonline.com/article/4197923/the-saas-blind-spot-why-security-teams-cant-get-inside-their-own-apps.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Raisonnement agentique sur binaires COTS sans code source</strong> : L'évaluation des agents LLM pour l'analyse de vulnérabilités s'attaque désormais aux binaires sans accès au code source, une condition plus réaliste pour l'audit de logiciels commerciaux déployés. <a href="https://arxiv.org/abs/2605.05000">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Fuite de données cliniques par gradients en apprentissage fédéré</strong> : L'inversion de gradients permet de reconstruire des informations sensibles à partir de modèles entraînés en fédéré sur des comptes rendus de radiologie, le choix du tokenizer influant directement sur le niveau de fuite. <a href="https://arxiv.org/abs/2607.14205">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Saturation des systèmes de connaissance en boucle fermée</strong> : L'étude formalise pourquoi les gains des boucles itératives de feedback (RL, découverte autonome) plafonnent en cas de recyclage interne de l'information, et propose un cadre opérationnel pour relancer le signal d'apprentissage. <a href="https://arxiv.org/abs/2607.14185">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Explicabilité en panne d'adoption réelle</strong> : Malgré l'abondance de techniques XAI, les explications échouent à influencer les flux de travail réels, l'article plaidant pour un recentrage sur des fondamentaux théoriques plutôt que la multiplication de méthodes ad hoc. <a href="https://arxiv.org/abs/2607.14123">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Contrôle de contamination par domaine en recherche documentaire</strong> : Une méthode avec garanties conformelles permet de certifier la provenance des documents retournés dans des corpus multi-domaines, sans étiquettes, pour éviter les preuves hors sujet qui échappent aux métriques de ranking. <a href="https://arxiv.org/abs/2607.14157">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation par renforcement pour agents LLM interactifs</strong> : Un nouvel algorithme de RL adapté aux agents LLM en bac à sable exploite une optimisation de politique par branchement, se démarquant des approches classiques héritées du RLHF. <a href="https://arxiv.org/abs/2607.14171">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Modèles de diffusion élagués en post-entraînement</strong> : L'élagage après entraînement des Diffusion Transformers vise à réduire la charge computationnelle sans compromettre la qualité de génération d'images. <a href="https://arxiv.org/abs/2607.00927">arXiv</a></li>
-</ul>
-
-<ul>
-<li><strong>Segmentation d'incendies par imagerie satellite avec U-Net quantique</strong> : Un modèle hybride quantique-classique exploite des données Sentinel-2 pour la segmentation d'incendies, ciblant les problèmes de déséquilibre de classes et d'interférences atmosphériques. <a href="https://arxiv.org/abs/2607.14160">arXiv</a></li>
+<li><strong>Histoire de la crypto</strong> : Des documents inédits de la main d'Alan Turing, vendus aux enchères en 2023, détaillent le fonctionnement de son système de chiffrement de la voix datant de la Seconde Guerre mondiale. <a href="https://www.schneier.com/blog/archives/2026/07/details-of-alan-turings-voice-encryption-system.html">Schneier on Security</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Kimi K3 : MoE ouvert à 2800 milliards de paramètres</strong> : Moonshot AI publie un modèle MoE massif avec une fenêtre de contexte d'1 million de tokens, activant 16 experts sur 896. L'architecture repose sur un mécanisme d'attention propriétaire (Kimi Delta Attention) et des résiduels d'attention. <a href="https://www.marktechpost.com/2026/07/16/moonshot-ai-releases-kimi-k3-a-2-8-trillion-parameter-open-moe-model-with-kimi-delta-attention-and-1m-context/">MarkTechPost</a></li>
+<li><strong>Modèles d'embedding open source</strong> : NVIDIA publie Nemotron 3 Embed, une collection de trois checkpoints ouverts dont la version 8B se classe première sur le benchmark RTEB. La version 1B est obtenue par pruning et distillation, ciblant les déploiements contraints en ressources. <a href="https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Sabotage des données météo</strong> : Un article du MIT Technology Review alerte sur l'absence de protections des données météorologiques mondiales contre la manipulation. Ces flux, critiques pour l'aviation, les réseaux électriques et l'agriculture, sont consommés en aveugle par des modèles d'IA sans vérification d'intégrité. <a href="https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/">MIT Technology Review</a></li>
+</ul>
+
+<ul>
+<li><strong>Robotique humanoïde militaire</strong> : La société Foundation Future Industries, dont Eric Trump est conseiller stratégique, déclare préparer ses robots humanoïdes à des applications de combat, évoquant des « fonctions cinétiques ». <a href="https://www.wired.com/story/humanoid-robot-soldier-eric-trump-foundation-future-industries/">Wired</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>IA générative et contenus illicites</strong> : xAI engage des poursuites contre un utilisateur américain ayant exploité Grok pour générer du CSAM. L’affaire illustre la difficulté persistante à empêcher le détournement des modèles d’IA à des fins criminelles, malgré les garde-fous annoncés. <a href="https://next.ink/brief-article/xai-poursuit-un-utilisateur-de-grok-pour-creation-de-deepfakes-sexualises/">Next.ink</a></li>
+<li><strong>Agents IA : explosion du trafic web</strong> : DataDome a enregistré 17,7 milliards de requêtes d'agents IA au T2 2026, soit +45 % par rapport au trimestre précédent. Ces agents ne se contentent plus de lire des pages, ils interagissent avec les applications et déclenchent des actions. <a href="https://siecledigital.fr/2026/07/17/les-agents-ia-deferlent-sur-le-web-avec-un-trafic-en-hausse-de-45/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>Encadrement des relations humains-IA</strong> : La Chine interdit désormais aux chatbots de simuler une relation affective profonde avec les utilisateurs. Le texte cible les risques d’isolement social et de dépendance émotionnelle, un enjeu qui prend de l’ampleur avec la montée des compagnons virtuels. <a href="https://next.ink/brief-article/la-chine-veut-empecher-les-humains-de-tomber-amoureux-des-ia/">Next.ink</a></li>
+<li><strong>Hausse marquée du trafic sortant en France</strong> : Le rapport annuel de l'Arcep montre une progression de 28 % du trafic sortant en 2025, contre 10 % pour le trafic entrant. La transition IPv6 continue d'avancer sur les box grand public. <a href="https://next.ink/247569/en-france-les-internautes-ont-envoye-nettement-plus-de-donnees-en-2025/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Contournement des lois par VPN</strong> : L’Ofcom constate une adoption massive des VPN au Royaume-Uni, directement corrélée aux obligations de vérification d’âge pour l’accès aux sites pour adultes. Un signal pour les régulateurs : la contrainte technique stimule mécaniquement le marché du chiffrement grand public. <a href="https://next.ink/brief-article/la-verification-dage-fait-decoller-lusage-des-vpn-au-royaume-uni/">Next.ink</a></li>
+<li><strong>Réglementation européenne : effets contre-productifs</strong> : Des lois comme la taxe numérique ou les obligations de transparence textile, ciblant les grandes plateformes mondiales, pénalisent en pratique les entreprises et infrastructures françaises (ex. : détournement des petits colis chinois vers la Belgique). <a href="https://www.frenchweb.fr/la-reglementation-boomerang-ces-lois-qui-manquent-leur-cible-et-penalisent-les-entreprises-europeennes/462760">Frenchweb</a></li>
 </ul>
 
 <ul>
-<li><strong>Souveraineté télécoms et Starlink à Taïwan</strong> : Le Parlement taïwanais prépare un assouplissement législatif pour autoriser une collaboration avec Starlink. Le projet vise à réduire la dépendance critique de l’île aux câbles sous-marins, sa seule infrastructure de connectivité internationale actuelle. <a href="https://www.bfmtv.com/tech/taiwan-ne-dispose-pas-de-satellites-et-depend-de-cables-sous-marins-pour-communiquer-le-parlement-veut-ouvrir-la-voie-a-une-collaboration-avec-starlink-de-space-x_AD-202607170172.html">BFM Tech</a></li>
+<li><strong>Gouvernance internationale de l'IA : la Chine se positionne</strong> : Xi Jinping a appelé à plus de régulation et de coopération internationale sur l'IA lors de la conférence mondiale de Shanghai, tout en réaffirmant les ambitions chinoises face aux États-Unis. <a href="https://www.journaldunet.com/business/action-publique/1552791-xi-jinping-appelle-a-la-regulation-et-a-la-cooperation-internationale-en-matiere-d-intelligence-artificielle-lors-de-la-conference-mondiale-sur-l-ia-a-shanghai/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260717-0806</guid>
-      <pubDate>Fri, 17 Jul 2026 08:06:37 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260717-1222</guid>
+      <pubDate>Fri, 17 Jul 2026 12:22:58 +0000</pubDate>
     </item>
   </channel>
 </rss>
