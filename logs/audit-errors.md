@@ -90,3 +90,6 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-14 08:26 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 62 column 6 (char 2374)) |
 | 2026-07-14 12:20 UTC | scoring | This Luddite Puppet Hopes You’re Not Reading This on Your Sm (Wired — AI) | Rate limit fournisseur LLM atteint |
 | 2026-07-15 12:21 UTC | scoring | The Apple FaceID Co-Inventor Building a Frontier AI Model fo (Wired — AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-17 12:16 UTC | scoring | Armenia Detains Russian Tourist on U.S. Warrant for REvil Ha (The Hacker News) | Rate limit fournisseur LLM atteint |
+| 2026-07-17 12:16 UTC | scoring | US charges two over laundering $43 million from investment f (BleepingComputer) | Rate limit fournisseur LLM atteint |
+| 2026-07-17 12:19 UTC | scoring | Cdiscount vend par palettes le Samsung Galaxy S25 Plus, vu c (BFM Tech) | Rate limit fournisseur LLM atteint |
