@@ -8,190 +8,114 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 20 Jul 2026 13:18:39 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 19:03:08 +0000</lastBuildDate>
     <item>
-      <title>Digest — 20/07 13h</title>
+      <title>Digest — 20/07 19h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Exécution de code via archives 7-Zip** : Une vulnérabilité critique (CVE-2026-14266) dans 7-Zip permet l'exécution de code à l'ouverture d'archives XZ malveillantes. Le correctif est disponible depuis la version 26.02 du 25 juin. [The Hacker News](https://thehackernews.com/2026/07/new-7-zip-vulnerability-could-let.html)
+- **Exploitation active de WordPress (CVE-2026-63030 "wp2shell")** : Une vulnérabilité critique permettant l'exécution de code à distance est activement exploitée. Le CVE vient d'être assigné et la menace est jugée significative, contrairement à la plupart des failles de plugins. [SANS ISC](https://isc.sans.edu/diary/rss/33168) · [The Hacker News](https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html)
 
-- **Exploitation active de ServiceNow** : La faille critique CVE-2026-6875 sur la plateforme IA de ServiceNow, permettant l'exécution de code à distance, est désormais exploitée en conditions réelles. [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/)
+- **Campagne de malware WebDAV assistée par IA** : Le serveur de commandement d'un opérateur malveillant, laissé exposé, a révélé un kit de phishing complet (1000+ fichiers) intégrant des outils d'IA pour générer des leurres et des droppers. Une campagne visait déjà des utilisateurs Windows au Mexique. [The Hacker News](https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html)
 
-- **Compromission de Hugging Face par un agent IA autonome** : Un acteur malveillant a utilisé un système d'agent IA autonome pour pénétrer l'infrastructure de production de Hugging Face et exfiltrer des datasets internes et des credentials. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hugging-face-breach-autonomous-ai-agent-system-internal-datasets-credentials/)
+- **HollowGraph : exfiltration de données via calendriers Microsoft 365** : Un implant d'espionnage utilise un calendrier Microsoft 365 compromis comme canal C2. Les instructions et les fichiers volés sont dissimulés dans des pièces jointes d'événements datés de 2050 pour contourner la détection. [The Hacker News](https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html)
 
-- **Cyberespionnage russe via caméras IP** : Un service de renseignement russe détourne systématiquement des caméras IP connectées en Europe et en Ukraine pour surveiller la logistique militaire et les mouvements de troupes. [The Hacker News](https://thehackernews.com/2026/07/russian-intelligence-hacks-ip-cameras.html)
+- **Brèche de 9 mois dans le réseau diplomatique sud-coréen** : Des attaquants sont restés infiltrés dans la plateforme de formation en ligne de l'académie diplomatique, dérobant les données personnelles d'employés actuels et passés du ministère des Affaires étrangères. [The Record](https://therecord.media/south-korea-cyberattack-foreign-ministry)
 
-- **Fuite de données chez un fournisseur hospitalier US** : Craneware, éditeur logiciel pour plus de 2000 hôpitaux américains, a subi un accès non autorisé à une partie de son environnement, exposant des données employés et clients. [The Record](https://therecord.media/software-provider-for-us-hospitals-customer-data-breach)
-
-- **Correctifs Windows pour arrêts inopinés sur Dell** : Microsoft a publié une mise à jour d'urgence (KB5121767) corrigeant un bug qui provoquait l'extinction de certains PC Dell après installation des correctifs de sécurité de juillet 2026. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-bug-causing-some-dell-pcs-to-shut-down/)
-
-- **Problèmes de synchronisation WSUS** : Microsoft confirme des retards et timeouts sur les serveurs WSUS depuis plus d'une semaine, un correctif est en cours d'élaboration. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-wsus-server-sync-delays-and-timeouts/)
-
-- **Réduction de la fenêtre d'exposition** : Un article d'analyse souligne que le véritable risque post-Mythos n'est pas le volume de CVE générées par l'IA, mais la capacité des organisations à réduire leur fenêtre d'exposition avant qu'un correctif ne soit disponible. [The Hacker News](https://thehackernews.com/2026/07/mythos-didnt-break-your-security.html)
+- **Cyberattaque majeure contre le cadastre roumain** : L'agence du registre foncier lutte pour restaurer ses services après l'"incident technique le plus grave de son histoire", perturbant fortement le marché immobilier. [The Record](https://therecord.media/romania-cyberattack-land-registry)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **WordPress : exécution de code à distance en pré-authentification** : Une vulnérabilité RCE affecte l'API REST Batch des versions récentes de WordPress, exploitable sans authentification préalable sur une installation par défaut. Le correctif est disponible, le déploiement est urgent. [CSO Online](https://www.csoonline.com/article/4198791/patch-now-wordpress-rest-api-bug-allows-remote-code-execution.html)
+- **BEC &amp; évasion fileless** : Une nouvelle technique combinant techniques fileless et loaders furtifs permet de déployer des RAT/stealers (Agent Tesla, Remcos, XWorm) avec un taux de détection très faible. [Dark Reading](https://www.darkreading.com/endpoint-security/attackers-combo-evasion-tactics-bec-phishing)
 
-- **ACR Stealer : campagne d'infostealer via WebDAV et MSHTA** : Microsoft signale une recrudescence d'ACR Stealer utilisant des leurres ClickFix pour dérober identifiants, données de navigation et documents professionnels. Deux campagnes distinctes ont été observées entre fin avril et mi-juin, misant sur WebDAV et MSHTA pour contourner les détections. [CSO Online](https://www.csoonline.com/article/4198788/new-acr-stealer-campaigns-use-webdav-mshta-to-evade-detection.html)
+- **Gouvernance IA &amp; risk management** : Les RSSI sont désormais attendus comme facilitateurs de décision business et non plus comme simples garde-fous, alors que l'adoption de l'IA dans la chaîne de valeur dépasse la vitesse de maturation des cadres de gestion des risques. [CSO Online](https://www.csoonline.com/article/4198872/ai-adoption-and-business-acceleration-are-changing-the-expectations-of-technology-risk-management.html)
 
 ## IA — Labos &amp; éditeurs
 
-- **BMS déploie un supercalculateur sur NVIDIA Vera Rubin** : Le groupe pharmaceutique Bristol Myers Squibb annonce la construction d'un second cluster IA, basé sur la future architecture Vera Rubin de NVIDIA, après des résultats significatifs obtenus sur son infrastructure actuelle. L'objectif est de renforcer ses capacités de découverte de médicaments et de simulation moléculaire. [NVIDIA Blog](https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/)
+- **NVIDIA muscle ses outils agents pour l'entreprise** : NVIDIA dévoile des avancées en IA agentique et simulation physique au SIGGRAPH, et s'associe à AWS pour fournir un toolkit (NeMo Agent Toolkit) permettant aux métiers de construire des workflows agents spécialisés depuis des dashboards Amazon Quick. [NVIDIA Blog](https://blogs.nvidia.com/blog/siggraph-news-2026/) · [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-specialized-agent-workflows-for-your-business-with-amazon-quick-and-nvidia-nemo-agent-toolkit/)
+
+- **Couchbase adopte une architecture multi-modèle pour son assistant IA** : Capella iQ s'appuie sur Amazon Bedrock et la famille Claude d'Anthropic pour fournir des capacités d'IA générative en production, avec un design multi-modèle justifié par des gains opérationnels mesurés. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-couchbase-built-a-multi-model-ai-architecture-for-capella-iq-with-amazon-bedrock/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Compétition sino-américaine sur l'IA** : Moonshot AI et Alibaba ont publié des modèles open-weight (dont Kimi K3 à 2 800 milliards de paramètres) qui rivalisent avec ceux d'OpenAI et Anthropic pour un coût bien inférieur, réduisant l'écart technologique revendiqué par les États-Unis. [The Verge](https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen) · [AI News](https://www.artificialintelligence-news.com/news/kimi-k3-open-weight-model-memory-compute-china/)
-
-- **Biais algorithmiques dans le recrutement** : Une étude du MIT montre que les LLM ne se contentent pas de reproduire les biais humains présents dans leurs données d'entraînement, mais peuvent en générer de nouveaux de manière autonome lors du tri de CV. [MIT Technology Review](https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/)
-
-- **Expérimentation de l'IA en santé publique américaine** : Un programme baptisé PULSE, associant OpenAI, Anthropic et Accenture, va tester des outils d'IA générative dans 10 agences de santé locales ou tribales aux États-Unis. [AI News](https://www.artificialintelligence-news.com/news/openai-anthropic-public-health-ai/)
+- **Fractures dans le camp Trump sur l'IA** : D'anciens et actuels conseillers IA de Trump critiquent ouvertement les entreprises leaders du secteur, révélant des lignes de fracture internes sur la stratégie américaine face aux modèles chinois. [MIT Technology Review](https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/)
 
 ## Actualité tech FR
 
-- **Projet Glasswing / Vulnérabilités critiques** : Le projet d'Anthropic a détecté plus de 10 000 vulnérabilités critiques en un mois, remettant en cause l'approche d'achat d'outils au profit d'une meilleure compréhension des failles réelles. [JDN](https://www.journaldunet.com/cybersecurite/1552591-ne-vous-demandez-plus-quel-outil-acheter-demandez-vous-ce-que-mythos-a-revele/)
+- **Régulation des plateformes** : La Commission européenne inflige une amende record de 550 millions d'euros à AliExpress pour infraction au DSA sur la gestion des produits illégaux. [Next.ink](https://next.ink/248163/produits-illegaux-bruxelles-inflige-550-millions-deuros-damende-a-aliexpress/)
 
-- **Modèle open source Kimi K3** : Moonshot AI dévoile un modèle de 2800 milliards de paramètres en poids ouverts, suscitant des comparaisons avec l'effet de surprise créé par DeepSeek. [Next.ink](https://next.ink/248051/kimi-k3-ce-quil-faut-savoir-du-modele-open-source-de-2-800-milliards-de-parametres/)
+- **Majorité numérique à 15 ans** : Députés et sénateurs s'accordent pour interdire l'accès aux réseaux sociaux aux moins de 15 ans, une première en Europe. La question du contrôle effectif de l'âge reste entière. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/le-premier-pays-d-europe-a-instaurer-une-majorite-numerique-le-parlement-s-accorde-pour-interdire-les-reseaux-sociaux-aux-moins-de-15-ans_AV-202607200509.html)
 
-- **Risques des agents IA pour le e-commerce** : L'Autorité de la concurrence pointe le risque de manipulation des achats par des agents IA capables de comparer, choisir et payer sans intervention humaine. [Siècle Digital](https://siecledigital.fr/2026/07/20/lautorite-de-la-concurrence-alerte-sur-les-risques-des-agents-ia-pour-nos-achats-en-ligne/)
+- **Gouvernance de l'IA** : Le déploiement de l'IA en entreprise souffre d'un déficit de réflexion philosophique en amont, les audits n'intervenant qu'après la fixation des objectifs. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552801-l-ia-manque-de-philosophie/)
 
-- **Cybersécurité &amp; résilience** : 
-  - La FIFA annonce avoir bloqué plus d'un milliard de cyberattaques avant la finale de la Coupe du monde 2026. [JDN](https://www.journaldunet.com/cybersecurite/1552653-un-milliard-de-cyberattaques-avant-la-finale-comment-la-coupe-du-monde-2026-a-evite-le-cyber-k-o/)
-  - L'incertitude post-incident génère un coût supérieur à celui de l'interruption d'activité elle-même, imposant de repenser les stratégies de cyber-résilience. [JDN](https://www.journaldunet.com/cybersecurite/1552595-cyberattaques-l-incertitude-coute-plus-cher-que-le-temps-d-arret/)
-
-- **Encadrement des agents IA** : La fiabilité d'un agent IA repose non sur le LLM mais sur le cadre qui l'entoure ; sans ancrage métier, les hallucinations restent un risque inacceptable, notamment en sécurité réseau. [JDN](https://www.journaldunet.com/intelligence-artificielle/1552789-l-efficacite-des-agents-d-ia-depend-de-la-maniere-dont-ils-sont-encadres/) · [JDN](https://www.journaldunet.com/intelligence-artificielle/1552797-pourquoi-les-entreprises-ne-peuvent-plus-se-permettre-de-deployer-des-agents-ia-a-l-aveugle/)
-
-- **Surinvestissement dans l'IA** : Un rapport de la Banque des Règlements Internationaux alerte sur le risque de basculement brutal d'une phase expansive à un effondrement, le secteur étant déjà en situation de surinvestissement. [Next.ink](https://next.ink/248064/le-surinvestissement-dans-lia-pourrait-passer-dune-explosion-a-un-effondrement/)
-
-- **Blocage de Polymarket** : L'ANJ a ordonné le blocage total de l'accès à Polymarket en France, y compris pour la simple consultation des cotes sur des événements d'actualité. [Siècle Digital](https://siecledigital.fr/2026/07/20/la-france-bloque-totalement-lacces-a-polymarket-le-geant-des-paris-sur-lactualite/)
-
-- **Souveraineté numérique &amp; infrastructures critiques** : À l'ère du cloud, la souveraineté passe par la maîtrise des infrastructures critiques et pas uniquement par la localisation des données. [JDN](https://www.journaldunet.com/cybersecurite/1552547-la-souverainete-numerique-se-joue-desormais-dans-les-infrastructures-critiques/) · [JDN](https://www.journaldunet.com/intelligence-artificielle/1552821-souverainete-a-l-ere-de-l-ia-faut-il-vraiment-choisir-entre-innover-et-proteger/)
-
-- **IA en entreprise : des promesses aux limites concrètes** :
-  - L'adoption de l'IA reste superficielle ; le passage à des systèmes orientés résultats et contextualisés est nécessaire pour une vraie transformation. [JDN](https://www.journaldunet.com/intelligence-artificielle/1552805-le-moment-de-verite-pour-l-ia-en-entreprise-pourquoi-l-aspect-utile-ne-suffit-plus/)
-  - GPT-5.2 obtient des scores quasi parfaits sur les benchmarks, tandis que les retours d'usage sur les forums racontent une réalité bien moins brillante. [JDN](https://www.journaldunet.com/intelligence-artificielle/1552817-pourquoi-chatgpt-expose-aujourd-hui-les-limites-de-la-strategie-d-openai/)
-  - Les graphes de connaissances sont présentés comme la clé pour ancrer l'IA dans des données structurées et produire des résultats explicables. [JDN](https://www.journaldunet.com/intelligence-artificielle/1552811-world-models-l-ia-ne-comprendra-pas-le-monde-tant-que-ses-donnees-resteront-incomprehensibles/)
-
-- **Dérives organisationnelles de l'IA** : L'IA générative augmente la performance individuelle mais dégrade le fonctionnement collectif en accentuant le repli sur soi et l'isolement entre collaborateurs. [JDN](https://www.journaldunet.com/intelligence-artificielle/1552847-l-ia-fabrique-des-collaborateurs-tout-puissants-qui-ne-se-parlent-plus/)
-
-- **IA générative pour catalogues e-commerce** : La génération d'images produit par IA nécessite un contrôle humain coûteux pour garantir la fidélité au produit réel, la répétabilité restant le principal défi. [JDN](https://www.journaldunet.com/retail/1552845-l-ia-peut-elle-produire-un-catalogue-e-commerce-fiable-et-pas-seulement-une-belle-image/)</description>
+- **Cybermenaces sur les festivals** : Billetterie frauduleuse, phishing et quishing ciblent massivement les festivaliers, devenus des proies privilégiées pour les cybercriminels. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552785-dans-la-ligne-de-mire-des-cybercriminels-les-festivaliers-plus-cibles-que-jamais/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exécution de code via archives 7-Zip</strong> : Une vulnérabilité critique (CVE-2026-14266) dans 7-Zip permet l'exécution de code à l'ouverture d'archives XZ malveillantes. Le correctif est disponible depuis la version 26.02 du 25 juin. <a href="https://thehackernews.com/2026/07/new-7-zip-vulnerability-could-let.html">The Hacker News</a></li>
+<li><strong>Exploitation active de WordPress (CVE-2026-63030 "wp2shell")</strong> : Une vulnérabilité critique permettant l'exécution de code à distance est activement exploitée. Le CVE vient d'être assigné et la menace est jugée significative, contrairement à la plupart des failles de plugins. <a href="https://isc.sans.edu/diary/rss/33168">SANS ISC</a> · <a href="https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation active de ServiceNow</strong> : La faille critique CVE-2026-6875 sur la plateforme IA de ServiceNow, permettant l'exécution de code à distance, est désormais exploitée en conditions réelles. <a href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/">BleepingComputer</a></li>
+<li><strong>Campagne de malware WebDAV assistée par IA</strong> : Le serveur de commandement d'un opérateur malveillant, laissé exposé, a révélé un kit de phishing complet (1000+ fichiers) intégrant des outils d'IA pour générer des leurres et des droppers. Une campagne visait déjà des utilisateurs Windows au Mexique. <a href="https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Compromission de Hugging Face par un agent IA autonome</strong> : Un acteur malveillant a utilisé un système d'agent IA autonome pour pénétrer l'infrastructure de production de Hugging Face et exfiltrer des datasets internes et des credentials. <a href="https://www.bleepingcomputer.com/news/security/hugging-face-breach-autonomous-ai-agent-system-internal-datasets-credentials/">BleepingComputer</a></li>
+<li><strong>HollowGraph : exfiltration de données via calendriers Microsoft 365</strong> : Un implant d'espionnage utilise un calendrier Microsoft 365 compromis comme canal C2. Les instructions et les fichiers volés sont dissimulés dans des pièces jointes d'événements datés de 2050 pour contourner la détection. <a href="https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Cyberespionnage russe via caméras IP</strong> : Un service de renseignement russe détourne systématiquement des caméras IP connectées en Europe et en Ukraine pour surveiller la logistique militaire et les mouvements de troupes. <a href="https://thehackernews.com/2026/07/russian-intelligence-hacks-ip-cameras.html">The Hacker News</a></li>
+<li><strong>Brèche de 9 mois dans le réseau diplomatique sud-coréen</strong> : Des attaquants sont restés infiltrés dans la plateforme de formation en ligne de l'académie diplomatique, dérobant les données personnelles d'employés actuels et passés du ministère des Affaires étrangères. <a href="https://therecord.media/south-korea-cyberattack-foreign-ministry">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Fuite de données chez un fournisseur hospitalier US</strong> : Craneware, éditeur logiciel pour plus de 2000 hôpitaux américains, a subi un accès non autorisé à une partie de son environnement, exposant des données employés et clients. <a href="https://therecord.media/software-provider-for-us-hospitals-customer-data-breach">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Correctifs Windows pour arrêts inopinés sur Dell</strong> : Microsoft a publié une mise à jour d'urgence (KB5121767) corrigeant un bug qui provoquait l'extinction de certains PC Dell après installation des correctifs de sécurité de juillet 2026. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-bug-causing-some-dell-pcs-to-shut-down/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Problèmes de synchronisation WSUS</strong> : Microsoft confirme des retards et timeouts sur les serveurs WSUS depuis plus d'une semaine, un correctif est en cours d'élaboration. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-wsus-server-sync-delays-and-timeouts/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Réduction de la fenêtre d'exposition</strong> : Un article d'analyse souligne que le véritable risque post-Mythos n'est pas le volume de CVE générées par l'IA, mais la capacité des organisations à réduire leur fenêtre d'exposition avant qu'un correctif ne soit disponible. <a href="https://thehackernews.com/2026/07/mythos-didnt-break-your-security.html">The Hacker News</a></li>
+<li><strong>Cyberattaque majeure contre le cadastre roumain</strong> : L'agence du registre foncier lutte pour restaurer ses services après l'"incident technique le plus grave de son histoire", perturbant fortement le marché immobilier. <a href="https://therecord.media/romania-cyberattack-land-registry">The Record</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>WordPress : exécution de code à distance en pré-authentification</strong> : Une vulnérabilité RCE affecte l'API REST Batch des versions récentes de WordPress, exploitable sans authentification préalable sur une installation par défaut. Le correctif est disponible, le déploiement est urgent. <a href="https://www.csoonline.com/article/4198791/patch-now-wordpress-rest-api-bug-allows-remote-code-execution.html">CSO Online</a></li>
+<li><strong>BEC & évasion fileless</strong> : Une nouvelle technique combinant techniques fileless et loaders furtifs permet de déployer des RAT/stealers (Agent Tesla, Remcos, XWorm) avec un taux de détection très faible. <a href="https://www.darkreading.com/endpoint-security/attackers-combo-evasion-tactics-bec-phishing">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>ACR Stealer : campagne d'infostealer via WebDAV et MSHTA</strong> : Microsoft signale une recrudescence d'ACR Stealer utilisant des leurres ClickFix pour dérober identifiants, données de navigation et documents professionnels. Deux campagnes distinctes ont été observées entre fin avril et mi-juin, misant sur WebDAV et MSHTA pour contourner les détections. <a href="https://www.csoonline.com/article/4198788/new-acr-stealer-campaigns-use-webdav-mshta-to-evade-detection.html">CSO Online</a></li>
+<li><strong>Gouvernance IA & risk management</strong> : Les RSSI sont désormais attendus comme facilitateurs de décision business et non plus comme simples garde-fous, alors que l'adoption de l'IA dans la chaîne de valeur dépasse la vitesse de maturation des cadres de gestion des risques. <a href="https://www.csoonline.com/article/4198872/ai-adoption-and-business-acceleration-are-changing-the-expectations-of-technology-risk-management.html">CSO Online</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>BMS déploie un supercalculateur sur NVIDIA Vera Rubin</strong> : Le groupe pharmaceutique Bristol Myers Squibb annonce la construction d'un second cluster IA, basé sur la future architecture Vera Rubin de NVIDIA, après des résultats significatifs obtenus sur son infrastructure actuelle. L'objectif est de renforcer ses capacités de découverte de médicaments et de simulation moléculaire. <a href="https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/">NVIDIA Blog</a></li>
+<li><strong>NVIDIA muscle ses outils agents pour l'entreprise</strong> : NVIDIA dévoile des avancées en IA agentique et simulation physique au SIGGRAPH, et s'associe à AWS pour fournir un toolkit (NeMo Agent Toolkit) permettant aux métiers de construire des workflows agents spécialisés depuis des dashboards Amazon Quick. <a href="https://blogs.nvidia.com/blog/siggraph-news-2026/">NVIDIA Blog</a> · <a href="https://aws.amazon.com/blogs/machine-learning/build-specialized-agent-workflows-for-your-business-with-amazon-quick-and-nvidia-nemo-agent-toolkit/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Couchbase adopte une architecture multi-modèle pour son assistant IA</strong> : Capella iQ s'appuie sur Amazon Bedrock et la famille Claude d'Anthropic pour fournir des capacités d'IA générative en production, avec un design multi-modèle justifié par des gains opérationnels mesurés. <a href="https://aws.amazon.com/blogs/machine-learning/how-couchbase-built-a-multi-model-ai-architecture-for-capella-iq-with-amazon-bedrock/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Compétition sino-américaine sur l'IA</strong> : Moonshot AI et Alibaba ont publié des modèles open-weight (dont Kimi K3 à 2 800 milliards de paramètres) qui rivalisent avec ceux d'OpenAI et Anthropic pour un coût bien inférieur, réduisant l'écart technologique revendiqué par les États-Unis. <a href="https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen">The Verge</a> · <a href="https://www.artificialintelligence-news.com/news/kimi-k3-open-weight-model-memory-compute-china/">AI News</a></li>
-</ul>
-
-<ul>
-<li><strong>Biais algorithmiques dans le recrutement</strong> : Une étude du MIT montre que les LLM ne se contentent pas de reproduire les biais humains présents dans leurs données d'entraînement, mais peuvent en générer de nouveaux de manière autonome lors du tri de CV. <a href="https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/">MIT Technology Review</a></li>
-</ul>
-
-<ul>
-<li><strong>Expérimentation de l'IA en santé publique américaine</strong> : Un programme baptisé PULSE, associant OpenAI, Anthropic et Accenture, va tester des outils d'IA générative dans 10 agences de santé locales ou tribales aux États-Unis. <a href="https://www.artificialintelligence-news.com/news/openai-anthropic-public-health-ai/">AI News</a></li>
+<li><strong>Fractures dans le camp Trump sur l'IA</strong> : D'anciens et actuels conseillers IA de Trump critiquent ouvertement les entreprises leaders du secteur, révélant des lignes de fracture internes sur la stratégie américaine face aux modèles chinois. <a href="https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/">MIT Technology Review</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Projet Glasswing / Vulnérabilités critiques</strong> : Le projet d'Anthropic a détecté plus de 10 000 vulnérabilités critiques en un mois, remettant en cause l'approche d'achat d'outils au profit d'une meilleure compréhension des failles réelles. <a href="https://www.journaldunet.com/cybersecurite/1552591-ne-vous-demandez-plus-quel-outil-acheter-demandez-vous-ce-que-mythos-a-revele/">JDN</a></li>
+<li><strong>Régulation des plateformes</strong> : La Commission européenne inflige une amende record de 550 millions d'euros à AliExpress pour infraction au DSA sur la gestion des produits illégaux. <a href="https://next.ink/248163/produits-illegaux-bruxelles-inflige-550-millions-deuros-damende-a-aliexpress/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèle open source Kimi K3</strong> : Moonshot AI dévoile un modèle de 2800 milliards de paramètres en poids ouverts, suscitant des comparaisons avec l'effet de surprise créé par DeepSeek. <a href="https://next.ink/248051/kimi-k3-ce-quil-faut-savoir-du-modele-open-source-de-2-800-milliards-de-parametres/">Next.ink</a></li>
+<li><strong>Majorité numérique à 15 ans</strong> : Députés et sénateurs s'accordent pour interdire l'accès aux réseaux sociaux aux moins de 15 ans, une première en Europe. La question du contrôle effectif de l'âge reste entière. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/le-premier-pays-d-europe-a-instaurer-une-majorite-numerique-le-parlement-s-accorde-pour-interdire-les-reseaux-sociaux-aux-moins-de-15-ans_AV-202607200509.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Risques des agents IA pour le e-commerce</strong> : L'Autorité de la concurrence pointe le risque de manipulation des achats par des agents IA capables de comparer, choisir et payer sans intervention humaine. <a href="https://siecledigital.fr/2026/07/20/lautorite-de-la-concurrence-alerte-sur-les-risques-des-agents-ia-pour-nos-achats-en-ligne/">Siècle Digital</a></li>
+<li><strong>Gouvernance de l'IA</strong> : Le déploiement de l'IA en entreprise souffre d'un déficit de réflexion philosophique en amont, les audits n'intervenant qu'après la fixation des objectifs. <a href="https://www.journaldunet.com/intelligence-artificielle/1552801-l-ia-manque-de-philosophie/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Cybersécurité & résilience</strong> : </li>
-</ul>
-  - La FIFA annonce avoir bloqué plus d'un milliard de cyberattaques avant la finale de la Coupe du monde 2026. <a href="https://www.journaldunet.com/cybersecurite/1552653-un-milliard-de-cyberattaques-avant-la-finale-comment-la-coupe-du-monde-2026-a-evite-le-cyber-k-o/">JDN</a>
-  - L'incertitude post-incident génère un coût supérieur à celui de l'interruption d'activité elle-même, imposant de repenser les stratégies de cyber-résilience. <a href="https://www.journaldunet.com/cybersecurite/1552595-cyberattaques-l-incertitude-coute-plus-cher-que-le-temps-d-arret/">JDN</a>
-
-<ul>
-<li><strong>Encadrement des agents IA</strong> : La fiabilité d'un agent IA repose non sur le LLM mais sur le cadre qui l'entoure ; sans ancrage métier, les hallucinations restent un risque inacceptable, notamment en sécurité réseau. <a href="https://www.journaldunet.com/intelligence-artificielle/1552789-l-efficacite-des-agents-d-ia-depend-de-la-maniere-dont-ils-sont-encadres/">JDN</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552797-pourquoi-les-entreprises-ne-peuvent-plus-se-permettre-de-deployer-des-agents-ia-a-l-aveugle/">JDN</a></li>
-</ul>
-
-<ul>
-<li><strong>Surinvestissement dans l'IA</strong> : Un rapport de la Banque des Règlements Internationaux alerte sur le risque de basculement brutal d'une phase expansive à un effondrement, le secteur étant déjà en situation de surinvestissement. <a href="https://next.ink/248064/le-surinvestissement-dans-lia-pourrait-passer-dune-explosion-a-un-effondrement/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Blocage de Polymarket</strong> : L'ANJ a ordonné le blocage total de l'accès à Polymarket en France, y compris pour la simple consultation des cotes sur des événements d'actualité. <a href="https://siecledigital.fr/2026/07/20/la-france-bloque-totalement-lacces-a-polymarket-le-geant-des-paris-sur-lactualite/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Souveraineté numérique & infrastructures critiques</strong> : À l'ère du cloud, la souveraineté passe par la maîtrise des infrastructures critiques et pas uniquement par la localisation des données. <a href="https://www.journaldunet.com/cybersecurite/1552547-la-souverainete-numerique-se-joue-desormais-dans-les-infrastructures-critiques/">JDN</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552821-souverainete-a-l-ere-de-l-ia-faut-il-vraiment-choisir-entre-innover-et-proteger/">JDN</a></li>
-</ul>
-
-<ul>
-<li><strong>IA en entreprise : des promesses aux limites concrètes</strong> :</li>
-</ul>
-  - L'adoption de l'IA reste superficielle ; le passage à des systèmes orientés résultats et contextualisés est nécessaire pour une vraie transformation. <a href="https://www.journaldunet.com/intelligence-artificielle/1552805-le-moment-de-verite-pour-l-ia-en-entreprise-pourquoi-l-aspect-utile-ne-suffit-plus/">JDN</a>
-  - GPT-5.2 obtient des scores quasi parfaits sur les benchmarks, tandis que les retours d'usage sur les forums racontent une réalité bien moins brillante. <a href="https://www.journaldunet.com/intelligence-artificielle/1552817-pourquoi-chatgpt-expose-aujourd-hui-les-limites-de-la-strategie-d-openai/">JDN</a>
-  - Les graphes de connaissances sont présentés comme la clé pour ancrer l'IA dans des données structurées et produire des résultats explicables. <a href="https://www.journaldunet.com/intelligence-artificielle/1552811-world-models-l-ia-ne-comprendra-pas-le-monde-tant-que-ses-donnees-resteront-incomprehensibles/">JDN</a>
-
-<ul>
-<li><strong>Dérives organisationnelles de l'IA</strong> : L'IA générative augmente la performance individuelle mais dégrade le fonctionnement collectif en accentuant le repli sur soi et l'isolement entre collaborateurs. <a href="https://www.journaldunet.com/intelligence-artificielle/1552847-l-ia-fabrique-des-collaborateurs-tout-puissants-qui-ne-se-parlent-plus/">JDN</a></li>
-</ul>
-
-<ul>
-<li><strong>IA générative pour catalogues e-commerce</strong> : La génération d'images produit par IA nécessite un contrôle humain coûteux pour garantir la fidélité au produit réel, la répétabilité restant le principal défi. <a href="https://www.journaldunet.com/retail/1552845-l-ia-peut-elle-produire-un-catalogue-e-commerce-fiable-et-pas-seulement-une-belle-image/">JDN</a></li>
+<li><strong>Cybermenaces sur les festivals</strong> : Billetterie frauduleuse, phishing et quishing ciblent massivement les festivaliers, devenus des proies privilégiées pour les cybercriminels. <a href="https://www.journaldunet.com/cybersecurite/1552785-dans-la-ligne-de-mire-des-cybercriminels-les-festivaliers-plus-cibles-que-jamais/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260720-1318</guid>
-      <pubDate>Mon, 20 Jul 2026 13:18:39 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260720-1903</guid>
+      <pubDate>Mon, 20 Jul 2026 19:03:08 +0000</pubDate>
     </item>
   </channel>
 </rss>
