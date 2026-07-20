@@ -96,3 +96,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-20 08:20 UTC | scoring | AEGIS: Assay-Aware Protocol Validation and Runtime Monitorin (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
 | 2026-07-20 08:27 UTC | scoring | ToolSciVer: Multimodal Scientific Claim Verification with Vi (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
 | 2026-07-20 09:02 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2359)) |
+| 2026-07-20 13:12 UTC | scoring | Russian-Speaking Hacker Uses Google Gemini CLI to Control Bo (The Hacker News) | Rate limit fournisseur LLM atteint |
