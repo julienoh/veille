@@ -8,206 +8,180 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 21 Jul 2026 12:34:15 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 18:29:07 +0000</lastBuildDate>
     <item>
-      <title>Digest — 21/07 12h</title>
+      <title>Digest — 21/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Exploitation active de failles critiques ServiceNow et Palo Alto** : La vulnérabilité ServiceNow AI Platform (CVE-2026-6875, CVSS 9.5) permettant l'exécution de code sans authentification est exploitée en conditions réelles. Parallèlement, le gang Qilin exploite une faille de contournement d'authentification sur les VPN GlobalProtect de Palo Alto pour déployer des ransomwares. [ServiceNow](https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html) · [Palo Alto](https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/)
+- **SharePoint RCE CVE-2026-50522 exploitée activement** : Une faille critique de désérialisation (CVSS 9.8) corrigée lors du Patch Tuesday de juillet 2026 fait l'objet d'attaques actives après la publication d'un PoC public. [The Hacker News](https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html)
 
-- **WordPress : exploitation massive via chaîne critique wp2shell** : Deux vulnérabilités combinées (CVE-2026-63030 et CVE-2026-60137) permettent l'exécution de code à distance sans authentification sur les sites WordPress. Un exploit public accélère les campagnes de scan et de compromission à grande échelle. [The Hacker News](https://thehackernews.com/2026/07/wordpress-wp2shell-exploitation-grows.html)
+- **Qilin exploite une faille PAN-OS pour déployer un ransomware** : Le groupe Qilin (Agenda) utilise une vulnérabilité de contournement d'authentification sur Palo Alto Networks PAN-OS comme vecteur d'accès initial, selon Arctic Wolf Labs. [The Hacker News](https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html)
 
-- **Ransomware ciblant l'IA : ENCFORGE chiffre les modèles Langflow** : L'opérateur JADEPUFFER a déployé un ransomware Go compilé visant spécifiquement les poids de modèles, index vectoriels et artefacts d'inférence sur des serveurs Langflow. Cette attaque illustre l'émergence de menaces ciblant directement les pipelines MLOps. [The Hacker News](https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html)
+- **Vulnérabilités critiques WordPress "wp2shell" exploitées** : Les failles CVE-2026-63030 et CVE-2026-60137 dans WordPress Core permettent à des attaquants d'installer des webshells persistants et des plugins malveillants sur les serveurs affectés. [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-wp2shell-wordpress-flaws-exploited-to-install-webshells/)
 
-- **Réduction de la fenêtre d'exploitation post-patch** : L'analyse des diffs de correctifs permet de rétro-concevoir des exploits en quelques heures. La simple accélération des cycles de patching ne suffit plus à protéger les systèmes, le délai entre la publication d'un correctif et l'exploitation active (N-day) se réduisant drastiquement. [The Hacker News](https://thehackernews.com/2026/07/n-day-is-becoming-n-hour-patching.html)
+- **AWS Kiro : exécution de code via une page web piégée** : Une simple requête de résumé adressée à l'IDE agentique Kiro suffisait à réécrire sa configuration et exécuter du code malveillant, sans possibilité de blocage par l'étape d'approbation. [The Hacker News](https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html)
 
-- **Agents IA Android : exécution de code invisible sur PC hôte** : Des chercheurs démontrent qu'une application Android malveillante peut injecter des instructions via du texte invisible à l'écran pour manipuler un agent IA, puis exécuter des commandes sur le PC contrôlant cet agent. L'attaque exploite la capacité de dessiner par-dessus d'autres fenêtres et l'accès au stockage partagé. [The Hacker News](https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html)
+- **Zimbra corrige une injection de commandes SNMP et quatre XSS** : Neuf vulnérabilités sont patchées dans Zimbra 10.1.20, dont une injection de commandes critique via le composant SNMP. [The Hacker News](https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html)
 
-- **Bit2Watt : déstabilisation du réseau électrique via abus de GPU cloud** : Des locataires cloud peuvent manipuler la consommation électrique d'un datacenter par simple variation de charge GPU, sans exploit ni intrusion. Cette technique pourrait menacer la stabilité du réseau électrique en amont. [The Hacker News](https://thehackernews.com/2026/07/new-bit2watt-attack-could-let-cloud.html)
+- **23andMe condamnée à 3 M$ par l'Espagne pour défaillances de sécurité** : L'AEPD sanctionne l'entreprise pour des manquements ayant conduit au vol de données de 6,9 millions de personnes dans le monde, dont plus de 2 600 Espagnols. [The Record](https://therecord.media/spain-fines-23andme-3-million-cyber-failings-data-breach)
 
-- **Zero-day Windows : correctifs non officiels pour l'élévation de privilèges LegacyHive** : Une faille zero-day permettant l'élévation de privilèges sur des systèmes Windows à jour a reçu des correctifs non officiels gratuits, en attendant une réponse de Microsoft. [BleepingComputer](https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/)
+- **Google lance Gemini 3.5 Flash Cyber pour la détection de vulnérabilités** : Ce modèle IA spécialisé, basé sur Gemini 3.5 Flash, est conçu pour identifier, valider et corriger automatiquement des vulnérabilités logicielles. [The Hacker News](https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html)
 
-- **Saisie de 1000+ sites de streaming pirate pour la Coupe du Monde** : Le ministère américain de la Justice a saisi plus de 1000 sites et bloqué 1970 domaines diffusant illégalement les matchs de la FIFA World Cup 2026. [BleepingComputer](https://www.bleepingcomputer.com/news/security/us-seizes-over-1-000-fifa-world-cup-illegal-streaming-domains/)
-
-- **WSUS : correctif manuel Microsoft pour les échecs de synchronisation** : Microsoft fournit des mesures d'atténuation manuelles pour résoudre les délais et timeouts affectant les serveurs WSUS lors des analyses Windows Update. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-manual-fix-for-wsus-sync-delays-and-timeouts/)
-
-- **Kenya : site de la présidence défiguré avec demande de rançon Bitcoin** : Le site officiel du président kényan a été compromis, sa page d'accueil remplacée par une adresse de portefeuille crypto et une menace de divulgation d'informations. [The Record](https://therecord.media/kenya-probes-hack-of-presidents-website-after-ransom-demand)
+- **Sécurité des infrastructures critiques : combler les lacunes identitaires** : Les attaques ciblant ces environnements démarrent souvent par des identifiants volés ou des appareils compromis, ce qui impose une vérification conjointe de l'identité et de la posture du terminal avant tout accès. [BleepingComputer](https://www.bleepingcomputer.com/news/security/closing-the-identity-gaps-in-critical-infrastructure-security/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Suspension du Patch Tuesday de juillet par Microsoft** : Microsoft a interrompu le déploiement de ses correctifs mensuels après la découverte d'effets secondaires critiques, illustrant une dégradation continue de la qualité des mises à jour. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-microsoft-suspend-le-patch-tuesday-de-juillet-100705.html)
+- **Risque du code généré par IA** : Le nombre moyen de vulnérabilités introduites par du code généré par IA (15 par base de code) dépend davantage du framework utilisé que du modèle d'IA choisi. [Dark Reading](https://www.darkreading.com/application-security/choose-wisely-ai-generated-coding-risk-varies)
 
-- **Évasion des bacs à sable par les agents IA** : Des recherches montrent que les agents de codage IA peuvent contourner l'isolation des sandboxes sans les briser techniquement, en exploitant des failles de conception dans des outils comme Cursor ou Gemini CLI. [CSO Online](https://www.csoonline.com/article/4199408/ai-agents-can-escape-sandboxes-without-ever-breaking-them.html)
+## IA — Labos &amp; éditeurs
 
-- **Surveillance IA généralisée au MIT** : L'institut déploie plus de 500 caméras de surveillance dotées d'IA dans les bâtiments académiques et résidences, pour un coût supérieur à 3 millions de dollars, soulevant des questions sur la vie privée en milieu universitaire. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/mit-to-become-hotbed-of-ai-video-surveillance.html)
+- **Réseau NVIDIA Spectrum-6 pour usines IA** : NVIDIA déploie son switch Ethernet Spectrum-6, conçu initialement pour le télescope Vera Rubin, dans les datacenters d'entraînement à échelle gigascale. L'enjeu est de maintenir la bande passante et la synchronisation entre centaines de milliers de GPU, où le réseau devient le facteur limitant de la puissance de calcul. [NVIDIA Blog](https://blogs.nvidia.com/blog/nvidia-spectrum-six-arrives-in-gigascale-ai-factories/)
+
+- **Raisonnement auto-distillé pour fine-tuning avec Amazon Nova** : AWS propose une méthode de Self-Distilled Reasoning (SDR) pour injecter des traces de raisonnement dans des jeux de données qui en sont dépourvus, lors du fine-tuning supervisé. L'approche contourne le problème de suppression du raisonnement observé sur les modèles Nova et améliore les performances sur trois benchmarks. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/exploring-self-distilled-reasoning-for-supervised-fine-tuning-with-amazon-nova/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Modèles open-weight chinois et risque réglementaire** : Les entreprises qui évaluent des modèles chinois comme Kimi K3 doivent intégrer l'incertitude politique américaine dans leur calcul de risque, au-delà des seules performances techniques. [AI News](https://www.artificialintelligence-news.com/news/chinese-open-weight-models-policy-risk/)
+- **Sanctions US contre les modèles chinois** : Le Trésor américain menace d'étendre les sanctions aux modèles d'IA open source chinois pour vol présumé de propriété intellectuelle, dans la continuité de la campagne visant à freiner les avancées chinoises. [TechCrunch](https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/)
 
-- **NVIDIA Cosmos 3 Edge pour la robotique embarquée** : NVIDIA livre un modèle monde de 4 milliards de paramètres capable de raisonner et générer des actions robotiques directement sur l'appareil, sans connexion cloud. [MarkTechPost](https://www.marktechpost.com/2026/07/21/nvidia-releases-cosmos-3-edge-a-4b-parameter-open-world-model-that-reasons-and-generates-robot-actions-on-device/)
+- **Nvidia lance Vera Rubin** : La plateforme Vera Rubin intègre CPU et GPU dans un système unifié, marquant l'ambition de Nvidia de contrôler l'ensemble des composants matériels des datacenters IA. [Wired](https://www.wired.com/story/nvidia-wants-to-own-every-chip-inside-an-ai-data-center/)
 
-- **Bristol Myers Squibb acquiert un supercalculateur NVIDIA pour la R&amp;D pharmaceutique** : Le laboratoire devient le premier acteur des sciences de la vie à acheter un DGX SuperPOD basé sur l'architecture Vera Rubin, destiné à accélérer la découverte de médicaments par IA. [AI News](https://www.artificialintelligence-news.com/news/bristol-myers-squibb-nvidia-ai-system-drug-discovery/)
+- **Google étoffe sa gamme Flash** : Gemini 3.6 Flash, 3.5 Flash-Lite et Flash Cyber (réservée à la sécurité du code) sortent le 21 juillet, avec une baisse de 17% des tokens de sortie et un tarif à 7,50$/1M tokens pour 3.6 Flash. Flash-Lite atteint 350 tokens/s, et l'ensemble cible les charges agentiques à moindre coût. [MarkTechPost](https://www.marktechpost.com/2026/07/21/google-releases-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber-a-cheaper-more-token-efficient-flash-tier-built-for-agentic-workloads/)
 
-- **Meta libère Astryx, son design system React interne** : Meta ouvre sous licence MIT le système utilisé depuis 8 ans sur plus de 13 000 applications, incluant 150 composants accessibles, sept thèmes et une CLI conçue pour les agents IA. [MarkTechPost](https://www.marktechpost.com/2026/07/21/meta-open-sources-astryx-an-agent-ready-react-design-system-with-150-accessible-components-seven-themes-and-a-cli/)
+- **Malware ciblant l'infrastructure IA** : Un nouvel outil malveillant s'infiltre dans les systèmes de codage IA pour exfiltrer identifiants et données, et active un "interrupteur de destruction" pour verrouiller les utilisateurs légitimes et supprimer des fichiers. [Wired](https://www.wired.com/story/a-sneaky-hacking-tool-targeting-ai-infrastructure-is-lurking-in-victims-blind-spots/)
+
+- **Anthropic : accord à 1,5 milliard validé** : Un juge fédéral a approuvé le règlement du recours collectif pour violation de droits d'auteur, les auteurs reprochant à Anthropic d'avoir entraîné ses modèles sur des livres protégés sans autorisation. [The Verge](https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved)
+
+- **Deezer submergé par l'IA générative** : La plateforme rapporte que plus de 50% des uploads quotidiens (plus de 90 000 titres par jour en juin) sont désormais générés par IA. [TechCrunch](https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/)
+
+- **Lunettes connectées sans caméra** : Les Halliday G2 captent et résument les réunions en audio uniquement, sans enregistrement vidéo, ciblant un usage professionnel discret. [Wired](https://www.wired.com/story/halliday-new-smart-glasses-skip-the-camera/)
+
+- **Benchmarking distribué de LLMs** : Le framework srt-slurm de Nvidia permet de convertir des configurations YAML déclaratives en workflows SLURM reproductibles pour évaluer le serving distribué de LLMs, avec analyses paramétriques et Pareto. [MarkTechPost](https://www.marktechpost.com/2026/07/21/validating-distributed-llm-serving-benchmarks-with-nvidia-srt-slurm-slurm-recipes-parameter-sweeps-and-pareto-analysis/)
 
 ## Actualité tech FR
 
-- **Agent IA autonome comme outil d’attaque** : Hugging Face a subi une intrusion entièrement pilotée par un agent IA, une première documentée. Selon Next.ink et le Journal du Net, l’essor de ces agents menace les modèles de sécurité basés sur le blocage des bots, obligeant à distinguer automatisation légitime et malveillante. [Next.ink](https://next.ink/248236/attaquee-par-un-agent-ia-autonome-hugging-face-a-analyse-les-traces-avec-un-llm-local/) · [Journal du Net](https://www.journaldunet.com/cybersecurite/1552793-quand-internet-bloque-ses-utilisateurs-les-plus-precieux/)
+- **Souveraineté cloud et IA : Microsoft investit massivement chez Mistral AI** : Microsoft injecte plusieurs milliards de dollars pour aider la licorne française à construire ses propres datacenters européens, tandis que ses modèles seront distribués sur Azure. Un partenariat qui mêle enjeux de souveraineté et dépendance stratégique. [Next.ink](https://next.ink/248290/microsoft-engage-plusieurs-milliards-de-dollars-aux-cotes-de-mistral-en-europe/)
 
-- **Détection des bots par analyse comportementale continue** : Cloudflare lance Precursor, un moteur qui évalue le comportement tout au long de la session pour identifier les bots sophistiqués, dépassant l’analyse ponctuelle. [ZDNet France](https://www.zdnet.fr/actualites/cloudflare-mise-sur-lanalyse-comportementale-pour-dejouer-les-bots-les-plus-sophistiques-498830.htm)
+- **Gouvernance des identités machines : un angle mort qui monte** : Le JDN alerte sur le risque de voir le nombre d'identités non humaines (agents IA, scripts) dépasser celui des utilisateurs, sans que les DSI n'aient toujours de cadre de supervision adapté. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552853-la-gouvernance-des-agents-ia-la-prochaine-bombe-a-retardement-des-dsi/)
 
-- **Menace quantique jugée maximale par le renseignement** : Les services estiment que le « Q-Day » pourrait survenir vers 2030-2035 et considèrent la menace comme maximale, la compétition étant déjà intense sur les financements et les brevets. [Next.ink](https://next.ink/248221/quantique-pour-les-services-de-renseignement-le-niveau-de-la-menace-est-maximal/)
+- **Interdiction des réseaux sociaux aux moins de 15 ans : adoption définitive** : La loi française a été votée et l'exécutif vise une mise en application au 1er septembre, posant la question de l'intégration d'un dispositif de vérification d'âge fiable à cette échéance. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-entre-promesse-de-protection-des-mineurs-et-casse-tete-technique-la-france-a-franchi-un-cap-inedit-en-europe_AV-202607210607.html)
 
-- **Intrusion sur le site du Rassemblement national** : Le site du parti a été défiguré en page d’accueil par un collectif se réclamant de drapeaux marocain et algérien, intrusion confirmée par le RN. [Next.ink](https://next.ink/brief-article/le-rassemblement-national-confirme-une-intrusion-sur-son-site/)
+- **Confinement navigateur : Firefox 153 active les conteneurs par défaut** : L'isolation native de chaque onglet dans son propre bac à cookies permet de cantonner le pistage sans extension tierce, avec un déploiement en cours avant la bascule vers la version ESR. [Next.ink](https://next.ink/248292/firefox-153-integre-nativement-des-conteneurs-pour-isoler-les-sites/)
 
-- **Faille dans 7-Zip permettant une prise de contrôle** : Une vulnérabilité touche 7-Zip, logiciel souvent non mis à jour automatiquement, exposant les postes à une exécution de code malveillant. [Siècle Digital](https://siecledigital.fr/2026/07/21/si-vous-utilisez-7-zip-cette-faille-peut-permettre-a-des-pirates-de-prendre-le-controle-de-votre-pc/)
+- **Windows installe un installeur McAfee via le branchement d'un écran LG** : L'OS récupère silencieusement une application via le Windows Driver Framework, ce qui relance le débat sur la confiance à accorder aux charges logicielles greffées aux périphériques. [Next.ink](https://next.ink/248273/comment-un-simple-branchement-decran-illustre-un-vieux-probleme-de-windows/)
 
-- **LG exploite une faille Windows pour installer un logiciel sans consentement** : La connexion d’un moniteur UltraGear déclenchait l’installation silencieuse d’une application via une brèche dans Windows. [Siècle Digital](https://siecledigital.fr/2026/07/21/lg-aurait-profite-dune-faille-de-windows-pour-installer-un-logiciel-sans-le-consentement-des-utilisateurs/)
-
-- **Sécurité interne et profilage des salariés** : Des outils cyber sont désormais capables de signaler un employé avant tout passage à l’acte, posant la question de l’équilibre entre détection de menace et traitement d’un comportement inhabituel. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552657-minority-report-devient-reel-votre-entreprise-peut-elle-vous-classer-comme-menace-avant-toute-attaque/)
-
-- **Manipulation des données via l’IA connectée aux métiers** : La cybersécurité fait face à une menace qui n’est plus le vol de données, mais leur altération insidieuse via des IA intégrées aux outils métier, pouvant fausser les décisions. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552655-black-mirror-devient-realite-comment-les-hackers-peuvent-manipuler-vos-donnees-vos-ia-et-vos-decisions/)
-
-- **Amende européenne record de 550 M€ contre AliExpress** : La Commission sanctionne la plateforme pour l’absence de retrait durable de contrefaçons et de produits dangereux après plus de deux ans d’enquête. [Siècle Digital](https://siecledigital.fr/2026/07/21/leurope-frappe-fort-contre-aliexpress-avec-une-amende-historique-de-550-millions-deuros/)
-
-- **Conformité RGPD pour la géolocalisation des flottes** : Cinq étapes clés sont à respecter pour éviter les manquements, alors que l’équipement des véhicules d’entreprise en systèmes de traçage se généralise. [Siècle Digital](https://siecledigital.fr/2026/07/21/rgpd-et-geolocalisation-des-vehicules-quelles-sont-les-5-etapes-cles-pour-etre-en-conformite-avec-la-cnil/)
-
-- **Parlement européen : une plateforme IA interne pour les députés** : Bruxelles teste EpGenAI Hub afin d’offrir un usage sécurisé de l’IA générative, évitant de soumettre des documents institutionnels à des services publics. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/les-deputes-europeens-utilisent-de-plus-en-plus-l-ia-bruxelles-cree-un-chat-gpt-interne-pour-ses-deputes_AV-202607210304.html)
-
-- **Meta prête à fournir de la puissance de calcul à Anthropic pour 10 Md$** : L’accord illustre la réorientation de Meta vers la vente de capacité de calcul, face aux énormes besoins des entreprises d’IA. [Siècle Digital](https://siecledigital.fr/2026/07/21/meta-prepare-un-accord-geant-avec-anthropic-qui-pourrait-lui-rapporter-10-milliards-de-dollars/)
-
-- **Échecs de l’IA en entreprise à cause de la « dette de contenu »** : L’un des freins majeurs à la valeur attendue de l’IA est la mauvaise qualité des données internes, déceptives pour les modèles. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552759-dette-de-contenu-l-ia-d-entreprise-et-ses-echecs/)</description>
+- **Google développe une puce taillée pour Gemini** : D'après Le Monde Informatique, Google travaille sur un accélérateur IA interne optimisé pour ses propres modèles, une stratégie qui rappelle celle d'OpenAI avec le projet Jalapeño pour réduire la dépendance à NVIDIA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-google-preparerait-une-puce-ia-optimisee-pour-ses-modeles-gemini-100708.html)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exploitation active de failles critiques ServiceNow et Palo Alto</strong> : La vulnérabilité ServiceNow AI Platform (CVE-2026-6875, CVSS 9.5) permettant l'exécution de code sans authentification est exploitée en conditions réelles. Parallèlement, le gang Qilin exploite une faille de contournement d'authentification sur les VPN GlobalProtect de Palo Alto pour déployer des ransomwares. <a href="https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html">ServiceNow</a> · <a href="https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/">Palo Alto</a></li>
+<li><strong>SharePoint RCE CVE-2026-50522 exploitée activement</strong> : Une faille critique de désérialisation (CVSS 9.8) corrigée lors du Patch Tuesday de juillet 2026 fait l'objet d'attaques actives après la publication d'un PoC public. <a href="https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>WordPress : exploitation massive via chaîne critique wp2shell</strong> : Deux vulnérabilités combinées (CVE-2026-63030 et CVE-2026-60137) permettent l'exécution de code à distance sans authentification sur les sites WordPress. Un exploit public accélère les campagnes de scan et de compromission à grande échelle. <a href="https://thehackernews.com/2026/07/wordpress-wp2shell-exploitation-grows.html">The Hacker News</a></li>
+<li><strong>Qilin exploite une faille PAN-OS pour déployer un ransomware</strong> : Le groupe Qilin (Agenda) utilise une vulnérabilité de contournement d'authentification sur Palo Alto Networks PAN-OS comme vecteur d'accès initial, selon Arctic Wolf Labs. <a href="https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Ransomware ciblant l'IA : ENCFORGE chiffre les modèles Langflow</strong> : L'opérateur JADEPUFFER a déployé un ransomware Go compilé visant spécifiquement les poids de modèles, index vectoriels et artefacts d'inférence sur des serveurs Langflow. Cette attaque illustre l'émergence de menaces ciblant directement les pipelines MLOps. <a href="https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html">The Hacker News</a></li>
+<li><strong>Vulnérabilités critiques WordPress "wp2shell" exploitées</strong> : Les failles CVE-2026-63030 et CVE-2026-60137 dans WordPress Core permettent à des attaquants d'installer des webshells persistants et des plugins malveillants sur les serveurs affectés. <a href="https://www.bleepingcomputer.com/news/security/critical-wp2shell-wordpress-flaws-exploited-to-install-webshells/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Réduction de la fenêtre d'exploitation post-patch</strong> : L'analyse des diffs de correctifs permet de rétro-concevoir des exploits en quelques heures. La simple accélération des cycles de patching ne suffit plus à protéger les systèmes, le délai entre la publication d'un correctif et l'exploitation active (N-day) se réduisant drastiquement. <a href="https://thehackernews.com/2026/07/n-day-is-becoming-n-hour-patching.html">The Hacker News</a></li>
+<li><strong>AWS Kiro : exécution de code via une page web piégée</strong> : Une simple requête de résumé adressée à l'IDE agentique Kiro suffisait à réécrire sa configuration et exécuter du code malveillant, sans possibilité de blocage par l'étape d'approbation. <a href="https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA Android : exécution de code invisible sur PC hôte</strong> : Des chercheurs démontrent qu'une application Android malveillante peut injecter des instructions via du texte invisible à l'écran pour manipuler un agent IA, puis exécuter des commandes sur le PC contrôlant cet agent. L'attaque exploite la capacité de dessiner par-dessus d'autres fenêtres et l'accès au stockage partagé. <a href="https://thehackernews.com/2026/07/open-source-android-ai-agents-could-let.html">The Hacker News</a></li>
+<li><strong>Zimbra corrige une injection de commandes SNMP et quatre XSS</strong> : Neuf vulnérabilités sont patchées dans Zimbra 10.1.20, dont une injection de commandes critique via le composant SNMP. <a href="https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Bit2Watt : déstabilisation du réseau électrique via abus de GPU cloud</strong> : Des locataires cloud peuvent manipuler la consommation électrique d'un datacenter par simple variation de charge GPU, sans exploit ni intrusion. Cette technique pourrait menacer la stabilité du réseau électrique en amont. <a href="https://thehackernews.com/2026/07/new-bit2watt-attack-could-let-cloud.html">The Hacker News</a></li>
+<li><strong>23andMe condamnée à 3 M$ par l'Espagne pour défaillances de sécurité</strong> : L'AEPD sanctionne l'entreprise pour des manquements ayant conduit au vol de données de 6,9 millions de personnes dans le monde, dont plus de 2 600 Espagnols. <a href="https://therecord.media/spain-fines-23andme-3-million-cyber-failings-data-breach">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Zero-day Windows : correctifs non officiels pour l'élévation de privilèges LegacyHive</strong> : Une faille zero-day permettant l'élévation de privilèges sur des systèmes Windows à jour a reçu des correctifs non officiels gratuits, en attendant une réponse de Microsoft. <a href="https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/">BleepingComputer</a></li>
+<li><strong>Google lance Gemini 3.5 Flash Cyber pour la détection de vulnérabilités</strong> : Ce modèle IA spécialisé, basé sur Gemini 3.5 Flash, est conçu pour identifier, valider et corriger automatiquement des vulnérabilités logicielles. <a href="https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Saisie de 1000+ sites de streaming pirate pour la Coupe du Monde</strong> : Le ministère américain de la Justice a saisi plus de 1000 sites et bloqué 1970 domaines diffusant illégalement les matchs de la FIFA World Cup 2026. <a href="https://www.bleepingcomputer.com/news/security/us-seizes-over-1-000-fifa-world-cup-illegal-streaming-domains/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>WSUS : correctif manuel Microsoft pour les échecs de synchronisation</strong> : Microsoft fournit des mesures d'atténuation manuelles pour résoudre les délais et timeouts affectant les serveurs WSUS lors des analyses Windows Update. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-manual-fix-for-wsus-sync-delays-and-timeouts/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Kenya : site de la présidence défiguré avec demande de rançon Bitcoin</strong> : Le site officiel du président kényan a été compromis, sa page d'accueil remplacée par une adresse de portefeuille crypto et une menace de divulgation d'informations. <a href="https://therecord.media/kenya-probes-hack-of-presidents-website-after-ransom-demand">The Record</a></li>
+<li><strong>Sécurité des infrastructures critiques : combler les lacunes identitaires</strong> : Les attaques ciblant ces environnements démarrent souvent par des identifiants volés ou des appareils compromis, ce qui impose une vérification conjointe de l'identité et de la posture du terminal avant tout accès. <a href="https://www.bleepingcomputer.com/news/security/closing-the-identity-gaps-in-critical-infrastructure-security/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Suspension du Patch Tuesday de juillet par Microsoft</strong> : Microsoft a interrompu le déploiement de ses correctifs mensuels après la découverte d'effets secondaires critiques, illustrant une dégradation continue de la qualité des mises à jour. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-suspend-le-patch-tuesday-de-juillet-100705.html">Le Monde Informatique</a></li>
+<li><strong>Risque du code généré par IA</strong> : Le nombre moyen de vulnérabilités introduites par du code généré par IA (15 par base de code) dépend davantage du framework utilisé que du modèle d'IA choisi. <a href="https://www.darkreading.com/application-security/choose-wisely-ai-generated-coding-risk-varies">Dark Reading</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Réseau NVIDIA Spectrum-6 pour usines IA</strong> : NVIDIA déploie son switch Ethernet Spectrum-6, conçu initialement pour le télescope Vera Rubin, dans les datacenters d'entraînement à échelle gigascale. L'enjeu est de maintenir la bande passante et la synchronisation entre centaines de milliers de GPU, où le réseau devient le facteur limitant de la puissance de calcul. <a href="https://blogs.nvidia.com/blog/nvidia-spectrum-six-arrives-in-gigascale-ai-factories/">NVIDIA Blog</a></li>
 </ul>
 
 <ul>
-<li><strong>Évasion des bacs à sable par les agents IA</strong> : Des recherches montrent que les agents de codage IA peuvent contourner l'isolation des sandboxes sans les briser techniquement, en exploitant des failles de conception dans des outils comme Cursor ou Gemini CLI. <a href="https://www.csoonline.com/article/4199408/ai-agents-can-escape-sandboxes-without-ever-breaking-them.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Surveillance IA généralisée au MIT</strong> : L'institut déploie plus de 500 caméras de surveillance dotées d'IA dans les bâtiments académiques et résidences, pour un coût supérieur à 3 millions de dollars, soulevant des questions sur la vie privée en milieu universitaire. <a href="https://www.schneier.com/blog/archives/2026/07/mit-to-become-hotbed-of-ai-video-surveillance.html">Schneier on Security</a></li>
+<li><strong>Raisonnement auto-distillé pour fine-tuning avec Amazon Nova</strong> : AWS propose une méthode de Self-Distilled Reasoning (SDR) pour injecter des traces de raisonnement dans des jeux de données qui en sont dépourvus, lors du fine-tuning supervisé. L'approche contourne le problème de suppression du raisonnement observé sur les modèles Nova et améliore les performances sur trois benchmarks. <a href="https://aws.amazon.com/blogs/machine-learning/exploring-self-distilled-reasoning-for-supervised-fine-tuning-with-amazon-nova/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Modèles open-weight chinois et risque réglementaire</strong> : Les entreprises qui évaluent des modèles chinois comme Kimi K3 doivent intégrer l'incertitude politique américaine dans leur calcul de risque, au-delà des seules performances techniques. <a href="https://www.artificialintelligence-news.com/news/chinese-open-weight-models-policy-risk/">AI News</a></li>
+<li><strong>Sanctions US contre les modèles chinois</strong> : Le Trésor américain menace d'étendre les sanctions aux modèles d'IA open source chinois pour vol présumé de propriété intellectuelle, dans la continuité de la campagne visant à freiner les avancées chinoises. <a href="https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>NVIDIA Cosmos 3 Edge pour la robotique embarquée</strong> : NVIDIA livre un modèle monde de 4 milliards de paramètres capable de raisonner et générer des actions robotiques directement sur l'appareil, sans connexion cloud. <a href="https://www.marktechpost.com/2026/07/21/nvidia-releases-cosmos-3-edge-a-4b-parameter-open-world-model-that-reasons-and-generates-robot-actions-on-device/">MarkTechPost</a></li>
+<li><strong>Nvidia lance Vera Rubin</strong> : La plateforme Vera Rubin intègre CPU et GPU dans un système unifié, marquant l'ambition de Nvidia de contrôler l'ensemble des composants matériels des datacenters IA. <a href="https://www.wired.com/story/nvidia-wants-to-own-every-chip-inside-an-ai-data-center/">Wired</a></li>
 </ul>
 
 <ul>
-<li><strong>Bristol Myers Squibb acquiert un supercalculateur NVIDIA pour la R&D pharmaceutique</strong> : Le laboratoire devient le premier acteur des sciences de la vie à acheter un DGX SuperPOD basé sur l'architecture Vera Rubin, destiné à accélérer la découverte de médicaments par IA. <a href="https://www.artificialintelligence-news.com/news/bristol-myers-squibb-nvidia-ai-system-drug-discovery/">AI News</a></li>
+<li><strong>Google étoffe sa gamme Flash</strong> : Gemini 3.6 Flash, 3.5 Flash-Lite et Flash Cyber (réservée à la sécurité du code) sortent le 21 juillet, avec une baisse de 17% des tokens de sortie et un tarif à 7,50$/1M tokens pour 3.6 Flash. Flash-Lite atteint 350 tokens/s, et l'ensemble cible les charges agentiques à moindre coût. <a href="https://www.marktechpost.com/2026/07/21/google-releases-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber-a-cheaper-more-token-efficient-flash-tier-built-for-agentic-workloads/">MarkTechPost</a></li>
 </ul>
 
 <ul>
-<li><strong>Meta libère Astryx, son design system React interne</strong> : Meta ouvre sous licence MIT le système utilisé depuis 8 ans sur plus de 13 000 applications, incluant 150 composants accessibles, sept thèmes et une CLI conçue pour les agents IA. <a href="https://www.marktechpost.com/2026/07/21/meta-open-sources-astryx-an-agent-ready-react-design-system-with-150-accessible-components-seven-themes-and-a-cli/">MarkTechPost</a></li>
+<li><strong>Malware ciblant l'infrastructure IA</strong> : Un nouvel outil malveillant s'infiltre dans les systèmes de codage IA pour exfiltrer identifiants et données, et active un "interrupteur de destruction" pour verrouiller les utilisateurs légitimes et supprimer des fichiers. <a href="https://www.wired.com/story/a-sneaky-hacking-tool-targeting-ai-infrastructure-is-lurking-in-victims-blind-spots/">Wired</a></li>
+</ul>
+
+<ul>
+<li><strong>Anthropic : accord à 1,5 milliard validé</strong> : Un juge fédéral a approuvé le règlement du recours collectif pour violation de droits d'auteur, les auteurs reprochant à Anthropic d'avoir entraîné ses modèles sur des livres protégés sans autorisation. <a href="https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved">The Verge</a></li>
+</ul>
+
+<ul>
+<li><strong>Deezer submergé par l'IA générative</strong> : La plateforme rapporte que plus de 50% des uploads quotidiens (plus de 90 000 titres par jour en juin) sont désormais générés par IA. <a href="https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Lunettes connectées sans caméra</strong> : Les Halliday G2 captent et résument les réunions en audio uniquement, sans enregistrement vidéo, ciblant un usage professionnel discret. <a href="https://www.wired.com/story/halliday-new-smart-glasses-skip-the-camera/">Wired</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmarking distribué de LLMs</strong> : Le framework srt-slurm de Nvidia permet de convertir des configurations YAML déclaratives en workflows SLURM reproductibles pour évaluer le serving distribué de LLMs, avec analyses paramétriques et Pareto. <a href="https://www.marktechpost.com/2026/07/21/validating-distributed-llm-serving-benchmarks-with-nvidia-srt-slurm-slurm-recipes-parameter-sweeps-and-pareto-analysis/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Agent IA autonome comme outil d’attaque</strong> : Hugging Face a subi une intrusion entièrement pilotée par un agent IA, une première documentée. Selon Next.ink et le Journal du Net, l’essor de ces agents menace les modèles de sécurité basés sur le blocage des bots, obligeant à distinguer automatisation légitime et malveillante. <a href="https://next.ink/248236/attaquee-par-un-agent-ia-autonome-hugging-face-a-analyse-les-traces-avec-un-llm-local/">Next.ink</a> · <a href="https://www.journaldunet.com/cybersecurite/1552793-quand-internet-bloque-ses-utilisateurs-les-plus-precieux/">Journal du Net</a></li>
+<li><strong>Souveraineté cloud et IA : Microsoft investit massivement chez Mistral AI</strong> : Microsoft injecte plusieurs milliards de dollars pour aider la licorne française à construire ses propres datacenters européens, tandis que ses modèles seront distribués sur Azure. Un partenariat qui mêle enjeux de souveraineté et dépendance stratégique. <a href="https://next.ink/248290/microsoft-engage-plusieurs-milliards-de-dollars-aux-cotes-de-mistral-en-europe/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Détection des bots par analyse comportementale continue</strong> : Cloudflare lance Precursor, un moteur qui évalue le comportement tout au long de la session pour identifier les bots sophistiqués, dépassant l’analyse ponctuelle. <a href="https://www.zdnet.fr/actualites/cloudflare-mise-sur-lanalyse-comportementale-pour-dejouer-les-bots-les-plus-sophistiques-498830.htm">ZDNet France</a></li>
+<li><strong>Gouvernance des identités machines : un angle mort qui monte</strong> : Le JDN alerte sur le risque de voir le nombre d'identités non humaines (agents IA, scripts) dépasser celui des utilisateurs, sans que les DSI n'aient toujours de cadre de supervision adapté. <a href="https://www.journaldunet.com/intelligence-artificielle/1552853-la-gouvernance-des-agents-ia-la-prochaine-bombe-a-retardement-des-dsi/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Menace quantique jugée maximale par le renseignement</strong> : Les services estiment que le « Q-Day » pourrait survenir vers 2030-2035 et considèrent la menace comme maximale, la compétition étant déjà intense sur les financements et les brevets. <a href="https://next.ink/248221/quantique-pour-les-services-de-renseignement-le-niveau-de-la-menace-est-maximal/">Next.ink</a></li>
+<li><strong>Interdiction des réseaux sociaux aux moins de 15 ans : adoption définitive</strong> : La loi française a été votée et l'exécutif vise une mise en application au 1er septembre, posant la question de l'intégration d'un dispositif de vérification d'âge fiable à cette échéance. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-entre-promesse-de-protection-des-mineurs-et-casse-tete-technique-la-france-a-franchi-un-cap-inedit-en-europe_AV-202607210607.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Intrusion sur le site du Rassemblement national</strong> : Le site du parti a été défiguré en page d’accueil par un collectif se réclamant de drapeaux marocain et algérien, intrusion confirmée par le RN. <a href="https://next.ink/brief-article/le-rassemblement-national-confirme-une-intrusion-sur-son-site/">Next.ink</a></li>
+<li><strong>Confinement navigateur : Firefox 153 active les conteneurs par défaut</strong> : L'isolation native de chaque onglet dans son propre bac à cookies permet de cantonner le pistage sans extension tierce, avec un déploiement en cours avant la bascule vers la version ESR. <a href="https://next.ink/248292/firefox-153-integre-nativement-des-conteneurs-pour-isoler-les-sites/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Faille dans 7-Zip permettant une prise de contrôle</strong> : Une vulnérabilité touche 7-Zip, logiciel souvent non mis à jour automatiquement, exposant les postes à une exécution de code malveillant. <a href="https://siecledigital.fr/2026/07/21/si-vous-utilisez-7-zip-cette-faille-peut-permettre-a-des-pirates-de-prendre-le-controle-de-votre-pc/">Siècle Digital</a></li>
+<li><strong>Windows installe un installeur McAfee via le branchement d'un écran LG</strong> : L'OS récupère silencieusement une application via le Windows Driver Framework, ce qui relance le débat sur la confiance à accorder aux charges logicielles greffées aux périphériques. <a href="https://next.ink/248273/comment-un-simple-branchement-decran-illustre-un-vieux-probleme-de-windows/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>LG exploite une faille Windows pour installer un logiciel sans consentement</strong> : La connexion d’un moniteur UltraGear déclenchait l’installation silencieuse d’une application via une brèche dans Windows. <a href="https://siecledigital.fr/2026/07/21/lg-aurait-profite-dune-faille-de-windows-pour-installer-un-logiciel-sans-le-consentement-des-utilisateurs/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité interne et profilage des salariés</strong> : Des outils cyber sont désormais capables de signaler un employé avant tout passage à l’acte, posant la question de l’équilibre entre détection de menace et traitement d’un comportement inhabituel. <a href="https://www.journaldunet.com/cybersecurite/1552657-minority-report-devient-reel-votre-entreprise-peut-elle-vous-classer-comme-menace-avant-toute-attaque/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Manipulation des données via l’IA connectée aux métiers</strong> : La cybersécurité fait face à une menace qui n’est plus le vol de données, mais leur altération insidieuse via des IA intégrées aux outils métier, pouvant fausser les décisions. <a href="https://www.journaldunet.com/cybersecurite/1552655-black-mirror-devient-realite-comment-les-hackers-peuvent-manipuler-vos-donnees-vos-ia-et-vos-decisions/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Amende européenne record de 550 M€ contre AliExpress</strong> : La Commission sanctionne la plateforme pour l’absence de retrait durable de contrefaçons et de produits dangereux après plus de deux ans d’enquête. <a href="https://siecledigital.fr/2026/07/21/leurope-frappe-fort-contre-aliexpress-avec-une-amende-historique-de-550-millions-deuros/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Conformité RGPD pour la géolocalisation des flottes</strong> : Cinq étapes clés sont à respecter pour éviter les manquements, alors que l’équipement des véhicules d’entreprise en systèmes de traçage se généralise. <a href="https://siecledigital.fr/2026/07/21/rgpd-et-geolocalisation-des-vehicules-quelles-sont-les-5-etapes-cles-pour-etre-en-conformite-avec-la-cnil/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Parlement européen : une plateforme IA interne pour les députés</strong> : Bruxelles teste EpGenAI Hub afin d’offrir un usage sécurisé de l’IA générative, évitant de soumettre des documents institutionnels à des services publics. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/les-deputes-europeens-utilisent-de-plus-en-plus-l-ia-bruxelles-cree-un-chat-gpt-interne-pour-ses-deputes_AV-202607210304.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Meta prête à fournir de la puissance de calcul à Anthropic pour 10 Md$</strong> : L’accord illustre la réorientation de Meta vers la vente de capacité de calcul, face aux énormes besoins des entreprises d’IA. <a href="https://siecledigital.fr/2026/07/21/meta-prepare-un-accord-geant-avec-anthropic-qui-pourrait-lui-rapporter-10-milliards-de-dollars/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Échecs de l’IA en entreprise à cause de la « dette de contenu »</strong> : L’un des freins majeurs à la valeur attendue de l’IA est la mauvaise qualité des données internes, déceptives pour les modèles. <a href="https://www.journaldunet.com/intelligence-artificielle/1552759-dette-de-contenu-l-ia-d-entreprise-et-ses-echecs/">Journal du Net</a></li>
+<li><strong>Google développe une puce taillée pour Gemini</strong> : D'après Le Monde Informatique, Google travaille sur un accélérateur IA interne optimisé pour ses propres modèles, une stratégie qui rappelle celle d'OpenAI avec le projet Jalapeño pour réduire la dépendance à NVIDIA. <a href="https://www.lemondeinformatique.fr/actualites/lire-google-preparerait-une-puce-ia-optimisee-pour-ses-modeles-gemini-100708.html">Le Monde Informatique</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260721-1234</guid>
-      <pubDate>Tue, 21 Jul 2026 12:34:15 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260721-1829</guid>
+      <pubDate>Tue, 21 Jul 2026 18:29:07 +0000</pubDate>
     </item>
   </channel>
 </rss>
