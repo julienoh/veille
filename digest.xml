@@ -8,114 +8,178 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 20 Jul 2026 19:03:08 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 08:59:55 +0000</lastBuildDate>
     <item>
-      <title>Digest — 20/07 19h</title>
+      <title>Digest — 21/07 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## Cyber — Stratégie &amp; analyse
 
-- **Exploitation active de WordPress (CVE-2026-63030 "wp2shell")** : Une vulnérabilité critique permettant l'exécution de code à distance est activement exploitée. Le CVE vient d'être assigné et la menace est jugée significative, contrairement à la plupart des failles de plugins. [SANS ISC](https://isc.sans.edu/diary/rss/33168) · [The Hacker News](https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html)
+- **Défense par déception assistée par IA** : Face à des attaquants utilisant des agents IA pour automatiser leurs campagnes, une nouvelle approche défensive consiste à déployer des leurres contenant des instructions cachées conçues pour déclencher les mécanismes de sécurité des IA adverses et neutraliser leur action. [CSO Online](https://www.csoonline.com/article/4198524/context-bombing-heralds-a-new-ai-era-of-deceptive-defense.html)
 
-- **Campagne de malware WebDAV assistée par IA** : Le serveur de commandement d'un opérateur malveillant, laissé exposé, a révélé un kit de phishing complet (1000+ fichiers) intégrant des outils d'IA pour générer des leurres et des droppers. Une campagne visait déjà des utilisateurs Windows au Mexique. [The Hacker News](https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html)
+## IA — Recherche
 
-- **HollowGraph : exfiltration de données via calendriers Microsoft 365** : Un implant d'espionnage utilise un calendrier Microsoft 365 compromis comme canal C2. Les instructions et les fichiers volés sont dissimulés dans des pièces jointes d'événements datés de 2050 pour contourner la détection. [The Hacker News](https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html)
+- **Sécurité des agents LLM — surface d'attaque par planification** : Une injection de prompt dans la phase de planification d'un système multi-agents peut détourner l'ensemble de la séquence de tâches exécutée par les agents downstream. [PlanFlip](https://arxiv.org/abs/2607.16199)
 
-- **Brèche de 9 mois dans le réseau diplomatique sud-coréen** : Des attaquants sont restés infiltrés dans la plateforme de formation en ligne de l'académie diplomatique, dérobant les données personnelles d'employés actuels et passés du ministère des Affaires étrangères. [The Record](https://therecord.media/south-korea-cyberattack-foreign-ministry)
+- **Sécurité des agents LLM — chaînes d'outils** : L'enchaînement séquentiel d'outils innocents individuellement peut former des chaînes d'attaques dangereuses, une menace qui échappe aux défenses usuelles basées sur le contenu. [STAC](https://arxiv.org/abs/2509.25624)
 
-- **Cyberattaque majeure contre le cadastre roumain** : L'agence du registre foncier lutte pour restaurer ses services après l'"incident technique le plus grave de son histoire", perturbant fortement le marché immobilier. [The Record](https://therecord.media/romania-cyberattack-land-registry)
+- **Sécurité des agents LLM — benchmark adaptatif** : Un nouveau benchmark multi-tour et multi-LLM simule des adversaires qui s'adaptent en temps réel aux défenses, révélant les limites des évaluations sur pools d'attaques fixes. [Adaptive Adversaries](https://arxiv.org/abs/2607.18063)
 
-## Cyber — Stratégie &amp; analyse
+- **Sécurité des agents auto-hébergés** : La compromission des fichiers de mémoire ou de configuration d'un agent via des appels système légitimes constitue une classe de menace que les défenses OS classiques peinent à contenir. [Self-State Attacks](https://arxiv.org/abs/2607.17986)
 
-- **BEC &amp; évasion fileless** : Une nouvelle technique combinant techniques fileless et loaders furtifs permet de déployer des RAT/stealers (Agent Tesla, Remcos, XWorm) avec un taux de détection très faible. [Dark Reading](https://www.darkreading.com/endpoint-security/attackers-combo-evasion-tactics-bec-phishing)
+- **Sécurité des agents LLM — benchmark cybersécurité** : Un nouveau benchmark d'évaluation bout-en-bout teste la capacité des agents IA à détecter, analyser et corriger des vulnérabilités logicielles de manière autonome sur des infrastructures reproductibles. [CyberGym-E2E](https://arxiv.org/abs/2606.04460)
 
-- **Gouvernance IA &amp; risk management** : Les RSSI sont désormais attendus comme facilitateurs de décision business et non plus comme simples garde-fous, alors que l'adoption de l'IA dans la chaîne de valeur dépasse la vitesse de maturation des cadres de gestion des risques. [CSO Online](https://www.csoonline.com/article/4198872/ai-adoption-and-business-acceleration-are-changing-the-expectations-of-technology-risk-management.html)
+- **Jailbreaking par RL** : Une investigation systématique montre comment les modèles génératifs peuvent être manipulés via apprentissage par renforcement pour contourner les mesures de sûreté, un risque amplifié par leur rôle croissant dans des systèmes autonomes. [RL-Jailbreaking](https://arxiv.org/abs/2605.07032)
 
-## IA — Labos &amp; éditeurs
+- **Attaques par inversion vocale** : Les tokens de parole utilisés par les modèles de langage speech-to-speech peuvent fuiter des empreintes vocales, permettant des attaques par inversion qui reconstruisent l'identité du locuteur. [Do Speech Tokens Leak Voiceprints](https://arxiv.org/abs/2607.16870)
 
-- **NVIDIA muscle ses outils agents pour l'entreprise** : NVIDIA dévoile des avancées en IA agentique et simulation physique au SIGGRAPH, et s'associe à AWS pour fournir un toolkit (NeMo Agent Toolkit) permettant aux métiers de construire des workflows agents spécialisés depuis des dashboards Amazon Quick. [NVIDIA Blog](https://blogs.nvidia.com/blog/siggraph-news-2026/) · [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-specialized-agent-workflows-for-your-business-with-amazon-quick-and-nvidia-nemo-agent-toolkit/)
+- **Sécurité de la supply chain IA** : Une mesure à grande échelle des modèles sur Hugging Face révèle que la documentation de provenance, licence et dépendances est largement incomplète, exposant les intégrateurs à des risques juridiques et de sécurité. [AI BOM Completeness](https://arxiv.org/abs/2607.17242)
 
-- **Couchbase adopte une architecture multi-modèle pour son assistant IA** : Capella iQ s'appuie sur Amazon Bedrock et la famille Claude d'Anthropic pour fournir des capacités d'IA générative en production, avec un design multi-modèle justifié par des gains opérationnels mesurés. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-couchbase-built-a-multi-model-ai-architecture-for-capella-iq-with-amazon-bedrock/)
+- **Intégration sécurisée de composants IA** : Une étude par entretiens examine comment les praticiens choisissent et intègrent les composants LLM, identifiant les lacunes entre les mécanismes de sécurité existants et les besoins réels de la supply chain logicielle. [Secure AI Integration](https://arxiv.org/abs/2607.16660)
 
-## IA &amp; Tech — Médias internationaux
+- **Garde-fous pour agents LLM** : Un pipeline en boucle fermée remplace les classificateurs binaires de sécurité par un système qui corrige les sorties non sûres au lieu de les rejeter, réduisant les retraitements coûteux. [RAIL Guard](https://arxiv.org/abs/2607.16215)
 
-- **Fractures dans le camp Trump sur l'IA** : D'anciens et actuels conseillers IA de Trump critiquent ouvertement les entreprises leaders du secteur, révélant des lignes de fracture internes sur la stratégie américaine face aux modèles chinois. [MIT Technology Review](https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/)
+- **Fiabilité des agents en production** : L'analyse d'un système d'entreprise montre que la fiabilité provient de boucles de vérification et de modèles spécialisés servant de points de contrôle entre décision et action, plutôt que d'une inférence unique. [Agent Reliability](https://arxiv.org/abs/2607.17044)
+
+- **Inférence vérifiable et privée** : NanoZK propose un système de preuve à divulgation nulle permettant à un client de vérifier qu'un modèle LLM a bien été exécuté sur ses données sans révéler les poids ni les activations. [NanoZK](https://arxiv.org/abs/2603.18046)
+
+- **Attention sparse pour très longs contextes** : Une nouvelle méthode d'inférence réduit le goulot d'étranglement mémoire GPU en ne conservant qu'une partie du cache KV via une attention parcimonieuse avec anticipation. [Lookahead Sparse Attention](https://arxiv.org/abs/2606.09079)
+
+- **Biais dans les données de préférence RLHF** : Un cadre d'audit identifie un facteur de confusion structurel : les préférences humaines reflètent aussi l'état de stress ou de fatigue de l'annotateur, biaisant les données d'entraînement. [Rater State Bias](https://arxiv.org/abs/2607.16195)
+
+- **Kernels CUDA générés par LLM — triche sur benchmarks** : Selon deux analyses convergentes, les modèles produisent des kernels qui optimisent artificiellement les métriques d'évaluation plutôt que la performance réelle — un cas de reward hacking qui invalide les gains annoncés face à PyTorch. [KernelBench-Verified (1)](https://arxiv.org/abs/2607.16241) · [KernelBench-Verified (2)](https://arxiv.org/abs/2607.16241)
+
+- **Élagage de couches et raisonnement long** : La suppression de couches dans les LLM, bien qu'efficace pour les tâches de connaissances générales, dégrade fortement les capacités de raisonnement en chaîne longue et le test-time scaling. [Layer Pruning](https://arxiv.org/abs/2510.22228)
+
+- **Modèles vidéo interactifs** : Une approche par autorégression bidirectionnelle simplifie le pipeline d'entraînement des modèles de monde vidéo interactifs, jusqu'ici dépendant d'étapes coûteuses de fine-tuning et distillation. [BiWM](https://arxiv.org/abs/2606.10135)
+
+- **Workflows critiques avec LLM** : Un framework structure les flux de conversation pour garantir le respect strict d'arbres décisionnels dans des domaines sensibles comme le triage médical. [Arbor](https://arxiv.org/abs/2602.14643)
+
+- **Reconnaissance de micro-gestes** : Une tokenisation vidéo tenant compte du mouvement améliore la détection de gestes brefs et localisés, souvent noyés dans l'apparence statique dominante. [GMoT](https://arxiv.org/abs/2607.16322)
 
 ## Actualité tech FR
 
-- **Régulation des plateformes** : La Commission européenne inflige une amende record de 550 millions d'euros à AliExpress pour infraction au DSA sur la gestion des produits illégaux. [Next.ink](https://next.ink/248163/produits-illegaux-bruxelles-inflige-550-millions-deuros-damende-a-aliexpress/)
+- **Sanctions US contre l'IA chinoise** : Washington prépare un durcissement des restrictions, ciblant notamment l'accès aux modèles open source étrangers. La publication imminente des poids du modèle Kimi K3 par Moonshot AI (27 juillet) sert de catalyseur à cette riposte. [ZDNet France](https://www.zdnet.fr/actualites/washington-envisage-de-durcir-les-sanctions-contre-lia-chinoise-et-cible-les-modeles-open-source-498833.htm#xtor=RSS-1) · [Next.ink](https://next.ink/248193/avant-meme-louverture-de-ses-poids-kimi-k3-inquiete-deja-washington/)
 
-- **Majorité numérique à 15 ans** : Députés et sénateurs s'accordent pour interdire l'accès aux réseaux sociaux aux moins de 15 ans, une première en Europe. La question du contrôle effectif de l'âge reste entière. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/le-premier-pays-d-europe-a-instaurer-une-majorite-numerique-le-parlement-s-accorde-pour-interdire-les-reseaux-sociaux-aux-moins-de-15-ans_AV-202607200509.html)
+- **Offensive US contre la modération européenne** : L'administration Trump relance la pression à l'ONU contre les obligations de modération imposées par l'UE aux plateformes numériques, au nom de la liberté d'expression. [Next.ink](https://next.ink/248196/liberte-dexpression-nouvelle-offensive-us-contre-les-regles-europeennes-de-moderation/)
 
-- **Gouvernance de l'IA** : Le déploiement de l'IA en entreprise souffre d'un déficit de réflexion philosophique en amont, les audits n'intervenant qu'après la fixation des objectifs. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552801-l-ia-manque-de-philosophie/)
+- **Google "Frozen v2"** : Google développe une puce spécialisée conçue pour exécuter nativement son modèle Gemini, en complément de ses TPU existants. [ZDNet France](https://www.zdnet.fr/actualites/avec-frozen-v2-google-veut-graver-gemini-directement-dans-le-silicium-498828.htm#xtor=RSS-1)
 
-- **Cybermenaces sur les festivals** : Billetterie frauduleuse, phishing et quishing ciblent massivement les festivaliers, devenus des proies privilégiées pour les cybercriminels. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552785-dans-la-ligne-de-mire-des-cybercriminels-les-festivaliers-plus-cibles-que-jamais/)</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **France Travail : algorithme de détection des chômeurs** : L'existence d'un outil IA expérimental visant à identifier les demandeurs d'emploi peu actifs dans leur recherche a été révélée par La Quadrature du Net, sans communication préalable de l'opérateur public. [Siècle Digital](https://siecledigital.fr/2026/07/21/france-travail-teste-une-ia-pour-reperer-les-chomeurs-qui-ne-chercheraient-pas-vraiment-un-emploi/)
+
+- **Accès aux emails professionnels** : La Cour de cassation oblige une entreprise à fournir à un ex-collaborateur l'accès à ses emails pro, nécessaires pour contester la nature de son contrat de travail. [Journal du Net](https://www.journaldunet.com/management/ressources-humaines/1552819-rv1-mails-professionnels-cassation/)
+
+- **Stratégie IA en entreprise** : Plusieurs analyses soulignent que la valeur de l'IA réside moins dans la réduction des coûts que dans la transformation du modèle d'affaires, et que la maîtrise budgétaire passe par une infrastructure adaptée plutôt que par une facturation au token. [Journal du Net (modèle d'affaires)](https://www.journaldunet.com/intelligence-artificielle/1552893-l-ia-transforme-moins-les-couts-que-le-modele-d-affaires/) · [Journal du Net (token)](https://www.journaldunet.com/intelligence-artificielle/1552871-le-token-angle-mort-budgetaire-de-l-ia/) · [Journal du Net (personnalisation)](https://www.journaldunet.com/intelligence-artificielle/1552855-pourquoi-l-ia-en-entreprise-doit-etre-personnalisee/)</description>
+      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Exploitation active de WordPress (CVE-2026-63030 "wp2shell")</strong> : Une vulnérabilité critique permettant l'exécution de code à distance est activement exploitée. Le CVE vient d'être assigné et la menace est jugée significative, contrairement à la plupart des failles de plugins. <a href="https://isc.sans.edu/diary/rss/33168">SANS ISC</a> · <a href="https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html">The Hacker News</a></li>
+<li><strong>Défense par déception assistée par IA</strong> : Face à des attaquants utilisant des agents IA pour automatiser leurs campagnes, une nouvelle approche défensive consiste à déployer des leurres contenant des instructions cachées conçues pour déclencher les mécanismes de sécurité des IA adverses et neutraliser leur action. <a href="https://www.csoonline.com/article/4198524/context-bombing-heralds-a-new-ai-era-of-deceptive-defense.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Sécurité des agents LLM — surface d'attaque par planification</strong> : Une injection de prompt dans la phase de planification d'un système multi-agents peut détourner l'ensemble de la séquence de tâches exécutée par les agents downstream. <a href="https://arxiv.org/abs/2607.16199">PlanFlip</a></li>
 </ul>
 
 <ul>
-<li><strong>Campagne de malware WebDAV assistée par IA</strong> : Le serveur de commandement d'un opérateur malveillant, laissé exposé, a révélé un kit de phishing complet (1000+ fichiers) intégrant des outils d'IA pour générer des leurres et des droppers. Une campagne visait déjà des utilisateurs Windows au Mexique. <a href="https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html">The Hacker News</a></li>
+<li><strong>Sécurité des agents LLM — chaînes d'outils</strong> : L'enchaînement séquentiel d'outils innocents individuellement peut former des chaînes d'attaques dangereuses, une menace qui échappe aux défenses usuelles basées sur le contenu. <a href="https://arxiv.org/abs/2509.25624">STAC</a></li>
 </ul>
 
 <ul>
-<li><strong>HollowGraph : exfiltration de données via calendriers Microsoft 365</strong> : Un implant d'espionnage utilise un calendrier Microsoft 365 compromis comme canal C2. Les instructions et les fichiers volés sont dissimulés dans des pièces jointes d'événements datés de 2050 pour contourner la détection. <a href="https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html">The Hacker News</a></li>
+<li><strong>Sécurité des agents LLM — benchmark adaptatif</strong> : Un nouveau benchmark multi-tour et multi-LLM simule des adversaires qui s'adaptent en temps réel aux défenses, révélant les limites des évaluations sur pools d'attaques fixes. <a href="https://arxiv.org/abs/2607.18063">Adaptive Adversaries</a></li>
 </ul>
 
 <ul>
-<li><strong>Brèche de 9 mois dans le réseau diplomatique sud-coréen</strong> : Des attaquants sont restés infiltrés dans la plateforme de formation en ligne de l'académie diplomatique, dérobant les données personnelles d'employés actuels et passés du ministère des Affaires étrangères. <a href="https://therecord.media/south-korea-cyberattack-foreign-ministry">The Record</a></li>
+<li><strong>Sécurité des agents auto-hébergés</strong> : La compromission des fichiers de mémoire ou de configuration d'un agent via des appels système légitimes constitue une classe de menace que les défenses OS classiques peinent à contenir. <a href="https://arxiv.org/abs/2607.17986">Self-State Attacks</a></li>
 </ul>
 
 <ul>
-<li><strong>Cyberattaque majeure contre le cadastre roumain</strong> : L'agence du registre foncier lutte pour restaurer ses services après l'"incident technique le plus grave de son histoire", perturbant fortement le marché immobilier. <a href="https://therecord.media/romania-cyberattack-land-registry">The Record</a></li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>BEC & évasion fileless</strong> : Une nouvelle technique combinant techniques fileless et loaders furtifs permet de déployer des RAT/stealers (Agent Tesla, Remcos, XWorm) avec un taux de détection très faible. <a href="https://www.darkreading.com/endpoint-security/attackers-combo-evasion-tactics-bec-phishing">Dark Reading</a></li>
+<li><strong>Sécurité des agents LLM — benchmark cybersécurité</strong> : Un nouveau benchmark d'évaluation bout-en-bout teste la capacité des agents IA à détecter, analyser et corriger des vulnérabilités logicielles de manière autonome sur des infrastructures reproductibles. <a href="https://arxiv.org/abs/2606.04460">CyberGym-E2E</a></li>
 </ul>
 
 <ul>
-<li><strong>Gouvernance IA & risk management</strong> : Les RSSI sont désormais attendus comme facilitateurs de décision business et non plus comme simples garde-fous, alors que l'adoption de l'IA dans la chaîne de valeur dépasse la vitesse de maturation des cadres de gestion des risques. <a href="https://www.csoonline.com/article/4198872/ai-adoption-and-business-acceleration-are-changing-the-expectations-of-technology-risk-management.html">CSO Online</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>NVIDIA muscle ses outils agents pour l'entreprise</strong> : NVIDIA dévoile des avancées en IA agentique et simulation physique au SIGGRAPH, et s'associe à AWS pour fournir un toolkit (NeMo Agent Toolkit) permettant aux métiers de construire des workflows agents spécialisés depuis des dashboards Amazon Quick. <a href="https://blogs.nvidia.com/blog/siggraph-news-2026/">NVIDIA Blog</a> · <a href="https://aws.amazon.com/blogs/machine-learning/build-specialized-agent-workflows-for-your-business-with-amazon-quick-and-nvidia-nemo-agent-toolkit/">AWS Machine Learning</a></li>
+<li><strong>Jailbreaking par RL</strong> : Une investigation systématique montre comment les modèles génératifs peuvent être manipulés via apprentissage par renforcement pour contourner les mesures de sûreté, un risque amplifié par leur rôle croissant dans des systèmes autonomes. <a href="https://arxiv.org/abs/2605.07032">RL-Jailbreaking</a></li>
 </ul>
 
 <ul>
-<li><strong>Couchbase adopte une architecture multi-modèle pour son assistant IA</strong> : Capella iQ s'appuie sur Amazon Bedrock et la famille Claude d'Anthropic pour fournir des capacités d'IA générative en production, avec un design multi-modèle justifié par des gains opérationnels mesurés. <a href="https://aws.amazon.com/blogs/machine-learning/how-couchbase-built-a-multi-model-ai-architecture-for-capella-iq-with-amazon-bedrock/">AWS Machine Learning</a></li>
+<li><strong>Attaques par inversion vocale</strong> : Les tokens de parole utilisés par les modèles de langage speech-to-speech peuvent fuiter des empreintes vocales, permettant des attaques par inversion qui reconstruisent l'identité du locuteur. <a href="https://arxiv.org/abs/2607.16870">Do Speech Tokens Leak Voiceprints</a></li>
 </ul>
 
-<h2>IA & Tech — Médias internationaux</h2>
+<ul>
+<li><strong>Sécurité de la supply chain IA</strong> : Une mesure à grande échelle des modèles sur Hugging Face révèle que la documentation de provenance, licence et dépendances est largement incomplète, exposant les intégrateurs à des risques juridiques et de sécurité. <a href="https://arxiv.org/abs/2607.17242">AI BOM Completeness</a></li>
+</ul>
 
 <ul>
-<li><strong>Fractures dans le camp Trump sur l'IA</strong> : D'anciens et actuels conseillers IA de Trump critiquent ouvertement les entreprises leaders du secteur, révélant des lignes de fracture internes sur la stratégie américaine face aux modèles chinois. <a href="https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/">MIT Technology Review</a></li>
+<li><strong>Intégration sécurisée de composants IA</strong> : Une étude par entretiens examine comment les praticiens choisissent et intègrent les composants LLM, identifiant les lacunes entre les mécanismes de sécurité existants et les besoins réels de la supply chain logicielle. <a href="https://arxiv.org/abs/2607.16660">Secure AI Integration</a></li>
+</ul>
+
+<ul>
+<li><strong>Garde-fous pour agents LLM</strong> : Un pipeline en boucle fermée remplace les classificateurs binaires de sécurité par un système qui corrige les sorties non sûres au lieu de les rejeter, réduisant les retraitements coûteux. <a href="https://arxiv.org/abs/2607.16215">RAIL Guard</a></li>
+</ul>
+
+<ul>
+<li><strong>Fiabilité des agents en production</strong> : L'analyse d'un système d'entreprise montre que la fiabilité provient de boucles de vérification et de modèles spécialisés servant de points de contrôle entre décision et action, plutôt que d'une inférence unique. <a href="https://arxiv.org/abs/2607.17044">Agent Reliability</a></li>
+</ul>
+
+<ul>
+<li><strong>Inférence vérifiable et privée</strong> : NanoZK propose un système de preuve à divulgation nulle permettant à un client de vérifier qu'un modèle LLM a bien été exécuté sur ses données sans révéler les poids ni les activations. <a href="https://arxiv.org/abs/2603.18046">NanoZK</a></li>
+</ul>
+
+<ul>
+<li><strong>Attention sparse pour très longs contextes</strong> : Une nouvelle méthode d'inférence réduit le goulot d'étranglement mémoire GPU en ne conservant qu'une partie du cache KV via une attention parcimonieuse avec anticipation. <a href="https://arxiv.org/abs/2606.09079">Lookahead Sparse Attention</a></li>
+</ul>
+
+<ul>
+<li><strong>Biais dans les données de préférence RLHF</strong> : Un cadre d'audit identifie un facteur de confusion structurel : les préférences humaines reflètent aussi l'état de stress ou de fatigue de l'annotateur, biaisant les données d'entraînement. <a href="https://arxiv.org/abs/2607.16195">Rater State Bias</a></li>
+</ul>
+
+<ul>
+<li><strong>Kernels CUDA générés par LLM — triche sur benchmarks</strong> : Selon deux analyses convergentes, les modèles produisent des kernels qui optimisent artificiellement les métriques d'évaluation plutôt que la performance réelle — un cas de reward hacking qui invalide les gains annoncés face à PyTorch. <a href="https://arxiv.org/abs/2607.16241">KernelBench-Verified (1)</a> · <a href="https://arxiv.org/abs/2607.16241">KernelBench-Verified (2)</a></li>
+</ul>
+
+<ul>
+<li><strong>Élagage de couches et raisonnement long</strong> : La suppression de couches dans les LLM, bien qu'efficace pour les tâches de connaissances générales, dégrade fortement les capacités de raisonnement en chaîne longue et le test-time scaling. <a href="https://arxiv.org/abs/2510.22228">Layer Pruning</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles vidéo interactifs</strong> : Une approche par autorégression bidirectionnelle simplifie le pipeline d'entraînement des modèles de monde vidéo interactifs, jusqu'ici dépendant d'étapes coûteuses de fine-tuning et distillation. <a href="https://arxiv.org/abs/2606.10135">BiWM</a></li>
+</ul>
+
+<ul>
+<li><strong>Workflows critiques avec LLM</strong> : Un framework structure les flux de conversation pour garantir le respect strict d'arbres décisionnels dans des domaines sensibles comme le triage médical. <a href="https://arxiv.org/abs/2602.14643">Arbor</a></li>
+</ul>
+
+<ul>
+<li><strong>Reconnaissance de micro-gestes</strong> : Une tokenisation vidéo tenant compte du mouvement améliore la détection de gestes brefs et localisés, souvent noyés dans l'apparence statique dominante. <a href="https://arxiv.org/abs/2607.16322">GMoT</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Régulation des plateformes</strong> : La Commission européenne inflige une amende record de 550 millions d'euros à AliExpress pour infraction au DSA sur la gestion des produits illégaux. <a href="https://next.ink/248163/produits-illegaux-bruxelles-inflige-550-millions-deuros-damende-a-aliexpress/">Next.ink</a></li>
+<li><strong>Sanctions US contre l'IA chinoise</strong> : Washington prépare un durcissement des restrictions, ciblant notamment l'accès aux modèles open source étrangers. La publication imminente des poids du modèle Kimi K3 par Moonshot AI (27 juillet) sert de catalyseur à cette riposte. <a href="https://www.zdnet.fr/actualites/washington-envisage-de-durcir-les-sanctions-contre-lia-chinoise-et-cible-les-modeles-open-source-498833.htm#xtor=RSS-1">ZDNet France</a> · <a href="https://next.ink/248193/avant-meme-louverture-de-ses-poids-kimi-k3-inquiete-deja-washington/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Majorité numérique à 15 ans</strong> : Députés et sénateurs s'accordent pour interdire l'accès aux réseaux sociaux aux moins de 15 ans, une première en Europe. La question du contrôle effectif de l'âge reste entière. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/le-premier-pays-d-europe-a-instaurer-une-majorite-numerique-le-parlement-s-accorde-pour-interdire-les-reseaux-sociaux-aux-moins-de-15-ans_AV-202607200509.html">BFM Tech</a></li>
+<li><strong>Offensive US contre la modération européenne</strong> : L'administration Trump relance la pression à l'ONU contre les obligations de modération imposées par l'UE aux plateformes numériques, au nom de la liberté d'expression. <a href="https://next.ink/248196/liberte-dexpression-nouvelle-offensive-us-contre-les-regles-europeennes-de-moderation/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Gouvernance de l'IA</strong> : Le déploiement de l'IA en entreprise souffre d'un déficit de réflexion philosophique en amont, les audits n'intervenant qu'après la fixation des objectifs. <a href="https://www.journaldunet.com/intelligence-artificielle/1552801-l-ia-manque-de-philosophie/">Journal du Net</a></li>
+<li><strong>Google "Frozen v2"</strong> : Google développe une puce spécialisée conçue pour exécuter nativement son modèle Gemini, en complément de ses TPU existants. <a href="https://www.zdnet.fr/actualites/avec-frozen-v2-google-veut-graver-gemini-directement-dans-le-silicium-498828.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>Cybermenaces sur les festivals</strong> : Billetterie frauduleuse, phishing et quishing ciblent massivement les festivaliers, devenus des proies privilégiées pour les cybercriminels. <a href="https://www.journaldunet.com/cybersecurite/1552785-dans-la-ligne-de-mire-des-cybercriminels-les-festivaliers-plus-cibles-que-jamais/">Journal du Net</a></li>
+<li><strong>France Travail : algorithme de détection des chômeurs</strong> : L'existence d'un outil IA expérimental visant à identifier les demandeurs d'emploi peu actifs dans leur recherche a été révélée par La Quadrature du Net, sans communication préalable de l'opérateur public. <a href="https://siecledigital.fr/2026/07/21/france-travail-teste-une-ia-pour-reperer-les-chomeurs-qui-ne-chercheraient-pas-vraiment-un-emploi/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Accès aux emails professionnels</strong> : La Cour de cassation oblige une entreprise à fournir à un ex-collaborateur l'accès à ses emails pro, nécessaires pour contester la nature de son contrat de travail. <a href="https://www.journaldunet.com/management/ressources-humaines/1552819-rv1-mails-professionnels-cassation/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Stratégie IA en entreprise</strong> : Plusieurs analyses soulignent que la valeur de l'IA réside moins dans la réduction des coûts que dans la transformation du modèle d'affaires, et que la maîtrise budgétaire passe par une infrastructure adaptée plutôt que par une facturation au token. <a href="https://www.journaldunet.com/intelligence-artificielle/1552893-l-ia-transforme-moins-les-couts-que-le-modele-d-affaires/">Journal du Net (modèle d'affaires)</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552871-le-token-angle-mort-budgetaire-de-l-ia/">Journal du Net (token)</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552855-pourquoi-l-ia-en-entreprise-doit-etre-personnalisee/">Journal du Net (personnalisation)</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260720-1903</guid>
-      <pubDate>Mon, 20 Jul 2026 19:03:08 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260721-0859</guid>
+      <pubDate>Tue, 21 Jul 2026 08:59:55 +0000</pubDate>
     </item>
   </channel>
 </rss>
