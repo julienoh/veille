@@ -8,150 +8,128 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 23 Jul 2026 07:57:43 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 12:55:08 +0000</lastBuildDate>
     <item>
-      <title>Digest — 23/07 07h</title>
+      <title>Digest — 23/07 12h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Stratégie &amp; analyse
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Interruption de la chaîne logistique par ransomware** : Une cyberattaque contre un acteur japonais de la logistique alimentaire a gelé les livraisons vers des milliers de clients, y compris des franchises majeures comme KFC, illustrant l'impact direct des ransomwares sur la disponibilité physique des biens. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/ransomware-attack-japanese-frozen-food-chain)
+- **Vulnérabilité locale RefluXFS (CVE-2026-64600) sur XFS** : Une faille vieille de 9 ans dans le noyau Linux permet à un utilisateur local non privilégié d'écraser des fichiers appartenant à root sur un système de fichiers XFS, menant à une élévation de privilèges persistante. Les installations par défaut de RHEL et ses dérivés, ainsi que Fedora Server, sont affectées. [The Hacker News](https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html)
 
-- **Fin du patching différé chez Microsoft** : Microsoft impose désormais un délai de 3 jours pour appliquer les correctifs de sécurité, une directive qui entre en tension avec la réalité opérationnelle des grandes entreprises où les précédents de patches défectueux imposent des tests préalables. [CSO Online](https://www.csoonline.com/article/4200366/microsofts-3-day-patching-directive-comes-with-added-operational-risk.html)
+- **Exploitation active d'une faille critique Check Point (CVE-2026-16232)** : Check Point a corrigé une vulnérabilité critique (CVSS 9.3) dans SmartConsole permettant d'obtenir un accès administrateur complet, qui fait l'objet d'une exploitation active. La mise à jour concerne les produits Security Management et Multi-Domain Management. [The Hacker News](https://thehackernews.com/2026/07/check-point-patches-exploited.html)
 
-- **Démantèlement de la plateforme de phishing Kratos** : Les autorités allemandes ont saisi l'infrastructure du groupe PhaaS Kratos et arrêté un développeur en Indonésie, portant un coup à un fournisseur clé de kits de phishing utilisés pour contourner l'authentification multifacteur. [CSO Online](https://www.csoonline.com/article/4200215/german-law-enforcement-claims-to-have-dismantled-mega-phishing-as-a-service-group-kratos.html)
+- **Détournement de GitHub Actions pour attaquer des serveurs cPanel/WHM** : Des dépôts GitHub compromis servent d'infrastructure d'attaque distribuée contre des instances cPanel et WebHost Manager, via des versions de développement malveillantes sur Packagist couvrant 10 paquets. [The Hacker News](https://thehackernews.com/2026/07/attackers-weaponize-github-actions.html)
 
-- **Cheval de Troie bancaire brésilien au Portugal** : Un malware bancaire originaire du Brésil cible activement les entreprises portugaises, exploitant la communauté de langue pour concevoir des leurres plus crédibles et contourner les défenses locales. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/brazilian-banking-trojan-spreading-portugal)
+- **Nouveau RAT furtif du groupe Chaos (msaRAT)** : Le malware msaRAT détourne le navigateur pour établir un canal C2 indirect, exécutant des commandes arbitraires tout en masquant l'IP de l'attaquant via WebRTC sur TURN. [Cisco Talos](https://blog.talosintelligence.com/chaos-msarat-living-off-the-browser-to-build-covert-c2-channel/)
 
-## IA — Labos &amp; éditeurs
+- **Fraude à l'identité synthétique appliquée aux machines** : La fraude synthétique, qui assemble des données réelles pour créer une identité fictive, s'étend désormais aux identités machines, rendant la détection plus complexe que l'usurpation d'identité classique. [The Hacker News](https://thehackernews.com/2026/07/how-synthetic-identity-fraud-is-coming.html)
 
-- **Inférence 4-bit avec Nunchaku dans Diffusers** : Hugging Face intègre la bibliothèque Nunchaku à Diffusers, permettant l'inférence de modèles de diffusion en quantification 4-bit. Cette optimisation réduit significativement l'empreinte mémoire et la latence sur GPU grand public. [Hugging Face Blog](https://huggingface.co/blog/nunchaku-diffusers)
+- **Incident Exchange Online : quarantaine erronée de boîtes aux lettres** : Microsoft travaille sur un correctif pour un problème affectant Exchange Online, qui place par erreur des boîtes aux lettres en quarantaine depuis dimanche. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-exchange-online-mailbox-quarantine-issue/)
 
-## IA — Recherche
+- **Amende DMA de 890 M€ pour Google** : La Commission européenne sanctionne Google pour non-respect du Digital Markets Act concernant la concurrence dans la recherche et le Play Store. [BleepingComputer](https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/)
 
-- **Sécurité des agents IA** : Un benchmark évalue la capacité des agents IA à refuser des tâches de recherche biologique à risque, tandis qu'une autre étude formalise une méthodologie de pentest par reconnaissance pour découvrir les faiblesses cachées des agents. [BioSecBench-Refusal](https://arxiv.org/abs/2607.05462) · [Know Your Agent](https://arxiv.org/abs/2607.19837)
+## Cyber — Stratégie &amp; analyse
 
-- **Inférence confidentielle sur GPU** : Le coût en performance de l'exécution confidentielle pour l'inférence GPU sur NVIDIA H100 sous Intel TDX est mesuré, un enjeu pour le traitement de données sensibles ou la protection de modèles propriétaires. [Benchmarking Confidential GPU Inference](https://arxiv.org/abs/2607.19353)
+- **Chiffrement bout-en-bout et débat "Going Dark"** : Schneier relaie une nouvelle analyse qui identifie une troisième phase dans le conflit entre chiffrement et accès légal, quinze ans après ses premiers travaux sur le sujet. L'étude replace la pression actuelle sur le E2EE dans le contexte de la mondialisation. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/end-to-end-encryption-and-going-dark.html)
 
-- **Auditabilité des modèles propriétaires** : Une approche permet de vérifier que le fine-tuning et l'inférence délégués à un fournisseur cloud correspondent bien au modèle annoncé, sans avoir accès à ses poids. [Trusting What You Cannot See](https://arxiv.org/abs/2603.07466)
-
-- **Robustesse des évaluations de LLM** : La sensibilité des réponses des LLM à la formulation des prompts varie fortement selon le type de question, ce qui fragilise les évaluations portant sur les valeurs ou opinions politiques attribuées aux modèles. [Prompt Robustness Is Task-Dependent](https://arxiv.org/abs/2607.05554)
-
-- **Fiabilité des scores d'interprétabilité** : Les choix de pipeline (prompts, modèles évaluateurs) dominent la variance des scores d'auto-interprétabilité des sparse autoencoders, rendant les comparaisons entre articles peu fiables. [Building Fast, Evaluating Slow](https://arxiv.org/abs/2607.19386)
-
-- **Fuite de données dans les benchmarks OOD** : Un détecteur d'exemples hors-distribution obtient un score bien inférieur au hasard sur un benchmark documentaire, trahissant une fuite : la classe "OOD" faisait partie de l'entraînement du modèle. [Decodable but Not Detectable](https://arxiv.org/abs/2607.19393)
-
-- **Prédiction de séries temporelles** : Plusieurs travaux explorent des verrous de déploiement : l'explicabilité en apprentissage continu pour des environnements non-stationnaires, et un nouveau benchmark de prévision de la qualité de l'air à grande échelle pour les modèles de fondation. [Challenges of Explainability in Continual Learning](https://arxiv.org/abs/2607.19382) · [Air Quality Arena](https://arxiv.org/abs/2607.19381)
-
-- **Apprentissage fédéré incrémental** : Une méthode unifiée de "chirurgie géométrique" sur les vecteurs d'adaptation spatio-temporels est proposée pour gérer à la fois la collaboration distribuée et l'arrivée continue de nouvelles classes. [SUM](https://arxiv.org/abs/2607.19384)
-
-- **Optimisation pour données multi-dimensionnelles** : Un nouvel opérateur subquadratique à base de convolutions longues dépendantes de l'entrée évite les compromis des alternatives à l'attention sur les images, volumes et autres données multi-dimensionnelles. [Native Multi-Dimensional Subquadratic Operators](https://arxiv.org/abs/2607.19378)
-
-- **Fine-tuning efficient en paramètres** : Une allocation adaptative du rang par couche (LoRA) surpasse les méthodes à rang uniforme, avec une justification théorique et empirique. [LAARA](https://arxiv.org/abs/2607.19391)
-
-- **Applications sectorielles** : Des réseaux de neurones sur graphes prédisent la contamination à l'arsenic des eaux souterraines aux États-Unis ; un benchmark réaliste pour la prédiction de durée de vie restante de moteurs d'avion intègre des profils de vol réels. [Predicting Groundwater Arsenic](https://arxiv.org/abs/2607.19392) · [CruiseBench](https://arxiv.org/abs/2607.19380)
+- **IA agentique vs confidential computing** : Alors que les obstacles techniques au déploiement d'enclaves sécurisées se résorbent, l'émergence des agents IA autonomes introduit de nouveaux risques pour la protection des données en cours de traitement. Les schémas de délégation dynamique propres à ces agents compliquent la garantie d'isolation. [Dark Reading](https://www.darkreading.com/endpoint-security/agentic-ai-challenges-progress-in-confidential-computing)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Scanner de vulnérabilités multi-agent pour Claude Code** : Anthropic lance en bêta un plugin de sécurité intégré à Claude Code, capable de scanner un dépôt via plusieurs agents et de générer des correctifs sous forme de patchs à valider manuellement. L'outil opère en local dans le terminal, sans envoyer le code source aux serveurs d'Anthropic. [MarkTechPost](https://www.marktechpost.com/2026/07/22/anthropic-releases-claude-security-plugin-for-claude-code-in-beta-a-multi-agent-vulnerability-scanner-that-runs-in-your-terminal/)
+- **ASR open source : sortie du monoculture Whisper** : La compétition en reconnaissance vocale s'intensifie avec Cohere Transcribe, IBM Granite Speech 4.1, ARK-ASR et MOSS-Transcribe qui affichent désormais moins d'un point d'écart en WER sur le benchmark Hugging Face. Le classement ne suffit plus à départager les modèles, le choix doit intégrer latence, licence et couverture linguistique. [MarkTechPost](https://www.marktechpost.com/2026/07/23/best-open-speech-recognition-asr-models-in-2026-wer-languages-latency-and-license-compared/)
+
+- **Tokenization : Gigatoken atteint 24,53 Go/s** : Un tokenizer BPE en Rust sous licence MIT encode du texte GPT-2 près de 1000 fois plus vite que les tokenizers HuggingFace et 681 fois plus vite que tiktoken sur un AMD EPYC 144 cœurs. Le gain vient d'une implémentation manuelle sans dépendance lourde, avec un intérêt direct pour le prétraitement de corpus massifs. [MarkTechPost](https://www.marktechpost.com/2026/07/23/meet-gigatoken-a-rust-bpe-tokenizer-that-encodes-text-at-24-53-gb-s-up-to-989x-faster-than-huggingface-tokenizers/)
 
 ## Actualité tech FR
 
-- **Accusation de distillation contre Kimi K3** : La Maison-Blanche accuse le modèle chinois Kimi K3 (Moonshot AI) d'avoir été entraîné par distillation du modèle Fable d'Anthropic, une pratique qui viole les conditions d'utilisation. [Next.ink](https://next.ink/248518/la-maison-blanche-accuse-kimi-k3-de-distillation-du-modele-fable-danthropic/)
+- **OVHcloud : migration forcée post-faille KVM** : OVHcloud a mené une campagne massive de mise à jour de ses infrastructures suite à une faille critique dans le moteur de virtualisation KVM, avec un impact assumé sur ses clients prévenus en amont. [Next.ink](https://next.ink/248542/suite-a-la-faille-kvm-ovhcloud-fait-le-bilan-de-sa-migration-monstre/)
 
-- **Interdiction des réseaux sociaux aux moins de 15 ans** : Le Parlement a adopté définitivement la loi interdisant l'accès aux réseaux sociaux sans autorisation parentale pour les moins de 15 ans, avec une entrée en vigueur prévue en septembre. La France devient le premier pays de l'UE à légiférer sur ce seuil. [Siècle Digital](https://siecledigital.fr/2026/07/23/reseaux-sociaux-interdits-aux-moins-de-15-ans-en-france-ce-qui-va-changer-des-septembre/)
+- **Espionnage chinois ciblant l'IA** : D'anciens responsables du renseignement alertent le Congrès américain sur le ciblage systématique des géants de l'IA par Pékin pour accélérer sa course technologique et militaire, appelant à repenser le contre-espionnage. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/repenser-le-contre-espionnage-les-geants-de-l-ia-sont-devenus-des-cibles-privilegiees-des-espions-chinois-alertent-d-anciens-responsables-de-la-securite-devant-le-congres-americain_AV-202607230341.html)
 
-- **Déploiement des AI Overviews en France** : Google active en France les résumés générés par IA en haut des résultats de recherche, après un déploiement déjà effectué dans plus de 200 pays. [Siècle Digital](https://siecledigital.fr/2026/07/23/google-change-de-visage-en-france-avec-larrivee-de-lia-integree-aux-resultats-de-recherche/)</description>
-      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
+- **Partenariats et investissements dans l'IA** : Microsoft renforce son partenariat avec Mistral pour répondre à la demande en capacités de calcul, tandis qu'AMD investit 5 milliards de dollars dans Anthropic — un mouvement stratégique visant à placer ses puces chez les plus gros consommateurs de GPU pour contourner la domination technologique de Nvidia. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-microsoft-et-mistral-renforcent-leur-partenariat-dans-l-ia-100711.html) · [Siècle Digital](https://siecledigital.fr/2026/07/23/amd-investit-5-milliards-de-dollars-dans-anthropic-pour-defier-nvidia/)
+
+- **Véhicules autonomes : la France freine Tesla** : Le ministre des Transports refuse pour l'instant d'autoriser le FSD de Tesla sur le territoire, malgré des feux verts dans d'autres pays européens, tout en visant une homologation de véhicules autonomes d'ici 2027 via le cadre réglementaire international. [Next.ink](https://next.ink/248526/la-france-dit-non-au-fsd-de-tesla-mais-veut-des-vehicules-autonomes-homologues-des-2027/)
+
+- **Résilience numérique : au-delà de la protection des données** : Le Journal du Net analyse le basculement stratégique nécessaire pour les entreprises, où la résilience numérique devient la condition de la continuité d'activité face aux écosystèmes distribués et à l'IA. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552897-de-la-protection-des-donnees-a-la-resilience-numerique-un-changement-d-echelle-strategique-pour-les-entreprises/)
+
+- **Synology DP7400 : appliance de sauvegarde simplifiée** : Retour d'expérience de Reworld Media sur l'appliance ActiveProtect DP7400 de Synology, qui promet un déploiement quasi automatisé pour postes de travail, serveurs et machines virtuelles. [ZDNet France](https://www.zdnet.fr/cybersecurite/synology-activeprotect-dp7400-vu-par-les-pros-une-appliance-de-sauvegarde-qui-se-configure-presque-seule-497784.htm#xtor=RSS-1)</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Interruption de la chaîne logistique par ransomware</strong> : Une cyberattaque contre un acteur japonais de la logistique alimentaire a gelé les livraisons vers des milliers de clients, y compris des franchises majeures comme KFC, illustrant l'impact direct des ransomwares sur la disponibilité physique des biens. <a href="https://www.darkreading.com/cyberattacks-data-breaches/ransomware-attack-japanese-frozen-food-chain">Dark Reading</a></li>
+<li><strong>Vulnérabilité locale RefluXFS (CVE-2026-64600) sur XFS</strong> : Une faille vieille de 9 ans dans le noyau Linux permet à un utilisateur local non privilégié d'écraser des fichiers appartenant à root sur un système de fichiers XFS, menant à une élévation de privilèges persistante. Les installations par défaut de RHEL et ses dérivés, ainsi que Fedora Server, sont affectées. <a href="https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Fin du patching différé chez Microsoft</strong> : Microsoft impose désormais un délai de 3 jours pour appliquer les correctifs de sécurité, une directive qui entre en tension avec la réalité opérationnelle des grandes entreprises où les précédents de patches défectueux imposent des tests préalables. <a href="https://www.csoonline.com/article/4200366/microsofts-3-day-patching-directive-comes-with-added-operational-risk.html">CSO Online</a></li>
+<li><strong>Exploitation active d'une faille critique Check Point (CVE-2026-16232)</strong> : Check Point a corrigé une vulnérabilité critique (CVSS 9.3) dans SmartConsole permettant d'obtenir un accès administrateur complet, qui fait l'objet d'une exploitation active. La mise à jour concerne les produits Security Management et Multi-Domain Management. <a href="https://thehackernews.com/2026/07/check-point-patches-exploited.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Démantèlement de la plateforme de phishing Kratos</strong> : Les autorités allemandes ont saisi l'infrastructure du groupe PhaaS Kratos et arrêté un développeur en Indonésie, portant un coup à un fournisseur clé de kits de phishing utilisés pour contourner l'authentification multifacteur. <a href="https://www.csoonline.com/article/4200215/german-law-enforcement-claims-to-have-dismantled-mega-phishing-as-a-service-group-kratos.html">CSO Online</a></li>
+<li><strong>Détournement de GitHub Actions pour attaquer des serveurs cPanel/WHM</strong> : Des dépôts GitHub compromis servent d'infrastructure d'attaque distribuée contre des instances cPanel et WebHost Manager, via des versions de développement malveillantes sur Packagist couvrant 10 paquets. <a href="https://thehackernews.com/2026/07/attackers-weaponize-github-actions.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Cheval de Troie bancaire brésilien au Portugal</strong> : Un malware bancaire originaire du Brésil cible activement les entreprises portugaises, exploitant la communauté de langue pour concevoir des leurres plus crédibles et contourner les défenses locales. <a href="https://www.darkreading.com/cyberattacks-data-breaches/brazilian-banking-trojan-spreading-portugal">Dark Reading</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Inférence 4-bit avec Nunchaku dans Diffusers</strong> : Hugging Face intègre la bibliothèque Nunchaku à Diffusers, permettant l'inférence de modèles de diffusion en quantification 4-bit. Cette optimisation réduit significativement l'empreinte mémoire et la latence sur GPU grand public. <a href="https://huggingface.co/blog/nunchaku-diffusers">Hugging Face Blog</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Sécurité des agents IA</strong> : Un benchmark évalue la capacité des agents IA à refuser des tâches de recherche biologique à risque, tandis qu'une autre étude formalise une méthodologie de pentest par reconnaissance pour découvrir les faiblesses cachées des agents. <a href="https://arxiv.org/abs/2607.05462">BioSecBench-Refusal</a> · <a href="https://arxiv.org/abs/2607.19837">Know Your Agent</a></li>
+<li><strong>Nouveau RAT furtif du groupe Chaos (msaRAT)</strong> : Le malware msaRAT détourne le navigateur pour établir un canal C2 indirect, exécutant des commandes arbitraires tout en masquant l'IP de l'attaquant via WebRTC sur TURN. <a href="https://blog.talosintelligence.com/chaos-msarat-living-off-the-browser-to-build-covert-c2-channel/">Cisco Talos</a></li>
 </ul>
 
 <ul>
-<li><strong>Inférence confidentielle sur GPU</strong> : Le coût en performance de l'exécution confidentielle pour l'inférence GPU sur NVIDIA H100 sous Intel TDX est mesuré, un enjeu pour le traitement de données sensibles ou la protection de modèles propriétaires. <a href="https://arxiv.org/abs/2607.19353">Benchmarking Confidential GPU Inference</a></li>
+<li><strong>Fraude à l'identité synthétique appliquée aux machines</strong> : La fraude synthétique, qui assemble des données réelles pour créer une identité fictive, s'étend désormais aux identités machines, rendant la détection plus complexe que l'usurpation d'identité classique. <a href="https://thehackernews.com/2026/07/how-synthetic-identity-fraud-is-coming.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Auditabilité des modèles propriétaires</strong> : Une approche permet de vérifier que le fine-tuning et l'inférence délégués à un fournisseur cloud correspondent bien au modèle annoncé, sans avoir accès à ses poids. <a href="https://arxiv.org/abs/2603.07466">Trusting What You Cannot See</a></li>
+<li><strong>Incident Exchange Online : quarantaine erronée de boîtes aux lettres</strong> : Microsoft travaille sur un correctif pour un problème affectant Exchange Online, qui place par erreur des boîtes aux lettres en quarantaine depuis dimanche. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-exchange-online-mailbox-quarantine-issue/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Robustesse des évaluations de LLM</strong> : La sensibilité des réponses des LLM à la formulation des prompts varie fortement selon le type de question, ce qui fragilise les évaluations portant sur les valeurs ou opinions politiques attribuées aux modèles. <a href="https://arxiv.org/abs/2607.05554">Prompt Robustness Is Task-Dependent</a></li>
+<li><strong>Amende DMA de 890 M€ pour Google</strong> : La Commission européenne sanctionne Google pour non-respect du Digital Markets Act concernant la concurrence dans la recherche et le Play Store. <a href="https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/">BleepingComputer</a></li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Chiffrement bout-en-bout et débat "Going Dark"</strong> : Schneier relaie une nouvelle analyse qui identifie une troisième phase dans le conflit entre chiffrement et accès légal, quinze ans après ses premiers travaux sur le sujet. L'étude replace la pression actuelle sur le E2EE dans le contexte de la mondialisation. <a href="https://www.schneier.com/blog/archives/2026/07/end-to-end-encryption-and-going-dark.html">Schneier on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Fiabilité des scores d'interprétabilité</strong> : Les choix de pipeline (prompts, modèles évaluateurs) dominent la variance des scores d'auto-interprétabilité des sparse autoencoders, rendant les comparaisons entre articles peu fiables. <a href="https://arxiv.org/abs/2607.19386">Building Fast, Evaluating Slow</a></li>
-</ul>
-
-<ul>
-<li><strong>Fuite de données dans les benchmarks OOD</strong> : Un détecteur d'exemples hors-distribution obtient un score bien inférieur au hasard sur un benchmark documentaire, trahissant une fuite : la classe "OOD" faisait partie de l'entraînement du modèle. <a href="https://arxiv.org/abs/2607.19393">Decodable but Not Detectable</a></li>
-</ul>
-
-<ul>
-<li><strong>Prédiction de séries temporelles</strong> : Plusieurs travaux explorent des verrous de déploiement : l'explicabilité en apprentissage continu pour des environnements non-stationnaires, et un nouveau benchmark de prévision de la qualité de l'air à grande échelle pour les modèles de fondation. <a href="https://arxiv.org/abs/2607.19382">Challenges of Explainability in Continual Learning</a> · <a href="https://arxiv.org/abs/2607.19381">Air Quality Arena</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage fédéré incrémental</strong> : Une méthode unifiée de "chirurgie géométrique" sur les vecteurs d'adaptation spatio-temporels est proposée pour gérer à la fois la collaboration distribuée et l'arrivée continue de nouvelles classes. <a href="https://arxiv.org/abs/2607.19384">SUM</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation pour données multi-dimensionnelles</strong> : Un nouvel opérateur subquadratique à base de convolutions longues dépendantes de l'entrée évite les compromis des alternatives à l'attention sur les images, volumes et autres données multi-dimensionnelles. <a href="https://arxiv.org/abs/2607.19378">Native Multi-Dimensional Subquadratic Operators</a></li>
-</ul>
-
-<ul>
-<li><strong>Fine-tuning efficient en paramètres</strong> : Une allocation adaptative du rang par couche (LoRA) surpasse les méthodes à rang uniforme, avec une justification théorique et empirique. <a href="https://arxiv.org/abs/2607.19391">LAARA</a></li>
-</ul>
-
-<ul>
-<li><strong>Applications sectorielles</strong> : Des réseaux de neurones sur graphes prédisent la contamination à l'arsenic des eaux souterraines aux États-Unis ; un benchmark réaliste pour la prédiction de durée de vie restante de moteurs d'avion intègre des profils de vol réels. <a href="https://arxiv.org/abs/2607.19392">Predicting Groundwater Arsenic</a> · <a href="https://arxiv.org/abs/2607.19380">CruiseBench</a></li>
+<li><strong>IA agentique vs confidential computing</strong> : Alors que les obstacles techniques au déploiement d'enclaves sécurisées se résorbent, l'émergence des agents IA autonomes introduit de nouveaux risques pour la protection des données en cours de traitement. Les schémas de délégation dynamique propres à ces agents compliquent la garantie d'isolation. <a href="https://www.darkreading.com/endpoint-security/agentic-ai-challenges-progress-in-confidential-computing">Dark Reading</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Scanner de vulnérabilités multi-agent pour Claude Code</strong> : Anthropic lance en bêta un plugin de sécurité intégré à Claude Code, capable de scanner un dépôt via plusieurs agents et de générer des correctifs sous forme de patchs à valider manuellement. L'outil opère en local dans le terminal, sans envoyer le code source aux serveurs d'Anthropic. <a href="https://www.marktechpost.com/2026/07/22/anthropic-releases-claude-security-plugin-for-claude-code-in-beta-a-multi-agent-vulnerability-scanner-that-runs-in-your-terminal/">MarkTechPost</a></li>
+<li><strong>ASR open source : sortie du monoculture Whisper</strong> : La compétition en reconnaissance vocale s'intensifie avec Cohere Transcribe, IBM Granite Speech 4.1, ARK-ASR et MOSS-Transcribe qui affichent désormais moins d'un point d'écart en WER sur le benchmark Hugging Face. Le classement ne suffit plus à départager les modèles, le choix doit intégrer latence, licence et couverture linguistique. <a href="https://www.marktechpost.com/2026/07/23/best-open-speech-recognition-asr-models-in-2026-wer-languages-latency-and-license-compared/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Tokenization : Gigatoken atteint 24,53 Go/s</strong> : Un tokenizer BPE en Rust sous licence MIT encode du texte GPT-2 près de 1000 fois plus vite que les tokenizers HuggingFace et 681 fois plus vite que tiktoken sur un AMD EPYC 144 cœurs. Le gain vient d'une implémentation manuelle sans dépendance lourde, avec un intérêt direct pour le prétraitement de corpus massifs. <a href="https://www.marktechpost.com/2026/07/23/meet-gigatoken-a-rust-bpe-tokenizer-that-encodes-text-at-24-53-gb-s-up-to-989x-faster-than-huggingface-tokenizers/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Accusation de distillation contre Kimi K3</strong> : La Maison-Blanche accuse le modèle chinois Kimi K3 (Moonshot AI) d'avoir été entraîné par distillation du modèle Fable d'Anthropic, une pratique qui viole les conditions d'utilisation. <a href="https://next.ink/248518/la-maison-blanche-accuse-kimi-k3-de-distillation-du-modele-fable-danthropic/">Next.ink</a></li>
+<li><strong>OVHcloud : migration forcée post-faille KVM</strong> : OVHcloud a mené une campagne massive de mise à jour de ses infrastructures suite à une faille critique dans le moteur de virtualisation KVM, avec un impact assumé sur ses clients prévenus en amont. <a href="https://next.ink/248542/suite-a-la-faille-kvm-ovhcloud-fait-le-bilan-de-sa-migration-monstre/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Interdiction des réseaux sociaux aux moins de 15 ans</strong> : Le Parlement a adopté définitivement la loi interdisant l'accès aux réseaux sociaux sans autorisation parentale pour les moins de 15 ans, avec une entrée en vigueur prévue en septembre. La France devient le premier pays de l'UE à légiférer sur ce seuil. <a href="https://siecledigital.fr/2026/07/23/reseaux-sociaux-interdits-aux-moins-de-15-ans-en-france-ce-qui-va-changer-des-septembre/">Siècle Digital</a></li>
+<li><strong>Espionnage chinois ciblant l'IA</strong> : D'anciens responsables du renseignement alertent le Congrès américain sur le ciblage systématique des géants de l'IA par Pékin pour accélérer sa course technologique et militaire, appelant à repenser le contre-espionnage. <a href="https://www.bfmtv.com/tech/cybersecurite/repenser-le-contre-espionnage-les-geants-de-l-ia-sont-devenus-des-cibles-privilegiees-des-espions-chinois-alertent-d-anciens-responsables-de-la-securite-devant-le-congres-americain_AV-202607230341.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Déploiement des AI Overviews en France</strong> : Google active en France les résumés générés par IA en haut des résultats de recherche, après un déploiement déjà effectué dans plus de 200 pays. <a href="https://siecledigital.fr/2026/07/23/google-change-de-visage-en-france-avec-larrivee-de-lia-integree-aux-resultats-de-recherche/">Siècle Digital</a></li>
+<li><strong>Partenariats et investissements dans l'IA</strong> : Microsoft renforce son partenariat avec Mistral pour répondre à la demande en capacités de calcul, tandis qu'AMD investit 5 milliards de dollars dans Anthropic — un mouvement stratégique visant à placer ses puces chez les plus gros consommateurs de GPU pour contourner la domination technologique de Nvidia. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-et-mistral-renforcent-leur-partenariat-dans-l-ia-100711.html">Le Monde Informatique</a> · <a href="https://siecledigital.fr/2026/07/23/amd-investit-5-milliards-de-dollars-dans-anthropic-pour-defier-nvidia/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Véhicules autonomes : la France freine Tesla</strong> : Le ministre des Transports refuse pour l'instant d'autoriser le FSD de Tesla sur le territoire, malgré des feux verts dans d'autres pays européens, tout en visant une homologation de véhicules autonomes d'ici 2027 via le cadre réglementaire international. <a href="https://next.ink/248526/la-france-dit-non-au-fsd-de-tesla-mais-veut-des-vehicules-autonomes-homologues-des-2027/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Résilience numérique : au-delà de la protection des données</strong> : Le Journal du Net analyse le basculement stratégique nécessaire pour les entreprises, où la résilience numérique devient la condition de la continuité d'activité face aux écosystèmes distribués et à l'IA. <a href="https://www.journaldunet.com/cybersecurite/1552897-de-la-protection-des-donnees-a-la-resilience-numerique-un-changement-d-echelle-strategique-pour-les-entreprises/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Synology DP7400 : appliance de sauvegarde simplifiée</strong> : Retour d'expérience de Reworld Media sur l'appliance ActiveProtect DP7400 de Synology, qui promet un déploiement quasi automatisé pour postes de travail, serveurs et machines virtuelles. <a href="https://www.zdnet.fr/cybersecurite/synology-activeprotect-dp7400-vu-par-les-pros-une-appliance-de-sauvegarde-qui-se-configure-presque-seule-497784.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260723-0757</guid>
-      <pubDate>Thu, 23 Jul 2026 07:57:43 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260723-1255</guid>
+      <pubDate>Thu, 23 Jul 2026 12:55:08 +0000</pubDate>
     </item>
   </channel>
 </rss>
