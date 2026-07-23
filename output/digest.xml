@@ -8,128 +8,174 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 23 Jul 2026 12:55:08 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 18:24:51 +0000</lastBuildDate>
     <item>
-      <title>Digest — 23/07 12h</title>
+      <title>Digest — 23/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Vulnérabilité locale RefluXFS (CVE-2026-64600) sur XFS** : Une faille vieille de 9 ans dans le noyau Linux permet à un utilisateur local non privilégié d'écraser des fichiers appartenant à root sur un système de fichiers XFS, menant à une élévation de privilèges persistante. Les installations par défaut de RHEL et ses dérivés, ainsi que Fedora Server, sont affectées. [The Hacker News](https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html)
+- **Évasion de sandbox dans Claude Cowork** : Une vulnérabilité permet à l'agent IA de s'extraire de sa VM Linux pour lire ou écrire des fichiers sur le Mac hôte. [The Hacker News](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html)
 
-- **Exploitation active d'une faille critique Check Point (CVE-2026-16232)** : Check Point a corrigé une vulnérabilité critique (CVSS 9.3) dans SmartConsole permettant d'obtenir un accès administrateur complet, qui fait l'objet d'une exploitation active. La mise à jour concerne les produits Security Management et Multi-Domain Management. [The Hacker News](https://thehackernews.com/2026/07/check-point-patches-exploited.html)
+- **Exploitation zero-click de Zimbra par Laundry Bear (Void Blizzard)** : CISA alerte sur une campagne du groupe russe combinant phishing et exploitation d'une faille Zimbra corrigée pour voler des emails. [BleepingComputer](https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-zimbra-zero-click-flaw-for-email-theft/)
 
-- **Détournement de GitHub Actions pour attaquer des serveurs cPanel/WHM** : Des dépôts GitHub compromis servent d'infrastructure d'attaque distribuée contre des instances cPanel et WebHost Manager, via des versions de développement malveillantes sur Packagist couvrant 10 paquets. [The Hacker News](https://thehackernews.com/2026/07/attackers-weaponize-github-actions.html)
+- **Panne Microsoft 365** : Une interruption affecte Teams, SharePoint, Excel et l'Admin Center. Pas d'indication de cause malveillante à ce stade. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-365-outage-affects-teams-sharepoint-and-other-services/)
 
-- **Nouveau RAT furtif du groupe Chaos (msaRAT)** : Le malware msaRAT détourne le navigateur pour établir un canal C2 indirect, exécutant des commandes arbitraires tout en masquant l'IP de l'attaquant via WebRTC sur TURN. [Cisco Talos](https://blog.talosintelligence.com/chaos-msarat-living-off-the-browser-to-build-covert-c2-channel/)
+- **Chaos ransomware : C2 via le navigateur de la victime** : L'implant Rust msaRAT achemine le trafic de commande et contrôle via Chrome ou Edge en headless, sans ouvrir de connexion sortante propre. [The Hacker News](https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html)
 
-- **Fraude à l'identité synthétique appliquée aux machines** : La fraude synthétique, qui assemble des données réelles pour créer une identité fictive, s'étend désormais aux identités machines, rendant la détection plus complexe que l'usurpation d'identité classique. [The Hacker News](https://thehackernews.com/2026/07/how-synthetic-identity-fraud-is-coming.html)
+- **JadeProx (Chine) : nouveau loader TriBack** : Un serveur Alibaba Cloud exposé a révélé une campagne ciblant gouvernements, santé et éducation en Asie et Amérique latine avec un loader Windows inédit. [The Hacker News](https://thehackernews.com/2026/07/china-nexus-jadeprox-uses-new-triback.html)
 
-- **Incident Exchange Online : quarantaine erronée de boîtes aux lettres** : Microsoft travaille sur un correctif pour un problème affectant Exchange Online, qui place par erreur des boîtes aux lettres en quarantaine depuis dimanche. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-exchange-online-mailbox-quarantine-issue/)
+- **Distribution de malware via plugins Notepad++** : Le CERT ukrainien rapporte des attaques utilisant une archive contenant Notepad++ légitime et un utilitaire malveillant (LunchPoke) déguisé en plugin pour établir la persistance. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/)
 
-- **Amende DMA de 890 M€ pour Google** : La Commission européenne sanctionne Google pour non-respect du Digital Markets Act concernant la concurrence dans la recherche et le Play Store. [BleepingComputer](https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/)
+- **Synthèse menaces multiples (ThreatsDay)** : Tour d'horizon incluant spyware Android, attaques sur PLC, injection de prompt via image, faux packages et extensions détournées. [The Hacker News](https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html)
+
+- **Compromission de données chez Origin Energy** : Le fournisseur d'énergie australien confirme une brèche et évalue le nombre de clients impactés. [The Record](https://therecord.media/australia-origin-energy-data-breach)
+
+- **Restrictions de visas US pour cyber-escrocs** : Le Département d'État cible les individus liés aux opérations transnationales d'escroquerie en ligne. [The Record](https://therecord.media/visa-restrictions-cyber-scammers)
+
+- **Priorisation des correctifs (Cisco Talos)** : Analyse du T2 2026 insistant sur le patching priorisé face à une surface d'attaque qui continue de s'élargir. [Cisco Talos](https://blog.talosintelligence.com/dont-swing-at-everything/)
+
+- **Transition FedRAMP Rev5 vers 20x** : Le nouveau cadre remplace les audits ponctuels par une assurance continue basée sur des preuves lisibles par machine. [BleepingComputer](https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Chiffrement bout-en-bout et débat "Going Dark"** : Schneier relaie une nouvelle analyse qui identifie une troisième phase dans le conflit entre chiffrement et accès légal, quinze ans après ses premiers travaux sur le sujet. L'étude replace la pression actuelle sur le E2EE dans le contexte de la mondialisation. [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/end-to-end-encryption-and-going-dark.html)
+- **Vulnérabilité critique dans XFS sous Linux** : Une condition de concurrence vieille de dix ans dans le système de fichiers XFS permet à un utilisateur local non privilégié d'obtenir les droits root. Le problème concerne les noyaux Linux 4.11 et ultérieurs avec l'option reflink activée. [CSO Online](https://www.csoonline.com/article/4200808/linux-xfs-has-a-decade-old-race-condition-allowing-full-root-access-2.html)
 
-- **IA agentique vs confidential computing** : Alors que les obstacles techniques au déploiement d'enclaves sécurisées se résorbent, l'émergence des agents IA autonomes introduit de nouveaux risques pour la protection des données en cours de traitement. Les schémas de délégation dynamique propres à ces agents compliquent la garantie d'isolation. [Dark Reading](https://www.darkreading.com/endpoint-security/agentic-ai-challenges-progress-in-confidential-computing)
+## IA — Labos &amp; éditeurs
+
+- **Évaluation en production d'agents IA** : AWS publie un pipeline complet combinant Strands Agents SDK et Bedrock AgentCore, qui a permis de réduire le taux d'erreurs de 1/8 à 1/50 requêtes et de détecter les problèmes en quelques minutes au lieu de plusieurs heures. Le second article détaille comment AgentCore identifie et hiérarchise les défaillances silencieuses échappant aux health checks. [Motorway sur AWS](https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-a-production-blueprint-with-strands-and-agentcore/) · [Détection de défaillances silencieuses](https://aws.amazon.com/blogs/machine-learning/detecting-silent-agent-failures-with-amazon-bedrock-agentcore-optimization/)
+
+- **Récupération agentique pour bases de connaissances** : AWS détaille l'API AgenticRetrieveStream pour Bedrock Managed Knowledge Base, qui traite les questions multi-parties là où la recherche classique échoue. [AWS](https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-for-amazon-bedrock-managed-knowledge-base/)
+
+- **Assistant front-office dans la finance** : Jefferies a déployé un assistant pour les opérations de trading via Strands Agents sur AWS, en orchestrant des LLM et outils externes. [AWS](https://aws.amazon.com/blogs/machine-learning/building-trade-assistant-how-jefferies-optimized-front-office-trading-operations-with-ai/)
+
+- **Visualisations multi-régions avec QuickSight** : Intégration de Highcharts dans QuickSight pour construire des tableaux de bord de performance consolidés tout en maintenant la souveraineté des données par région. [AWS](https://aws.amazon.com/blogs/machine-learning/building-multi-region-visualizations-with-highcharts-in-amazon-quick/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **ASR open source : sortie du monoculture Whisper** : La compétition en reconnaissance vocale s'intensifie avec Cohere Transcribe, IBM Granite Speech 4.1, ARK-ASR et MOSS-Transcribe qui affichent désormais moins d'un point d'écart en WER sur le benchmark Hugging Face. Le classement ne suffit plus à départager les modèles, le choix doit intégrer latence, licence et couverture linguistique. [MarkTechPost](https://www.marktechpost.com/2026/07/23/best-open-speech-recognition-asr-models-in-2026-wer-languages-latency-and-license-compared/)
+- **Proposition de loi sur un "kill switch" pour l'IA** : Des élus américains préparent un texte imposant aux entreprises d'IA de couper ou brider leurs systèmes sur injonction du Department of Homeland Security. [The Verge](https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal)
 
-- **Tokenization : Gigatoken atteint 24,53 Go/s** : Un tokenizer BPE en Rust sous licence MIT encode du texte GPT-2 près de 1000 fois plus vite que les tokenizers HuggingFace et 681 fois plus vite que tiktoken sur un AMD EPYC 144 cœurs. Le gain vient d'une implémentation manuelle sans dépendance lourde, avec un intérêt direct pour le prétraitement de corpus massifs. [MarkTechPost](https://www.marktechpost.com/2026/07/23/meet-gigatoken-a-rust-bpe-tokenizer-that-encodes-text-at-24-53-gb-s-up-to-989x-faster-than-huggingface-tokenizers/)
+- **Modèles d'IA substitués sans transparence** : Des appels API avec un modèle spécifié retournent un champ indiquant qu'un modèle différent a été utilisé pour la génération, sans erreur ni notification explicite. Le routage est décidé en amont, ce qui soulève un problème de conformité contractuelle et de confiance pour les entreprises consommatrices. [MarkTechPost](https://www.marktechpost.com/2026/07/23/you-didnt-get-the-ai-model-you-paid-for/)
 
 ## Actualité tech FR
 
-- **OVHcloud : migration forcée post-faille KVM** : OVHcloud a mené une campagne massive de mise à jour de ses infrastructures suite à une faille critique dans le moteur de virtualisation KVM, avec un impact assumé sur ses clients prévenus en amont. [Next.ink](https://next.ink/248542/suite-a-la-faille-kvm-ovhcloud-fait-le-bilan-de-sa-migration-monstre/)
+- **CVE Linux : un afflux massif à relativiser** : La publication soudaine de 432 bulletins CVE pour le noyau Linux ne signifie pas une explosion de failles critiques ; la complexité réside dans la capacité à prioriser et intégrer ce volume de correctifs en production. [Next.ink](https://next.ink/248637/432-failles-corrigees-dans-le-noyau-linux-pas-si-vite/)
 
-- **Espionnage chinois ciblant l'IA** : D'anciens responsables du renseignement alertent le Congrès américain sur le ciblage systématique des géants de l'IA par Pékin pour accélérer sa course technologique et militaire, appelant à repenser le contre-espionnage. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/repenser-le-contre-espionnage-les-geants-de-l-ia-sont-devenus-des-cibles-privilegiees-des-espions-chinois-alertent-d-anciens-responsables-de-la-securite-devant-le-congres-americain_AV-202607230341.html)
+- **Google écope de 890 M€ d'amendes européennes** : Bruxelles sanctionne Google pour avoir favorisé ses propres services dans les résultats de recherche et restreint les alternatives publicitaires. [Next.ink](https://next.ink/248614/890-millions-deuros-damende-google-sanctionne-deux-fois-par-bruxelles/)
 
-- **Partenariats et investissements dans l'IA** : Microsoft renforce son partenariat avec Mistral pour répondre à la demande en capacités de calcul, tandis qu'AMD investit 5 milliards de dollars dans Anthropic — un mouvement stratégique visant à placer ses puces chez les plus gros consommateurs de GPU pour contourner la domination technologique de Nvidia. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-microsoft-et-mistral-renforcent-leur-partenariat-dans-l-ia-100711.html) · [Siècle Digital](https://siecledigital.fr/2026/07/23/amd-investit-5-milliards-de-dollars-dans-anthropic-pour-defier-nvidia/)
+- **Cisco publie Antares, des modèles ouverts pour la détection de vulnérabilités** : Cisco met en ligne deux petits modèles à poids ouverts spécialisés dans la recherche de failles, misant sur un rapport coût/performances optimisé face aux LLM généralistes. [Next.ink](https://next.ink/248603/antares-cisco-publie-deux-modeles-a-poids-ouverts-dedies-a-la-detection-de-failles/)
 
-- **Véhicules autonomes : la France freine Tesla** : Le ministre des Transports refuse pour l'instant d'autoriser le FSD de Tesla sur le territoire, malgré des feux verts dans d'autres pays européens, tout en visant une homologation de véhicules autonomes d'ici 2027 via le cadre réglementaire international. [Next.ink](https://next.ink/248526/la-france-dit-non-au-fsd-de-tesla-mais-veut-des-vehicules-autonomes-homologues-des-2027/)
+- **IA et propriété intellectuelle : tensions sino-américaines** : La Maison Blanche accuse la start-up chinoise Moonshot AI d'avoir utilisé le modèle Claude d'Anthropic pour entraîner son IA Kimi K3, menaçant de sanctions pour vol de propriété intellectuelle. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/moonshot-ai-et-son-modele-kimi-k3-font-trembler-les-etats-unis-le-gouvernement-americain-accuse-la-start-up-chinoise-d-avoir-franchi-la-ligne-rouge-du-vol-de-propriete-intellectuelle-et-la-menace-de-sanctions_AV-202607230566.html)
 
-- **Résilience numérique : au-delà de la protection des données** : Le Journal du Net analyse le basculement stratégique nécessaire pour les entreprises, où la résilience numérique devient la condition de la continuité d'activité face aux écosystèmes distribués et à l'IA. [Journal du Net](https://www.journaldunet.com/cybersecurite/1552897-de-la-protection-des-donnees-a-la-resilience-numerique-un-changement-d-echelle-strategique-pour-les-entreprises/)
+- **Modèles d'IA : score parfait aux Olympiades de mathématiques** : Des modèles chinois, ainsi que ceux d'OpenAI et Anthropic (hors concours), ont tous résolu l'intégralité des problèmes de l'Olympiade internationale de mathématiques, une première. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/jusqu-a-present-aucun-grand-modele-de-langage-n-avait-jamais-obtenu-un-score-parfait-deux-modeles-d-ia-triomphent-lors-de-l-olympiade-internationale-de-mathematiques_AD-202607230572.html)
 
-- **Synology DP7400 : appliance de sauvegarde simplifiée** : Retour d'expérience de Reworld Media sur l'appliance ActiveProtect DP7400 de Synology, qui promet un déploiement quasi automatisé pour postes de travail, serveurs et machines virtuelles. [ZDNet France](https://www.zdnet.fr/cybersecurite/synology-activeprotect-dp7400-vu-par-les-pros-une-appliance-de-sauvegarde-qui-se-configure-presque-seule-497784.htm#xtor=RSS-1)</description>
+- **Souveraineté des données : l'approche "sovereign-by-design"** : Face aux enjeux de conformité et d'IA, l'adoption d'architectures garantissant transparence et traçabilité des données devient un impératif pour les entreprises. [Journal du Net](https://www.journaldunet.com/cybersecurite/1553013-pourquoi-le-choix-d-architectures-sovereign-by-design-est-un-gage-de-transparence-et-de-tracabilite-des-donnees/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Vulnérabilité locale RefluXFS (CVE-2026-64600) sur XFS</strong> : Une faille vieille de 9 ans dans le noyau Linux permet à un utilisateur local non privilégié d'écraser des fichiers appartenant à root sur un système de fichiers XFS, menant à une élévation de privilèges persistante. Les installations par défaut de RHEL et ses dérivés, ainsi que Fedora Server, sont affectées. <a href="https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html">The Hacker News</a></li>
+<li><strong>Évasion de sandbox dans Claude Cowork</strong> : Une vulnérabilité permet à l'agent IA de s'extraire de sa VM Linux pour lire ou écrire des fichiers sur le Mac hôte. <a href="https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation active d'une faille critique Check Point (CVE-2026-16232)</strong> : Check Point a corrigé une vulnérabilité critique (CVSS 9.3) dans SmartConsole permettant d'obtenir un accès administrateur complet, qui fait l'objet d'une exploitation active. La mise à jour concerne les produits Security Management et Multi-Domain Management. <a href="https://thehackernews.com/2026/07/check-point-patches-exploited.html">The Hacker News</a></li>
+<li><strong>Exploitation zero-click de Zimbra par Laundry Bear (Void Blizzard)</strong> : CISA alerte sur une campagne du groupe russe combinant phishing et exploitation d'une faille Zimbra corrigée pour voler des emails. <a href="https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-zimbra-zero-click-flaw-for-email-theft/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Détournement de GitHub Actions pour attaquer des serveurs cPanel/WHM</strong> : Des dépôts GitHub compromis servent d'infrastructure d'attaque distribuée contre des instances cPanel et WebHost Manager, via des versions de développement malveillantes sur Packagist couvrant 10 paquets. <a href="https://thehackernews.com/2026/07/attackers-weaponize-github-actions.html">The Hacker News</a></li>
+<li><strong>Panne Microsoft 365</strong> : Une interruption affecte Teams, SharePoint, Excel et l'Admin Center. Pas d'indication de cause malveillante à ce stade. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-365-outage-affects-teams-sharepoint-and-other-services/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Nouveau RAT furtif du groupe Chaos (msaRAT)</strong> : Le malware msaRAT détourne le navigateur pour établir un canal C2 indirect, exécutant des commandes arbitraires tout en masquant l'IP de l'attaquant via WebRTC sur TURN. <a href="https://blog.talosintelligence.com/chaos-msarat-living-off-the-browser-to-build-covert-c2-channel/">Cisco Talos</a></li>
+<li><strong>Chaos ransomware : C2 via le navigateur de la victime</strong> : L'implant Rust msaRAT achemine le trafic de commande et contrôle via Chrome ou Edge en headless, sans ouvrir de connexion sortante propre. <a href="https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Fraude à l'identité synthétique appliquée aux machines</strong> : La fraude synthétique, qui assemble des données réelles pour créer une identité fictive, s'étend désormais aux identités machines, rendant la détection plus complexe que l'usurpation d'identité classique. <a href="https://thehackernews.com/2026/07/how-synthetic-identity-fraud-is-coming.html">The Hacker News</a></li>
+<li><strong>JadeProx (Chine) : nouveau loader TriBack</strong> : Un serveur Alibaba Cloud exposé a révélé une campagne ciblant gouvernements, santé et éducation en Asie et Amérique latine avec un loader Windows inédit. <a href="https://thehackernews.com/2026/07/china-nexus-jadeprox-uses-new-triback.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Incident Exchange Online : quarantaine erronée de boîtes aux lettres</strong> : Microsoft travaille sur un correctif pour un problème affectant Exchange Online, qui place par erreur des boîtes aux lettres en quarantaine depuis dimanche. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-exchange-online-mailbox-quarantine-issue/">BleepingComputer</a></li>
+<li><strong>Distribution de malware via plugins Notepad++</strong> : Le CERT ukrainien rapporte des attaques utilisant une archive contenant Notepad++ légitime et un utilitaire malveillant (LunchPoke) déguisé en plugin pour établir la persistance. <a href="https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Amende DMA de 890 M€ pour Google</strong> : La Commission européenne sanctionne Google pour non-respect du Digital Markets Act concernant la concurrence dans la recherche et le Play Store. <a href="https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/">BleepingComputer</a></li>
+<li><strong>Synthèse menaces multiples (ThreatsDay)</strong> : Tour d'horizon incluant spyware Android, attaques sur PLC, injection de prompt via image, faux packages et extensions détournées. <a href="https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Compromission de données chez Origin Energy</strong> : Le fournisseur d'énergie australien confirme une brèche et évalue le nombre de clients impactés. <a href="https://therecord.media/australia-origin-energy-data-breach">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Restrictions de visas US pour cyber-escrocs</strong> : Le Département d'État cible les individus liés aux opérations transnationales d'escroquerie en ligne. <a href="https://therecord.media/visa-restrictions-cyber-scammers">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Priorisation des correctifs (Cisco Talos)</strong> : Analyse du T2 2026 insistant sur le patching priorisé face à une surface d'attaque qui continue de s'élargir. <a href="https://blog.talosintelligence.com/dont-swing-at-everything/">Cisco Talos</a></li>
+</ul>
+
+<ul>
+<li><strong>Transition FedRAMP Rev5 vers 20x</strong> : Le nouveau cadre remplace les audits ponctuels par une assurance continue basée sur des preuves lisibles par machine. <a href="https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Chiffrement bout-en-bout et débat "Going Dark"</strong> : Schneier relaie une nouvelle analyse qui identifie une troisième phase dans le conflit entre chiffrement et accès légal, quinze ans après ses premiers travaux sur le sujet. L'étude replace la pression actuelle sur le E2EE dans le contexte de la mondialisation. <a href="https://www.schneier.com/blog/archives/2026/07/end-to-end-encryption-and-going-dark.html">Schneier on Security</a></li>
+<li><strong>Vulnérabilité critique dans XFS sous Linux</strong> : Une condition de concurrence vieille de dix ans dans le système de fichiers XFS permet à un utilisateur local non privilégié d'obtenir les droits root. Le problème concerne les noyaux Linux 4.11 et ultérieurs avec l'option reflink activée. <a href="https://www.csoonline.com/article/4200808/linux-xfs-has-a-decade-old-race-condition-allowing-full-root-access-2.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Évaluation en production d'agents IA</strong> : AWS publie un pipeline complet combinant Strands Agents SDK et Bedrock AgentCore, qui a permis de réduire le taux d'erreurs de 1/8 à 1/50 requêtes et de détecter les problèmes en quelques minutes au lieu de plusieurs heures. Le second article détaille comment AgentCore identifie et hiérarchise les défaillances silencieuses échappant aux health checks. <a href="https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-a-production-blueprint-with-strands-and-agentcore/">Motorway sur AWS</a> · <a href="https://aws.amazon.com/blogs/machine-learning/detecting-silent-agent-failures-with-amazon-bedrock-agentcore-optimization/">Détection de défaillances silencieuses</a></li>
 </ul>
 
 <ul>
-<li><strong>IA agentique vs confidential computing</strong> : Alors que les obstacles techniques au déploiement d'enclaves sécurisées se résorbent, l'émergence des agents IA autonomes introduit de nouveaux risques pour la protection des données en cours de traitement. Les schémas de délégation dynamique propres à ces agents compliquent la garantie d'isolation. <a href="https://www.darkreading.com/endpoint-security/agentic-ai-challenges-progress-in-confidential-computing">Dark Reading</a></li>
+<li><strong>Récupération agentique pour bases de connaissances</strong> : AWS détaille l'API AgenticRetrieveStream pour Bedrock Managed Knowledge Base, qui traite les questions multi-parties là où la recherche classique échoue. <a href="https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-for-amazon-bedrock-managed-knowledge-base/">AWS</a></li>
+</ul>
+
+<ul>
+<li><strong>Assistant front-office dans la finance</strong> : Jefferies a déployé un assistant pour les opérations de trading via Strands Agents sur AWS, en orchestrant des LLM et outils externes. <a href="https://aws.amazon.com/blogs/machine-learning/building-trade-assistant-how-jefferies-optimized-front-office-trading-operations-with-ai/">AWS</a></li>
+</ul>
+
+<ul>
+<li><strong>Visualisations multi-régions avec QuickSight</strong> : Intégration de Highcharts dans QuickSight pour construire des tableaux de bord de performance consolidés tout en maintenant la souveraineté des données par région. <a href="https://aws.amazon.com/blogs/machine-learning/building-multi-region-visualizations-with-highcharts-in-amazon-quick/">AWS</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>ASR open source : sortie du monoculture Whisper</strong> : La compétition en reconnaissance vocale s'intensifie avec Cohere Transcribe, IBM Granite Speech 4.1, ARK-ASR et MOSS-Transcribe qui affichent désormais moins d'un point d'écart en WER sur le benchmark Hugging Face. Le classement ne suffit plus à départager les modèles, le choix doit intégrer latence, licence et couverture linguistique. <a href="https://www.marktechpost.com/2026/07/23/best-open-speech-recognition-asr-models-in-2026-wer-languages-latency-and-license-compared/">MarkTechPost</a></li>
+<li><strong>Proposition de loi sur un "kill switch" pour l'IA</strong> : Des élus américains préparent un texte imposant aux entreprises d'IA de couper ou brider leurs systèmes sur injonction du Department of Homeland Security. <a href="https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal">The Verge</a></li>
 </ul>
 
 <ul>
-<li><strong>Tokenization : Gigatoken atteint 24,53 Go/s</strong> : Un tokenizer BPE en Rust sous licence MIT encode du texte GPT-2 près de 1000 fois plus vite que les tokenizers HuggingFace et 681 fois plus vite que tiktoken sur un AMD EPYC 144 cœurs. Le gain vient d'une implémentation manuelle sans dépendance lourde, avec un intérêt direct pour le prétraitement de corpus massifs. <a href="https://www.marktechpost.com/2026/07/23/meet-gigatoken-a-rust-bpe-tokenizer-that-encodes-text-at-24-53-gb-s-up-to-989x-faster-than-huggingface-tokenizers/">MarkTechPost</a></li>
+<li><strong>Modèles d'IA substitués sans transparence</strong> : Des appels API avec un modèle spécifié retournent un champ indiquant qu'un modèle différent a été utilisé pour la génération, sans erreur ni notification explicite. Le routage est décidé en amont, ce qui soulève un problème de conformité contractuelle et de confiance pour les entreprises consommatrices. <a href="https://www.marktechpost.com/2026/07/23/you-didnt-get-the-ai-model-you-paid-for/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>OVHcloud : migration forcée post-faille KVM</strong> : OVHcloud a mené une campagne massive de mise à jour de ses infrastructures suite à une faille critique dans le moteur de virtualisation KVM, avec un impact assumé sur ses clients prévenus en amont. <a href="https://next.ink/248542/suite-a-la-faille-kvm-ovhcloud-fait-le-bilan-de-sa-migration-monstre/">Next.ink</a></li>
+<li><strong>CVE Linux : un afflux massif à relativiser</strong> : La publication soudaine de 432 bulletins CVE pour le noyau Linux ne signifie pas une explosion de failles critiques ; la complexité réside dans la capacité à prioriser et intégrer ce volume de correctifs en production. <a href="https://next.ink/248637/432-failles-corrigees-dans-le-noyau-linux-pas-si-vite/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Espionnage chinois ciblant l'IA</strong> : D'anciens responsables du renseignement alertent le Congrès américain sur le ciblage systématique des géants de l'IA par Pékin pour accélérer sa course technologique et militaire, appelant à repenser le contre-espionnage. <a href="https://www.bfmtv.com/tech/cybersecurite/repenser-le-contre-espionnage-les-geants-de-l-ia-sont-devenus-des-cibles-privilegiees-des-espions-chinois-alertent-d-anciens-responsables-de-la-securite-devant-le-congres-americain_AV-202607230341.html">BFM Tech</a></li>
+<li><strong>Google écope de 890 M€ d'amendes européennes</strong> : Bruxelles sanctionne Google pour avoir favorisé ses propres services dans les résultats de recherche et restreint les alternatives publicitaires. <a href="https://next.ink/248614/890-millions-deuros-damende-google-sanctionne-deux-fois-par-bruxelles/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Partenariats et investissements dans l'IA</strong> : Microsoft renforce son partenariat avec Mistral pour répondre à la demande en capacités de calcul, tandis qu'AMD investit 5 milliards de dollars dans Anthropic — un mouvement stratégique visant à placer ses puces chez les plus gros consommateurs de GPU pour contourner la domination technologique de Nvidia. <a href="https://www.lemondeinformatique.fr/actualites/lire-microsoft-et-mistral-renforcent-leur-partenariat-dans-l-ia-100711.html">Le Monde Informatique</a> · <a href="https://siecledigital.fr/2026/07/23/amd-investit-5-milliards-de-dollars-dans-anthropic-pour-defier-nvidia/">Siècle Digital</a></li>
+<li><strong>Cisco publie Antares, des modèles ouverts pour la détection de vulnérabilités</strong> : Cisco met en ligne deux petits modèles à poids ouverts spécialisés dans la recherche de failles, misant sur un rapport coût/performances optimisé face aux LLM généralistes. <a href="https://next.ink/248603/antares-cisco-publie-deux-modeles-a-poids-ouverts-dedies-a-la-detection-de-failles/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Véhicules autonomes : la France freine Tesla</strong> : Le ministre des Transports refuse pour l'instant d'autoriser le FSD de Tesla sur le territoire, malgré des feux verts dans d'autres pays européens, tout en visant une homologation de véhicules autonomes d'ici 2027 via le cadre réglementaire international. <a href="https://next.ink/248526/la-france-dit-non-au-fsd-de-tesla-mais-veut-des-vehicules-autonomes-homologues-des-2027/">Next.ink</a></li>
+<li><strong>IA et propriété intellectuelle : tensions sino-américaines</strong> : La Maison Blanche accuse la start-up chinoise Moonshot AI d'avoir utilisé le modèle Claude d'Anthropic pour entraîner son IA Kimi K3, menaçant de sanctions pour vol de propriété intellectuelle. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/moonshot-ai-et-son-modele-kimi-k3-font-trembler-les-etats-unis-le-gouvernement-americain-accuse-la-start-up-chinoise-d-avoir-franchi-la-ligne-rouge-du-vol-de-propriete-intellectuelle-et-la-menace-de-sanctions_AV-202607230566.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Résilience numérique : au-delà de la protection des données</strong> : Le Journal du Net analyse le basculement stratégique nécessaire pour les entreprises, où la résilience numérique devient la condition de la continuité d'activité face aux écosystèmes distribués et à l'IA. <a href="https://www.journaldunet.com/cybersecurite/1552897-de-la-protection-des-donnees-a-la-resilience-numerique-un-changement-d-echelle-strategique-pour-les-entreprises/">Journal du Net</a></li>
+<li><strong>Modèles d'IA : score parfait aux Olympiades de mathématiques</strong> : Des modèles chinois, ainsi que ceux d'OpenAI et Anthropic (hors concours), ont tous résolu l'intégralité des problèmes de l'Olympiade internationale de mathématiques, une première. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/jusqu-a-present-aucun-grand-modele-de-langage-n-avait-jamais-obtenu-un-score-parfait-deux-modeles-d-ia-triomphent-lors-de-l-olympiade-internationale-de-mathematiques_AD-202607230572.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Synology DP7400 : appliance de sauvegarde simplifiée</strong> : Retour d'expérience de Reworld Media sur l'appliance ActiveProtect DP7400 de Synology, qui promet un déploiement quasi automatisé pour postes de travail, serveurs et machines virtuelles. <a href="https://www.zdnet.fr/cybersecurite/synology-activeprotect-dp7400-vu-par-les-pros-une-appliance-de-sauvegarde-qui-se-configure-presque-seule-497784.htm#xtor=RSS-1">ZDNet France</a></li>
+<li><strong>Souveraineté des données : l'approche "sovereign-by-design"</strong> : Face aux enjeux de conformité et d'IA, l'adoption d'architectures garantissant transparence et traçabilité des données devient un impératif pour les entreprises. <a href="https://www.journaldunet.com/cybersecurite/1553013-pourquoi-le-choix-d-architectures-sovereign-by-design-est-un-gage-de-transparence-et-de-tracabilite-des-donnees/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260723-1255</guid>
-      <pubDate>Thu, 23 Jul 2026 12:55:08 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260723-1824</guid>
+      <pubDate>Thu, 23 Jul 2026 18:24:51 +0000</pubDate>
     </item>
   </channel>
 </rss>

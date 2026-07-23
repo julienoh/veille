@@ -102,3 +102,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-22 08:33 UTC | scoring | Budgeted Indirect Adversarial Attack on Graph-Based Anomaly  (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-07-22 08:42 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 68 column 6 (char 2746)) |
 | 2026-07-23 12:46 UTC | scoring | Remember Jibo? Its Successor Is a Wearable That Turns Your L (Wired — AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-23 18:20 UTC | scoring | Consommation des datacenters : de très grandes disparités ch (Next.ink) | Rate limit fournisseur LLM atteint |
