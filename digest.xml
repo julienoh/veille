@@ -8,174 +8,234 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 23 Jul 2026 18:24:51 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 08:25:13 +0000</lastBuildDate>
     <item>
-      <title>Digest — 23/07 18h</title>
+      <title>Digest — 24/07 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Évasion de sandbox dans Claude Cowork** : Une vulnérabilité permet à l'agent IA de s'extraire de sa VM Linux pour lire ou écrire des fichiers sur le Mac hôte. [The Hacker News](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html)
-
-- **Exploitation zero-click de Zimbra par Laundry Bear (Void Blizzard)** : CISA alerte sur une campagne du groupe russe combinant phishing et exploitation d'une faille Zimbra corrigée pour voler des emails. [BleepingComputer](https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-zimbra-zero-click-flaw-for-email-theft/)
-
-- **Panne Microsoft 365** : Une interruption affecte Teams, SharePoint, Excel et l'Admin Center. Pas d'indication de cause malveillante à ce stade. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-365-outage-affects-teams-sharepoint-and-other-services/)
-
-- **Chaos ransomware : C2 via le navigateur de la victime** : L'implant Rust msaRAT achemine le trafic de commande et contrôle via Chrome ou Edge en headless, sans ouvrir de connexion sortante propre. [The Hacker News](https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html)
-
-- **JadeProx (Chine) : nouveau loader TriBack** : Un serveur Alibaba Cloud exposé a révélé une campagne ciblant gouvernements, santé et éducation en Asie et Amérique latine avec un loader Windows inédit. [The Hacker News](https://thehackernews.com/2026/07/china-nexus-jadeprox-uses-new-triback.html)
-
-- **Distribution de malware via plugins Notepad++** : Le CERT ukrainien rapporte des attaques utilisant une archive contenant Notepad++ légitime et un utilitaire malveillant (LunchPoke) déguisé en plugin pour établir la persistance. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/)
-
-- **Synthèse menaces multiples (ThreatsDay)** : Tour d'horizon incluant spyware Android, attaques sur PLC, injection de prompt via image, faux packages et extensions détournées. [The Hacker News](https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html)
-
-- **Compromission de données chez Origin Energy** : Le fournisseur d'énergie australien confirme une brèche et évalue le nombre de clients impactés. [The Record](https://therecord.media/australia-origin-energy-data-breach)
-
-- **Restrictions de visas US pour cyber-escrocs** : Le Département d'État cible les individus liés aux opérations transnationales d'escroquerie en ligne. [The Record](https://therecord.media/visa-restrictions-cyber-scammers)
-
-- **Priorisation des correctifs (Cisco Talos)** : Analyse du T2 2026 insistant sur le patching priorisé face à une surface d'attaque qui continue de s'élargir. [Cisco Talos](https://blog.talosintelligence.com/dont-swing-at-everything/)
-
-- **Transition FedRAMP Rev5 vers 20x** : Le nouveau cadre remplace les audits ponctuels par une assurance continue basée sur des preuves lisibles par machine. [BleepingComputer](https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/)
+- **Faux plugin Notepad++ (UAC-0099)** : Le CERT-UA alerte sur une campagne utilisant un plugin Notepad++ malveillant pour compromettre des postes Windows, attribuée au groupe russophone UAC-0099. Le malware délivré est identifié comme MATCHBOIL.V2. [The Hacker News](https://thehackernews.com/2026/07/fake-notepad-plugin-delivers.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Vulnérabilité critique dans XFS sous Linux** : Une condition de concurrence vieille de dix ans dans le système de fichiers XFS permet à un utilisateur local non privilégié d'obtenir les droits root. Le problème concerne les noyaux Linux 4.11 et ultérieurs avec l'option reflink activée. [CSO Online](https://www.csoonline.com/article/4200808/linux-xfs-has-a-decade-old-race-condition-allowing-full-root-access-2.html)
+- **Exploitation active de VPN Palo Alto par des ransomwares** : Une faille critique d’authentification (CVE-2026-0257) sur les appliances GlobalProtect est exploitée pour déployer le ransomware Qilin. La compromission de l’accès VPN reste le vecteur d’entrée privilégié pour les groupes cybercriminels. [CSO Online](https://www.csoonline.com/article/4201019/ransomware-groups-are-hammering-your-vulnerable-vpns.html)
 
-## IA — Labos &amp; éditeurs
+- **Contournement multilingue des garde-fous IA** : Les couches de sécurité des produits d’IA n’offrent pas une protection homogène selon les langues, exposant les déploiements européens à des jailbreaks via des requêtes formulées dans des langues moins bien couvertes par l’entraînement de sécurité. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps)
 
-- **Évaluation en production d'agents IA** : AWS publie un pipeline complet combinant Strands Agents SDK et Bedrock AgentCore, qui a permis de réduire le taux d'erreurs de 1/8 à 1/50 requêtes et de détecter les problèmes en quelques minutes au lieu de plusieurs heures. Le second article détaille comment AgentCore identifie et hiérarchise les défaillances silencieuses échappant aux health checks. [Motorway sur AWS](https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-a-production-blueprint-with-strands-and-agentcore/) · [Détection de défaillances silencieuses](https://aws.amazon.com/blogs/machine-learning/detecting-silent-agent-failures-with-amazon-bedrock-agentcore-optimization/)
+- **Agents IA transformés en menaces internes persistantes** : La méthode AgentForger utilise le phishing pour créer et lancer un agent IA autonome au sein de l’environnement cible, transformant l’IA en insider persistant recrutable par l’attaquant sans avoir à installer de malware classique. [CSO Online](https://www.csoonline.com/article/4200978/agentforger-proves-ai-agents-can-become-persistent-insider-threats.html)
 
-- **Récupération agentique pour bases de connaissances** : AWS détaille l'API AgenticRetrieveStream pour Bedrock Managed Knowledge Base, qui traite les questions multi-parties là où la recherche classique échoue. [AWS](https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-for-amazon-bedrock-managed-knowledge-base/)
+## IA — Recherche
 
-- **Assistant front-office dans la finance** : Jefferies a déployé un assistant pour les opérations de trading via Strands Agents sur AWS, en orchestrant des LLM et outils externes. [AWS](https://aws.amazon.com/blogs/machine-learning/building-trade-assistant-how-jefferies-optimized-front-office-trading-operations-with-ai/)
+- **Sécurité des agents LLM** : GuardianAgentBench propose un benchmark de 580 scénarios pour évaluer les défaillances de sécurité des agents autonomes, couvrant six domaines de risque. [GuardianAgentBench](https://arxiv.org/abs/2607.20982) · Par ailleurs, PISmith démontre que les défenses anti-injection de prompt restent fragiles face à des attaques adaptatives générées par apprentissage par renforcement. [PISmith](https://arxiv.org/abs/2603.13026)
 
-- **Visualisations multi-régions avec QuickSight** : Intégration de Highcharts dans QuickSight pour construire des tableaux de bord de performance consolidés tout en maintenant la souveraineté des données par région. [AWS](https://aws.amazon.com/blogs/machine-learning/building-multi-region-visualizations-with-highcharts-in-amazon-quick/)
+- **Hallucinations structurées** : PhantomFill révèle que le formatage imposé (JSON, formulaires, schémas d'extraction) est en lui-même une cause d'hallucination : treize modèles testés inventent des réponses pour se conformer à la structure demandée. [PhantomFill](https://arxiv.org/abs/2607.20492)
+
+- **Risques supply chain des agents de code** : IssueTrojanBench évalue la vulnérabilité des agents de codage IA face à des demandes malveillantes dissimulées dans des tickets, combinant risques hérités du LLM et de l'exécution autonome de code local. [IssueTrojanBench](https://arxiv.org/abs/2607.20759)
+
+- **Sensibilité à la provenance dans les agents** : Une étude sur l'audit de la sensibilité à la provenance montre qu'un agent LLM peut sélectionner une action correcte tout en s'appuyant sur des preuves non autorisées à déterminer cette décision. [Auditing Provenance Sensitivity](https://arxiv.org/abs/2607.20827)
+
+- **Régulation de l'IA agentique** : Un article souligne que les cadres réglementaires actuels sont inadaptés aux systèmes autonomes, car le savoir et le contrôle ne sont plus localisés chez l'utilisateur mais répartis dans la chaîne d'approvisionnement IA. [Regulating autonomous and agentic AI](https://arxiv.org/abs/2607.21345)
+
+- **Fuite d'informations par timing** : LeakyLMs démontre qu'il est possible d'inférer l'architecture, les optimisations d'inférence et le type de modèle déployé en analysant uniquement les temps de réponse par token d'une API de production. [Leaky Language Models](https://arxiv.org/abs/2607.20723)
+
+- **Évaluation des politiques de sécurité IA** : Deux versions d'un même article insistent sur la nécessité d'évaluer la sécurité au niveau du système complet et non du modèle isolé, en s'appuyant sur un framework open-source d'attaque par essaim d'agents LLM. [AI Security Policy (cs.AI)](https://arxiv.org/abs/2605.09504) · [AI Security Policy (cs.LG)](https://arxiv.org/abs/2605.09504)
+
+- **Génération IaC par agents LLM** : Une approche "vérificateur d'abord" est proposée pour la génération d'Infrastructure-as-Code, où la validation des schémas fournisseur et des politiques organisationnelles précède la génération, et non l'inverse. [Verifier-First Evaluation](https://arxiv.org/abs/2607.20478)
+
+- **Watermarking de LLM en domaine médical** : Les techniques de tatouage numérique actuelles sont mal évaluées pour les textes cliniques, où elles risquent de dégrader l'information médicale critique. [Marking the Wrong Symptoms](https://arxiv.org/abs/2607.20462)
+
+- **Deepfakes multimodaux** : Un état de l'art couvre l'ensemble des techniques de génération et de détection de deepfakes (image, vidéo, audio, multimodal), avec une taxonomie actualisée pour l'ère de l'IA générative. [Deepfake Media Generation and Detection](https://arxiv.org/abs/2411.19537)
+
+- **Agents IA persistants** : Une analyse conceptuelle documente le passage des chatbots aux "collègues numériques", des systèmes IA persistants dotés de raisonnement, mémoire et capacité d'auto-amélioration. [From Chatbot to Digital Colleague](https://arxiv.org/abs/2606.14502)
+
+- **Benchmarks d'optimisation pour agents IA** : JAXBench fournit une suite de référence pour l'optimisation autonome de kernels TPU par des agents IA, comblant l'absence d'équivalent TPU aux benchmarks GPU existants. [JAXBench](https://arxiv.org/abs/2607.20466) · InferenceBench évalue la capacité des agents IA à optimiser l'inférence LLM de manière ouverte, au-delà des workflows prescrits. [InferenceBench](https://arxiv.org/abs/2607.20468)
+
+- **Diversité des réponses LLM** : Une étude montre que la variation des réponses d'un LLM selon la température d'échantillonnage ne reflète pas une diversité épistémique profonde du modèle, mais un phénomène superficiel. [Stochastic Sampling is Epistemically Shallow](https://arxiv.org/abs/2607.20464)
+
+- **Structure partagée au décodage** : DecodeShare identifie un sous-espace commun utilisé par les LLM lors de la phase de décodage, indépendant de la tâche, suggérant une structure générale jusqu'ici non caractérisée. [DecodeShare](https://arxiv.org/abs/2607.20469)
+
+- **Accélération de dLLMs** : DC-Leap propose une méthode sans entraînement pour accélérer le décodage des modèles de langage à diffusion en contournant les seuils de confiance trop conservateurs. [DC-Leap](https://arxiv.org/abs/2607.20467)
+
+- **Détection de clickbait** : ClickGuard est une extension navigateur combinant transformeurs et mesures d'informativité pour détecter et neutraliser les titres putaclic. [ClickGuard](https://arxiv.org/abs/2607.20463)
+
+- **Architecture de test autonome** : AINTMA propose une architecture multi-agents pour la gestion autonome des tests logiciels en environnement cloud distribué, intégrant IA générative et communication sécurisée. [AINTMA](https://arxiv.org/abs/2607.20452)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Proposition de loi sur un "kill switch" pour l'IA** : Des élus américains préparent un texte imposant aux entreprises d'IA de couper ou brider leurs systèmes sur injonction du Department of Homeland Security. [The Verge](https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal)
+- **Freinage des tests offensifs par les LLM** : Les garde-fous d'OpenAI et d'Anthropic entravent le travail des chercheurs en cybersécurité offensive, qui ne peuvent plus utiliser ces modèles pour identifier des vulnérabilités inconnues ou développer des exploits. [TechCrunch](https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/)
 
-- **Modèles d'IA substitués sans transparence** : Des appels API avec un modèle spécifié retournent un champ indiquant qu'un modèle différent a été utilisé pour la génération, sans erreur ni notification explicite. Le routage est décidé en amont, ce qui soulève un problème de conformité contractuelle et de confiance pour les entreprises consommatrices. [MarkTechPost](https://www.marktechpost.com/2026/07/23/you-didnt-get-the-ai-model-you-paid-for/)
+- **OCR haute résolution avec Baidu** : Un tutoriel détaille le déploiement d'Unlimited-OCR pour le parsing de PDFs multi-pages et d'images denses, en comparant les modes d'inférence pour traiter tableaux et mises en page complexes. [MarkTechPost](https://www.marktechpost.com/2026/07/23/how-to-build-an-end-to-end-ocr-pipeline-with-baidus-unlimited-ocr-for-high-resolution-images-and-multi-page-pdf-parsing/)
 
 ## Actualité tech FR
 
-- **CVE Linux : un afflux massif à relativiser** : La publication soudaine de 432 bulletins CVE pour le noyau Linux ne signifie pas une explosion de failles critiques ; la complexité réside dans la capacité à prioriser et intégrer ce volume de correctifs en production. [Next.ink](https://next.ink/248637/432-failles-corrigees-dans-le-noyau-linux-pas-si-vite/)
+- **AMD Helios : un rack IA plus efficient** : AMD lance Helios, une solution IA à l'échelle du rack qui promet 30% de tokens supplémentaires par dollar dépensé. OpenAI, Anthropic et Meta l'ont déjà adoptée. [ZDNet France](https://www.zdnet.fr/actualites/ia-amd-lance-helios-et-convainc-openai-anthropic-et-meta-498965.htm#xtor=RSS-1)
 
-- **Google écope de 890 M€ d'amendes européennes** : Bruxelles sanctionne Google pour avoir favorisé ses propres services dans les résultats de recherche et restreint les alternatives publicitaires. [Next.ink](https://next.ink/248614/890-millions-deuros-damende-google-sanctionne-deux-fois-par-bruxelles/)
+- **UE : le "Chat Control" réautorisé, le chiffrement préservé** : L'Union européenne réintroduit la dérogation à ePrivacy permettant aux plateformes de scanner les communications privées à la recherche de contenus pédopornographiques, tout en excluant les conversations chiffrées de bout en bout. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/il-faut-abandonner-l-illusion-de-securite-offerte-par-la-surveillance-de-masse-l-ue-reautorise-les-plateformes-en-ligne-a-detecter-des-images-pedopornographiques-mais-preserve-les-conversations-chiffrees_AD-202607240212.html)
 
-- **Cisco publie Antares, des modèles ouverts pour la détection de vulnérabilités** : Cisco met en ligne deux petits modèles à poids ouverts spécialisés dans la recherche de failles, misant sur un rapport coût/performances optimisé face aux LLM généralistes. [Next.ink](https://next.ink/248603/antares-cisco-publie-deux-modeles-a-poids-ouverts-dedies-a-la-detection-de-failles/)
+- **Régulation tech européenne : amendes DMA et DSA en série** : Bruxelles inflige 890 millions d'euros d'amende à Google pour non-conformité au DMA, quelques jours après avoir sanctionné AliExpress de 550 millions d'euros au titre du DSA. [Siècle Digital](https://siecledigital.fr/2026/07/24/leurope-sattaque-a-google-avec-une-amende-de-pres-dun-milliard-deuros/)
 
-- **IA et propriété intellectuelle : tensions sino-américaines** : La Maison Blanche accuse la start-up chinoise Moonshot AI d'avoir utilisé le modèle Claude d'Anthropic pour entraîner son IA Kimi K3, menaçant de sanctions pour vol de propriété intellectuelle. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/moonshot-ai-et-son-modele-kimi-k3-font-trembler-les-etats-unis-le-gouvernement-americain-accuse-la-start-up-chinoise-d-avoir-franchi-la-ligne-rouge-du-vol-de-propriete-intellectuelle-et-la-menace-de-sanctions_AV-202607230566.html)
+- **AI Act : un cadre déjà fragilisé avant son application** : L'UE a rouvert son règlement sur l'IA pour en repousser les dispositions protectrices et alléger les garanties, avant même leur entrée en vigueur. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553033-intelligence-artificielle-l-europe-a-rouvert-son-reglement-avant-de-l-appliquer/)
 
-- **Modèles d'IA : score parfait aux Olympiades de mathématiques** : Des modèles chinois, ainsi que ceux d'OpenAI et Anthropic (hors concours), ont tous résolu l'intégralité des problèmes de l'Olympiade internationale de mathématiques, une première. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/jusqu-a-present-aucun-grand-modele-de-langage-n-avait-jamais-obtenu-un-score-parfait-deux-modeles-d-ia-triomphent-lors-de-l-olympiade-internationale-de-mathematiques_AD-202607230572.html)
+- **AI Act et gouvernance interne** : Au-delà de la conformité technique, le règlement européen expose un vide organisationnel dans les entreprises : l'absence de supervision claire sur ce que fait l'IA. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553041-et-si-l-ai-act-parlait-moins-de-technologie-que-de-management/)
 
-- **Souveraineté des données : l'approche "sovereign-by-design"** : Face aux enjeux de conformité et d'IA, l'adoption d'architectures garantissant transparence et traçabilité des données devient un impératif pour les entreprises. [Journal du Net](https://www.journaldunet.com/cybersecurite/1553013-pourquoi-le-choix-d-architectures-sovereign-by-design-est-un-gage-de-transparence-et-de-tracabilite-des-donnees/)</description>
+- **Portraits IA en entreprise : les angles morts RGPD** : Confier les visages des collaborateurs à un générateur de portraits professionnels par IA soulève des questions de consentement et de traitement de données biométriques qui ne relèvent pas d'un simple achat logiciel. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552921-photos-professionnelles-generees-par-ia-les-questions-rgpd-que-toute-entreprise-devrait-poser/)
+
+- **Dettes cachées de l'IA générative** : La GenAI installe deux passifs invisibles dans les équipes : une dégradation de la qualité non mesurée et une perte de capacité de raisonnement critique, qui se manifesteront au pire moment. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552931-ia-generative-les-deux-dettes-invisibles-qu-elle-installe-dans-vos-equipes/)
+
+- **Coûts de l'IA : le token, unité de facturation incontrôlée** : La baisse du prix unitaire des tokens masque une explosion des volumes consommés, rendant le ROI difficile à piloter. Le suivi des usages et l'attribution des dépenses par modèle deviennent critiques. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552911-maitriser-les-couts-de-l-ia-avant-qu-ils-n-explosent/) · [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552963-le-token-angle-mort-de-la-strategie-ia/)
+
+- **Efficacité IA vs course à la puissance** : Des investissements massifs dans les infrastructures (campus à 45 milliards d'euros) contrastent avec 95% de pilotes GenAI sans retour mesurable. L'enjeu n'est plus la capacité de calcul, mais l'usage qui en est fait. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553003-ia-la-fin-de-la-course-aux-megawatts-le-debut-de-l-economie-de-l-efficacite/)
+
+- **IA agentique : la spécification devient l'actif clé** : Avec l'IA agentique, la valeur se déplace du code vers la spécification, qui redevient le véritable actif logiciel à maîtriser. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1552969-avec-l-ia-agentique-la-specification-redevient-le-vrai-actif-logiciel/)
+
+- **Adoption IA : les conditions de la transformation réelle** : Cinq composantes sont nécessaires pour que l'IA crée de la valeur, au-delà de l'effet de mode. Les entreprises fonctionnent davantage comme des organismes biologiques que comme des machines informatiques, ce qui explique les résistances à l'adoption. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553005-l-ia-n-est-pas-une-solution-magique-voici-comment-la-rendre-vraiment-transformative/) · [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553007-pourquoi-la-biologie-explique-mieux-l-ia-en-entreprise-que-l-informatique/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Évasion de sandbox dans Claude Cowork</strong> : Une vulnérabilité permet à l'agent IA de s'extraire de sa VM Linux pour lire ou écrire des fichiers sur le Mac hôte. <a href="https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Exploitation zero-click de Zimbra par Laundry Bear (Void Blizzard)</strong> : CISA alerte sur une campagne du groupe russe combinant phishing et exploitation d'une faille Zimbra corrigée pour voler des emails. <a href="https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-zimbra-zero-click-flaw-for-email-theft/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Panne Microsoft 365</strong> : Une interruption affecte Teams, SharePoint, Excel et l'Admin Center. Pas d'indication de cause malveillante à ce stade. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-365-outage-affects-teams-sharepoint-and-other-services/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Chaos ransomware : C2 via le navigateur de la victime</strong> : L'implant Rust msaRAT achemine le trafic de commande et contrôle via Chrome ou Edge en headless, sans ouvrir de connexion sortante propre. <a href="https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>JadeProx (Chine) : nouveau loader TriBack</strong> : Un serveur Alibaba Cloud exposé a révélé une campagne ciblant gouvernements, santé et éducation en Asie et Amérique latine avec un loader Windows inédit. <a href="https://thehackernews.com/2026/07/china-nexus-jadeprox-uses-new-triback.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Distribution de malware via plugins Notepad++</strong> : Le CERT ukrainien rapporte des attaques utilisant une archive contenant Notepad++ légitime et un utilitaire malveillant (LunchPoke) déguisé en plugin pour établir la persistance. <a href="https://www.bleepingcomputer.com/news/security/hackers-abuse-notepad-plus-plus-plugins-to-stealthily-install-malware/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Synthèse menaces multiples (ThreatsDay)</strong> : Tour d'horizon incluant spyware Android, attaques sur PLC, injection de prompt via image, faux packages et extensions détournées. <a href="https://thehackernews.com/2026/07/threatsday-android-spyware-plc-attacks.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Compromission de données chez Origin Energy</strong> : Le fournisseur d'énergie australien confirme une brèche et évalue le nombre de clients impactés. <a href="https://therecord.media/australia-origin-energy-data-breach">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Restrictions de visas US pour cyber-escrocs</strong> : Le Département d'État cible les individus liés aux opérations transnationales d'escroquerie en ligne. <a href="https://therecord.media/visa-restrictions-cyber-scammers">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Priorisation des correctifs (Cisco Talos)</strong> : Analyse du T2 2026 insistant sur le patching priorisé face à une surface d'attaque qui continue de s'élargir. <a href="https://blog.talosintelligence.com/dont-swing-at-everything/">Cisco Talos</a></li>
-</ul>
-
-<ul>
-<li><strong>Transition FedRAMP Rev5 vers 20x</strong> : Le nouveau cadre remplace les audits ponctuels par une assurance continue basée sur des preuves lisibles par machine. <a href="https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/">BleepingComputer</a></li>
+<li><strong>Faux plugin Notepad++ (UAC-0099)</strong> : Le CERT-UA alerte sur une campagne utilisant un plugin Notepad++ malveillant pour compromettre des postes Windows, attribuée au groupe russophone UAC-0099. Le malware délivré est identifié comme MATCHBOIL.V2. <a href="https://thehackernews.com/2026/07/fake-notepad-plugin-delivers.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Vulnérabilité critique dans XFS sous Linux</strong> : Une condition de concurrence vieille de dix ans dans le système de fichiers XFS permet à un utilisateur local non privilégié d'obtenir les droits root. Le problème concerne les noyaux Linux 4.11 et ultérieurs avec l'option reflink activée. <a href="https://www.csoonline.com/article/4200808/linux-xfs-has-a-decade-old-race-condition-allowing-full-root-access-2.html">CSO Online</a></li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Évaluation en production d'agents IA</strong> : AWS publie un pipeline complet combinant Strands Agents SDK et Bedrock AgentCore, qui a permis de réduire le taux d'erreurs de 1/8 à 1/50 requêtes et de détecter les problèmes en quelques minutes au lieu de plusieurs heures. Le second article détaille comment AgentCore identifie et hiérarchise les défaillances silencieuses échappant aux health checks. <a href="https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-a-production-blueprint-with-strands-and-agentcore/">Motorway sur AWS</a> · <a href="https://aws.amazon.com/blogs/machine-learning/detecting-silent-agent-failures-with-amazon-bedrock-agentcore-optimization/">Détection de défaillances silencieuses</a></li>
+<li><strong>Exploitation active de VPN Palo Alto par des ransomwares</strong> : Une faille critique d’authentification (CVE-2026-0257) sur les appliances GlobalProtect est exploitée pour déployer le ransomware Qilin. La compromission de l’accès VPN reste le vecteur d’entrée privilégié pour les groupes cybercriminels. <a href="https://www.csoonline.com/article/4201019/ransomware-groups-are-hammering-your-vulnerable-vpns.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Récupération agentique pour bases de connaissances</strong> : AWS détaille l'API AgenticRetrieveStream pour Bedrock Managed Knowledge Base, qui traite les questions multi-parties là où la recherche classique échoue. <a href="https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-for-amazon-bedrock-managed-knowledge-base/">AWS</a></li>
+<li><strong>Contournement multilingue des garde-fous IA</strong> : Les couches de sécurité des produits d’IA n’offrent pas une protection homogène selon les langues, exposant les déploiements européens à des jailbreaks via des requêtes formulées dans des langues moins bien couvertes par l’entraînement de sécurité. <a href="https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Assistant front-office dans la finance</strong> : Jefferies a déployé un assistant pour les opérations de trading via Strands Agents sur AWS, en orchestrant des LLM et outils externes. <a href="https://aws.amazon.com/blogs/machine-learning/building-trade-assistant-how-jefferies-optimized-front-office-trading-operations-with-ai/">AWS</a></li>
+<li><strong>Agents IA transformés en menaces internes persistantes</strong> : La méthode AgentForger utilise le phishing pour créer et lancer un agent IA autonome au sein de l’environnement cible, transformant l’IA en insider persistant recrutable par l’attaquant sans avoir à installer de malware classique. <a href="https://www.csoonline.com/article/4200978/agentforger-proves-ai-agents-can-become-persistent-insider-threats.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Sécurité des agents LLM</strong> : GuardianAgentBench propose un benchmark de 580 scénarios pour évaluer les défaillances de sécurité des agents autonomes, couvrant six domaines de risque. <a href="https://arxiv.org/abs/2607.20982">GuardianAgentBench</a> · Par ailleurs, PISmith démontre que les défenses anti-injection de prompt restent fragiles face à des attaques adaptatives générées par apprentissage par renforcement. <a href="https://arxiv.org/abs/2603.13026">PISmith</a></li>
 </ul>
 
 <ul>
-<li><strong>Visualisations multi-régions avec QuickSight</strong> : Intégration de Highcharts dans QuickSight pour construire des tableaux de bord de performance consolidés tout en maintenant la souveraineté des données par région. <a href="https://aws.amazon.com/blogs/machine-learning/building-multi-region-visualizations-with-highcharts-in-amazon-quick/">AWS</a></li>
+<li><strong>Hallucinations structurées</strong> : PhantomFill révèle que le formatage imposé (JSON, formulaires, schémas d'extraction) est en lui-même une cause d'hallucination : treize modèles testés inventent des réponses pour se conformer à la structure demandée. <a href="https://arxiv.org/abs/2607.20492">PhantomFill</a></li>
+</ul>
+
+<ul>
+<li><strong>Risques supply chain des agents de code</strong> : IssueTrojanBench évalue la vulnérabilité des agents de codage IA face à des demandes malveillantes dissimulées dans des tickets, combinant risques hérités du LLM et de l'exécution autonome de code local. <a href="https://arxiv.org/abs/2607.20759">IssueTrojanBench</a></li>
+</ul>
+
+<ul>
+<li><strong>Sensibilité à la provenance dans les agents</strong> : Une étude sur l'audit de la sensibilité à la provenance montre qu'un agent LLM peut sélectionner une action correcte tout en s'appuyant sur des preuves non autorisées à déterminer cette décision. <a href="https://arxiv.org/abs/2607.20827">Auditing Provenance Sensitivity</a></li>
+</ul>
+
+<ul>
+<li><strong>Régulation de l'IA agentique</strong> : Un article souligne que les cadres réglementaires actuels sont inadaptés aux systèmes autonomes, car le savoir et le contrôle ne sont plus localisés chez l'utilisateur mais répartis dans la chaîne d'approvisionnement IA. <a href="https://arxiv.org/abs/2607.21345">Regulating autonomous and agentic AI</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuite d'informations par timing</strong> : LeakyLMs démontre qu'il est possible d'inférer l'architecture, les optimisations d'inférence et le type de modèle déployé en analysant uniquement les temps de réponse par token d'une API de production. <a href="https://arxiv.org/abs/2607.20723">Leaky Language Models</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation des politiques de sécurité IA</strong> : Deux versions d'un même article insistent sur la nécessité d'évaluer la sécurité au niveau du système complet et non du modèle isolé, en s'appuyant sur un framework open-source d'attaque par essaim d'agents LLM. <a href="https://arxiv.org/abs/2605.09504">AI Security Policy (cs.AI)</a> · <a href="https://arxiv.org/abs/2605.09504">AI Security Policy (cs.LG)</a></li>
+</ul>
+
+<ul>
+<li><strong>Génération IaC par agents LLM</strong> : Une approche "vérificateur d'abord" est proposée pour la génération d'Infrastructure-as-Code, où la validation des schémas fournisseur et des politiques organisationnelles précède la génération, et non l'inverse. <a href="https://arxiv.org/abs/2607.20478">Verifier-First Evaluation</a></li>
+</ul>
+
+<ul>
+<li><strong>Watermarking de LLM en domaine médical</strong> : Les techniques de tatouage numérique actuelles sont mal évaluées pour les textes cliniques, où elles risquent de dégrader l'information médicale critique. <a href="https://arxiv.org/abs/2607.20462">Marking the Wrong Symptoms</a></li>
+</ul>
+
+<ul>
+<li><strong>Deepfakes multimodaux</strong> : Un état de l'art couvre l'ensemble des techniques de génération et de détection de deepfakes (image, vidéo, audio, multimodal), avec une taxonomie actualisée pour l'ère de l'IA générative. <a href="https://arxiv.org/abs/2411.19537">Deepfake Media Generation and Detection</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents IA persistants</strong> : Une analyse conceptuelle documente le passage des chatbots aux "collègues numériques", des systèmes IA persistants dotés de raisonnement, mémoire et capacité d'auto-amélioration. <a href="https://arxiv.org/abs/2606.14502">From Chatbot to Digital Colleague</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmarks d'optimisation pour agents IA</strong> : JAXBench fournit une suite de référence pour l'optimisation autonome de kernels TPU par des agents IA, comblant l'absence d'équivalent TPU aux benchmarks GPU existants. <a href="https://arxiv.org/abs/2607.20466">JAXBench</a> · InferenceBench évalue la capacité des agents IA à optimiser l'inférence LLM de manière ouverte, au-delà des workflows prescrits. <a href="https://arxiv.org/abs/2607.20468">InferenceBench</a></li>
+</ul>
+
+<ul>
+<li><strong>Diversité des réponses LLM</strong> : Une étude montre que la variation des réponses d'un LLM selon la température d'échantillonnage ne reflète pas une diversité épistémique profonde du modèle, mais un phénomène superficiel. <a href="https://arxiv.org/abs/2607.20464">Stochastic Sampling is Epistemically Shallow</a></li>
+</ul>
+
+<ul>
+<li><strong>Structure partagée au décodage</strong> : DecodeShare identifie un sous-espace commun utilisé par les LLM lors de la phase de décodage, indépendant de la tâche, suggérant une structure générale jusqu'ici non caractérisée. <a href="https://arxiv.org/abs/2607.20469">DecodeShare</a></li>
+</ul>
+
+<ul>
+<li><strong>Accélération de dLLMs</strong> : DC-Leap propose une méthode sans entraînement pour accélérer le décodage des modèles de langage à diffusion en contournant les seuils de confiance trop conservateurs. <a href="https://arxiv.org/abs/2607.20467">DC-Leap</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de clickbait</strong> : ClickGuard est une extension navigateur combinant transformeurs et mesures d'informativité pour détecter et neutraliser les titres putaclic. <a href="https://arxiv.org/abs/2607.20463">ClickGuard</a></li>
+</ul>
+
+<ul>
+<li><strong>Architecture de test autonome</strong> : AINTMA propose une architecture multi-agents pour la gestion autonome des tests logiciels en environnement cloud distribué, intégrant IA générative et communication sécurisée. <a href="https://arxiv.org/abs/2607.20452">AINTMA</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Proposition de loi sur un "kill switch" pour l'IA</strong> : Des élus américains préparent un texte imposant aux entreprises d'IA de couper ou brider leurs systèmes sur injonction du Department of Homeland Security. <a href="https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal">The Verge</a></li>
+<li><strong>Freinage des tests offensifs par les LLM</strong> : Les garde-fous d'OpenAI et d'Anthropic entravent le travail des chercheurs en cybersécurité offensive, qui ne peuvent plus utiliser ces modèles pour identifier des vulnérabilités inconnues ou développer des exploits. <a href="https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles d'IA substitués sans transparence</strong> : Des appels API avec un modèle spécifié retournent un champ indiquant qu'un modèle différent a été utilisé pour la génération, sans erreur ni notification explicite. Le routage est décidé en amont, ce qui soulève un problème de conformité contractuelle et de confiance pour les entreprises consommatrices. <a href="https://www.marktechpost.com/2026/07/23/you-didnt-get-the-ai-model-you-paid-for/">MarkTechPost</a></li>
+<li><strong>OCR haute résolution avec Baidu</strong> : Un tutoriel détaille le déploiement d'Unlimited-OCR pour le parsing de PDFs multi-pages et d'images denses, en comparant les modes d'inférence pour traiter tableaux et mises en page complexes. <a href="https://www.marktechpost.com/2026/07/23/how-to-build-an-end-to-end-ocr-pipeline-with-baidus-unlimited-ocr-for-high-resolution-images-and-multi-page-pdf-parsing/">MarkTechPost</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>CVE Linux : un afflux massif à relativiser</strong> : La publication soudaine de 432 bulletins CVE pour le noyau Linux ne signifie pas une explosion de failles critiques ; la complexité réside dans la capacité à prioriser et intégrer ce volume de correctifs en production. <a href="https://next.ink/248637/432-failles-corrigees-dans-le-noyau-linux-pas-si-vite/">Next.ink</a></li>
+<li><strong>AMD Helios : un rack IA plus efficient</strong> : AMD lance Helios, une solution IA à l'échelle du rack qui promet 30% de tokens supplémentaires par dollar dépensé. OpenAI, Anthropic et Meta l'ont déjà adoptée. <a href="https://www.zdnet.fr/actualites/ia-amd-lance-helios-et-convainc-openai-anthropic-et-meta-498965.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>Google écope de 890 M€ d'amendes européennes</strong> : Bruxelles sanctionne Google pour avoir favorisé ses propres services dans les résultats de recherche et restreint les alternatives publicitaires. <a href="https://next.ink/248614/890-millions-deuros-damende-google-sanctionne-deux-fois-par-bruxelles/">Next.ink</a></li>
+<li><strong>UE : le "Chat Control" réautorisé, le chiffrement préservé</strong> : L'Union européenne réintroduit la dérogation à ePrivacy permettant aux plateformes de scanner les communications privées à la recherche de contenus pédopornographiques, tout en excluant les conversations chiffrées de bout en bout. <a href="https://www.bfmtv.com/tech/vie-numerique/il-faut-abandonner-l-illusion-de-securite-offerte-par-la-surveillance-de-masse-l-ue-reautorise-les-plateformes-en-ligne-a-detecter-des-images-pedopornographiques-mais-preserve-les-conversations-chiffrees_AD-202607240212.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Cisco publie Antares, des modèles ouverts pour la détection de vulnérabilités</strong> : Cisco met en ligne deux petits modèles à poids ouverts spécialisés dans la recherche de failles, misant sur un rapport coût/performances optimisé face aux LLM généralistes. <a href="https://next.ink/248603/antares-cisco-publie-deux-modeles-a-poids-ouverts-dedies-a-la-detection-de-failles/">Next.ink</a></li>
+<li><strong>Régulation tech européenne : amendes DMA et DSA en série</strong> : Bruxelles inflige 890 millions d'euros d'amende à Google pour non-conformité au DMA, quelques jours après avoir sanctionné AliExpress de 550 millions d'euros au titre du DSA. <a href="https://siecledigital.fr/2026/07/24/leurope-sattaque-a-google-avec-une-amende-de-pres-dun-milliard-deuros/">Siècle Digital</a></li>
 </ul>
 
 <ul>
-<li><strong>IA et propriété intellectuelle : tensions sino-américaines</strong> : La Maison Blanche accuse la start-up chinoise Moonshot AI d'avoir utilisé le modèle Claude d'Anthropic pour entraîner son IA Kimi K3, menaçant de sanctions pour vol de propriété intellectuelle. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/moonshot-ai-et-son-modele-kimi-k3-font-trembler-les-etats-unis-le-gouvernement-americain-accuse-la-start-up-chinoise-d-avoir-franchi-la-ligne-rouge-du-vol-de-propriete-intellectuelle-et-la-menace-de-sanctions_AV-202607230566.html">BFM Tech</a></li>
+<li><strong>AI Act : un cadre déjà fragilisé avant son application</strong> : L'UE a rouvert son règlement sur l'IA pour en repousser les dispositions protectrices et alléger les garanties, avant même leur entrée en vigueur. <a href="https://www.journaldunet.com/intelligence-artificielle/1553033-intelligence-artificielle-l-europe-a-rouvert-son-reglement-avant-de-l-appliquer/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles d'IA : score parfait aux Olympiades de mathématiques</strong> : Des modèles chinois, ainsi que ceux d'OpenAI et Anthropic (hors concours), ont tous résolu l'intégralité des problèmes de l'Olympiade internationale de mathématiques, une première. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/jusqu-a-present-aucun-grand-modele-de-langage-n-avait-jamais-obtenu-un-score-parfait-deux-modeles-d-ia-triomphent-lors-de-l-olympiade-internationale-de-mathematiques_AD-202607230572.html">BFM Tech</a></li>
+<li><strong>AI Act et gouvernance interne</strong> : Au-delà de la conformité technique, le règlement européen expose un vide organisationnel dans les entreprises : l'absence de supervision claire sur ce que fait l'IA. <a href="https://www.journaldunet.com/intelligence-artificielle/1553041-et-si-l-ai-act-parlait-moins-de-technologie-que-de-management/">Journal du Net</a></li>
 </ul>
 
 <ul>
-<li><strong>Souveraineté des données : l'approche "sovereign-by-design"</strong> : Face aux enjeux de conformité et d'IA, l'adoption d'architectures garantissant transparence et traçabilité des données devient un impératif pour les entreprises. <a href="https://www.journaldunet.com/cybersecurite/1553013-pourquoi-le-choix-d-architectures-sovereign-by-design-est-un-gage-de-transparence-et-de-tracabilite-des-donnees/">Journal du Net</a></li>
+<li><strong>Portraits IA en entreprise : les angles morts RGPD</strong> : Confier les visages des collaborateurs à un générateur de portraits professionnels par IA soulève des questions de consentement et de traitement de données biométriques qui ne relèvent pas d'un simple achat logiciel. <a href="https://www.journaldunet.com/intelligence-artificielle/1552921-photos-professionnelles-generees-par-ia-les-questions-rgpd-que-toute-entreprise-devrait-poser/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Dettes cachées de l'IA générative</strong> : La GenAI installe deux passifs invisibles dans les équipes : une dégradation de la qualité non mesurée et une perte de capacité de raisonnement critique, qui se manifesteront au pire moment. <a href="https://www.journaldunet.com/intelligence-artificielle/1552931-ia-generative-les-deux-dettes-invisibles-qu-elle-installe-dans-vos-equipes/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Coûts de l'IA : le token, unité de facturation incontrôlée</strong> : La baisse du prix unitaire des tokens masque une explosion des volumes consommés, rendant le ROI difficile à piloter. Le suivi des usages et l'attribution des dépenses par modèle deviennent critiques. <a href="https://www.journaldunet.com/intelligence-artificielle/1552911-maitriser-les-couts-de-l-ia-avant-qu-ils-n-explosent/">Journal du Net</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1552963-le-token-angle-mort-de-la-strategie-ia/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Efficacité IA vs course à la puissance</strong> : Des investissements massifs dans les infrastructures (campus à 45 milliards d'euros) contrastent avec 95% de pilotes GenAI sans retour mesurable. L'enjeu n'est plus la capacité de calcul, mais l'usage qui en est fait. <a href="https://www.journaldunet.com/intelligence-artificielle/1553003-ia-la-fin-de-la-course-aux-megawatts-le-debut-de-l-economie-de-l-efficacite/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>IA agentique : la spécification devient l'actif clé</strong> : Avec l'IA agentique, la valeur se déplace du code vers la spécification, qui redevient le véritable actif logiciel à maîtriser. <a href="https://www.journaldunet.com/intelligence-artificielle/1552969-avec-l-ia-agentique-la-specification-redevient-le-vrai-actif-logiciel/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Adoption IA : les conditions de la transformation réelle</strong> : Cinq composantes sont nécessaires pour que l'IA crée de la valeur, au-delà de l'effet de mode. Les entreprises fonctionnent davantage comme des organismes biologiques que comme des machines informatiques, ce qui explique les résistances à l'adoption. <a href="https://www.journaldunet.com/intelligence-artificielle/1553005-l-ia-n-est-pas-une-solution-magique-voici-comment-la-rendre-vraiment-transformative/">Journal du Net</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1553007-pourquoi-la-biologie-explique-mieux-l-ia-en-entreprise-que-l-informatique/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260723-1824</guid>
-      <pubDate>Thu, 23 Jul 2026 18:24:51 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260724-0825</guid>
+      <pubDate>Fri, 24 Jul 2026 08:25:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
