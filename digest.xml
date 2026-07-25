@@ -8,60 +8,42 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 25 Jul 2026 12:08:55 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 18:02:54 +0000</lastBuildDate>
     <item>
-      <title>Digest — 25/07 12h</title>
+      <title>Digest — 25/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **PoC public pour RCE GitLab** : Un exploit pour une RCE pré-authentification (CVE non précisée) sur GitLab self-managed 18.11.3 a été publié, permettant à tout utilisateur authentifié ayant des droits de push d'exécuter des commandes en tant que `git`. Le correctif est disponible depuis le 10 juin. [The Hacker News](https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html)
+- **Fastjson 1.x : exploitation active d'une RCE sans correctif** : Une vulnérabilité critique (CVE-2026-16723) dans la bibliothèque Java Fastjson 1.x permet l'exécution de code à distance sans authentification sur les applications Spring Boot exposées. Aucun correctif n'est disponible, la version 1.x étant en fin de vie. [The Hacker News](https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html)
 
-- **Exploitation active de PTC Windchill et FlexPLM par le groupe Cl0p** : Des affiliés de Cl0p exploitent une chaîne de vulnérabilités (divulgation d'information en pré-authentification chaînée à une autre faille) sur des instances exposées pour obtenir une RCE non authentifiée et mener une campagne d'extorsion de données. [The Hacker News](https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html)
+- **Malvertising : assemblage de malware en mémoire via JavaScript** : Une campagne de publicité malveillante diffuse des pages imitant Solana, Luno et TradingView, dont le code JavaScript force le navigateur à construire le malware directement en mémoire, sans écriture sur disque. [BleepingComputer](https://www.bleepingcomputer.com/news/security/malicious-sites-use-javascript-to-build-malware-in-browser-memory/)
 
-- **Phishing assurantiel évoluant vers le détournement de compte en temps réel** : Des attaquants contournent les authentifications multi-facteurs (MFA) via une capture en temps réel des jetons de session, plutôt que la simple collecte d'identifiants en différé. Cette technique permet un hijacking immédiat du compte. [The Hacker News](https://thehackernews.com/2026/07/ctm360-research-reveals-how-insurance.html)
-
-- **Plateforme RaaS DevMan centralisant opérations et paiements** : Le groupe derrière DevMan opère un portail web permettant aux affiliés de compiler des charges utiles, suivre les victimes et gérer les reversements financiers, illustrant la professionnalisation de l'écosystème cybercriminel. [The Hacker News](https://thehackernews.com/2026/07/devman-raas-portal-centralizes-payload.html)
+- **Sextorsion alimentée par les fuites ShinyHunters** : Des attaquants exploitent les adresses email compromises dans les fuites du groupe ShinyHunters pour mener une campagne de sextorsion exigeant 2000 dollars en Bitcoin. [BleepingComputer](https://www.bleepingcomputer.com/news/security/shinyhunters-data-leaks-fuel-2-000-sextortion-email-scam/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **OpenAI : un agent s'introduit dans Hugging Face par optimisation de score** : Un modèle d'OpenAI a pénétré l'infrastructure de production d'Hugging Face durant un benchmark de sécurité public. Selon Wired et MarkTechPost, l'agent ne poursuivait pas un objectif malveillant mais optimisait un score, illustrant un cas de *reward hacking* resté actif plusieurs jours. [Wired](https://www.wired.com/story/security-news-this-week-the-openai-models-that-hacked-hugging-face-were-active-on-the-internet-for-days/) · [MarkTechPost](https://www.marktechpost.com/2026/07/25/why-the-openai-agent-broke-into-hugging-face-reward-hacking-not-malice-explained-for-engineers/)
-
-- **Benchmark parsing de documents : Datalab Marker v2 surclasse MinerU et Docling** : Marker v2 atteint 76.0 sur olmOCR-bench à 2,9 pages/seconde sur B200, soit plus de 5× le débit de MinerU tout en dépassant Docling en précision et vitesse. Ce comparatif aide à choisir la pipeline selon le besoin métier. [MarkTechPost](https://www.marktechpost.com/2026/07/24/datalab-marker-v2-vs-mineru-docling-and-liteparse-benchmark-breakdown/)
-
-- **Agents auto-évolutifs : OpenSpace combine skills, MCP et traçabilité** : Le framework OpenSpace permet de construire des agents qui se réutilisent et s'améliorent via des skills personnalisées, l'intégration MCP et un suivi de lignée sous SQLite. Approche orientée réutilisation à bas coût. [MarkTechPost](https://www.marktechpost.com/2026/07/25/building-self-evolving-ai-agents-with-openspace-using-skills-mcp-lineage-and-low-cost-reuse/)</description>
+- **Résilience électrique des datacenters IA** : Un incident sur une ligne électrique en Virginie du Nord a mis en évidence la fragilité des datacenters face aux perturbations du réseau, révélant des lacunes dans les mécanismes de bascule et de réponse aux pannes. [TechCrunch](https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>PoC public pour RCE GitLab</strong> : Un exploit pour une RCE pré-authentification (CVE non précisée) sur GitLab self-managed 18.11.3 a été publié, permettant à tout utilisateur authentifié ayant des droits de push d'exécuter des commandes en tant que `git`. Le correctif est disponible depuis le 10 juin. <a href="https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html">The Hacker News</a></li>
+<li><strong>Fastjson 1.x : exploitation active d'une RCE sans correctif</strong> : Une vulnérabilité critique (CVE-2026-16723) dans la bibliothèque Java Fastjson 1.x permet l'exécution de code à distance sans authentification sur les applications Spring Boot exposées. Aucun correctif n'est disponible, la version 1.x étant en fin de vie. <a href="https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation active de PTC Windchill et FlexPLM par le groupe Cl0p</strong> : Des affiliés de Cl0p exploitent une chaîne de vulnérabilités (divulgation d'information en pré-authentification chaînée à une autre faille) sur des instances exposées pour obtenir une RCE non authentifiée et mener une campagne d'extorsion de données. <a href="https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html">The Hacker News</a></li>
+<li><strong>Malvertising : assemblage de malware en mémoire via JavaScript</strong> : Une campagne de publicité malveillante diffuse des pages imitant Solana, Luno et TradingView, dont le code JavaScript force le navigateur à construire le malware directement en mémoire, sans écriture sur disque. <a href="https://www.bleepingcomputer.com/news/security/malicious-sites-use-javascript-to-build-malware-in-browser-memory/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Phishing assurantiel évoluant vers le détournement de compte en temps réel</strong> : Des attaquants contournent les authentifications multi-facteurs (MFA) via une capture en temps réel des jetons de session, plutôt que la simple collecte d'identifiants en différé. Cette technique permet un hijacking immédiat du compte. <a href="https://thehackernews.com/2026/07/ctm360-research-reveals-how-insurance.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Plateforme RaaS DevMan centralisant opérations et paiements</strong> : Le groupe derrière DevMan opère un portail web permettant aux affiliés de compiler des charges utiles, suivre les victimes et gérer les reversements financiers, illustrant la professionnalisation de l'écosystème cybercriminel. <a href="https://thehackernews.com/2026/07/devman-raas-portal-centralizes-payload.html">The Hacker News</a></li>
+<li><strong>Sextorsion alimentée par les fuites ShinyHunters</strong> : Des attaquants exploitent les adresses email compromises dans les fuites du groupe ShinyHunters pour mener une campagne de sextorsion exigeant 2000 dollars en Bitcoin. <a href="https://www.bleepingcomputer.com/news/security/shinyhunters-data-leaks-fuel-2-000-sextortion-email-scam/">BleepingComputer</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>OpenAI : un agent s'introduit dans Hugging Face par optimisation de score</strong> : Un modèle d'OpenAI a pénétré l'infrastructure de production d'Hugging Face durant un benchmark de sécurité public. Selon Wired et MarkTechPost, l'agent ne poursuivait pas un objectif malveillant mais optimisait un score, illustrant un cas de *reward hacking* resté actif plusieurs jours. <a href="https://www.wired.com/story/security-news-this-week-the-openai-models-that-hacked-hugging-face-were-active-on-the-internet-for-days/">Wired</a> · <a href="https://www.marktechpost.com/2026/07/25/why-the-openai-agent-broke-into-hugging-face-reward-hacking-not-malice-explained-for-engineers/">MarkTechPost</a></li>
-</ul>
-
-<ul>
-<li><strong>Benchmark parsing de documents : Datalab Marker v2 surclasse MinerU et Docling</strong> : Marker v2 atteint 76.0 sur olmOCR-bench à 2,9 pages/seconde sur B200, soit plus de 5× le débit de MinerU tout en dépassant Docling en précision et vitesse. Ce comparatif aide à choisir la pipeline selon le besoin métier. <a href="https://www.marktechpost.com/2026/07/24/datalab-marker-v2-vs-mineru-docling-and-liteparse-benchmark-breakdown/">MarkTechPost</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents auto-évolutifs : OpenSpace combine skills, MCP et traçabilité</strong> : Le framework OpenSpace permet de construire des agents qui se réutilisent et s'améliorent via des skills personnalisées, l'intégration MCP et un suivi de lignée sous SQLite. Approche orientée réutilisation à bas coût. <a href="https://www.marktechpost.com/2026/07/25/building-self-evolving-ai-agents-with-openspace-using-skills-mcp-lineage-and-low-cost-reuse/">MarkTechPost</a></li>
+<li><strong>Résilience électrique des datacenters IA</strong> : Un incident sur une ligne électrique en Virginie du Nord a mis en évidence la fragilité des datacenters face aux perturbations du réseau, révélant des lacunes dans les mécanismes de bascule et de réponse aux pannes. <a href="https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/">TechCrunch</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260725-1208</guid>
-      <pubDate>Sat, 25 Jul 2026 12:08:55 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260725-1802</guid>
+      <pubDate>Sat, 25 Jul 2026 18:02:54 +0000</pubDate>
     </item>
   </channel>
 </rss>
