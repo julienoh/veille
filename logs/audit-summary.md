@@ -125,3 +125,4 @@ Rétention glissante 30 jours. Append en bas (le plus récent en bas).
 | 2026-07-24 12:23 UTC | dsv4-flash | dsv4-pro | 52 | 4 | 8 | 11 | 29 | 0 | 0 | 44% |
 | 2026-07-24 18:23 UTC | dsv4-flash | dsv4-pro | 52 | 6 | 13 | 10 | 23 | 2 | 0 | 56% |
 | 2026-07-25 07:22 UTC | dsv4-flash | dsv4-pro | 18 | 0 | 0 | 0 | 18 | 0 | 0 | 0% |
+| 2026-07-25 12:05 UTC | dsv4-flash | dsv4-pro | 15 | 2 | 5 | 1 | 7 | 0 | 0 | 53% |
