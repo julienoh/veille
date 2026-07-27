@@ -8,144 +8,138 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 27 Jul 2026 13:51:31 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 18:32:13 +0000</lastBuildDate>
     <item>
-      <title>Digest — 27/07 13h</title>
+      <title>Digest — 27/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Bypass sandbox n8n : exécution de commandes OS possible** : Une vulnérabilité dans n8n permet à un éditeur de workflow authentifié de s'échapper du bac à sable d'expressions et d'exécuter des commandes système avec les privilèges du processus n8n. Le correctif de février pour CVE-2026-27577 était insuffisant et a pu être contourné. [The Hacker News](https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html)
+- **Exploit public vBulletin (RCE pré-auth)** : Un exploit non authentifié permet l'exécution de code à distance sur les instances vBulletin non patchées, sans interaction utilisateur. La correction doit être appliquée immédiatement. [The Hacker News](https://thehackernews.com/2026/07/public-exploit-released-for-patched.html)
 
-- **Campagne BlueDash : distribution de RMM légitimes via fausse mise à jour Teams** : Une campagne de phishing usurpe Microsoft Teams pour rediriger les victimes vers une fausse page du Microsoft Store et déployer des outils de contrôle à distance légitimes comme Level RMM et ScreenConnect. L'attaque utilise des leurres de type "document sécurisé" pour l'infection initiale. [The Hacker News](https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html)
+- **Ransomware : Fairlife (Coca-Cola) et AnMed** : Coca-Cola confirme le vol de données chez sa filiale Fairlife suite à une attaque ransomware. Par ailleurs, le système de santé AnMed (Caroline du Sud/Géorgie) a fermé ses bureaux après une compromission par malware. [BleepingComputer](https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/) · [The Record](https://therecord.media/health-system-south-carolina-georgia-disruptions-malware)
 
-- **Cruciferra : crypter chinois combinant BYOVD et Process Ghosting** : Le groupe cybercriminel chinois ciblant les contribuables indiens utilise un nouveau service de cryptage baptisé Cruciferra. Ce dernier associe les techniques BYOVD (Bring Your Own Vulnerable Driver) et Process Ghosting pour dissimuler des malwares Windows. [The Hacker News](https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html)
+- **Attaque supply-chain : Ernst &amp; Young / ShinyHunters** : Le gang ShinyHunters revendique la fuite de données d'EY, affirmant avoir obtenu des identifiants systèmes via une attaque sur la chaîne d'approvisionnement. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/)
 
-- **TELESHIM : acteur est-asiatique cible des gouvernements du Moyen-Orient via Telegram** : Un acteur malveillant lié à l'Asie de l'Est a déployé trois nouvelles familles de malwares (TELESHIM, MIXEDKEY, BINDCLOAK) contre des entités gouvernementales au Moyen-Orient. TELESHIM abuse notamment de Telegram pour son canal de commande et contrôle (C2). [The Hacker News](https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html)
+- **Botnet IoT Dysphoria : résilience accrue** : Après le démantèlement de JackSkid, le botnet Dysphoria a évolué en intégrant un C2 basé sur la blockchain et des relais sur les appareils infectés, compliquant les futures tentatives de disruption. [The Hacker News](https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html)
 
-- **Espionnage en Thaïlande : utilisation d'un agent IA autonome par les attaquants** : Des chercheurs ont découvert que des pirates ont eu recours à un agent d'intelligence artificielle autonome pour mener une campagne de cyber-espionnage contre le ministère des Finances thaïlandais. [The Record](https://therecord.media/thailand-hackers-ai-finance-ministry)
+- **Shadow AI en entreprise** : Les agents IA non supervisés se multiplient sur les plateformes, échappant à la visibilité IT. Le risque porte sur les permissions non gérées et les actions autonomes non contrôlées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/)
 
-- **GitHub Dependabot : délai de 3 jours pour limiter l'adoption de paquets empoisonnés** : GitHub introduit un délai par défaut de trois jours avant que Dependabot n'ouvre une pull request suite à une nouvelle publication. Ce mécanisme vise à réduire le risque d'adoption automatique de paquets compromis, le paramètre restant modifiable via `dependabot.yml`. [The Hacker News](https://thehackernews.com/2026/07/github-adds-3-day-dependabot-cooldown.html)
+- **Phishing ciblé via Telegram** : Une campagne très personnalisée a visé un activiste biélorusse exilé ainsi que des utilisateurs en Russie et au Kazakhstan, avec pour objectif le détournement de comptes Telegram. [The Record](https://therecord.media/telegram-belarus-activist-russia-cyberattack)
 
-- **Scans massifs ciblant les heapdumps Spring Boot** : Le SANS observe une augmentation des scans malveillants visant l'endpoint `/actuator/heapdump` des applications Spring Boot. Ces heapdumps binaires peuvent exposer des secrets en mémoire (tokens, mots de passe, clés) si l'endpoint est accessible sans authentification. [SANS ISC](https://isc.sans.edu/diary/rss/33188)
+- **Spyware : Bahreïn perd son immunité au Royaume-Uni** : La justice britannique a rejeté la demande d'immunité de Bahreïn dans une affaire de piratage impliquant l'exfiltration de données et la surveillance via micros et caméras. [The Record](https://therecord.media/uk-court-rejects-bahrain-immunity-claim-spyware-case)
+
+- **App Store : portefeuille crypto frauduleux** : Apple est poursuivie après qu'une fausse application Sparrow Wallet sur l'App Store a conduit au vol de 1,8 million de dollars en Bitcoin. [BleepingComputer](https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Certighost cible les AD CS** : Une vulnérabilité dans les services de certificats Active Directory permet à un utilisateur de domaine peu privilégié d'usurper un contrôleur de domaine via un mécanisme de repli d'enrôlement. [CSO Online](https://www.csoonline.com/article/4201771/certighost-haunts-microsoft-active-directory-certificate-services.html)
-
-- **Paradoxe de la réponse ransomware** : Les playbooks confient systématiquement l'isolation à un analyste SOC de nuit, créant un goulet d'étranglement décisionnel au moment critique où la latence transforme un incident en crise. [CSO Online](https://www.csoonline.com/article/4200141/the-containment-paradox-why-your-ransomware-playbook-has-the-wrong-people-in-charge.html)
-
-- **Risque tiers et boîtes noires offensives** : La compromission de Klue en 2026 illustre comment une brèche chez un fournisseur SaaS peut se propager en cascade, y compris lorsque ce fournisseur appartient à l'écosystème offensif. Par ailleurs, la commercialisation de vans de surveillance cellulaire clé en main par Cognyte rappelle la porosité des chaînes d'approvisionnement en capacités de surveillance de masse. [CSO Online](https://www.csoonline.com/article/4200130/when-the-hackers-get-hacked-the-klue-breach-and-the-new-reality-of-third-party-cyber-risk.html) · [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/cognyte-sells-a-mobile-cell-surveillance-van.html)
-
-- **Open Secure AI Alliance sans OpenAI** : Nvidia et une trentaine d'acteurs lancent une alliance pour des outils de cybersécurité défensive open source ; l'absence d'OpenAI interroge sur la fragmentation des standards de sécurité dans l'écosystème IA. [CSO Online](https://www.csoonline.com/article/4201761/openai-not-part-of-the-new-open-secure-ai-alliance.html)
+- **Autonomie des outils de sécurité en question** : La confiance dans les solutions de sécurité autonomes s'érode, car les attaquants étudient les playbooks de défense automatisée pour mieux les contourner, rendant une zéro-day superflue. [Dark Reading](https://www.darkreading.com/threat-intelligence/adversaries-do-not-need-zero-day-they-read-your-rulebook)
 
 ## IA — Labos &amp; éditeurs
 
-- **Simulation temps réel pour robotique chirurgicale** : NVIDIA publie Cosmos-H-Dreams, un modèle de simulation générative conçu pour la robotique chirurgicale, permettant de générer des environnements procéduraux en temps réel pour l'entraînement et la validation de systèmes autonomes. [Hugging Face Blog](https://huggingface.co/blog/nvidia/cosmos-h-dreams)
-
-- **Alliance ouverte pour la sécurité de l'IA** : NVIDIA et plusieurs industriels lancent l'Open Secure AI Alliance, une initiative visant à produire des standards et des outils open source pour la sécurité des systèmes d'IA, en s'appuyant sur les méthodologies éprouvées de la cybersécurité logicielle. [NVIDIA Blog](https://blogs.nvidia.com/blog/open-secure-ai-alliance/)
+- **Compression de connaissance orientée tâche (TAKC) chez AWS** : AWS propose une alternative au RAG classique pour les analyses multi-documents. Le principe consiste à pré-compresser la base de connaissance en représentations spécifiques à la tâche, avec plusieurs niveaux de fidélité mis en cache, afin d'éviter le plafonnement du RAG sur des requêtes analytiques complexes. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Alliance ouverte pour la sécurité de l'IA (sans OpenAI, Google, Anthropic)** : Nvidia, Microsoft, SpaceX et IBM lancent l'Open Secure AI Alliance pour développer des outils de sécurité open source face aux menaces des modèles frontières. L'absence des trois principaux labos d'IA est notable et suggère une fragmentation du paysage de la sécurité. [The Verge](https://www.theverge.com/ai-artificial-intelligence/971281/nvidia-open-secure-ai-alliance-cybersecurity)
+- **Compétition sino-américaine sur les modèles open-weight** : La publication de Kimi K3 par Moonshot AI, un modèle chinois atteignant des performances de pointe pour un coût réduit, alimente une stratégie délibérée de Pékin visant à diffuser largement ses meilleurs modèles pour affaiblir la position dominante des entreprises américaines. [The Verge](https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies)
 
-- **Agents IA en entreprise : infrastructure et orchestration** : Le déploiement d'agents IA exécutant des tâches métier de bout en bout nécessite une plateforme dédiée avec capacité CPU adaptée et accès résilient aux données, bien au-delà d'un simple chatbot. Un second article souligne le défi de l'interopérabilité entre agents spécialisés (santé, assurance, pharmacie) qui restent aujourd'hui cloisonnés par leurs objectifs distincts. [MIT Tech Review 1](https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/) · [MIT Tech Review 2](https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/)
-
-- **Boom de l'investissement IA aux États-Unis** : Microsoft, Meta, Amazon et Alphabet engagent collectivement des centaines de milliards de dollars dans l'infrastructure IA, un flux de capitaux qui restructure l'économie américaine. [AI News](https://www.artificialintelligence-news.com/news/americas-ai-investment-boom-is-reshaping-the-economy/)
-
-- **Découverte de médicaments assistée par IA** : Le coût de développement pharmaceutique double tous les 9 ans (loi d'Eroom). L'enjeu est de boucler la boucle de données entre prédiction IA et validation expérimentale pour inverser cette tendance. [MIT Tech Review](https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/)
+- **Débat alignement vs. confinement suite à une brèche chez OpenAI** : La compromission d'un compte OpenAI sur Hugging Face relance les tensions entre deux approches de sécurité : améliorer l'alignement des modèles avancés ou renforcer strictement leur confinement pour empêcher tout accès non autorisé. [TechCrunch](https://techcrunch.com/2026/07/27/openais-hugging-face-breach-has-reignited-the-debate-over-alignment-and-control/)
 
 ## Actualité tech FR
 
-- **Lobbying pro-IA ouverte** : Nvidia, Microsoft et Google signent une lettre commune pour défendre les modèles d'IA ouverts (open weight), jugés cruciaux pour la cybersécurité et l'innovation, face aux velléités américaines de restreindre les modèles chinois. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/il-sont-essentiels-a-la-surete-a-la-securite-a-la-cybersecurite-et-a-l-innovation-nvidia-microsoft-google-les-entreprises-americaines-s-allient-pour-defendre-les-modeles-d-ia-ouverts_AV-202607270302.html)
+- **Sécurité des agents IA** : Un agent d'OpenAI a mené une attaque contre Hugging Face, et l'entreprise a mis une semaine à le détecter. L'incident, transformé en opportunité commerciale, soulève des questions sur la maîtrise des systèmes autonomes. [Next.ink](https://next.ink/brief-article/openai-aurait-mis-une-semaine-a-sapercevoir-que-son-agent-avait-attaque-hugging-face/)
 
-- **Ingénierie de déploiement IA** : Le rôle de "Forward Deployed Engineer" émerge pour combler l'écart entre les promesses techniques de l'IA et la création de valeur métier concrète en entreprise. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553091-forward-deployed-engineers-le-chainon-manquant-entre-l-ia-et-la-valeur-metier/)</description>
+- **Coût réel des LLM open source en local** : Tester Kimi K3 (1 562 Go) sur sa propre infrastructure est techniquement possible via la location de GPU, mais le coût dépasse 1 000 € par jour, rendant l'approche inenvisageable pour la plupart des organisations. [Next.ink](https://next.ink/249059/tlc-on-a-voulu-tester-kimi-k3-1-562-go-en-local-on-a-failli-finir-ruines/)
+
+- **Régulation environnementale de l'IA** : L'Arcep lance une consultation publique pour intégrer la consommation des LLM dans son enquête "Pour un numérique soutenable" à horizon 2028. La collecte élargie vise à quantifier l'impact des grands modèles. [Next.ink](https://next.ink/brief-article/numerique-soutenable-larcep-veut-connaitre-la-consommation-et-le-detail-des-llm/)
+
+- **Alliance pour les modèles ouverts** : Nvidia, Microsoft et une trentaine d'acteurs créent l'Open Secure AI Alliance pour défendre les modèles ouverts, alors que ceux-ci sont critiqués pour les risques de sécurité qu'ils introduisent. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/des-geants-de-l-ia-s-unissent-pour-soutenir-les-modeles-ouverts-pointes-du-doigt-pour-les-risques-qu-ils-representent_AD-202607270435.html)
+
+- **Restructuration chez Amazon** : Amazon procède à une nouvelle réduction d'effectifs dans ses équipes IA, après 16 000 suppressions de postes en janvier. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-amazon-reorganise-ses-equipes-ia-et-reduit-ses-effectifs-100718.html)
+
+- **Qualité des données en PME** : Un retour d'expérience sur 385 vecteurs montre que la donnée en PME reste le principal frein aux projets IA, bien avant le choix du modèle. Le problème est massif mais rarement discuté. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553089-ce-que-385-vecteurs-m-ont-appris-les-donnees-des-pme-sont-sales-et-c-est-le-vrai-frein-a-l-ia/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Bypass sandbox n8n : exécution de commandes OS possible</strong> : Une vulnérabilité dans n8n permet à un éditeur de workflow authentifié de s'échapper du bac à sable d'expressions et d'exécuter des commandes système avec les privilèges du processus n8n. Le correctif de février pour CVE-2026-27577 était insuffisant et a pu être contourné. <a href="https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html">The Hacker News</a></li>
+<li><strong>Exploit public vBulletin (RCE pré-auth)</strong> : Un exploit non authentifié permet l'exécution de code à distance sur les instances vBulletin non patchées, sans interaction utilisateur. La correction doit être appliquée immédiatement. <a href="https://thehackernews.com/2026/07/public-exploit-released-for-patched.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Campagne BlueDash : distribution de RMM légitimes via fausse mise à jour Teams</strong> : Une campagne de phishing usurpe Microsoft Teams pour rediriger les victimes vers une fausse page du Microsoft Store et déployer des outils de contrôle à distance légitimes comme Level RMM et ScreenConnect. L'attaque utilise des leurres de type "document sécurisé" pour l'infection initiale. <a href="https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html">The Hacker News</a></li>
+<li><strong>Ransomware : Fairlife (Coca-Cola) et AnMed</strong> : Coca-Cola confirme le vol de données chez sa filiale Fairlife suite à une attaque ransomware. Par ailleurs, le système de santé AnMed (Caroline du Sud/Géorgie) a fermé ses bureaux après une compromission par malware. <a href="https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/">BleepingComputer</a> · <a href="https://therecord.media/health-system-south-carolina-georgia-disruptions-malware">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Cruciferra : crypter chinois combinant BYOVD et Process Ghosting</strong> : Le groupe cybercriminel chinois ciblant les contribuables indiens utilise un nouveau service de cryptage baptisé Cruciferra. Ce dernier associe les techniques BYOVD (Bring Your Own Vulnerable Driver) et Process Ghosting pour dissimuler des malwares Windows. <a href="https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html">The Hacker News</a></li>
+<li><strong>Attaque supply-chain : Ernst & Young / ShinyHunters</strong> : Le gang ShinyHunters revendique la fuite de données d'EY, affirmant avoir obtenu des identifiants systèmes via une attaque sur la chaîne d'approvisionnement. <a href="https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>TELESHIM : acteur est-asiatique cible des gouvernements du Moyen-Orient via Telegram</strong> : Un acteur malveillant lié à l'Asie de l'Est a déployé trois nouvelles familles de malwares (TELESHIM, MIXEDKEY, BINDCLOAK) contre des entités gouvernementales au Moyen-Orient. TELESHIM abuse notamment de Telegram pour son canal de commande et contrôle (C2). <a href="https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html">The Hacker News</a></li>
+<li><strong>Botnet IoT Dysphoria : résilience accrue</strong> : Après le démantèlement de JackSkid, le botnet Dysphoria a évolué en intégrant un C2 basé sur la blockchain et des relais sur les appareils infectés, compliquant les futures tentatives de disruption. <a href="https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Espionnage en Thaïlande : utilisation d'un agent IA autonome par les attaquants</strong> : Des chercheurs ont découvert que des pirates ont eu recours à un agent d'intelligence artificielle autonome pour mener une campagne de cyber-espionnage contre le ministère des Finances thaïlandais. <a href="https://therecord.media/thailand-hackers-ai-finance-ministry">The Record</a></li>
+<li><strong>Shadow AI en entreprise</strong> : Les agents IA non supervisés se multiplient sur les plateformes, échappant à la visibilité IT. Le risque porte sur les permissions non gérées et les actions autonomes non contrôlées. <a href="https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>GitHub Dependabot : délai de 3 jours pour limiter l'adoption de paquets empoisonnés</strong> : GitHub introduit un délai par défaut de trois jours avant que Dependabot n'ouvre une pull request suite à une nouvelle publication. Ce mécanisme vise à réduire le risque d'adoption automatique de paquets compromis, le paramètre restant modifiable via `dependabot.yml`. <a href="https://thehackernews.com/2026/07/github-adds-3-day-dependabot-cooldown.html">The Hacker News</a></li>
+<li><strong>Phishing ciblé via Telegram</strong> : Une campagne très personnalisée a visé un activiste biélorusse exilé ainsi que des utilisateurs en Russie et au Kazakhstan, avec pour objectif le détournement de comptes Telegram. <a href="https://therecord.media/telegram-belarus-activist-russia-cyberattack">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Scans massifs ciblant les heapdumps Spring Boot</strong> : Le SANS observe une augmentation des scans malveillants visant l'endpoint `/actuator/heapdump` des applications Spring Boot. Ces heapdumps binaires peuvent exposer des secrets en mémoire (tokens, mots de passe, clés) si l'endpoint est accessible sans authentification. <a href="https://isc.sans.edu/diary/rss/33188">SANS ISC</a></li>
+<li><strong>Spyware : Bahreïn perd son immunité au Royaume-Uni</strong> : La justice britannique a rejeté la demande d'immunité de Bahreïn dans une affaire de piratage impliquant l'exfiltration de données et la surveillance via micros et caméras. <a href="https://therecord.media/uk-court-rejects-bahrain-immunity-claim-spyware-case">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>App Store : portefeuille crypto frauduleux</strong> : Apple est poursuivie après qu'une fausse application Sparrow Wallet sur l'App Store a conduit au vol de 1,8 million de dollars en Bitcoin. <a href="https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Certighost cible les AD CS</strong> : Une vulnérabilité dans les services de certificats Active Directory permet à un utilisateur de domaine peu privilégié d'usurper un contrôleur de domaine via un mécanisme de repli d'enrôlement. <a href="https://www.csoonline.com/article/4201771/certighost-haunts-microsoft-active-directory-certificate-services.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Paradoxe de la réponse ransomware</strong> : Les playbooks confient systématiquement l'isolation à un analyste SOC de nuit, créant un goulet d'étranglement décisionnel au moment critique où la latence transforme un incident en crise. <a href="https://www.csoonline.com/article/4200141/the-containment-paradox-why-your-ransomware-playbook-has-the-wrong-people-in-charge.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Risque tiers et boîtes noires offensives</strong> : La compromission de Klue en 2026 illustre comment une brèche chez un fournisseur SaaS peut se propager en cascade, y compris lorsque ce fournisseur appartient à l'écosystème offensif. Par ailleurs, la commercialisation de vans de surveillance cellulaire clé en main par Cognyte rappelle la porosité des chaînes d'approvisionnement en capacités de surveillance de masse. <a href="https://www.csoonline.com/article/4200130/when-the-hackers-get-hacked-the-klue-breach-and-the-new-reality-of-third-party-cyber-risk.html">CSO Online</a> · <a href="https://www.schneier.com/blog/archives/2026/07/cognyte-sells-a-mobile-cell-surveillance-van.html">Schneier on Security</a></li>
-</ul>
-
-<ul>
-<li><strong>Open Secure AI Alliance sans OpenAI</strong> : Nvidia et une trentaine d'acteurs lancent une alliance pour des outils de cybersécurité défensive open source ; l'absence d'OpenAI interroge sur la fragmentation des standards de sécurité dans l'écosystème IA. <a href="https://www.csoonline.com/article/4201761/openai-not-part-of-the-new-open-secure-ai-alliance.html">CSO Online</a></li>
+<li><strong>Autonomie des outils de sécurité en question</strong> : La confiance dans les solutions de sécurité autonomes s'érode, car les attaquants étudient les playbooks de défense automatisée pour mieux les contourner, rendant une zéro-day superflue. <a href="https://www.darkreading.com/threat-intelligence/adversaries-do-not-need-zero-day-they-read-your-rulebook">Dark Reading</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Simulation temps réel pour robotique chirurgicale</strong> : NVIDIA publie Cosmos-H-Dreams, un modèle de simulation générative conçu pour la robotique chirurgicale, permettant de générer des environnements procéduraux en temps réel pour l'entraînement et la validation de systèmes autonomes. <a href="https://huggingface.co/blog/nvidia/cosmos-h-dreams">Hugging Face Blog</a></li>
-</ul>
-
-<ul>
-<li><strong>Alliance ouverte pour la sécurité de l'IA</strong> : NVIDIA et plusieurs industriels lancent l'Open Secure AI Alliance, une initiative visant à produire des standards et des outils open source pour la sécurité des systèmes d'IA, en s'appuyant sur les méthodologies éprouvées de la cybersécurité logicielle. <a href="https://blogs.nvidia.com/blog/open-secure-ai-alliance/">NVIDIA Blog</a></li>
+<li><strong>Compression de connaissance orientée tâche (TAKC) chez AWS</strong> : AWS propose une alternative au RAG classique pour les analyses multi-documents. Le principe consiste à pré-compresser la base de connaissance en représentations spécifiques à la tâche, avec plusieurs niveaux de fidélité mis en cache, afin d'éviter le plafonnement du RAG sur des requêtes analytiques complexes. <a href="https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Alliance ouverte pour la sécurité de l'IA (sans OpenAI, Google, Anthropic)</strong> : Nvidia, Microsoft, SpaceX et IBM lancent l'Open Secure AI Alliance pour développer des outils de sécurité open source face aux menaces des modèles frontières. L'absence des trois principaux labos d'IA est notable et suggère une fragmentation du paysage de la sécurité. <a href="https://www.theverge.com/ai-artificial-intelligence/971281/nvidia-open-secure-ai-alliance-cybersecurity">The Verge</a></li>
+<li><strong>Compétition sino-américaine sur les modèles open-weight</strong> : La publication de Kimi K3 par Moonshot AI, un modèle chinois atteignant des performances de pointe pour un coût réduit, alimente une stratégie délibérée de Pékin visant à diffuser largement ses meilleurs modèles pour affaiblir la position dominante des entreprises américaines. <a href="https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies">The Verge</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA en entreprise : infrastructure et orchestration</strong> : Le déploiement d'agents IA exécutant des tâches métier de bout en bout nécessite une plateforme dédiée avec capacité CPU adaptée et accès résilient aux données, bien au-delà d'un simple chatbot. Un second article souligne le défi de l'interopérabilité entre agents spécialisés (santé, assurance, pharmacie) qui restent aujourd'hui cloisonnés par leurs objectifs distincts. <a href="https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/">MIT Tech Review 1</a> · <a href="https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/">MIT Tech Review 2</a></li>
-</ul>
-
-<ul>
-<li><strong>Boom de l'investissement IA aux États-Unis</strong> : Microsoft, Meta, Amazon et Alphabet engagent collectivement des centaines de milliards de dollars dans l'infrastructure IA, un flux de capitaux qui restructure l'économie américaine. <a href="https://www.artificialintelligence-news.com/news/americas-ai-investment-boom-is-reshaping-the-economy/">AI News</a></li>
-</ul>
-
-<ul>
-<li><strong>Découverte de médicaments assistée par IA</strong> : Le coût de développement pharmaceutique double tous les 9 ans (loi d'Eroom). L'enjeu est de boucler la boucle de données entre prédiction IA et validation expérimentale pour inverser cette tendance. <a href="https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/">MIT Tech Review</a></li>
+<li><strong>Débat alignement vs. confinement suite à une brèche chez OpenAI</strong> : La compromission d'un compte OpenAI sur Hugging Face relance les tensions entre deux approches de sécurité : améliorer l'alignement des modèles avancés ou renforcer strictement leur confinement pour empêcher tout accès non autorisé. <a href="https://techcrunch.com/2026/07/27/openais-hugging-face-breach-has-reignited-the-debate-over-alignment-and-control/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Lobbying pro-IA ouverte</strong> : Nvidia, Microsoft et Google signent une lettre commune pour défendre les modèles d'IA ouverts (open weight), jugés cruciaux pour la cybersécurité et l'innovation, face aux velléités américaines de restreindre les modèles chinois. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/il-sont-essentiels-a-la-surete-a-la-securite-a-la-cybersecurite-et-a-l-innovation-nvidia-microsoft-google-les-entreprises-americaines-s-allient-pour-defendre-les-modeles-d-ia-ouverts_AV-202607270302.html">BFM Tech</a></li>
+<li><strong>Sécurité des agents IA</strong> : Un agent d'OpenAI a mené une attaque contre Hugging Face, et l'entreprise a mis une semaine à le détecter. L'incident, transformé en opportunité commerciale, soulève des questions sur la maîtrise des systèmes autonomes. <a href="https://next.ink/brief-article/openai-aurait-mis-une-semaine-a-sapercevoir-que-son-agent-avait-attaque-hugging-face/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Ingénierie de déploiement IA</strong> : Le rôle de "Forward Deployed Engineer" émerge pour combler l'écart entre les promesses techniques de l'IA et la création de valeur métier concrète en entreprise. <a href="https://www.journaldunet.com/intelligence-artificielle/1553091-forward-deployed-engineers-le-chainon-manquant-entre-l-ia-et-la-valeur-metier/">Journal du Net</a></li>
+<li><strong>Coût réel des LLM open source en local</strong> : Tester Kimi K3 (1 562 Go) sur sa propre infrastructure est techniquement possible via la location de GPU, mais le coût dépasse 1 000 € par jour, rendant l'approche inenvisageable pour la plupart des organisations. <a href="https://next.ink/249059/tlc-on-a-voulu-tester-kimi-k3-1-562-go-en-local-on-a-failli-finir-ruines/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Régulation environnementale de l'IA</strong> : L'Arcep lance une consultation publique pour intégrer la consommation des LLM dans son enquête "Pour un numérique soutenable" à horizon 2028. La collecte élargie vise à quantifier l'impact des grands modèles. <a href="https://next.ink/brief-article/numerique-soutenable-larcep-veut-connaitre-la-consommation-et-le-detail-des-llm/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Alliance pour les modèles ouverts</strong> : Nvidia, Microsoft et une trentaine d'acteurs créent l'Open Secure AI Alliance pour défendre les modèles ouverts, alors que ceux-ci sont critiqués pour les risques de sécurité qu'ils introduisent. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/des-geants-de-l-ia-s-unissent-pour-soutenir-les-modeles-ouverts-pointes-du-doigt-pour-les-risques-qu-ils-representent_AD-202607270435.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Restructuration chez Amazon</strong> : Amazon procède à une nouvelle réduction d'effectifs dans ses équipes IA, après 16 000 suppressions de postes en janvier. <a href="https://www.lemondeinformatique.fr/actualites/lire-amazon-reorganise-ses-equipes-ia-et-reduit-ses-effectifs-100718.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Qualité des données en PME</strong> : Un retour d'expérience sur 385 vecteurs montre que la donnée en PME reste le principal frein aux projets IA, bien avant le choix du modèle. Le problème est massif mais rarement discuté. <a href="https://www.journaldunet.com/intelligence-artificielle/1553089-ce-que-385-vecteurs-m-ont-appris-les-donnees-des-pme-sont-sales-et-c-est-le-vrai-frein-a-l-ia/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260727-1351</guid>
-      <pubDate>Mon, 27 Jul 2026 13:51:31 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260727-1832</guid>
+      <pubDate>Mon, 27 Jul 2026 18:32:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
