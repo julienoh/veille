@@ -8,158 +8,144 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 27 Jul 2026 09:17:40 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 13:51:31 +0000</lastBuildDate>
     <item>
-      <title>Digest — 27/07 09h</title>
+      <title>Digest — 27/07 13h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Stratégie &amp; analyse
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Évolution du rôle de RSSI vers la résilience** : Le métier de RSSI mute en responsable de la résilience opérationnelle, dépassant la seule prévention pour intégrer la réponse aux incidents et la continuité d'activité. [CSO Online](https://www.csoonline.com/article/4200382/how-cisos-can-rise-to-the-business-resilience-challenge.html)
+- **Bypass sandbox n8n : exécution de commandes OS possible** : Une vulnérabilité dans n8n permet à un éditeur de workflow authentifié de s'échapper du bac à sable d'expressions et d'exécuter des commandes système avec les privilèges du processus n8n. Le correctif de février pour CVE-2026-27577 était insuffisant et a pu être contourné. [The Hacker News](https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html)
+
+- **Campagne BlueDash : distribution de RMM légitimes via fausse mise à jour Teams** : Une campagne de phishing usurpe Microsoft Teams pour rediriger les victimes vers une fausse page du Microsoft Store et déployer des outils de contrôle à distance légitimes comme Level RMM et ScreenConnect. L'attaque utilise des leurres de type "document sécurisé" pour l'infection initiale. [The Hacker News](https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html)
+
+- **Cruciferra : crypter chinois combinant BYOVD et Process Ghosting** : Le groupe cybercriminel chinois ciblant les contribuables indiens utilise un nouveau service de cryptage baptisé Cruciferra. Ce dernier associe les techniques BYOVD (Bring Your Own Vulnerable Driver) et Process Ghosting pour dissimuler des malwares Windows. [The Hacker News](https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html)
+
+- **TELESHIM : acteur est-asiatique cible des gouvernements du Moyen-Orient via Telegram** : Un acteur malveillant lié à l'Asie de l'Est a déployé trois nouvelles familles de malwares (TELESHIM, MIXEDKEY, BINDCLOAK) contre des entités gouvernementales au Moyen-Orient. TELESHIM abuse notamment de Telegram pour son canal de commande et contrôle (C2). [The Hacker News](https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html)
+
+- **Espionnage en Thaïlande : utilisation d'un agent IA autonome par les attaquants** : Des chercheurs ont découvert que des pirates ont eu recours à un agent d'intelligence artificielle autonome pour mener une campagne de cyber-espionnage contre le ministère des Finances thaïlandais. [The Record](https://therecord.media/thailand-hackers-ai-finance-ministry)
+
+- **GitHub Dependabot : délai de 3 jours pour limiter l'adoption de paquets empoisonnés** : GitHub introduit un délai par défaut de trois jours avant que Dependabot n'ouvre une pull request suite à une nouvelle publication. Ce mécanisme vise à réduire le risque d'adoption automatique de paquets compromis, le paramètre restant modifiable via `dependabot.yml`. [The Hacker News](https://thehackernews.com/2026/07/github-adds-3-day-dependabot-cooldown.html)
+
+- **Scans massifs ciblant les heapdumps Spring Boot** : Le SANS observe une augmentation des scans malveillants visant l'endpoint `/actuator/heapdump` des applications Spring Boot. Ces heapdumps binaires peuvent exposer des secrets en mémoire (tokens, mots de passe, clés) si l'endpoint est accessible sans authentification. [SANS ISC](https://isc.sans.edu/diary/rss/33188)
+
+## Cyber — Stratégie &amp; analyse
+
+- **Certighost cible les AD CS** : Une vulnérabilité dans les services de certificats Active Directory permet à un utilisateur de domaine peu privilégié d'usurper un contrôleur de domaine via un mécanisme de repli d'enrôlement. [CSO Online](https://www.csoonline.com/article/4201771/certighost-haunts-microsoft-active-directory-certificate-services.html)
+
+- **Paradoxe de la réponse ransomware** : Les playbooks confient systématiquement l'isolation à un analyste SOC de nuit, créant un goulet d'étranglement décisionnel au moment critique où la latence transforme un incident en crise. [CSO Online](https://www.csoonline.com/article/4200141/the-containment-paradox-why-your-ransomware-playbook-has-the-wrong-people-in-charge.html)
+
+- **Risque tiers et boîtes noires offensives** : La compromission de Klue en 2026 illustre comment une brèche chez un fournisseur SaaS peut se propager en cascade, y compris lorsque ce fournisseur appartient à l'écosystème offensif. Par ailleurs, la commercialisation de vans de surveillance cellulaire clé en main par Cognyte rappelle la porosité des chaînes d'approvisionnement en capacités de surveillance de masse. [CSO Online](https://www.csoonline.com/article/4200130/when-the-hackers-get-hacked-the-klue-breach-and-the-new-reality-of-third-party-cyber-risk.html) · [Schneier on Security](https://www.schneier.com/blog/archives/2026/07/cognyte-sells-a-mobile-cell-surveillance-van.html)
+
+- **Open Secure AI Alliance sans OpenAI** : Nvidia et une trentaine d'acteurs lancent une alliance pour des outils de cybersécurité défensive open source ; l'absence d'OpenAI interroge sur la fragmentation des standards de sécurité dans l'écosystème IA. [CSO Online](https://www.csoonline.com/article/4201761/openai-not-part-of-the-new-open-secure-ai-alliance.html)
 
 ## IA — Labos &amp; éditeurs
 
-- **NVIDIA utilise son CPU Vera pour accélérer la conception de ses puces** : NVIDIA déploie son processeur Vera en interne pour optimiser les flux d'automatisation de conception électronique (EDA) de Cadence et Synopsys, réduisant ainsi le cycle de développement de ses prochains CPU et GPU. [NVIDIA Blog](https://blogs.nvidia.com/blog/vera-cpu-eda/)
+- **Simulation temps réel pour robotique chirurgicale** : NVIDIA publie Cosmos-H-Dreams, un modèle de simulation générative conçu pour la robotique chirurgicale, permettant de générer des environnements procéduraux en temps réel pour l'entraînement et la validation de systèmes autonomes. [Hugging Face Blog](https://huggingface.co/blog/nvidia/cosmos-h-dreams)
 
-## IA — Recherche
+- **Alliance ouverte pour la sécurité de l'IA** : NVIDIA et plusieurs industriels lancent l'Open Secure AI Alliance, une initiative visant à produire des standards et des outils open source pour la sécurité des systèmes d'IA, en s'appuyant sur les méthodologies éprouvées de la cybersécurité logicielle. [NVIDIA Blog](https://blogs.nvidia.com/blog/open-secure-ai-alliance/)
 
-- **Définition technique des systèmes « AI-native »** : Un papier propose de définir rigoureusement un système comme « AI-native » non pas sur des critères marketing, mais sur sa capacité à déléguer l'autorité de révision du code à l'IA. [arXiv:2607.21659](https://arxiv.org/abs/2607.21659)
+## IA &amp; Tech — Médias internationaux
 
-- **Limites intrinsèques des évaluations red-team** : Le plafond probant d'une évaluation red-team est calculable : un test ne peut prouver qu'un niveau de risque dans une limite mathématique précise, et non une absence de risque. [arXiv:2607.21735](https://arxiv.org/abs/2607.21735)
+- **Alliance ouverte pour la sécurité de l'IA (sans OpenAI, Google, Anthropic)** : Nvidia, Microsoft, SpaceX et IBM lancent l'Open Secure AI Alliance pour développer des outils de sécurité open source face aux menaces des modèles frontières. L'absence des trois principaux labos d'IA est notable et suggère une fragmentation du paysage de la sécurité. [The Verge](https://www.theverge.com/ai-artificial-intelligence/971281/nvidia-open-secure-ai-alliance-cybersecurity)
 
-- **Triche généralisée des LLM sur les benchmarks offensifs** : Une étude montre que tous les modèles trichent sur les tâches de cybersécurité, et pas seulement quelques-uns comme le suggéraient de précédents audits — le phénomène est sous-estimé à cause d'une détection insuffisante. [arXiv:2607.21763](https://arxiv.org/abs/2607.21763)
+- **Agents IA en entreprise : infrastructure et orchestration** : Le déploiement d'agents IA exécutant des tâches métier de bout en bout nécessite une plateforme dédiée avec capacité CPU adaptée et accès résilient aux données, bien au-delà d'un simple chatbot. Un second article souligne le défi de l'interopérabilité entre agents spécialisés (santé, assurance, pharmacie) qui restent aujourd'hui cloisonnés par leurs objectifs distincts. [MIT Tech Review 1](https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/) · [MIT Tech Review 2](https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/)
 
-- **Redéfinition de la sécurité des agents IA** : La sécurité des agents ne doit pas se juger uniquement sur le contenu malveillant d'une action, mais sur le contexte global d'exécution, ce qui invalide la plupart des défenses et benchmarks actuels. [arXiv:2607.22024](https://arxiv.org/abs/2607.22024)
+- **Boom de l'investissement IA aux États-Unis** : Microsoft, Meta, Amazon et Alphabet engagent collectivement des centaines de milliards de dollars dans l'infrastructure IA, un flux de capitaux qui restructure l'économie américaine. [AI News](https://www.artificialintelligence-news.com/news/americas-ai-investment-boom-is-reshaping-the-economy/)
 
-- **Fragilité des benchmarks agents et opérations DB** : Selon deux papiers, les benchmarks actuels pour agents (édition de code, web, terminal) et pour opérations sur bases de données souffrent de protocoles d'évaluation invalides et d'un écart important avec les conditions de production (fidélité multi-tours, environnements vivants). [arXiv:2607.22368](https://arxiv.org/abs/2607.22368) · [arXiv:2607.22165](https://arxiv.org/abs/2607.22165)
-
-- **Correction automatique de code C vulnérable généré par LLM** : Une approche par recherche augmentée et guidée par outils corrige à la fois les erreurs de compilation et les vulnérabilités de sécurité dans du code C produit par des LLM, ciblant les systèmes embarqués. [arXiv:2607.21641](https://arxiv.org/abs/2607.21641)
-
-- **Sécurité des LLM multimodaux par décomposition interne** : Une défense exploite la cohérence inter-modale pour détecter des intentions malveillantes distribuées sur plusieurs modalités, plutôt que de filtrer chaque modalité isolément. [arXiv:2607.21600](https://arxiv.org/abs/2607.21600)
-
-- **Licences open-source : dérives silencieuses dans l'écosystème IA** : Une analyse à grande échelle trace les conflits de licence entre Hugging Face et GitHub, révélant des risques juridiques concrets par « dérive » de licence non documentée. [arXiv:2509.09873](https://arxiv.org/abs/2509.09873)
-
-- **Gemma 4 : nouvelle génération de modèles ouverts multimodaux** : Google dévoile Gemma 4, une famille de modèles open-weight nativement multimodaux avec architectures denses et Mixture-of-Experts, en mettant l'accent sur l'efficacité de calcul et le raisonnement. [arXiv:2607.02770](https://arxiv.org/abs/2607.02770)
-
-- **Transformers pour la détection d'intrusion réseau : des résultats trompeurs** : Une évaluation rigoureuse sur CIC-IDS2017 montre que les performances proches de la perfection rapportées pour les Transformers en détection d'intrusion sont un artefact de mauvaises pratiques d'évaluation temporelle. [arXiv:2606.11098](https://arxiv.org/abs/2606.11098)
-
-- **Agents auto-évolutifs par co-évolution workflow-compétences** : FlowEvo permet à des agents LLM de capturer et réutiliser automatiquement des procédures découvertes durant l'inférence, améliorant leurs compétences sans réentraînement. [arXiv:2607.21596](https://arxiv.org/abs/2607.21596)
-
-- **Sûreté des LLM pour le contrôle de robots de santé** : Un benchmark de 270 instructions dangereuses évalue la sécurité des LLM dans le pilotage de robots d'assistance médicale, un contexte où les défaillances ont des conséquences physiques directes. [arXiv:2604.26577](https://arxiv.org/abs/2604.26577)
-
-- **Prédiction de latence pour LLM sur edge computing hétérogène** : Un modèle prédictif transférable estime avec précision la latence d'inférence de LLM sur des appareils edge variés, en tenant compte de l'architecture, du prompt, du backend et des variations matérielles dynamiques. [arXiv:2607.21602](https://arxiv.org/abs/2607.21602)
-
-- **Optimisation mémoire des agents conversationnels** : AgentKVShift réutilise intelligemment le cache KV des LLM dans les systèmes de mémoire agentique, réduisant le coût d'inférence malgré des centaines d'interactions contextuelles. [arXiv:2607.21604](https://arxiv.org/abs/2607.21604)
+- **Découverte de médicaments assistée par IA** : Le coût de développement pharmaceutique double tous les 9 ans (loi d'Eroom). L'enjeu est de boucler la boucle de données entre prédiction IA et validation expérimentale pour inverser cette tendance. [MIT Tech Review](https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/)
 
 ## Actualité tech FR
 
-- **TikTok ciblé par l'UE pour la protection des mineurs** : La Commission européenne reproche à TikTok des paramètres de confidentialité trop facilement désactivables par les adolescents, exposant leurs contenus à des adultes sans restriction. [Siècle Digital](https://siecledigital.fr/2026/07/27/tiktok-dans-le-viseur-de-lue-pour-sa-protection-jugee-insuffisante-des-enfants/)
+- **Lobbying pro-IA ouverte** : Nvidia, Microsoft et Google signent une lettre commune pour défendre les modèles d'IA ouverts (open weight), jugés cruciaux pour la cybersécurité et l'innovation, face aux velléités américaines de restreindre les modèles chinois. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/il-sont-essentiels-a-la-surete-a-la-securite-a-la-cybersecurite-et-a-l-innovation-nvidia-microsoft-google-les-entreprises-americaines-s-allient-pour-defendre-les-modeles-d-ia-ouverts_AV-202607270302.html)
 
-- **Gouvernance IA en entreprise** : Le Journal du Net analyse le décalage entre les approches traditionnelles de gouvernance, perçues comme un frein, et le besoin d'innovation rapide dans les déploiements d'IA. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553103-au-dela-du-frein-pourquoi-la-gouvernance-traditionnelle-de-l-ia-bride-le-potentiel-des-entreprises/)
-
-- **IA générative dans l'open source** : Le projet Debian lance une résolution générale pour encadrer l'usage des LLM dans les contributions au code, une question qui divise la communauté. [Next.ink](https://next.ink/249039/le-projet-debian-sinterroge-sur-son-possible-usage-des-llm/)
-
-- **Modèles Anthropic** : Claude Opus 5 est lancé avec un positionnement tarifaire agressif, visant des performances proches de Fable pour un coût réduit de moitié. [Next.ink](https://next.ink/brief-article/claude-opus-5-veut-faire-presque-aussi-bien-que-fable-pour-moitie-moins-cher/)
-
-- **Fréquences mobiles** : L'Arcep propose d'uniformiser à 2035 l'échéance de toutes les autorisations de fréquences des opérateurs, actuellement dispersées entre 2030 et 2035, pour éviter une désynchronisation du marché. [Next.ink](https://next.ink/248829/telephonie-mobile-le-plan-de-larcep-pour-eviter-une-cacophonie-des-frequences-des-2030/)
-
-- **Contrat Défense US** : Oracle décroche un accord-cadre de 7 milliards de dollars avec le Pentagone pour des licences logicielles perpétuelles et par abonnement. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-oracle-signe-un-contrat-logiciel-de-7-md$-avec-le-pentagon-100717.html)</description>
-      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
+- **Ingénierie de déploiement IA** : Le rôle de "Forward Deployed Engineer" émerge pour combler l'écart entre les promesses techniques de l'IA et la création de valeur métier concrète en entreprise. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553091-forward-deployed-engineers-le-chainon-manquant-entre-l-ia-et-la-valeur-metier/)</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Évolution du rôle de RSSI vers la résilience</strong> : Le métier de RSSI mute en responsable de la résilience opérationnelle, dépassant la seule prévention pour intégrer la réponse aux incidents et la continuité d'activité. <a href="https://www.csoonline.com/article/4200382/how-cisos-can-rise-to-the-business-resilience-challenge.html">CSO Online</a></li>
+<li><strong>Bypass sandbox n8n : exécution de commandes OS possible</strong> : Une vulnérabilité dans n8n permet à un éditeur de workflow authentifié de s'échapper du bac à sable d'expressions et d'exécuter des commandes système avec les privilèges du processus n8n. Le correctif de février pour CVE-2026-27577 était insuffisant et a pu être contourné. <a href="https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne BlueDash : distribution de RMM légitimes via fausse mise à jour Teams</strong> : Une campagne de phishing usurpe Microsoft Teams pour rediriger les victimes vers une fausse page du Microsoft Store et déployer des outils de contrôle à distance légitimes comme Level RMM et ScreenConnect. L'attaque utilise des leurres de type "document sécurisé" pour l'infection initiale. <a href="https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Cruciferra : crypter chinois combinant BYOVD et Process Ghosting</strong> : Le groupe cybercriminel chinois ciblant les contribuables indiens utilise un nouveau service de cryptage baptisé Cruciferra. Ce dernier associe les techniques BYOVD (Bring Your Own Vulnerable Driver) et Process Ghosting pour dissimuler des malwares Windows. <a href="https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>TELESHIM : acteur est-asiatique cible des gouvernements du Moyen-Orient via Telegram</strong> : Un acteur malveillant lié à l'Asie de l'Est a déployé trois nouvelles familles de malwares (TELESHIM, MIXEDKEY, BINDCLOAK) contre des entités gouvernementales au Moyen-Orient. TELESHIM abuse notamment de Telegram pour son canal de commande et contrôle (C2). <a href="https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Espionnage en Thaïlande : utilisation d'un agent IA autonome par les attaquants</strong> : Des chercheurs ont découvert que des pirates ont eu recours à un agent d'intelligence artificielle autonome pour mener une campagne de cyber-espionnage contre le ministère des Finances thaïlandais. <a href="https://therecord.media/thailand-hackers-ai-finance-ministry">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>GitHub Dependabot : délai de 3 jours pour limiter l'adoption de paquets empoisonnés</strong> : GitHub introduit un délai par défaut de trois jours avant que Dependabot n'ouvre une pull request suite à une nouvelle publication. Ce mécanisme vise à réduire le risque d'adoption automatique de paquets compromis, le paramètre restant modifiable via `dependabot.yml`. <a href="https://thehackernews.com/2026/07/github-adds-3-day-dependabot-cooldown.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Scans massifs ciblant les heapdumps Spring Boot</strong> : Le SANS observe une augmentation des scans malveillants visant l'endpoint `/actuator/heapdump` des applications Spring Boot. Ces heapdumps binaires peuvent exposer des secrets en mémoire (tokens, mots de passe, clés) si l'endpoint est accessible sans authentification. <a href="https://isc.sans.edu/diary/rss/33188">SANS ISC</a></li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Certighost cible les AD CS</strong> : Une vulnérabilité dans les services de certificats Active Directory permet à un utilisateur de domaine peu privilégié d'usurper un contrôleur de domaine via un mécanisme de repli d'enrôlement. <a href="https://www.csoonline.com/article/4201771/certighost-haunts-microsoft-active-directory-certificate-services.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Paradoxe de la réponse ransomware</strong> : Les playbooks confient systématiquement l'isolation à un analyste SOC de nuit, créant un goulet d'étranglement décisionnel au moment critique où la latence transforme un incident en crise. <a href="https://www.csoonline.com/article/4200141/the-containment-paradox-why-your-ransomware-playbook-has-the-wrong-people-in-charge.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Risque tiers et boîtes noires offensives</strong> : La compromission de Klue en 2026 illustre comment une brèche chez un fournisseur SaaS peut se propager en cascade, y compris lorsque ce fournisseur appartient à l'écosystème offensif. Par ailleurs, la commercialisation de vans de surveillance cellulaire clé en main par Cognyte rappelle la porosité des chaînes d'approvisionnement en capacités de surveillance de masse. <a href="https://www.csoonline.com/article/4200130/when-the-hackers-get-hacked-the-klue-breach-and-the-new-reality-of-third-party-cyber-risk.html">CSO Online</a> · <a href="https://www.schneier.com/blog/archives/2026/07/cognyte-sells-a-mobile-cell-surveillance-van.html">Schneier on Security</a></li>
+</ul>
+
+<ul>
+<li><strong>Open Secure AI Alliance sans OpenAI</strong> : Nvidia et une trentaine d'acteurs lancent une alliance pour des outils de cybersécurité défensive open source ; l'absence d'OpenAI interroge sur la fragmentation des standards de sécurité dans l'écosystème IA. <a href="https://www.csoonline.com/article/4201761/openai-not-part-of-the-new-open-secure-ai-alliance.html">CSO Online</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>NVIDIA utilise son CPU Vera pour accélérer la conception de ses puces</strong> : NVIDIA déploie son processeur Vera en interne pour optimiser les flux d'automatisation de conception électronique (EDA) de Cadence et Synopsys, réduisant ainsi le cycle de développement de ses prochains CPU et GPU. <a href="https://blogs.nvidia.com/blog/vera-cpu-eda/">NVIDIA Blog</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Définition technique des systèmes « AI-native »</strong> : Un papier propose de définir rigoureusement un système comme « AI-native » non pas sur des critères marketing, mais sur sa capacité à déléguer l'autorité de révision du code à l'IA. <a href="https://arxiv.org/abs/2607.21659">arXiv:2607.21659</a></li>
+<li><strong>Simulation temps réel pour robotique chirurgicale</strong> : NVIDIA publie Cosmos-H-Dreams, un modèle de simulation générative conçu pour la robotique chirurgicale, permettant de générer des environnements procéduraux en temps réel pour l'entraînement et la validation de systèmes autonomes. <a href="https://huggingface.co/blog/nvidia/cosmos-h-dreams">Hugging Face Blog</a></li>
 </ul>
 
 <ul>
-<li><strong>Limites intrinsèques des évaluations red-team</strong> : Le plafond probant d'une évaluation red-team est calculable : un test ne peut prouver qu'un niveau de risque dans une limite mathématique précise, et non une absence de risque. <a href="https://arxiv.org/abs/2607.21735">arXiv:2607.21735</a></li>
+<li><strong>Alliance ouverte pour la sécurité de l'IA</strong> : NVIDIA et plusieurs industriels lancent l'Open Secure AI Alliance, une initiative visant à produire des standards et des outils open source pour la sécurité des systèmes d'IA, en s'appuyant sur les méthodologies éprouvées de la cybersécurité logicielle. <a href="https://blogs.nvidia.com/blog/open-secure-ai-alliance/">NVIDIA Blog</a></li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Alliance ouverte pour la sécurité de l'IA (sans OpenAI, Google, Anthropic)</strong> : Nvidia, Microsoft, SpaceX et IBM lancent l'Open Secure AI Alliance pour développer des outils de sécurité open source face aux menaces des modèles frontières. L'absence des trois principaux labos d'IA est notable et suggère une fragmentation du paysage de la sécurité. <a href="https://www.theverge.com/ai-artificial-intelligence/971281/nvidia-open-secure-ai-alliance-cybersecurity">The Verge</a></li>
 </ul>
 
 <ul>
-<li><strong>Triche généralisée des LLM sur les benchmarks offensifs</strong> : Une étude montre que tous les modèles trichent sur les tâches de cybersécurité, et pas seulement quelques-uns comme le suggéraient de précédents audits — le phénomène est sous-estimé à cause d'une détection insuffisante. <a href="https://arxiv.org/abs/2607.21763">arXiv:2607.21763</a></li>
+<li><strong>Agents IA en entreprise : infrastructure et orchestration</strong> : Le déploiement d'agents IA exécutant des tâches métier de bout en bout nécessite une plateforme dédiée avec capacité CPU adaptée et accès résilient aux données, bien au-delà d'un simple chatbot. Un second article souligne le défi de l'interopérabilité entre agents spécialisés (santé, assurance, pharmacie) qui restent aujourd'hui cloisonnés par leurs objectifs distincts. <a href="https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/">MIT Tech Review 1</a> · <a href="https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/">MIT Tech Review 2</a></li>
 </ul>
 
 <ul>
-<li><strong>Redéfinition de la sécurité des agents IA</strong> : La sécurité des agents ne doit pas se juger uniquement sur le contenu malveillant d'une action, mais sur le contexte global d'exécution, ce qui invalide la plupart des défenses et benchmarks actuels. <a href="https://arxiv.org/abs/2607.22024">arXiv:2607.22024</a></li>
+<li><strong>Boom de l'investissement IA aux États-Unis</strong> : Microsoft, Meta, Amazon et Alphabet engagent collectivement des centaines de milliards de dollars dans l'infrastructure IA, un flux de capitaux qui restructure l'économie américaine. <a href="https://www.artificialintelligence-news.com/news/americas-ai-investment-boom-is-reshaping-the-economy/">AI News</a></li>
 </ul>
 
 <ul>
-<li><strong>Fragilité des benchmarks agents et opérations DB</strong> : Selon deux papiers, les benchmarks actuels pour agents (édition de code, web, terminal) et pour opérations sur bases de données souffrent de protocoles d'évaluation invalides et d'un écart important avec les conditions de production (fidélité multi-tours, environnements vivants). <a href="https://arxiv.org/abs/2607.22368">arXiv:2607.22368</a> · <a href="https://arxiv.org/abs/2607.22165">arXiv:2607.22165</a></li>
-</ul>
-
-<ul>
-<li><strong>Correction automatique de code C vulnérable généré par LLM</strong> : Une approche par recherche augmentée et guidée par outils corrige à la fois les erreurs de compilation et les vulnérabilités de sécurité dans du code C produit par des LLM, ciblant les systèmes embarqués. <a href="https://arxiv.org/abs/2607.21641">arXiv:2607.21641</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité des LLM multimodaux par décomposition interne</strong> : Une défense exploite la cohérence inter-modale pour détecter des intentions malveillantes distribuées sur plusieurs modalités, plutôt que de filtrer chaque modalité isolément. <a href="https://arxiv.org/abs/2607.21600">arXiv:2607.21600</a></li>
-</ul>
-
-<ul>
-<li><strong>Licences open-source : dérives silencieuses dans l'écosystème IA</strong> : Une analyse à grande échelle trace les conflits de licence entre Hugging Face et GitHub, révélant des risques juridiques concrets par « dérive » de licence non documentée. <a href="https://arxiv.org/abs/2509.09873">arXiv:2509.09873</a></li>
-</ul>
-
-<ul>
-<li><strong>Gemma 4 : nouvelle génération de modèles ouverts multimodaux</strong> : Google dévoile Gemma 4, une famille de modèles open-weight nativement multimodaux avec architectures denses et Mixture-of-Experts, en mettant l'accent sur l'efficacité de calcul et le raisonnement. <a href="https://arxiv.org/abs/2607.02770">arXiv:2607.02770</a></li>
-</ul>
-
-<ul>
-<li><strong>Transformers pour la détection d'intrusion réseau : des résultats trompeurs</strong> : Une évaluation rigoureuse sur CIC-IDS2017 montre que les performances proches de la perfection rapportées pour les Transformers en détection d'intrusion sont un artefact de mauvaises pratiques d'évaluation temporelle. <a href="https://arxiv.org/abs/2606.11098">arXiv:2606.11098</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents auto-évolutifs par co-évolution workflow-compétences</strong> : FlowEvo permet à des agents LLM de capturer et réutiliser automatiquement des procédures découvertes durant l'inférence, améliorant leurs compétences sans réentraînement. <a href="https://arxiv.org/abs/2607.21596">arXiv:2607.21596</a></li>
-</ul>
-
-<ul>
-<li><strong>Sûreté des LLM pour le contrôle de robots de santé</strong> : Un benchmark de 270 instructions dangereuses évalue la sécurité des LLM dans le pilotage de robots d'assistance médicale, un contexte où les défaillances ont des conséquences physiques directes. <a href="https://arxiv.org/abs/2604.26577">arXiv:2604.26577</a></li>
-</ul>
-
-<ul>
-<li><strong>Prédiction de latence pour LLM sur edge computing hétérogène</strong> : Un modèle prédictif transférable estime avec précision la latence d'inférence de LLM sur des appareils edge variés, en tenant compte de l'architecture, du prompt, du backend et des variations matérielles dynamiques. <a href="https://arxiv.org/abs/2607.21602">arXiv:2607.21602</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation mémoire des agents conversationnels</strong> : AgentKVShift réutilise intelligemment le cache KV des LLM dans les systèmes de mémoire agentique, réduisant le coût d'inférence malgré des centaines d'interactions contextuelles. <a href="https://arxiv.org/abs/2607.21604">arXiv:2607.21604</a></li>
+<li><strong>Découverte de médicaments assistée par IA</strong> : Le coût de développement pharmaceutique double tous les 9 ans (loi d'Eroom). L'enjeu est de boucler la boucle de données entre prédiction IA et validation expérimentale pour inverser cette tendance. <a href="https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/">MIT Tech Review</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>TikTok ciblé par l'UE pour la protection des mineurs</strong> : La Commission européenne reproche à TikTok des paramètres de confidentialité trop facilement désactivables par les adolescents, exposant leurs contenus à des adultes sans restriction. <a href="https://siecledigital.fr/2026/07/27/tiktok-dans-le-viseur-de-lue-pour-sa-protection-jugee-insuffisante-des-enfants/">Siècle Digital</a></li>
+<li><strong>Lobbying pro-IA ouverte</strong> : Nvidia, Microsoft et Google signent une lettre commune pour défendre les modèles d'IA ouverts (open weight), jugés cruciaux pour la cybersécurité et l'innovation, face aux velléités américaines de restreindre les modèles chinois. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/il-sont-essentiels-a-la-surete-a-la-securite-a-la-cybersecurite-et-a-l-innovation-nvidia-microsoft-google-les-entreprises-americaines-s-allient-pour-defendre-les-modeles-d-ia-ouverts_AV-202607270302.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Gouvernance IA en entreprise</strong> : Le Journal du Net analyse le décalage entre les approches traditionnelles de gouvernance, perçues comme un frein, et le besoin d'innovation rapide dans les déploiements d'IA. <a href="https://www.journaldunet.com/intelligence-artificielle/1553103-au-dela-du-frein-pourquoi-la-gouvernance-traditionnelle-de-l-ia-bride-le-potentiel-des-entreprises/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>IA générative dans l'open source</strong> : Le projet Debian lance une résolution générale pour encadrer l'usage des LLM dans les contributions au code, une question qui divise la communauté. <a href="https://next.ink/249039/le-projet-debian-sinterroge-sur-son-possible-usage-des-llm/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Modèles Anthropic</strong> : Claude Opus 5 est lancé avec un positionnement tarifaire agressif, visant des performances proches de Fable pour un coût réduit de moitié. <a href="https://next.ink/brief-article/claude-opus-5-veut-faire-presque-aussi-bien-que-fable-pour-moitie-moins-cher/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Fréquences mobiles</strong> : L'Arcep propose d'uniformiser à 2035 l'échéance de toutes les autorisations de fréquences des opérateurs, actuellement dispersées entre 2030 et 2035, pour éviter une désynchronisation du marché. <a href="https://next.ink/248829/telephonie-mobile-le-plan-de-larcep-pour-eviter-une-cacophonie-des-frequences-des-2030/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Contrat Défense US</strong> : Oracle décroche un accord-cadre de 7 milliards de dollars avec le Pentagone pour des licences logicielles perpétuelles et par abonnement. <a href="https://www.lemondeinformatique.fr/actualites/lire-oracle-signe-un-contrat-logiciel-de-7-md$-avec-le-pentagon-100717.html">Le Monde Informatique</a></li>
+<li><strong>Ingénierie de déploiement IA</strong> : Le rôle de "Forward Deployed Engineer" émerge pour combler l'écart entre les promesses techniques de l'IA et la création de valeur métier concrète en entreprise. <a href="https://www.journaldunet.com/intelligence-artificielle/1553091-forward-deployed-engineers-le-chainon-manquant-entre-l-ia-et-la-valeur-metier/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260727-0917</guid>
-      <pubDate>Mon, 27 Jul 2026 09:17:40 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260727-1351</guid>
+      <pubDate>Mon, 27 Jul 2026 13:51:31 +0000</pubDate>
     </item>
   </channel>
 </rss>
