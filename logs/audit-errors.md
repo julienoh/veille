@@ -104,3 +104,5 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-23 12:46 UTC | scoring | Remember Jibo? Its Successor Is a Wearable That Turns Your L (Wired — AI) | Rate limit fournisseur LLM atteint |
 | 2026-07-23 18:20 UTC | scoring | Consommation des datacenters : de très grandes disparités ch (Next.ink) | Rate limit fournisseur LLM atteint |
 | 2026-07-24 08:23 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 62 column 6 (char 2444)) |
+| 2026-07-27 08:50 UTC | scoring | Robot Learning to Communicate through Projected Visual Abstr (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-07-27 09:12 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2455)) |

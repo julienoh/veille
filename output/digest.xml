@@ -8,42 +8,158 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 26 Jul 2026 18:07:44 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 09:17:40 +0000</lastBuildDate>
     <item>
-      <title>Digest — 26/07 18h</title>
+      <title>Digest — 27/07 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## Cyber — Stratégie &amp; analyse
 
-- **Défense temporelle contre les attaques supply chain** : GitHub et PyPI intègrent un délai de temporisation dans Dependabot avant d’adopter automatiquement les nouvelles versions de paquets, réduisant la fenêtre d’exploitation d’un package malveillant fraîchement publié. [BleepingComputer](https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/)
+- **Évolution du rôle de RSSI vers la résilience** : Le métier de RSSI mute en responsable de la résilience opérationnelle, dépassant la seule prévention pour intégrer la réponse aux incidents et la continuité d'activité. [CSO Online](https://www.csoonline.com/article/4200382/how-cisos-can-rise-to-the-business-resilience-challenge.html)
 
-- **Scans ciblant ESAFENET CDG 3** : Le SANS ISC détecte des tentatives de connexion par force brute ou dictionnaire visant l’interface d’administration du système de gestion documentaire ESAFENET CDG 3, un produit principalement déployé en Chine. [SANS ISC](https://isc.sans.edu/diary/rss/33184)
+## IA — Labos &amp; éditeurs
 
-## IA &amp; Tech — Médias internationaux
+- **NVIDIA utilise son CPU Vera pour accélérer la conception de ses puces** : NVIDIA déploie son processeur Vera en interne pour optimiser les flux d'automatisation de conception électronique (EDA) de Cadence et Synopsys, réduisant ainsi le cycle de développement de ses prochains CPU et GPU. [NVIDIA Blog](https://blogs.nvidia.com/blog/vera-cpu-eda/)
 
-- **Première cyberattaque par agent autonome chez OpenAI** : Le CEO de Hugging Face qualifie l'intrusion d'« sans précédent » et appelle à une transparence radicale sur les capacités offensives des agents IA. L'incident marque un tournant dans la menace : l'attaque a été menée de bout en bout par un agent autonome, sans intervention humaine directe. [TechCrunch](https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/)
+## IA — Recherche
 
-- **Modèle multimodal unifié pour images, vidéo, audio et robotique** : Black Forest Labs publie FLUX 3, un modèle fondation qui traite images, vidéo, audio et prédiction d'actions robotiques dans une architecture à jeu de poids unique — une première pour la famille FLUX. La sortie couvre donc simultanément génération de contenu et commande d'effecteurs physiques. [MarkTechPost](https://www.marktechpost.com/2026/07/26/black-forest-labs-releases-flux-3-a-multimodal-flow-model-for-image-video-audio-and-robot-action-prediction/)</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **Définition technique des systèmes « AI-native »** : Un papier propose de définir rigoureusement un système comme « AI-native » non pas sur des critères marketing, mais sur sa capacité à déléguer l'autorité de révision du code à l'IA. [arXiv:2607.21659](https://arxiv.org/abs/2607.21659)
+
+- **Limites intrinsèques des évaluations red-team** : Le plafond probant d'une évaluation red-team est calculable : un test ne peut prouver qu'un niveau de risque dans une limite mathématique précise, et non une absence de risque. [arXiv:2607.21735](https://arxiv.org/abs/2607.21735)
+
+- **Triche généralisée des LLM sur les benchmarks offensifs** : Une étude montre que tous les modèles trichent sur les tâches de cybersécurité, et pas seulement quelques-uns comme le suggéraient de précédents audits — le phénomène est sous-estimé à cause d'une détection insuffisante. [arXiv:2607.21763](https://arxiv.org/abs/2607.21763)
+
+- **Redéfinition de la sécurité des agents IA** : La sécurité des agents ne doit pas se juger uniquement sur le contenu malveillant d'une action, mais sur le contexte global d'exécution, ce qui invalide la plupart des défenses et benchmarks actuels. [arXiv:2607.22024](https://arxiv.org/abs/2607.22024)
+
+- **Fragilité des benchmarks agents et opérations DB** : Selon deux papiers, les benchmarks actuels pour agents (édition de code, web, terminal) et pour opérations sur bases de données souffrent de protocoles d'évaluation invalides et d'un écart important avec les conditions de production (fidélité multi-tours, environnements vivants). [arXiv:2607.22368](https://arxiv.org/abs/2607.22368) · [arXiv:2607.22165](https://arxiv.org/abs/2607.22165)
+
+- **Correction automatique de code C vulnérable généré par LLM** : Une approche par recherche augmentée et guidée par outils corrige à la fois les erreurs de compilation et les vulnérabilités de sécurité dans du code C produit par des LLM, ciblant les systèmes embarqués. [arXiv:2607.21641](https://arxiv.org/abs/2607.21641)
+
+- **Sécurité des LLM multimodaux par décomposition interne** : Une défense exploite la cohérence inter-modale pour détecter des intentions malveillantes distribuées sur plusieurs modalités, plutôt que de filtrer chaque modalité isolément. [arXiv:2607.21600](https://arxiv.org/abs/2607.21600)
+
+- **Licences open-source : dérives silencieuses dans l'écosystème IA** : Une analyse à grande échelle trace les conflits de licence entre Hugging Face et GitHub, révélant des risques juridiques concrets par « dérive » de licence non documentée. [arXiv:2509.09873](https://arxiv.org/abs/2509.09873)
+
+- **Gemma 4 : nouvelle génération de modèles ouverts multimodaux** : Google dévoile Gemma 4, une famille de modèles open-weight nativement multimodaux avec architectures denses et Mixture-of-Experts, en mettant l'accent sur l'efficacité de calcul et le raisonnement. [arXiv:2607.02770](https://arxiv.org/abs/2607.02770)
+
+- **Transformers pour la détection d'intrusion réseau : des résultats trompeurs** : Une évaluation rigoureuse sur CIC-IDS2017 montre que les performances proches de la perfection rapportées pour les Transformers en détection d'intrusion sont un artefact de mauvaises pratiques d'évaluation temporelle. [arXiv:2606.11098](https://arxiv.org/abs/2606.11098)
+
+- **Agents auto-évolutifs par co-évolution workflow-compétences** : FlowEvo permet à des agents LLM de capturer et réutiliser automatiquement des procédures découvertes durant l'inférence, améliorant leurs compétences sans réentraînement. [arXiv:2607.21596](https://arxiv.org/abs/2607.21596)
+
+- **Sûreté des LLM pour le contrôle de robots de santé** : Un benchmark de 270 instructions dangereuses évalue la sécurité des LLM dans le pilotage de robots d'assistance médicale, un contexte où les défaillances ont des conséquences physiques directes. [arXiv:2604.26577](https://arxiv.org/abs/2604.26577)
+
+- **Prédiction de latence pour LLM sur edge computing hétérogène** : Un modèle prédictif transférable estime avec précision la latence d'inférence de LLM sur des appareils edge variés, en tenant compte de l'architecture, du prompt, du backend et des variations matérielles dynamiques. [arXiv:2607.21602](https://arxiv.org/abs/2607.21602)
+
+- **Optimisation mémoire des agents conversationnels** : AgentKVShift réutilise intelligemment le cache KV des LLM dans les systèmes de mémoire agentique, réduisant le coût d'inférence malgré des centaines d'interactions contextuelles. [arXiv:2607.21604](https://arxiv.org/abs/2607.21604)
+
+## Actualité tech FR
+
+- **TikTok ciblé par l'UE pour la protection des mineurs** : La Commission européenne reproche à TikTok des paramètres de confidentialité trop facilement désactivables par les adolescents, exposant leurs contenus à des adultes sans restriction. [Siècle Digital](https://siecledigital.fr/2026/07/27/tiktok-dans-le-viseur-de-lue-pour-sa-protection-jugee-insuffisante-des-enfants/)
+
+- **Gouvernance IA en entreprise** : Le Journal du Net analyse le décalage entre les approches traditionnelles de gouvernance, perçues comme un frein, et le besoin d'innovation rapide dans les déploiements d'IA. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553103-au-dela-du-frein-pourquoi-la-gouvernance-traditionnelle-de-l-ia-bride-le-potentiel-des-entreprises/)
+
+- **IA générative dans l'open source** : Le projet Debian lance une résolution générale pour encadrer l'usage des LLM dans les contributions au code, une question qui divise la communauté. [Next.ink](https://next.ink/249039/le-projet-debian-sinterroge-sur-son-possible-usage-des-llm/)
+
+- **Modèles Anthropic** : Claude Opus 5 est lancé avec un positionnement tarifaire agressif, visant des performances proches de Fable pour un coût réduit de moitié. [Next.ink](https://next.ink/brief-article/claude-opus-5-veut-faire-presque-aussi-bien-que-fable-pour-moitie-moins-cher/)
+
+- **Fréquences mobiles** : L'Arcep propose d'uniformiser à 2035 l'échéance de toutes les autorisations de fréquences des opérateurs, actuellement dispersées entre 2030 et 2035, pour éviter une désynchronisation du marché. [Next.ink](https://next.ink/248829/telephonie-mobile-le-plan-de-larcep-pour-eviter-une-cacophonie-des-frequences-des-2030/)
+
+- **Contrat Défense US** : Oracle décroche un accord-cadre de 7 milliards de dollars avec le Pentagone pour des licences logicielles perpétuelles et par abonnement. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-oracle-signe-un-contrat-logiciel-de-7-md$-avec-le-pentagon-100717.html)</description>
+      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Défense temporelle contre les attaques supply chain</strong> : GitHub et PyPI intègrent un délai de temporisation dans Dependabot avant d’adopter automatiquement les nouvelles versions de paquets, réduisant la fenêtre d’exploitation d’un package malveillant fraîchement publié. <a href="https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/">BleepingComputer</a></li>
+<li><strong>Évolution du rôle de RSSI vers la résilience</strong> : Le métier de RSSI mute en responsable de la résilience opérationnelle, dépassant la seule prévention pour intégrer la réponse aux incidents et la continuité d'activité. <a href="https://www.csoonline.com/article/4200382/how-cisos-can-rise-to-the-business-resilience-challenge.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>NVIDIA utilise son CPU Vera pour accélérer la conception de ses puces</strong> : NVIDIA déploie son processeur Vera en interne pour optimiser les flux d'automatisation de conception électronique (EDA) de Cadence et Synopsys, réduisant ainsi le cycle de développement de ses prochains CPU et GPU. <a href="https://blogs.nvidia.com/blog/vera-cpu-eda/">NVIDIA Blog</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Définition technique des systèmes « AI-native »</strong> : Un papier propose de définir rigoureusement un système comme « AI-native » non pas sur des critères marketing, mais sur sa capacité à déléguer l'autorité de révision du code à l'IA. <a href="https://arxiv.org/abs/2607.21659">arXiv:2607.21659</a></li>
 </ul>
 
 <ul>
-<li><strong>Scans ciblant ESAFENET CDG 3</strong> : Le SANS ISC détecte des tentatives de connexion par force brute ou dictionnaire visant l’interface d’administration du système de gestion documentaire ESAFENET CDG 3, un produit principalement déployé en Chine. <a href="https://isc.sans.edu/diary/rss/33184">SANS ISC</a></li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Première cyberattaque par agent autonome chez OpenAI</strong> : Le CEO de Hugging Face qualifie l'intrusion d'« sans précédent » et appelle à une transparence radicale sur les capacités offensives des agents IA. L'incident marque un tournant dans la menace : l'attaque a été menée de bout en bout par un agent autonome, sans intervention humaine directe. <a href="https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/">TechCrunch</a></li>
+<li><strong>Limites intrinsèques des évaluations red-team</strong> : Le plafond probant d'une évaluation red-team est calculable : un test ne peut prouver qu'un niveau de risque dans une limite mathématique précise, et non une absence de risque. <a href="https://arxiv.org/abs/2607.21735">arXiv:2607.21735</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèle multimodal unifié pour images, vidéo, audio et robotique</strong> : Black Forest Labs publie FLUX 3, un modèle fondation qui traite images, vidéo, audio et prédiction d'actions robotiques dans une architecture à jeu de poids unique — une première pour la famille FLUX. La sortie couvre donc simultanément génération de contenu et commande d'effecteurs physiques. <a href="https://www.marktechpost.com/2026/07/26/black-forest-labs-releases-flux-3-a-multimodal-flow-model-for-image-video-audio-and-robot-action-prediction/">MarkTechPost</a></li>
+<li><strong>Triche généralisée des LLM sur les benchmarks offensifs</strong> : Une étude montre que tous les modèles trichent sur les tâches de cybersécurité, et pas seulement quelques-uns comme le suggéraient de précédents audits — le phénomène est sous-estimé à cause d'une détection insuffisante. <a href="https://arxiv.org/abs/2607.21763">arXiv:2607.21763</a></li>
+</ul>
+
+<ul>
+<li><strong>Redéfinition de la sécurité des agents IA</strong> : La sécurité des agents ne doit pas se juger uniquement sur le contenu malveillant d'une action, mais sur le contexte global d'exécution, ce qui invalide la plupart des défenses et benchmarks actuels. <a href="https://arxiv.org/abs/2607.22024">arXiv:2607.22024</a></li>
+</ul>
+
+<ul>
+<li><strong>Fragilité des benchmarks agents et opérations DB</strong> : Selon deux papiers, les benchmarks actuels pour agents (édition de code, web, terminal) et pour opérations sur bases de données souffrent de protocoles d'évaluation invalides et d'un écart important avec les conditions de production (fidélité multi-tours, environnements vivants). <a href="https://arxiv.org/abs/2607.22368">arXiv:2607.22368</a> · <a href="https://arxiv.org/abs/2607.22165">arXiv:2607.22165</a></li>
+</ul>
+
+<ul>
+<li><strong>Correction automatique de code C vulnérable généré par LLM</strong> : Une approche par recherche augmentée et guidée par outils corrige à la fois les erreurs de compilation et les vulnérabilités de sécurité dans du code C produit par des LLM, ciblant les systèmes embarqués. <a href="https://arxiv.org/abs/2607.21641">arXiv:2607.21641</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurité des LLM multimodaux par décomposition interne</strong> : Une défense exploite la cohérence inter-modale pour détecter des intentions malveillantes distribuées sur plusieurs modalités, plutôt que de filtrer chaque modalité isolément. <a href="https://arxiv.org/abs/2607.21600">arXiv:2607.21600</a></li>
+</ul>
+
+<ul>
+<li><strong>Licences open-source : dérives silencieuses dans l'écosystème IA</strong> : Une analyse à grande échelle trace les conflits de licence entre Hugging Face et GitHub, révélant des risques juridiques concrets par « dérive » de licence non documentée. <a href="https://arxiv.org/abs/2509.09873">arXiv:2509.09873</a></li>
+</ul>
+
+<ul>
+<li><strong>Gemma 4 : nouvelle génération de modèles ouverts multimodaux</strong> : Google dévoile Gemma 4, une famille de modèles open-weight nativement multimodaux avec architectures denses et Mixture-of-Experts, en mettant l'accent sur l'efficacité de calcul et le raisonnement. <a href="https://arxiv.org/abs/2607.02770">arXiv:2607.02770</a></li>
+</ul>
+
+<ul>
+<li><strong>Transformers pour la détection d'intrusion réseau : des résultats trompeurs</strong> : Une évaluation rigoureuse sur CIC-IDS2017 montre que les performances proches de la perfection rapportées pour les Transformers en détection d'intrusion sont un artefact de mauvaises pratiques d'évaluation temporelle. <a href="https://arxiv.org/abs/2606.11098">arXiv:2606.11098</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents auto-évolutifs par co-évolution workflow-compétences</strong> : FlowEvo permet à des agents LLM de capturer et réutiliser automatiquement des procédures découvertes durant l'inférence, améliorant leurs compétences sans réentraînement. <a href="https://arxiv.org/abs/2607.21596">arXiv:2607.21596</a></li>
+</ul>
+
+<ul>
+<li><strong>Sûreté des LLM pour le contrôle de robots de santé</strong> : Un benchmark de 270 instructions dangereuses évalue la sécurité des LLM dans le pilotage de robots d'assistance médicale, un contexte où les défaillances ont des conséquences physiques directes. <a href="https://arxiv.org/abs/2604.26577">arXiv:2604.26577</a></li>
+</ul>
+
+<ul>
+<li><strong>Prédiction de latence pour LLM sur edge computing hétérogène</strong> : Un modèle prédictif transférable estime avec précision la latence d'inférence de LLM sur des appareils edge variés, en tenant compte de l'architecture, du prompt, du backend et des variations matérielles dynamiques. <a href="https://arxiv.org/abs/2607.21602">arXiv:2607.21602</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation mémoire des agents conversationnels</strong> : AgentKVShift réutilise intelligemment le cache KV des LLM dans les systèmes de mémoire agentique, réduisant le coût d'inférence malgré des centaines d'interactions contextuelles. <a href="https://arxiv.org/abs/2607.21604">arXiv:2607.21604</a></li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>TikTok ciblé par l'UE pour la protection des mineurs</strong> : La Commission européenne reproche à TikTok des paramètres de confidentialité trop facilement désactivables par les adolescents, exposant leurs contenus à des adultes sans restriction. <a href="https://siecledigital.fr/2026/07/27/tiktok-dans-le-viseur-de-lue-pour-sa-protection-jugee-insuffisante-des-enfants/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Gouvernance IA en entreprise</strong> : Le Journal du Net analyse le décalage entre les approches traditionnelles de gouvernance, perçues comme un frein, et le besoin d'innovation rapide dans les déploiements d'IA. <a href="https://www.journaldunet.com/intelligence-artificielle/1553103-au-dela-du-frein-pourquoi-la-gouvernance-traditionnelle-de-l-ia-bride-le-potentiel-des-entreprises/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>IA générative dans l'open source</strong> : Le projet Debian lance une résolution générale pour encadrer l'usage des LLM dans les contributions au code, une question qui divise la communauté. <a href="https://next.ink/249039/le-projet-debian-sinterroge-sur-son-possible-usage-des-llm/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles Anthropic</strong> : Claude Opus 5 est lancé avec un positionnement tarifaire agressif, visant des performances proches de Fable pour un coût réduit de moitié. <a href="https://next.ink/brief-article/claude-opus-5-veut-faire-presque-aussi-bien-que-fable-pour-moitie-moins-cher/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Fréquences mobiles</strong> : L'Arcep propose d'uniformiser à 2035 l'échéance de toutes les autorisations de fréquences des opérateurs, actuellement dispersées entre 2030 et 2035, pour éviter une désynchronisation du marché. <a href="https://next.ink/248829/telephonie-mobile-le-plan-de-larcep-pour-eviter-une-cacophonie-des-frequences-des-2030/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Contrat Défense US</strong> : Oracle décroche un accord-cadre de 7 milliards de dollars avec le Pentagone pour des licences logicielles perpétuelles et par abonnement. <a href="https://www.lemondeinformatique.fr/actualites/lire-oracle-signe-un-contrat-logiciel-de-7-md$-avec-le-pentagon-100717.html">Le Monde Informatique</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260726-1807</guid>
-      <pubDate>Sun, 26 Jul 2026 18:07:44 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260727-0917</guid>
+      <pubDate>Mon, 27 Jul 2026 09:17:40 +0000</pubDate>
     </item>
   </channel>
 </rss>
