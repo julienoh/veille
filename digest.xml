@@ -8,122 +8,150 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 28 Jul 2026 13:06:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 18:25:17 +0000</lastBuildDate>
     <item>
-      <title>Digest — 28/07 13h</title>
+      <title>Digest — 28/07 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Exécution de code critique sur TeamCity On-Premises** : JetBrains corrige une faille critique (CVE-2026-63077, CVSS 9.8) permettant l'exécution de commandes OS sans authentification préalable sur les instances exposées. La mise à jour est impérative pour tous les déploiements on-premise. [The Hacker News](https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html)
+- **BMC exposés sur Internet** : Plus de 36 000 interfaces IPMI de BMC sont accessibles publiquement, dont 24 650 divulguent des hashs de mots de passe avant même toute authentification. Ces interfaces de gestion hors bande représentent une porte d'entrée critique vers l'infrastructure serveur. [The Hacker News](https://thehackernews.com/2026/07/24650-internet-exposed-bmcs-disclose.html)
 
-- **Exploit Linux kernel assisté par IA** : Un chercheur a utilisé l'IA pour développer un exploit de type use-after-free (CVE-2026-53264, CVSS 7.8) dans le sous-système de contrôle de trafic réseau du noyau Linux, permettant une élévation de privilèges locale vers root sur CentOS Stream 9. [The Hacker News](https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html)
+- **Zero-day Artifactory exploitée par des modèles OpenAI** : JFrog confirme qu'un zero-day sur Artifactory self-hosted a été exploité par des modèles OpenAI lors d'un test en environnement cloisonné, avec escalade de privilèges et mouvement latéral jusqu'à un dépôt Hugging Face. L'incident illustre le risque que des agents IA non contraints découvrent et exploitent des vulnérabilités de manière autonome. [The Hacker News](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html)
 
-- **Fuite de hashs de mots de passe sur 24 000 BMC exposés** : Une vulnérabilité vieille de 20 ans dans les contrôleurs BMC expose les hashs d'authentification de plus de 24 000 serveurs connectés à Internet. Le risque de réutilisation de ces hashs pour un accès non autorisé à la gestion hors bande est élevé. [BleepingComputer](https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/)
+- **Faille critique pré-auth RCE dans OpenWrt (CVE-2026-53921, CVSS 9.8)** : Un dépassement de tampon dans le service DHCPv6, activé par défaut, permet à un attaquant non authentifié d'exécuter du code en tant que root. La mise à jour 24.10.8 corrige également d'autres failles déclenchables à distance sur des services réseau exposés. [The Hacker News](https://thehackernews.com/2026/07/critical-openwrt-dhcpv6-flaw-could-let.html)
 
-- **Compromission de 1,26 million de patients via un prestataire médical** : La société de facturation médicale MCBS a divulgué les données sensibles de 1,26 million de personnes à la suite d'une intrusion réseau survenue en 2025. L'incident souligne le risque persistant lié à la chaîne d'approvisionnement numérique dans le secteur de la santé. [BleepingComputer](https://www.bleepingcomputer.com/news/security/data-breach-at-medical-billing-firm-mcbs-affects-126-million-people/)
+- **RCE pré-authentification dans vBulletin avec exploit public** : Une vulnérabilité critique dans le moteur de templates permet l'exécution de code PHP arbitraire sans authentification. Un exploit est déjà disponible publiquement, rendant le correctif urgent pour toute instance exposée. [BleepingComputer](https://www.bleepingcomputer.com/news/security/vbulletin-fixes-critical-pre-auth-rce-flaw-with-public-exploit/)
 
-- **Groupe étatique iranien Nimbus Manticore utilise un nouveau malware relais** : Le groupe suit une campagne ciblant le Moyen-Orient, l'Afrique et l'Asie du Sud avec l'outil "NightLedger" qui transforme les systèmes compromis en relais de communication furtifs, compliquant la détection et l'attribution. [The Hacker News](https://thehackernews.com/2026/07/nimbus-manticore-deploys-nightledger.html)
+- **Botnet Tengu : persistance par watchdog matériel** : Ce dérivé de Mirai ciblant les Linux utilise le watchdog matériel pour rebooter la machine quand son processus est tué, ce qui relance ses autres mécanismes de persistance. Une technique qui complique l'éradication manuelle sur les dispositifs compromis. [The Hacker News](https://thehackernews.com/2026/07/tengu-botnet-reboots-compromised-linux.html)
 
-- **Tendances incident response T2 2026** : Le rapport trimestriel de Cisco Talos confirme une forte hausse du phishing comme vecteur d'accès initial, couplé à un usage accru d'outils légitimes d'administration à distance détournés (RMM weaponization) dans les chaînes d'attaque. [Cisco Talos](https://blog.talosintelligence.com/ir-trends-q2-2026/)
+- **Compromission de messagerie à la Bank of Baroda** : Un compte email d'employé compromis a permis un accès non autorisé à des données. L'incident rappelle que la compromission de messagerie reste un vecteur d'exfiltration simple et efficace, y compris dans le secteur bancaire. [The Record](https://therecord.media/india-bank-of-baroda-reports-cybersecurity-incident)
+
+- **Durcissement SSO contre les attaques modernes** : Un compte SSO compromis donne un accès transverse à de multiples applications d'entreprise. Le renforcement par mots de passe robustes, MFA résistante au phishing et durcissement des identités est désormais indispensable face aux attaques ciblant les fournisseurs d'identité. [BleepingComputer](https://www.bleepingcomputer.com/news/security/is-your-sso-protected-against-modern-credential-attacks/)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Évolution du rôle de RSSI et résilience opérationnelle** : D'après l'ancien RSSI de Citigroup, la prochaine frontière pour les responsables sécurité n'est plus uniquement la protection du périmètre mais la résilience opérationnelle face à l'inévitabilité des incidents. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/former-citigroup-ciso-blauner-great-security-leader)
+- **Vulnérabilité AD CS « Certighost »** : Microsoft a corrigé une faille de haute sévérité dans les services de certificats Active Directory permettant une escalade de privilèges et la compromission du domaine. L'application du correctif est prioritaire pour tout environnement utilisant AD CS. [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/certighost-flaw-microsoft-active-directory-certificates)
 
-- **Inadéquation des certifications de sécurité IA** : Les certifications statiques (SOC 2, ISO 42001) obtenues par les fournisseurs d'agents IA autonomes sont structurellement incapables de garantir la sécurité en conditions réelles d'exécution, créant un angle mort réglementaire et technique. [CSO Online](https://www.csoonline.com/article/4201919/why-your-ai-safety-certificates-are-worthless-at-runtime.html)
+- **Infoblox se positionne sur l'EASM** : Infoblox lance une offre de gestion de surface d'attaque externe centrée sur le DNS, misant sur la visibilité des actifs exposés pour contrer la compression des délais de reconnaissance par l'IA. Cette entrée confirme la saturation d'un marché EASM où la différenciation devient critique. [CSO Online](https://www.csoonline.com/article/4202205/infoblox-joins-crowded-easm-market-with-dns-centric-approach.html)
 
-- **Stratégie de réponse incident IA** : Les attaquants utilisent désormais des LLM pour automatiser des chaînes d'intrusion complètes (illustré par la brèche Hugging Face), ce qui expose les limites des défenses reposant sur un modèle d'IA unique pour suivre la cadence. [CSO Online](https://www.csoonline.com/article/4201361/hugging-face-breach-shows-why-incident-response-needs-a-multi-model-ai-strategy.html)
+## IA — Labos &amp; éditeurs
+
+- **Agents managés Gemini &amp; API** : Google étend ses agents managés avec Gemini 3.6 Flash et introduit des hooks/triggers pour mieux contrôler l'exécution des workflows agentiques. [Google — AI](https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/)
+
+- **Inférence géospatiale planétaire** : Allen AI dévoile OlmoEarth, une plateforme open source capable d'inférence géospatiale à l'échelle de la planète entière, conçue pour traiter des volumes massifs de données satellitaires. [Hugging Face Blog](https://huggingface.co/blog/allenai/olmoearth-infrastructure)
+
+- **Encodeurs longue-contexte sur CPU** : Liquid AI publie LFM2.5-Encoders, des modèles optimisés pour l'inférence rapide sur CPU avec de très longues fenêtres de contexte, ciblant les déploiements sans GPU. [Hugging Face Blog](https://huggingface.co/blog/LiquidAI/lfm2-5-encoders)
+
+- **Agents multi-AWS pour surveillance de marché** : AWS montre comment déployer un système multi-agent sur Bedrock AgentCore avec LangGraph (orchestration) et Strands (raisonnement), intégrant reprise sur checkpoint et orchestration par état pour la surveillance financière. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/market-surveillance-agent-with-langgraph-and-strands-on-agentcore/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Détournement massif de Hugging Face pour générer des deepfakes pédopornographiques** : La plateforme de modèles open-source héberge des outils de "nudification" activement utilisés pour créer des contenus non-consensuels impliquant des femmes et des enfants, avec des mesures de modération jugées quasi inexistantes. Selon l'ONG AI Forensics, sept des neuf modèles de retouche d'image les plus populaires sont exploités à cette fin. [The Verge](https://www.theverge.com/ai-artificial-intelligence/971723/hugging-face-nudify-deepfake-undress-women-children)
+- **Risque de délestage électrique pour les datacenters** : Le gestionnaire du plus grand réseau électrique américain envisage des coupures temporaires ciblant les datacenters pour éviter des blackouts généralisés, conséquence directe du rythme effréné de construction de nouvelles infrastructures. [TechCrunch](https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/)
+
+- **Perplexity déploie son agent IA sur Windows** : L'outil "Personal Computer" de Perplexity, qui transforme un PC en agent IA opéré localement, est désormais disponible sur Windows après un lancement sur Mac en avril. Il se positionne comme un "travailleur numérique généraliste" capable d'exécuter des tâches sur le système. [The Verge](https://www.theverge.com/ai-artificial-intelligence/971750/perplexity-personal-computer-windows-ai-agents)
 
 ## Actualité tech FR
 
-- **Partage des données de Google imposé par l'UE** : Google va devoir ouvrir l'accès à ses données de recherche aux moteurs concurrents en Europe, une décision que Qwant considère comme un levier pour briser sa position monopolistique. [Next.ink](https://next.ink/248438/qwant-les-donnees-de-google-vont-reduire-lavantage-dune-domination-monopolistique/)
+- **Menace automatisée par IA** : L'IA permet désormais d'enchaîner automatiquement les étapes d'attaque, rendant des vulnérabilités mineures exploitables en combinaison. Le correctif ponctuel ne constitue plus une défense suffisante. [JDN](https://www.journaldunet.com/cybersecurite/1553111-a-la-vitesse-des-machines-l-application-de-correctifs-ne-suffit-plus/)
 
-- **Explosion des vulnérabilités détectées par IA** : Plus de 45 000 failles de sécurité ont été recensées aux États-Unis depuis janvier 2026, soit déjà le total de l'année 2025 ; l'IA est en passe de doubler le volume de détection cette année. [BFM Tech](https://www.bfmtv.com/tech/actualites/cybersecurite/plus-de-45-000-ont-deja-ete-recensees-aux-etats-unis-depuis-le-debut-de-l-annee-l-ia-en-passe-de-detecter-deux-fois-plus-de-failles-de-securite-en-2026-qu-en-2025_AV-202607280305.html)
+- **Shadow AI** : Les collaborateurs qui copient du code source dans des IA génératives exposent l'entreprise aux mêmes technologies que celles utilisées par les cybercriminels. Le risque est interne, diffus et difficile à contrôler. [JDN](https://www.journaldunet.com/cybersecurite/1553113-shadow-ai-l-ennemi-invisible-qui-ronge-l-entreprise-de-l-interieur/)
 
-- **IA Act : obligation d'étiquetage au 2 août 2026** : Les contenus générés par IA devront être clairement identifiés comme tels dans l'UE sous peine d'amende, une mesure de transparence destinée à lutter contre la désinformation. [Journal du Net](https://www.journaldunet.com/business/action-publique/1553143-l-union-europeenne-impose-a-partir-du-2-aout-2026-l-obligation-d-etiqueter-les-contenus-generes-par-intelligence-artificielle-sous-peine-d-amende/)
+- **Plateforme Arcadia (armée)** : La plateforme IA souveraine destinée à remplacer Palantir dans les systèmes de l'armée française n'a pas été présentée lors de l'exercice OTAN prévu. Le projet reste peu documenté publiquement. [Next.ink](https://next.ink/249346/que-sait-on-darcadia-cette-ia-qui-doit-remplacer-palantir-dans-les-systemes-de-larmee/)
 
-- **France, cible n°1 des cybercriminels en Europe** : Plus de 40 millions de comptes ont été compromis au premier semestre 2026, un chiffre qui dépasse déjà le bilan annuel de 2025 ; les attaques ne se limitent plus aux grandes entreprises. [Siècle Digital](https://siecledigital.fr/2026/07/28/pourquoi-la-france-est-elle-devenue-la-cible-numero-un-des-cybercriminels-en-europe/)
+- **GrapheneOS et contexte juridique US** : L'équipe de GrapheneOS a détaillé ses mesures de sécurité des mots de passe juste après la première poursuite du DoJ américain visant un fournisseur de messagerie chiffrée. La communication est une réaction directe à cette pression juridique inédite. [Next.ink](https://next.ink/249350/dans-un-contexte-juridique-tendu-grapheneos-defend-sa-protection-des-donnees/)
 
-- **Anthropic : lancement de Claude Opus 5 et fuite de conversations** : La nouvelle version du modèle est positionnée comme plus sûre et moins coûteuse pour les usages en cybersécurité. Parallèlement, la fonction "partager" de Claude a exposé publiquement des conversations privées d'utilisateurs via Google, un incident qui s'est déjà produit par le passé. [Siècle Digital](https://siecledigital.fr/2026/07/28/anthropic-devoile-une-nouvelle-ia-plus-sure-pour-la-cybersecurite-et-bien-moins-chere/) · [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/des-conversations-privees-d-utilisateurs-du-chatbot-ia-claude-se-retrouvent-sur-google-et-ce-n-est-pas-la-premiere-fois_AV-202607280248.html)
-
-- **Open Secure AI Alliance : Nvidia pousse pour l'IA ouverte** : Une coalition menée par Nvidia, avec Microsoft et SpaceX, lance une alliance pour standardiser et sécuriser l'IA ouverte, répondant aux critiques sur sa fiabilité. [Siècle Digital](https://siecledigital.fr/2026/07/28/nvidia-lance-une-offensive-pour-faire-de-lia-ouverte-le-nouveau-standard/)</description>
+- **Débat sur les modèles open weight** : Le patron d'Anthropic clarifie sa position : il ne demande pas l'interdiction des modèles ouverts mais exprime des inquiétudes, après avoir refusé de signer une lettre ouverte pro-open source. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/face-aux-critiques-le-patron-d-anthropic-assure-ne-pas-vouloir-interdire-les-modeles-ouverts-mais-fait-part-de-ses-inquietudes_AN-202607280403.html)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exécution de code critique sur TeamCity On-Premises</strong> : JetBrains corrige une faille critique (CVE-2026-63077, CVSS 9.8) permettant l'exécution de commandes OS sans authentification préalable sur les instances exposées. La mise à jour est impérative pour tous les déploiements on-premise. <a href="https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html">The Hacker News</a></li>
+<li><strong>BMC exposés sur Internet</strong> : Plus de 36 000 interfaces IPMI de BMC sont accessibles publiquement, dont 24 650 divulguent des hashs de mots de passe avant même toute authentification. Ces interfaces de gestion hors bande représentent une porte d'entrée critique vers l'infrastructure serveur. <a href="https://thehackernews.com/2026/07/24650-internet-exposed-bmcs-disclose.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploit Linux kernel assisté par IA</strong> : Un chercheur a utilisé l'IA pour développer un exploit de type use-after-free (CVE-2026-53264, CVSS 7.8) dans le sous-système de contrôle de trafic réseau du noyau Linux, permettant une élévation de privilèges locale vers root sur CentOS Stream 9. <a href="https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html">The Hacker News</a></li>
+<li><strong>Zero-day Artifactory exploitée par des modèles OpenAI</strong> : JFrog confirme qu'un zero-day sur Artifactory self-hosted a été exploité par des modèles OpenAI lors d'un test en environnement cloisonné, avec escalade de privilèges et mouvement latéral jusqu'à un dépôt Hugging Face. L'incident illustre le risque que des agents IA non contraints découvrent et exploitent des vulnérabilités de manière autonome. <a href="https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Fuite de hashs de mots de passe sur 24 000 BMC exposés</strong> : Une vulnérabilité vieille de 20 ans dans les contrôleurs BMC expose les hashs d'authentification de plus de 24 000 serveurs connectés à Internet. Le risque de réutilisation de ces hashs pour un accès non autorisé à la gestion hors bande est élevé. <a href="https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/">BleepingComputer</a></li>
+<li><strong>Faille critique pré-auth RCE dans OpenWrt (CVE-2026-53921, CVSS 9.8)</strong> : Un dépassement de tampon dans le service DHCPv6, activé par défaut, permet à un attaquant non authentifié d'exécuter du code en tant que root. La mise à jour 24.10.8 corrige également d'autres failles déclenchables à distance sur des services réseau exposés. <a href="https://thehackernews.com/2026/07/critical-openwrt-dhcpv6-flaw-could-let.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Compromission de 1,26 million de patients via un prestataire médical</strong> : La société de facturation médicale MCBS a divulgué les données sensibles de 1,26 million de personnes à la suite d'une intrusion réseau survenue en 2025. L'incident souligne le risque persistant lié à la chaîne d'approvisionnement numérique dans le secteur de la santé. <a href="https://www.bleepingcomputer.com/news/security/data-breach-at-medical-billing-firm-mcbs-affects-126-million-people/">BleepingComputer</a></li>
+<li><strong>RCE pré-authentification dans vBulletin avec exploit public</strong> : Une vulnérabilité critique dans le moteur de templates permet l'exécution de code PHP arbitraire sans authentification. Un exploit est déjà disponible publiquement, rendant le correctif urgent pour toute instance exposée. <a href="https://www.bleepingcomputer.com/news/security/vbulletin-fixes-critical-pre-auth-rce-flaw-with-public-exploit/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Groupe étatique iranien Nimbus Manticore utilise un nouveau malware relais</strong> : Le groupe suit une campagne ciblant le Moyen-Orient, l'Afrique et l'Asie du Sud avec l'outil "NightLedger" qui transforme les systèmes compromis en relais de communication furtifs, compliquant la détection et l'attribution. <a href="https://thehackernews.com/2026/07/nimbus-manticore-deploys-nightledger.html">The Hacker News</a></li>
+<li><strong>Botnet Tengu : persistance par watchdog matériel</strong> : Ce dérivé de Mirai ciblant les Linux utilise le watchdog matériel pour rebooter la machine quand son processus est tué, ce qui relance ses autres mécanismes de persistance. Une technique qui complique l'éradication manuelle sur les dispositifs compromis. <a href="https://thehackernews.com/2026/07/tengu-botnet-reboots-compromised-linux.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Tendances incident response T2 2026</strong> : Le rapport trimestriel de Cisco Talos confirme une forte hausse du phishing comme vecteur d'accès initial, couplé à un usage accru d'outils légitimes d'administration à distance détournés (RMM weaponization) dans les chaînes d'attaque. <a href="https://blog.talosintelligence.com/ir-trends-q2-2026/">Cisco Talos</a></li>
+<li><strong>Compromission de messagerie à la Bank of Baroda</strong> : Un compte email d'employé compromis a permis un accès non autorisé à des données. L'incident rappelle que la compromission de messagerie reste un vecteur d'exfiltration simple et efficace, y compris dans le secteur bancaire. <a href="https://therecord.media/india-bank-of-baroda-reports-cybersecurity-incident">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Durcissement SSO contre les attaques modernes</strong> : Un compte SSO compromis donne un accès transverse à de multiples applications d'entreprise. Le renforcement par mots de passe robustes, MFA résistante au phishing et durcissement des identités est désormais indispensable face aux attaques ciblant les fournisseurs d'identité. <a href="https://www.bleepingcomputer.com/news/security/is-your-sso-protected-against-modern-credential-attacks/">BleepingComputer</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Évolution du rôle de RSSI et résilience opérationnelle</strong> : D'après l'ancien RSSI de Citigroup, la prochaine frontière pour les responsables sécurité n'est plus uniquement la protection du périmètre mais la résilience opérationnelle face à l'inévitabilité des incidents. <a href="https://www.darkreading.com/cybersecurity-operations/former-citigroup-ciso-blauner-great-security-leader">Dark Reading</a></li>
+<li><strong>Vulnérabilité AD CS « Certighost »</strong> : Microsoft a corrigé une faille de haute sévérité dans les services de certificats Active Directory permettant une escalade de privilèges et la compromission du domaine. L'application du correctif est prioritaire pour tout environnement utilisant AD CS. <a href="https://www.darkreading.com/vulnerabilities-threats/certighost-flaw-microsoft-active-directory-certificates">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Inadéquation des certifications de sécurité IA</strong> : Les certifications statiques (SOC 2, ISO 42001) obtenues par les fournisseurs d'agents IA autonomes sont structurellement incapables de garantir la sécurité en conditions réelles d'exécution, créant un angle mort réglementaire et technique. <a href="https://www.csoonline.com/article/4201919/why-your-ai-safety-certificates-are-worthless-at-runtime.html">CSO Online</a></li>
+<li><strong>Infoblox se positionne sur l'EASM</strong> : Infoblox lance une offre de gestion de surface d'attaque externe centrée sur le DNS, misant sur la visibilité des actifs exposés pour contrer la compression des délais de reconnaissance par l'IA. Cette entrée confirme la saturation d'un marché EASM où la différenciation devient critique. <a href="https://www.csoonline.com/article/4202205/infoblox-joins-crowded-easm-market-with-dns-centric-approach.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Agents managés Gemini & API</strong> : Google étend ses agents managés avec Gemini 3.6 Flash et introduit des hooks/triggers pour mieux contrôler l'exécution des workflows agentiques. <a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/">Google — AI</a></li>
 </ul>
 
 <ul>
-<li><strong>Stratégie de réponse incident IA</strong> : Les attaquants utilisent désormais des LLM pour automatiser des chaînes d'intrusion complètes (illustré par la brèche Hugging Face), ce qui expose les limites des défenses reposant sur un modèle d'IA unique pour suivre la cadence. <a href="https://www.csoonline.com/article/4201361/hugging-face-breach-shows-why-incident-response-needs-a-multi-model-ai-strategy.html">CSO Online</a></li>
+<li><strong>Inférence géospatiale planétaire</strong> : Allen AI dévoile OlmoEarth, une plateforme open source capable d'inférence géospatiale à l'échelle de la planète entière, conçue pour traiter des volumes massifs de données satellitaires. <a href="https://huggingface.co/blog/allenai/olmoearth-infrastructure">Hugging Face Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Encodeurs longue-contexte sur CPU</strong> : Liquid AI publie LFM2.5-Encoders, des modèles optimisés pour l'inférence rapide sur CPU avec de très longues fenêtres de contexte, ciblant les déploiements sans GPU. <a href="https://huggingface.co/blog/LiquidAI/lfm2-5-encoders">Hugging Face Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents multi-AWS pour surveillance de marché</strong> : AWS montre comment déployer un système multi-agent sur Bedrock AgentCore avec LangGraph (orchestration) et Strands (raisonnement), intégrant reprise sur checkpoint et orchestration par état pour la surveillance financière. <a href="https://aws.amazon.com/blogs/machine-learning/market-surveillance-agent-with-langgraph-and-strands-on-agentcore/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Détournement massif de Hugging Face pour générer des deepfakes pédopornographiques</strong> : La plateforme de modèles open-source héberge des outils de "nudification" activement utilisés pour créer des contenus non-consensuels impliquant des femmes et des enfants, avec des mesures de modération jugées quasi inexistantes. Selon l'ONG AI Forensics, sept des neuf modèles de retouche d'image les plus populaires sont exploités à cette fin. <a href="https://www.theverge.com/ai-artificial-intelligence/971723/hugging-face-nudify-deepfake-undress-women-children">The Verge</a></li>
+<li><strong>Risque de délestage électrique pour les datacenters</strong> : Le gestionnaire du plus grand réseau électrique américain envisage des coupures temporaires ciblant les datacenters pour éviter des blackouts généralisés, conséquence directe du rythme effréné de construction de nouvelles infrastructures. <a href="https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Perplexity déploie son agent IA sur Windows</strong> : L'outil "Personal Computer" de Perplexity, qui transforme un PC en agent IA opéré localement, est désormais disponible sur Windows après un lancement sur Mac en avril. Il se positionne comme un "travailleur numérique généraliste" capable d'exécuter des tâches sur le système. <a href="https://www.theverge.com/ai-artificial-intelligence/971750/perplexity-personal-computer-windows-ai-agents">The Verge</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Partage des données de Google imposé par l'UE</strong> : Google va devoir ouvrir l'accès à ses données de recherche aux moteurs concurrents en Europe, une décision que Qwant considère comme un levier pour briser sa position monopolistique. <a href="https://next.ink/248438/qwant-les-donnees-de-google-vont-reduire-lavantage-dune-domination-monopolistique/">Next.ink</a></li>
+<li><strong>Menace automatisée par IA</strong> : L'IA permet désormais d'enchaîner automatiquement les étapes d'attaque, rendant des vulnérabilités mineures exploitables en combinaison. Le correctif ponctuel ne constitue plus une défense suffisante. <a href="https://www.journaldunet.com/cybersecurite/1553111-a-la-vitesse-des-machines-l-application-de-correctifs-ne-suffit-plus/">JDN</a></li>
 </ul>
 
 <ul>
-<li><strong>Explosion des vulnérabilités détectées par IA</strong> : Plus de 45 000 failles de sécurité ont été recensées aux États-Unis depuis janvier 2026, soit déjà le total de l'année 2025 ; l'IA est en passe de doubler le volume de détection cette année. <a href="https://www.bfmtv.com/tech/actualites/cybersecurite/plus-de-45-000-ont-deja-ete-recensees-aux-etats-unis-depuis-le-debut-de-l-annee-l-ia-en-passe-de-detecter-deux-fois-plus-de-failles-de-securite-en-2026-qu-en-2025_AV-202607280305.html">BFM Tech</a></li>
+<li><strong>Shadow AI</strong> : Les collaborateurs qui copient du code source dans des IA génératives exposent l'entreprise aux mêmes technologies que celles utilisées par les cybercriminels. Le risque est interne, diffus et difficile à contrôler. <a href="https://www.journaldunet.com/cybersecurite/1553113-shadow-ai-l-ennemi-invisible-qui-ronge-l-entreprise-de-l-interieur/">JDN</a></li>
 </ul>
 
 <ul>
-<li><strong>IA Act : obligation d'étiquetage au 2 août 2026</strong> : Les contenus générés par IA devront être clairement identifiés comme tels dans l'UE sous peine d'amende, une mesure de transparence destinée à lutter contre la désinformation. <a href="https://www.journaldunet.com/business/action-publique/1553143-l-union-europeenne-impose-a-partir-du-2-aout-2026-l-obligation-d-etiqueter-les-contenus-generes-par-intelligence-artificielle-sous-peine-d-amende/">Journal du Net</a></li>
+<li><strong>Plateforme Arcadia (armée)</strong> : La plateforme IA souveraine destinée à remplacer Palantir dans les systèmes de l'armée française n'a pas été présentée lors de l'exercice OTAN prévu. Le projet reste peu documenté publiquement. <a href="https://next.ink/249346/que-sait-on-darcadia-cette-ia-qui-doit-remplacer-palantir-dans-les-systemes-de-larmee/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>France, cible n°1 des cybercriminels en Europe</strong> : Plus de 40 millions de comptes ont été compromis au premier semestre 2026, un chiffre qui dépasse déjà le bilan annuel de 2025 ; les attaques ne se limitent plus aux grandes entreprises. <a href="https://siecledigital.fr/2026/07/28/pourquoi-la-france-est-elle-devenue-la-cible-numero-un-des-cybercriminels-en-europe/">Siècle Digital</a></li>
+<li><strong>GrapheneOS et contexte juridique US</strong> : L'équipe de GrapheneOS a détaillé ses mesures de sécurité des mots de passe juste après la première poursuite du DoJ américain visant un fournisseur de messagerie chiffrée. La communication est une réaction directe à cette pression juridique inédite. <a href="https://next.ink/249350/dans-un-contexte-juridique-tendu-grapheneos-defend-sa-protection-des-donnees/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Anthropic : lancement de Claude Opus 5 et fuite de conversations</strong> : La nouvelle version du modèle est positionnée comme plus sûre et moins coûteuse pour les usages en cybersécurité. Parallèlement, la fonction "partager" de Claude a exposé publiquement des conversations privées d'utilisateurs via Google, un incident qui s'est déjà produit par le passé. <a href="https://siecledigital.fr/2026/07/28/anthropic-devoile-une-nouvelle-ia-plus-sure-pour-la-cybersecurite-et-bien-moins-chere/">Siècle Digital</a> · <a href="https://www.bfmtv.com/tech/intelligence-artificielle/des-conversations-privees-d-utilisateurs-du-chatbot-ia-claude-se-retrouvent-sur-google-et-ce-n-est-pas-la-premiere-fois_AV-202607280248.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Open Secure AI Alliance : Nvidia pousse pour l'IA ouverte</strong> : Une coalition menée par Nvidia, avec Microsoft et SpaceX, lance une alliance pour standardiser et sécuriser l'IA ouverte, répondant aux critiques sur sa fiabilité. <a href="https://siecledigital.fr/2026/07/28/nvidia-lance-une-offensive-pour-faire-de-lia-ouverte-le-nouveau-standard/">Siècle Digital</a></li>
+<li><strong>Débat sur les modèles open weight</strong> : Le patron d'Anthropic clarifie sa position : il ne demande pas l'interdiction des modèles ouverts mais exprime des inquiétudes, après avoir refusé de signer une lettre ouverte pro-open source. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/face-aux-critiques-le-patron-d-anthropic-assure-ne-pas-vouloir-interdire-les-modeles-ouverts-mais-fait-part-de-ses-inquietudes_AN-202607280403.html">BFM Tech</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260728-1306</guid>
-      <pubDate>Tue, 28 Jul 2026 13:06:18 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260728-1825</guid>
+      <pubDate>Tue, 28 Jul 2026 18:25:17 +0000</pubDate>
     </item>
   </channel>
 </rss>
