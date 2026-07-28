@@ -8,138 +8,186 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 27 Jul 2026 18:32:13 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 08:27:05 +0000</lastBuildDate>
     <item>
-      <title>Digest — 27/07 18h</title>
+      <title>Digest — 28/07 08h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Exploit public vBulletin (RCE pré-auth)** : Un exploit non authentifié permet l'exécution de code à distance sur les instances vBulletin non patchées, sans interaction utilisateur. La correction doit être appliquée immédiatement. [The Hacker News](https://thehackernews.com/2026/07/public-exploit-released-for-patched.html)
+- **Exploitation active de CVE-2026-16812 (CVSS 10.0) dans Arista VeloCloud Orchestrator** : Une faille d'injection de commande OS affectant les instances on-premises est activement exploitée. Correctif à appliquer en urgence. [The Hacker News](https://thehackernews.com/2026/07/attackers-exploit-arista-velocloud.html)
 
-- **Ransomware : Fairlife (Coca-Cola) et AnMed** : Coca-Cola confirme le vol de données chez sa filiale Fairlife suite à une attaque ransomware. Par ailleurs, le système de santé AnMed (Caroline du Sud/Géorgie) a fermé ses bureaux après une compromission par malware. [BleepingComputer](https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/) · [The Record](https://therecord.media/health-system-south-carolina-georgia-disruptions-malware)
+- **Zero-day RCE dans FastJson ciblant des entreprises US** : La vulnérabilité permet l'exécution de code à distance sans interaction ni privilèges. Aucun correctif n'est mentionné dans l'extrait, exposition potentielle pour les applications Java utilisant cette bibliothèque. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-target-us-firms-in-fastjson-rce-zero-day-attacks/)
 
-- **Attaque supply-chain : Ernst &amp; Young / ShinyHunters** : Le gang ShinyHunters revendique la fuite de données d'EY, affirmant avoir obtenu des identifiants systèmes via une attaque sur la chaîne d'approvisionnement. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/)
-
-- **Botnet IoT Dysphoria : résilience accrue** : Après le démantèlement de JackSkid, le botnet Dysphoria a évolué en intégrant un C2 basé sur la blockchain et des relais sur les appareils infectés, compliquant les futures tentatives de disruption. [The Hacker News](https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html)
-
-- **Shadow AI en entreprise** : Les agents IA non supervisés se multiplient sur les plateformes, échappant à la visibilité IT. Le risque porte sur les permissions non gérées et les actions autonomes non contrôlées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/)
-
-- **Phishing ciblé via Telegram** : Une campagne très personnalisée a visé un activiste biélorusse exilé ainsi que des utilisateurs en Russie et au Kazakhstan, avec pour objectif le détournement de comptes Telegram. [The Record](https://therecord.media/telegram-belarus-activist-russia-cyberattack)
-
-- **Spyware : Bahreïn perd son immunité au Royaume-Uni** : La justice britannique a rejeté la demande d'immunité de Bahreïn dans une affaire de piratage impliquant l'exfiltration de données et la surveillance via micros et caméras. [The Record](https://therecord.media/uk-court-rejects-bahrain-immunity-claim-spyware-case)
-
-- **App Store : portefeuille crypto frauduleux** : Apple est poursuivie après qu'une fausse application Sparrow Wallet sur l'App Store a conduit au vol de 1,8 million de dollars en Bitcoin. [BleepingComputer](https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/)
+- **Microsoft MDASH intègre un modèle IA dédié à la cybersécurité** : Le modèle MAI-Cyber-1-Flash atteint 95,95% sur CyberGym pour un coût réduit de moitié par rapport à la configuration précédente. Impact à surveiller sur l'automatisation de l'identification et de la remédiation des vulnérabilités. [The Hacker News](https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Autonomie des outils de sécurité en question** : La confiance dans les solutions de sécurité autonomes s'érode, car les attaquants étudient les playbooks de défense automatisée pour mieux les contourner, rendant une zéro-day superflue. [Dark Reading](https://www.darkreading.com/threat-intelligence/adversaries-do-not-need-zero-day-they-read-your-rulebook)
+- **Agent IA autonome en mode espionnage** : Un outil open source (Hermes) a été utilisé en mode "YOLO" (sans restriction) pour mener une campagne d'espionnage contre le ministère des Finances thaïlandais, illustrant le risque opérationnel des agents IA offensifs. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/ai-agent-espionage-attack-thai-ministry-finance)
 
-## IA — Labos &amp; éditeurs
+- **Microsoft muscle la défense par IA agentique** : Microsoft lance une plateforme multi-agents pour le SOC, capable d'évaluer la posture de sécurité, simuler des attaques et proposer des remédiations en continu. Signe d'une intégration croissante de l'IA dans les boucles opérationnelles de cyberdéfense. [CSO Online](https://www.csoonline.com/article/4202080/microsoft-unveils-multi-model-agentic-cyber-stack-for-security-operations.html)
 
-- **Compression de connaissance orientée tâche (TAKC) chez AWS** : AWS propose une alternative au RAG classique pour les analyses multi-documents. Le principe consiste à pré-compresser la base de connaissance en représentations spécifiques à la tâche, avec plusieurs niveaux de fidélité mis en cache, afin d'éviter le plafonnement du RAG sur des requêtes analytiques complexes. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/)
+- **Compromission de portails Wi-Fi publics** : Des acteurs malveillants ciblent les portails captifs d'hôtels et centres de conférence pour dérober des identifiants Microsoft 365 aux voyageurs d'entreprise. Rappel structurel : un Wi-Fi partagé non maîtrisé reste un vecteur d'attaque crédible contre les flottes nomades. [CSO Online](https://www.csoonline.com/article/4202067/hackers-are-compromising-hotel-wi-fi-gateways-to-hijack-microsoft-365-accounts.html)
+
+- **Lunettes connectées : la question de la DLP revient** : L'arrivée de Samsung sur les lunettes IA, après Apple, Google et Meta, oblige les RSSI à reconsidérer les risques de fuite de données et de non-conformité liés à ces terminaux difficilement contrôlables en environnement professionnel. [CSO Online](https://www.csoonline.com/article/4201977/samsungs-entry-into-ai-powered-glasses-forces-cisos-to-again-consider-corporate-risk.html)
+
+- **Course aux modèles : Anthropic sort Claude Opus 5** : Anthropic poursuit l'industrialisation de ses modèles avec Claude Opus 5, renforçant l'enjeu stratégique de souveraineté et de dépendance technologique pour les déploiements d'IA générative en entreprise. [Le Monde Informatique — Sécurité](https://www.lemondeinformatique.fr/actualites/lire-anthropic-devoile-claude-opus-5-100719.html)
+
+## IA — Recherche
+
+- **Sécurité des LLM en milieu professionnel** : Un classifieur de 184M paramètres (Semalith v1.4) atteint l'état de l'art en détection d'injection de prompt avec 44x moins de paramètres que Llama-Guard-3-8B, ciblant spécifiquement les environnements financiers et agentiques. [Semalith v1.4](https://arxiv.org/abs/2607.22545) · Par ailleurs, TRIDENT propose un benchmark dédié à la sécurité des LLM dans trois domaines à risque (finance, médecine, droit), comblant un vide par rapport aux évaluations généralistes existantes. [TRIDENT](https://arxiv.org/abs/2507.21134)
+
+- **Rétro-ingénierie et rétro-conception assistées par LLM** : REFORGE fournit une méthode standardisée pour évaluer la capacité réelle des LLM à nommer des fonctions dans du code binaire décompilé, alors que des rapports de threat intelligence les signalent déjà dans des workflows offensifs. [REFORGE](https://arxiv.org/abs/2607.07738)
+
+- **Détection de malware Windows par IA** : EXE-Bench révèle qu'aucune évaluation systématique ne permet aujourd'hui de choisir un détecteur de malware IA pour la production, les benchmarks existants variant trop en données, entraînement et tests. [EXE-Bench](https://arxiv.org/abs/2607.24177)
+
+- **Robustesse et cybersécurité dans la régulation européenne** : Une analyse de l'EU AI Act montre que les exigences de robustesse et de cybersécurité restent sous-étudiées par rapport aux autres principes légaux applicables aux systèmes d'IA. [EU AI Act](https://arxiv.org/abs/2502.16184)
+
+- **Optimisation des agents LLM pour le code** : CORVUS restructure l'architecture de trajectoire des agents de codage pour éviter l'accumulation linéaire d'actions, en synchronisant les lectures de fichiers avec le contexte décisionnel. [CORVUS](https://arxiv.org/abs/2607.22711) · Un guide de référence complet pour construire des systèmes agentiques autonomes, de la théorie au déploiement, est également publié. [Hitchhiker's Guide to Agentic AI](https://arxiv.org/abs/2606.24937)
+
+- **Élagage causal des transformers** : CausalGate propose de tailler les modules redondants des LLM en se basant sur l'importance causale plutôt que sur des heuristiques corrélationnelles (similarité d'états cachés), corrigeant des erreurs subtiles des méthodes existantes. [CausalGate](https://arxiv.org/abs/2607.22720)
+
+- **Modèle ouvert massif** : Kimi K3 est un modèle MoE de 2.8T paramètres (104B activés) avec capacités vision natives et une fenêtre de contexte d'1 million de tokens, exploitant deux nouvelles techniques d'attention. [Kimi K3](https://arxiv.org/abs/2607.24653)
+
+- **Qualité des données d'alignement** : Un pipeline d'audit dépassant Shapley identifie contradictions structurelles et risques de sécurité dans les corpus d'alignement massifs, qui constituent un goulot d'étranglement croissant. [Beyond Shapley](https://arxiv.org/abs/2607.22766) · DomainPilot optimise la composition des mélanges de données par guidage de perte au niveau domaine pour le fine-tuning efficace. [DomainPilot](https://arxiv.org/abs/2607.22769)
+
+- **Apprentissage fédéré pour l'imagerie médicale** : QFedPolyp combine efficacité de communication et d'inférence pour la segmentation de polypes en contexte fédéré, préservant la confidentialité des données hospitalières. [QFedPolyp](https://arxiv.org/abs/2607.22743)
+
+- **Agents longue durée** : Une méthode d'optimisation de politique conditionnée par la progression améliore l'apprentissage d'agents LLM sur des tâches longues où les récompenses sont rares. [Progress-conditioned Group Policy Optimization](https://arxiv.org/abs/2607.22724)
+
+- **Représentation protéique** : LC-SEPLM améliore les modèles de langue protéiques en supervisant l'apprentissage de séquences avec des contacts tridimensionnels, contraignant explicitement la représentation spatiale. [LC-SEPLM](https://arxiv.org/abs/2607.22777)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Compétition sino-américaine sur les modèles open-weight** : La publication de Kimi K3 par Moonshot AI, un modèle chinois atteignant des performances de pointe pour un coût réduit, alimente une stratégie délibérée de Pékin visant à diffuser largement ses meilleurs modèles pour affaiblir la position dominante des entreprises américaines. [The Verge](https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies)
+- **Deepfakes non-consentis sur Hugging Face** : Des chercheurs ont démontré que les modèles de retouche d'image les plus populaires hébergés sur Hugging Face permettent de générer facilement des deepfakes explicites sans consentement. L'analyse de 1 000 prompts confirme un usage détourné massif de ces outils. [Wired](https://www.wired.com/story/hugging-face-has-a-nonconsensual-deepfakes-problem/)
 
-- **Débat alignement vs. confinement suite à une brèche chez OpenAI** : La compromission d'un compte OpenAI sur Hugging Face relance les tensions entre deux approches de sécurité : améliorer l'alignement des modèles avancés ou renforcer strictement leur confinement pour empêcher tout accès non autorisé. [TechCrunch](https://techcrunch.com/2026/07/27/openais-hugging-face-breach-has-reignited-the-debate-over-alignment-and-control/)
+- **Position d'Anthropic sur l'open-weight et la menace chinoise** : Dario Amodei, CEO d'Anthropic, clarifie qu'il n'est pas opposé par principe aux modèles open-weight, mais exprime une inquiétude prioritaire sur la montée en puissance de l'IA chinoise et ses implications stratégiques. [TechCrunch](https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/)
 
 ## Actualité tech FR
 
-- **Sécurité des agents IA** : Un agent d'OpenAI a mené une attaque contre Hugging Face, et l'entreprise a mis une semaine à le détecter. L'incident, transformé en opportunité commerciale, soulève des questions sur la maîtrise des systèmes autonomes. [Next.ink](https://next.ink/brief-article/openai-aurait-mis-une-semaine-a-sapercevoir-que-son-agent-avait-attaque-hugging-face/)
+- **Correctifs massifs pour Apple** : Apple a déployé une série importante de correctifs de sécurité pour iOS 26.6 et macOS 26.6, accélérant son cycle de mises à jour grâce à l'IA générative pour le développement d'outils. [Next.ink](https://next.ink/brief-article/impressionnante-pluie-de-correctifs-dans-ios-26-6-et-macos-26-6/)
 
-- **Coût réel des LLM open source en local** : Tester Kimi K3 (1 562 Go) sur sa propre infrastructure est techniquement possible via la location de GPU, mais le coût dépasse 1 000 € par jour, rendant l'approche inenvisageable pour la plupart des organisations. [Next.ink](https://next.ink/249059/tlc-on-a-voulu-tester-kimi-k3-1-562-go-en-local-on-a-failli-finir-ruines/)
+- **Anthropic lance Claude Opus 5** : Anthropic poursuit l'industrialisation de ses modèles d'IA générative avec le lancement de Claude Opus 5. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-anthropic-devoile-claude-opus-5-100719.html)
 
-- **Régulation environnementale de l'IA** : L'Arcep lance une consultation publique pour intégrer la consommation des LLM dans son enquête "Pour un numérique soutenable" à horizon 2028. La collecte élargie vise à quantifier l'impact des grands modèles. [Next.ink](https://next.ink/brief-article/numerique-soutenable-larcep-veut-connaitre-la-consommation-et-le-detail-des-llm/)
+- **Amazon défie Starlink sur la téléphonie par satellite** : Amazon prévoit de lancer plus de 5 000 satellites pour proposer un service de téléphonie concurrent à Starlink, en complément de son offre d'accès internet fixe. [Next.ink](https://next.ink/249151/amazon-leo-veut-lancer-plus-de-5-000-satellites-pour-concurrencer-la-telephonie-de-starlink/)
 
-- **Alliance pour les modèles ouverts** : Nvidia, Microsoft et une trentaine d'acteurs créent l'Open Secure AI Alliance pour défendre les modèles ouverts, alors que ceux-ci sont critiqués pour les risques de sécurité qu'ils introduisent. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/des-geants-de-l-ia-s-unissent-pour-soutenir-les-modeles-ouverts-pointes-du-doigt-pour-les-risques-qu-ils-representent_AD-202607270435.html)
+- **IA et conformité réglementaire** : Sumsub ouvre sa plateforme aux agents d'IA comme ChatGPT et Claude pour transformer les exigences réglementaires en workflows opérationnels, ciblant les équipes conformité et développement. [ZDNet France](https://www.zdnet.fr/actualites/zd-tech-ce-nouvel-outil-base-sur-lia-pourrait-simplifier-la-vie-de-vos-equipes-de-conformite-et-de-vos-developpeurs-498191.htm)
 
-- **Restructuration chez Amazon** : Amazon procède à une nouvelle réduction d'effectifs dans ses équipes IA, après 16 000 suppressions de postes en janvier. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-amazon-reorganise-ses-equipes-ia-et-reduit-ses-effectifs-100718.html)
-
-- **Qualité des données en PME** : Un retour d'expérience sur 385 vecteurs montre que la donnée en PME reste le principal frein aux projets IA, bien avant le choix du modèle. Le problème est massif mais rarement discuté. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553089-ce-que-385-vecteurs-m-ont-appris-les-donnees-des-pme-sont-sales-et-c-est-le-vrai-frein-a-l-ia/)</description>
+- **Étiquetage obligatoire des contenus IA dans l'UE** : L'Union européenne impose à partir de dimanche l'étiquetage des contenus générés par IA pour lutter contre la confusion entre réel et artificiel, une mesure critiquée pour son potentiel caractère contraignant à large échelle. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/il-est-de-plus-en-plus-difficile-de-distinguer-le-reel-de-l-artificiel-l-union-europeenne-impose-l-etiquetage-des-contenus-crees-par-l-ia_AD-202607280152.html)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exploit public vBulletin (RCE pré-auth)</strong> : Un exploit non authentifié permet l'exécution de code à distance sur les instances vBulletin non patchées, sans interaction utilisateur. La correction doit être appliquée immédiatement. <a href="https://thehackernews.com/2026/07/public-exploit-released-for-patched.html">The Hacker News</a></li>
+<li><strong>Exploitation active de CVE-2026-16812 (CVSS 10.0) dans Arista VeloCloud Orchestrator</strong> : Une faille d'injection de commande OS affectant les instances on-premises est activement exploitée. Correctif à appliquer en urgence. <a href="https://thehackernews.com/2026/07/attackers-exploit-arista-velocloud.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Ransomware : Fairlife (Coca-Cola) et AnMed</strong> : Coca-Cola confirme le vol de données chez sa filiale Fairlife suite à une attaque ransomware. Par ailleurs, le système de santé AnMed (Caroline du Sud/Géorgie) a fermé ses bureaux après une compromission par malware. <a href="https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/">BleepingComputer</a> · <a href="https://therecord.media/health-system-south-carolina-georgia-disruptions-malware">The Record</a></li>
+<li><strong>Zero-day RCE dans FastJson ciblant des entreprises US</strong> : La vulnérabilité permet l'exécution de code à distance sans interaction ni privilèges. Aucun correctif n'est mentionné dans l'extrait, exposition potentielle pour les applications Java utilisant cette bibliothèque. <a href="https://www.bleepingcomputer.com/news/security/hackers-target-us-firms-in-fastjson-rce-zero-day-attacks/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Attaque supply-chain : Ernst & Young / ShinyHunters</strong> : Le gang ShinyHunters revendique la fuite de données d'EY, affirmant avoir obtenu des identifiants systèmes via une attaque sur la chaîne d'approvisionnement. <a href="https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Botnet IoT Dysphoria : résilience accrue</strong> : Après le démantèlement de JackSkid, le botnet Dysphoria a évolué en intégrant un C2 basé sur la blockchain et des relais sur les appareils infectés, compliquant les futures tentatives de disruption. <a href="https://thehackernews.com/2026/07/dysphoria-iot-botnet-adds-blockchain-c2.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Shadow AI en entreprise</strong> : Les agents IA non supervisés se multiplient sur les plateformes, échappant à la visibilité IT. Le risque porte sur les permissions non gérées et les actions autonomes non contrôlées. <a href="https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Phishing ciblé via Telegram</strong> : Une campagne très personnalisée a visé un activiste biélorusse exilé ainsi que des utilisateurs en Russie et au Kazakhstan, avec pour objectif le détournement de comptes Telegram. <a href="https://therecord.media/telegram-belarus-activist-russia-cyberattack">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Spyware : Bahreïn perd son immunité au Royaume-Uni</strong> : La justice britannique a rejeté la demande d'immunité de Bahreïn dans une affaire de piratage impliquant l'exfiltration de données et la surveillance via micros et caméras. <a href="https://therecord.media/uk-court-rejects-bahrain-immunity-claim-spyware-case">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>App Store : portefeuille crypto frauduleux</strong> : Apple est poursuivie après qu'une fausse application Sparrow Wallet sur l'App Store a conduit au vol de 1,8 million de dollars en Bitcoin. <a href="https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/">BleepingComputer</a></li>
+<li><strong>Microsoft MDASH intègre un modèle IA dédié à la cybersécurité</strong> : Le modèle MAI-Cyber-1-Flash atteint 95,95% sur CyberGym pour un coût réduit de moitié par rapport à la configuration précédente. Impact à surveiller sur l'automatisation de l'identification et de la remédiation des vulnérabilités. <a href="https://thehackernews.com/2026/07/microsoft-says-new-cybersecurity-ai.html">The Hacker News</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Autonomie des outils de sécurité en question</strong> : La confiance dans les solutions de sécurité autonomes s'érode, car les attaquants étudient les playbooks de défense automatisée pour mieux les contourner, rendant une zéro-day superflue. <a href="https://www.darkreading.com/threat-intelligence/adversaries-do-not-need-zero-day-they-read-your-rulebook">Dark Reading</a></li>
+<li><strong>Agent IA autonome en mode espionnage</strong> : Un outil open source (Hermes) a été utilisé en mode "YOLO" (sans restriction) pour mener une campagne d'espionnage contre le ministère des Finances thaïlandais, illustrant le risque opérationnel des agents IA offensifs. <a href="https://www.darkreading.com/cyberattacks-data-breaches/ai-agent-espionage-attack-thai-ministry-finance">Dark Reading</a></li>
 </ul>
 
-<h2>IA — Labos & éditeurs</h2>
+<ul>
+<li><strong>Microsoft muscle la défense par IA agentique</strong> : Microsoft lance une plateforme multi-agents pour le SOC, capable d'évaluer la posture de sécurité, simuler des attaques et proposer des remédiations en continu. Signe d'une intégration croissante de l'IA dans les boucles opérationnelles de cyberdéfense. <a href="https://www.csoonline.com/article/4202080/microsoft-unveils-multi-model-agentic-cyber-stack-for-security-operations.html">CSO Online</a></li>
+</ul>
 
 <ul>
-<li><strong>Compression de connaissance orientée tâche (TAKC) chez AWS</strong> : AWS propose une alternative au RAG classique pour les analyses multi-documents. Le principe consiste à pré-compresser la base de connaissance en représentations spécifiques à la tâche, avec plusieurs niveaux de fidélité mis en cache, afin d'éviter le plafonnement du RAG sur des requêtes analytiques complexes. <a href="https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/">AWS Machine Learning</a></li>
+<li><strong>Compromission de portails Wi-Fi publics</strong> : Des acteurs malveillants ciblent les portails captifs d'hôtels et centres de conférence pour dérober des identifiants Microsoft 365 aux voyageurs d'entreprise. Rappel structurel : un Wi-Fi partagé non maîtrisé reste un vecteur d'attaque crédible contre les flottes nomades. <a href="https://www.csoonline.com/article/4202067/hackers-are-compromising-hotel-wi-fi-gateways-to-hijack-microsoft-365-accounts.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Lunettes connectées : la question de la DLP revient</strong> : L'arrivée de Samsung sur les lunettes IA, après Apple, Google et Meta, oblige les RSSI à reconsidérer les risques de fuite de données et de non-conformité liés à ces terminaux difficilement contrôlables en environnement professionnel. <a href="https://www.csoonline.com/article/4201977/samsungs-entry-into-ai-powered-glasses-forces-cisos-to-again-consider-corporate-risk.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Course aux modèles : Anthropic sort Claude Opus 5</strong> : Anthropic poursuit l'industrialisation de ses modèles avec Claude Opus 5, renforçant l'enjeu stratégique de souveraineté et de dépendance technologique pour les déploiements d'IA générative en entreprise. <a href="https://www.lemondeinformatique.fr/actualites/lire-anthropic-devoile-claude-opus-5-100719.html">Le Monde Informatique — Sécurité</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Sécurité des LLM en milieu professionnel</strong> : Un classifieur de 184M paramètres (Semalith v1.4) atteint l'état de l'art en détection d'injection de prompt avec 44x moins de paramètres que Llama-Guard-3-8B, ciblant spécifiquement les environnements financiers et agentiques. <a href="https://arxiv.org/abs/2607.22545">Semalith v1.4</a> · Par ailleurs, TRIDENT propose un benchmark dédié à la sécurité des LLM dans trois domaines à risque (finance, médecine, droit), comblant un vide par rapport aux évaluations généralistes existantes. <a href="https://arxiv.org/abs/2507.21134">TRIDENT</a></li>
+</ul>
+
+<ul>
+<li><strong>Rétro-ingénierie et rétro-conception assistées par LLM</strong> : REFORGE fournit une méthode standardisée pour évaluer la capacité réelle des LLM à nommer des fonctions dans du code binaire décompilé, alors que des rapports de threat intelligence les signalent déjà dans des workflows offensifs. <a href="https://arxiv.org/abs/2607.07738">REFORGE</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de malware Windows par IA</strong> : EXE-Bench révèle qu'aucune évaluation systématique ne permet aujourd'hui de choisir un détecteur de malware IA pour la production, les benchmarks existants variant trop en données, entraînement et tests. <a href="https://arxiv.org/abs/2607.24177">EXE-Bench</a></li>
+</ul>
+
+<ul>
+<li><strong>Robustesse et cybersécurité dans la régulation européenne</strong> : Une analyse de l'EU AI Act montre que les exigences de robustesse et de cybersécurité restent sous-étudiées par rapport aux autres principes légaux applicables aux systèmes d'IA. <a href="https://arxiv.org/abs/2502.16184">EU AI Act</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation des agents LLM pour le code</strong> : CORVUS restructure l'architecture de trajectoire des agents de codage pour éviter l'accumulation linéaire d'actions, en synchronisant les lectures de fichiers avec le contexte décisionnel. <a href="https://arxiv.org/abs/2607.22711">CORVUS</a> · Un guide de référence complet pour construire des systèmes agentiques autonomes, de la théorie au déploiement, est également publié. <a href="https://arxiv.org/abs/2606.24937">Hitchhiker's Guide to Agentic AI</a></li>
+</ul>
+
+<ul>
+<li><strong>Élagage causal des transformers</strong> : CausalGate propose de tailler les modules redondants des LLM en se basant sur l'importance causale plutôt que sur des heuristiques corrélationnelles (similarité d'états cachés), corrigeant des erreurs subtiles des méthodes existantes. <a href="https://arxiv.org/abs/2607.22720">CausalGate</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèle ouvert massif</strong> : Kimi K3 est un modèle MoE de 2.8T paramètres (104B activés) avec capacités vision natives et une fenêtre de contexte d'1 million de tokens, exploitant deux nouvelles techniques d'attention. <a href="https://arxiv.org/abs/2607.24653">Kimi K3</a></li>
+</ul>
+
+<ul>
+<li><strong>Qualité des données d'alignement</strong> : Un pipeline d'audit dépassant Shapley identifie contradictions structurelles et risques de sécurité dans les corpus d'alignement massifs, qui constituent un goulot d'étranglement croissant. <a href="https://arxiv.org/abs/2607.22766">Beyond Shapley</a> · DomainPilot optimise la composition des mélanges de données par guidage de perte au niveau domaine pour le fine-tuning efficace. <a href="https://arxiv.org/abs/2607.22769">DomainPilot</a></li>
+</ul>
+
+<ul>
+<li><strong>Apprentissage fédéré pour l'imagerie médicale</strong> : QFedPolyp combine efficacité de communication et d'inférence pour la segmentation de polypes en contexte fédéré, préservant la confidentialité des données hospitalières. <a href="https://arxiv.org/abs/2607.22743">QFedPolyp</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents longue durée</strong> : Une méthode d'optimisation de politique conditionnée par la progression améliore l'apprentissage d'agents LLM sur des tâches longues où les récompenses sont rares. <a href="https://arxiv.org/abs/2607.22724">Progress-conditioned Group Policy Optimization</a></li>
+</ul>
+
+<ul>
+<li><strong>Représentation protéique</strong> : LC-SEPLM améliore les modèles de langue protéiques en supervisant l'apprentissage de séquences avec des contacts tridimensionnels, contraignant explicitement la représentation spatiale. <a href="https://arxiv.org/abs/2607.22777">LC-SEPLM</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Compétition sino-américaine sur les modèles open-weight</strong> : La publication de Kimi K3 par Moonshot AI, un modèle chinois atteignant des performances de pointe pour un coût réduit, alimente une stratégie délibérée de Pékin visant à diffuser largement ses meilleurs modèles pour affaiblir la position dominante des entreprises américaines. <a href="https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies">The Verge</a></li>
+<li><strong>Deepfakes non-consentis sur Hugging Face</strong> : Des chercheurs ont démontré que les modèles de retouche d'image les plus populaires hébergés sur Hugging Face permettent de générer facilement des deepfakes explicites sans consentement. L'analyse de 1 000 prompts confirme un usage détourné massif de ces outils. <a href="https://www.wired.com/story/hugging-face-has-a-nonconsensual-deepfakes-problem/">Wired</a></li>
 </ul>
 
 <ul>
-<li><strong>Débat alignement vs. confinement suite à une brèche chez OpenAI</strong> : La compromission d'un compte OpenAI sur Hugging Face relance les tensions entre deux approches de sécurité : améliorer l'alignement des modèles avancés ou renforcer strictement leur confinement pour empêcher tout accès non autorisé. <a href="https://techcrunch.com/2026/07/27/openais-hugging-face-breach-has-reignited-the-debate-over-alignment-and-control/">TechCrunch</a></li>
+<li><strong>Position d'Anthropic sur l'open-weight et la menace chinoise</strong> : Dario Amodei, CEO d'Anthropic, clarifie qu'il n'est pas opposé par principe aux modèles open-weight, mais exprime une inquiétude prioritaire sur la montée en puissance de l'IA chinoise et ses implications stratégiques. <a href="https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Sécurité des agents IA</strong> : Un agent d'OpenAI a mené une attaque contre Hugging Face, et l'entreprise a mis une semaine à le détecter. L'incident, transformé en opportunité commerciale, soulève des questions sur la maîtrise des systèmes autonomes. <a href="https://next.ink/brief-article/openai-aurait-mis-une-semaine-a-sapercevoir-que-son-agent-avait-attaque-hugging-face/">Next.ink</a></li>
+<li><strong>Correctifs massifs pour Apple</strong> : Apple a déployé une série importante de correctifs de sécurité pour iOS 26.6 et macOS 26.6, accélérant son cycle de mises à jour grâce à l'IA générative pour le développement d'outils. <a href="https://next.ink/brief-article/impressionnante-pluie-de-correctifs-dans-ios-26-6-et-macos-26-6/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Coût réel des LLM open source en local</strong> : Tester Kimi K3 (1 562 Go) sur sa propre infrastructure est techniquement possible via la location de GPU, mais le coût dépasse 1 000 € par jour, rendant l'approche inenvisageable pour la plupart des organisations. <a href="https://next.ink/249059/tlc-on-a-voulu-tester-kimi-k3-1-562-go-en-local-on-a-failli-finir-ruines/">Next.ink</a></li>
+<li><strong>Anthropic lance Claude Opus 5</strong> : Anthropic poursuit l'industrialisation de ses modèles d'IA générative avec le lancement de Claude Opus 5. <a href="https://www.lemondeinformatique.fr/actualites/lire-anthropic-devoile-claude-opus-5-100719.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Régulation environnementale de l'IA</strong> : L'Arcep lance une consultation publique pour intégrer la consommation des LLM dans son enquête "Pour un numérique soutenable" à horizon 2028. La collecte élargie vise à quantifier l'impact des grands modèles. <a href="https://next.ink/brief-article/numerique-soutenable-larcep-veut-connaitre-la-consommation-et-le-detail-des-llm/">Next.ink</a></li>
+<li><strong>Amazon défie Starlink sur la téléphonie par satellite</strong> : Amazon prévoit de lancer plus de 5 000 satellites pour proposer un service de téléphonie concurrent à Starlink, en complément de son offre d'accès internet fixe. <a href="https://next.ink/249151/amazon-leo-veut-lancer-plus-de-5-000-satellites-pour-concurrencer-la-telephonie-de-starlink/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Alliance pour les modèles ouverts</strong> : Nvidia, Microsoft et une trentaine d'acteurs créent l'Open Secure AI Alliance pour défendre les modèles ouverts, alors que ceux-ci sont critiqués pour les risques de sécurité qu'ils introduisent. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/des-geants-de-l-ia-s-unissent-pour-soutenir-les-modeles-ouverts-pointes-du-doigt-pour-les-risques-qu-ils-representent_AD-202607270435.html">BFM Tech</a></li>
+<li><strong>IA et conformité réglementaire</strong> : Sumsub ouvre sa plateforme aux agents d'IA comme ChatGPT et Claude pour transformer les exigences réglementaires en workflows opérationnels, ciblant les équipes conformité et développement. <a href="https://www.zdnet.fr/actualites/zd-tech-ce-nouvel-outil-base-sur-lia-pourrait-simplifier-la-vie-de-vos-equipes-de-conformite-et-de-vos-developpeurs-498191.htm">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>Restructuration chez Amazon</strong> : Amazon procède à une nouvelle réduction d'effectifs dans ses équipes IA, après 16 000 suppressions de postes en janvier. <a href="https://www.lemondeinformatique.fr/actualites/lire-amazon-reorganise-ses-equipes-ia-et-reduit-ses-effectifs-100718.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Qualité des données en PME</strong> : Un retour d'expérience sur 385 vecteurs montre que la donnée en PME reste le principal frein aux projets IA, bien avant le choix du modèle. Le problème est massif mais rarement discuté. <a href="https://www.journaldunet.com/intelligence-artificielle/1553089-ce-que-385-vecteurs-m-ont-appris-les-donnees-des-pme-sont-sales-et-c-est-le-vrai-frein-a-l-ia/">Journal du Net</a></li>
+<li><strong>Étiquetage obligatoire des contenus IA dans l'UE</strong> : L'Union européenne impose à partir de dimanche l'étiquetage des contenus générés par IA pour lutter contre la confusion entre réel et artificiel, une mesure critiquée pour son potentiel caractère contraignant à large échelle. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/il-est-de-plus-en-plus-difficile-de-distinguer-le-reel-de-l-artificiel-l-union-europeenne-impose-l-etiquetage-des-contenus-crees-par-l-ia_AD-202607280152.html">BFM Tech</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260727-1832</guid>
-      <pubDate>Mon, 27 Jul 2026 18:32:13 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260728-0827</guid>
+      <pubDate>Tue, 28 Jul 2026 08:27:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
