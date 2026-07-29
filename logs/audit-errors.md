@@ -107,3 +107,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-27 08:50 UTC | scoring | Robot Learning to Communicate through Projected Visual Abstr (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
 | 2026-07-27 09:12 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2455)) |
 | 2026-07-28 08:23 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2519)) |
+| 2026-07-29 08:26 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 56 column 6 (char 2494)) |
