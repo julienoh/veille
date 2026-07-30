@@ -109,3 +109,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-07-28 08:23 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 74 column 6 (char 2519)) |
 | 2026-07-29 08:26 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 56 column 6 (char 2494)) |
 | 2026-07-29 13:10 UTC | scoring | PayPal relance les spéculations sur un possible rachat après (Siècle Digital) | Rate limit fournisseur LLM atteint |
+| 2026-07-30 08:17 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 62 column 6 (char 2393)) |
