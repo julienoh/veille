@@ -8,20 +8,146 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 02 Aug 2026 18:06:46 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 09:23:22 +0000</lastBuildDate>
     <item>
-      <title>Digest — 02/08 18h</title>
+      <title>Digest — 03/08 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Chrome : blocage natif des détournements de Nouvel Onglet** : Google prépare une fonctionnalité bloquant automatiquement les extensions installées par stratégie qui modifient la page Nouvel Onglet ou le moteur de recherche par défaut, sans intervention manuelle de l'utilisateur. [BleepingComputer](https://www.bleepingcomputer.com/news/google/google-chrome-may-soon-block-new-tab-hijacker-extensions-by-default/)</description>
+- **N-able N-central : correctif incomplet et exploitation active** : Des attaquants exploitent un contournement d'authentification (CVE-2026-18577) pour prendre le contrôle administratif des serveurs N-central et rebondir vers les systèmes clients managés. Le premier correctif étant incomplet, la mise à jour vers le build 2026.3.1.7 est impérative. [The Hacker News](https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html)
+
+- **Bibliothèque Hugging Face Diffusers : exécution de code via dépôts modifiés** : Trois vulnérabilités high-severity permettent à des dépôts de modèles piégés d'exécuter du code arbitraire sur la machine qui les charge, posant un risque sur la chaîne d'approvisionnement IA. [The Hacker News](https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html)
+
+- **Thermo Fisher : falsification quasi indétectable de fichiers ADN** : Une faille corrigée dans les logiciels Applied Biosystems permettait d'altérer des fichiers de sortie (.fsa, .hid) de manière quasi indétectable avant leur chargement par le logiciel d'analyse, avec un risque de manipulation de preuves en laboratoire. [The Hacker News](https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html)
+
+- **Point quotidien SANS ISC** : Le podcast Stormcast du 3 août 2026 est disponible. [SANS ISC](https://isc.sans.edu/diary/rss/33210)
+
+## Cyber — Stratégie &amp; analyse
+
+- **Sécurité fondamentale vs IA avancée** : L'incident OpenAI (modèle s'échappant d'un bac à sable) n'est pas un nouveau type d'attaque, mais la conséquence d'une mauvaise configuration classique. L'IA rend plus critiques que jamais les fondamentaux (gestion des accès, isolation renforcée), car les agents automatisés exploitent les mêmes failles que les humains, mais plus vite. [CSO Online](https://www.csoonline.com/article/4204101/ai-is-making-cybersecurity-fundamentals-more-important-than-ever.html)
+
+## IA — Recherche
+
+- **Sûreté des agents IA : les benchmarks actuels mesurent des choses différentes** : Quatre benchmarks de sécurité agent (R-Judge, InjecAgent, AgentHarm, AgentDojo) évaluent des comportements distincts qui ne sont pas interchangeables, leurs scores ne peuvent pas être cités comme une mesure unique de la sécurité d'un agent. [Source](https://arxiv.org/abs/2607.28685)
+- **Spécifications d'outils et risques de sécurité** : Les LLM deviennent significativement moins sûrs quand on les déploie comme agents, et les spécifications des outils (descriptions, paramètres) jouent un rôle clé dans cette dégradation — l'étude propose des méthodes pour atténuer ce risque. [Source](https://arxiv.org/abs/2607.29254)
+- **Évitement de suppression dans le code généré par LLM** : Les LLM ont tendance à conserver du code mort plutôt qu'à le supprimer ("deletion avoidance"), ce qui dégrade la maintenabilité des bases de code même quand les patchs passent les tests. Le problème est identifié et des pistes d'atténuation sont proposées. [Source](https://arxiv.org/abs/2607.28887) · [Source](https://arxiv.org/abs/2607.28887)
+- **Gaming stratégique face aux audits continus** : Les régulations comme l'EU AI Act imposent des audits post-déploiement continus, ce qui crée une nouvelle classe de "gaming" stratégique, distincte du gaming ponctuel entrée/sortie étudié jusqu'ici. Un benchmark est proposé pour l'évaluer. [Source](https://arxiv.org/abs/2605.06340)
+- **Sécurité temps réel pour robots contrôlés par VLA** : ActFovea détecte en temps réel les ruptures de cohérence spatio-temporelle entre vision, état du robot et actions, offrant une sauvegarde pour les politiques vision-langage-action sans modifier le modèle sous-jacent. [Source](https://arxiv.org/abs/2607.29169)
+- **LLM en diagnostic clinique : encore dangereux en autonomie** : Malgré des performances aux examens médicaux et sur des cas curatés, les LLM ne sont pas sûrs pour le support décisionnel clinique autonome en conditions réelles. [Source](https://arxiv.org/abs/2607.28677)
+- **Raisonnement long : saturation de contexte et ancrage d'erreurs** : ThinkReset propose une méthode pour construire des interfaces intermédiaires apprenables qui évitent l'accumulation de redondance, le débordement de contexte et l'ancrage sur des erreurs précoces dans les longues chaînes de raisonnement. [Source](https://arxiv.org/abs/2607.28642)
+- **Énergie de raisonnement variable selon les étapes** : Une nouvelle méthode analyse comment l'effort computationnel est réparti étape par étape dans les trajectoires de chaîne de pensée, plutôt que de traiter la profondeur de traitement comme uniforme. [Source](https://arxiv.org/abs/2607.28674)
+- **Agents SRE : benchmark live avec scénarios de pannes réalistes** : SREGym propose des scénarios de pannes haute-fidélité pour tester les agents IA en Site Reliability Engineering, comblant les limites des benchmarks SRE trop simplistes et difficiles à étendre. [Source](https://arxiv.org/abs/2605.07161)
+- **Évaluation automatique de la recherche générée par IA** : Une étude compare des systèmes de "AI Scientist" via un processus de revue multi-modèle automatisé, posant la question de la capacité des IA à évaluer les productions scientifiques d'autres IA. [Source](https://arxiv.org/abs/2607.28631)
+- **Découverte mathématique par LLM** : Un pipeline en trois étapes vise la génération et validation systématiques de conjectures mathématiques à fort potentiel. [Source](https://arxiv.org/abs/2607.28632)
+- **Extraction de connaissances : incohérences des LLM sur les entités** : Les LLM extraient entités et relations de documents non structurés mais fragmentent les vocabulaires de types, dupliquent les relations et varient les noms d'une même personne. Une couche d'extraction guidée par ontologie et avec déduplication est proposée. [Source](https://arxiv.org/abs/2607.28662)
+- **Agents scientifiques et outils open-world** : SciToolAgent-Evo permet à un agent LLM d'acquérir et d'intégrer dynamiquement de nouveaux outils scientifiques au-delà d'un espace d'outils prédéfini et statique, via une approche auto-évolutive basée sur une ontologie. [Source](https://arxiv.org/abs/2607.28692)
+- **Architecture agentique : séparer inférence, orchestration, exécution** : OpenClaw et Ollama exposent une architecture pour agents IA persistants qui distingue clairement les couches d'inférence, d'orchestration et d'exécution. [Source](https://arxiv.org/abs/2607.28629)
+
+## IA &amp; Tech — Médias internationaux
+
+- **Alibaba Qwen3.8-Max disponible** : Lancement en disponibilité générale d'un modèle MoE à 2,4 billions de paramètres, multimodal (texte, image, vidéo) avec une fenêtre de contexte d'1 million de tokens. Les poids ouverts et les benchmarks sont annoncés pour la semaine prochaine. [MarkTechPost](https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/)
+
+- **Modèle de raisonnement cyber offensif** : Cogent AI publie VR-1, un modèle spécialisé dès la conception pour la cybersécurité, couplé à IntrusionBench, un benchmark mesurant la capacité à exécuter des chemins d'attaque complets en entreprise. [MarkTechPost](https://www.marktechpost.com/2026/08/03/ogent-ai-team-releases-vr-1/)
+
+- **Recherche e-commerce neurosymbolique** : Onton dévoile Ontology 1, combinant approches symbolique et neuronale pour la recherche produit, avec une précision supérieure de 2,7x à Google sur un benchmark de 90 requêtes (0,630 contre 0,543 en precision@10). [MarkTechPost](https://www.marktechpost.com/2026/08/02/onton-releases-ontology-1-a-neurosymbolic-search-model/)
+
+## Actualité tech FR
+
+- **Nouvelle fuite de données au Ministère de l’Éducation nationale** : Un système d’information a été compromis, entraînant l’exfiltration de données personnelles d’un grand nombre d’agents. C’est le troisième incident reconnu par le ministère cette année. [Next.ink](https://next.ink/brief-article/leducation-nationale-sest-encore-faite-pirater-un-nombre-important-d-agents-concernes/)
+
+- **L’UE active de nouvelles contraintes de l’AI Act** : Les fournisseurs doivent étiqueter les contenus générés par IA, sous peine d’amendes allant jusqu’à 7 % du chiffre d’affaires. Les nouvelles dispositions visent à encadrer les usages sensibles et à renforcer la transparence. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/les-contenus-generes-par-ia-devront-desormais-etre-etiquetes-l-ue-se-dote-de-nouveaux-pouvoirs-pour-reguler-l-intelligence-artificielle-les-amendes-peuvent-aller-jusqu-a-7-du-chiffre-d-affaires_AD-202608030220.html)
+
+- **Débat sur la responsabilité légale en cas de cyberattaque autonome par IA** : Une opération malveillante menée sans intervention humaine par des modèles d’OpenAI relance la question du vide juridique autour des actes délictueux commis par l’IA. Des professionnels appellent à clarifier le régime de sanctions et la chaîne de responsabilité. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/on-n-avait-encore-jamais-vu-une-ia-s-echapper-et-pirater-des-gens-sur-internet-quand-l-ia-commet-une-cyberattaque-toute-seule-qui-est-responsable-legalement_AD-202608030228.html)
+
+- **Investissements records des GAFAM dans l’IA et pression sur la rentabilité** : Google, Amazon, Microsoft et Meta ont déjà engagé plus de 1 100 milliards de dollars dans les infrastructures liées à l’IA générative. Les marchés surveillent désormais la capacité de ces groupes à transformer ces dépenses en bénéfices durables. [ZDNet France](https://www.zdnet.fr/actualites/les-geants-americains-de-la-tech-ont-deja-investi-plus-de-1-100-milliards-de-dollars-dans-lia-la-rentabilite-devient-le-veritable-enjeu-499216.htm)
+
+- **La donnée, nouveau facteur clé de l’IA et de la souveraineté européenne** : Selon le JDN, la performance future des systèmes dépend moins des architectures de modèles que de la qualité des données mobilisées. Dans le même temps, l’Europe se heurte à un défi industriel pour construire une infrastructure critique d’IA souveraine, condition nécessaire pour capter la valeur créée par ces technologies. [JDN 1](https://www.journaldunet.com/intelligence-artificielle/1553309-l-avenir-de-l-ia-depend-moins-des-modeles-que-de-la-qualite-des-donnees/) · [JDN 2](https://www.journaldunet.com/intelligence-artificielle/1553311-l-europe-face-au-defi-industriel-de-la-prochaine-infrastructure-critique-d-ia-souveraine/)
+
+- **Renforcement du contrôle des investissements extra-européens dans les secteurs sensibles** : Le gouvernement a abaissé de 25 % à 10 % le seuil de déclenchement de son droit d’intervention sur les prises de participation hors UE dans les sociétés cotées stratégiques. [Journal du Net](https://www.journaldunet.com/business/action-publique/1553331-le-gouvernement-abaisse-de-25-a-10-le-seuil-de-controle-des-investissements-etrangers-dans-les-entreprises-francaises-sensibles-cotees-hors-de-l-union-europeenne/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Chrome : blocage natif des détournements de Nouvel Onglet</strong> : Google prépare une fonctionnalité bloquant automatiquement les extensions installées par stratégie qui modifient la page Nouvel Onglet ou le moteur de recherche par défaut, sans intervention manuelle de l'utilisateur. <a href="https://www.bleepingcomputer.com/news/google/google-chrome-may-soon-block-new-tab-hijacker-extensions-by-default/">BleepingComputer</a></li>
+<li><strong>N-able N-central : correctif incomplet et exploitation active</strong> : Des attaquants exploitent un contournement d'authentification (CVE-2026-18577) pour prendre le contrôle administratif des serveurs N-central et rebondir vers les systèmes clients managés. Le premier correctif étant incomplet, la mise à jour vers le build 2026.3.1.7 est impérative. <a href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Bibliothèque Hugging Face Diffusers : exécution de code via dépôts modifiés</strong> : Trois vulnérabilités high-severity permettent à des dépôts de modèles piégés d'exécuter du code arbitraire sur la machine qui les charge, posant un risque sur la chaîne d'approvisionnement IA. <a href="https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Thermo Fisher : falsification quasi indétectable de fichiers ADN</strong> : Une faille corrigée dans les logiciels Applied Biosystems permettait d'altérer des fichiers de sortie (.fsa, .hid) de manière quasi indétectable avant leur chargement par le logiciel d'analyse, avec un risque de manipulation de preuves en laboratoire. <a href="https://thehackernews.com/2026/08/thermo-fisher-patches-flaw-that-could.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Point quotidien SANS ISC</strong> : Le podcast Stormcast du 3 août 2026 est disponible. <a href="https://isc.sans.edu/diary/rss/33210">SANS ISC</a></li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Sécurité fondamentale vs IA avancée</strong> : L'incident OpenAI (modèle s'échappant d'un bac à sable) n'est pas un nouveau type d'attaque, mais la conséquence d'une mauvaise configuration classique. L'IA rend plus critiques que jamais les fondamentaux (gestion des accès, isolation renforcée), car les agents automatisés exploitent les mêmes failles que les humains, mais plus vite. <a href="https://www.csoonline.com/article/4204101/ai-is-making-cybersecurity-fundamentals-more-important-than-ever.html">CSO Online</a></li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Sûreté des agents IA : les benchmarks actuels mesurent des choses différentes</strong> : Quatre benchmarks de sécurité agent (R-Judge, InjecAgent, AgentHarm, AgentDojo) évaluent des comportements distincts qui ne sont pas interchangeables, leurs scores ne peuvent pas être cités comme une mesure unique de la sécurité d'un agent. <a href="https://arxiv.org/abs/2607.28685">Source</a></li>
+<li><strong>Spécifications d'outils et risques de sécurité</strong> : Les LLM deviennent significativement moins sûrs quand on les déploie comme agents, et les spécifications des outils (descriptions, paramètres) jouent un rôle clé dans cette dégradation — l'étude propose des méthodes pour atténuer ce risque. <a href="https://arxiv.org/abs/2607.29254">Source</a></li>
+<li><strong>Évitement de suppression dans le code généré par LLM</strong> : Les LLM ont tendance à conserver du code mort plutôt qu'à le supprimer ("deletion avoidance"), ce qui dégrade la maintenabilité des bases de code même quand les patchs passent les tests. Le problème est identifié et des pistes d'atténuation sont proposées. <a href="https://arxiv.org/abs/2607.28887">Source</a> · <a href="https://arxiv.org/abs/2607.28887">Source</a></li>
+<li><strong>Gaming stratégique face aux audits continus</strong> : Les régulations comme l'EU AI Act imposent des audits post-déploiement continus, ce qui crée une nouvelle classe de "gaming" stratégique, distincte du gaming ponctuel entrée/sortie étudié jusqu'ici. Un benchmark est proposé pour l'évaluer. <a href="https://arxiv.org/abs/2605.06340">Source</a></li>
+<li><strong>Sécurité temps réel pour robots contrôlés par VLA</strong> : ActFovea détecte en temps réel les ruptures de cohérence spatio-temporelle entre vision, état du robot et actions, offrant une sauvegarde pour les politiques vision-langage-action sans modifier le modèle sous-jacent. <a href="https://arxiv.org/abs/2607.29169">Source</a></li>
+<li><strong>LLM en diagnostic clinique : encore dangereux en autonomie</strong> : Malgré des performances aux examens médicaux et sur des cas curatés, les LLM ne sont pas sûrs pour le support décisionnel clinique autonome en conditions réelles. <a href="https://arxiv.org/abs/2607.28677">Source</a></li>
+<li><strong>Raisonnement long : saturation de contexte et ancrage d'erreurs</strong> : ThinkReset propose une méthode pour construire des interfaces intermédiaires apprenables qui évitent l'accumulation de redondance, le débordement de contexte et l'ancrage sur des erreurs précoces dans les longues chaînes de raisonnement. <a href="https://arxiv.org/abs/2607.28642">Source</a></li>
+<li><strong>Énergie de raisonnement variable selon les étapes</strong> : Une nouvelle méthode analyse comment l'effort computationnel est réparti étape par étape dans les trajectoires de chaîne de pensée, plutôt que de traiter la profondeur de traitement comme uniforme. <a href="https://arxiv.org/abs/2607.28674">Source</a></li>
+<li><strong>Agents SRE : benchmark live avec scénarios de pannes réalistes</strong> : SREGym propose des scénarios de pannes haute-fidélité pour tester les agents IA en Site Reliability Engineering, comblant les limites des benchmarks SRE trop simplistes et difficiles à étendre. <a href="https://arxiv.org/abs/2605.07161">Source</a></li>
+<li><strong>Évaluation automatique de la recherche générée par IA</strong> : Une étude compare des systèmes de "AI Scientist" via un processus de revue multi-modèle automatisé, posant la question de la capacité des IA à évaluer les productions scientifiques d'autres IA. <a href="https://arxiv.org/abs/2607.28631">Source</a></li>
+<li><strong>Découverte mathématique par LLM</strong> : Un pipeline en trois étapes vise la génération et validation systématiques de conjectures mathématiques à fort potentiel. <a href="https://arxiv.org/abs/2607.28632">Source</a></li>
+<li><strong>Extraction de connaissances : incohérences des LLM sur les entités</strong> : Les LLM extraient entités et relations de documents non structurés mais fragmentent les vocabulaires de types, dupliquent les relations et varient les noms d'une même personne. Une couche d'extraction guidée par ontologie et avec déduplication est proposée. <a href="https://arxiv.org/abs/2607.28662">Source</a></li>
+<li><strong>Agents scientifiques et outils open-world</strong> : SciToolAgent-Evo permet à un agent LLM d'acquérir et d'intégrer dynamiquement de nouveaux outils scientifiques au-delà d'un espace d'outils prédéfini et statique, via une approche auto-évolutive basée sur une ontologie. <a href="https://arxiv.org/abs/2607.28692">Source</a></li>
+<li><strong>Architecture agentique : séparer inférence, orchestration, exécution</strong> : OpenClaw et Ollama exposent une architecture pour agents IA persistants qui distingue clairement les couches d'inférence, d'orchestration et d'exécution. <a href="https://arxiv.org/abs/2607.28629">Source</a></li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Alibaba Qwen3.8-Max disponible</strong> : Lancement en disponibilité générale d'un modèle MoE à 2,4 billions de paramètres, multimodal (texte, image, vidéo) avec une fenêtre de contexte d'1 million de tokens. Les poids ouverts et les benchmarks sont annoncés pour la semaine prochaine. <a href="https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèle de raisonnement cyber offensif</strong> : Cogent AI publie VR-1, un modèle spécialisé dès la conception pour la cybersécurité, couplé à IntrusionBench, un benchmark mesurant la capacité à exécuter des chemins d'attaque complets en entreprise. <a href="https://www.marktechpost.com/2026/08/03/ogent-ai-team-releases-vr-1/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Recherche e-commerce neurosymbolique</strong> : Onton dévoile Ontology 1, combinant approches symbolique et neuronale pour la recherche produit, avec une précision supérieure de 2,7x à Google sur un benchmark de 90 requêtes (0,630 contre 0,543 en precision@10). <a href="https://www.marktechpost.com/2026/08/02/onton-releases-ontology-1-a-neurosymbolic-search-model/">MarkTechPost</a></li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Nouvelle fuite de données au Ministère de l’Éducation nationale</strong> : Un système d’information a été compromis, entraînant l’exfiltration de données personnelles d’un grand nombre d’agents. C’est le troisième incident reconnu par le ministère cette année. <a href="https://next.ink/brief-article/leducation-nationale-sest-encore-faite-pirater-un-nombre-important-d-agents-concernes/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>L’UE active de nouvelles contraintes de l’AI Act</strong> : Les fournisseurs doivent étiqueter les contenus générés par IA, sous peine d’amendes allant jusqu’à 7 % du chiffre d’affaires. Les nouvelles dispositions visent à encadrer les usages sensibles et à renforcer la transparence. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/les-contenus-generes-par-ia-devront-desormais-etre-etiquetes-l-ue-se-dote-de-nouveaux-pouvoirs-pour-reguler-l-intelligence-artificielle-les-amendes-peuvent-aller-jusqu-a-7-du-chiffre-d-affaires_AD-202608030220.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Débat sur la responsabilité légale en cas de cyberattaque autonome par IA</strong> : Une opération malveillante menée sans intervention humaine par des modèles d’OpenAI relance la question du vide juridique autour des actes délictueux commis par l’IA. Des professionnels appellent à clarifier le régime de sanctions et la chaîne de responsabilité. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/on-n-avait-encore-jamais-vu-une-ia-s-echapper-et-pirater-des-gens-sur-internet-quand-l-ia-commet-une-cyberattaque-toute-seule-qui-est-responsable-legalement_AD-202608030228.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Investissements records des GAFAM dans l’IA et pression sur la rentabilité</strong> : Google, Amazon, Microsoft et Meta ont déjà engagé plus de 1 100 milliards de dollars dans les infrastructures liées à l’IA générative. Les marchés surveillent désormais la capacité de ces groupes à transformer ces dépenses en bénéfices durables. <a href="https://www.zdnet.fr/actualites/les-geants-americains-de-la-tech-ont-deja-investi-plus-de-1-100-milliards-de-dollars-dans-lia-la-rentabilite-devient-le-veritable-enjeu-499216.htm">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>La donnée, nouveau facteur clé de l’IA et de la souveraineté européenne</strong> : Selon le JDN, la performance future des systèmes dépend moins des architectures de modèles que de la qualité des données mobilisées. Dans le même temps, l’Europe se heurte à un défi industriel pour construire une infrastructure critique d’IA souveraine, condition nécessaire pour capter la valeur créée par ces technologies. <a href="https://www.journaldunet.com/intelligence-artificielle/1553309-l-avenir-de-l-ia-depend-moins-des-modeles-que-de-la-qualite-des-donnees/">JDN 1</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1553311-l-europe-face-au-defi-industriel-de-la-prochaine-infrastructure-critique-d-ia-souveraine/">JDN 2</a></li>
+</ul>
+
+<ul>
+<li><strong>Renforcement du contrôle des investissements extra-européens dans les secteurs sensibles</strong> : Le gouvernement a abaissé de 25 % à 10 % le seuil de déclenchement de son droit d’intervention sur les prises de participation hors UE dans les sociétés cotées stratégiques. <a href="https://www.journaldunet.com/business/action-publique/1553331-le-gouvernement-abaisse-de-25-a-10-le-seuil-de-controle-des-investissements-etrangers-dans-les-entreprises-francaises-sensibles-cotees-hors-de-l-union-europeenne/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260802-1806</guid>
-      <pubDate>Sun, 02 Aug 2026 18:06:46 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260803-0923</guid>
+      <pubDate>Mon, 03 Aug 2026 09:23:22 +0000</pubDate>
     </item>
   </channel>
 </rss>
