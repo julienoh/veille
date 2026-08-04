@@ -8,168 +8,144 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 04 Aug 2026 13:19:31 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 18:48:54 +0000</lastBuildDate>
     <item>
-      <title>Digest — 04/08 13h</title>
+      <title>Digest — 04/08 18h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **cPanel : faille critique d'escalade de privilèges SQL** : Un client d'hébergement authentifié peut exécuter du SQL en tant que `root` sur la base de données, franchissant la limite d'isolation entre comptes. Un correctif ciblé a été déployé, comblant également deux autres chemins d'élévation. [The Hacker News](https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html)
+- **Supply chain npm : malware auto-propageant ChainDrop** : Une campagne massive a compromis plus de 1 300 paquets npm (2 milliards de téléchargements mensuels cumulés) via un malware capable de se répliquer automatiquement d'un paquet à l'autre. [BleepingComputer](https://www.bleepingcomputer.com/news/security/massive-chaindrop-npm-supply-chain-attack-infects-hundreds-of-packages/)
 
-- **N-able N-central : exploitation active confirmée par la CISA** : La vulnérabilité CVE-2026-18577 (score CVSS élevé) a été ajoutée au catalogue KEV suite à des compromissions avérées de clients. Correctif à appliquer en priorité. [The Hacker News](https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html)
+- **Greatness PhaaS évolue : contournement MFA par device code phishing** : La plateforme de phishing-as-a-service Greatness intègre désormais l'abus du flux OAuth 2.0 Device Authorization Grant pour dérober des tokens de session, rendant la MFA inopérante. [The Hacker News](https://thehackernews.com/2026/08/greatness-phaas-adds-device-code.html)
 
-- **Google ADK : trois workflows IA supprimés après une injection de prompt** : Une issue GitHub publique permettait de manipuler un agent de triage pour déclencher un agent privilégié de correction de code. Les workflows Python concernés ont été retirés du dépôt Agent Development Kit. [The Hacker News](https://thehackernews.com/2026/08/google-deletes-3-adk-ai-workflows-after.html)
+- **Faux installateurs Adobe/Zoom déployant ScreenConnect** : Une campagne active utilise des leurres de mise à jour logicielle (Adobe, Zoom) ou de révision documentaire pour installer discrètement l'outil RMM ScreenConnect et obtenir un accès distant persistant. [The Hacker News](https://thehackernews.com/2026/08/fake-adobe-and-zoom-updates-install.html)
 
-- **DOUBLECUP : nouveau loader russe distribué via ClickFix** : La chaîne d'infection utilise des images PNG stéganographiées mises en cache dans le navigateur pour livrer le loader CountLoader et un RAT inédit baptisé DeviceManager. [The Hacker News](https://thehackernews.com/2026/08/doublecup-uses-clickfix-and-cached-pngs.html)
+- **Sécurisation des agents IA : Varonis introduit l'IBAC** : Varonis propose un modèle de contrôle d'accès basé sur l'intention (Intent-Based Access Control) pour détecter les dérives comportementales des agents IA et appliquer des garde-fous en temps réel. [BleepingComputer](https://www.bleepingcomputer.com/news/security/varonis-agent-ibac-keeps-ai-agents-within-their-intended-boundaries/)
 
-- **Suisse : l'agence IT fédérale compromise, 200 comptes affectés** : L'office BIT a détecté des anomalies sur ses serveurs Microsoft SharePoint on-premises. Le vecteur d'intrusion exact reste non confirmé à ce stade. [The Record](https://therecord.media/swiss-bit-foitt-hacked-possibly-sharepoint-vulnerabilities)
+- **Compromission de Żabka via un compte tiers** : La chaîne polonaise de magasins de proximité a subi une intrusion fin juillet, apparemment via un compte tiers donnant accès à son environnement Jira et à d'autres données sensibles. [The Record](https://therecord.media/poland-convenience-store-chain-zabka-cyberattack)
 
-- **Utilisation offensive de l'IA par les cybercriminels** : Talos a analysé des logs de prompts issus de terminaux d'acteurs malveillants utilisant Claude Code, CodeX, Cursor et Gemini. L'étude documente comment ces outils d'IA cloud sont détournés pour accélérer les opérations offensives. [Cisco Talos](https://blog.talosintelligence.com/keep-going-bro-youve-got-this-a-data-driven-look-at-how-adversaries-are-weaponizing-ai/)
+- **Conflit juridique UK-Apple sur le chiffrement iCloud** : Apple engage un nouveau recours contre les injonctions britanniques exigeant un accès détournant la protection avancée des données iCloud (Advanced Data Protection). [The Record](https://therecord.media/apple-uk-tcn-icloud-new-legal-challenge)
 
-- **Botnet en phase de reconnaissance sur outils de diagnostic** : Le SANS ISC observe un scan ciblant des URLs associées à des outils de diagnostic, potentiellement pour identifier des instances vulnérables exposées. [SANS ISC](https://isc.sans.edu/diary/rss/33214)
+- **Russie : retrait de produits liés à Durov après qualification terroriste** : Suite à la désignation de Pavel Durov comme soutien au terrorisme par le FSB, des entreprises russes retirent les produits et publicités associés à Telegram, accusé d'héberger des canaux utilisés par l'Ukraine. [The Record](https://therecord.media/russian-businesses-erase-durov-linked-products-terrorist-designation)
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Azure Cosmos DB : escalade inter-tenant par sandbox Gremlin** : Une vulnérabilité critique permettait de briser l’isolation du sandbox de requêtes Gremlin pour exécuter du code sur l’infrastructure partagée et accéder aux bases d’autres clients, y compris celles de services Microsoft internes. [CSO Online](https://www.csoonline.com/article/4204925/critical-azure-cosmos-db-flaw-threatened-cross-tenant-database-takeover.html)
-
-- **Fuite de données Claude via indexation Google** : Des conversations privées issues de Claude, incluant une app de thérapie générée par IA et des tableaux de bord de facturation médicale, ont été indexées et sont trouvables sur Google. [Schneier on Security](https://www.schneier.com/blog/archives/2026/08/some-claude-chats-are-searchable-on-google.html)
-
-- **AI Notetaker tl;dv : espionnage de visioconférences** : Une mauvaise configuration Firebase permet d’interroger les métadonnées de réunion de n’importe quel utilisateur et potentiellement de rejoindre des appels gouvernementaux ou d’entreprise. [Dark Reading](https://www.darkreading.com/application-security/ai-notetaker-spy-government-corporate-video-calls)
-
-- **Google ADK : agents IA manipulables par messages non fiables** : Des failles dans les workflows automatisés du dépôt GitHub du kit de développement d’agents de Google permettent à un agent public de déclencher des automatisations privilégiées (manipulation de PR, exposition de credentials). [CSO Online](https://www.csoonline.com/article/4204906/google-adk-flaws-reveal-what-happens-when-ai-agents-trust-the-wrong-message.html)
-
-- **Cybersabotage OT dans le Minnesota : sauvegardes en otage** : Lors de l’attaque coordonnée contre une trentaine de systèmes d’eau, les assaillants disposaient potentiellement d’une meilleure sauvegarde des configurations industrielles que les exploitants eux-mêmes, compliquant la remédiation. [CSO Online](https://www.csoonline.com/article/4204541/the-minnesota-attackers-may-hold-a-better-backup-of-your-plant-than-you-do.html)
-
-- **Sécurisation des APIs, prérequis pour l’adoption de l’IA** : Avec 62 % des organisations en phase d’expérimentation ou de déploiement d’IA agentique, la sécurisation des APIs devient la brique de base incontournable pour maîtriser les risques de cette adoption massive. [CSO Online](https://www.csoonline.com/article/4204548/secure-ai-adoption-starts-with-api-best-practices.html)
-
-- **Black Hat 2026 : l’IA s’intègre aux workflows opérationnels** : Les annonces produit confirment un basculement de l’IA au-delà des simples copilotes, vers une intégration dans les flux opérationnels avec un accent sur la gouvernance, la gestion de l’exposition et l’automatisation. [CSO Online](https://www.csoonline.com/article/4204921/the-top-cybersecurity-product-announcements-from-black-hat-2026.html)
+- **Attaques sans malware accélérées par l'IA** : CrowdStrike observe une généralisation des intrusions reposant sur l'identité compromise et les outils légitimes plutôt que sur des logiciels malveillants, avec des temps de percée ramenés sous la minute via l'assistance de l'IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-crowdstrike-alerte-sur-des-cyberattaques-plus-furtives-accelerees-par-l-ia-100734.html)
 
 ## IA — Labos &amp; éditeurs
 
-- **Proposition de standard SAFE pour la transparence cybersécurité** : L'Open Secure AI Alliance (120+ membres) soumet au RFC via la Linux Foundation un cadre d'échange standardisé des vulnérabilités trouvées dans les systèmes d'IA agentique. L'objectif est d'accélérer le partage d'informations entre éditeurs et équipes de sécurité. [NVIDIA Blog](https://blogs.nvidia.com/blog/open-secure-ai-alliance-contributions/)
+- **Modèle compact pour agents locaux** : Liquid AI publie LFM2.5-2.6B, un modèle léger conçu pour s'exécuter localement sur des appareils edge tout en assurant des fonctions d'agent. [Hugging Face Blog](https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b)
+
+- **Modèle ouvert pour conduite autonome** : NVIDIA met à disposition Alpamayo 2 Super, un modèle optimisé pour les cas rares et complexes rencontrés par les robotaxis et véhicules autonomes, sous licence commerciale. [NVIDIA Blog](https://blogs.nvidia.com/blog/alpamayo-2-super-open-model-now-available/)
+
+- **Stockage repensé pour l'IA** : Face à l'explosion des datasets et des fenêtres de contexte, NVIDIA souligne que la réponse ne réside pas dans la seule capacité de stockage mais dans des architectures capables de fournir des données utiles et contextualisées aux usines d'IA. [NVIDIA Blog](https://blogs.nvidia.com/blog/ai-storage-fms/)
+
+- **Grounding par recherche web chez AWS** : Amazon Bedrock intègre nativement un outil de recherche web côté serveur pour ancrer les réponses des modèles dans des informations actualisées, sans dépendance tierce. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-for-foundation-model-grounding/)
+
+- **Extraction web automatisée** : AWS illustre une architecture associant Bedrock AgentCore Browser et OpenSearch Serverless pour extraire automatiquement des insights de sites web à partir de flux RSS, avec rendu des pages. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/automated-web-insight-extraction-with-amazon-bedrock-agentcore/)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Librairie de visualisation Python haute performance** : Reflex publie en open source XY, une librairie de graphiques Python qui délègue le rendu à un cœur Rust natif et WebGL2, maintenant l'interactivité jusqu'à 100 millions de points avec des temps de rendu quasi constants et une exportation légère. [MarkTechPost](https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy/)
+- **Risques de fuite de propriété intellectuelle vers l'IA** : Apple élargit son enquête sur le transfert de données confidentielles par d'anciens employés vers OpenAI. L'entreprise affirme que des ex-salariés supplémentaires auraient conservé ou accédé à des secrets commerciaux. [TechCrunch](https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/)
 
-- **Pipeline d'audit de sécurité pour skills IA** : Un tutoriel détaille la construction d'une chaîne d'évaluation de sécurité pour des skills d'agents IA, combinant NVIDIA SkillSpector et LangGraph avec des règles YARA personnalisées et des policy gates CI pour détecter les injections de prompt, les accès aux identifiants et les dépendances à risque. [MarkTechPost](https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates/)
+- **Frein réglementaire sur l'infrastructure des datacenters au Texas** : Le gouverneur du Texas impose désormais un audit préalable pour tout nouveau datacenter souhaitant se raccorder au réseau électrique, ce qui pourrait ralentir les approbations de projets. [The Verge](https://www.theverge.com/policy/975071/texas-data-center-audit)
 
 ## Actualité tech FR
 
-- **Course aux LLMs chinois** : Alibaba riposte avec Qwen3.8-Max (2000 Md paramètres) deux semaines après Kimi K3, confirmant que les acteurs chinois maintiennent un rythme de développement aligné sur les leaders. [Next.ink](https://next.ink/250057/qwen3-8-max-alibaba-revient-dans-la-course-pour-rivaliser-avec-fable-5-et-kimi-k3/)
+- **Cybersécurité &amp; IA** : CrowdStrike observe une évolution des cyberattaques vers des techniques sans malware, plus furtives et accélérées par l'intelligence artificielle. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-crowdstrike-alerte-sur-des-cyberattaques-plus-furtives-accelerees-par-l-ia-100734.html)
 
-- **Guichet PIIEC IA ouvert** : L'appel à candidatures français court jusqu'au 9 septembre 2026 et cible autant les fournisseurs cloud, spécialistes data et opérateurs télécoms que les concepteurs de modèles. [Frenchweb](https://www.frenchweb.fr/piiec-ia-votre-entreprise-a-t-elle-le-profil-et-comment-candidater/462849)
+- **Reconnaissance faciale au Royaume-Uni** : Un réseau de caméras LFR dans plusieurs milliers de commerces britanniques va désormais alerter directement les forces de l'ordre en cas d'identification d'individus ciblés, étendant un dispositif qui a déjà permis 2 000 arrestations à Londres depuis 2024. [Next.ink](https://next.ink/249929/ia-et-reconnaissance-faciale-le-royaume-uni-inaugure-la-police-proactive/)
 
-- **Edge computing durci** : Palantir et Armada développent des datacenters conteneurisés embarqués sur puces Nvidia, visant l'autonomie calculatoire en zone isolée ou sur théâtre d'opérations, sans dépendance cloud. [BFM Tech](https://www.bfmtv.com/tech/innovation/palantir-veut-deployer-des-centres-de-donnees-mobiles-en-conteneurs-deployables-directement-sur-le-champ-de-bataille-et-equipes-de-puces-nvidia-pour-ne-plus-dependre-du-cloud_AN-202608040294.html)
+- **Interopérabilité Microsoft-Apple** : Microsoft obtiendra d'Apple l'accès aux API nécessaires pour un presse-papier universel entre iPhone et PC, mais le déploiement n'interviendra pas avant fin 2027 et restera probablement cantonné au marché européen. [Next.ink](https://next.ink/250205/microsoft-obtient-dapple-un-copier-coller-entre-iphone-et-pc/)
 
-- **Échec des agents IA par données implicites** : Les agents échouent car le raisonnement ayant conduit aux décisions n'est jamais formalisé ; seules les organisations qui capturent ce "jugement métier" en extrairont de la valeur. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553343-l-iceberg-organisationnel-les-donnees-invisibles-qui-nuisent-a-vos-agents-d-ia/)
-
-- **Risques IT bancaires et conformité** : La fragmentation des systèmes bancaires accroît le risque opérationnel et dégrade la qualité des données de crédit. Par ailleurs, la facturation électronique obligatoire menace de créer une fracture numérique pour les TPE si l'effort de conformité repose sur elles. [Journal du Net](https://www.journaldunet.com/fintech/1553355-systemes-bancaires-fragmentes-le-risque-operationnel-que-les-banques-sous-estiment/) · [Journal du Net](https://www.journaldunet.com/fintech/1553379-la-facturation-electronique-ne-doit-pas-creer-une-nouvelle-fracture-numerique-pour-les-tres-petites-entreprises/)
-
-- **Deepfakes ciblant les entreprises** : La Banque de France a dû contrer des deepfakes usurpant son gouverneur en avril 2026, illustrant que la désinformation par IA cible désormais directement les organisations et leur réputation. [Journal du Net](https://www.journaldunet.com/cybersecurite/1553383-fake-news-et-ia-quand-l-entreprise-devient-la-cible/)</description>
+- **FFmpeg 9.0** : La nouvelle version majeure du framework multimédia renforce le support de l'API graphique Vulkan, avec des améliorations ciblant plusieurs codecs utilisés en production et post-production. [Next.ink](https://next.ink/250193/ffmpeg-9-0-met-de-nouveau-vulkan-a-lhonneur/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>cPanel : faille critique d'escalade de privilèges SQL</strong> : Un client d'hébergement authentifié peut exécuter du SQL en tant que `root` sur la base de données, franchissant la limite d'isolation entre comptes. Un correctif ciblé a été déployé, comblant également deux autres chemins d'élévation. <a href="https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html">The Hacker News</a></li>
+<li><strong>Supply chain npm : malware auto-propageant ChainDrop</strong> : Une campagne massive a compromis plus de 1 300 paquets npm (2 milliards de téléchargements mensuels cumulés) via un malware capable de se répliquer automatiquement d'un paquet à l'autre. <a href="https://www.bleepingcomputer.com/news/security/massive-chaindrop-npm-supply-chain-attack-infects-hundreds-of-packages/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>N-able N-central : exploitation active confirmée par la CISA</strong> : La vulnérabilité CVE-2026-18577 (score CVSS élevé) a été ajoutée au catalogue KEV suite à des compromissions avérées de clients. Correctif à appliquer en priorité. <a href="https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html">The Hacker News</a></li>
+<li><strong>Greatness PhaaS évolue : contournement MFA par device code phishing</strong> : La plateforme de phishing-as-a-service Greatness intègre désormais l'abus du flux OAuth 2.0 Device Authorization Grant pour dérober des tokens de session, rendant la MFA inopérante. <a href="https://thehackernews.com/2026/08/greatness-phaas-adds-device-code.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Google ADK : trois workflows IA supprimés après une injection de prompt</strong> : Une issue GitHub publique permettait de manipuler un agent de triage pour déclencher un agent privilégié de correction de code. Les workflows Python concernés ont été retirés du dépôt Agent Development Kit. <a href="https://thehackernews.com/2026/08/google-deletes-3-adk-ai-workflows-after.html">The Hacker News</a></li>
+<li><strong>Faux installateurs Adobe/Zoom déployant ScreenConnect</strong> : Une campagne active utilise des leurres de mise à jour logicielle (Adobe, Zoom) ou de révision documentaire pour installer discrètement l'outil RMM ScreenConnect et obtenir un accès distant persistant. <a href="https://thehackernews.com/2026/08/fake-adobe-and-zoom-updates-install.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>DOUBLECUP : nouveau loader russe distribué via ClickFix</strong> : La chaîne d'infection utilise des images PNG stéganographiées mises en cache dans le navigateur pour livrer le loader CountLoader et un RAT inédit baptisé DeviceManager. <a href="https://thehackernews.com/2026/08/doublecup-uses-clickfix-and-cached-pngs.html">The Hacker News</a></li>
+<li><strong>Sécurisation des agents IA : Varonis introduit l'IBAC</strong> : Varonis propose un modèle de contrôle d'accès basé sur l'intention (Intent-Based Access Control) pour détecter les dérives comportementales des agents IA et appliquer des garde-fous en temps réel. <a href="https://www.bleepingcomputer.com/news/security/varonis-agent-ibac-keeps-ai-agents-within-their-intended-boundaries/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Suisse : l'agence IT fédérale compromise, 200 comptes affectés</strong> : L'office BIT a détecté des anomalies sur ses serveurs Microsoft SharePoint on-premises. Le vecteur d'intrusion exact reste non confirmé à ce stade. <a href="https://therecord.media/swiss-bit-foitt-hacked-possibly-sharepoint-vulnerabilities">The Record</a></li>
+<li><strong>Compromission de Żabka via un compte tiers</strong> : La chaîne polonaise de magasins de proximité a subi une intrusion fin juillet, apparemment via un compte tiers donnant accès à son environnement Jira et à d'autres données sensibles. <a href="https://therecord.media/poland-convenience-store-chain-zabka-cyberattack">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Utilisation offensive de l'IA par les cybercriminels</strong> : Talos a analysé des logs de prompts issus de terminaux d'acteurs malveillants utilisant Claude Code, CodeX, Cursor et Gemini. L'étude documente comment ces outils d'IA cloud sont détournés pour accélérer les opérations offensives. <a href="https://blog.talosintelligence.com/keep-going-bro-youve-got-this-a-data-driven-look-at-how-adversaries-are-weaponizing-ai/">Cisco Talos</a></li>
+<li><strong>Conflit juridique UK-Apple sur le chiffrement iCloud</strong> : Apple engage un nouveau recours contre les injonctions britanniques exigeant un accès détournant la protection avancée des données iCloud (Advanced Data Protection). <a href="https://therecord.media/apple-uk-tcn-icloud-new-legal-challenge">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Botnet en phase de reconnaissance sur outils de diagnostic</strong> : Le SANS ISC observe un scan ciblant des URLs associées à des outils de diagnostic, potentiellement pour identifier des instances vulnérables exposées. <a href="https://isc.sans.edu/diary/rss/33214">SANS ISC</a></li>
+<li><strong>Russie : retrait de produits liés à Durov après qualification terroriste</strong> : Suite à la désignation de Pavel Durov comme soutien au terrorisme par le FSB, des entreprises russes retirent les produits et publicités associés à Telegram, accusé d'héberger des canaux utilisés par l'Ukraine. <a href="https://therecord.media/russian-businesses-erase-durov-linked-products-terrorist-designation">The Record</a></li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Azure Cosmos DB : escalade inter-tenant par sandbox Gremlin</strong> : Une vulnérabilité critique permettait de briser l’isolation du sandbox de requêtes Gremlin pour exécuter du code sur l’infrastructure partagée et accéder aux bases d’autres clients, y compris celles de services Microsoft internes. <a href="https://www.csoonline.com/article/4204925/critical-azure-cosmos-db-flaw-threatened-cross-tenant-database-takeover.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Fuite de données Claude via indexation Google</strong> : Des conversations privées issues de Claude, incluant une app de thérapie générée par IA et des tableaux de bord de facturation médicale, ont été indexées et sont trouvables sur Google. <a href="https://www.schneier.com/blog/archives/2026/08/some-claude-chats-are-searchable-on-google.html">Schneier on Security</a></li>
-</ul>
-
-<ul>
-<li><strong>AI Notetaker tl;dv : espionnage de visioconférences</strong> : Une mauvaise configuration Firebase permet d’interroger les métadonnées de réunion de n’importe quel utilisateur et potentiellement de rejoindre des appels gouvernementaux ou d’entreprise. <a href="https://www.darkreading.com/application-security/ai-notetaker-spy-government-corporate-video-calls">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Google ADK : agents IA manipulables par messages non fiables</strong> : Des failles dans les workflows automatisés du dépôt GitHub du kit de développement d’agents de Google permettent à un agent public de déclencher des automatisations privilégiées (manipulation de PR, exposition de credentials). <a href="https://www.csoonline.com/article/4204906/google-adk-flaws-reveal-what-happens-when-ai-agents-trust-the-wrong-message.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Cybersabotage OT dans le Minnesota : sauvegardes en otage</strong> : Lors de l’attaque coordonnée contre une trentaine de systèmes d’eau, les assaillants disposaient potentiellement d’une meilleure sauvegarde des configurations industrielles que les exploitants eux-mêmes, compliquant la remédiation. <a href="https://www.csoonline.com/article/4204541/the-minnesota-attackers-may-hold-a-better-backup-of-your-plant-than-you-do.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurisation des APIs, prérequis pour l’adoption de l’IA</strong> : Avec 62 % des organisations en phase d’expérimentation ou de déploiement d’IA agentique, la sécurisation des APIs devient la brique de base incontournable pour maîtriser les risques de cette adoption massive. <a href="https://www.csoonline.com/article/4204548/secure-ai-adoption-starts-with-api-best-practices.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Black Hat 2026 : l’IA s’intègre aux workflows opérationnels</strong> : Les annonces produit confirment un basculement de l’IA au-delà des simples copilotes, vers une intégration dans les flux opérationnels avec un accent sur la gouvernance, la gestion de l’exposition et l’automatisation. <a href="https://www.csoonline.com/article/4204921/the-top-cybersecurity-product-announcements-from-black-hat-2026.html">CSO Online</a></li>
+<li><strong>Attaques sans malware accélérées par l'IA</strong> : CrowdStrike observe une généralisation des intrusions reposant sur l'identité compromise et les outils légitimes plutôt que sur des logiciels malveillants, avec des temps de percée ramenés sous la minute via l'assistance de l'IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-crowdstrike-alerte-sur-des-cyberattaques-plus-furtives-accelerees-par-l-ia-100734.html">Le Monde Informatique</a></li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Proposition de standard SAFE pour la transparence cybersécurité</strong> : L'Open Secure AI Alliance (120+ membres) soumet au RFC via la Linux Foundation un cadre d'échange standardisé des vulnérabilités trouvées dans les systèmes d'IA agentique. L'objectif est d'accélérer le partage d'informations entre éditeurs et équipes de sécurité. <a href="https://blogs.nvidia.com/blog/open-secure-ai-alliance-contributions/">NVIDIA Blog</a></li>
+<li><strong>Modèle compact pour agents locaux</strong> : Liquid AI publie LFM2.5-2.6B, un modèle léger conçu pour s'exécuter localement sur des appareils edge tout en assurant des fonctions d'agent. <a href="https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b">Hugging Face Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèle ouvert pour conduite autonome</strong> : NVIDIA met à disposition Alpamayo 2 Super, un modèle optimisé pour les cas rares et complexes rencontrés par les robotaxis et véhicules autonomes, sous licence commerciale. <a href="https://blogs.nvidia.com/blog/alpamayo-2-super-open-model-now-available/">NVIDIA Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Stockage repensé pour l'IA</strong> : Face à l'explosion des datasets et des fenêtres de contexte, NVIDIA souligne que la réponse ne réside pas dans la seule capacité de stockage mais dans des architectures capables de fournir des données utiles et contextualisées aux usines d'IA. <a href="https://blogs.nvidia.com/blog/ai-storage-fms/">NVIDIA Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Grounding par recherche web chez AWS</strong> : Amazon Bedrock intègre nativement un outil de recherche web côté serveur pour ancrer les réponses des modèles dans des informations actualisées, sans dépendance tierce. <a href="https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-for-foundation-model-grounding/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Extraction web automatisée</strong> : AWS illustre une architecture associant Bedrock AgentCore Browser et OpenSearch Serverless pour extraire automatiquement des insights de sites web à partir de flux RSS, avec rendu des pages. <a href="https://aws.amazon.com/blogs/machine-learning/automated-web-insight-extraction-with-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Librairie de visualisation Python haute performance</strong> : Reflex publie en open source XY, une librairie de graphiques Python qui délègue le rendu à un cœur Rust natif et WebGL2, maintenant l'interactivité jusqu'à 100 millions de points avec des temps de rendu quasi constants et une exportation légère. <a href="https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy/">MarkTechPost</a></li>
+<li><strong>Risques de fuite de propriété intellectuelle vers l'IA</strong> : Apple élargit son enquête sur le transfert de données confidentielles par d'anciens employés vers OpenAI. L'entreprise affirme que des ex-salariés supplémentaires auraient conservé ou accédé à des secrets commerciaux. <a href="https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>Pipeline d'audit de sécurité pour skills IA</strong> : Un tutoriel détaille la construction d'une chaîne d'évaluation de sécurité pour des skills d'agents IA, combinant NVIDIA SkillSpector et LangGraph avec des règles YARA personnalisées et des policy gates CI pour détecter les injections de prompt, les accès aux identifiants et les dépendances à risque. <a href="https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates/">MarkTechPost</a></li>
+<li><strong>Frein réglementaire sur l'infrastructure des datacenters au Texas</strong> : Le gouverneur du Texas impose désormais un audit préalable pour tout nouveau datacenter souhaitant se raccorder au réseau électrique, ce qui pourrait ralentir les approbations de projets. <a href="https://www.theverge.com/policy/975071/texas-data-center-audit">The Verge</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Course aux LLMs chinois</strong> : Alibaba riposte avec Qwen3.8-Max (2000 Md paramètres) deux semaines après Kimi K3, confirmant que les acteurs chinois maintiennent un rythme de développement aligné sur les leaders. <a href="https://next.ink/250057/qwen3-8-max-alibaba-revient-dans-la-course-pour-rivaliser-avec-fable-5-et-kimi-k3/">Next.ink</a></li>
+<li><strong>Cybersécurité & IA</strong> : CrowdStrike observe une évolution des cyberattaques vers des techniques sans malware, plus furtives et accélérées par l'intelligence artificielle. <a href="https://www.lemondeinformatique.fr/actualites/lire-crowdstrike-alerte-sur-des-cyberattaques-plus-furtives-accelerees-par-l-ia-100734.html">Le Monde Informatique</a></li>
 </ul>
 
 <ul>
-<li><strong>Guichet PIIEC IA ouvert</strong> : L'appel à candidatures français court jusqu'au 9 septembre 2026 et cible autant les fournisseurs cloud, spécialistes data et opérateurs télécoms que les concepteurs de modèles. <a href="https://www.frenchweb.fr/piiec-ia-votre-entreprise-a-t-elle-le-profil-et-comment-candidater/462849">Frenchweb</a></li>
+<li><strong>Reconnaissance faciale au Royaume-Uni</strong> : Un réseau de caméras LFR dans plusieurs milliers de commerces britanniques va désormais alerter directement les forces de l'ordre en cas d'identification d'individus ciblés, étendant un dispositif qui a déjà permis 2 000 arrestations à Londres depuis 2024. <a href="https://next.ink/249929/ia-et-reconnaissance-faciale-le-royaume-uni-inaugure-la-police-proactive/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Edge computing durci</strong> : Palantir et Armada développent des datacenters conteneurisés embarqués sur puces Nvidia, visant l'autonomie calculatoire en zone isolée ou sur théâtre d'opérations, sans dépendance cloud. <a href="https://www.bfmtv.com/tech/innovation/palantir-veut-deployer-des-centres-de-donnees-mobiles-en-conteneurs-deployables-directement-sur-le-champ-de-bataille-et-equipes-de-puces-nvidia-pour-ne-plus-dependre-du-cloud_AN-202608040294.html">BFM Tech</a></li>
+<li><strong>Interopérabilité Microsoft-Apple</strong> : Microsoft obtiendra d'Apple l'accès aux API nécessaires pour un presse-papier universel entre iPhone et PC, mais le déploiement n'interviendra pas avant fin 2027 et restera probablement cantonné au marché européen. <a href="https://next.ink/250205/microsoft-obtient-dapple-un-copier-coller-entre-iphone-et-pc/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Échec des agents IA par données implicites</strong> : Les agents échouent car le raisonnement ayant conduit aux décisions n'est jamais formalisé ; seules les organisations qui capturent ce "jugement métier" en extrairont de la valeur. <a href="https://www.journaldunet.com/intelligence-artificielle/1553343-l-iceberg-organisationnel-les-donnees-invisibles-qui-nuisent-a-vos-agents-d-ia/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Risques IT bancaires et conformité</strong> : La fragmentation des systèmes bancaires accroît le risque opérationnel et dégrade la qualité des données de crédit. Par ailleurs, la facturation électronique obligatoire menace de créer une fracture numérique pour les TPE si l'effort de conformité repose sur elles. <a href="https://www.journaldunet.com/fintech/1553355-systemes-bancaires-fragmentes-le-risque-operationnel-que-les-banques-sous-estiment/">Journal du Net</a> · <a href="https://www.journaldunet.com/fintech/1553379-la-facturation-electronique-ne-doit-pas-creer-une-nouvelle-fracture-numerique-pour-les-tres-petites-entreprises/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Deepfakes ciblant les entreprises</strong> : La Banque de France a dû contrer des deepfakes usurpant son gouverneur en avril 2026, illustrant que la désinformation par IA cible désormais directement les organisations et leur réputation. <a href="https://www.journaldunet.com/cybersecurite/1553383-fake-news-et-ia-quand-l-entreprise-devient-la-cible/">Journal du Net</a></li>
+<li><strong>FFmpeg 9.0</strong> : La nouvelle version majeure du framework multimédia renforce le support de l'API graphique Vulkan, avec des améliorations ciblant plusieurs codecs utilisés en production et post-production. <a href="https://next.ink/250193/ffmpeg-9-0-met-de-nouveau-vulkan-a-lhonneur/">Next.ink</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260804-1319</guid>
-      <pubDate>Tue, 04 Aug 2026 13:19:31 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260804-1848</guid>
+      <pubDate>Tue, 04 Aug 2026 18:48:54 +0000</pubDate>
     </item>
   </channel>
 </rss>
