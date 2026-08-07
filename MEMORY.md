@@ -4,7 +4,7 @@
 > Se lit au début de chaque nouvelle conversation pour reprendre le contexte.
 > Se met à jour à la fin de chaque session productive.
 
-**Dernière mise à jour** : 2026-04-25
+**Dernière mise à jour** : 2026-08-07
 
 ---
 
@@ -14,6 +14,12 @@ Pipeline de curation RSS → digest IA **opérationnel en production** depuis
 le 2026-04-19. Tourne 3x/jour via GitHub Actions, synthétise avec Claude
 Haiku (scoring) + Sonnet (synthèse), servi par GitHub Pages, consommé
 dans Reeder iOS.
+
+**2026-08-07** — Garde-fous critiques de collecte et de coût : la fenêtre
+repart du dernier run réussi au lieu d'un lookback fixe, avec 60 min de
+chevauchement. Les candidats sont triés par fraîcheur puis plafonnés à
+50/source et 200/run avant tout appel LLM. Le détail d'audit passe dans les
+artefacts Actions (30 jours) au lieu d'être versionné.
 
 - Repo : https://github.com/julienoh/veille (public, MIT)
 - URL digest : https://julienoh.github.io/veille/digest.xml
@@ -61,6 +67,16 @@ documentait 3 déclencheurs mais le workflow n'en avait que 2.
   → zéro infra, versionné gratuitement, fenêtre 14 jours ~50KB max
 - **2026-04-19** — Un seul item RSS par run (vs un par article)
   → format "bulletin" plus lisible dans Reeder, moins d'items à marquer lus
+- **2026-08-07** — `last_success.json` commité dans git
+  → la collecte repart du dernier run terminé avec succès et couvre les écarts
+  irréguliers du cron, les retards et les runs manqués
+- **2026-08-07** — `audit-details.md` déplacé vers les artefacts Actions
+  → détail disponible 30 jours sans croissance continue de l'historique Git
+
+### Maîtrise des coûts
+
+- **2026-08-07** — Plafonds appliqués avant le scoring LLM : 50 articles par
+  source et 200 par run, avec priorité aux articles datés les plus récents
 
 ### Licence et ouverture
 

@@ -7,7 +7,21 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
 
 ## [Non publié]
 
+### Fixed
+- **2026-08-07** — Suppression du trou de collecte nocturne : les horaires
+  7h/13h/19h créent un intervalle de 12h incompatible avec l'ancienne fenêtre
+  fixe de 8h. Le pipeline repart désormais de `last_success.json`, avec 60 min
+  de chevauchement, et n'avance cet état qu'après un run terminé avec succès.
+- **2026-08-07** — Maîtrise du coût avant les appels LLM : tri par fraîcheur,
+  plafond de 50 articles par source puis 200 articles par run avant la phase 1.
+  Les garde-fous sont couverts par des tests unitaires.
+
 ### Changed
+- **2026-08-07** — `logs/audit-details.md` n'est plus versionné. Il est publié
+  comme artefact GitHub Actions avec une rétention de 30 jours ; seuls le résumé
+  et les erreurs restent dans Git afin de limiter la croissance du dépôt.
+- **2026-08-07** — Documentation d'architecture mise à jour : fenêtre dynamique,
+  état de succès, plafonds pré-LLM, artefacts et nouveaux paramètres de tuning.
 - **2026-06-22** — `SCORING_PROMPT` simplifié pour maximiser le rappel (« on
   loupe trop d'articles ») :
   - Schéma de sortie réduit à `{score, decision, tags, raison}` (abandon de
