@@ -4,7 +4,7 @@
 > Se lit au début de chaque nouvelle conversation pour reprendre le contexte.
 > Se met à jour à la fin de chaque session productive.
 
-**Dernière mise à jour** : 2026-08-07
+**Dernière mise à jour** : 2026-08-08
 
 ---
 
@@ -14,6 +14,10 @@ Pipeline de curation RSS → digest IA **opérationnel en production** depuis
 le 2026-04-19. Tourne 3x/jour via GitHub Actions, synthétise avec Claude
 Haiku (scoring) + Sonnet (synthèse), servi par GitHub Pages, consommé
 dans Reeder iOS.
+
+**2026-08-08** — Les articles retenus affichent désormais dans le digest leur
+score initial (3 à 5) et la raison du filtrage. L'annexe est rendue par Python
+après la synthèse afin de garantir l'association score/article sans appel LLM.
 
 **2026-08-07** — Garde-fous critiques de collecte et de coût : la fenêtre
 repart du dernier run réussi au lieu d'un lookback fixe, avec 60 min de
@@ -77,6 +81,11 @@ documentait 3 déclencheurs mais le workflow n'en avait que 2.
 
 - **2026-08-07** — Plafonds appliqués avant le scoring LLM : 50 articles par
   source et 200 par run, avec priorité aux articles datés les plus récents
+
+### Observabilité du scoring
+
+- **2026-08-08** — Score + raison visibles pour chaque article retenu dans le RSS
+  → rendu déterministe depuis `score_phase1`, sans confier l'association au LLM
 
 ### Licence et ouverture
 

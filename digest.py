@@ -44,6 +44,7 @@ import audit
 from collection import compute_collection_cutoff, limit_articles
 from llm_client import complete
 from prompt import SCORING_PROMPT, DEDUP_PROMPT, SYNTHESIS_PROMPT
+from score_details import render_score_details
 
 # ---- Configuration -----------------------------------------------------------
 # Tous les paramètres ajustables du pipeline sont regroupés ici.
@@ -610,7 +611,8 @@ def main():
         print(f"  synthèse {cat} ({len(items)} articles)")
         result = synthesize(cat, items)
         if result:
-            sections[cat] = result
+            score_details = render_score_details(items)
+            sections[cat] = f"{result.rstrip()}\n\n{score_details}" if score_details else result
 
     if sections:
         write_rss(sections)

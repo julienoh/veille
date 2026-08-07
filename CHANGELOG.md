@@ -7,6 +7,13 @@ Le projet suit un versionnement informel (pas de tags pour l'instant).
 
 ## [Non publié]
 
+### Added
+- **2026-08-08** — Ajout dans chaque catégorie du digest RSS d'une annexe
+  déterministe **Évaluation du scoring**. Chaque article retenu (score 3 à 5)
+  affiche son score initial de phase 1 et la raison du modèle de filtrage.
+  Le rendu est produit par Python, sans appel LLM supplémentaire, et couvert
+  par des tests unitaires.
+
 ### Fixed
 - **2026-08-07** — Suppression du trou de collecte nocturne : les horaires
   7h/13h/19h créent un intervalle de 12h incompatible avec l'ancienne fenêtre
