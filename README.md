@@ -40,23 +40,26 @@ sources.opml
 digest.py  ←─── cron 3x/jour (GitHub Actions)
     │
     ├── 1. Charge les sources depuis l'OPML
-    ├── 2. Fetch les flux RSS (feedparser)
-    ├── 3. Filtre les articles < LOOKBACK_HOURS non déjà vus (seen.json)
+    ├── 2. Calcule la fenêtre depuis le dernier run réussi (last_success.json)
+    ├── 3. Fetch les flux RSS et retire les articles déjà vus (seen.json)
+    ├── 4. Priorise les plus récents puis plafonne avant tout appel LLM
+    │       ≤ 50 articles/source et ≤ 200 articles/run
     │
-    ├── 4. PHASE 1 — Scoring (LLM de filtrage, 1 appel par article)
+    ├── 5. PHASE 1 — Scoring (LLM de filtrage, 1 appel par article)
     │       Sortie : {score, decision, tags, raison}
     │       Filtre : on garde decision ∈ {read_now, read_later, skim} (≈ score ≥ 3)
     │
-    ├── 5. PHASE 2 — Déduplication (LLM de filtrage, 1 appel par catégorie OPML)
+    ├── 6. PHASE 2 — Déduplication (LLM de filtrage, 1 appel par catégorie OPML)
     │       Identifie les clusters de doublons, garde l'article canonique
     │       Les autres : decision=archive, score=2 (rétrogradés, pas supprimés)
     │
-    ├── 6. PHASE 3 — Synthèse (LLM de synthèse, 1 appel par catégorie OPML)
+    ├── 7. PHASE 3 — Synthèse (LLM de synthèse, 1 appel par catégorie OPML)
     │       Markdown éditorial : 1-2 phrases par sujet, regroupement thématique
     │
-    └── 7. Génère output/digest.xml (RSS, 1 item par run)
+    └── 8. Génère le RSS puis avance last_success.json après succès
             │
-            ├──► git commit → branche main (seen.json + digest.xml)
+            ├──► git commit → main (seen.json + last_success.json + digest.xml)
+            ├──► audit détaillé → artefact Actions, rétention 30 jours
             └──► branche gh-pages → GitHub Pages → Reeder (iOS)
 ```
 
@@ -65,8 +68,13 @@ digest.py  ←─── cron 3x/jour (GitHub Actions)
 ```
 OPML (catégories → feeds)
   └─► feedparser.parse(url) — par source
-        └─► filtre temporel : published > now - LOOKBACK_HOURS
+        └─► filtre temporel : published > dernier run réussi - chevauchement
               └─► filtre doublon URL : sha1(url)[:12] pas dans seen.json
+                    │
+                    ▼  GARDE-FOUS AVANT LLM
+                    tri : articles datés les plus récents d'abord
+                    plafonds : 50/source puis 200/run
+                    les articles hors budget ne déclenchent aucun appel LLM
                     │
                     ▼  PHASE 1
                     LLM de filtrage
@@ -140,15 +148,18 @@ veille/
 ├── output/
 │   └── digest.xml            # Flux RSS généré, commité + servi par Pages
 ├── logs/
-│   ├── audit-details.md      # Détail de tous les articles scorés, 30 derniers jours
 │   ├── audit-summary.md      # Synthèse compteurs par run, 30 derniers jours
 │   └── audit-errors.md       # Erreurs survenues par run, 30 derniers jours
+├── tests/
+│   └── test_collection.py    # Tests fenêtre de collecte + plafonds de coût
+├── collection.py             # Fenêtre dynamique, priorité temporelle, plafonds
 ├── digest.py                 # Pipeline complet (load, fetch, score, dédup, synth, audit)
 ├── audit.py                  # Logs Markdown des 3 phases (cf. §6 Logs d'audit)
 ├── llm_client.py             # Mini-abstraction LLM (route anthropic/ vs openrouter/)
 ├── prompt.py                 # Prompts LLM isolés (itérables indépendamment du code)
 ├── requirements.txt          # feedparser, feedgen, anthropic, openai, httpx
 ├── seen.json                 # Hashes SHA1 des articles traités (fenêtre 14 jours)
+├── last_success.json         # Timestamp du dernier run terminé avec succès
 ├── sources.opml              # Sources organisées par catégorie
 ├── LICENSE                   # MIT
 └── README.md                 # Ce fichier
@@ -160,6 +171,10 @@ veille/
 fetch RSS, déduplication URL, scoring (phase 1), déduplication sémantique
 (phase 2), synthèse (phase 3), génération RSS. La section `Configuration`
 en haut regroupe tous les paramètres ajustables.
+
+**`collection.py`** : logique pure exécutée avant les appels LLM. Calcule la
+fenêtre depuis le dernier run réussi, trie les candidats par fraîcheur et
+applique les plafonds par source puis par run. Ce module est testé sans réseau.
 
 **`prompt.py`** : trois prompts LLM isolés (`SCORING_PROMPT`, `DEDUP_PROMPT`,
 `SYNTHESIS_PROMPT`). Découplage intentionnel : on itère sur les prompts sans
@@ -174,12 +189,17 @@ dans Reeder pour abonnement direct.
 Commité à chaque run via `git commit -m "Update digest [skip ci]"`.
 La fenêtre glissante de `SEEN_RETENTION_DAYS` évite la croissance infinie.
 
+**`last_success.json`** : état minimal de collecte. La prochaine exécution repart
+du début du dernier run terminé avec succès, avec une heure de chevauchement.
+Le timestamp n'est avancé qu'à la fin d'un run réussi : un cron retardé, sauté
+ou en échec ne crée donc plus de période aveugle.
+
 **`digest.yml`** : workflow GitHub Actions. Trois déclencheurs : cron 3x/jour,
 `workflow_dispatch` (bouton manuel), push sur main.
 
-**`audit.py`** : trois logs Markdown persistés sous `logs/` à chaque run.
-Permet de tracer le scoring article-par-article, les compteurs globaux et
-les erreurs. Sémantique et format documentés dans §6 Logs d'audit.
+**`audit.py`** : produit le résumé, les erreurs et le détail article par article.
+Le résumé et les erreurs restent versionnés ; le détail est téléversé comme
+artefact GitHub Actions pendant 30 jours afin de ne plus gonfler l'historique Git.
 
 ---
 
@@ -293,14 +313,16 @@ Sur le portail du fournisseur LLM, **Settings → Billing → Limits** :
 Attendre ~2 minutes. Vérifier dans les logs :
 ```
 Sources chargées : XX
-Articles frais trouvés : XX
+Fenêtre de collecte : depuis ...
+Articles frais détectés : XX
+Articles admis au scoring : XX/200 (... écartés ...)
 Phase 1 terminée : XX articles retenus
 Phase 2 terminée : XX articles après dédup
 ✓ Digest écrit dans output/digest.xml
 ```
 
-Si `Articles frais trouvés : 0` : passer temporairement `LOOKBACK_HOURS = 48`
-dans `digest.py` pour un premier test, puis remettre à 8.
+Si `Articles frais détectés : 0`, augmenter temporairement
+`INITIAL_LOOKBACK_HOURS` pour le premier run, puis remettre la valeur à 14.
 
 ### Étape 8 — Activer GitHub Pages
 
@@ -326,7 +348,10 @@ Tous dans `digest.py`, section `Configuration` en haut du fichier.
 
 | Paramètre | Défaut | Quand changer |
 |---|---|---|
-| `LOOKBACK_HOURS` | 8 | Monter à 12 si trop peu d'articles la nuit. Les 3 runs/jour se recouvrent légèrement avec 8h, ce qui évite les trous. |
+| `INITIAL_LOOKBACK_HOURS` | 14 | Fenêtre de secours au premier run ou si `last_success.json` est absent/invalide. |
+| `FETCH_OVERLAP_MINUTES` | 60 | Chevauchement avant le dernier run réussi. `seen.json` retire les doublons. |
+| `MAX_ARTICLES_PER_SOURCE` | 50 | Budget phase 1 par source ; protège notamment contre les pics arXiv. |
+| `MAX_ARTICLES_PER_RUN` | 200 | Nombre maximal d'articles envoyés au scoring LLM sur un run. |
 | `ACCEPTED_DECISIONS` | `{"read_now", "read_later", "skim"}` | Inclut `skim` → retient ≈ tout score ≥ 3. Retirer `"skim"` pour ne garder que les score 4-5 ; retirer aussi `"read_later"` pour un digest "urgent only". |
 | `MAX_ARTICLES_PER_CATEGORY` | 20 | Baisser à 10 si une catégorie déborde. Garde-fou contre les pics de volume (ex: arXiv). |
 | `SEEN_RETENTION_DAYS` | 14 | Fenêtre de déduplication URL. 14 jours = un article vu cette semaine ne reviendra pas la semaine prochaine. |
@@ -366,7 +391,8 @@ Trois prompts dans `prompt.py`. Bonnes pratiques :
 2. Versionner chaque changement avec un message de commit descriptif
    (`git log` sur `prompt.py` devient ton historique d'expérimentation).
 3. Tester en local : `OPENROUTER_API_KEY=sk-... python3 digest.py`.
-4. Vérifier la distribution des scores dans `logs/audit-details.md` après chaque changement (cf. §6).
+4. Télécharger l'artefact `audit-details-<run_id>` du run Actions pour vérifier
+   la distribution des scores (cf. §6).
 
 ---
 
@@ -378,11 +404,12 @@ Comportement **attendu**, pas un bug : `output/digest.xml` n'est réécrit
 (`write_rss()`) que si au moins un article passe le scoring (`read_now`/
 `read_later`), survit à la dédup et obtient une synthèse. Si un run ne retient
 rien, `digest.py` sort tôt (`Rien de pertinent, on sort.`) et ne touche pas le
-flux — seuls `seen.json` et `logs/` sont committés (le commit `Update digest
-[skip ci]` apparaît quand même, d'où la confusion).
+flux — `seen.json`, `last_success.json` et les logs synthétiques sont committés
+(le commit `Update digest [skip ci]` apparaît quand même, d'où la confusion).
 
-Pour savoir *pourquoi* rien n'est retenu : ouvrir `logs/audit-details.md`, le
-bloc du run montre tous les articles avec score + tag + raison. Un taux de
+Pour savoir *pourquoi* rien n'est retenu : télécharger l'artefact
+`audit-details-<run_id>` du run Actions ; il montre tous les articles avec
+score + tag + raison. Un taux de
 rétention durablement à 0% (cf. colonne `Retenue%` du summary) peut être
 légitime (rubric strict + feeds hors-cible) ou signaler un prompt trop sévère.
 
@@ -393,7 +420,8 @@ schedule `0 5,11,17` vise 7h/13h/19h Paris en **heure d'été** (UTC+2) ; en
 hiver (UTC+1) les runs tombent 1h plus tôt (6h/12h/18h Paris). Compromis assumé.
 Note aussi que GitHub **retarde fréquemment** les runs `schedule` (souvent
 1-2h) et peut en sauter sous forte charge : un digest qui semble « manquant »
-est le plus souvent juste décalé.
+est le plus souvent juste décalé. La collecte ne dépend plus de l'heure théorique
+du cron : elle repart de `last_success.json`, avec 60 minutes de chevauchement.
 
 ### Un feed casse (erreur 404, timeout)
 
@@ -406,7 +434,8 @@ trouver la nouvelle URL.
 
 ### Trop peu d'articles dans le digest
 
-- `LOOKBACK_HOURS` trop court → monter à 12 ou 16.
+- Vérifier que `last_success.json` contient un timestamp valide ; en son absence,
+  le pipeline utilise `INITIAL_LOOKBACK_HOURS` (14h par défaut).
 - Scoring trop sévère → assouplir les bandes de score dans `SCORING_PROMPT` (`skim`, score 3, est déjà retenu → rétention = score ≥ 3).
 - Sources peu actives → vérifier directement dans Reeder.
 
@@ -446,15 +475,17 @@ la dernière version stable de chaque action sur leur repo GitHub respectif.
 
 ### Détecter un volume anormal
 
-Surveiller le nombre d'articles traités par run (colonne `Trouvés` de
-`audit-summary.md`). Signe d'alerte : un volume ×3 par rapport à l'habitude =
-probable bug de boucle ou prompt qui retourne du texte trop long.
+Surveiller `Articles frais détectés` et `Articles admis au scoring` dans le log
+Actions. Le second ne peut jamais dépasser 200, ni 50 pour une même source.
+Un grand nombre d'articles écartés indique une source exceptionnellement
+volumique ; les plus récents restent prioritaires.
 
 ### Logs d'audit
 
-Trois fichiers Markdown sont écrits sous `logs/` à chaque run, avec rétention
-glissante 30 jours. Tous append en bas — le run le plus récent est en bas du
-fichier. Sémantique de chacun :
+Trois fichiers Markdown sont produits à chaque run. `audit-summary.md` et
+`audit-errors.md` restent sous `logs/` avec une rétention glissante de 30 jours.
+`audit-details.md` est temporaire, ignoré par Git et publié comme artefact Actions
+avec une rétention de 30 jours.
 
 #### `logs/audit-summary.md` — vue "santé du pipeline"
 
@@ -465,7 +496,7 @@ Une ligne par run. À consulter en passant pour spotter une anomalie globale.
 | `Date UTC` | Timestamp du run (UTC, sans secondes) | `2026-06-19 18:01 UTC` |
 | `Filtrage` | Modèle LLM utilisé en phases 1 et 2 (slug abrégé) | `dsv4-flash`, `claude-haiku-4-5`, `gpt-5-mini` |
 | `Synthèse` | Modèle LLM utilisé en phase 3 (slug abrégé) | `dsv4-pro`, `claude-sonnet-4-6` |
-| `Trouvés` | Articles frais après filtrage URL/date (hors `seen.json`) | 10-60 |
+| `Trouvés` | Articles admis au scoring après les plafonds (hors `seen.json`) | 10-200 |
 | `RN` | Articles décidés `read_now` après dédup | 0-5 |
 | `RL` | Articles décidés `read_later` après dédup | 0-15 |
 | `Skim` | Articles décidés `skim` après dédup (retenus depuis 2026-06-22) | 0-15 |
@@ -478,9 +509,9 @@ Signaux d'alerte : `Retenue% > 50%` (prompt trop laxiste ou profil cible trop
 large), `Retenue% < 5%` sur plusieurs runs (sources sèches ou prompt trop
 strict), `Err > 10%` (modèle qui dérive ou bug récent).
 
-#### `logs/audit-details.md` — détail article par article
+#### Artefact `audit-details-<run_id>` — détail article par article
 
-Un bloc `## Run …` par run. Chaque bloc commence par une ligne
+Le fichier `audit-details.md` contenu dans l'artefact commence par une ligne
 `Distribution : …×s2, …×s1` (récap des scores phase 1), puis un tableau de
 **tous les articles scorés** (y compris les rejetés score 1-2), trié par score
 décroissant. On trace tout volontairement : c'est le détail des articles
@@ -507,7 +538,7 @@ Un tableau plat. Une ligne par erreur survenue, toutes phases confondues.
 | Colonne | Sens |
 |---|---|
 | `Date UTC` | Timestamp où l'erreur s'est produite |
-| `Phase` | `fetch` (feed RSS), `scoring` (phase 1), `dedup` (phase 2), `synthese` (phase 3) |
+| `Phase` | `state` (`last_success.json`), `fetch` (feed RSS), `scoring` (phase 1), `dedup` (phase 2), `synthese` (phase 3) |
 | `Cible` | Nom du feed (`fetch`), titre+source de l'article (`scoring`), nom de catégorie OPML (`dedup`, `synthese`) |
 | `Erreur` | Message traduit lisible (ex: `content=None côté LLM`, `Rate limit fournisseur LLM atteint`, `JSON malformé`) |
 
@@ -516,8 +547,8 @@ correspondant sur GitHub Actions.
 
 #### Rétention et purge
 
-Toutes les entrées de plus de 30 jours sont purgées en fin de run par
-`audit.log_run()`. Aucun outil externe à lancer.
+Les logs versionnés sont purgés en fin de run par `audit.log_run()`. Les
+artefacts détaillés expirent automatiquement après 30 jours côté GitHub Actions.
 
 #### Cross-link
 
@@ -566,6 +597,20 @@ Zéro infrastructure. Le fichier reste petit (quelques dizaines de KB après
 évite les boucles), et l'historique des articles traités est versionné
 gratuitement. SQLite sur le runner Actions serait réinitialisé à chaque run
 (éphémère). Redis ou DynamoDB seraient overkill pour ce volume.
+
+### Pourquoi `last_success.json` plutôt qu'une fenêtre fixe ?
+
+Les horaires 7h/13h/19h comportent deux écarts de 6h et un écart nocturne de
+12h. Une fenêtre fixe de 8h laissait donc 4h non couvertes chaque nuit. L'état
+du dernier run réussi couvre aussi les retards, les crons sautés et les échecs ;
+le chevauchement d'une heure est sans coût fonctionnel grâce à `seen.json`.
+
+### Pourquoi plafonner avant le scoring ?
+
+Le coût principal est proportionnel au nombre d'appels de phase 1. Les plafonds
+50/source et 200/run sont donc appliqués avant le premier appel LLM, après un tri
+par fraîcheur. Le plafond historique de 20 par catégorie reste un garde-fou de
+synthèse, mais il n'est plus la première protection budgétaire.
 
 ### Pourquoi deux modèles (filtrage + synthèse) au lieu d'un seul ?
 

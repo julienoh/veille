@@ -3,21 +3,23 @@
 Vue d'ensemble du flux (un run = une exécution déclenchée par GitHub Actions) :
 
     1. load_sources()           Lit sources.opml et retourne la liste des feeds
-    2. fetch_recent_articles()  feedparser sur chaque feed, filtre par date
-                                (LOOKBACK_HOURS) et déduplication via seen.json
-    3. score_article()          Phase 1 : un appel LLM de filtrage par article
+    2. fetch_recent_articles()  feedparser sur chaque feed, depuis le dernier
+                                run réussi, puis déduplication via seen.json
+    3. limit_articles()         Priorise les plus récents et plafonne avant LLM
+    4. score_article()          Phase 1 : un appel LLM de filtrage par article
                                 → JSON enrichi (score, decision, tag, confiance…)
-    4. deduplicate_category()   Phase 2 : un appel LLM de filtrage par catégorie
+    5. deduplicate_category()   Phase 2 : un appel LLM de filtrage par catégorie
                                 → rétrograde les doublons en decision=archive
-    5. synthesize()             Appel LLM de synthèse par catégorie OPML
+    6. synthesize()             Appel LLM de synthèse par catégorie OPML
                                 → Markdown éditorial
-    6. write_rss()              Génère output/digest.xml (1 item RSS contenant
+    7. write_rss()              Génère output/digest.xml (1 item RSS contenant
                                 toutes les sections concaténées)
-    7. save_seen()              Persiste seen.json avec rétention SEEN_RETENTION_DAYS
+    8. save_last_success()      Avance la fenêtre uniquement après succès du run
 
 Effets de bord persistés (commités dans le repo par le workflow Actions) :
 - output/digest.xml  : le flux servi par GitHub Pages
 - seen.json          : dictionnaire {hash: date_iso} des articles déjà traités
+- last_success.json  : timestamp du dernier run terminé avec succès
 
 Tous les paramètres ajustables sont regroupés dans la section Configuration ci-dessous.
 Les prompts LLM vivent dans prompt.py pour pouvoir itérer dessus indépendamment
@@ -39,6 +41,7 @@ import feedparser
 from feedgen.feed import FeedGenerator
 
 import audit
+from collection import compute_collection_cutoff, limit_articles
 from llm_client import complete
 from prompt import SCORING_PROMPT, DEDUP_PROMPT, SYNTHESIS_PROMPT
 
@@ -49,13 +52,16 @@ from prompt import SCORING_PROMPT, DEDUP_PROMPT, SYNTHESIS_PROMPT
 # Chemins (relatifs au cwd, qui est la racine du repo en CI comme en local)
 OPML_FILE = "sources.opml"           # Source de vérité des feeds
 SEEN_FILE = "seen.json"              # Dédoublonnage persistant {hash: iso_date}
+LAST_SUCCESS_FILE = "last_success.json"  # Début de la prochaine fenêtre de collecte
 OUTPUT_FILE = "output/digest.xml"    # Flux RSS généré, servi par GitHub Pages
 DIGEST_URL = "https://julienoh.github.io/veille/digest.xml"  # URL publique du flux
 
 # Comportement du pipeline
-LOOKBACK_HOURS = 8                 # Fenêtre temporelle des articles à considérer.
-                                   # Les 3 runs/jour (8h d'écart) se recouvrent
-                                   # légèrement → pas de trou en cas de retard cron.
+INITIAL_LOOKBACK_HOURS = 14        # Fallback au premier run ou si l'état est invalide.
+FETCH_OVERLAP_MINUTES = 60         # Chevauchement entre deux runs réussis ; seen.json
+                                   # absorbe les doublons et évite les trous de collecte.
+MAX_ARTICLES_PER_SOURCE = 50       # Plafond avant scoring pour une source très volumique.
+MAX_ARTICLES_PER_RUN = 200         # Budget maximal d'appels LLM phase 1 par run.
 ACCEPTED_DECISIONS = {"read_now", "read_later", "skim"}  # Décisions qui passent dans le digest.
                                                          # Seul "archive" est écarté.
                                                          # Avec le mapping du SCORING_PROMPT
@@ -122,6 +128,33 @@ def save_seen(seen: dict) -> None:
     with open(SEEN_FILE, "w", encoding="utf-8") as f:
         json.dump(seen, f, indent=2)
 
+
+def load_last_success() -> datetime | None:
+    """Charge le timestamp du dernier run terminé avec succès."""
+    path = Path(LAST_SUCCESS_FILE)
+    if not path.exists():
+        return None
+    try:
+        value = json.loads(path.read_text(encoding="utf-8")).get("last_success_at")
+        if not value:
+            return None
+        parsed = datetime.fromisoformat(value)
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
+    except (OSError, TypeError, ValueError, json.JSONDecodeError) as e:
+        audit.record_error("state", LAST_SUCCESS_FILE, e)
+        return None
+
+
+def save_last_success(run_ts: datetime) -> None:
+    """Persiste atomiquement le début du dernier run terminé avec succès."""
+    path = Path(LAST_SUCCESS_FILE)
+    tmp_path = path.with_suffix(path.suffix + ".tmp")
+    payload = {"last_success_at": run_ts.astimezone(timezone.utc).isoformat()}
+    tmp_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    tmp_path.replace(path)
+
 def article_hash(entry) -> str:
     """Hash stable pour identifier un article de façon idempotente.
 
@@ -135,7 +168,11 @@ def article_hash(entry) -> str:
 
 # ---- Fetching ----------------------------------------------------------------
 
-def fetch_recent_articles(sources: list[dict], seen: dict) -> list[dict]:
+def fetch_recent_articles(
+    sources: list[dict],
+    seen: dict,
+    cutoff: datetime,
+) -> list[dict]:
     """Itère sur tous les feeds, filtre par date et déduplication.
 
     Une exception sur un feed (404, timeout, XML malformé) est loggée sur stderr
@@ -144,11 +181,12 @@ def fetch_recent_articles(sources: list[dict], seen: dict) -> list[dict]:
     Args:
         sources: liste produite par load_sources()
         seen:    dict des hashes déjà traités (lecture seule ici)
+        cutoff:  début inclusif de la fenêtre de collecte, calculé depuis le
+            dernier run réussi.
 
     Returns:
         Liste de dicts décrivant chaque article frais à scorer.
     """
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=LOOKBACK_HOURS)
     articles = []
 
     for src in sources:
@@ -164,6 +202,7 @@ def fetch_recent_articles(sources: list[dict], seen: dict) -> list[dict]:
             # la spec feedparser. On retombe sur updated_parsed si l'éditeur
             # ne fournit que la date de mise à jour.
             ts = entry.get("published_parsed") or entry.get("updated_parsed")
+            published = None
             if ts:
                 published = datetime(*ts[:6], tzinfo=timezone.utc)
                 if published < cutoff:
@@ -191,6 +230,9 @@ def fetch_recent_articles(sources: list[dict], seen: dict) -> list[dict]:
                 "source": src["title"],
                 "category": src["category"],
                 "published": entry.get("published", ""),
+                # Champ normalisé utilisé uniquement pour prioriser les plus
+                # récents avant d'appliquer les plafonds de coût.
+                "published_at": published.isoformat() if published else "",
             })
 
     return articles
@@ -341,7 +383,7 @@ def synthesize(category: str, articles: list[dict]) -> str:
             max_tokens=2000,  # ~3-4 paragraphes Markdown, large marge
             prompt=SYNTHESIS_PROMPT.format(
                 category=category,
-                period=f"dernières {LOOKBACK_HOURS}h",
+                period="depuis le dernier run réussi",
                 articles=articles_txt,
             ),
         )
@@ -430,8 +472,9 @@ def main():
     les cas où on a appelé la phase 1, on persiste seen.json même si zéro article
     n'est retenu — sinon ces articles seraient re-scorés au run suivant.
 
-    À la fin du run (succès ou sortie anticipée), audit.log_run() est appelé pour
-    écrire les trois fichiers d'audit Markdown sous logs/.
+    À la fin du run (succès ou sortie anticipée), audit.log_run() écrit les
+    fichiers d'audit, puis last_success.json est avancé. Le détail est publié
+    comme artefact Actions ; summary/errors restent versionnés.
     """
     run_ts = datetime.now(timezone.utc)
     print(f"=== Digest run {run_ts.isoformat()} ===")
@@ -445,9 +488,29 @@ def main():
     print(f"Sources chargées : {len(sources)}")
 
     seen = load_seen()
-    articles = fetch_recent_articles(sources, seen)
+    last_success = load_last_success()
+    cutoff = compute_collection_cutoff(
+        run_ts,
+        last_success,
+        initial_lookback_hours=INITIAL_LOOKBACK_HOURS,
+        overlap_minutes=FETCH_OVERLAP_MINUTES,
+    )
+    print(f"Fenêtre de collecte : depuis {cutoff.isoformat()}")
+
+    candidates = fetch_recent_articles(sources, seen, cutoff)
+    n_candidates = len(candidates)
+    articles, dropped = limit_articles(
+        candidates,
+        max_per_source=MAX_ARTICLES_PER_SOURCE,
+        max_total=MAX_ARTICLES_PER_RUN,
+    )
     n_trouves = len(articles)
-    print(f"Articles frais trouvés : {n_trouves}")
+    print(f"Articles frais détectés : {n_candidates}")
+    print(
+        f"Articles admis au scoring : {n_trouves}/{MAX_ARTICLES_PER_RUN} "
+        f"({dropped['per_source']} écartés par plafond source, "
+        f"{dropped['global']} par plafond global)"
+    )
 
     if not articles:
         # Cas typique : nuit, week-end, ou cron qui rejoue trop tôt.
@@ -455,6 +518,7 @@ def main():
             **base_metrics, "trouves": 0, "read_now": 0, "read_later": 0,
             "skim": 0, "archive": 0, "doublons": 0,
         })
+        save_last_success(run_ts)
         print("Rien de neuf, on sort.")
         return
 
@@ -490,6 +554,7 @@ def main():
             **base_metrics, "trouves": n_trouves, "read_now": 0, "read_later": 0,
             "skim": 0, "archive": n_trouves, "doublons": 0,
         })
+        save_last_success(run_ts)
         print("Rien de pertinent, on sort.")
         return
 
@@ -532,6 +597,7 @@ def main():
     if not by_cat:
         save_seen(seen)
         audit.log_run(run_ts, all_scored, metrics)
+        save_last_success(run_ts)
         print("Tout est doublon, on sort.")
         return
 
@@ -554,6 +620,7 @@ def main():
 
     save_seen(seen)
     audit.log_run(run_ts, all_scored, metrics)
+    save_last_success(run_ts)
 
 if __name__ == "__main__":
     main()

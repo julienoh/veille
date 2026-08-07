@@ -2,13 +2,13 @@
 
 Trois fichiers, tous append en bas, rétention glissante 30 jours :
 
-- logs/audit-details.md : un tableau par run, articles score >= 3 uniquement.
+- logs/audit-details.md : détail temporaire du run, publié comme artefact Actions.
 - logs/audit-summary.md : une ligne par run, compteurs agrégés.
 - logs/audit-errors.md  : un tableau plat, une ligne par erreur survenue.
 
 Les erreurs sont collectées au fil du run via record_error(). À la fin du run,
-digest.py appelle log_run() qui écrit les trois fichiers et purge l'historique
-au-delà de RETENTION_DAYS.
+    digest.py appelle log_run() qui écrit les trois fichiers. Le workflow ne
+    versionne que summary/errors et publie details comme artefact pendant 30 jours.
 
 Cross-link : la colonne `Err` du summary pointe vers audit-errors.md (sans ancre
 précise — la table reste plate côté errors). Pour retrouver les erreurs d'un run
@@ -40,7 +40,7 @@ def record_error(phase: str, target: str, exc: Exception) -> None:
     au debugging à chaud).
 
     Args:
-        phase: "fetch", "scoring", "dedup" ou "synthese".
+        phase: "state", "fetch", "scoring", "dedup" ou "synthese".
         target: cible humainement parlante (nom de feed, titre+source, catégorie).
         exc: l'exception à logger.
     """
@@ -59,7 +59,7 @@ def log_run(
     articles_scored: list[dict],
     metrics: dict,
 ) -> None:
-    """Écrit les trois fichiers d'audit et purge l'historique > 30 jours.
+    """Écrit les trois fichiers d'audit ; summary/errors gardent 30 jours.
 
     Args:
         run_ts: timestamp du début du run (UTC).
@@ -217,8 +217,7 @@ def _write_errors(run_ts: datetime) -> None:
     """Append les lignes d'erreur collectées via record_error() pendant ce run.
 
     Si _errors est vide, on n'ajoute aucune ligne (silence = bonne nouvelle)
-    mais on garantit que le fichier existe avec son en-tête, pour que les trois
-    logs soient toujours présents sous logs/ (besoin : 3 logs persistés).
+        mais on garantit que le journal d'erreurs versionné existe avec son en-tête.
     """
     if not _errors:
         if not ERRORS_FILE.exists():
@@ -238,7 +237,7 @@ def _errors_header() -> str:
         "# Audit erreurs — 30 derniers jours\n"
         "\n"
         "Rétention glissante 30 jours. Append en bas. Aucune ligne pour un run\n"
-        "donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),\n"
+        "donné == pipeline sain. Phases : `state`, `fetch` (feed RSS), `scoring` (phase 1),\n"
         "`dedup` (phase 2), `synthese` (phase 3).\n"
         "\n"
         "| Date UTC | Phase | Cible | Erreur |\n"
