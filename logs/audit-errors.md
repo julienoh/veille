@@ -113,3 +113,6 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-08-03 09:05 UTC | scoring | Maximum Entropy Behavior Exploration for Sim2Real Zero-Shot  (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-08-03 09:17 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 56 column 6 (char 2338)) |
 | 2026-08-06 08:18 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 68 column 6 (char 2556)) |
+| 2026-08-07 07:18 UTC | scoring | Do Tabular Foundation Models Agree with Themselves? (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-08-07 07:29 UTC | scoring | Effective pruning of task-trained recurrent neural networks  (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-08-07 07:53 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 68 column 6 (char 2586)) |
