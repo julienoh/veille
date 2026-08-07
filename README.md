@@ -56,7 +56,10 @@ digest.py  ←─── cron 3x/jour (GitHub Actions)
     ├── 7. PHASE 3 — Synthèse (LLM de synthèse, 1 appel par catégorie OPML)
     │       Markdown éditorial : 1-2 phrases par sujet, regroupement thématique
     │
-    └── 8. Génère le RSS puis avance last_success.json après succès
+    ├── 8. Annexe de scoring déterministe (Python, aucun appel LLM)
+    │       Pour chaque article retenu : score phase 1 (3-5) + raison
+    │
+    └── 9. Génère output/digest.xml puis avance last_success.json après succès
             │
             ├──► git commit → main (seen.json + last_success.json + digest.xml)
             ├──► audit détaillé → artefact Actions, rétention 30 jours
@@ -94,7 +97,8 @@ OPML (catégories → feeds)
                                 LLM de synthèse (par catégorie)
                                 input : articles dédupliqués
                                 output : Markdown avec puces et liens
-                                      └─► feedgen → digest.xml (RSS 2.0)
+                                      └─► annexe Python score + raison/article
+                                            └─► feedgen → digest.xml (RSS 2.0)
                                             └─► 1 item RSS par run
 ```
 
@@ -151,12 +155,14 @@ veille/
 │   ├── audit-summary.md      # Synthèse compteurs par run, 30 derniers jours
 │   └── audit-errors.md       # Erreurs survenues par run, 30 derniers jours
 ├── tests/
-│   └── test_collection.py    # Tests fenêtre de collecte + plafonds de coût
+│   ├── test_collection.py    # Tests fenêtre de collecte + plafonds de coût
+│   └── test_score_details.py # Tests du rendu de scoring visible
 ├── collection.py             # Fenêtre dynamique, priorité temporelle, plafonds
 ├── digest.py                 # Pipeline complet (load, fetch, score, dédup, synth, audit)
 ├── audit.py                  # Logs Markdown des 3 phases (cf. §6 Logs d'audit)
 ├── llm_client.py             # Mini-abstraction LLM (route anthropic/ vs openrouter/)
 ├── prompt.py                 # Prompts LLM isolés (itérables indépendamment du code)
+├── score_details.py          # Annexe score + raison, rendue sans LLM
 ├── requirements.txt          # feedparser, feedgen, anthropic, openai, httpx
 ├── seen.json                 # Hashes SHA1 des articles traités (fenêtre 14 jours)
 ├── last_success.json         # Timestamp du dernier run terminé avec succès
@@ -180,6 +186,11 @@ applique les plafonds par source puis par run. Ce module est testé sans réseau
 `SYNTHESIS_PROMPT`). Découplage intentionnel : on itère sur les prompts sans
 risquer de casser la logique Python, et l'historique git des changements
 de prompts est séparé de celui du code.
+
+**`score_details.py`** : produit l'annexe visible d'évaluation du scoring à
+partir des données de phase 1. Le rendu est déterministe : aucun modèle ne peut
+oublier un score ou l'associer au mauvais article. Seuls les articles retenus
+(scores 3 à 5) apparaissent, avec leur raison.
 
 **`sources.opml`** : source de vérité des feeds. Le script le lit à chaque run —
 modifier l'OPML suffit pour ajouter/retirer une source. Même fichier utilisable
@@ -455,6 +466,20 @@ trouver la nouvelle URL.
 - La phase 2 est intra-catégorie : les doublons cross-catégorie ne sont pas
   détectés actuellement (cf. roadmap).
 
+### Évaluer la pertinence du scoring dans le digest
+
+Chaque catégorie du bulletin se termine par **Évaluation du scoring**. Pour
+chaque article réellement transmis à la synthèse, cette annexe affiche :
+
+```text
+5/5 — Titre — Source. Raison : justification du modèle de filtrage
+```
+
+Le score affiché est `score_phase1`, c'est-à-dire la note initiale avant la
+déduplication. Les scores 1 et 2 restent exclus du digest et sont consultables
+dans `logs/audit-details.md`. L'annexe est construite par Python après la
+synthèse ; elle ne dépend donc pas du respect d'une consigne par le LLM.
+
 ### Mettre à jour les modèles LLM
 
 Quand le fournisseur publie de nouveaux modèles, mettre à jour dans `digest.py` :
@@ -619,6 +644,14 @@ modèle léger et rapide suffit, et il encaisse bien le volume. La synthèse
 finale (regroupement thématique, ton éditorial, Markdown structuré) demande
 plus de nuance, donc un modèle plus capable. Séparer les deux rôles permet de
 choisir le bon modèle pour chaque tâche, sans surdimensionner le filtrage.
+
+### Pourquoi les scores sont-ils rendus par Python ?
+
+Le LLM de synthèse peut regrouper plusieurs articles sous une même puce. Lui
+demander d'insérer les scores créerait un risque d'omission ou de mauvaise
+association. L'annexe est donc générée depuis les objets d'articles après la
+phase 2 : chaque titre, lien, score initial et raison restent liés sans appel
+supplémentaire et peuvent être couverts par des tests unitaires.
 
 ### Pourquoi un seul item RSS par run ?
 
