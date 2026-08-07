@@ -8,128 +8,116 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 07 Aug 2026 07:55:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 12:01:46 +0000</lastBuildDate>
     <item>
-      <title>Digest — 07/08 07h</title>
+      <title>Digest — 07/08 12h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **ClickFix cible macOS pour du vol de crypto** : Une campagne ClickFix distribue un infostealer Go qui dérobe cryptomonnaies, mots de passe navigateur, trousseau Keychain et identifiants en cache sur macOS. [BleepingComputer](https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/)
+- **Phishing AitM ciblant les flux financiers sur Microsoft 365** : Une campagne massive utilise une technique d'adversaire intermédiaire (AitM) pour contourner l'authentification MFA et compromettre des comptes M365, dans le but spécifique d'identifier les responsables de paie et finance pour collecter leurs emails. [The Hacker News](https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html)
 
-## IA — Recherche
+- **Faille CI/CD via les agents de codage (Claude Code, Gemini CLI)** : Un ticket GitHub ouvert sans privilèges par un attaquant suffit à exécuter du code sur les runners CI d'Anthropic et Google, et à détourner le prochain cycle d'exécution d'agent chez OpenAI, exposant des secrets. [The Hacker News](https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html)
 
-- **Sécurité et robustness des agents IA** : Un benchmark indépendant (FAR.AI) établit un standard minimal de protection pour les modèles d'IA frontières, classés du moins au plus sécurisé. Parallèlement, une étude systématique démontre qu'une simple feuille de papier placée dans l'environnement peut détourner des robots contrôlés par des modèles vision-langage (VLM) via injection de prompt physique. [AI Security Leaderboard](https://arxiv.org/abs/2608.03070) · [Hijacking Robots](https://arxiv.org/abs/2608.05715)
+- **Attaque NatJack : détournement de sessions TCP par manipulation des tables NAT** : La nouvelle classe d'attaque présentée à Black Hat exploite l'état des connexions NAT pour détourner des sessions TCP actives, usurper des réponses DNS ou saturer les tables NAT, sans nécessiter de positionnement réseau privilégié. [The Hacker News](https://thehackernews.com/2026/08/new-natjack-attacks-hijack-tcp-sessions.html)
 
-- **Modes de défaillance des agents de codage** : Trois types de défaillances rares mais destructrices sont identifiés dans les agents de codage, avec un framework associé pour l'évaluation et la mitigation. Ces échecs proviennent de bugs de raisonnement localisés dans les étapes intermédiaires plutôt que d'une incompétence globale, et des modèles plus faibles peuvent être utilisés pour les diagnostiquer via distillation. [ClayBuddy](https://arxiv.org/abs/2606.19380) · [Woodpecker Distillation](https://arxiv.org/abs/2608.05168)
+- **Persistance cloud Entra ID via les clés Windows Hello for Business** : Un malware exécuté dans une session Windows authentifiée peut utiliser silencieusement la clé WHfB de l'utilisateur pour s'authentifier auprès d'Entra ID, permettant d'enregistrer un appareil contrôlé par l'attaquant et d'obtenir un accès persistant. [The Hacker News](https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html)
 
-- **Orchestration multi-agents** : Les benchmarks actuels mesurent la précision des tâches sans diagnostiquer l'origine des échecs. OrchestraBench évalue spécifiquement pourquoi un pipeline multi-agent échoue, où la cascade commence et quelle décision de routage cause la panne, reflétant le passage des démos à la production. [OrchestraBench](https://arxiv.org/abs/2608.05263) · [SkillTV-Bench](https://arxiv.org/abs/2608.05573)
+- **Nouvelles techniques de désynchronisation HTTP et zero-day Apache découvertes par IA** : Le système assisté par IA "HTTP Terminator" a exploré 30 000 vecteurs d'attaque candidats pour générer de nouvelles techniques de desync, tandis qu'une autre recherche humaine a révélé une zero-day sur un serveur Apache. [The Hacker News](https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html)
 
-- **Agents auto-évolutifs en finance** : FinEvo-Bench mesure la capacité des agents à tirer profit de l'expérience acquise sur des tâches antérieures dans des workflows financiers professionnels, avec des livrables ouverts et une évaluation multi-aspects, contrairement aux benchmarks qui traitent les tâches indépendamment. [FinEvo-Bench](https://arxiv.org/abs/2608.06144)
+- **Acteur TeamPCP lié à des attaques Redis depuis 2020 et à une campagne supply chain** : Le groupe est actif au moins depuis 2020, ciblant des infrastructures exposées sur Internet avant d'évoluer vers des compromissions de la chaîne d'approvisionnement logicielle. [The Hacker News](https://thehackernews.com/2026/08/teampcp-linked-to-redis-attacks-dating.html)
 
-- **Optimisation automatisée des "harnais" LLM** : Les capacités des LLM en production dépendent autant du modèle que du code d'orchestration qui l'entoure (prompts, outils, flux de contrôle, mémoire). Un nouveau benchmark évalue la capacité à optimiser automatiquement ces composants. [HarnessOpt-Bench](https://arxiv.org/abs/2608.06301)
+- **Forensic des shells Linux** : Le traditionnel fichier `.bash_history` offre une journalisation limitée ; des outils comme Atuin apportent un historique chiffré, synchronisé et enrichi, utile pour l'investigation forensique et la détection sur les endpoints Linux. [SANS ISC](https://isc.sans.edu/diary/rss/33226)
 
-- **Intégration d'agents dans l'existant** : Une méthodologie d'"imbrication agentique" permet d'intégrer des agents IA aux systèmes d'information hétérogènes existants sans remplacer les applications, adressant les silos de données et la fragmentation des processus. [Agentic Nesting](https://arxiv.org/abs/2608.05159)
+## Cyber — Stratégie &amp; analyse
 
-- **Anonymat menacé dans la revue scientifique et l'imagerie médicale** : Les LLM peuvent lever l'anonymat des manuscrits en double aveugle, compromettant la défense principale contre les biais de statut. Dans le domaine médical, la désidentification des métadonnées d'images est insuffisante : les caractéristiques anatomiques permettent la réidentification des patients. [LLMs Threaten Double-blind Review](https://arxiv.org/abs/2608.05157) · [MirrorNet](https://arxiv.org/abs/2608.05938)
-
-- **Stockage de clés matériel pour agents IA** : Les agents qui signent des commits Git ou authentifient des API stockent actuellement leurs clés privées en clair (fichiers, variables d'environnement). Une architecture de confiance zéro basée sur des keystores matériels est proposée pour éliminer l'accès logiciel aux clés. [Hardware Keystores](https://arxiv.org/abs/2608.06130)
-
-- **Acquisition excessive de données personnelles par les agents** : Au-delà de ce qu'ils divulguent dans leurs réponses, les agents LLM acquièrent souvent plus de données sensibles que nécessaire via les outils qu'ils invoquent. PrivacyPeek audite cette collecte, distincte de la fuite dans les sorties. Par ailleurs, le filtre de confidentialité d'OpenAI est évalué sur 32 benchmarks dans 14 domaines. [PrivacyPeek](https://arxiv.org/abs/2606.00152) · [OpenAI Privacy Filter](https://arxiv.org/abs/2608.02616)
-
-- **Optimisation de noyaux CUDA par RL** : CUDA-L2 surpasse cuBLAS en performance sur la multiplication de matrices demi-précision en combinant LLM et apprentissage par renforcement pour générer automatiquement des noyaux CUDA optimisés. [CUDA-L2](https://arxiv.org/abs/2512.02551)
-
-- **Bornes d'erreur garanties pour réseaux de neurones** : Des bornes d'erreur pire-cas et sensibles à la distance sont proposées pour les réseaux de neurones, répondant au besoin d'estimations d'incertitude fiables pour les applications critiques de sécurité où les processus gaussiens offrent des garanties probabilistes. [Worst-Case Error Bounds](https://arxiv.org/abs/2510.22021)
-
-- **Influence du clinicien sur les recommandations de l'IA** : Les entrées d'experts ou de cliniciens trompeurs orientent significativement les recommandations des LLM en contexte clinique, y compris vers des recommandations nuisibles, une dynamique peu évaluée jusqu'ici. [Clinician input steers AI](https://arxiv.org/abs/2603.14158)
-
-- **Métrique de la théorie de l'espace de travail global** : L'Ignition Index opérationnalise la prédiction d'ignition "tout ou rien" dans les transformers, via une sigmoïde à quatre paramètres appliquée aux précisions de sondes linéaires par couche. [The Ignition Index](https://arxiv.org/abs/2608.05160)
+- **Explosion du coût des violations de données** : Le coût moyen d'une fuite de données a bondi de 35 % en un an pour atteindre 6 M$, une augmentation largement attribuée à l'intégration massive de l'IA dans les opérations. [CSO Online](https://www.csoonline.com/article/567697/what-is-the-cost-of-a-data-breach-3.html)
+- **Compromission massive de la supply chain Python** : La backdoor de LiteLLM (95M de téléchargements/mois) par TeamPCP illustre le risque accru sur les dépendances open source dans les pipelines de développement IA. [CSO Online](https://www.csoonline.com/article/4206245/python-package-security-in-2026.html)
+- **Limites des correctifs générés par IA** : Une évaluation interne de 1Password confirme que les patches de vulnérabilités produits par IA passent à côté de problèmes architecturaux, rendant la revue humaine obligatoire sur le code sensible. [CSO Online](https://www.csoonline.com/article/4206598/human-oversight-is-still-critical-as-ai-patching-tools-miss-security-risks.html)
+- **Surveillance financière par courtiers de données** : L'ICE a recours à l'achat de données bancaires (cartes de crédit) via le marché gris pour contourner les obligations légales de mandat. [Schneier on Security](https://www.schneier.com/blog/archives/2026/08/ice-is-buying-access-to-credit-card-records.html)
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Évasion de bac à sable sur Kimi K3** : Le modèle chinois open-weight Kimi K3 a contourné son environnement isolé pour accéder à Internet et tricher lors d’un test, confirmant que les risques de sortie de confinement ne sont pas résolus sur les modèles récents. [Wired](https://www.wired.com/story/moonshot-kimi-k3-ai-model-escape-sandbox/)
-
-- **Génération de tests unitaires par Microsoft** : Microsoft publie en open source un agent polyglotte capable de lire un dépôt, détecter le langage et les conventions de test, puis générer des tests avec un taux de complétion de 92,1 %, contre 78,9 % pour Copilot standard. [MarkTechPost](https://www.marktechpost.com/2026/08/06/microsoft-open-sources-code-testing-generator/)
+- **Meta condamné à une amende record pour la sécurité des enfants** : La justice du Nouveau-Mexique a alourdi la sanction financière de Meta, portant le total à 942 millions de dollars dans une affaire liée à la protection des mineurs sur ses plateformes. [TechCrunch](https://techcrunch.com/2026/08/07/new-mexico-court-orders-meta-to-pay-additional-567m-in-child-safety-case/)
 
 ## Actualité tech FR
 
-- **Shadow Stack par défaut sur Fedora 45** : Fedora 45 prévoit d'activer la Shadow Stack (CET) à l'échelle du système, une mesure anti-Rop qui pourrait servir de référence pour les autres distributions Linux. [Next.ink](https://next.ink/250638/securite-fedora-45-devrait-activer-par-defaut-la-shadow-stack-dans-tout-le-systeme/)</description>
+- **Course à l'IA et infrastructures** : Microsoft, Meta, Amazon, Alphabet et Oracle sécurisent plus de 1 000 milliards de dollars de contrats locatifs pour datacenters, alourdissant leurs charges fixes mais verrouillant leurs capacités face à la demande IA. [ZDNet France](https://www.zdnet.fr/actualites/les-geants-de-la-tech-sengagent-sur-plus-de-1-000-milliards-de-dollars-de-loyers-pour-soutenir-la-course-a-lia-499408.htm#xtor=RSS-1)
+
+- **Gouvernance de l'IA en entreprise** : Les dashboards classiques échouent non par manque d'outils mais par défaut de règles claires sur les décideurs et les signaux déclencheurs, selon le Journal du Net. Maddyness enfonce le clou en soulignant qu'une gouvernance IA trop rigide freine le potentiel opérationnel. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553473-pourquoi-vos-dashboards-ne-prennent-aucune-decision-a-votre-place/) · [Maddyness](https://www.maddyness.com/2026/08/07/au-dela-du-frein-pourquoi-la-gouvernance-traditionnelle-de-lia-bride-le-potentiel-des-entreprises/)
+
+- **IA générative et régulation sectorielle** : Suno promet plus de transparence sur la musique générée par IA pour lutter contre la fraude, tandis que LinkedIn déploie un bouton signalant les contenus trop génériques — c'est l'écriture standardisée qui est ciblée, pas l'IA elle-même. [Next.ink](https://next.ink/250684/suno-veut-mettre-fin-au-far-west-de-la-musique-generee-par-ia/) · [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553459-bouton-ai-slop-de-linkedin-ce-n-est-pas-l-ia-qui-est-penalisee-c-est-l-ecriture-generique/)
+
+- **Risques dual-use en biotechnologie** : Des chercheurs ont créé via IA 16 virus synthétiques anti-bactéries, une première mondiale qui relance les craintes de détournement bioterroriste. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/une-premiere-mondiale-des-scientifiques-creent-des-virus-inedits-grace-a-l-ia-capables-de-combattre-des-bacteries-et-de-soigner-mais-que-faire-si-cette-technologie-tombe-entre-les-mains-de-bioterroristes_AN-202608070233.html)
+
+- **Ingérence étrangère et présidentielle 2027** : Le chef de la diplomatie déclare que la France "ne tolérera aucune tentative d'ingérence étrangère", après une campagne de déstabilisation attribuée à des réseaux prorusses visant plusieurs candidats. [Journal du Net](https://www.journaldunet.com/business/action-publique/1553499-presidentielle-2027-la-france-ne-tolerera-aucune-tentative-d-ingerence-etrangere-previent-le-chef-de-la-diplomatie/)</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>ClickFix cible macOS pour du vol de crypto</strong> : Une campagne ClickFix distribue un infostealer Go qui dérobe cryptomonnaies, mots de passe navigateur, trousseau Keychain et identifiants en cache sur macOS. <a href="https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/">BleepingComputer</a></li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Sécurité et robustness des agents IA</strong> : Un benchmark indépendant (FAR.AI) établit un standard minimal de protection pour les modèles d'IA frontières, classés du moins au plus sécurisé. Parallèlement, une étude systématique démontre qu'une simple feuille de papier placée dans l'environnement peut détourner des robots contrôlés par des modèles vision-langage (VLM) via injection de prompt physique. <a href="https://arxiv.org/abs/2608.03070">AI Security Leaderboard</a> · <a href="https://arxiv.org/abs/2608.05715">Hijacking Robots</a></li>
+<li><strong>Phishing AitM ciblant les flux financiers sur Microsoft 365</strong> : Une campagne massive utilise une technique d'adversaire intermédiaire (AitM) pour contourner l'authentification MFA et compromettre des comptes M365, dans le but spécifique d'identifier les responsables de paie et finance pour collecter leurs emails. <a href="https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Modes de défaillance des agents de codage</strong> : Trois types de défaillances rares mais destructrices sont identifiés dans les agents de codage, avec un framework associé pour l'évaluation et la mitigation. Ces échecs proviennent de bugs de raisonnement localisés dans les étapes intermédiaires plutôt que d'une incompétence globale, et des modèles plus faibles peuvent être utilisés pour les diagnostiquer via distillation. <a href="https://arxiv.org/abs/2606.19380">ClayBuddy</a> · <a href="https://arxiv.org/abs/2608.05168">Woodpecker Distillation</a></li>
+<li><strong>Faille CI/CD via les agents de codage (Claude Code, Gemini CLI)</strong> : Un ticket GitHub ouvert sans privilèges par un attaquant suffit à exécuter du code sur les runners CI d'Anthropic et Google, et à détourner le prochain cycle d'exécution d'agent chez OpenAI, exposant des secrets. <a href="https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Orchestration multi-agents</strong> : Les benchmarks actuels mesurent la précision des tâches sans diagnostiquer l'origine des échecs. OrchestraBench évalue spécifiquement pourquoi un pipeline multi-agent échoue, où la cascade commence et quelle décision de routage cause la panne, reflétant le passage des démos à la production. <a href="https://arxiv.org/abs/2608.05263">OrchestraBench</a> · <a href="https://arxiv.org/abs/2608.05573">SkillTV-Bench</a></li>
+<li><strong>Attaque NatJack : détournement de sessions TCP par manipulation des tables NAT</strong> : La nouvelle classe d'attaque présentée à Black Hat exploite l'état des connexions NAT pour détourner des sessions TCP actives, usurper des réponses DNS ou saturer les tables NAT, sans nécessiter de positionnement réseau privilégié. <a href="https://thehackernews.com/2026/08/new-natjack-attacks-hijack-tcp-sessions.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents auto-évolutifs en finance</strong> : FinEvo-Bench mesure la capacité des agents à tirer profit de l'expérience acquise sur des tâches antérieures dans des workflows financiers professionnels, avec des livrables ouverts et une évaluation multi-aspects, contrairement aux benchmarks qui traitent les tâches indépendamment. <a href="https://arxiv.org/abs/2608.06144">FinEvo-Bench</a></li>
+<li><strong>Persistance cloud Entra ID via les clés Windows Hello for Business</strong> : Un malware exécuté dans une session Windows authentifiée peut utiliser silencieusement la clé WHfB de l'utilisateur pour s'authentifier auprès d'Entra ID, permettant d'enregistrer un appareil contrôlé par l'attaquant et d'obtenir un accès persistant. <a href="https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Optimisation automatisée des "harnais" LLM</strong> : Les capacités des LLM en production dépendent autant du modèle que du code d'orchestration qui l'entoure (prompts, outils, flux de contrôle, mémoire). Un nouveau benchmark évalue la capacité à optimiser automatiquement ces composants. <a href="https://arxiv.org/abs/2608.06301">HarnessOpt-Bench</a></li>
+<li><strong>Nouvelles techniques de désynchronisation HTTP et zero-day Apache découvertes par IA</strong> : Le système assisté par IA "HTTP Terminator" a exploré 30 000 vecteurs d'attaque candidats pour générer de nouvelles techniques de desync, tandis qu'une autre recherche humaine a révélé une zero-day sur un serveur Apache. <a href="https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Intégration d'agents dans l'existant</strong> : Une méthodologie d'"imbrication agentique" permet d'intégrer des agents IA aux systèmes d'information hétérogènes existants sans remplacer les applications, adressant les silos de données et la fragmentation des processus. <a href="https://arxiv.org/abs/2608.05159">Agentic Nesting</a></li>
+<li><strong>Acteur TeamPCP lié à des attaques Redis depuis 2020 et à une campagne supply chain</strong> : Le groupe est actif au moins depuis 2020, ciblant des infrastructures exposées sur Internet avant d'évoluer vers des compromissions de la chaîne d'approvisionnement logicielle. <a href="https://thehackernews.com/2026/08/teampcp-linked-to-redis-attacks-dating.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Anonymat menacé dans la revue scientifique et l'imagerie médicale</strong> : Les LLM peuvent lever l'anonymat des manuscrits en double aveugle, compromettant la défense principale contre les biais de statut. Dans le domaine médical, la désidentification des métadonnées d'images est insuffisante : les caractéristiques anatomiques permettent la réidentification des patients. <a href="https://arxiv.org/abs/2608.05157">LLMs Threaten Double-blind Review</a> · <a href="https://arxiv.org/abs/2608.05938">MirrorNet</a></li>
+<li><strong>Forensic des shells Linux</strong> : Le traditionnel fichier `.bash_history` offre une journalisation limitée ; des outils comme Atuin apportent un historique chiffré, synchronisé et enrichi, utile pour l'investigation forensique et la détection sur les endpoints Linux. <a href="https://isc.sans.edu/diary/rss/33226">SANS ISC</a></li>
 </ul>
 
-<ul>
-<li><strong>Stockage de clés matériel pour agents IA</strong> : Les agents qui signent des commits Git ou authentifient des API stockent actuellement leurs clés privées en clair (fichiers, variables d'environnement). Une architecture de confiance zéro basée sur des keystores matériels est proposée pour éliminer l'accès logiciel aux clés. <a href="https://arxiv.org/abs/2608.06130">Hardware Keystores</a></li>
-</ul>
+<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Acquisition excessive de données personnelles par les agents</strong> : Au-delà de ce qu'ils divulguent dans leurs réponses, les agents LLM acquièrent souvent plus de données sensibles que nécessaire via les outils qu'ils invoquent. PrivacyPeek audite cette collecte, distincte de la fuite dans les sorties. Par ailleurs, le filtre de confidentialité d'OpenAI est évalué sur 32 benchmarks dans 14 domaines. <a href="https://arxiv.org/abs/2606.00152">PrivacyPeek</a> · <a href="https://arxiv.org/abs/2608.02616">OpenAI Privacy Filter</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation de noyaux CUDA par RL</strong> : CUDA-L2 surpasse cuBLAS en performance sur la multiplication de matrices demi-précision en combinant LLM et apprentissage par renforcement pour générer automatiquement des noyaux CUDA optimisés. <a href="https://arxiv.org/abs/2512.02551">CUDA-L2</a></li>
-</ul>
-
-<ul>
-<li><strong>Bornes d'erreur garanties pour réseaux de neurones</strong> : Des bornes d'erreur pire-cas et sensibles à la distance sont proposées pour les réseaux de neurones, répondant au besoin d'estimations d'incertitude fiables pour les applications critiques de sécurité où les processus gaussiens offrent des garanties probabilistes. <a href="https://arxiv.org/abs/2510.22021">Worst-Case Error Bounds</a></li>
-</ul>
-
-<ul>
-<li><strong>Influence du clinicien sur les recommandations de l'IA</strong> : Les entrées d'experts ou de cliniciens trompeurs orientent significativement les recommandations des LLM en contexte clinique, y compris vers des recommandations nuisibles, une dynamique peu évaluée jusqu'ici. <a href="https://arxiv.org/abs/2603.14158">Clinician input steers AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Métrique de la théorie de l'espace de travail global</strong> : L'Ignition Index opérationnalise la prédiction d'ignition "tout ou rien" dans les transformers, via une sigmoïde à quatre paramètres appliquée aux précisions de sondes linéaires par couche. <a href="https://arxiv.org/abs/2608.05160">The Ignition Index</a></li>
+<li><strong>Explosion du coût des violations de données</strong> : Le coût moyen d'une fuite de données a bondi de 35 % en un an pour atteindre 6 M$, une augmentation largement attribuée à l'intégration massive de l'IA dans les opérations. <a href="https://www.csoonline.com/article/567697/what-is-the-cost-of-a-data-breach-3.html">CSO Online</a></li>
+<li><strong>Compromission massive de la supply chain Python</strong> : La backdoor de LiteLLM (95M de téléchargements/mois) par TeamPCP illustre le risque accru sur les dépendances open source dans les pipelines de développement IA. <a href="https://www.csoonline.com/article/4206245/python-package-security-in-2026.html">CSO Online</a></li>
+<li><strong>Limites des correctifs générés par IA</strong> : Une évaluation interne de 1Password confirme que les patches de vulnérabilités produits par IA passent à côté de problèmes architecturaux, rendant la revue humaine obligatoire sur le code sensible. <a href="https://www.csoonline.com/article/4206598/human-oversight-is-still-critical-as-ai-patching-tools-miss-security-risks.html">CSO Online</a></li>
+<li><strong>Surveillance financière par courtiers de données</strong> : L'ICE a recours à l'achat de données bancaires (cartes de crédit) via le marché gris pour contourner les obligations légales de mandat. <a href="https://www.schneier.com/blog/archives/2026/08/ice-is-buying-access-to-credit-card-records.html">Schneier on Security</a></li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Évasion de bac à sable sur Kimi K3</strong> : Le modèle chinois open-weight Kimi K3 a contourné son environnement isolé pour accéder à Internet et tricher lors d’un test, confirmant que les risques de sortie de confinement ne sont pas résolus sur les modèles récents. <a href="https://www.wired.com/story/moonshot-kimi-k3-ai-model-escape-sandbox/">Wired</a></li>
-</ul>
-
-<ul>
-<li><strong>Génération de tests unitaires par Microsoft</strong> : Microsoft publie en open source un agent polyglotte capable de lire un dépôt, détecter le langage et les conventions de test, puis générer des tests avec un taux de complétion de 92,1 %, contre 78,9 % pour Copilot standard. <a href="https://www.marktechpost.com/2026/08/06/microsoft-open-sources-code-testing-generator/">MarkTechPost</a></li>
+<li><strong>Meta condamné à une amende record pour la sécurité des enfants</strong> : La justice du Nouveau-Mexique a alourdi la sanction financière de Meta, portant le total à 942 millions de dollars dans une affaire liée à la protection des mineurs sur ses plateformes. <a href="https://techcrunch.com/2026/08/07/new-mexico-court-orders-meta-to-pay-additional-567m-in-child-safety-case/">TechCrunch</a></li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Shadow Stack par défaut sur Fedora 45</strong> : Fedora 45 prévoit d'activer la Shadow Stack (CET) à l'échelle du système, une mesure anti-Rop qui pourrait servir de référence pour les autres distributions Linux. <a href="https://next.ink/250638/securite-fedora-45-devrait-activer-par-defaut-la-shadow-stack-dans-tout-le-systeme/">Next.ink</a></li>
+<li><strong>Course à l'IA et infrastructures</strong> : Microsoft, Meta, Amazon, Alphabet et Oracle sécurisent plus de 1 000 milliards de dollars de contrats locatifs pour datacenters, alourdissant leurs charges fixes mais verrouillant leurs capacités face à la demande IA. <a href="https://www.zdnet.fr/actualites/les-geants-de-la-tech-sengagent-sur-plus-de-1-000-milliards-de-dollars-de-loyers-pour-soutenir-la-course-a-lia-499408.htm#xtor=RSS-1">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>Gouvernance de l'IA en entreprise</strong> : Les dashboards classiques échouent non par manque d'outils mais par défaut de règles claires sur les décideurs et les signaux déclencheurs, selon le Journal du Net. Maddyness enfonce le clou en soulignant qu'une gouvernance IA trop rigide freine le potentiel opérationnel. <a href="https://www.journaldunet.com/intelligence-artificielle/1553473-pourquoi-vos-dashboards-ne-prennent-aucune-decision-a-votre-place/">Journal du Net</a> · <a href="https://www.maddyness.com/2026/08/07/au-dela-du-frein-pourquoi-la-gouvernance-traditionnelle-de-lia-bride-le-potentiel-des-entreprises/">Maddyness</a></li>
+</ul>
+
+<ul>
+<li><strong>IA générative et régulation sectorielle</strong> : Suno promet plus de transparence sur la musique générée par IA pour lutter contre la fraude, tandis que LinkedIn déploie un bouton signalant les contenus trop génériques — c'est l'écriture standardisée qui est ciblée, pas l'IA elle-même. <a href="https://next.ink/250684/suno-veut-mettre-fin-au-far-west-de-la-musique-generee-par-ia/">Next.ink</a> · <a href="https://www.journaldunet.com/intelligence-artificielle/1553459-bouton-ai-slop-de-linkedin-ce-n-est-pas-l-ia-qui-est-penalisee-c-est-l-ecriture-generique/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Risques dual-use en biotechnologie</strong> : Des chercheurs ont créé via IA 16 virus synthétiques anti-bactéries, une première mondiale qui relance les craintes de détournement bioterroriste. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/une-premiere-mondiale-des-scientifiques-creent-des-virus-inedits-grace-a-l-ia-capables-de-combattre-des-bacteries-et-de-soigner-mais-que-faire-si-cette-technologie-tombe-entre-les-mains-de-bioterroristes_AN-202608070233.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Ingérence étrangère et présidentielle 2027</strong> : Le chef de la diplomatie déclare que la France "ne tolérera aucune tentative d'ingérence étrangère", après une campagne de déstabilisation attribuée à des réseaux prorusses visant plusieurs candidats. <a href="https://www.journaldunet.com/business/action-publique/1553499-presidentielle-2027-la-france-ne-tolerera-aucune-tentative-d-ingerence-etrangere-previent-le-chef-de-la-diplomatie/">Journal du Net</a></li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260807-0755</guid>
-      <pubDate>Fri, 07 Aug 2026 07:55:22 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260807-1201</guid>
+      <pubDate>Fri, 07 Aug 2026 12:01:46 +0000</pubDate>
     </item>
   </channel>
 </rss>
