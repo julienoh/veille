@@ -8,38 +8,102 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 08 Aug 2026 05:50:55 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 11:40:13 +0000</lastBuildDate>
     <item>
-      <title>Digest — 08/08 05h</title>
+      <title>Digest — 08/08 11h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA &amp; Tech — Médias internationaux
+      <description>## IA — Labos &amp; éditeurs
 
-- **Agent IA cyber-offensif** : OpenAI a confirmé avoir freiné le développement de son modèle Astra après qu’il a franchi un seuil critique en cybersécurité, démontrant une capacité autonome à identifier et exécuter des cyberattaques contre des systèmes réellement protégés. [TechCrunch](https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/)
-
-- **Modération de contenu ajustable** : Mistral AI publie Shieldstral 1.0 3B, un classifieur multimodal open-weights qui évalue la sécurité d’un contenu par réponse binaire à une requête en langage naturel, sans taxonomie de risques préétablie, atteignant des performances comparables à des modèles sept fois plus gros. [MarkTechPost](https://www.marktechpost.com/2026/08/07/mistral-ai-releases-shieldstral-1-0-3b/)
+- **Firebird inaugure un datacenter IA en Arménie** : Firebird a mis en service en Arménie la plus grande infrastructure de calcul IA de la région CEI, bâtie sur les GPU NVIDIA Blackwell et les systèmes Dell, avec une évolution prévue vers la plateforme Rubin. [NVIDIA Blog](https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/)
 
 **Évaluation du scoring**
 
-- **5/5** — [OpenAI says it slowed Astra model development over security concerns](https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/) — TechCrunch — AI. Raison : Annonce majeure : un modèle IA atteint un seuil critique de cybersécurité, capable d'attaques autonomes. Impact direct sur la stratégie défensive et la gouvernance IA en entreprise.
-- **4/5** — [Mistral AI Releases Shieldstral 1.0 3B: An Open-Weights Policy-Adaptive Multimodal Safety Classifier Matching Models 7× Its Size](https://www.marktechpost.com/2026/08/07/mistral-ai-releases-shieldstral-1-0-3b/) — MarkTechPost. Raison : Nouveau classifieur de sécurité multimodal open-weight de Mistral IA. Approche innovante (policy-adaptive) et performances intéressantes pour la modération de contenu.</description>
-      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
+- **3/5** — [Firebird Launches CIS Region’s Largest AI Factory in Armenia](https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/) — NVIDIA Blog. Raison : Annonce de construction d'une infrastructure IA majeure, mais sans détail technique, cyber ou réglementaire utile pour experts.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Visualisation interactive scalable avec Reflex XY** : La bibliothèque Python Reflex XY permet de construire des visualisations interactives performantes sur des jeux de données massifs (millions de points), avec streaming temps réel, marqueurs personnalisés et export prêt pour publication. [MarkTechPost](https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/)
+
+**Évaluation du scoring**
+
+- **3/5** — [Designing Scalable Interactive Visualizations with Reflex XY: Composition, Million-Point Rendering, Streaming, Custom Marks, and Export](https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/) — MarkTechPost. Raison : Tutoriel technique sur une bibliothèque Python pour visualisations interactives haute performance, utile pour développeurs et architectes. Hors périmètre cybersécurité et IA stratégique.
+
+## Cyber — Menaces &amp; vulnérabilités
+
+- **Metabase : zero-day exploitée (CVSS 10.0)** : Une faille non authentifiée conférant un accès administrateur complet est activement exploitée in the wild. Aucun CVE n'a encore été attribué, mais la criticité est maximale et le correctif doit être appliqué sans délai. [The Hacker News](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)
+
+- **Progress Kemp LoadMaster : ajout au catalogue KEV de la CISA** : La vulnérabilité CVE-2026-803 fait l'objet de tentatives d'exploitation documentées (792 signalées). L'inscription au KEV impose un correctif sous contrainte réglementaire pour les entités fédérales américaines et sert de signal d'alerte prioritaire pour toutes les organisations. [The Hacker News](https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html)
+
+- **Exfiltration de données via les assistants IA (Atlassian Rovo)** : L'assistant Rovo peut être manipulé par un attaquant pour collecter des données Jira/Confluence accessibles à l'utilisateur connecté et les transmettre à un serveur externe. Deux chercheurs sont parvenus au même résultat via des méthodes distinctes, dont une seule est corrigée à ce stade. [The Hacker News](https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html)
+
+- **Webmail : nouvelles attaques CSS pour vol de secrets** : Des techniques exploitant le CSS permettent à un contenu malveillant de s'échapper du corps du message pour altérer l'interface du webmail. Les chaînes d'attaque fonctionnent sur Outlook, Gmail, Yahoo Mail, Proton Mail, Fastmail et AOL Mail, et visent le vol de mots de passe, tokens et la compromission de comptes tiers. [The Hacker News](https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html)
+
+- **N-able N-central : rebond de l'attaque vers les systèmes gérés** : L'exploitation en cours de la vulnérabilité RMM permet désormais aux attaquants d'atteindre et de persister sur les infrastructures des clients finaux. N-able déploie un second hotfix et une extension proactive des protections. [The Hacker News](https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html)
+
+**Évaluation du scoring**
+
+- **5/5** — [Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html) — The Hacker News. Raison : Exploitation active d'une vulnérabilité critique (CVSS 10.0) sans authentification. Impact direct sur les instances Metabase exposées, nécessite action immédiate des RSSI et architectes.
+- **5/5** — [Progress Kemp LoadMaster Flaw Hits CISA KEV After 792 Reported Exploit Attempts](https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html) — The Hacker News. Raison : CVE critique CVSS 9.6 exploitée massivement (792 tentatives) ajoutée au catalogue KEV CISA. Impact immédiat sur les infrastructures utilisant ce load balancer.
+- **4/5** — [Atlassian Rovo Can Be Tricked Into Sending Jira and Confluence Data to Attackers](https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html) — The Hacker News. Raison : Vulnérabilité exploitable d'un assistant IA en entreprise (Rovo), avec fuite de données Jira/Confluence. Impact direct sur la sécurité SI.
+- **4/5** — [New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens](https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html) — The Hacker News. Raison : Nouvelle technique d'attaque CSS affectant les principaux webmails (Outlook, Gmail) permettant capture de tokens/mots de passe. Impact direct sur un périmètre critique, à surveiller.
+- **4/5** — [N-able Issues N-central Hotfix 2 as Attackers Reach Managed Systems and Persist](https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html) — The Hacker News. Raison : Patch majeur pour un produit RMM largement utilisé, correction d'une faille exploitée activement. Pertinent pour les RSSI/CTO évaluant le risque sur leur SI.</description>
+      <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Agent IA cyber-offensif</strong> : OpenAI a confirmé avoir freiné le développement de son modèle Astra après qu’il a franchi un seuil critique en cybersécurité, démontrant une capacité autonome à identifier et exécuter des cyberattaques contre des systèmes réellement protégés. <a href="https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Modération de contenu ajustable</strong> : Mistral AI publie Shieldstral 1.0 3B, un classifieur multimodal open-weights qui évalue la sécurité d’un contenu par réponse binaire à une requête en langage naturel, sans taxonomie de risques préétablie, atteignant des performances comparables à des modèles sept fois plus gros. <a href="https://www.marktechpost.com/2026/08/07/mistral-ai-releases-shieldstral-1-0-3b/">MarkTechPost</a></li>
+<li><strong>Firebird inaugure un datacenter IA en Arménie</strong> : Firebird a mis en service en Arménie la plus grande infrastructure de calcul IA de la région CEI, bâtie sur les GPU NVIDIA Blackwell et les systèmes Dell, avec une évolution prévue vers la plateforme Rubin. <a href="https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/">NVIDIA Blog</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/">OpenAI says it slowed Astra model development over security concerns</a> — TechCrunch — AI. Raison : Annonce majeure : un modèle IA atteint un seuil critique de cybersécurité, capable d'attaques autonomes. Impact direct sur la stratégie défensive et la gouvernance IA en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/08/07/mistral-ai-releases-shieldstral-1-0-3b/">Mistral AI Releases Shieldstral 1.0 3B: An Open-Weights Policy-Adaptive Multimodal Safety Classifier Matching Models 7× Its Size</a> — MarkTechPost. Raison : Nouveau classifieur de sécurité multimodal open-weight de Mistral IA. Approche innovante (policy-adaptive) et performances intéressantes pour la modération de contenu.</li>
+<li><strong>3/5</strong> — <a href="https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/">Firebird Launches CIS Region’s Largest AI Factory in Armenia</a> — NVIDIA Blog. Raison : Annonce de construction d'une infrastructure IA majeure, mais sans détail technique, cyber ou réglementaire utile pour experts.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Visualisation interactive scalable avec Reflex XY</strong> : La bibliothèque Python Reflex XY permet de construire des visualisations interactives performantes sur des jeux de données massifs (millions de points), avec streaming temps réel, marqueurs personnalisés et export prêt pour publication. <a href="https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/">MarkTechPost</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/">Designing Scalable Interactive Visualizations with Reflex XY: Composition, Million-Point Rendering, Streaming, Custom Marks, and Export</a> — MarkTechPost. Raison : Tutoriel technique sur une bibliothèque Python pour visualisations interactives haute performance, utile pour développeurs et architectes. Hors périmètre cybersécurité et IA stratégique.</li>
+</ul>
+
+<h2>Cyber — Menaces & vulnérabilités</h2>
+
+<ul>
+<li><strong>Metabase : zero-day exploitée (CVSS 10.0)</strong> : Une faille non authentifiée conférant un accès administrateur complet est activement exploitée in the wild. Aucun CVE n'a encore été attribué, mais la criticité est maximale et le correctif doit être appliqué sans délai. <a href="https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Progress Kemp LoadMaster : ajout au catalogue KEV de la CISA</strong> : La vulnérabilité CVE-2026-803 fait l'objet de tentatives d'exploitation documentées (792 signalées). L'inscription au KEV impose un correctif sous contrainte réglementaire pour les entités fédérales américaines et sert de signal d'alerte prioritaire pour toutes les organisations. <a href="https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Exfiltration de données via les assistants IA (Atlassian Rovo)</strong> : L'assistant Rovo peut être manipulé par un attaquant pour collecter des données Jira/Confluence accessibles à l'utilisateur connecté et les transmettre à un serveur externe. Deux chercheurs sont parvenus au même résultat via des méthodes distinctes, dont une seule est corrigée à ce stade. <a href="https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Webmail : nouvelles attaques CSS pour vol de secrets</strong> : Des techniques exploitant le CSS permettent à un contenu malveillant de s'échapper du corps du message pour altérer l'interface du webmail. Les chaînes d'attaque fonctionnent sur Outlook, Gmail, Yahoo Mail, Proton Mail, Fastmail et AOL Mail, et visent le vol de mots de passe, tokens et la compromission de comptes tiers. <a href="https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>N-able N-central : rebond de l'attaque vers les systèmes gérés</strong> : L'exploitation en cours de la vulnérabilité RMM permet désormais aux attaquants d'atteindre et de persister sur les infrastructures des clients finaux. N-able déploie un second hotfix et une extension proactive des protections. <a href="https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html">The Hacker News</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html">Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication</a> — The Hacker News. Raison : Exploitation active d'une vulnérabilité critique (CVSS 10.0) sans authentification. Impact direct sur les instances Metabase exposées, nécessite action immédiate des RSSI et architectes.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html">Progress Kemp LoadMaster Flaw Hits CISA KEV After 792 Reported Exploit Attempts</a> — The Hacker News. Raison : CVE critique CVSS 9.6 exploitée massivement (792 tentatives) ajoutée au catalogue KEV CISA. Impact immédiat sur les infrastructures utilisant ce load balancer.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html">Atlassian Rovo Can Be Tricked Into Sending Jira and Confluence Data to Attackers</a> — The Hacker News. Raison : Vulnérabilité exploitable d'un assistant IA en entreprise (Rovo), avec fuite de données Jira/Confluence. Impact direct sur la sécurité SI.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html">New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens</a> — The Hacker News. Raison : Nouvelle technique d'attaque CSS affectant les principaux webmails (Outlook, Gmail) permettant capture de tokens/mots de passe. Impact direct sur un périmètre critique, à surveiller.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html">N-able Issues N-central Hotfix 2 as Attackers Reach Managed Systems and Persist</a> — The Hacker News. Raison : Patch majeur pour un produit RMM largement utilisé, correction d'une faille exploitée activement. Pertinent pour les RSSI/CTO évaluant le risque sur leur SI.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260808-0550</guid>
-      <pubDate>Sat, 08 Aug 2026 05:50:55 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260808-1140</guid>
+      <pubDate>Sat, 08 Aug 2026 11:40:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
