@@ -8,102 +8,70 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 08 Aug 2026 11:40:13 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 17:38:19 +0000</lastBuildDate>
     <item>
-      <title>Digest — 08/08 11h</title>
+      <title>Digest — 08/08 17h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA — Labos &amp; éditeurs
+      <description>## IA &amp; Tech — Médias internationaux
 
-- **Firebird inaugure un datacenter IA en Arménie** : Firebird a mis en service en Arménie la plus grande infrastructure de calcul IA de la région CEI, bâtie sur les GPU NVIDIA Blackwell et les systèmes Dell, avec une évolution prévue vers la plateforme Rubin. [NVIDIA Blog](https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/)
-
-**Évaluation du scoring**
-
-- **3/5** — [Firebird Launches CIS Region’s Largest AI Factory in Armenia](https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/) — NVIDIA Blog. Raison : Annonce de construction d'une infrastructure IA majeure, mais sans détail technique, cyber ou réglementaire utile pour experts.
-
-## IA &amp; Tech — Médias internationaux
-
-- **Visualisation interactive scalable avec Reflex XY** : La bibliothèque Python Reflex XY permet de construire des visualisations interactives performantes sur des jeux de données massifs (millions de points), avec streaming temps réel, marqueurs personnalisés et export prêt pour publication. [MarkTechPost](https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/)
+- **Modèle agentic à large contexte pour déploiement on-premise** : Pokee AI a publié un modèle de fondation textuel de 28B paramètres capable de traiter 10 millions de tokens, conçu pour fonctionner intégralement dans l'infrastructure du client. Il atteint 93,3 % sur le benchmark RULER à cette longueur de contexte, là où tous les modèles de comparaison tombent à zéro au-delà de 2 millions de tokens. [MarkTechPost](https://www.marktechpost.com/2026/08/08/pokee-ai-releases-pokee-isaac-28b-a-10m-token-context-agentic-model-built-to-run-inside-the-customer-boundary/)
 
 **Évaluation du scoring**
 
-- **3/5** — [Designing Scalable Interactive Visualizations with Reflex XY: Composition, Million-Point Rendering, Streaming, Custom Marks, and Export](https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/) — MarkTechPost. Raison : Tutoriel technique sur une bibliothèque Python pour visualisations interactives haute performance, utile pour développeurs et architectes. Hors périmètre cybersécurité et IA stratégique.
+- **5/5** — [Pokee AI Releases Pokee-Isaac 28B: A 10M-Token Context Agentic Model Built to Run Inside the Customer Boundary](https://www.marktechpost.com/2026/08/08/pokee-ai-releases-pokee-isaac-28b-a-10m-token-context-agentic-model-built-to-run-inside-the-customer-boundary/) — MarkTechPost. Raison : Nouveau modèle agentic avec contexte 10M tokens, benchmark impressionnant à 93% RULER, dépassement des limites actuelles. Impact potentiel fort pour déploiement en entreprise.
+
+## IA — Produits, agents &amp; dev tooling
+
+- **Incident de sécurité Metabase chez n8n** : Une vulnérabilité dans Metabase, outil d'analyse tiers utilisé par n8n, a permis une activité non autorisée le 3 août 2026. La faille a été corrigée depuis, et l'enquête conjointe est en cours. [n8n Blog](https://blog.n8n.io/metabase-security-incident-update/)
+
+**Évaluation du scoring**
+
+- **5/5** — [Metabase security incident update](https://blog.n8n.io/metabase-security-incident-update/) — n8n Blog. Raison : Incident de sécurité actif sur un outil tiers (Metabase) utilisé en entreprise. Vulnérabilité patchée mais impact potentiel sur la chaîne d'approvisionnement. Lecture prioritaire.
 
 ## Cyber — Menaces &amp; vulnérabilités
 
-- **Metabase : zero-day exploitée (CVSS 10.0)** : Une faille non authentifiée conférant un accès administrateur complet est activement exploitée in the wild. Aucun CVE n'a encore été attribué, mais la criticité est maximale et le correctif doit être appliqué sans délai. [The Hacker News](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html)
-
-- **Progress Kemp LoadMaster : ajout au catalogue KEV de la CISA** : La vulnérabilité CVE-2026-803 fait l'objet de tentatives d'exploitation documentées (792 signalées). L'inscription au KEV impose un correctif sous contrainte réglementaire pour les entités fédérales américaines et sert de signal d'alerte prioritaire pour toutes les organisations. [The Hacker News](https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html)
-
-- **Exfiltration de données via les assistants IA (Atlassian Rovo)** : L'assistant Rovo peut être manipulé par un attaquant pour collecter des données Jira/Confluence accessibles à l'utilisateur connecté et les transmettre à un serveur externe. Deux chercheurs sont parvenus au même résultat via des méthodes distinctes, dont une seule est corrigée à ce stade. [The Hacker News](https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html)
-
-- **Webmail : nouvelles attaques CSS pour vol de secrets** : Des techniques exploitant le CSS permettent à un contenu malveillant de s'échapper du corps du message pour altérer l'interface du webmail. Les chaînes d'attaque fonctionnent sur Outlook, Gmail, Yahoo Mail, Proton Mail, Fastmail et AOL Mail, et visent le vol de mots de passe, tokens et la compromission de comptes tiers. [The Hacker News](https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html)
-
-- **N-able N-central : rebond de l'attaque vers les systèmes gérés** : L'exploitation en cours de la vulnérabilité RMM permet désormais aux attaquants d'atteindre et de persister sur les infrastructures des clients finaux. N-able déploie un second hotfix et une extension proactive des protections. [The Hacker News](https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html)
+- **Serveurs TrueConf compromis pour distribuer des installateurs malveillants** : Le groupe hacktiviste Head Mare exploite des serveurs TrueConf non patchés pour remplacer les installateurs clients par des versions trojanisées déployant des backdoors. Les éditions serveur sous Windows et Linux sont ciblées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/)
 
 **Évaluation du scoring**
 
-- **5/5** — [Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication](https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html) — The Hacker News. Raison : Exploitation active d'une vulnérabilité critique (CVSS 10.0) sans authentification. Impact direct sur les instances Metabase exposées, nécessite action immédiate des RSSI et architectes.
-- **5/5** — [Progress Kemp LoadMaster Flaw Hits CISA KEV After 792 Reported Exploit Attempts](https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html) — The Hacker News. Raison : CVE critique CVSS 9.6 exploitée massivement (792 tentatives) ajoutée au catalogue KEV CISA. Impact immédiat sur les infrastructures utilisant ce load balancer.
-- **4/5** — [Atlassian Rovo Can Be Tricked Into Sending Jira and Confluence Data to Attackers](https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html) — The Hacker News. Raison : Vulnérabilité exploitable d'un assistant IA en entreprise (Rovo), avec fuite de données Jira/Confluence. Impact direct sur la sécurité SI.
-- **4/5** — [New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens](https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html) — The Hacker News. Raison : Nouvelle technique d'attaque CSS affectant les principaux webmails (Outlook, Gmail) permettant capture de tokens/mots de passe. Impact direct sur un périmètre critique, à surveiller.
-- **4/5** — [N-able Issues N-central Hotfix 2 as Attackers Reach Managed Systems and Persist](https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html) — The Hacker News. Raison : Patch majeur pour un produit RMM largement utilisé, correction d'une faille exploitée activement. Pertinent pour les RSSI/CTO évaluant le risque sur leur SI.</description>
-      <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
+- **5/5** — [Hackers breach TrueConf to trojanize client installers with backdoors](https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/) — BleepingComputer. Raison : Incident actif exploitant une CVE sur un logiciel de visioconférence utilisé en entreprise, avec compromission des installateurs officiels et déploiement de backdoors.</description>
+      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Firebird inaugure un datacenter IA en Arménie</strong> : Firebird a mis en service en Arménie la plus grande infrastructure de calcul IA de la région CEI, bâtie sur les GPU NVIDIA Blackwell et les systèmes Dell, avec une évolution prévue vers la plateforme Rubin. <a href="https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/">NVIDIA Blog</a></li>
+<li><strong>Modèle agentic à large contexte pour déploiement on-premise</strong> : Pokee AI a publié un modèle de fondation textuel de 28B paramètres capable de traiter 10 millions de tokens, conçu pour fonctionner intégralement dans l'infrastructure du client. Il atteint 93,3 % sur le benchmark RULER à cette longueur de contexte, là où tous les modèles de comparaison tombent à zéro au-delà de 2 millions de tokens. <a href="https://www.marktechpost.com/2026/08/08/pokee-ai-releases-pokee-isaac-28b-a-10m-token-context-agentic-model-built-to-run-inside-the-customer-boundary/">MarkTechPost</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/">Firebird Launches CIS Region’s Largest AI Factory in Armenia</a> — NVIDIA Blog. Raison : Annonce de construction d'une infrastructure IA majeure, mais sans détail technique, cyber ou réglementaire utile pour experts.</li>
+<li><strong>5/5</strong> — <a href="https://www.marktechpost.com/2026/08/08/pokee-ai-releases-pokee-isaac-28b-a-10m-token-context-agentic-model-built-to-run-inside-the-customer-boundary/">Pokee AI Releases Pokee-Isaac 28B: A 10M-Token Context Agentic Model Built to Run Inside the Customer Boundary</a> — MarkTechPost. Raison : Nouveau modèle agentic avec contexte 10M tokens, benchmark impressionnant à 93% RULER, dépassement des limites actuelles. Impact potentiel fort pour déploiement en entreprise.</li>
 </ul>
 
-<h2>IA & Tech — Médias internationaux</h2>
+<h2>IA — Produits, agents & dev tooling</h2>
 
 <ul>
-<li><strong>Visualisation interactive scalable avec Reflex XY</strong> : La bibliothèque Python Reflex XY permet de construire des visualisations interactives performantes sur des jeux de données massifs (millions de points), avec streaming temps réel, marqueurs personnalisés et export prêt pour publication. <a href="https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/">MarkTechPost</a></li>
+<li><strong>Incident de sécurité Metabase chez n8n</strong> : Une vulnérabilité dans Metabase, outil d'analyse tiers utilisé par n8n, a permis une activité non autorisée le 3 août 2026. La faille a été corrigée depuis, et l'enquête conjointe est en cours. <a href="https://blog.n8n.io/metabase-security-incident-update/">n8n Blog</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/08/designing-scalable-interactive-visualizations-with-reflex-xy-composition-million-point-rendering-streaming-custom-marks-and-export/">Designing Scalable Interactive Visualizations with Reflex XY: Composition, Million-Point Rendering, Streaming, Custom Marks, and Export</a> — MarkTechPost. Raison : Tutoriel technique sur une bibliothèque Python pour visualisations interactives haute performance, utile pour développeurs et architectes. Hors périmètre cybersécurité et IA stratégique.</li>
+<li><strong>5/5</strong> — <a href="https://blog.n8n.io/metabase-security-incident-update/">Metabase security incident update</a> — n8n Blog. Raison : Incident de sécurité actif sur un outil tiers (Metabase) utilisé en entreprise. Vulnérabilité patchée mais impact potentiel sur la chaîne d'approvisionnement. Lecture prioritaire.</li>
 </ul>
 
 <h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Metabase : zero-day exploitée (CVSS 10.0)</strong> : Une faille non authentifiée conférant un accès administrateur complet est activement exploitée in the wild. Aucun CVE n'a encore été attribué, mais la criticité est maximale et le correctif doit être appliqué sans délai. <a href="https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Progress Kemp LoadMaster : ajout au catalogue KEV de la CISA</strong> : La vulnérabilité CVE-2026-803 fait l'objet de tentatives d'exploitation documentées (792 signalées). L'inscription au KEV impose un correctif sous contrainte réglementaire pour les entités fédérales américaines et sert de signal d'alerte prioritaire pour toutes les organisations. <a href="https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Exfiltration de données via les assistants IA (Atlassian Rovo)</strong> : L'assistant Rovo peut être manipulé par un attaquant pour collecter des données Jira/Confluence accessibles à l'utilisateur connecté et les transmettre à un serveur externe. Deux chercheurs sont parvenus au même résultat via des méthodes distinctes, dont une seule est corrigée à ce stade. <a href="https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Webmail : nouvelles attaques CSS pour vol de secrets</strong> : Des techniques exploitant le CSS permettent à un contenu malveillant de s'échapper du corps du message pour altérer l'interface du webmail. Les chaînes d'attaque fonctionnent sur Outlook, Gmail, Yahoo Mail, Proton Mail, Fastmail et AOL Mail, et visent le vol de mots de passe, tokens et la compromission de comptes tiers. <a href="https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>N-able N-central : rebond de l'attaque vers les systèmes gérés</strong> : L'exploitation en cours de la vulnérabilité RMM permet désormais aux attaquants d'atteindre et de persister sur les infrastructures des clients finaux. N-able déploie un second hotfix et une extension proactive des protections. <a href="https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html">The Hacker News</a></li>
+<li><strong>Serveurs TrueConf compromis pour distribuer des installateurs malveillants</strong> : Le groupe hacktiviste Head Mare exploite des serveurs TrueConf non patchés pour remplacer les installateurs clients par des versions trojanisées déployant des backdoors. Les éditions serveur sous Windows et Linux sont ciblées. <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/">BleepingComputer</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html">Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication</a> — The Hacker News. Raison : Exploitation active d'une vulnérabilité critique (CVSS 10.0) sans authentification. Impact direct sur les instances Metabase exposées, nécessite action immédiate des RSSI et architectes.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html">Progress Kemp LoadMaster Flaw Hits CISA KEV After 792 Reported Exploit Attempts</a> — The Hacker News. Raison : CVE critique CVSS 9.6 exploitée massivement (792 tentatives) ajoutée au catalogue KEV CISA. Impact immédiat sur les infrastructures utilisant ce load balancer.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/atlassian-rovo-can-be-tricked-into.html">Atlassian Rovo Can Be Tricked Into Sending Jira and Confluence Data to Attackers</a> — The Hacker News. Raison : Vulnérabilité exploitable d'un assistant IA en entreprise (Rovo), avec fuite de données Jira/Confluence. Impact direct sur la sécurité SI.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/new-css-attacks-can-break-webmail.html">New CSS Attacks Can Break Webmail Defenses to Steal Passwords and Tokens</a> — The Hacker News. Raison : Nouvelle technique d'attaque CSS affectant les principaux webmails (Outlook, Gmail) permettant capture de tokens/mots de passe. Impact direct sur un périmètre critique, à surveiller.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/n-central-attackers-reach-managed.html">N-able Issues N-central Hotfix 2 as Attackers Reach Managed Systems and Persist</a> — The Hacker News. Raison : Patch majeur pour un produit RMM largement utilisé, correction d'une faille exploitée activement. Pertinent pour les RSSI/CTO évaluant le risque sur leur SI.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/">Hackers breach TrueConf to trojanize client installers with backdoors</a> — BleepingComputer. Raison : Incident actif exploitant une CVE sur un logiciel de visioconférence utilisé en entreprise, avec compromission des installateurs officiels et déploiement de backdoors.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260808-1140</guid>
-      <pubDate>Sat, 08 Aug 2026 11:40:13 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260808-1738</guid>
+      <pubDate>Sat, 08 Aug 2026 17:38:19 +0000</pubDate>
     </item>
   </channel>
 </rss>
