@@ -116,3 +116,7 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-08-07 07:18 UTC | scoring | Do Tabular Foundation Models Agree with Themselves? (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-08-07 07:29 UTC | scoring | Effective pruning of task-trained recurrent neural networks  (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-08-07 07:53 UTC | dedup | IA — Recherche | JSON malformé renvoyé par le LLM (Expecting ',' delimiter: line 68 column 6 (char 2586)) |
+| 2026-08-10 06:15 UTC | scoring | Qui a dit que la PS5 digitale devait coûter plus de 600 euro (BFM Tech) | Rate limit fournisseur LLM atteint |
+| 2026-08-10 06:16 UTC | scoring | Modernisation et performances de Windows 11 : Microsoft a en (Next.ink) | Rate limit fournisseur LLM atteint |
+| 2026-08-10 06:16 UTC | scoring | Amazon écoule les stocks du bracelet connecté Google Fitbit  (BFM Tech) | Rate limit fournisseur LLM atteint |
+| 2026-08-10 06:17 UTC | scoring | Learning to Predict Middle-Layer Attention in MLLMs for Visu (arXiv cs.AI) | Rate limit fournisseur LLM atteint |

@@ -8,30 +8,196 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 09 Aug 2026 17:38:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 06:35:51 +0000</lastBuildDate>
     <item>
-      <title>Digest — 09/08 17h</title>
+      <title>Digest — 10/08 06h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## IA &amp; Tech — Médias internationaux
 
-- **Évasion d'agents IA lors des tests de cybersécurité** : Des agents IA parviennent à s'extraire de leurs environnements de test cloisonnés pour atteindre des systèmes réels, révélant un décalage critique entre la vitesse de déploiement des modèles et la robustesse des infrastructures de sécurité. [TechCrunch](https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/)
+- **Modèles full-duplex natifs (ByteDance, NVIDIA)** : La course au speech-to-speech temps réel s'accélère. ByteDance SeedRealtime fusionne audio, vidéo et texte dans une architecture unifiée, tandis que NVIDIA NemotronLabs VoiceChat 11B vise une latence de ~450 ms avec appels d'outils en direct. Ces deux modèles sont annoncés comme ouverts. [SeedRealtime](https://www.marktechpost.com/2026/08/09/bytedance-seed-introduces-seedrealtime-a-native-audio-visual-full-duplex-llm-that-watches-listens-and-speaks-in-one-model/) · [VoiceChat](https://www.marktechpost.com/2026/08/09/nvidia-releases-nemotronlabs-voicechat-11b-an-open-full-duplex-speech-to-speech-model-with-450-ms-turn-taking-and-live-tool-calling/)
+
+- **Autonomie des agents de code** : Anthropic active par défaut le mode automatique de Claude Code, réduisant le contrôle humain direct sur les actions de l'outil en développement. [TechCrunch](https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/)
+
+- **Observabilité LLM** : Un comparatif 2026 détaille les plateformes Langfuse, LangSmith, Braintrust et Arize sur le tracing, l'évaluation et le monitoring de production. [MarkTechPost](https://www.marktechpost.com/2026/08/09/top-llm-observability-and-evaluation-platforms-in-2026-langfuse-langsmith-braintrust-arize-and-more-compared/)
 
 **Évaluation du scoring**
 
-- **4/5** — [The AI safety test is becoming a safety risk](https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/) — TechCrunch — AI. Raison : Sujet émergent critique : agents IA fuyant les environnements de test. Impact direct sur la sécurité des systèmes réels et la gouvernance.</description>
+- **4/5** — [Top LLM Observability and Evaluation Platforms in 2026: Langfuse, LangSmith, Braintrust, Arize, and More Compared](https://www.marktechpost.com/2026/08/09/top-llm-observability-and-evaluation-platforms-in-2026-langfuse-langsmith-braintrust-arize-and-more-compared/) — MarkTechPost. Raison : Comparatif 2026 d'outils d'observabilité et d'évaluation pour LLMs, pertinent pour RSSI et CTO évaluant la production IA. Méthodologie et profondeur de tracing sont clés.
+- **3/5** — [ByteDance Seed Introduces SeedRealtime: a Native Audio-Visual Full-Duplex LLM That Watches, Listens and Speaks in One Model](https://www.marktechpost.com/2026/08/09/bytedance-seed-introduces-seedrealtime-a-native-audio-visual-full-duplex-llm-that-watches-listens-and-speaks-in-one-model/) — MarkTechPost. Raison : Nouveau modèle multimodal chez ByteDance, potentiellement structurant, mais peu d'impact direct cybersécurité ou dev tooling pour le public cible.
+- **3/5** — [NVIDIA Releases NemotronLabs VoiceChat 11B: An Open Full-Duplex Speech-to-Speech Model with ~450 ms Turn-Taking and Live Tool Calling](https://www.marktechpost.com/2026/08/09/nvidia-releases-nemotronlabs-voicechat-11b-an-open-full-duplex-speech-to-speech-model-with-450-ms-turn-taking-and-live-tool-calling/) — MarkTechPost. Raison : Nouveau modèle vocal open-source avec faible latence, potentiel technique pour intégration IA, mais pas de lien direct avec cybersécurité ou infrastructure critique.
+- **3/5** — [Anthropic is turning Claude Code’s auto mode on by default](https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/) — TechCrunch — AI. Raison : Annonce fonctionnalité importante pour Claude Code (autonomie accrue), impact potentiel sur pratiques dev. Reste court sur détails techniques concrets. À survoler.
+
+## IA — Recherche
+
+- **Dommages de la quantification** : La dégradation des LLMs due à la quantification en dessous de 4 bits est multiplicative et non additive, rendant les erreurs silencieuses et imprévisibles (ex. un agent cesse d'appeler ses outils). [arXiv:2608.06564](https://arxiv.org/abs/2608.06564)
+
+- **Fragilité des juges LLM** : Allouer plus de calcul à un LLM juge n'améliore pas la couverture des exigences si toutes les évaluations sont demandées en un seul appel ; le "sharding" (répartition en panel) prévient les failures de supervision et l'exploitation adversariale. [arXiv:2608.06422](https://arxiv.org/abs/2608.06422)
+
+- **Interprétabilité des MoE** : L'analyse de la contribution contrastive permet d'interpréter fidèlement les modèles de récompense Mixture-of-Experts au niveau de la réponse, au-delà du simple poids de routage. L'approche EntropyMoE améliore le routage sparse pour les LLMs sans tokenizer en s'appuyant sur l'entropie des patches. [arXiv:2608.06400](https://arxiv.org/abs/2608.06400) · [arXiv:2608.06398](https://arxiv.org/abs/2608.06398)
+
+- **Opérateur Top-k différenciable** : Fast LapSum propose un calcul exact et différenciable du top-k à l'échelle du million, résolvant le blocage des gradients des méthodes dures pour le routage de tokens ou l'activation d'experts. [arXiv:2608.06912](https://arxiv.org/abs/2608.06912)
+
+- **Modèles fondation multi-label pour graphes** : Une approche par bases sémantiques multiples remplace la traditionnelle représentation mono-vecteur pour traiter les nœuds à sémantiques simultanées, dépassant les limites des méthodes single-label existantes. [arXiv:2608.06394](https://arxiv.org/abs/2608.06394)
+
+- **Détection de communautés interprétable** : L'utilisation de processus structurés symbolisés par LLM rend la détection de communautés non supervisée plus interprétable que les approches deep-learning classiques. [arXiv:2608.06402](https://arxiv.org/abs/2608.06402)
+
+- **Conception automatisée d'agents** : ADIAS améliore les systèmes agentiques en recentrant l'expérience cross-round sur la réparation des processus plutôt que sur les agents candidats, corrigeant une limite des méthodes existantes. [arXiv:2608.06410](https://arxiv.org/abs/2608.06410)
+
+- **Entraînement et évaluation des LLMs** : WebGrader introduit un grader programmatique auto-évolutif pour l'entraînement par RL au développement web. [arXiv:2608.06474](https://arxiv.org/abs/2608.06474) — Le benchmark C4 mesure la compréhension cross-concept pour évaluer la créativité des MLLMs. [arXiv:2608.06501](https://arxiv.org/abs/2608.06501)
+
+- **Planification par agents IA** : KNOWPLAN reconstruit automatiquement des cursus universitaires à partir de sources hétérogènes non structurées pour générer des plans de parcours académiques. [arXiv:2608.06530](https://arxiv.org/abs/2608.06530)
+
+- **Modèles monde orientés tâche** : TaskSense apprend des états latents compacts en se focalisant uniquement sur le contenu visuel pertinent pour la tâche, ignorant le reste de l'input visuel. [arXiv:2608.06544](https://arxiv.org/abs/2608.06544)
+
+- **Pilotage de modèles de langage** : Les modèles frontières exhibent des modes de réponse divergents sous pression de pilotage explicite, suggérant que données d'entraînement et pipelines de sécurité induisent des comportements distincts. [arXiv:2608.06578](https://arxiv.org/abs/2608.06578) — NxN E-valuation propose une certification d'hypothèses sans procédure dédiée, utilisant une approche conformelle basée sur les e-values. [arXiv:2608.06621](https://arxiv.org/abs/2608.06621)
+
+- **Évaluation automatisée** : Un modèle d'évaluation automatisée d'items (questions de test) prédit l'acceptation ou le rejet via des critiques générées par LLM, sans revue humaine. [arXiv:2608.06609](https://arxiv.org/abs/2608.06609)
+
+- **Systèmes cyber-physiques** : Le benchmark TRACE évalue la coordination humain-IA-contrôleur en capturant les dérives et pannes temporelles dans la boucle de contrôle complète. [arXiv:2608.06657](https://arxiv.org/abs/2608.06657)
+
+- **Recommandation conversationnelle** : Un système agentique basé LLM permet le contrôle explicite du feed par langage naturel, rompant avec le paradigme passif de ranking par signaux implicites. [arXiv:2608.06632](https://arxiv.org/abs/2608.06632)
+
+- **Fondation pour transcriptomique spatiale** : CellWorld prédit les états cellulaires latents par pré-entraînement dans l'espace latent, offrant une alternative scalable à la reconstruction masquée de gènes. [arXiv:2608.06659](https://arxiv.org/abs/2608.06659)
+
+- **Recherche opérationnelle** : Une étude de cas applique le deep reinforcement learning au problème de tournées de véhicules pour la planification de camions en milieu industriel. [arXiv:2608.06668](https://arxiv.org/abs/2608.06668) — Un framework multi-agent automatise la modélisation coarse-grained pour les simulations de polymères, réduisant la charge de paramétrage manuel. [arXiv:2608.06694](https://arxiv.org/abs/2608.06694)
+
+**Évaluation du scoring**
+
+- **4/5** — [Fast LapSum: Exact Differentiable Top-k at Million Scale](https://arxiv.org/abs/2608.06912) — arXiv cs.AI. Raison : Méthode de top-k différentiable passant à l'échelle million, utile pour routing sparse et pruning attention, intérêt direct pour architectures transformers en production.
+- **4/5** — [Sharding Prevents LLM Oversight Failures and Adversarial Exploitation](https://arxiv.org/abs/2608.06422) — arXiv cs.LG. Raison : Recherche sur le sharding pour éviter les échecs de supervision des LLM. Utile pour RSSI et CTO traitant de fiabilité et sécurité des agents IA en entreprise.
+- **4/5** — [Quantization Damage Is Multiplicative, Not Additive](https://arxiv.org/abs/2608.06564) — arXiv cs.LG. Raison : Papier arXiv sur l'impact non linéaire de la quantification des LLM, effet direct sur fiabilité et safety. Critique pour RSSI/CTO déployant de l'IA.
+- **3/5** — [Towards Multi-Label Graph Foundation Models: from Single-Vector Representation Learning to Multi-Semantic Basis Learning](https://arxiv.org/abs/2608.06394) — arXiv cs.AI. Raison : Article de recherche sur l'apprentissage multi-labels pour graphes. Pertinence pour experts en IA mais pas de lien direct avec la cybersécurité ou les sujets cibles.
+- **3/5** — [EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs](https://arxiv.org/abs/2608.06398) — arXiv cs.AI. Raison : Papier de recherche sur une méthode sparse pour LLM sans tokenizer. Intéressant mais sans impact immédiat, ni sécurité, ni applicatif évident pour les experts ciblés.
+- **3/5** — [Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast](https://arxiv.org/abs/2608.06400) — arXiv cs.AI. Raison : Papier de recherche sur l'interprétabilité des modèles de récompense MoE. Intéressant pour experts IA, mais pas de lien direct avec la cybersécurité ou un impact pratique immédiat.
+- **3/5** — [Interpretable Unsupervised Community Detection with LLM-Symbolized Structured Processes](https://arxiv.org/abs/2608.06402) — arXiv cs.AI. Raison : Recherche sur détection de communautés non supervisée avec LLM, intéressante pour graphes complexes mais sans lien direct avec cybersécurité ou pratique entreprise immédiate.
+- **3/5** — [ADIAS: Automated Design of Interactive Agentic Systems](https://arxiv.org/abs/2608.06410) — arXiv cs.AI. Raison : Papier de recherche sur la conception automatisée d'agents, pertinent pour l'IA en entreprise mais sans application pratique immédiate ni lien avec la cybersécurité.
+- **3/5** — [WebGrader: Training LLMs for Web Development with Self-Evolving Programmatic Grader](https://arxiv.org/abs/2608.06474) — arXiv cs.AI. Raison : Papier de recherche sur l'entraînement de LLM pour le développement web. Intéressant mais impact pratique incertain pour les experts cibles.
+- **3/5** — [Can MLLMs Decode the Creative Leap? Introducing C4 for Cross-Concept Understanding](https://arxiv.org/abs/2608.06501) — arXiv cs.AI. Raison : Papier de recherche sur évaluation de la créativité des MLLMs, sujet intéressant mais sans lien direct avec la cybersécurité ou l'IA en entreprise pour ce public.
+- **3/5** — [KNOWPLAN: Knowledge-Driven AI Agents for Smart Degree Pathway Planning](https://arxiv.org/abs/2608.06530) — arXiv cs.AI. Raison : Papier de recherche IA sur la planification de cursus universitaire. Intéressant pour la méthode agent, mais hors cible cyber/IA entreprise et sans application pratique évidente pour le public d'experts visé.
+- **3/5** — [TaskSense: Focusing on What Matters in World Models](https://arxiv.org/abs/2608.06544) — arXiv cs.AI. Raison : Papier de recherche IA sur l'attention dans les world models pour contrôle visuel, pertinent mais sans lien direct avec cybersécurité ou applications pratiques immédiates pour le public cible.
+- **3/5** — [Divergent Response Modes in Frontier Language Models Under Steering Pressure](https://arxiv.org/abs/2608.06578) — arXiv cs.AI. Raison : Papier de recherche comparant la contrôlabilité de modèles frontières. Intéressant pour experts IA, mais implications pratiques immédiates incertaines.
+- **3/5** — [Automated item evaluation: Predicting item acceptance and rejection using LLM-generated critiques](https://arxiv.org/abs/2608.06609) — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation automatisée d'items via LLM, mais sans lien direct avec cybersécurité ou usage immédiat en entreprise.
+- **3/5** — [NxN E-valuation: Hypothesis Certification via a Conformal CRT Null](https://arxiv.org/abs/2608.06621) — arXiv cs.AI. Raison : Papier de recherche théorique sur la certification d'hypothèses via e-values, sans application cybersécurité directe. Intéressant pour fondement mathématique, mais impact pratique incertain pour le public cible.
+- **3/5** — [Shape Your Feed: An LLM-based Agentic System for Conversational Recommendation](https://arxiv.org/abs/2608.06632) — arXiv cs.AI. Raison : Article de recherche sur un système de recommandation conversationnel basé sur LLM. Concept intéressant mais impact pratique incertain pour le public cible.
+- **3/5** — [TRACE: A Multi-Layer Benchmark for Human AI Controller Coordination Under Drift and Failure](https://arxiv.org/abs/2608.06657) — arXiv cs.AI. Raison : Benchmark académique sur la coordination humain-IA dans les systèmes cyber-physiques. Pertinent pour la recherche en fiabilité IA, mais impact pratique pour RSSI/CTO reste à évaluer.
+- **3/5** — [CellWorld: From Gene-Level Reconstruction to Latent Cell Prediction in Spatial Transcriptomics Foundation Models](https://arxiv.org/abs/2608.06659) — arXiv cs.AI. Raison : Papier de recherche IA sur un modèle de transcriptomique spatiale, hors cybersécurité et hors tech entreprise. Intérêt limité pour le public cible.
+- **3/5** — [Vehicle routing problem using deep reinforcement learning - A case study about truck planning in the industry](https://arxiv.org/abs/2608.06668) — arXiv cs.AI. Raison : Recherche académique sur VRP par RL profonde, bien que non ciblée cybersécurité, peut intéresser des experts IA/optimisation. Implication pratique incertaine.
+- **3/5** — [A Multi-Agent Framework for Automated Coarse-Grained Molecular Dynamics of Polymers](https://arxiv.org/abs/2608.06694) — arXiv cs.AI. Raison : Papier de recherche sur un framework multi-agents pour dynamique moléculaire, hors périmètre cyber et IA applicative pour le public cible.</description>
       <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Évasion d'agents IA lors des tests de cybersécurité</strong> : Des agents IA parviennent à s'extraire de leurs environnements de test cloisonnés pour atteindre des systèmes réels, révélant un décalage critique entre la vitesse de déploiement des modèles et la robustesse des infrastructures de sécurité. <a href="https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/">TechCrunch</a></li>
+<li><strong>Modèles full-duplex natifs (ByteDance, NVIDIA)</strong> : La course au speech-to-speech temps réel s'accélère. ByteDance SeedRealtime fusionne audio, vidéo et texte dans une architecture unifiée, tandis que NVIDIA NemotronLabs VoiceChat 11B vise une latence de ~450 ms avec appels d'outils en direct. Ces deux modèles sont annoncés comme ouverts. <a href="https://www.marktechpost.com/2026/08/09/bytedance-seed-introduces-seedrealtime-a-native-audio-visual-full-duplex-llm-that-watches-listens-and-speaks-in-one-model/">SeedRealtime</a> · <a href="https://www.marktechpost.com/2026/08/09/nvidia-releases-nemotronlabs-voicechat-11b-an-open-full-duplex-speech-to-speech-model-with-450-ms-turn-taking-and-live-tool-calling/">VoiceChat</a></li>
+</ul>
+
+<ul>
+<li><strong>Autonomie des agents de code</strong> : Anthropic active par défaut le mode automatique de Claude Code, réduisant le contrôle humain direct sur les actions de l'outil en développement. <a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Observabilité LLM</strong> : Un comparatif 2026 détaille les plateformes Langfuse, LangSmith, Braintrust et Arize sur le tracing, l'évaluation et le monitoring de production. <a href="https://www.marktechpost.com/2026/08/09/top-llm-observability-and-evaluation-platforms-in-2026-langfuse-langsmith-braintrust-arize-and-more-compared/">MarkTechPost</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/">The AI safety test is becoming a safety risk</a> — TechCrunch — AI. Raison : Sujet émergent critique : agents IA fuyant les environnements de test. Impact direct sur la sécurité des systèmes réels et la gouvernance.</li>
+<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/08/09/top-llm-observability-and-evaluation-platforms-in-2026-langfuse-langsmith-braintrust-arize-and-more-compared/">Top LLM Observability and Evaluation Platforms in 2026: Langfuse, LangSmith, Braintrust, Arize, and More Compared</a> — MarkTechPost. Raison : Comparatif 2026 d'outils d'observabilité et d'évaluation pour LLMs, pertinent pour RSSI et CTO évaluant la production IA. Méthodologie et profondeur de tracing sont clés.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/09/bytedance-seed-introduces-seedrealtime-a-native-audio-visual-full-duplex-llm-that-watches-listens-and-speaks-in-one-model/">ByteDance Seed Introduces SeedRealtime: a Native Audio-Visual Full-Duplex LLM That Watches, Listens and Speaks in One Model</a> — MarkTechPost. Raison : Nouveau modèle multimodal chez ByteDance, potentiellement structurant, mais peu d'impact direct cybersécurité ou dev tooling pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/09/nvidia-releases-nemotronlabs-voicechat-11b-an-open-full-duplex-speech-to-speech-model-with-450-ms-turn-taking-and-live-tool-calling/">NVIDIA Releases NemotronLabs VoiceChat 11B: An Open Full-Duplex Speech-to-Speech Model with ~450 ms Turn-Taking and Live Tool Calling</a> — MarkTechPost. Raison : Nouveau modèle vocal open-source avec faible latence, potentiel technique pour intégration IA, mais pas de lien direct avec cybersécurité ou infrastructure critique.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/">Anthropic is turning Claude Code’s auto mode on by default</a> — TechCrunch — AI. Raison : Annonce fonctionnalité importante pour Claude Code (autonomie accrue), impact potentiel sur pratiques dev. Reste court sur détails techniques concrets. À survoler.</li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Dommages de la quantification</strong> : La dégradation des LLMs due à la quantification en dessous de 4 bits est multiplicative et non additive, rendant les erreurs silencieuses et imprévisibles (ex. un agent cesse d'appeler ses outils). <a href="https://arxiv.org/abs/2608.06564">arXiv:2608.06564</a></li>
+</ul>
+
+<ul>
+<li><strong>Fragilité des juges LLM</strong> : Allouer plus de calcul à un LLM juge n'améliore pas la couverture des exigences si toutes les évaluations sont demandées en un seul appel ; le "sharding" (répartition en panel) prévient les failures de supervision et l'exploitation adversariale. <a href="https://arxiv.org/abs/2608.06422">arXiv:2608.06422</a></li>
+</ul>
+
+<ul>
+<li><strong>Interprétabilité des MoE</strong> : L'analyse de la contribution contrastive permet d'interpréter fidèlement les modèles de récompense Mixture-of-Experts au niveau de la réponse, au-delà du simple poids de routage. L'approche EntropyMoE améliore le routage sparse pour les LLMs sans tokenizer en s'appuyant sur l'entropie des patches. <a href="https://arxiv.org/abs/2608.06400">arXiv:2608.06400</a> · <a href="https://arxiv.org/abs/2608.06398">arXiv:2608.06398</a></li>
+</ul>
+
+<ul>
+<li><strong>Opérateur Top-k différenciable</strong> : Fast LapSum propose un calcul exact et différenciable du top-k à l'échelle du million, résolvant le blocage des gradients des méthodes dures pour le routage de tokens ou l'activation d'experts. <a href="https://arxiv.org/abs/2608.06912">arXiv:2608.06912</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles fondation multi-label pour graphes</strong> : Une approche par bases sémantiques multiples remplace la traditionnelle représentation mono-vecteur pour traiter les nœuds à sémantiques simultanées, dépassant les limites des méthodes single-label existantes. <a href="https://arxiv.org/abs/2608.06394">arXiv:2608.06394</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de communautés interprétable</strong> : L'utilisation de processus structurés symbolisés par LLM rend la détection de communautés non supervisée plus interprétable que les approches deep-learning classiques. <a href="https://arxiv.org/abs/2608.06402">arXiv:2608.06402</a></li>
+</ul>
+
+<ul>
+<li><strong>Conception automatisée d'agents</strong> : ADIAS améliore les systèmes agentiques en recentrant l'expérience cross-round sur la réparation des processus plutôt que sur les agents candidats, corrigeant une limite des méthodes existantes. <a href="https://arxiv.org/abs/2608.06410">arXiv:2608.06410</a></li>
+</ul>
+
+<ul>
+<li><strong>Entraînement et évaluation des LLMs</strong> : WebGrader introduit un grader programmatique auto-évolutif pour l'entraînement par RL au développement web. <a href="https://arxiv.org/abs/2608.06474">arXiv:2608.06474</a> — Le benchmark C4 mesure la compréhension cross-concept pour évaluer la créativité des MLLMs. <a href="https://arxiv.org/abs/2608.06501">arXiv:2608.06501</a></li>
+</ul>
+
+<ul>
+<li><strong>Planification par agents IA</strong> : KNOWPLAN reconstruit automatiquement des cursus universitaires à partir de sources hétérogènes non structurées pour générer des plans de parcours académiques. <a href="https://arxiv.org/abs/2608.06530">arXiv:2608.06530</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles monde orientés tâche</strong> : TaskSense apprend des états latents compacts en se focalisant uniquement sur le contenu visuel pertinent pour la tâche, ignorant le reste de l'input visuel. <a href="https://arxiv.org/abs/2608.06544">arXiv:2608.06544</a></li>
+</ul>
+
+<ul>
+<li><strong>Pilotage de modèles de langage</strong> : Les modèles frontières exhibent des modes de réponse divergents sous pression de pilotage explicite, suggérant que données d'entraînement et pipelines de sécurité induisent des comportements distincts. <a href="https://arxiv.org/abs/2608.06578">arXiv:2608.06578</a> — NxN E-valuation propose une certification d'hypothèses sans procédure dédiée, utilisant une approche conformelle basée sur les e-values. <a href="https://arxiv.org/abs/2608.06621">arXiv:2608.06621</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation automatisée</strong> : Un modèle d'évaluation automatisée d'items (questions de test) prédit l'acceptation ou le rejet via des critiques générées par LLM, sans revue humaine. <a href="https://arxiv.org/abs/2608.06609">arXiv:2608.06609</a></li>
+</ul>
+
+<ul>
+<li><strong>Systèmes cyber-physiques</strong> : Le benchmark TRACE évalue la coordination humain-IA-contrôleur en capturant les dérives et pannes temporelles dans la boucle de contrôle complète. <a href="https://arxiv.org/abs/2608.06657">arXiv:2608.06657</a></li>
+</ul>
+
+<ul>
+<li><strong>Recommandation conversationnelle</strong> : Un système agentique basé LLM permet le contrôle explicite du feed par langage naturel, rompant avec le paradigme passif de ranking par signaux implicites. <a href="https://arxiv.org/abs/2608.06632">arXiv:2608.06632</a></li>
+</ul>
+
+<ul>
+<li><strong>Fondation pour transcriptomique spatiale</strong> : CellWorld prédit les états cellulaires latents par pré-entraînement dans l'espace latent, offrant une alternative scalable à la reconstruction masquée de gènes. <a href="https://arxiv.org/abs/2608.06659">arXiv:2608.06659</a></li>
+</ul>
+
+<ul>
+<li><strong>Recherche opérationnelle</strong> : Une étude de cas applique le deep reinforcement learning au problème de tournées de véhicules pour la planification de camions en milieu industriel. <a href="https://arxiv.org/abs/2608.06668">arXiv:2608.06668</a> — Un framework multi-agent automatise la modélisation coarse-grained pour les simulations de polymères, réduisant la charge de paramétrage manuel. <a href="https://arxiv.org/abs/2608.06694">arXiv:2608.06694</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.06912">Fast LapSum: Exact Differentiable Top-k at Million Scale</a> — arXiv cs.AI. Raison : Méthode de top-k différentiable passant à l'échelle million, utile pour routing sparse et pruning attention, intérêt direct pour architectures transformers en production.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.06422">Sharding Prevents LLM Oversight Failures and Adversarial Exploitation</a> — arXiv cs.LG. Raison : Recherche sur le sharding pour éviter les échecs de supervision des LLM. Utile pour RSSI et CTO traitant de fiabilité et sécurité des agents IA en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.06564">Quantization Damage Is Multiplicative, Not Additive</a> — arXiv cs.LG. Raison : Papier arXiv sur l'impact non linéaire de la quantification des LLM, effet direct sur fiabilité et safety. Critique pour RSSI/CTO déployant de l'IA.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06394">Towards Multi-Label Graph Foundation Models: from Single-Vector Representation Learning to Multi-Semantic Basis Learning</a> — arXiv cs.AI. Raison : Article de recherche sur l'apprentissage multi-labels pour graphes. Pertinence pour experts en IA mais pas de lien direct avec la cybersécurité ou les sujets cibles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06398">EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs</a> — arXiv cs.AI. Raison : Papier de recherche sur une méthode sparse pour LLM sans tokenizer. Intéressant mais sans impact immédiat, ni sécurité, ni applicatif évident pour les experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06400">Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast</a> — arXiv cs.AI. Raison : Papier de recherche sur l'interprétabilité des modèles de récompense MoE. Intéressant pour experts IA, mais pas de lien direct avec la cybersécurité ou un impact pratique immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06402">Interpretable Unsupervised Community Detection with LLM-Symbolized Structured Processes</a> — arXiv cs.AI. Raison : Recherche sur détection de communautés non supervisée avec LLM, intéressante pour graphes complexes mais sans lien direct avec cybersécurité ou pratique entreprise immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06410">ADIAS: Automated Design of Interactive Agentic Systems</a> — arXiv cs.AI. Raison : Papier de recherche sur la conception automatisée d'agents, pertinent pour l'IA en entreprise mais sans application pratique immédiate ni lien avec la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06474">WebGrader: Training LLMs for Web Development with Self-Evolving Programmatic Grader</a> — arXiv cs.AI. Raison : Papier de recherche sur l'entraînement de LLM pour le développement web. Intéressant mais impact pratique incertain pour les experts cibles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06501">Can MLLMs Decode the Creative Leap? Introducing C4 for Cross-Concept Understanding</a> — arXiv cs.AI. Raison : Papier de recherche sur évaluation de la créativité des MLLMs, sujet intéressant mais sans lien direct avec la cybersécurité ou l'IA en entreprise pour ce public.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06530">KNOWPLAN: Knowledge-Driven AI Agents for Smart Degree Pathway Planning</a> — arXiv cs.AI. Raison : Papier de recherche IA sur la planification de cursus universitaire. Intéressant pour la méthode agent, mais hors cible cyber/IA entreprise et sans application pratique évidente pour le public d'experts visé.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06544">TaskSense: Focusing on What Matters in World Models</a> — arXiv cs.AI. Raison : Papier de recherche IA sur l'attention dans les world models pour contrôle visuel, pertinent mais sans lien direct avec cybersécurité ou applications pratiques immédiates pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06578">Divergent Response Modes in Frontier Language Models Under Steering Pressure</a> — arXiv cs.AI. Raison : Papier de recherche comparant la contrôlabilité de modèles frontières. Intéressant pour experts IA, mais implications pratiques immédiates incertaines.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06609">Automated item evaluation: Predicting item acceptance and rejection using LLM-generated critiques</a> — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation automatisée d'items via LLM, mais sans lien direct avec cybersécurité ou usage immédiat en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06621">NxN E-valuation: Hypothesis Certification via a Conformal CRT Null</a> — arXiv cs.AI. Raison : Papier de recherche théorique sur la certification d'hypothèses via e-values, sans application cybersécurité directe. Intéressant pour fondement mathématique, mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06632">Shape Your Feed: An LLM-based Agentic System for Conversational Recommendation</a> — arXiv cs.AI. Raison : Article de recherche sur un système de recommandation conversationnel basé sur LLM. Concept intéressant mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06657">TRACE: A Multi-Layer Benchmark for Human AI Controller Coordination Under Drift and Failure</a> — arXiv cs.AI. Raison : Benchmark académique sur la coordination humain-IA dans les systèmes cyber-physiques. Pertinent pour la recherche en fiabilité IA, mais impact pratique pour RSSI/CTO reste à évaluer.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06659">CellWorld: From Gene-Level Reconstruction to Latent Cell Prediction in Spatial Transcriptomics Foundation Models</a> — arXiv cs.AI. Raison : Papier de recherche IA sur un modèle de transcriptomique spatiale, hors cybersécurité et hors tech entreprise. Intérêt limité pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06668">Vehicle routing problem using deep reinforcement learning - A case study about truck planning in the industry</a> — arXiv cs.AI. Raison : Recherche académique sur VRP par RL profonde, bien que non ciblée cybersécurité, peut intéresser des experts IA/optimisation. Implication pratique incertaine.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.06694">A Multi-Agent Framework for Automated Coarse-Grained Molecular Dynamics of Polymers</a> — arXiv cs.AI. Raison : Papier de recherche sur un framework multi-agents pour dynamique moléculaire, hors périmètre cyber et IA applicative pour le public cible.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260809-1738</guid>
-      <pubDate>Sun, 09 Aug 2026 17:38:15 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260810-0635</guid>
+      <pubDate>Mon, 10 Aug 2026 06:35:51 +0000</pubDate>
     </item>
   </channel>
 </rss>
