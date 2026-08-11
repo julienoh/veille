@@ -8,302 +8,214 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 11 Aug 2026 06:11:49 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 11:55:25 +0000</lastBuildDate>
     <item>
-      <title>Digest — 11/08 06h</title>
+      <title>Digest — 11/08 11h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA &amp; Tech — Médias internationaux
+      <description>## Cyber — Stratégie &amp; analyse
 
-- **OpenAI muscle son offre défensive** : OpenAI déploie un nouveau modèle entraîné spécifiquement sur la cybersécurité dans le cadre de l'extension de son programme Daybreak, en réponse à la multiplication des attaques pilotées par IA. [TechCrunch](https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/)
-- **Pipeline automatisé pour MiniMax-H3** : Un guide technique détaille l'implémentation d'un pipeline de génération vidéo/audio multimodal MiniMax-H3 en utilisant ComfyUI comme backend headless, couvrant le profiling matériel et le téléchargement des poids. [MarkTechPost](https://www.marktechpost.com/2026/08/10/implementing-a-minimax-h3-multimodal-video-and-audio-generation-pipeline-with-comfyui-apis/)
+- **Course à l'armement IA dans la réponse aux vulnérabilités** : OpenAI lance GPT-5.6-Cyber pour les chercheurs en sécurité agréés, tout en prévenant que l'IA réduit mécaniquement la fenêtre de réaction des défenseurs face aux menaces émergentes. [CSO Online](https://www.csoonline.com/article/4207896/openai-launches-gpt-5-6-cyber-as-ai-narrows-vulnerability-response-window.html)
 
-**Évaluation du scoring**
+- **Agents IA hors de contrôle : un écart entre confiance et capacité opérationnelle** : 90 % des responsables sécurité se disent confiants dans leur capacité à détecter un agent IA déviant, mais peu disposent de processus pour neutraliser rapidement l'incident. [CSO Online](https://www.csoonline.com/article/4198038/security-leaders-confident-but-cooked-when-it-comes-to-rogue-ai-agents.html)
 
-- **3/5** — [Implementing a MiniMax-H3 Multimodal Video and Audio Generation Pipeline with ComfyUI APIs](https://www.marktechpost.com/2026/08/10/implementing-a-minimax-h3-multimodal-video-and-audio-generation-pipeline-with-comfyui-apis/) — MarkTechPost. Raison : Guide technique sur pipeline multimodal vidéo/audio. Intéressant pour experts en IA, mais hors périmètre cybersécurité. Sujet technique ciblé, peu stratégique.
-- **3/5** — [As AI-led attacks multiply, OpenAI launches a new cyber model](https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/) — TechCrunch — AI. Raison : Annonce d'un nouveau modèle IA dédié à la cybersécurité par OpenAI. Intéressant pour la stratégie des acteurs, mais peu de détails techniques concrets dans le résumé.
-
-## IA — Recherche
-
-- **Agents mobiles en conditions réelles** : Les performances des agents mobiles chutent fortement hors des benchmarks propres (type AndroidWorld) à cause des variations environnementales et des interfaces dégradées. [AndroidReality](https://arxiv.org/abs/2608.07775)
-
-- **Sondes de sécurité vs modèles de garde** : Une étude de reproductibilité confirme que de simples sondes MLP sur les activations de la dernière couche d'un modèle de 8B détectent les prompts nuisibles avec un F1 comparable à des modèles de garde 1000x plus gros, mais la généralisation inter-familles de modèles reste à valider. [Do All LLMs Know When They're Being Harmful?](https://arxiv.org/abs/2608.08029)
-
-- **Fiabilité des sondes vs confiance du modèle** : Les sondes linéaires détectent quasi-parfaitement un contexte corrompu dans les modèles de langue, mais cela ne se traduit pas en prédiction fiable de défaillance — un écart critique pour le monitoring en production. [The Knowing-Saying Gap](https://arxiv.org/abs/2608.07528)
-
-- **Gouvernance des sorties IA en domaines à perte élevée** : Le goulot d'étranglement de la supervision humaine n'est pas seulement la vélocité de sortie de l'IA, mais le produit vélocité × perte unitaire ; une approche de contournement par flux est proposée quand ce produit dépasse la capacité cognitive humaine. [Flow-by-Flow](https://arxiv.org/abs/2608.07474)
-
-- **IA évaluative et argumentation** : L'IA évaluative est positionnée comme alternative aux recommandations uniques : elle présente des hypothèses concurrentes avec leurs preuves pour et contre, et un fondement argumentatif formel est proposé pour structurer cette approche. [Towards an Argumentative Foundation for Evaluative AI](https://arxiv.org/abs/2608.07473)
-
-- **Agents LLM en négociation autonome** : Des expériences sur des chaînes d'approvisionnement montrent comment les agents LLM gèrent information privée et négociation dynamique, avec des implications directes sur la création de valeur et le risque de contrats perdants. [When LLM Agents Negotiate](https://arxiv.org/abs/2608.07538)
-
-- **Coalitions dynamiques d'agents** : Au lieu de fixer la communication entre agents ou d'autoriser une diffusion complète, une tarification dynamique de la communication entre agents aux compétences hétérogènes optimise coût, latence et redondance. [Dynamic Coalition Formation](https://arxiv.org/abs/2608.07532)
-
-- **Écosystèmes d'agents en milieu hospitalier** : Un catalogue de patterns et un cadre d'orchestration sont proposés pour passer de chatbots isolés à des écosystèmes d'agents gouvernés dans les systèmes d'information hospitaliers critiques. [From Single Chatbots to Governed Agent Ecosystems](https://arxiv.org/abs/2608.07627)
-
-- **Agents continus avec mémoire contrôlée** : La mémoire long-terme des agents IA ne se résume pas à stocker plus d'information ; de nouvelles expériences peuvent renforcer, réviser ou interférer avec les connaissances antérieures, et un mécanisme d'interférence contrôlée est introduit. [Controlled Memory Interference](https://arxiv.org/abs/2608.07622)
-
-- **Boucles de recherche autonomes sans dérive** : Les boucles de recherche pilotées par LLM ont tendance à dériver vers des raffinements locaux de métriques plutôt qu'à tester des hypothèses ; une approche structurée par goût et hypothèses falsifiables est appliquée à la navigation de robots quadrupèdes. [An AI Scientist that Doesn't Drift](https://arxiv.org/abs/2608.07542)
-
-- **Sélectivité dans les simulations moléculaires longues** : Une architecture d'escalade événementielle permet à un LLM d'intervenir sélectivement dans des campagnes de simulation moléculaire de longue durée uniquement quand les règles fixes ne suffisent pas. [Agent-MD](https://arxiv.org/abs/2608.07637)
-
-- **Reconnaissance d'objets formels sous représentations variées** : Le benchmark TREAT évalue la capacité des IA à reconnaître qu'une formulation non familière dénote un objet formel connu, via la recherche de théorèmes en mathématiques. [TREAT](https://arxiv.org/abs/2608.07540)
-
-- **Traduction langage naturel vers SHACL** : Un benchmark est introduit pour évaluer la traduction d'exigences en langage naturel vers des formes SHACL, visant à démocratiser la validation de graphes de connaissances. [NL2SHACL-Bench](https://arxiv.org/abs/2608.07530)
-
-- **Test métamorphique pour agents incarnés** : MetaSpace évalue la cognition spatiale des agents incarnés non par des paires question-réponse annotées, mais par des transformations préservant la réponse attendue — révélant des fragilités invisibles aux benchmarks classiques. [MetaSpace](https://arxiv.org/abs/2608.07533)
-
-- **Conduite coopérative multi-agents** : CMU-Drive introduit un benchmark et des modèles vision-langage-action pour la conduite autonome coopérative avec communication véhicule-à-véhicule, dépassant le paradigme mono-agent dominant. [CMU-Drive and V2V-VLA](https://arxiv.org/abs/2608.07621)
-
-- **Entraînement de séquences longues variables** : Un parallélisme orienté données est proposé pour entraîner des modèles sur des séquences longues de longueur variable sans compromis entre efficacité et facilité d'usage. [Training Variable Long Sequences](https://arxiv.org/abs/2608.07524)
-
-- **Réparation de sources documentaires** : TeXFix-Bench fournit un benchmark multi-format (LaTeX, Typst, Markdown) pour la réparation automatique de sources documentaires par LLM, fondé sur des erreurs empiriques réelles. [TeXFix-Bench](https://arxiv.org/abs/2608.07617)
-
-- **Cadre unifié en théories des structures** : Un cadre formel de déterminisation est proposé pour construire des interprétations canoniques à partir de théories des structures plurielles, avec applications aux fondements logiques de l'IA. [Determinization in Structure Theories](https://arxiv.org/abs/2608.07476)
-
-- **Géométrie continue pour la navigation et au-delà** : Un cadre de champ métrique continu entraîné par une unique perte contrastive causale encode une scène via une algèbre de Lie, avec applications de la navigation à la physique des trous noirs. [The Field Knows](https://arxiv.org/abs/2608.07566)
-
-- **Émotion en conduite humaine modélisée** : L'inférence active est étendue pour intégrer l'émotion dans un modèle de conduite humaine, ajoutant une dimension affective à la modélisation du comportement adaptatif. [Emotion in an active inference model](https://arxiv.org/abs/2608.07480)
+- **Délégation décisionnelle à l'IA en contexte militaire** : Une recherche empirique utilise des répliques haute-fidélité de théâtres d'opération pour analyser comment le jugement humain évolue quand l'IA est intégrée aux chaînes de commandement. [Schneier on Security](https://www.schneier.com/blog/archives/2026/08/ai-for-military-support.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [AndroidReality: How Far Are Mobile Agents from the Real World?](https://arxiv.org/abs/2608.07775) — arXiv cs.AI. Raison : Papier de recherche proposant un framework d'évaluation robuste pour agents mobiles, thème pertinent pour l'IA en entreprise et la fiabilité en conditions réelles.
-- **4/5** — [Do All LLMs Know When They're Being Harmful? A Reproducibility Study of Latent-Space Safety Probes Across Model Families](https://arxiv.org/abs/2608.08029) — arXiv cs.LG. Raison : Reproductibilité d'une méthode de détection de prompts malveillants par sonde légère sur LLM, extension multi-modèle. Pertinent pour sécurité IA en entreprise.
-- **3/5** — [Towards an Argumentative Foundation for Evaluative AI](https://arxiv.org/abs/2608.07473) — arXiv cs.AI. Raison : Papier de recherche sur l'IA évaluative et l'argumentation computationnelle. Intéressant pour la réflexion sur l'IA explicable, mais sans application pratique immédiate pour le public cible.
-- **3/5** — [Flow-by-Flow:Content-Judgment Bypass for Governing AI Output in High-Loss Domains](https://arxiv.org/abs/2608.07474) — arXiv cs.AI. Raison : Papier de recherche sur la gouvernance des sorties IA dans les domaines à forte perte, mais l'implication pratique pour un public d'experts reste incertaine.
-- **3/5** — [Determinization in Structure Theories: A Unified Framework via Closure, Comparability, and Joint Admissibility](https://arxiv.org/abs/2608.07476) — arXiv cs.AI. Raison : Article de recherche formel sur les théories de structure, sans lien évident avec la cybersécurité ou l'IA appliquée en entreprise. Intérêt théorique limité pour le public cible.
-- **3/5** — [Emotion in an active inference model of human driving](https://arxiv.org/abs/2608.07480) — arXiv cs.AI. Raison : Papier de recherche sur l'inférence active appliquée à la conduite humaine. Intéressant pour l'IA, mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
-- **3/5** — [Training Variable Long Sequences with Data-Centric Parallel](https://arxiv.org/abs/2608.07524) — arXiv cs.AI. Raison : Papier de recherche sur une méthode d'entraînement de séquences longues. Intéressant pour les experts IA, mais sans lien direct avec la cybersécurité ou le périmètre cible.
-- **3/5** — [The Knowing-Saying Gap: When Probes See Errors that Confidence Misses](https://arxiv.org/abs/2608.07528) — arXiv cs.AI. Raison : Papier de recherche sur la fiabilité des sondes linéaires en IA, pertinent pour la sécurité des modèles, mais l'impact pratique immédiat reste incertain.
-- **3/5** — [NL2SHACL-Bench: A Benchmark Suite for Natural Language to SHACL Translation](https://arxiv.org/abs/2608.07530) — arXiv cs.AI. Raison : Benchmark académique pour NL2SHACL, pertinent pour experts RDF/KG mais sans lien direct avec cybersécurité ou IA applicative en entreprise.
-- **3/5** — [Dynamic Coalition Formation and Communication Pricing in Skill-Based Agentic AI Systems](https://arxiv.org/abs/2608.07532) — arXiv cs.AI. Raison : Papier de recherche sur l'optimisation de communication entre agents IA. Intéressant pour l'architecture mais impact pratique incertain pour le public expert.
-- **3/5** — [MetaSpace: Metamorphic Testing for Spatial Cognition in Embodied Agents](https://arxiv.org/abs/2608.07533) — arXiv cs.AI. Raison : Article de recherche sur le test métamorphique pour agents incarnés. Pertinent pour l'évaluation des agents IA, mais sans lien direct avec la cybersécurité ou l'exploitation pratique immédiate.
-- **3/5** — [When LLM Agents Negotiate: Private Information and Dynamic Bargaining in Supply Chains](https://arxiv.org/abs/2608.07538) — arXiv cs.AI. Raison : Papier de recherche sur la négociation par agents LLM dans les chaînes d'approvisionnement. Intéressant pour l'IA en entreprise, mais implications pratiques encore incertaines.
-- **3/5** — [TREAT: Evaluating Access to Formal Knowledge across Equivalent Mathematical Representations](https://arxiv.org/abs/2608.07540) — arXiv cs.AI. Raison : Papier de recherche IA sur la reconnaissance de théorèmes, sans lien direct cybersécurité. Intéressant pour experts IA mais implication pratique incertaine pour le public cible.
-- **3/5** — [An AI Scientist that Doesn't Drift: Taste, Structure, and Falsifiable Findings in a Quadruped Navigation Research Loop](https://arxiv.org/abs/2608.07542) — arXiv cs.AI. Raison : Recherche IA sur navigation de robot quadrupede. Intérêt technique pour experts IA, mais éloigné du périmètre cyber/sécurité/management IT.
-- **3/5** — [The Field Knows: Cross-Dimensional Geometry from Navigation to Black Holes](https://arxiv.org/abs/2608.07566) — arXiv cs.AI. Raison : Papier de recherche IA sur un framework géométrique original. Intéressant pour experts en IA, mais sans lien direct avec cybersécurité ou dev tooling.
-- **3/5** — [TeXFix-Bench: An Empirically Grounded Multi-Format Benchmark for LLM-Based Document Source Repair](https://arxiv.org/abs/2608.07617) — arXiv cs.AI. Raison : Benchmark académique pour la réparation de documents LaTeX/Typst/Markdown. Intéressant pour les experts en dev tooling mais sans lien direct avec la cybersécurité ou l'IA en entreprise.
-- **3/5** — [CMU-Drive and V2V-VLA: Cooperative Multi-agent Unified Driving with Reasoning Benchmark and Vehicle-to-Vehicle Vision-Language-Action Models](https://arxiv.org/abs/2608.07621) — arXiv cs.AI. Raison : Papier de recherche sur un modèle VLA multi-agent pour conduite autonome. Intéressant pour l'IA embarquée mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
-- **3/5** — [Controlled Memory Interference in Continual LLM Agents](https://arxiv.org/abs/2608.07622) — arXiv cs.AI. Raison : Papier de recherche sur la mémoire des agents IA, intéressant pour l'architecture mais sans application pratique immédiate ni lien avec la cybersécurité.
-- **3/5** — [From Single Chatbots to Governed Agent Ecosystems: An Agentic AI Pattern Catalogue and Orchestration Framework for Mission-Critical Hospital Information Management Systems](https://arxiv.org/abs/2608.07627) — arXiv cs.AI. Raison : Papier de recherche proposant un catalogue de patterns et un framework d'orchestration pour agents IA en milieu hospitalier. Intéressant pour l'architecture mais implications pratiques encore incertaines.
-- **3/5** — [Agent-MD: Selective LLM Intervention with Event-Driven Escalation for Stateful GCMC--MD Campaigns](https://arxiv.org/abs/2608.07637) — arXiv cs.AI. Raison : Papier de recherche sur l'utilisation sélective de LLM pour des campagnes de simulation moléculaire. Intéressant pour l'architecture agent, mais sans lien direct avec la cybersécurité ou l'IA en entreprise.
-
-## Cyber — Stratégie &amp; analyse
-
-- **Vulnérabilité critique dans Metabase sans CVE** : Une faille de sévérité maximale permet une prise de contrôle administrative à distance sur la plateforme d'analyse, exposant également les utilisateurs en aval. L'absence d'identifiant CVE freine la coordination des correctifs. [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius)
-
-- **Recherche en sécurité augmentée par l'IA** : Le système HTTP Terminator, guidé par un opérateur humain, a découvert une nouvelle classe de vulnérabilités (« shared-parser confusion ») et exploité à grande échelle des failles de HTTP request smuggling sur des centaines de sites. Le modèle démontre que l'efficacité réside dans l'amplification humaine, non dans l'autonomie complète. [CSO Online](https://www.csoonline.com/article/4207666/the-future-of-ai-security-research-isnt-autonomous-its-human-amplified.html)
-
-- **Détournement d'agents IA via les alertes de sécurité** : Des chercheurs montrent que des attaquants peuvent manipuler et compromettre des agents IA en exploitant les signaux faibles que constituent les alertes et événements bloqués, révélant des lacunes critiques dans la gouvernance des identités de ces systèmes. [Dark Reading](https://www.darkreading.com/cyber-risk/ghostjacking-identity-governance-gaps-ai-agents)
-
-- **Systèmes d'eau critiques ciblés aux États-Unis** : Une campagne d'attaque élargie, attribuée à l'Iran, cible des automates programmables exposés sur Internet dans une douzaine d'États. Ces incidents soulignent la persistance du risque sur les infrastructures de traitement d'eau mal sécurisées. [Dark Reading](https://www.darkreading.com/ics-ot-security/multistate-water-system-attacks-widen-iran-suspected)
-
-- **Changement de paradigme dans la gestion des correctifs** : Plutôt que de suivre aveuglément les scores CVSS, la priorisation doit se concentrer sur les maillons critiques permettant de briser les chaînes d'attaque menant aux actifs essentiels. Une approche de « patchage par points d'étranglement » s'avère plus efficace que le traitement par checklist. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/patch-gap-defenders-chains-not-checklists)
-
-**Évaluation du scoring**
-
-- **5/5** — [Metabase SQL Zero-Day Attacks Could Have Wide Blast Radius](https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius) — Dark Reading. Raison : Zero-day de sévérité maximale sans CVE, offrant un accès administrateur distant. Impact direct sur une plateforme d'analyse métier largement déployée en entreprise.
-- **4/5** — [The future of AI security research isn’t autonomous, it’s human-amplified](https://www.csoonline.com/article/4207666/the-future-of-ai-security-research-isnt-autonomous-its-human-amplified.html) — CSO Online. Raison : Découverte d'une nouvelle classe de vulnérabilité HTTP (shared-parser confusion) et démonstration d'IA assistée par humain pour du pentest à grande échelle.
-- **4/5** — ['GhostJacking' Exposes Identity Governance Gaps in AI Agents](https://www.darkreading.com/cyber-risk/ghostjacking-identity-governance-gaps-ai-agents) — Dark Reading. Raison : Nouvelle technique d'attaque ciblant les agents IA via des alertes de sécurité, impactant directement la gouvernance des identités. Analyse technique à approfondir.
-- **4/5** — [Multistate Water System Attacks Widen, Iran Suspected](https://www.darkreading.com/ics-ot-security/multistate-water-system-attacks-widen-iran-suspected) — Dark Reading. Raison : Incidents ciblant des infrastructures critiques (eau) via PLC exposés, tendance multi-États. Pertinent pour RSSI/CTO, mais détails techniques manquent pour un score 5.
-- **4/5** — [The Patch Gap: Why Defenders Need to Think in Chains, Not Checklists](https://www.darkreading.com/cybersecurity-operations/patch-gap-defenders-chains-not-checklists) — Dark Reading. Raison : Propose une approche alternative au patching par CVSS, centrée sur les chaînes critiques. Analyse stratégique utile pour RSSI et CTO.
+- **4/5** — [OpenAI launches GPT-5.6-Cyber as AI narrows vulnerability response window](https://www.csoonline.com/article/4207896/openai-launches-gpt-5-6-cyber-as-ai-narrows-vulnerability-response-window.html) — CSO Online. Raison : Annonce d'un modèle IA spécialisé en cybersécurité par OpenAI, avec impact potentiel sur les délais de réponse aux vulnérabilités. Pertinent pour RSSI et CTO.
+- **3/5** — [AI for Military Support](https://www.schneier.com/blog/archives/2026/08/ai-for-military-support.html) — Schneier on Security. Raison : Recherche empirique sur l'IA dans la prise de décision militaire, intéressante mais sans lien direct avec la cybersécurité ou les sujets ciblés.
+- **3/5** — [Security leaders’ rogue AI confidence could actually be disastrous](https://www.csoonline.com/article/4198038/security-leaders-confident-but-cooked-when-it-comes-to-rogue-ai-agents.html) — CSO Online. Raison : Sondage WanAware sur la confiance des RSSI face aux agents IA défaillants. Sujet pertinent mais source peu critique, manque de détails techniques exploitables.
 
 ## Cyber — Menaces &amp; vulnérabilités
 
-- **Compromission OT via APN privé dans le secteur énergétique** : Une centrale de cogénération polonaise a été compromise via son APN privé, permettant aux attaquants d'accéder au réseau industriel. Cet incident illustre le risque que représentent les interconnexions IT/OT insuffisamment segmentées, exposant des infrastructures critiques à des perturbations physiques. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-breached-a-small-polish-energy-plant-via-private-apn-last-year/)
+- **USB/PnP : escalade vers SYSTEM sur Windows 11** : Le mécanisme Plug and Play de Windows peut être détourné pour exécuter des composants d'installation signés et obtenir les privilèges SYSTEM sur une machine entièrement patchée. Le même vecteur est exploitable via Remote Desktop sans accès physique. [The Hacker News](https://thehackernews.com/2026/08/researchers-turn-usb-auto-install-into.html)
 
-- **Attaque supply chain sur des plugins WordPress premium** : Un acteur malveillant a altéré l'infrastructure de BdThemes pour diffuser une charge malveillante créant des comptes admin rogues sur les sites clients. Toute organisation utilisant ces thèmes ou extensions doit considérer ses instances WordPress comme potentiellement compromises. [BleepingComputer](https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/)
+- **Supply chain BdThemes : création d'administrateurs WordPress fantômes** : Une compromission de l'éditeur de plugins BdThemes a permis d'injecter des administrateurs malveillants via des métadonnées empoisonnées, sans modifier les fichiers source des plugins. WordPress a suspendu temporairement les téléchargements. [The Hacker News](https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons.html)
 
-- **Campagne ransomware ciblant les pare-feux d'infrastructures critiques** : Le groupe Gunra exploite des vulnérabilités sur des pare-feux pour compromettre des organisations d'importance vitale, selon une alerte conjointe du FBI et de la Corée du Sud. L'application immédiate des correctifs sur les appliances en bordure de réseau est critique. [The Record](https://therecord.media/ransomware-south-korea-fbi-gunra)
+- **Attaque de centrale électrique polonaise via réseau cellulaire privé** : Des attaquants ont accédé aux systèmes de contrôle d'une centrale de cogénération par le réseau cellulaire privé de l'opérateur local et ont provoqué l'arrêt d'une turbine à vapeur. Le rétablissement a débuté vers 7h30 le matin même. [The Hacker News](https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html)
 
-- **Modèle GPT spécialisé en cybersécurité offensive et défensive** : OpenAI lance GPT 5.6 Cyber, un modèle restreint aux utilisateurs approuvés, conçu pour la recherche de vulnérabilités, le pentest et la réponse à incident. Cette spécialisation marque une étape dans l'armement des IA pour des usages cyber, avec des implications à surveiller pour l'équilibre offensif/défensif. [BleepingComputer](https://www.bleepingcomputer.com/news/security/openai-releases-chatgpt-56-cyber-but-its-only-for-approved-users/)
+- **Ransomware Gunra cible les infrastructures critiques** : Les agences de cybersécurité sud-coréennes et américaines alertent sur ce ransomware qui exploite des failles Fortinet et Schneider Electric pour pénétrer des réseaux dans la santé, la finance et les services gouvernementaux. [The Hacker News](https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html)
+
+- **Cisco ClamAV : failles DoS avec exploits publics** : Cisco signale deux vulnérabilités haute sévérité dans le connecteur Secure Endpoint permettant de planter le processus d'analyse ClamAV. Des exploits sont déjà disponibles. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisco-warns-of-high-severity-clamav-flaws-with-public-exploits/)
+
+- **Serveurs MCP malveillants : exfiltration par fractionnement d'instructions** : Un outil MCP malveillant connecté à un assistant de codage IA peut voler des clés SSH, secrets d'environnement et code source en découpant des requêtes nuisibles en instructions apparemment inoffensives, contournant ainsi le refus initial d'actions suspectes. [The Hacker News](https://thehackernews.com/2026/08/malicious-mcp-servers-can-split.html)
 
 **Évaluation du scoring**
 
-- **5/5** — [Hackers breached a small Polish energy plant via private APN last year](https://www.bleepingcomputer.com/news/security/hackers-breached-a-small-polish-energy-plant-via-private-apn-last-year/) — BleepingComputer. Raison : Incident réel dans un secteur critique (énergie) avec accès OT via APN privé, impact potentiel sur la chaîne d'approvisionnement.
-- **5/5** — [BdThemes plugins supply-chain hack creates rogue WordPress admins](https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/) — BleepingComputer. Raison : Supply-chain hack de BdThemes créant des admins WordPress. Impact direct sur un CMS très utilisé, attaque chaîne d'approvisionnement critique pour RSSI et CTO.
-- **5/5** — [FBI, South Korea warn of Gunra ransomware gang targeting critical infrastructure](https://therecord.media/ransomware-south-korea-fbi-gunra) — The Record. Raison : Alerte conjointe FBI et Corée du Sud sur un gang ransomware ciblant des infrastructures critiques via des vulnérabilités firewall. Impact direct sur la sécurité des organisations.
-- **5/5** — [OpenAI releases ChatGPT 5.6 Cyber, but it's only for approved users](https://www.bleepingcomputer.com/news/security/openai-releases-chatgpt-56-cyber-but-its-only-for-approved-users/) — BleepingComputer. Raison : Nouveau modèle IA majeur dédié à la cybersécurité offensive et défensive, impact direct sur les pratiques des RSSI et CTO.</description>
-      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
+- **5/5** — [Researchers Turn USB Auto-Install Into a Full SYSTEM Takeover on Windows 11](https://thehackernews.com/2026/08/researchers-turn-usb-auto-install-into.html) — The Hacker News. Raison : Vulnérabilité critique Windows PnP menant à un SYSTEM takeover sur Windows 11 à jour, avec vecteur RDP. Impact direct sur les postes Windows utilisés en entreprise.
+- **5/5** — [Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks](https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html) — The Hacker News. Raison : Campagne ransomware majeure exploitant des failles critiques Fortinet et Schneider Electric, ciblant des infrastructures vitales. Impact direct sur les secteurs clés et les technologies utilisées en entreprise.
+- **5/5** — [Hackers Breach Polish Power Plant Controls via Private Cellular Network and Shut Turbine](https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html) — The Hacker News. Raison : Incident cyber majeur sur un secteur critique (énergie) via un réseau privé cellulaire, avec impact opérationnel direct (turbine arrêtée).
+- **5/5** — [BdThemes Supply Chain Attack Poisons JSON to Create Rogue WordPress Admins](https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons.html) — The Hacker News. Raison : Supply chain attack sur un éditeur de plugins WordPress affectant directement les sites des entreprises. Compromission de la chaîne d'approvisionnement, création de comptes admin non autorisée. Impact large.
+- **4/5** — [Cisco warns of high-severity ClamAV flaws with public exploits](https://www.bleepingcomputer.com/news/security/cisco-warns-of-high-severity-clamav-flaws-with-public-exploits/) — BleepingComputer. Raison : Vulnérabilités Cisco ClamAV affectant Secure Endpoint Connector avec exploits publics. Impact direct sur un produit sécurité largement déployé en entreprise.
+- **4/5** — [Malicious MCP Servers Can Split Instructions to Make AI Coding Agents Exfiltrate Secrets](https://thehackernews.com/2026/08/malicious-mcp-servers-can-split.html) — The Hacker News. Raison : Technique d'exfiltration furtive via serveurs MCP malveillants exploitant le découpage d'instructions. Impact direct sur la sécurité des agents IA en entreprise.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Réduction du délai de réponse aux vulnérabilités** : L'IA permet désormais d'analyser le code, de tracer des comportements anormaux et d'identifier des failles échappant aux outils classiques, avec un impact marqué sur la détection des zero-days et l'analyse de la composition des conteneurs. [AI News](https://www.artificialintelligence-news.com/news/how-ai-is-changing-the-vulnerability-response-timeline/)
+
+- **Extraction des traces de raisonnement des LLM** : Des chercheurs ont mis au point une méthode pour extraire les « reasoning traces » de Claude, GPT et Gemini ; les résultats suggèrent que certains modèles chinois pourraient être entraînés sur des modèles américains leaders. [Wired](https://www.wired.com/story/a-new-trick-reveals-ai-models-inner-thoughts/)
+
+- **IA agentique dans la découverte médicamenteuse** : Novo Nordisk étend son usage des outils IA d'AWS, incluant des agents IA pour l'identification de cibles et la conception de thérapies, dans le cadre d'un partenariat cloud stratégique. [AI News](https://www.artificialintelligence-news.com/news/novo-nordisk-ai-drug-discovery-aws/)
+
+- **Petits modèles de logique formelle exécutables en local** : WebAI publie TwIL-LM (1.7B et 3B paramètres), capables de traduire l'anglais en logique du premier ordre et tournant sur CPU ou 4 Go de VRAM, sous licence non commerciale. [MarkTechPost](https://www.marktechpost.com/2026/08/10/webai-releases-twil-lm-a-1-7b-and-3b-formal-logic-model-family-for-autoformalization-on-local-hardware/)
+
+- **Impact de l'IA sur la recherche mathématique** : Le médaillé Fields James Maynard témoigne d'une remise en question profonde de sa discipline, confrontée à une accélération sans précédent des méthodes de recherche sous l'effet de l'IA. [The Verge](https://www.theverge.com/ai-artificial-intelligence/977273/the-ai-takeover-of-mathematics-has-begun)
+
+**Évaluation du scoring**
+
+- **4/5** — [How AI is changing the vulnerability response timeline](https://www.artificialintelligence-news.com/news/how-ai-is-changing-the-vulnerability-response-timeline/) — AI News. Raison : Analyse de l'impact de l'IA sur le délai de réponse aux vulnérabilités, avec focus sur les zero-days et la composition des conteneurs, pertinent pour les experts.
+- **3/5** — [The AI takeover of mathematics has begun](https://www.theverge.com/ai-artificial-intelligence/977273/the-ai-takeover-of-mathematics-has-begun) — The Verge — AI. Raison : Article sur l'impact de l'IA en mathématiques, intéressant pour la réflexion stratégique mais sans lien direct avec la cybersécurité ou le dev tooling.
+- **3/5** — [A New Trick Reveals AI Models’ Inner Thoughts](https://www.wired.com/story/a-new-trick-reveals-ai-models-inner-thoughts/) — Wired — AI. Raison : Recherche sur l'extraction de traces de raisonnement de modèles IA. Intéressant pour la transparence des modèles, mais impact pratique immédiat incertain pour le public cible.
+- **3/5** — [Novo Nordisk and AWS bring agentic AI into drug discovery](https://www.artificialintelligence-news.com/news/novo-nordisk-ai-drug-discovery-aws/) — AI News. Raison : Partenariat stratégique entre Novo Nordisk et AWS pour l'IA agentic en drug discovery. Intéressant pour tendance IA en entreprise, mais sans détail technique ou sécurité immédiat pour experts.
+- **3/5** — [webAI Releases TwIL-LM: A 1.7B and 3B Formal-Logic Model Family for Autoformalization on Local Hardware](https://www.marktechpost.com/2026/08/10/webai-releases-twil-lm-a-1-7b-and-3b-formal-logic-model-family-for-autoformalization-on-local-hardware/) — MarkTechPost. Raison : Nouveau petit modèle de logique formelle, intéressant pour la recherche IA, mais licence non commerciale et benchmarks contestés limitent l'impact pratique immédiat.
+
+## Actualité tech FR
+
+- **Fuite de données chez le logisticien de Valve** : La compromission de CEVA expose les adresses postales et numéros de commande des clients européens, facilitant des campagnes de phishing ciblées. Les données de paiement restent préservées. [ZDNet France](https://www.zdnet.fr/actualites/valve-alerte-ses-clients-europeens-apres-le-piratage-de-son-partenaire-logistique-ceva-499574.htm)
+
+- **IA et régulation : transparence et concurrence** : Anthropic déploie filigranes et métadonnées sur les contenus générés par Claude pour se conformer aux nouvelles obligations de l'AI Act européen. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/anthropic-va-marquer-les-contenus-generes-par-ses-modeles-claude-pour-se-conformer-a-la-loi-europeenne-sur-l-intelligence-artificielle_AV-202608110264.html)
+- **Presse française contre les aperçus IA de Google** : Un collectif de 300 quotidiens saisit l'Autorité de la concurrence, estimant que les résumés automatiques dans les résultats de recherche réduiront leur trafic de 33 à 38 %. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/les-resumes-par-ia-sur-google-pourraient-leur-faire-perdre-entre-33-et-38-de-trafic-sur-leurs-sites-les-organes-de-presse-francais-passent-a-l-offensive-et-saisissent-l-autorite-de-la-concurrence_AD-202608110272.html)
+
+- **Meta sanctionnée pour destruction de preuves** : Un juge californien reproche à Meta d'avoir laissé s'effacer des données dans un procès sur des publicités frauduleuses en cryptomonnaies, ce qui pourrait affaiblir sa défense face au milliardaire Andrew Forrest. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/des-publicites-frauduleuses-pour-promouvoir-de-faux-investissements-en-cryptomonnaies-meta-sanctionnee-pour-avoir-detruit-des-preuves-dans-une-affaire-contre-un-milliardaire-australien_AD-202608110203.html)
+
+- **Ouverture forcée du Play Store Android** : Google distribue désormais des magasins d'applications tiers directement sur sa plateforme, une concession aux pressions concurrentielles qui élargit les surfaces d'exposition à des stores non contrôlés par l'éditeur. [BFM Tech](https://www.bfmtv.com/tech/android/le-play-store-d-android-distribue-desormais-les-magasins-d-applications-alternatifs_AV-202608110222.html)
+
+- **Meta publie un modèle IA en open source** : Muse Glimmer, 30 milliards de paramètres sous licence permissive, marque le retour de Meta aux poids ouverts après l'échec de Llama 4. Exécutable en local sur une machine puissante. [Next.ink](https://next.ink/250997/meta-revient-aux-poids-ouverts-avec-muse-glimmer-un-modele-ia-local/)
+
+**Évaluation du scoring**
+
+- **4/5** — [Valve alerte ses clients européens après le piratage de son partenaire logistique CEVA](https://www.zdnet.fr/actualites/valve-alerte-ses-clients-europeens-apres-le-piratage-de-son-partenaire-logistique-ceva-499574.htm#xtor=RSS-1) — ZDNet France. Raison : Incident de sécurité chez un transporteur impactant la chaîne d'approvisionnement. Expose des clients à du phishing ciblé, pertinent pour RSSI et CTO.
+- **4/5** — [Meta revient aux poids ouverts avec Muse Glimmer, un modèle IA local](https://next.ink/250997/meta-revient-aux-poids-ouverts-avec-muse-glimmer-un-modele-ia-local/) — Next.ink. Raison : Nouveau modèle IA local open source de Meta, 30B paramètres, potentiel impact sur pratiques entreprise. À lire pour détails techniques et licence.
+- **3/5** — [Les résumés par IA sur Google pourraient leur faire perdre "entre 33% et 38%" de trafic sur leurs sites: les organes de presse français passent à l'offensive et saisissent l'Autorité de la concurrence](https://www.bfmtv.com/tech/intelligence-artificielle/les-resumes-par-ia-sur-google-pourraient-leur-faire-perdre-entre-33-et-38-de-trafic-sur-leurs-sites-les-organes-de-presse-francais-passent-a-l-offensive-et-saisissent-l-autorite-de-la-concurrence_AD-202608110272.html) — BFM Tech. Raison : Impact potentiel sur le trafic web et stratégie des éditeurs, mais sans détail technique ni lien direct avec la cybersécurité ou l'IA en entreprise.
+- **3/5** — [Anthropic va marquer les contenus générés par ses modèles Claude pour se conformer à la loi européenne sur l'intelligence artificielle](https://www.bfmtv.com/tech/intelligence-artificielle/anthropic-va-marquer-les-contenus-generes-par-ses-modeles-claude-pour-se-conformer-a-la-loi-europeenne-sur-l-intelligence-artificielle_AV-202608110264.html) — BFM Tech. Raison : Annonce de conformité réglementaire IA, utile pour la gouvernance mais sans détail technique ou impact immédiat sur les pratiques.
+- **3/5** — [Le Play store d'Android distribue désormais les magasins d'applications alternatifs](https://www.bfmtv.com/tech/android/le-play-store-d-android-distribue-desormais-les-magasins-d-applications-alternatifs_AV-202608110222.html) — BFM Tech. Raison : Annonce stratégique de Google ouvrant le Play store aux magasins alternatifs. Impact potentiel sur la distribution d'apps et la sécurité, mais sans détail technique ou vulnérabilité immédiate.
+- **3/5** — [Des publicités frauduleuses pour promouvoir de faux investissements en cryptomonnaies: Meta sanctionnée pour avoir détruit des preuves dans une affaire contre un milliardaire australien](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/des-publicites-frauduleuses-pour-promouvoir-de-faux-investissements-en-cryptomonnaies-meta-sanctionnee-pour-avoir-detruit-des-preuves-dans-une-affaire-contre-un-milliardaire-australien_AD-202608110203.html) — BFM Tech. Raison : Article sur une sanction pour destruction de preuves, pertinent pour gouvernance cyber et conformité, mais sans impact technique direct pour l'audience.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>OpenAI muscle son offre défensive</strong> : OpenAI déploie un nouveau modèle entraîné spécifiquement sur la cybersécurité dans le cadre de l'extension de son programme Daybreak, en réponse à la multiplication des attaques pilotées par IA. <a href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/">TechCrunch</a></li>
-<li><strong>Pipeline automatisé pour MiniMax-H3</strong> : Un guide technique détaille l'implémentation d'un pipeline de génération vidéo/audio multimodal MiniMax-H3 en utilisant ComfyUI comme backend headless, couvrant le profiling matériel et le téléchargement des poids. <a href="https://www.marktechpost.com/2026/08/10/implementing-a-minimax-h3-multimodal-video-and-audio-generation-pipeline-with-comfyui-apis/">MarkTechPost</a></li>
+<li><strong>Course à l'armement IA dans la réponse aux vulnérabilités</strong> : OpenAI lance GPT-5.6-Cyber pour les chercheurs en sécurité agréés, tout en prévenant que l'IA réduit mécaniquement la fenêtre de réaction des défenseurs face aux menaces émergentes. <a href="https://www.csoonline.com/article/4207896/openai-launches-gpt-5-6-cyber-as-ai-narrows-vulnerability-response-window.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents IA hors de contrôle : un écart entre confiance et capacité opérationnelle</strong> : 90 % des responsables sécurité se disent confiants dans leur capacité à détecter un agent IA déviant, mais peu disposent de processus pour neutraliser rapidement l'incident. <a href="https://www.csoonline.com/article/4198038/security-leaders-confident-but-cooked-when-it-comes-to-rogue-ai-agents.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Délégation décisionnelle à l'IA en contexte militaire</strong> : Une recherche empirique utilise des répliques haute-fidélité de théâtres d'opération pour analyser comment le jugement humain évolue quand l'IA est intégrée aux chaînes de commandement. <a href="https://www.schneier.com/blog/archives/2026/08/ai-for-military-support.html">Schneier on Security</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/10/implementing-a-minimax-h3-multimodal-video-and-audio-generation-pipeline-with-comfyui-apis/">Implementing a MiniMax-H3 Multimodal Video and Audio Generation Pipeline with ComfyUI APIs</a> — MarkTechPost. Raison : Guide technique sur pipeline multimodal vidéo/audio. Intéressant pour experts en IA, mais hors périmètre cybersécurité. Sujet technique ciblé, peu stratégique.</li>
-<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/">As AI-led attacks multiply, OpenAI launches a new cyber model</a> — TechCrunch — AI. Raison : Annonce d'un nouveau modèle IA dédié à la cybersécurité par OpenAI. Intéressant pour la stratégie des acteurs, mais peu de détails techniques concrets dans le résumé.</li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Agents mobiles en conditions réelles</strong> : Les performances des agents mobiles chutent fortement hors des benchmarks propres (type AndroidWorld) à cause des variations environnementales et des interfaces dégradées. <a href="https://arxiv.org/abs/2608.07775">AndroidReality</a></li>
-</ul>
-
-<ul>
-<li><strong>Sondes de sécurité vs modèles de garde</strong> : Une étude de reproductibilité confirme que de simples sondes MLP sur les activations de la dernière couche d'un modèle de 8B détectent les prompts nuisibles avec un F1 comparable à des modèles de garde 1000x plus gros, mais la généralisation inter-familles de modèles reste à valider. <a href="https://arxiv.org/abs/2608.08029">Do All LLMs Know When They're Being Harmful?</a></li>
-</ul>
-
-<ul>
-<li><strong>Fiabilité des sondes vs confiance du modèle</strong> : Les sondes linéaires détectent quasi-parfaitement un contexte corrompu dans les modèles de langue, mais cela ne se traduit pas en prédiction fiable de défaillance — un écart critique pour le monitoring en production. <a href="https://arxiv.org/abs/2608.07528">The Knowing-Saying Gap</a></li>
-</ul>
-
-<ul>
-<li><strong>Gouvernance des sorties IA en domaines à perte élevée</strong> : Le goulot d'étranglement de la supervision humaine n'est pas seulement la vélocité de sortie de l'IA, mais le produit vélocité × perte unitaire ; une approche de contournement par flux est proposée quand ce produit dépasse la capacité cognitive humaine. <a href="https://arxiv.org/abs/2608.07474">Flow-by-Flow</a></li>
-</ul>
-
-<ul>
-<li><strong>IA évaluative et argumentation</strong> : L'IA évaluative est positionnée comme alternative aux recommandations uniques : elle présente des hypothèses concurrentes avec leurs preuves pour et contre, et un fondement argumentatif formel est proposé pour structurer cette approche. <a href="https://arxiv.org/abs/2608.07473">Towards an Argumentative Foundation for Evaluative AI</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents LLM en négociation autonome</strong> : Des expériences sur des chaînes d'approvisionnement montrent comment les agents LLM gèrent information privée et négociation dynamique, avec des implications directes sur la création de valeur et le risque de contrats perdants. <a href="https://arxiv.org/abs/2608.07538">When LLM Agents Negotiate</a></li>
-</ul>
-
-<ul>
-<li><strong>Coalitions dynamiques d'agents</strong> : Au lieu de fixer la communication entre agents ou d'autoriser une diffusion complète, une tarification dynamique de la communication entre agents aux compétences hétérogènes optimise coût, latence et redondance. <a href="https://arxiv.org/abs/2608.07532">Dynamic Coalition Formation</a></li>
-</ul>
-
-<ul>
-<li><strong>Écosystèmes d'agents en milieu hospitalier</strong> : Un catalogue de patterns et un cadre d'orchestration sont proposés pour passer de chatbots isolés à des écosystèmes d'agents gouvernés dans les systèmes d'information hospitaliers critiques. <a href="https://arxiv.org/abs/2608.07627">From Single Chatbots to Governed Agent Ecosystems</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents continus avec mémoire contrôlée</strong> : La mémoire long-terme des agents IA ne se résume pas à stocker plus d'information ; de nouvelles expériences peuvent renforcer, réviser ou interférer avec les connaissances antérieures, et un mécanisme d'interférence contrôlée est introduit. <a href="https://arxiv.org/abs/2608.07622">Controlled Memory Interference</a></li>
-</ul>
-
-<ul>
-<li><strong>Boucles de recherche autonomes sans dérive</strong> : Les boucles de recherche pilotées par LLM ont tendance à dériver vers des raffinements locaux de métriques plutôt qu'à tester des hypothèses ; une approche structurée par goût et hypothèses falsifiables est appliquée à la navigation de robots quadrupèdes. <a href="https://arxiv.org/abs/2608.07542">An AI Scientist that Doesn't Drift</a></li>
-</ul>
-
-<ul>
-<li><strong>Sélectivité dans les simulations moléculaires longues</strong> : Une architecture d'escalade événementielle permet à un LLM d'intervenir sélectivement dans des campagnes de simulation moléculaire de longue durée uniquement quand les règles fixes ne suffisent pas. <a href="https://arxiv.org/abs/2608.07637">Agent-MD</a></li>
-</ul>
-
-<ul>
-<li><strong>Reconnaissance d'objets formels sous représentations variées</strong> : Le benchmark TREAT évalue la capacité des IA à reconnaître qu'une formulation non familière dénote un objet formel connu, via la recherche de théorèmes en mathématiques. <a href="https://arxiv.org/abs/2608.07540">TREAT</a></li>
-</ul>
-
-<ul>
-<li><strong>Traduction langage naturel vers SHACL</strong> : Un benchmark est introduit pour évaluer la traduction d'exigences en langage naturel vers des formes SHACL, visant à démocratiser la validation de graphes de connaissances. <a href="https://arxiv.org/abs/2608.07530">NL2SHACL-Bench</a></li>
-</ul>
-
-<ul>
-<li><strong>Test métamorphique pour agents incarnés</strong> : MetaSpace évalue la cognition spatiale des agents incarnés non par des paires question-réponse annotées, mais par des transformations préservant la réponse attendue — révélant des fragilités invisibles aux benchmarks classiques. <a href="https://arxiv.org/abs/2608.07533">MetaSpace</a></li>
-</ul>
-
-<ul>
-<li><strong>Conduite coopérative multi-agents</strong> : CMU-Drive introduit un benchmark et des modèles vision-langage-action pour la conduite autonome coopérative avec communication véhicule-à-véhicule, dépassant le paradigme mono-agent dominant. <a href="https://arxiv.org/abs/2608.07621">CMU-Drive and V2V-VLA</a></li>
-</ul>
-
-<ul>
-<li><strong>Entraînement de séquences longues variables</strong> : Un parallélisme orienté données est proposé pour entraîner des modèles sur des séquences longues de longueur variable sans compromis entre efficacité et facilité d'usage. <a href="https://arxiv.org/abs/2608.07524">Training Variable Long Sequences</a></li>
-</ul>
-
-<ul>
-<li><strong>Réparation de sources documentaires</strong> : TeXFix-Bench fournit un benchmark multi-format (LaTeX, Typst, Markdown) pour la réparation automatique de sources documentaires par LLM, fondé sur des erreurs empiriques réelles. <a href="https://arxiv.org/abs/2608.07617">TeXFix-Bench</a></li>
-</ul>
-
-<ul>
-<li><strong>Cadre unifié en théories des structures</strong> : Un cadre formel de déterminisation est proposé pour construire des interprétations canoniques à partir de théories des structures plurielles, avec applications aux fondements logiques de l'IA. <a href="https://arxiv.org/abs/2608.07476">Determinization in Structure Theories</a></li>
-</ul>
-
-<ul>
-<li><strong>Géométrie continue pour la navigation et au-delà</strong> : Un cadre de champ métrique continu entraîné par une unique perte contrastive causale encode une scène via une algèbre de Lie, avec applications de la navigation à la physique des trous noirs. <a href="https://arxiv.org/abs/2608.07566">The Field Knows</a></li>
-</ul>
-
-<ul>
-<li><strong>Émotion en conduite humaine modélisée</strong> : L'inférence active est étendue pour intégrer l'émotion dans un modèle de conduite humaine, ajoutant une dimension affective à la modélisation du comportement adaptatif. <a href="https://arxiv.org/abs/2608.07480">Emotion in an active inference model</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.07775">AndroidReality: How Far Are Mobile Agents from the Real World?</a> — arXiv cs.AI. Raison : Papier de recherche proposant un framework d'évaluation robuste pour agents mobiles, thème pertinent pour l'IA en entreprise et la fiabilité en conditions réelles.</li>
-<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.08029">Do All LLMs Know When They're Being Harmful? A Reproducibility Study of Latent-Space Safety Probes Across Model Families</a> — arXiv cs.LG. Raison : Reproductibilité d'une méthode de détection de prompts malveillants par sonde légère sur LLM, extension multi-modèle. Pertinent pour sécurité IA en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07473">Towards an Argumentative Foundation for Evaluative AI</a> — arXiv cs.AI. Raison : Papier de recherche sur l'IA évaluative et l'argumentation computationnelle. Intéressant pour la réflexion sur l'IA explicable, mais sans application pratique immédiate pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07474">Flow-by-Flow:Content-Judgment Bypass for Governing AI Output in High-Loss Domains</a> — arXiv cs.AI. Raison : Papier de recherche sur la gouvernance des sorties IA dans les domaines à forte perte, mais l'implication pratique pour un public d'experts reste incertaine.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07476">Determinization in Structure Theories: A Unified Framework via Closure, Comparability, and Joint Admissibility</a> — arXiv cs.AI. Raison : Article de recherche formel sur les théories de structure, sans lien évident avec la cybersécurité ou l'IA appliquée en entreprise. Intérêt théorique limité pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07480">Emotion in an active inference model of human driving</a> — arXiv cs.AI. Raison : Papier de recherche sur l'inférence active appliquée à la conduite humaine. Intéressant pour l'IA, mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07524">Training Variable Long Sequences with Data-Centric Parallel</a> — arXiv cs.AI. Raison : Papier de recherche sur une méthode d'entraînement de séquences longues. Intéressant pour les experts IA, mais sans lien direct avec la cybersécurité ou le périmètre cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07528">The Knowing-Saying Gap: When Probes See Errors that Confidence Misses</a> — arXiv cs.AI. Raison : Papier de recherche sur la fiabilité des sondes linéaires en IA, pertinent pour la sécurité des modèles, mais l'impact pratique immédiat reste incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07530">NL2SHACL-Bench: A Benchmark Suite for Natural Language to SHACL Translation</a> — arXiv cs.AI. Raison : Benchmark académique pour NL2SHACL, pertinent pour experts RDF/KG mais sans lien direct avec cybersécurité ou IA applicative en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07532">Dynamic Coalition Formation and Communication Pricing in Skill-Based Agentic AI Systems</a> — arXiv cs.AI. Raison : Papier de recherche sur l'optimisation de communication entre agents IA. Intéressant pour l'architecture mais impact pratique incertain pour le public expert.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07533">MetaSpace: Metamorphic Testing for Spatial Cognition in Embodied Agents</a> — arXiv cs.AI. Raison : Article de recherche sur le test métamorphique pour agents incarnés. Pertinent pour l'évaluation des agents IA, mais sans lien direct avec la cybersécurité ou l'exploitation pratique immédiate.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07538">When LLM Agents Negotiate: Private Information and Dynamic Bargaining in Supply Chains</a> — arXiv cs.AI. Raison : Papier de recherche sur la négociation par agents LLM dans les chaînes d'approvisionnement. Intéressant pour l'IA en entreprise, mais implications pratiques encore incertaines.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07540">TREAT: Evaluating Access to Formal Knowledge across Equivalent Mathematical Representations</a> — arXiv cs.AI. Raison : Papier de recherche IA sur la reconnaissance de théorèmes, sans lien direct cybersécurité. Intéressant pour experts IA mais implication pratique incertaine pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07542">An AI Scientist that Doesn't Drift: Taste, Structure, and Falsifiable Findings in a Quadruped Navigation Research Loop</a> — arXiv cs.AI. Raison : Recherche IA sur navigation de robot quadrupede. Intérêt technique pour experts IA, mais éloigné du périmètre cyber/sécurité/management IT.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07566">The Field Knows: Cross-Dimensional Geometry from Navigation to Black Holes</a> — arXiv cs.AI. Raison : Papier de recherche IA sur un framework géométrique original. Intéressant pour experts en IA, mais sans lien direct avec cybersécurité ou dev tooling.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07617">TeXFix-Bench: An Empirically Grounded Multi-Format Benchmark for LLM-Based Document Source Repair</a> — arXiv cs.AI. Raison : Benchmark académique pour la réparation de documents LaTeX/Typst/Markdown. Intéressant pour les experts en dev tooling mais sans lien direct avec la cybersécurité ou l'IA en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07621">CMU-Drive and V2V-VLA: Cooperative Multi-agent Unified Driving with Reasoning Benchmark and Vehicle-to-Vehicle Vision-Language-Action Models</a> — arXiv cs.AI. Raison : Papier de recherche sur un modèle VLA multi-agent pour conduite autonome. Intéressant pour l'IA embarquée mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07622">Controlled Memory Interference in Continual LLM Agents</a> — arXiv cs.AI. Raison : Papier de recherche sur la mémoire des agents IA, intéressant pour l'architecture mais sans application pratique immédiate ni lien avec la cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07627">From Single Chatbots to Governed Agent Ecosystems: An Agentic AI Pattern Catalogue and Orchestration Framework for Mission-Critical Hospital Information Management Systems</a> — arXiv cs.AI. Raison : Papier de recherche proposant un catalogue de patterns et un framework d'orchestration pour agents IA en milieu hospitalier. Intéressant pour l'architecture mais implications pratiques encore incertaines.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07637">Agent-MD: Selective LLM Intervention with Event-Driven Escalation for Stateful GCMC--MD Campaigns</a> — arXiv cs.AI. Raison : Papier de recherche sur l'utilisation sélective de LLM pour des campagnes de simulation moléculaire. Intéressant pour l'architecture agent, mais sans lien direct avec la cybersécurité ou l'IA en entreprise.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Vulnérabilité critique dans Metabase sans CVE</strong> : Une faille de sévérité maximale permet une prise de contrôle administrative à distance sur la plateforme d'analyse, exposant également les utilisateurs en aval. L'absence d'identifiant CVE freine la coordination des correctifs. <a href="https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Recherche en sécurité augmentée par l'IA</strong> : Le système HTTP Terminator, guidé par un opérateur humain, a découvert une nouvelle classe de vulnérabilités (« shared-parser confusion ») et exploité à grande échelle des failles de HTTP request smuggling sur des centaines de sites. Le modèle démontre que l'efficacité réside dans l'amplification humaine, non dans l'autonomie complète. <a href="https://www.csoonline.com/article/4207666/the-future-of-ai-security-research-isnt-autonomous-its-human-amplified.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Détournement d'agents IA via les alertes de sécurité</strong> : Des chercheurs montrent que des attaquants peuvent manipuler et compromettre des agents IA en exploitant les signaux faibles que constituent les alertes et événements bloqués, révélant des lacunes critiques dans la gouvernance des identités de ces systèmes. <a href="https://www.darkreading.com/cyber-risk/ghostjacking-identity-governance-gaps-ai-agents">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Systèmes d'eau critiques ciblés aux États-Unis</strong> : Une campagne d'attaque élargie, attribuée à l'Iran, cible des automates programmables exposés sur Internet dans une douzaine d'États. Ces incidents soulignent la persistance du risque sur les infrastructures de traitement d'eau mal sécurisées. <a href="https://www.darkreading.com/ics-ot-security/multistate-water-system-attacks-widen-iran-suspected">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Changement de paradigme dans la gestion des correctifs</strong> : Plutôt que de suivre aveuglément les scores CVSS, la priorisation doit se concentrer sur les maillons critiques permettant de briser les chaînes d'attaque menant aux actifs essentiels. Une approche de « patchage par points d'étranglement » s'avère plus efficace que le traitement par checklist. <a href="https://www.darkreading.com/cybersecurity-operations/patch-gap-defenders-chains-not-checklists">Dark Reading</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.darkreading.com/vulnerabilities-threats/metabase-sql-zero-day-attacks-wide-blast-radius">Metabase SQL Zero-Day Attacks Could Have Wide Blast Radius</a> — Dark Reading. Raison : Zero-day de sévérité maximale sans CVE, offrant un accès administrateur distant. Impact direct sur une plateforme d'analyse métier largement déployée en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4207666/the-future-of-ai-security-research-isnt-autonomous-its-human-amplified.html">The future of AI security research isn’t autonomous, it’s human-amplified</a> — CSO Online. Raison : Découverte d'une nouvelle classe de vulnérabilité HTTP (shared-parser confusion) et démonstration d'IA assistée par humain pour du pentest à grande échelle.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyber-risk/ghostjacking-identity-governance-gaps-ai-agents">'GhostJacking' Exposes Identity Governance Gaps in AI Agents</a> — Dark Reading. Raison : Nouvelle technique d'attaque ciblant les agents IA via des alertes de sécurité, impactant directement la gouvernance des identités. Analyse technique à approfondir.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/ics-ot-security/multistate-water-system-attacks-widen-iran-suspected">Multistate Water System Attacks Widen, Iran Suspected</a> — Dark Reading. Raison : Incidents ciblant des infrastructures critiques (eau) via PLC exposés, tendance multi-États. Pertinent pour RSSI/CTO, mais détails techniques manquent pour un score 5.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cybersecurity-operations/patch-gap-defenders-chains-not-checklists">The Patch Gap: Why Defenders Need to Think in Chains, Not Checklists</a> — Dark Reading. Raison : Propose une approche alternative au patching par CVSS, centrée sur les chaînes critiques. Analyse stratégique utile pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4207896/openai-launches-gpt-5-6-cyber-as-ai-narrows-vulnerability-response-window.html">OpenAI launches GPT-5.6-Cyber as AI narrows vulnerability response window</a> — CSO Online. Raison : Annonce d'un modèle IA spécialisé en cybersécurité par OpenAI, avec impact potentiel sur les délais de réponse aux vulnérabilités. Pertinent pour RSSI et CTO.</li>
+<li><strong>3/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/08/ai-for-military-support.html">AI for Military Support</a> — Schneier on Security. Raison : Recherche empirique sur l'IA dans la prise de décision militaire, intéressante mais sans lien direct avec la cybersécurité ou les sujets ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/4198038/security-leaders-confident-but-cooked-when-it-comes-to-rogue-ai-agents.html">Security leaders’ rogue AI confidence could actually be disastrous</a> — CSO Online. Raison : Sondage WanAware sur la confiance des RSSI face aux agents IA défaillants. Sujet pertinent mais source peu critique, manque de détails techniques exploitables.</li>
 </ul>
 
 <h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Compromission OT via APN privé dans le secteur énergétique</strong> : Une centrale de cogénération polonaise a été compromise via son APN privé, permettant aux attaquants d'accéder au réseau industriel. Cet incident illustre le risque que représentent les interconnexions IT/OT insuffisamment segmentées, exposant des infrastructures critiques à des perturbations physiques. <a href="https://www.bleepingcomputer.com/news/security/hackers-breached-a-small-polish-energy-plant-via-private-apn-last-year/">BleepingComputer</a></li>
+<li><strong>USB/PnP : escalade vers SYSTEM sur Windows 11</strong> : Le mécanisme Plug and Play de Windows peut être détourné pour exécuter des composants d'installation signés et obtenir les privilèges SYSTEM sur une machine entièrement patchée. Le même vecteur est exploitable via Remote Desktop sans accès physique. <a href="https://thehackernews.com/2026/08/researchers-turn-usb-auto-install-into.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Attaque supply chain sur des plugins WordPress premium</strong> : Un acteur malveillant a altéré l'infrastructure de BdThemes pour diffuser une charge malveillante créant des comptes admin rogues sur les sites clients. Toute organisation utilisant ces thèmes ou extensions doit considérer ses instances WordPress comme potentiellement compromises. <a href="https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/">BleepingComputer</a></li>
+<li><strong>Supply chain BdThemes : création d'administrateurs WordPress fantômes</strong> : Une compromission de l'éditeur de plugins BdThemes a permis d'injecter des administrateurs malveillants via des métadonnées empoisonnées, sans modifier les fichiers source des plugins. WordPress a suspendu temporairement les téléchargements. <a href="https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Campagne ransomware ciblant les pare-feux d'infrastructures critiques</strong> : Le groupe Gunra exploite des vulnérabilités sur des pare-feux pour compromettre des organisations d'importance vitale, selon une alerte conjointe du FBI et de la Corée du Sud. L'application immédiate des correctifs sur les appliances en bordure de réseau est critique. <a href="https://therecord.media/ransomware-south-korea-fbi-gunra">The Record</a></li>
+<li><strong>Attaque de centrale électrique polonaise via réseau cellulaire privé</strong> : Des attaquants ont accédé aux systèmes de contrôle d'une centrale de cogénération par le réseau cellulaire privé de l'opérateur local et ont provoqué l'arrêt d'une turbine à vapeur. Le rétablissement a débuté vers 7h30 le matin même. <a href="https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèle GPT spécialisé en cybersécurité offensive et défensive</strong> : OpenAI lance GPT 5.6 Cyber, un modèle restreint aux utilisateurs approuvés, conçu pour la recherche de vulnérabilités, le pentest et la réponse à incident. Cette spécialisation marque une étape dans l'armement des IA pour des usages cyber, avec des implications à surveiller pour l'équilibre offensif/défensif. <a href="https://www.bleepingcomputer.com/news/security/openai-releases-chatgpt-56-cyber-but-its-only-for-approved-users/">BleepingComputer</a></li>
+<li><strong>Ransomware Gunra cible les infrastructures critiques</strong> : Les agences de cybersécurité sud-coréennes et américaines alertent sur ce ransomware qui exploite des failles Fortinet et Schneider Electric pour pénétrer des réseaux dans la santé, la finance et les services gouvernementaux. <a href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Cisco ClamAV : failles DoS avec exploits publics</strong> : Cisco signale deux vulnérabilités haute sévérité dans le connecteur Secure Endpoint permettant de planter le processus d'analyse ClamAV. Des exploits sont déjà disponibles. <a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-high-severity-clamav-flaws-with-public-exploits/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Serveurs MCP malveillants : exfiltration par fractionnement d'instructions</strong> : Un outil MCP malveillant connecté à un assistant de codage IA peut voler des clés SSH, secrets d'environnement et code source en découpant des requêtes nuisibles en instructions apparemment inoffensives, contournant ainsi le refus initial d'actions suspectes. <a href="https://thehackernews.com/2026/08/malicious-mcp-servers-can-split.html">The Hacker News</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-breached-a-small-polish-energy-plant-via-private-apn-last-year/">Hackers breached a small Polish energy plant via private APN last year</a> — BleepingComputer. Raison : Incident réel dans un secteur critique (énergie) avec accès OT via APN privé, impact potentiel sur la chaîne d'approvisionnement.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/">BdThemes plugins supply-chain hack creates rogue WordPress admins</a> — BleepingComputer. Raison : Supply-chain hack de BdThemes créant des admins WordPress. Impact direct sur un CMS très utilisé, attaque chaîne d'approvisionnement critique pour RSSI et CTO.</li>
-<li><strong>5/5</strong> — <a href="https://therecord.media/ransomware-south-korea-fbi-gunra">FBI, South Korea warn of Gunra ransomware gang targeting critical infrastructure</a> — The Record. Raison : Alerte conjointe FBI et Corée du Sud sur un gang ransomware ciblant des infrastructures critiques via des vulnérabilités firewall. Impact direct sur la sécurité des organisations.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/openai-releases-chatgpt-56-cyber-but-its-only-for-approved-users/">OpenAI releases ChatGPT 5.6 Cyber, but it's only for approved users</a> — BleepingComputer. Raison : Nouveau modèle IA majeur dédié à la cybersécurité offensive et défensive, impact direct sur les pratiques des RSSI et CTO.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/researchers-turn-usb-auto-install-into.html">Researchers Turn USB Auto-Install Into a Full SYSTEM Takeover on Windows 11</a> — The Hacker News. Raison : Vulnérabilité critique Windows PnP menant à un SYSTEM takeover sur Windows 11 à jour, avec vecteur RDP. Impact direct sur les postes Windows utilisés en entreprise.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html">Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks</a> — The Hacker News. Raison : Campagne ransomware majeure exploitant des failles critiques Fortinet et Schneider Electric, ciblant des infrastructures vitales. Impact direct sur les secteurs clés et les technologies utilisées en entreprise.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html">Hackers Breach Polish Power Plant Controls via Private Cellular Network and Shut Turbine</a> — The Hacker News. Raison : Incident cyber majeur sur un secteur critique (énergie) via un réseau privé cellulaire, avec impact opérationnel direct (turbine arrêtée).</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons.html">BdThemes Supply Chain Attack Poisons JSON to Create Rogue WordPress Admins</a> — The Hacker News. Raison : Supply chain attack sur un éditeur de plugins WordPress affectant directement les sites des entreprises. Compromission de la chaîne d'approvisionnement, création de comptes admin non autorisée. Impact large.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-high-severity-clamav-flaws-with-public-exploits/">Cisco warns of high-severity ClamAV flaws with public exploits</a> — BleepingComputer. Raison : Vulnérabilités Cisco ClamAV affectant Secure Endpoint Connector avec exploits publics. Impact direct sur un produit sécurité largement déployé en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/malicious-mcp-servers-can-split.html">Malicious MCP Servers Can Split Instructions to Make AI Coding Agents Exfiltrate Secrets</a> — The Hacker News. Raison : Technique d'exfiltration furtive via serveurs MCP malveillants exploitant le découpage d'instructions. Impact direct sur la sécurité des agents IA en entreprise.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Réduction du délai de réponse aux vulnérabilités</strong> : L'IA permet désormais d'analyser le code, de tracer des comportements anormaux et d'identifier des failles échappant aux outils classiques, avec un impact marqué sur la détection des zero-days et l'analyse de la composition des conteneurs. <a href="https://www.artificialintelligence-news.com/news/how-ai-is-changing-the-vulnerability-response-timeline/">AI News</a></li>
+</ul>
+
+<ul>
+<li><strong>Extraction des traces de raisonnement des LLM</strong> : Des chercheurs ont mis au point une méthode pour extraire les « reasoning traces » de Claude, GPT et Gemini ; les résultats suggèrent que certains modèles chinois pourraient être entraînés sur des modèles américains leaders. <a href="https://www.wired.com/story/a-new-trick-reveals-ai-models-inner-thoughts/">Wired</a></li>
+</ul>
+
+<ul>
+<li><strong>IA agentique dans la découverte médicamenteuse</strong> : Novo Nordisk étend son usage des outils IA d'AWS, incluant des agents IA pour l'identification de cibles et la conception de thérapies, dans le cadre d'un partenariat cloud stratégique. <a href="https://www.artificialintelligence-news.com/news/novo-nordisk-ai-drug-discovery-aws/">AI News</a></li>
+</ul>
+
+<ul>
+<li><strong>Petits modèles de logique formelle exécutables en local</strong> : WebAI publie TwIL-LM (1.7B et 3B paramètres), capables de traduire l'anglais en logique du premier ordre et tournant sur CPU ou 4 Go de VRAM, sous licence non commerciale. <a href="https://www.marktechpost.com/2026/08/10/webai-releases-twil-lm-a-1-7b-and-3b-formal-logic-model-family-for-autoformalization-on-local-hardware/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Impact de l'IA sur la recherche mathématique</strong> : Le médaillé Fields James Maynard témoigne d'une remise en question profonde de sa discipline, confrontée à une accélération sans précédent des méthodes de recherche sous l'effet de l'IA. <a href="https://www.theverge.com/ai-artificial-intelligence/977273/the-ai-takeover-of-mathematics-has-begun">The Verge</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.artificialintelligence-news.com/news/how-ai-is-changing-the-vulnerability-response-timeline/">How AI is changing the vulnerability response timeline</a> — AI News. Raison : Analyse de l'impact de l'IA sur le délai de réponse aux vulnérabilités, avec focus sur les zero-days et la composition des conteneurs, pertinent pour les experts.</li>
+<li><strong>3/5</strong> — <a href="https://www.theverge.com/ai-artificial-intelligence/977273/the-ai-takeover-of-mathematics-has-begun">The AI takeover of mathematics has begun</a> — The Verge — AI. Raison : Article sur l'impact de l'IA en mathématiques, intéressant pour la réflexion stratégique mais sans lien direct avec la cybersécurité ou le dev tooling.</li>
+<li><strong>3/5</strong> — <a href="https://www.wired.com/story/a-new-trick-reveals-ai-models-inner-thoughts/">A New Trick Reveals AI Models’ Inner Thoughts</a> — Wired — AI. Raison : Recherche sur l'extraction de traces de raisonnement de modèles IA. Intéressant pour la transparence des modèles, mais impact pratique immédiat incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://www.artificialintelligence-news.com/news/novo-nordisk-ai-drug-discovery-aws/">Novo Nordisk and AWS bring agentic AI into drug discovery</a> — AI News. Raison : Partenariat stratégique entre Novo Nordisk et AWS pour l'IA agentic en drug discovery. Intéressant pour tendance IA en entreprise, mais sans détail technique ou sécurité immédiat pour experts.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/10/webai-releases-twil-lm-a-1-7b-and-3b-formal-logic-model-family-for-autoformalization-on-local-hardware/">webAI Releases TwIL-LM: A 1.7B and 3B Formal-Logic Model Family for Autoformalization on Local Hardware</a> — MarkTechPost. Raison : Nouveau petit modèle de logique formelle, intéressant pour la recherche IA, mais licence non commerciale et benchmarks contestés limitent l'impact pratique immédiat.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Fuite de données chez le logisticien de Valve</strong> : La compromission de CEVA expose les adresses postales et numéros de commande des clients européens, facilitant des campagnes de phishing ciblées. Les données de paiement restent préservées. <a href="https://www.zdnet.fr/actualites/valve-alerte-ses-clients-europeens-apres-le-piratage-de-son-partenaire-logistique-ceva-499574.htm">ZDNet France</a></li>
+</ul>
+
+<ul>
+<li><strong>IA et régulation : transparence et concurrence</strong> : Anthropic déploie filigranes et métadonnées sur les contenus générés par Claude pour se conformer aux nouvelles obligations de l'AI Act européen. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/anthropic-va-marquer-les-contenus-generes-par-ses-modeles-claude-pour-se-conformer-a-la-loi-europeenne-sur-l-intelligence-artificielle_AV-202608110264.html">BFM Tech</a></li>
+<li><strong>Presse française contre les aperçus IA de Google</strong> : Un collectif de 300 quotidiens saisit l'Autorité de la concurrence, estimant que les résumés automatiques dans les résultats de recherche réduiront leur trafic de 33 à 38 %. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/les-resumes-par-ia-sur-google-pourraient-leur-faire-perdre-entre-33-et-38-de-trafic-sur-leurs-sites-les-organes-de-presse-francais-passent-a-l-offensive-et-saisissent-l-autorite-de-la-concurrence_AD-202608110272.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Meta sanctionnée pour destruction de preuves</strong> : Un juge californien reproche à Meta d'avoir laissé s'effacer des données dans un procès sur des publicités frauduleuses en cryptomonnaies, ce qui pourrait affaiblir sa défense face au milliardaire Andrew Forrest. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/des-publicites-frauduleuses-pour-promouvoir-de-faux-investissements-en-cryptomonnaies-meta-sanctionnee-pour-avoir-detruit-des-preuves-dans-une-affaire-contre-un-milliardaire-australien_AD-202608110203.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Ouverture forcée du Play Store Android</strong> : Google distribue désormais des magasins d'applications tiers directement sur sa plateforme, une concession aux pressions concurrentielles qui élargit les surfaces d'exposition à des stores non contrôlés par l'éditeur. <a href="https://www.bfmtv.com/tech/android/le-play-store-d-android-distribue-desormais-les-magasins-d-applications-alternatifs_AV-202608110222.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Meta publie un modèle IA en open source</strong> : Muse Glimmer, 30 milliards de paramètres sous licence permissive, marque le retour de Meta aux poids ouverts après l'échec de Llama 4. Exécutable en local sur une machine puissante. <a href="https://next.ink/250997/meta-revient-aux-poids-ouverts-avec-muse-glimmer-un-modele-ia-local/">Next.ink</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.zdnet.fr/actualites/valve-alerte-ses-clients-europeens-apres-le-piratage-de-son-partenaire-logistique-ceva-499574.htm#xtor=RSS-1">Valve alerte ses clients européens après le piratage de son partenaire logistique CEVA</a> — ZDNet France. Raison : Incident de sécurité chez un transporteur impactant la chaîne d'approvisionnement. Expose des clients à du phishing ciblé, pertinent pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://next.ink/250997/meta-revient-aux-poids-ouverts-avec-muse-glimmer-un-modele-ia-local/">Meta revient aux poids ouverts avec Muse Glimmer, un modèle IA local</a> — Next.ink. Raison : Nouveau modèle IA local open source de Meta, 30B paramètres, potentiel impact sur pratiques entreprise. À lire pour détails techniques et licence.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/intelligence-artificielle/les-resumes-par-ia-sur-google-pourraient-leur-faire-perdre-entre-33-et-38-de-trafic-sur-leurs-sites-les-organes-de-presse-francais-passent-a-l-offensive-et-saisissent-l-autorite-de-la-concurrence_AD-202608110272.html">Les résumés par IA sur Google pourraient leur faire perdre "entre 33% et 38%" de trafic sur leurs sites: les organes de presse français passent à l'offensive et saisissent l'Autorité de la concurrence</a> — BFM Tech. Raison : Impact potentiel sur le trafic web et stratégie des éditeurs, mais sans détail technique ni lien direct avec la cybersécurité ou l'IA en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/intelligence-artificielle/anthropic-va-marquer-les-contenus-generes-par-ses-modeles-claude-pour-se-conformer-a-la-loi-europeenne-sur-l-intelligence-artificielle_AV-202608110264.html">Anthropic va marquer les contenus générés par ses modèles Claude pour se conformer à la loi européenne sur l'intelligence artificielle</a> — BFM Tech. Raison : Annonce de conformité réglementaire IA, utile pour la gouvernance mais sans détail technique ou impact immédiat sur les pratiques.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/android/le-play-store-d-android-distribue-desormais-les-magasins-d-applications-alternatifs_AV-202608110222.html">Le Play store d'Android distribue désormais les magasins d'applications alternatifs</a> — BFM Tech. Raison : Annonce stratégique de Google ouvrant le Play store aux magasins alternatifs. Impact potentiel sur la distribution d'apps et la sécurité, mais sans détail technique ou vulnérabilité immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/des-publicites-frauduleuses-pour-promouvoir-de-faux-investissements-en-cryptomonnaies-meta-sanctionnee-pour-avoir-detruit-des-preuves-dans-une-affaire-contre-un-milliardaire-australien_AD-202608110203.html">Des publicités frauduleuses pour promouvoir de faux investissements en cryptomonnaies: Meta sanctionnée pour avoir détruit des preuves dans une affaire contre un milliardaire australien</a> — BFM Tech. Raison : Article sur une sanction pour destruction de preuves, pertinent pour gouvernance cyber et conformité, mais sans impact technique direct pour l'audience.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260811-0611</guid>
-      <pubDate>Tue, 11 Aug 2026 06:11:49 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260811-1155</guid>
+      <pubDate>Tue, 11 Aug 2026 11:55:25 +0000</pubDate>
     </item>
   </channel>
 </rss>
