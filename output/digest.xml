@@ -8,340 +8,228 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 12 Aug 2026 06:39:45 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 12:04:13 +0000</lastBuildDate>
     <item>
-      <title>Digest — 12/08 06h</title>
+      <title>Digest — 12/08 12h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA &amp; Tech — Médias internationaux
+      <description>## Cyber — Stratégie &amp; analyse
 
-- **Sécurisation des sessions Chrome contre les détournements de compte** : Chrome déploie des cookies de session liés au matériel (Device Bound Session Credentials) pour contrer le vol de tokens, une technique de plus en plus utilisée pour contourner l'authentification multifacteur. [Ars Technica](https://arstechnica.com/security/2026/08/chrome-adopts-what-may-be-the-best-protection-yet-against-account-takeovers/)
+- **Extension Chrome malveillante déguisée en CCleaner** : Une campagne diffuse une fausse version de CCleaner qui installe l'extension GhostDesk dans Chrome, transformant le navigateur en outil de vol d'identifiants et de surveillance persistante. Le code malveillant opère en plusieurs étapes sur Windows. [CSO Online](https://www.csoonline.com/article/4208565/fake-ccleaner-downloads-turn-chrome-into-a-credential-stealing-surveillance-tool.html)
 
-- **Attaque par faux point d'accès Wi-Fi suspectée sur un vol Delta** : Des participants à la conférence DEF CON sont soupçonnés d'avoir déployé un portail captif malveillant en vol pour intercepter des identifiants. Le FBI d'Atlanta confirme une enquête en cours, sans arrestation à ce stade. [Ars Technica](https://arstechnica.com/information-technology/2026/08/def-con-crowd-suspected-in-fake-hotspot-attack-on-delta-flight/)
+- **Injection de prompt comme mécanisme de défense** : Des chercheurs de Tracebit ont démontré qu'insérer des instructions contradictoires (prompt injections) aux côtés de secrets stockés sur AWS suffit souvent à neutraliser les agents IA de piratage automatisés. [Schneier on Security](https://www.schneier.com/blog/archives/2026/08/prompt-injections-for-defense.html)
 
-- **Nouvelles métriques pour l'effacement d'objets en vidéo** : Xiaomi MiLM Plus propose RC-S et RC-T, deux métriques alignées sur la perception humaine, pour corriger le défaut structurel des indicateurs classiques (PSNR, SSIM) qui classent mal les résultats des modèles à diffusion dans les tâches d'effacement. Un benchmark vidéo réel accompagne la publication. [MarkTechPost](https://www.marktechpost.com/2026/08/11/xiaomis-milm-plus-releases-prove-perception-aligned-object-removal-metrics-rc-s-and-rc-t-with-a-real-world-video-benchmark/)
+- **Nouvelle surface d'attaque : le harnais d'orchestration IA** : L'attention se déplace du modèle d'IA lui-même vers le "harnais" logiciel qui l'intègre aux systèmes. Les démonstrations d'exploitation ciblent désormais les connexions, permissions et flux de données gérés par cette couche intermédiaire, devenue le maillon faible. [CSO Online](https://www.csoonline.com/article/4208236/the-ai-harness-is-the-new-attack-surface.html)
 
-**Évaluation du scoring**
+- **Freins à l'adoption de l'IA dans les SOC** : Malgré les investissements, quatre lacunes ralentissent la traduction de l'IA en gains opérationnels dans les centres de sécurité : qualité et intégration des données, manque de compétences pour opérationnaliser les modèles, et absence de métriques claires pour mesurer l'efficacité réelle. [CSO Online](https://www.csoonline.com/article/4208086/4-gaps-slowing-ai-in-enterprise-socs.html)
 
-- **4/5** — [DEF CON crowd suspected in fake-hotspot attack on Delta flight](https://arstechnica.com/information-technology/2026/08/def-con-crowd-suspected-in-fake-hotspot-attack-on-delta-flight/) — Ars Technica — Tech Lab. Raison : Incident cyber en milieu aérien, susceptible d'affecter voyageurs d'affaires, avec implication FBI. Analyse à survoler pour détails techniques et réponses.
-- **4/5** — [Chrome adopts what may be the best protection yet against account takeovers](https://arstechnica.com/security/2026/08/chrome-adopts-what-may-be-the-best-protection-yet-against-account-takeovers/) — Ars Technica — Tech Lab. Raison : Protection prometteuse contre le vol de session, technique de défense innovante par Chrome. Pertinent pour RSSI et architectes SI confrontés aux attaques de type ATO.
-- **3/5** — [Xiaomi’s MiLM Plus Releases PROVE: Perception-Aligned Object Removal Metrics RC-S and RC-T With a Real-World Video Benchmark](https://www.marktechpost.com/2026/08/11/xiaomis-milm-plus-releases-prove-perception-aligned-object-removal-metrics-rc-s-and-rc-t-with-a-real-world-video-benchmark/) — MarkTechPost. Raison : Nouveau benchmark et métriques pour l'effacement d'objets. Intéressant pour l'évaluation de modèles génératifs, mais hors périmètre cybersécurité/dev tooling prioritaire.
-
-## IA — Recherche
-
-- **Équité cachée dans les recommandations LLM** : Le benchmark FairGap révèle que les audits d'équité standards passent à côté de biais internes non visibles dans les sorties finales des modèles de recommandation. [Fair on the Surface?](https://arxiv.org/abs/2608.08284)
-
-- **Benchmark droits humains pour LLM** : Une méthodologie pilote est proposée pour évaluer la capacité des LLM à raisonner correctement sur le droit international des droits humains, domaine où ils interviennent de plus en plus dans des décisions juridiques. [Toward Human Rights Benchmarking for LLMs](https://arxiv.org/abs/2608.10268)
-
-- **Raisonnement moral hiérarchique** : CORDA est un benchmark qui teste non pas si un LLM choisit la "bonne" réponse morale, mais comment il hiérarchise les principes quand ceux-ci entrent en conflit. [CORDA](https://arxiv.org/abs/2608.08061)
-
-- **Sécurité multilingue et circuits de refus** : Une analyse mécanistique sur un modèle multilingue (sarvam) montre que la décision de refuser une requête dangereuse est prise en amont dans le modèle, mais que son expression échoue dans les langues peu dotées, créant un écart de sécurité. [Decided Upstream, Written Late](https://arxiv.org/abs/2608.08032)
-
-- **Agents LLM et mémoire long terme** : SodaMem propose une mémoire sous forme de graphe temporel pour les agents LLM, visant à maintenir une représentation à jour de l'état courant plutôt qu'un simple journal de conversations passé. [SodaMem](https://arxiv.org/abs/2608.08055)
-
-- **Raisonnement spatial pour la sécurité** : Le framework Theory of Space évalue la compréhension spatiale des VLMs en observabilité partielle, un prérequis critique pour leur déploiement dans des scénarios de sécurité. [Explore, Map, Remember, Decide](https://arxiv.org/abs/2608.08077)
-
-- **Optimisation du calcul au test** : Thought-Level Beam Search alloue dynamiquement le budget de calcul au niveau des "pensées" plutôt que des tokens, réduisant le gaspillage dans les modèles de raisonnement à grande échelle. [Thought-Level Beam Search](https://arxiv.org/abs/2608.08020)
-
-- **Raisonnement latent et efficacité** : Relit explore un cadre de raisonnement récursif dans l'espace latent pour éviter le surcoût computationnel de l'externalisation complète de la chaîne de pensée en tokens. [Think Deep, Speak Once](https://arxiv.org/abs/2608.08113)
-
-- **RAG pour documentation d'entreprise** : VDGR-RAG combine vecteurs, annuaires, graphes et réflexion pour le question-réponse unifié sur de la documentation hiérarchique complexe, testé dans les télécoms. [VDGR-RAG](https://arxiv.org/abs/2608.07994)
-
-- **Agents locaux et préservation de la vie privée** : SkillSmith construit automatiquement des compétences pour agents déployés localement, répondant au risque d'exposition des données privées inhérent aux architectures cloud. [SkillSmith](https://arxiv.org/abs/2608.08037)
-
-- **Simulation multi-agents en milieu urbain** : Lingjing fournit un bac à sable pour coordonner drones, robots terrestres et véhicules autonomes dans des villes ouvertes et dynamiques. [Lingjing](https://arxiv.org/abs/2608.08045)
-
-- **Formation cybersécurité par agents IA** : CyberAGENTS utilise des agents d'IA générative pour délivrer des expériences d'apprentissage gamifiées et adaptatives en cybersécurité, posant la question du contrôle de ces agents autonomes. [CyberAGENTS](https://arxiv.org/abs/2608.07965)
-
-- **Responsabilité légale des agents IA** : L'article examine les zones grises de la responsabilité juridique lorsqu'un agent IA contourne ses mesures de confinement et commet des actes non autorisés. [Legal Responsibilities Using Autonomous Agents](https://arxiv.org/abs/2608.08022)
-
-- **Harmonisation de données médicales** : L'architecture H2 combine un lac de données sémantique hybride avec un système d'annotation par LLM vérifié par un humain pour gérer l'hétérogénéité des données médicales. [H2](https://arxiv.org/abs/2608.08056)
+- **Dette technique de très longue traîne** : Une vulnérabilité permettant l'exécution de code arbitraire a été découverte en 2021 dans un composant logiciel vieux de 54 ans, sans correctif disponible ni envisagé. Ce cas illustre le risque persistant posé par du code ancien, non maintenu mais toujours présent dans les fondations de l'informatique moderne. [CSO Online](https://www.csoonline.com/article/570815/old-software-bugs-that-took-way-too-long-to-squash.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [Fair on the Surface? Benchmarking Hidden-Output Fairness Gaps in LLM Recommenders](https://arxiv.org/abs/2608.08284) — arXiv cs.AI. Raison : Benchmark méthodologique sur un angle non exploré de la partialité cachée dans les recommandations LLM, pertinent pour auditer l'IA en entreprise.
-- **4/5** — [Toward Human Rights Benchmarking for LLMs: A Pilot Methodology](https://arxiv.org/abs/2608.10268) — arXiv cs.LG. Raison : Premier benchmark d'évaluation des LLMs sur le droit des droits humains, méthodologie validée par experts. Pertinent pour RSSI/CTO en veille gouvernance IA et conformité.
-- **3/5** — [CyberAGENTS: Structured Autonomy for Agentic Gamified Learning in Cybersecurity](https://arxiv.org/abs/2608.07965) — arXiv cs.AI. Raison : Papier de recherche sur l'utilisation d'agents IA génératifs pour l'apprentissage gamifié en cybersécurité. Intéressant mais implication pratique incertaine.
-- **3/5** — [VDGR-RAG: Vectors, Directories, Graphs, and Reflection Are All You Need for Unified Reasoning over Hierarchical Enterprise Knowledge](https://arxiv.org/abs/2608.07994) — arXiv cs.AI. Raison : Papier de recherche sur une méthode RAG unifiée pour connaissances d'entreprise hiérarchiques. Intéressant mais impact pratique incertain pour experts.
-- **3/5** — [Thought-Level Beam Search for Reasoning](https://arxiv.org/abs/2608.08020) — arXiv cs.AI. Raison : Papier de recherche sur l'optimisation du calcul au test-time pour les modèles de raisonnement. Intéressant mais sans lien direct avec la cybersécurité ou les outils concrets du public cible.
-- **3/5** — [Legal Responsibilities Using Autonomous Agents For Artificial Intelligence](https://arxiv.org/abs/2608.08022) — arXiv cs.AI. Raison : Papier de recherche sur responsabilité légale des agents IA. Pertinent pour gouvernance et régulation, mais implications pratiques encore incertaines.
-- **3/5** — [The Authority Expectancy Effect in Multi-User Conflict](https://arxiv.org/abs/2608.08026) — arXiv cs.AI. Raison : Recherche sur l'interaction entre signaux d'autorité sociale et priorisation dans les LLMs. Intéressant pour experts IA mais impact pratique incertain.
-- **3/5** — [Decided Upstream, Written Late: Locating and Pricing the Cross-Lingual Refusal Circuit of a Multilingual MoE](https://arxiv.org/abs/2608.08032) — arXiv cs.AI. Raison : Recherche en sécurité IA sur le refus multilingue dans un modèle MoE, intéressante pour comprendre les biais, mais impact pratique immédiat incertain.
-- **3/5** — [SkillSmith: Enhancing Locally Deployed Agents via Automatic Skill Construction and Evolution](https://arxiv.org/abs/2608.08037) — arXiv cs.AI. Raison : Papier de recherche sur la construction automatique de compétences pour agents locaux. Intéressant pour l'IA en entreprise, mais l'impact pratique reste incertain.
-- **3/5** — [Lingjing: A Simulation Testbed for Multi-Agent Embodied Tasks in Open-Ended Cities](https://arxiv.org/abs/2608.08045) — arXiv cs.AI. Raison : Papier de recherche sur un simulateur pour tâches multi-agents en environnements urbains. Intéressant pour l'IA embarquée mais sans lien direct avec la cybersécurité ou les priorités du public cible.
-- **3/5** — [JustLLMGRPO: Radiographic Control for Chest X-Ray Generation](https://arxiv.org/abs/2608.08046) — arXiv cs.AI. Raison : Papier de recherche IA sur la génération d'images médicales. Intéressant pour experts IA mais hors périmètre cybersécurité et sans impact pratique immédiat.
-- **3/5** — [SodaMem: Evidence-Grounded Temporal Graph Memory for LLM Agents](https://arxiv.org/abs/2608.08055) — arXiv cs.AI. Raison : Papier de recherche sur mémoire temporelle pour agents LLM, intéressant mais sans lien direct avec cybersécurité ou impact pratique immédiat pour le public cible.
-- **3/5** — [H2: A Dual Hybrid Semantic Data Lake Architecture for Medical Data Harmonization with Human-In-the-Loop verified, LLM Driven Metadata Annotation System](https://arxiv.org/abs/2608.08056) — arXiv cs.AI. Raison : Article de recherche sur harmonisation de données médicales par LLM, sans lien direct cybersécurité ou IT entreprise. Intéressant mais non prioritaire pour le public cible.
-- **3/5** — [CORDA: A Benchmark for Hierarchical Harm-Centric Moral Reasoning in Large Language Models](https://arxiv.org/abs/2608.08061) — arXiv cs.AI. Raison : Benchmark de raisonnement moral hiérarchique pour LLMs. Intéressant pour la recherche en IA mais sans application immédiate pour la cybersécurité ou le développement.
-- **3/5** — [Explore, Map, Remember, Decide: Are Embodied VLMs Ready for Safety-Critical Scenarios?](https://arxiv.org/abs/2608.08077) — arXiv cs.AI. Raison : Papier de recherche évaluant la compréhension spatiale et la mémoire des VLMs en environnement partiellement observable. Intéressant pour la sécurité IA mais impact pratique incertain.
-- **3/5** — [PATH: Next-Interval Prediction via Autoregressive Tree Hierarchy on Tabular Data](https://arxiv.org/abs/2608.08078) — arXiv cs.AI. Raison : Papier de recherche sur la prédiction d'intervalles pour données tabulaires, intéressant mais sans lien évident avec la cybersécurité ou les sujets ciblés.
-- **3/5** — [Generative Models: Principles, Architectures, and Applications](https://arxiv.org/abs/2608.08101) — arXiv cs.AI. Raison : Article de recherche général sur les modèles génératifs, sans lien direct avec la cybersécurité ou les applications concrètes pour les experts ciblés.
-- **3/5** — [Think Deep, Speak Once: Relit, A Recursive Latent Implicit Transformer Framework](https://arxiv.org/abs/2608.08113) — arXiv cs.AI. Raison : Papier de recherche sur une méthode de raisonnement latent pour LLMs, intéressant mais sans impact immédiat sur les pratiques cyber ou dev des experts.
-- **3/5** — [Neurosymbolic Discovery of Algebraic Graph Constructions](https://arxiv.org/abs/2608.08118) — arXiv cs.AI. Raison : Recherche théorique en IA symbolique pour la découverte de constructions de graphes. Aucun lien direct avec la cybersécurité, outils ou stratégie IA pour experts ciblés. Intérêt académique limité.
-- **3/5** — [Constraining ontology mappings using metaphysical choices](https://arxiv.org/abs/2608.08122) — arXiv cs.AI. Raison : Article de recherche sur la validation de mappings sémantiques via des ontologies. Intérêt potentiel pour l'IA en entreprise mais sans application cyber ni impact direct démontré.
-
-## Cyber — Stratégie &amp; analyse
-
-- **Patch Tuesday massif chez Microsoft** : Le dernier cycle de correctifs corrige près de 400 vulnérabilités, dont une faille déjà exploitée activement et deux autres divulguées publiquement avant la publication des mises à jour. [Krebs on Security](https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/)
-
-- **Zero-day critique dans Metabase** : Une injection SQL (CVE-2026-72898) permet à un attaquant d'accéder à l'intégralité des données de l'instance, y compris identifiants, tokens et clés API. Les clients doivent considérer ces secrets comme compromis et procéder à une rotation immédiate. [CSO Online](https://www.csoonline.com/article/4208307/metabase-sqli-exploit-grants-attackers-total-access.html)
-
-- **Zoom : exécution de code sans clic en réunion** : Deux des quatre failles corrigées permettent à un participant malveillant d'exécuter du code à distance sur les postes des autres participants, sans aucune interaction utilisateur. Tous les clients Zoom sont concernés. [CSO Online](https://www.csoonline.com/article/4208223/zoom-zero-click-rce-flaws-allow-attackers-to-compromise-meeting-participants.html)
-
-- **Ransomware Gunra cible les appliances Fortinet** : Le groupe exploite des failles anciennes sur pare-feu et VPN Fortinet pour contourner l'authentification multifacteur et déployer un ransomware basé sur du code Conti ayant fuité. Les infrastructures critiques sont particulièrement visées. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/gunra-ransomware-gang-fortinet-flaws-bypasses-mfa)
-
-**Évaluation du scoring**
-
-- **5/5** — [Metabase SQLi exploit grants attackers total access](https://www.csoonline.com/article/4208307/metabase-sqli-exploit-grants-attackers-total-access.html) — CSO Online. Raison : Zero-day SQLi critique (score 10) sur Metabase, plateforme BI largement déployée. Impact direct : exposition credentials, tokens, données sensibles. Information immédiatement exploitable pour la défense.
-- **5/5** — [Zoom zero-click RCE flaws allow attackers to compromise meeting participants](https://www.csoonline.com/article/4208223/zoom-zero-click-rce-flaws-allow-attackers-to-compromise-meeting-participants.html) — CSO Online. Raison : Vulnérabilités zero-click RCE critiques sur Zoom, impact direct sur tous les participants, patch disponible. Information essentielle pour RSSI et CTO.
-- **5/5** — [Microsoft Plugs Nearly 400 Security Holes](https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/) — Krebs on Security. Raison : Mise à jour massive de sécurité avec près de 400 correctifs, incluant un 0-day activement exploité, impact direct sur les environnements Windows.
-- **5/5** — [Gunra Ransomware Gang Exploits Fortinet Flaws, Bypasses MFA](https://www.darkreading.com/cyberattacks-data-breaches/gunra-ransomware-gang-fortinet-flaws-bypasses-mfa) — Dark Reading. Raison : Campagne ransomware exploitant des failles Fortinet connues avec contournement MFA, ciblant des infrastructures critiques. Impact direct sur les technologies en place.
+- **5/5** — [Fake CCleaner downloads turn Chrome into a credential-stealing surveillance tool](https://www.csoonline.com/article/4208565/fake-ccleaner-downloads-turn-chrome-into-a-credential-stealing-surveillance-tool.html) — CSO Online. Raison : Campagne active de malware ciblant Chrome via un faux CCleaner, avec vol de credentials et surveillance. Impact direct sur les postes de travail Windows en entreprise.
+- **4/5** — [Prompt Injections for Defense](https://www.schneier.com/blog/archives/2026/08/prompt-injections-for-defense.html) — Schneier on Security. Raison : Méthode défensive originale contre agents IA malveillants, utilisant prompt injection comme leurre. Résultat surprenant et applicable, mérite analyse.
+- **4/5** — [4 gaps slowing AI in enterprise SOCs](https://www.csoonline.com/article/4208086/4-gaps-slowing-ai-in-enterprise-socs.html) — CSO Online. Raison : Analyse des freins à l'adoption de l'IA dans les SOC, sujet stratégique pour RSSI et CTO. Promet un retour d'expérience concret sur les écarts opérationnels.
+- **4/5** — [The AI harness is the new attack surface](https://www.csoonline.com/article/4208236/the-ai-harness-is-the-new-attack-surface.html) — CSO Online. Raison : Article de CSO Online sur l'évolution de la surface d'attaque des agents IA, au-delà du modèle vers le code. Pertinent pour RSSI et CTO.
+- **3/5** — [17 old software bugs that took way too long to squash](https://www.csoonline.com/article/570815/old-software-bugs-that-took-way-too-long-to-squash.html) — CSO Online. Raison : Article listant des bugs anciens, dont un de 1967 sans correctif. Intérêt historique mais peu d'impact pratique immédiat pour des experts.
 
 ## Cyber — Menaces &amp; vulnérabilités
 
-- **Correctif massif Microsoft (août 2026)** : 400 vulnérabilités corrigées, dont 3 zero-days (1 exploitée activement, 2 divulguées publiquement). Mise à jour prioritaire. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/)
-
-- **Windows 10 : correctifs de sécurité étendus** : KB5120249 déployé pour les versions 22H2 et 21H2 afin de couvrir des vulnérabilités et bugs dans le cadre des ESU. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/)
-
-- **Vulnérabilité Cisco ASA/FTD exploitée** : faille de déni de service (CVE non précisée) dans les VPN Secure Firewall activement ciblée pour planter à distance les appliances. Correctif attendu, mitigation recommandée. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/)
-
-- **Faille critique Zoom dans les annotations** : un participant pouvait prendre le contrôle du poste du présentateur, et inversement, via l'outil d'annotation en partage d'écran. Aucune interaction victime requise. [The Hacker News](https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-meeting.html)
-
-- **Ransomware DeadLock s'appuie sur la blockchain** : infrastructure décentralisée via des services blockchain pour héberger communications et fuites de données, compliquant les saisies judiciaires et interceptions. [BleepingComputer](https://www.bleepingcomputer.com/news/security/deadlock-ransomware-uses-blockchain-to-resist-infrastructure-takedown/)
-
-- **Hôpital américain : fuite de 6 To et détournement Facebook** : un groupe ransomware exfiltre des données ultra-sensibles (santé mentale, IVG, agressions sexuelles) et prend le contrôle de la page Facebook de l'établissement pour amplifier la pression. [The Record](https://therecord.media/ransomware-group-hijacks-hospital-facebook-amid-cyberattack-response)
-
-- **Campagne d'espionnage russe (Sandworm/UAC-0145) ciblant l'IT ukrainien** : faux entretiens d'embauche utilisés comme vecteur pour faire installer un VPN malveillant capable d'exécuter des commandes à distance. Attribution CERT-UA. [The Hacker News](https://thehackernews.com/2026/08/sandworm-linked-uac-0145-uses-fake-job.html)
-
-- **Botnet Android Kimwolf v7 sophistique ses DDoS** : nouvelle version utilisant HTTP/2 pour rendre le trafic d'attaque indistinguable d'une navigation légitime, améliorant résilience et furtivité. [The Hacker News](https://thehackernews.com/2026/08/kimwolf-v7-android-botnet-makes-http2.html)
-
-- **Attaque Wi-Fi deauthentication en vol commercial** : réseau Wi-Fi non autorisé détecté sur un vol transportant des participants à la DEF CON, faisant suspecter une tentative de désauthentification ciblée. Enquête Delta en cours. [BleepingComputer](https://www.bleepingcomputer.com/news/security/delta-probes-wi-fi-deauth-attack-on-flight-carrying-def-con-attendees/)
-
-- **Chrome réduit drastiquement les notifications abusives Android** : 7 milliards de notifications indésirables bloquées par jour au T1 2026 via les systèmes anti-abus intégrés au navigateur. [BleepingComputer](https://www.bleepingcomputer.com/news/security/google-says-chrome-cuts-7-billion-unwanted-android-notifications-a-day-to-fight-abuse/)
+- **Adobe : trois failles critiques CVSS 10.0 dans ColdFusion et Campaign Classic** : Adobe corrige plusieurs vulnérabilités critiques dans ColdFusion, Commerce et Campaign Classic, dont CVE-2026-48362, permettant exécution de code arbitraire et escalade de privilèges. [The Hacker News](https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html)
+- **SAP Commerce Cloud : exécution de code sans authentification (CVSS 10.0)** : CVE-2026-58231 dans le Data Hub Adapter permet à un attaquant non authentifié d'exécuter du code arbitraire ; le correctif est disponible. [The Hacker News](https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html)
+- **VMware vCenter : exploitation active d'une faille critique de traversée de répertoire** : CVE-2026-59310 (CVSS 9.8) est activement exploitée par des acteurs malveillants pour obtenir un accès distant persistant aux serveurs vCenter. [The Hacker News](https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html)
+- **Cisco ASA/FTD : déni de service à distance exploité dans la nature** : CVE-2026-20349 (CVSS 8.6), une faille de gestion d'erreur insuffisante, est activement exploitée pour provoquer un DoS sur les équipements ASA et FTD. [The Hacker News](https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html)
+- **Microsoft Defender : preuve de concept « ShieldBreak » pour un contournement de correctif** : Un chercheur publie un PoC nommé ShieldBreak, exploitant une vulnérabilité zero-day dans Microsoft Defender pour Windows permettant un accès SYSTEM via un contournement de correctif existant. [The Hacker News](https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html)
+- **Supply chain PyPI : paquets LiteLLM malveillants liés au piratage de Trivy** : Deux versions malveillantes de LiteLLM, restées 40 minutes sur PyPI, dérobaient secrets cloud, SSH, Kubernetes et bases de données ; plus de 2100 organisations potentiellement exposées suite au compromis de Trivy. [The Hacker News](https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html)
+- **Signal : vérification automatique des clés contre les attaques MITM** : Signal déploie l'Automatic Key Verification, renforçant la détection d'interception des communications chiffrées sans action manuelle de l'utilisateur. [BleepingComputer](https://www.bleepingcomputer.com/news/security/signal-adds-new-security-feature-to-thwart-man-in-the-middle-attacks/)
 
 **Évaluation du scoring**
 
-- **5/5** — [DeadLock ransomware uses blockchain to resist infrastructure takedown](https://www.bleepingcomputer.com/news/security/deadlock-ransomware-uses-blockchain-to-resist-infrastructure-takedown/) — BleepingComputer. Raison : Campagne ransomware majeure avec infrastructure novatrice basée sur blockchain, difficile à démanteler. Impact direct sur stratégie de défense et surveillance des RSSI.
-- **5/5** — [Cisco warns of ASA and FTD VPN flaw exploited to crash devices](https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/) — BleepingComputer. Raison : CVE critique activement exploitée sur des équipements Cisco ASA/FTD largement déployés en entreprise, impact direct sur la disponibilité des VPN.
-- **5/5** — [Ransomware group hijacks hospital system’s Facebook page amid ongoing cyberattack fallout](https://therecord.media/ransomware-group-hijacks-hospital-facebook-amid-cyberattack-response) — The Record. Raison : Incident ransomware majeur touchant un hôpital avec exfiltration de données ultrasensibles (santé, violences sexuelles). Impact critique sur secteur critique et vie privée.
-- **5/5** — [Zoom Annotation Flaws Could Let a Meeting Participant Hijack Another Attendee's Client](https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-meeting.html) — The Hacker News. Raison : Vulnérabilité critique 0-day sur Zoom, sans interaction utilisateur, permettant prise de contrôle totale du client. Impact massif et direct pour les entreprises.
-- **5/5** — [Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days](https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/) — BleepingComputer. Raison : Patch Tuesday massif avec 400 failles dont 3 zero-days actifs. Impact direct sur la sécurité des SI, nécessite analyse et priorisation immédiate.
-- **4/5** — [Kimwolf v7 Android Botnet Makes HTTP/2 DDoS Traffic Look Like Legitimate Browsing](https://thehackernews.com/2026/08/kimwolf-v7-android-botnet-makes-http2.html) — The Hacker News. Raison : Nouvelle version d'un botnet Android/IoT avec HTTP/2 pour contourner la détection. Technique avancée, pertinente pour RSSI et architectes SI.
-- **4/5** — [Sandworm-Linked UAC-0145 Uses Fake Job Interviews to Push VPN That Can Run Commands](https://thehackernews.com/2026/08/sandworm-linked-uac-0145-uses-fake-job.html) — The Hacker News. Raison : Campagne cyber étatique ciblant IT avec technique sociale crédible. Contexte Ukraine/Sandworm justifie analyse, mais pas urgence critique immédiate.
-- **4/5** — [Delta probes Wi-Fi deauth attack on flight carrying DEF CON attendees](https://www.bleepingcomputer.com/news/security/delta-probes-wi-fi-deauth-attack-on-flight-carrying-def-con-attendees/) — BleepingComputer. Raison : Incident réel de déauthentification Wi-Fi sur un vol ciblant des experts DEF CON ; enquête en cours, potentiel impact sur sécurité aérienne et attaque pratique.
-- **4/5** — [Microsoft releases Windows 10 KB5120249 extended security update](https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/) — BleepingComputer. Raison : Mise à jour de sécurité étendue pour Windows 10 22H2/21H2. Pertinent pour RSSI/CTO car corrige des vulnérabilités sur un OS encore utilisé en entreprise.
-- **3/5** — [ISC Stormcast For Wednesday, August 12th, 2026 https://isc.sans.edu/podcastdetail/10048, (Wed, Aug 12th)](https://isc.sans.edu/diary/rss/33238) — SANS ISC. Raison : Publication quotidienne SANS ISC, podcast de veille. Peut contenir une analyse d'actualité ou un retour d'expérience, mais sujet et contenu précis inconnus.
-- **3/5** — [Google says Chrome cuts 7 billion unwanted Android notifications a day to fight abuse](https://www.bleepingcomputer.com/news/security/google-says-chrome-cuts-7-billion-unwanted-android-notifications-a-day-to-fight-abuse/) — BleepingComputer. Raison : Chiffre impressionnant mais peu de détails techniques sur le mécanisme anti-abuse. Intéressant pour la tendance, pas critique pour un expert.
+- **5/5** — [Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws](https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html) — The Hacker News. Raison : CVE critiques avec score CVSS 10.0 sur ColdFusion et Campaign Classic, impact direct sur les infrastructures, nécessite patch immédiat.
+- **5/5** — [Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access](https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html) — The Hacker News. Raison : CVE critique (9.8) activement exploitée sur VMware vCenter, composant critique en entreprise. Impact direct et immédiat pour RSSI et architectes SI.
+- **5/5** — [Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations](https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html) — The Hacker News. Raison : Incident majeur de supply chain sur PyPI avec vol de secrets, impact potentiel sur plus de 2100 organisations. Critique pour RSSI et CTO.
+- **5/5** — [SAP Commerce Cloud Flaw Could Let Unauthenticated Attackers Execute Arbitrary Code](https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html) — The Hacker News. Raison : CVE critique (CVSS 10.0) sur SAP Commerce Cloud, impact direct sur une plateforme utilisée en entreprise, nécessite patch immédiat.
+- **5/5** — [ShieldBreak Zero-Day PoC Claims Microsoft Defender Patch Bypass With SYSTEM Access](https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html) — The Hacker News. Raison : Zero-day PoC pour contournement de Microsoft Defender avec élévation de privilèges SYSTEM. Impact direct sur une techno critique en entreprise.
+- **5/5** — [Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS](https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html) — The Hacker News. Raison : CVE-2026-20349 est une vulnérabilité critique (CVSS 8.6) exploitée dans la nature, impactant directement les pare-feu Cisco ASA/FTD, équipements critiques en entreprise.
+- **4/5** — [Signal adds new security feature to thwart man-in-the-middle attacks](https://www.bleepingcomputer.com/news/security/signal-adds-new-security-feature-to-thwart-man-in-the-middle-attacks/) — BleepingComputer. Raison : Nouvelle fonctionnalité de sécurité pour Signal, outil de messagerie utilisé en entreprise. Pertinent pour RSSI et CTO, mais pas critique immédiat.
 
-## IA — Labos &amp; éditeurs
+## Actualité tech FR
 
-- **OpenAI : modèles de cyber défense sur AWS Bedrock** : Daybreak Red et Daybreak Blue, deux modèles spécialisés d'OpenAI pour la cyber défense (offensif et défensif), sont désormais disponibles via Amazon Bedrock pour les clients éligibles, avec une isolation forte assurée par un accès opérateur bloqué au niveau matériel. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/accelerate-cyber-defense-with-openai-and-aws-daybreak-red-daybreak-blue-now-available-to-eligible-customers-on-amazon-bedrock/)
+- **Ingérence numérique iranienne** : Un réseau de faux comptes X piloté depuis l'Iran a été détecté par les autorités françaises, visant à amplifier les tensions politiques internes. [Journal du Net](https://www.journaldunet.com/business/action-publique/1553647-ingerence-numerique-iranienne-des-faux-comptes-x-pilotes-depuis-l-iran-pour-amplifier-les-fractures-politiques-francaises/)
+
+- **Fuite de données chez Bloctel** : La plateforme anti-démarchage, fermée le 11 août, a subi une fuite exposant jusqu'à 3 millions de numéros de téléphone inscrits. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/jusqu-a-3-millions-de-numeros-concernes-fermee-le-11-aout-la-plateforme-bloctel-qui-luttait-contre-les-appels-indesirables-victime-d-une-fuite-de-donnees_AV-202608120262.html)
+
+- **Watermarking obligatoire dans l'IA générative** : Anthropic ajoute des tatouages numériques aux textes et images produits par Claude, une exigence de l'AI Act européen en vigueur depuis le 2 août. Apple prépare de son côté un système pour certifier l'authenticité des photos prises avec un iPhone, face aux progrès des images synthétiques. [Next.ink (Anthropic)](https://next.ink/251192/anthropic-va-tatouer-les-textes-et-les-images-generes-par-claude/) · [Next.ink (Apple)](https://next.ink/brief-article/apple-prepare-un-systeme-pour-prouver-quune-photo-vient-bien-dun-iphone/)
+
+- **Cyberattaques dopées à l'IA et transition NIS 2** : L'usage de l'IA générative par les cybercriminels accélère la menace, rendant risqué d'attendre l'entrée en vigueur de NIS 2 pour renforcer ses défenses. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553613-face-aux-cyberattaques-dopees-a-l-ia-attendre-nis-2-est-devenu-un-pari-risque/)
+
+- **Préparation cyber de Taïwan face à la Chine** : L'île, qui subit 2,63 millions d'attaques par jour, simule des coupures d'Internet dans le cadre d'exercices militaires pour anticiper un conflit hybride avec Pékin. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/elle-subit-2-63-millions-de-cyberattaques-par-jour-taiwan-simule-des-coupures-d-internet-pour-se-preparer-a-la-guerre-hybride-contre-la-chine_AV-202608120242.html)
+
+- **Régulation des réseaux sociaux pour mineurs** : L'interdiction d'accès aux moins de 15 ans adoptée en France sera inefficace sans réguler les mécanismes addictifs comme le scroll infini ou les algorithmes de recommandation. [Journal du Net](https://www.journaldunet.com/cybersecurite/1553085-restriction-de-l-acces-aux-reseaux-sociaux-aux-mineurs-pour-que-ca-marche-il-faut-egalement-comprendre-pourquoi-ils-leur-font-du-mal/)
+
+- **Facturation électronique** : Pour les éditeurs de logiciels, obtenir le statut de Plateforme de Dématérialisation Partenaire (PDP) implique une transformation profonde de leur activité au-delà du simple enjeu de conformité réglementaire. [Journal du Net](https://www.journaldunet.com/management/direction-generale/1553579-facturation-electronique-devenir-plateforme-agreee-c-est-changer-de-metier/)
+
+- **Souveraineté numérique et capital de maîtrise** : La souveraineté ne dépend pas uniquement de la localisation des données mais de la capacité réelle d'une organisation à reprendre le contrôle en cas de rupture avec un fournisseur. [Journal du Net](https://www.journaldunet.com/fintech/1553595-le-capital-de-maitrise-l-indicateur-oublie-de-la-souverainete-numerique/)
+
+- **AI Act : entre alarmisme et déni** : Depuis le 2 août, deux discours trompeurs circulent : celui d'une application immédiate et généralisée de sanctions, et celui d'un report complet à 2027. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553599-depuis-le-2-aout-l-ai-act-a-deux-faux-prophetes-celui-qui-crie-et-celui-qui-berce/)
+
+- **Proxmox sur Raspberry Pi** : Un tutoriel détaille l'installation de Proxmox sur architecture ARM pour faire fonctionner des machines virtuelles sur un Raspberry Pi, avec les limites propres à cette plateforme. [Next.ink](https://next.ink/251209/tuto-installer-proxmox-en-version-arm-sur-un-raspberry-pi/)
 
 **Évaluation du scoring**
 
-- **3/5** — [Accelerate cyber defense with OpenAI and AWS: Daybreak Red &amp; Daybreak Blue now available to eligible customers on Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/accelerate-cyber-defense-with-openai-and-aws-daybreak-red-daybreak-blue-now-available-to-eligible-customers-on-amazon-bedrock/) — AWS Machine Learning. Raison : Annonce de modèles IA dédiés à la défense cyber sur Bedrock avec sécurité chip-level. Intéressant mais détails techniques manquants, à survoler pour évaluer l'impact réel.</description>
-      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
+- **4/5** — [Ingérence numérique iranienne : des faux comptes X pilotés depuis l'Iran pour amplifier les fractures politiques françaises](https://www.journaldunet.com/business/action-publique/1553647-ingerence-numerique-iranienne-des-faux-comptes-x-pilotes-depuis-l-iran-pour-amplifier-les-fractures-politiques-francaises/) — Journal du Net. Raison : Campagne d'ingérence numérique étatique ciblant la France, documentée par les autorités. Pertinent pour RSSI/CTO sur la menace informationnelle et la gouvernance cyber.
+- **4/5** — [Jusqu'à 3 millions de numéros concernés: fermée le 11 août, la plateforme Bloctel qui luttait contre les appels indésirables… victime d'une fuite de données](https://www.bfmtv.com/tech/cybersecurite/jusqu-a-3-millions-de-numeros-concernes-fermee-le-11-aout-la-plateforme-bloctel-qui-luttait-contre-les-appels-indesirables-victime-d-une-fuite-de-donnees_AV-202608120262.html) — BFM Tech. Raison : Incident de fuite de données touchant une plateforme régulée, impactant potentiellement des millions de numéros. Pertinent pour RSSI et CTO.
+- **4/5** — [Anthropic va tatouer les textes et les images générés par Claude](https://next.ink/251192/anthropic-va-tatouer-les-textes-et-les-images-generes-par-claude/) — Next.ink. Raison : Obligation réglementaire AI Act avec impact direct sur la traçabilité des contenus IA, sujet pertinent pour RSSI et CTO en conformité.
+- **4/5** — [Face aux cyberattaques dopées à l'IA, attendre NIS 2 est devenu un pari risqué](https://www.journaldunet.com/intelligence-artificielle/1553613-face-aux-cyberattaques-dopees-a-l-ia-attendre-nis-2-est-devenu-un-pari-risque/) — Journal du Net. Raison : Analyse de l'impact de l'IA générative sur les cyberattaques et lien avec l'échéance réglementaire NIS 2, pertinent pour RSSI et CTO.
+- **3/5** — [\[Tuto\] Installer Proxmox en version Arm sur un Raspberry Pi](https://next.ink/251209/tuto-installer-proxmox-en-version-arm-sur-un-raspberry-pi/) — Next.ink. Raison : Tutoriel technique pour installer Proxmox sur Raspberry Pi, utile pour expérimentation mais non officiel et sans impact sécurité ou stratégie majeur.
+- **3/5** — [Elle subit 2,63 millions de cyberattaques par jour: Taïwan simule des coupures d’Internet pour se préparer à la guerre hybride contre la Chine](https://www.bfmtv.com/tech/cybersecurite/elle-subit-2-63-millions-de-cyberattaques-par-jour-taiwan-simule-des-coupures-d-internet-pour-se-preparer-a-la-guerre-hybride-contre-la-chine_AV-202608120242.html) — BFM Tech. Raison : Article sur la préparation cyber de Taïwan face à la Chine. Intéressant pour la stratégie de résilience, mais sans détails techniques exploitables pour un public expert.
+- **3/5** — [Restriction de l'accès aux réseaux sociaux aux mineurs : pour que ça marche, il faut également comprendre pourquoi ils leur font du mal](https://www.journaldunet.com/cybersecurite/1553085-restriction-de-l-acces-aux-reseaux-sociaux-aux-mineurs-pour-que-ca-marche-il-faut-egalement-comprendre-pourquoi-ils-leur-font-du-mal/) — Journal du Net. Raison : Article d'opinion sur la régulation des réseaux sociaux pour mineurs. Pertinent pour la gouvernance cyber, mais sans contenu technique ou réglementaire structurant pour des experts.
+- **3/5** — [Facturation électronique : devenir Plateforme Agréée, c'est changer de métier](https://www.journaldunet.com/management/direction-generale/1553579-facturation-electronique-devenir-plateforme-agreee-c-est-changer-de-metier/) — Journal du Net. Raison : Article sur la facturation électronique et le changement de métier pour les éditeurs. Pertinent pour la stratégie SI mais sans angle cyber ou technique direct.
+- **3/5** — [Le capital de maîtrise : l'indicateur oublié de la souveraineté numérique](https://www.journaldunet.com/fintech/1553595-le-capital-de-maitrise-l-indicateur-oublie-de-la-souverainete-numerique/) — Journal du Net. Raison : Article d'opinion sur un concept de souveraineté numérique. Pertinent pour la réflexion stratégique mais sans contenu technique ni référence à une régulation concrète.
+- **3/5** — [Depuis le 2 août, l'AI Act a deux faux prophètes : celui qui crie et celui qui berce](https://www.journaldunet.com/intelligence-artificielle/1553599-depuis-le-2-aout-l-ai-act-a-deux-faux-prophetes-celui-qui-crie-et-celui-qui-berce/) — Journal du Net. Raison : Analyse des interprétations contradictoires de l'AI Act, utile pour la gouvernance mais sans information technique ou réglementaire nouvelle.
+- **3/5** — [☕️ Apple prépare un système pour prouver qu’une photo vient bien d’un iPhone](https://next.ink/brief-article/apple-prepare-un-systeme-pour-prouver-quune-photo-vient-bien-dun-iphone/) — Next.ink. Raison : Annonce d'une fonctionnalité Apple pour authentifier les photos, intéressante pour la lutte contre la désinformation mais sans détail technique ni impact immédiat sur la sécurité des SI.
+
+## IA &amp; Tech — Médias internationaux
+
+- **NVIDIA pousse les architectures MoE pour l'exécution d'agents** : NVIDIA publie Nemotron 3.5 Lightning, un modèle ouvert de 30 milliards de paramètres n'activant que 3 milliards de paramètres, couplé au routeur Switchyard qui oriente dynamiquement chaque étape vers le modèle le plus économique capable de la traiter. L'ensemble est spécifiquement conçu pour la couche d'exécution des agents IA. [MarkTechPost](https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/)
+
+- **Les rédactions automatisées commencent à devancer les médias traditionnels** : Une salle de rédaction entièrement IA a réussi à publier en premier une information sensible sur OpenAI et le piratage, coiffant au poteau des rédactions humaines comme WIRED. Ce fait marque un basculement concret dans la capacité des systèmes automatisés à réaliser du journalisme de nouvelle chaude, au-delà de la simple réécriture. [Wired](https://www.wired.com/story/ai-newsrooms-are-breaking-news-now-haha-im-in-danger/)
+
+**Évaluation du scoring**
+
+- **4/5** — [NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router](https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/) — MarkTechPost. Raison : Nouveau modèle MoE open source de NVIDIA avec routage intelligent, pertinent pour l'optimisation des agents IA en entreprise.
+- **3/5** — [Oh Lord, AI Reporters Are Actually Breaking Big News](https://www.wired.com/story/ai-newsrooms-are-breaking-news-now-haha-im-in-danger/) — Wired — AI. Raison : Annonce d'une IA battant les journalistes sur un scoop hacking, mais sans détail technique ni impact direct pour les experts ciblés.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Sécurisation des sessions Chrome contre les détournements de compte</strong> : Chrome déploie des cookies de session liés au matériel (Device Bound Session Credentials) pour contrer le vol de tokens, une technique de plus en plus utilisée pour contourner l'authentification multifacteur. <a href="https://arstechnica.com/security/2026/08/chrome-adopts-what-may-be-the-best-protection-yet-against-account-takeovers/">Ars Technica</a></li>
+<li><strong>Extension Chrome malveillante déguisée en CCleaner</strong> : Une campagne diffuse une fausse version de CCleaner qui installe l'extension GhostDesk dans Chrome, transformant le navigateur en outil de vol d'identifiants et de surveillance persistante. Le code malveillant opère en plusieurs étapes sur Windows. <a href="https://www.csoonline.com/article/4208565/fake-ccleaner-downloads-turn-chrome-into-a-credential-stealing-surveillance-tool.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Attaque par faux point d'accès Wi-Fi suspectée sur un vol Delta</strong> : Des participants à la conférence DEF CON sont soupçonnés d'avoir déployé un portail captif malveillant en vol pour intercepter des identifiants. Le FBI d'Atlanta confirme une enquête en cours, sans arrestation à ce stade. <a href="https://arstechnica.com/information-technology/2026/08/def-con-crowd-suspected-in-fake-hotspot-attack-on-delta-flight/">Ars Technica</a></li>
+<li><strong>Injection de prompt comme mécanisme de défense</strong> : Des chercheurs de Tracebit ont démontré qu'insérer des instructions contradictoires (prompt injections) aux côtés de secrets stockés sur AWS suffit souvent à neutraliser les agents IA de piratage automatisés. <a href="https://www.schneier.com/blog/archives/2026/08/prompt-injections-for-defense.html">Schneier on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Nouvelles métriques pour l'effacement d'objets en vidéo</strong> : Xiaomi MiLM Plus propose RC-S et RC-T, deux métriques alignées sur la perception humaine, pour corriger le défaut structurel des indicateurs classiques (PSNR, SSIM) qui classent mal les résultats des modèles à diffusion dans les tâches d'effacement. Un benchmark vidéo réel accompagne la publication. <a href="https://www.marktechpost.com/2026/08/11/xiaomis-milm-plus-releases-prove-perception-aligned-object-removal-metrics-rc-s-and-rc-t-with-a-real-world-video-benchmark/">MarkTechPost</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://arstechnica.com/information-technology/2026/08/def-con-crowd-suspected-in-fake-hotspot-attack-on-delta-flight/">DEF CON crowd suspected in fake-hotspot attack on Delta flight</a> — Ars Technica — Tech Lab. Raison : Incident cyber en milieu aérien, susceptible d'affecter voyageurs d'affaires, avec implication FBI. Analyse à survoler pour détails techniques et réponses.</li>
-<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/08/chrome-adopts-what-may-be-the-best-protection-yet-against-account-takeovers/">Chrome adopts what may be the best protection yet against account takeovers</a> — Ars Technica — Tech Lab. Raison : Protection prometteuse contre le vol de session, technique de défense innovante par Chrome. Pertinent pour RSSI et architectes SI confrontés aux attaques de type ATO.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/11/xiaomis-milm-plus-releases-prove-perception-aligned-object-removal-metrics-rc-s-and-rc-t-with-a-real-world-video-benchmark/">Xiaomi’s MiLM Plus Releases PROVE: Perception-Aligned Object Removal Metrics RC-S and RC-T With a Real-World Video Benchmark</a> — MarkTechPost. Raison : Nouveau benchmark et métriques pour l'effacement d'objets. Intéressant pour l'évaluation de modèles génératifs, mais hors périmètre cybersécurité/dev tooling prioritaire.</li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Équité cachée dans les recommandations LLM</strong> : Le benchmark FairGap révèle que les audits d'équité standards passent à côté de biais internes non visibles dans les sorties finales des modèles de recommandation. <a href="https://arxiv.org/abs/2608.08284">Fair on the Surface?</a></li>
+<li><strong>Nouvelle surface d'attaque : le harnais d'orchestration IA</strong> : L'attention se déplace du modèle d'IA lui-même vers le "harnais" logiciel qui l'intègre aux systèmes. Les démonstrations d'exploitation ciblent désormais les connexions, permissions et flux de données gérés par cette couche intermédiaire, devenue le maillon faible. <a href="https://www.csoonline.com/article/4208236/the-ai-harness-is-the-new-attack-surface.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Benchmark droits humains pour LLM</strong> : Une méthodologie pilote est proposée pour évaluer la capacité des LLM à raisonner correctement sur le droit international des droits humains, domaine où ils interviennent de plus en plus dans des décisions juridiques. <a href="https://arxiv.org/abs/2608.10268">Toward Human Rights Benchmarking for LLMs</a></li>
+<li><strong>Freins à l'adoption de l'IA dans les SOC</strong> : Malgré les investissements, quatre lacunes ralentissent la traduction de l'IA en gains opérationnels dans les centres de sécurité : qualité et intégration des données, manque de compétences pour opérationnaliser les modèles, et absence de métriques claires pour mesurer l'efficacité réelle. <a href="https://www.csoonline.com/article/4208086/4-gaps-slowing-ai-in-enterprise-socs.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Raisonnement moral hiérarchique</strong> : CORDA est un benchmark qui teste non pas si un LLM choisit la "bonne" réponse morale, mais comment il hiérarchise les principes quand ceux-ci entrent en conflit. <a href="https://arxiv.org/abs/2608.08061">CORDA</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité multilingue et circuits de refus</strong> : Une analyse mécanistique sur un modèle multilingue (sarvam) montre que la décision de refuser une requête dangereuse est prise en amont dans le modèle, mais que son expression échoue dans les langues peu dotées, créant un écart de sécurité. <a href="https://arxiv.org/abs/2608.08032">Decided Upstream, Written Late</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents LLM et mémoire long terme</strong> : SodaMem propose une mémoire sous forme de graphe temporel pour les agents LLM, visant à maintenir une représentation à jour de l'état courant plutôt qu'un simple journal de conversations passé. <a href="https://arxiv.org/abs/2608.08055">SodaMem</a></li>
-</ul>
-
-<ul>
-<li><strong>Raisonnement spatial pour la sécurité</strong> : Le framework Theory of Space évalue la compréhension spatiale des VLMs en observabilité partielle, un prérequis critique pour leur déploiement dans des scénarios de sécurité. <a href="https://arxiv.org/abs/2608.08077">Explore, Map, Remember, Decide</a></li>
-</ul>
-
-<ul>
-<li><strong>Optimisation du calcul au test</strong> : Thought-Level Beam Search alloue dynamiquement le budget de calcul au niveau des "pensées" plutôt que des tokens, réduisant le gaspillage dans les modèles de raisonnement à grande échelle. <a href="https://arxiv.org/abs/2608.08020">Thought-Level Beam Search</a></li>
-</ul>
-
-<ul>
-<li><strong>Raisonnement latent et efficacité</strong> : Relit explore un cadre de raisonnement récursif dans l'espace latent pour éviter le surcoût computationnel de l'externalisation complète de la chaîne de pensée en tokens. <a href="https://arxiv.org/abs/2608.08113">Think Deep, Speak Once</a></li>
-</ul>
-
-<ul>
-<li><strong>RAG pour documentation d'entreprise</strong> : VDGR-RAG combine vecteurs, annuaires, graphes et réflexion pour le question-réponse unifié sur de la documentation hiérarchique complexe, testé dans les télécoms. <a href="https://arxiv.org/abs/2608.07994">VDGR-RAG</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents locaux et préservation de la vie privée</strong> : SkillSmith construit automatiquement des compétences pour agents déployés localement, répondant au risque d'exposition des données privées inhérent aux architectures cloud. <a href="https://arxiv.org/abs/2608.08037">SkillSmith</a></li>
-</ul>
-
-<ul>
-<li><strong>Simulation multi-agents en milieu urbain</strong> : Lingjing fournit un bac à sable pour coordonner drones, robots terrestres et véhicules autonomes dans des villes ouvertes et dynamiques. <a href="https://arxiv.org/abs/2608.08045">Lingjing</a></li>
-</ul>
-
-<ul>
-<li><strong>Formation cybersécurité par agents IA</strong> : CyberAGENTS utilise des agents d'IA générative pour délivrer des expériences d'apprentissage gamifiées et adaptatives en cybersécurité, posant la question du contrôle de ces agents autonomes. <a href="https://arxiv.org/abs/2608.07965">CyberAGENTS</a></li>
-</ul>
-
-<ul>
-<li><strong>Responsabilité légale des agents IA</strong> : L'article examine les zones grises de la responsabilité juridique lorsqu'un agent IA contourne ses mesures de confinement et commet des actes non autorisés. <a href="https://arxiv.org/abs/2608.08022">Legal Responsibilities Using Autonomous Agents</a></li>
-</ul>
-
-<ul>
-<li><strong>Harmonisation de données médicales</strong> : L'architecture H2 combine un lac de données sémantique hybride avec un système d'annotation par LLM vérifié par un humain pour gérer l'hétérogénéité des données médicales. <a href="https://arxiv.org/abs/2608.08056">H2</a></li>
+<li><strong>Dette technique de très longue traîne</strong> : Une vulnérabilité permettant l'exécution de code arbitraire a été découverte en 2021 dans un composant logiciel vieux de 54 ans, sans correctif disponible ni envisagé. Ce cas illustre le risque persistant posé par du code ancien, non maintenu mais toujours présent dans les fondations de l'informatique moderne. <a href="https://www.csoonline.com/article/570815/old-software-bugs-that-took-way-too-long-to-squash.html">CSO Online</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.08284">Fair on the Surface? Benchmarking Hidden-Output Fairness Gaps in LLM Recommenders</a> — arXiv cs.AI. Raison : Benchmark méthodologique sur un angle non exploré de la partialité cachée dans les recommandations LLM, pertinent pour auditer l'IA en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.10268">Toward Human Rights Benchmarking for LLMs: A Pilot Methodology</a> — arXiv cs.LG. Raison : Premier benchmark d'évaluation des LLMs sur le droit des droits humains, méthodologie validée par experts. Pertinent pour RSSI/CTO en veille gouvernance IA et conformité.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07965">CyberAGENTS: Structured Autonomy for Agentic Gamified Learning in Cybersecurity</a> — arXiv cs.AI. Raison : Papier de recherche sur l'utilisation d'agents IA génératifs pour l'apprentissage gamifié en cybersécurité. Intéressant mais implication pratique incertaine.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.07994">VDGR-RAG: Vectors, Directories, Graphs, and Reflection Are All You Need for Unified Reasoning over Hierarchical Enterprise Knowledge</a> — arXiv cs.AI. Raison : Papier de recherche sur une méthode RAG unifiée pour connaissances d'entreprise hiérarchiques. Intéressant mais impact pratique incertain pour experts.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08020">Thought-Level Beam Search for Reasoning</a> — arXiv cs.AI. Raison : Papier de recherche sur l'optimisation du calcul au test-time pour les modèles de raisonnement. Intéressant mais sans lien direct avec la cybersécurité ou les outils concrets du public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08022">Legal Responsibilities Using Autonomous Agents For Artificial Intelligence</a> — arXiv cs.AI. Raison : Papier de recherche sur responsabilité légale des agents IA. Pertinent pour gouvernance et régulation, mais implications pratiques encore incertaines.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08026">The Authority Expectancy Effect in Multi-User Conflict</a> — arXiv cs.AI. Raison : Recherche sur l'interaction entre signaux d'autorité sociale et priorisation dans les LLMs. Intéressant pour experts IA mais impact pratique incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08032">Decided Upstream, Written Late: Locating and Pricing the Cross-Lingual Refusal Circuit of a Multilingual MoE</a> — arXiv cs.AI. Raison : Recherche en sécurité IA sur le refus multilingue dans un modèle MoE, intéressante pour comprendre les biais, mais impact pratique immédiat incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08037">SkillSmith: Enhancing Locally Deployed Agents via Automatic Skill Construction and Evolution</a> — arXiv cs.AI. Raison : Papier de recherche sur la construction automatique de compétences pour agents locaux. Intéressant pour l'IA en entreprise, mais l'impact pratique reste incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08045">Lingjing: A Simulation Testbed for Multi-Agent Embodied Tasks in Open-Ended Cities</a> — arXiv cs.AI. Raison : Papier de recherche sur un simulateur pour tâches multi-agents en environnements urbains. Intéressant pour l'IA embarquée mais sans lien direct avec la cybersécurité ou les priorités du public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08046">JustLLMGRPO: Radiographic Control for Chest X-Ray Generation</a> — arXiv cs.AI. Raison : Papier de recherche IA sur la génération d'images médicales. Intéressant pour experts IA mais hors périmètre cybersécurité et sans impact pratique immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08055">SodaMem: Evidence-Grounded Temporal Graph Memory for LLM Agents</a> — arXiv cs.AI. Raison : Papier de recherche sur mémoire temporelle pour agents LLM, intéressant mais sans lien direct avec cybersécurité ou impact pratique immédiat pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08056">H2: A Dual Hybrid Semantic Data Lake Architecture for Medical Data Harmonization with Human-In-the-Loop verified, LLM Driven Metadata Annotation System</a> — arXiv cs.AI. Raison : Article de recherche sur harmonisation de données médicales par LLM, sans lien direct cybersécurité ou IT entreprise. Intéressant mais non prioritaire pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08061">CORDA: A Benchmark for Hierarchical Harm-Centric Moral Reasoning in Large Language Models</a> — arXiv cs.AI. Raison : Benchmark de raisonnement moral hiérarchique pour LLMs. Intéressant pour la recherche en IA mais sans application immédiate pour la cybersécurité ou le développement.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08077">Explore, Map, Remember, Decide: Are Embodied VLMs Ready for Safety-Critical Scenarios?</a> — arXiv cs.AI. Raison : Papier de recherche évaluant la compréhension spatiale et la mémoire des VLMs en environnement partiellement observable. Intéressant pour la sécurité IA mais impact pratique incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08078">PATH: Next-Interval Prediction via Autoregressive Tree Hierarchy on Tabular Data</a> — arXiv cs.AI. Raison : Papier de recherche sur la prédiction d'intervalles pour données tabulaires, intéressant mais sans lien évident avec la cybersécurité ou les sujets ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08101">Generative Models: Principles, Architectures, and Applications</a> — arXiv cs.AI. Raison : Article de recherche général sur les modèles génératifs, sans lien direct avec la cybersécurité ou les applications concrètes pour les experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08113">Think Deep, Speak Once: Relit, A Recursive Latent Implicit Transformer Framework</a> — arXiv cs.AI. Raison : Papier de recherche sur une méthode de raisonnement latent pour LLMs, intéressant mais sans impact immédiat sur les pratiques cyber ou dev des experts.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08118">Neurosymbolic Discovery of Algebraic Graph Constructions</a> — arXiv cs.AI. Raison : Recherche théorique en IA symbolique pour la découverte de constructions de graphes. Aucun lien direct avec la cybersécurité, outils ou stratégie IA pour experts ciblés. Intérêt académique limité.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.08122">Constraining ontology mappings using metaphysical choices</a> — arXiv cs.AI. Raison : Article de recherche sur la validation de mappings sémantiques via des ontologies. Intérêt potentiel pour l'IA en entreprise mais sans application cyber ni impact direct démontré.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Patch Tuesday massif chez Microsoft</strong> : Le dernier cycle de correctifs corrige près de 400 vulnérabilités, dont une faille déjà exploitée activement et deux autres divulguées publiquement avant la publication des mises à jour. <a href="https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/">Krebs on Security</a></li>
-</ul>
-
-<ul>
-<li><strong>Zero-day critique dans Metabase</strong> : Une injection SQL (CVE-2026-72898) permet à un attaquant d'accéder à l'intégralité des données de l'instance, y compris identifiants, tokens et clés API. Les clients doivent considérer ces secrets comme compromis et procéder à une rotation immédiate. <a href="https://www.csoonline.com/article/4208307/metabase-sqli-exploit-grants-attackers-total-access.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Zoom : exécution de code sans clic en réunion</strong> : Deux des quatre failles corrigées permettent à un participant malveillant d'exécuter du code à distance sur les postes des autres participants, sans aucune interaction utilisateur. Tous les clients Zoom sont concernés. <a href="https://www.csoonline.com/article/4208223/zoom-zero-click-rce-flaws-allow-attackers-to-compromise-meeting-participants.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Ransomware Gunra cible les appliances Fortinet</strong> : Le groupe exploite des failles anciennes sur pare-feu et VPN Fortinet pour contourner l'authentification multifacteur et déployer un ransomware basé sur du code Conti ayant fuité. Les infrastructures critiques sont particulièrement visées. <a href="https://www.darkreading.com/cyberattacks-data-breaches/gunra-ransomware-gang-fortinet-flaws-bypasses-mfa">Dark Reading</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4208307/metabase-sqli-exploit-grants-attackers-total-access.html">Metabase SQLi exploit grants attackers total access</a> — CSO Online. Raison : Zero-day SQLi critique (score 10) sur Metabase, plateforme BI largement déployée. Impact direct : exposition credentials, tokens, données sensibles. Information immédiatement exploitable pour la défense.</li>
-<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4208223/zoom-zero-click-rce-flaws-allow-attackers-to-compromise-meeting-participants.html">Zoom zero-click RCE flaws allow attackers to compromise meeting participants</a> — CSO Online. Raison : Vulnérabilités zero-click RCE critiques sur Zoom, impact direct sur tous les participants, patch disponible. Information essentielle pour RSSI et CTO.</li>
-<li><strong>5/5</strong> — <a href="https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/">Microsoft Plugs Nearly 400 Security Holes</a> — Krebs on Security. Raison : Mise à jour massive de sécurité avec près de 400 correctifs, incluant un 0-day activement exploité, impact direct sur les environnements Windows.</li>
-<li><strong>5/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/gunra-ransomware-gang-fortinet-flaws-bypasses-mfa">Gunra Ransomware Gang Exploits Fortinet Flaws, Bypasses MFA</a> — Dark Reading. Raison : Campagne ransomware exploitant des failles Fortinet connues avec contournement MFA, ciblant des infrastructures critiques. Impact direct sur les technologies en place.</li>
+<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4208565/fake-ccleaner-downloads-turn-chrome-into-a-credential-stealing-surveillance-tool.html">Fake CCleaner downloads turn Chrome into a credential-stealing surveillance tool</a> — CSO Online. Raison : Campagne active de malware ciblant Chrome via un faux CCleaner, avec vol de credentials et surveillance. Impact direct sur les postes de travail Windows en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/08/prompt-injections-for-defense.html">Prompt Injections for Defense</a> — Schneier on Security. Raison : Méthode défensive originale contre agents IA malveillants, utilisant prompt injection comme leurre. Résultat surprenant et applicable, mérite analyse.</li>
+<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4208086/4-gaps-slowing-ai-in-enterprise-socs.html">4 gaps slowing AI in enterprise SOCs</a> — CSO Online. Raison : Analyse des freins à l'adoption de l'IA dans les SOC, sujet stratégique pour RSSI et CTO. Promet un retour d'expérience concret sur les écarts opérationnels.</li>
+<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4208236/the-ai-harness-is-the-new-attack-surface.html">The AI harness is the new attack surface</a> — CSO Online. Raison : Article de CSO Online sur l'évolution de la surface d'attaque des agents IA, au-delà du modèle vers le code. Pertinent pour RSSI et CTO.</li>
+<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/570815/old-software-bugs-that-took-way-too-long-to-squash.html">17 old software bugs that took way too long to squash</a> — CSO Online. Raison : Article listant des bugs anciens, dont un de 1967 sans correctif. Intérêt historique mais peu d'impact pratique immédiat pour des experts.</li>
 </ul>
 
 <h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Correctif massif Microsoft (août 2026)</strong> : 400 vulnérabilités corrigées, dont 3 zero-days (1 exploitée activement, 2 divulguées publiquement). Mise à jour prioritaire. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Windows 10 : correctifs de sécurité étendus</strong> : KB5120249 déployé pour les versions 22H2 et 21H2 afin de couvrir des vulnérabilités et bugs dans le cadre des ESU. <a href="https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Vulnérabilité Cisco ASA/FTD exploitée</strong> : faille de déni de service (CVE non précisée) dans les VPN Secure Firewall activement ciblée pour planter à distance les appliances. Correctif attendu, mitigation recommandée. <a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Faille critique Zoom dans les annotations</strong> : un participant pouvait prendre le contrôle du poste du présentateur, et inversement, via l'outil d'annotation en partage d'écran. Aucune interaction victime requise. <a href="https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-meeting.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Ransomware DeadLock s'appuie sur la blockchain</strong> : infrastructure décentralisée via des services blockchain pour héberger communications et fuites de données, compliquant les saisies judiciaires et interceptions. <a href="https://www.bleepingcomputer.com/news/security/deadlock-ransomware-uses-blockchain-to-resist-infrastructure-takedown/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Hôpital américain : fuite de 6 To et détournement Facebook</strong> : un groupe ransomware exfiltre des données ultra-sensibles (santé mentale, IVG, agressions sexuelles) et prend le contrôle de la page Facebook de l'établissement pour amplifier la pression. <a href="https://therecord.media/ransomware-group-hijacks-hospital-facebook-amid-cyberattack-response">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Campagne d'espionnage russe (Sandworm/UAC-0145) ciblant l'IT ukrainien</strong> : faux entretiens d'embauche utilisés comme vecteur pour faire installer un VPN malveillant capable d'exécuter des commandes à distance. Attribution CERT-UA. <a href="https://thehackernews.com/2026/08/sandworm-linked-uac-0145-uses-fake-job.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Botnet Android Kimwolf v7 sophistique ses DDoS</strong> : nouvelle version utilisant HTTP/2 pour rendre le trafic d'attaque indistinguable d'une navigation légitime, améliorant résilience et furtivité. <a href="https://thehackernews.com/2026/08/kimwolf-v7-android-botnet-makes-http2.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Attaque Wi-Fi deauthentication en vol commercial</strong> : réseau Wi-Fi non autorisé détecté sur un vol transportant des participants à la DEF CON, faisant suspecter une tentative de désauthentification ciblée. Enquête Delta en cours. <a href="https://www.bleepingcomputer.com/news/security/delta-probes-wi-fi-deauth-attack-on-flight-carrying-def-con-attendees/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Chrome réduit drastiquement les notifications abusives Android</strong> : 7 milliards de notifications indésirables bloquées par jour au T1 2026 via les systèmes anti-abus intégrés au navigateur. <a href="https://www.bleepingcomputer.com/news/security/google-says-chrome-cuts-7-billion-unwanted-android-notifications-a-day-to-fight-abuse/">BleepingComputer</a></li>
+<li><strong>Adobe : trois failles critiques CVSS 10.0 dans ColdFusion et Campaign Classic</strong> : Adobe corrige plusieurs vulnérabilités critiques dans ColdFusion, Commerce et Campaign Classic, dont CVE-2026-48362, permettant exécution de code arbitraire et escalade de privilèges. <a href="https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html">The Hacker News</a></li>
+<li><strong>SAP Commerce Cloud : exécution de code sans authentification (CVSS 10.0)</strong> : CVE-2026-58231 dans le Data Hub Adapter permet à un attaquant non authentifié d'exécuter du code arbitraire ; le correctif est disponible. <a href="https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html">The Hacker News</a></li>
+<li><strong>VMware vCenter : exploitation active d'une faille critique de traversée de répertoire</strong> : CVE-2026-59310 (CVSS 9.8) est activement exploitée par des acteurs malveillants pour obtenir un accès distant persistant aux serveurs vCenter. <a href="https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html">The Hacker News</a></li>
+<li><strong>Cisco ASA/FTD : déni de service à distance exploité dans la nature</strong> : CVE-2026-20349 (CVSS 8.6), une faille de gestion d'erreur insuffisante, est activement exploitée pour provoquer un DoS sur les équipements ASA et FTD. <a href="https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html">The Hacker News</a></li>
+<li><strong>Microsoft Defender : preuve de concept « ShieldBreak » pour un contournement de correctif</strong> : Un chercheur publie un PoC nommé ShieldBreak, exploitant une vulnérabilité zero-day dans Microsoft Defender pour Windows permettant un accès SYSTEM via un contournement de correctif existant. <a href="https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html">The Hacker News</a></li>
+<li><strong>Supply chain PyPI : paquets LiteLLM malveillants liés au piratage de Trivy</strong> : Deux versions malveillantes de LiteLLM, restées 40 minutes sur PyPI, dérobaient secrets cloud, SSH, Kubernetes et bases de données ; plus de 2100 organisations potentiellement exposées suite au compromis de Trivy. <a href="https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html">The Hacker News</a></li>
+<li><strong>Signal : vérification automatique des clés contre les attaques MITM</strong> : Signal déploie l'Automatic Key Verification, renforçant la détection d'interception des communications chiffrées sans action manuelle de l'utilisateur. <a href="https://www.bleepingcomputer.com/news/security/signal-adds-new-security-feature-to-thwart-man-in-the-middle-attacks/">BleepingComputer</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/deadlock-ransomware-uses-blockchain-to-resist-infrastructure-takedown/">DeadLock ransomware uses blockchain to resist infrastructure takedown</a> — BleepingComputer. Raison : Campagne ransomware majeure avec infrastructure novatrice basée sur blockchain, difficile à démanteler. Impact direct sur stratégie de défense et surveillance des RSSI.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/">Cisco warns of ASA and FTD VPN flaw exploited to crash devices</a> — BleepingComputer. Raison : CVE critique activement exploitée sur des équipements Cisco ASA/FTD largement déployés en entreprise, impact direct sur la disponibilité des VPN.</li>
-<li><strong>5/5</strong> — <a href="https://therecord.media/ransomware-group-hijacks-hospital-facebook-amid-cyberattack-response">Ransomware group hijacks hospital system’s Facebook page amid ongoing cyberattack fallout</a> — The Record. Raison : Incident ransomware majeur touchant un hôpital avec exfiltration de données ultrasensibles (santé, violences sexuelles). Impact critique sur secteur critique et vie privée.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/zoom-annotation-flaws-could-let-meeting.html">Zoom Annotation Flaws Could Let a Meeting Participant Hijack Another Attendee's Client</a> — The Hacker News. Raison : Vulnérabilité critique 0-day sur Zoom, sans interaction utilisateur, permettant prise de contrôle totale du client. Impact massif et direct pour les entreprises.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/">Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days</a> — BleepingComputer. Raison : Patch Tuesday massif avec 400 failles dont 3 zero-days actifs. Impact direct sur la sécurité des SI, nécessite analyse et priorisation immédiate.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/kimwolf-v7-android-botnet-makes-http2.html">Kimwolf v7 Android Botnet Makes HTTP/2 DDoS Traffic Look Like Legitimate Browsing</a> — The Hacker News. Raison : Nouvelle version d'un botnet Android/IoT avec HTTP/2 pour contourner la détection. Technique avancée, pertinente pour RSSI et architectes SI.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/sandworm-linked-uac-0145-uses-fake-job.html">Sandworm-Linked UAC-0145 Uses Fake Job Interviews to Push VPN That Can Run Commands</a> — The Hacker News. Raison : Campagne cyber étatique ciblant IT avec technique sociale crédible. Contexte Ukraine/Sandworm justifie analyse, mais pas urgence critique immédiate.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/delta-probes-wi-fi-deauth-attack-on-flight-carrying-def-con-attendees/">Delta probes Wi-Fi deauth attack on flight carrying DEF CON attendees</a> — BleepingComputer. Raison : Incident réel de déauthentification Wi-Fi sur un vol ciblant des experts DEF CON ; enquête en cours, potentiel impact sur sécurité aérienne et attaque pratique.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5120249-cumulative-update-released-with-fixes/">Microsoft releases Windows 10 KB5120249 extended security update</a> — BleepingComputer. Raison : Mise à jour de sécurité étendue pour Windows 10 22H2/21H2. Pertinent pour RSSI/CTO car corrige des vulnérabilités sur un OS encore utilisé en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33238">ISC Stormcast For Wednesday, August 12th, 2026 https://isc.sans.edu/podcastdetail/10048, (Wed, Aug 12th)</a> — SANS ISC. Raison : Publication quotidienne SANS ISC, podcast de veille. Peut contenir une analyse d'actualité ou un retour d'expérience, mais sujet et contenu précis inconnus.</li>
-<li><strong>3/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/google-says-chrome-cuts-7-billion-unwanted-android-notifications-a-day-to-fight-abuse/">Google says Chrome cuts 7 billion unwanted Android notifications a day to fight abuse</a> — BleepingComputer. Raison : Chiffre impressionnant mais peu de détails techniques sur le mécanisme anti-abuse. Intéressant pour la tendance, pas critique pour un expert.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html">Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws</a> — The Hacker News. Raison : CVE critiques avec score CVSS 10.0 sur ColdFusion et Campaign Classic, impact direct sur les infrastructures, nécessite patch immédiat.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html">Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access</a> — The Hacker News. Raison : CVE critique (9.8) activement exploitée sur VMware vCenter, composant critique en entreprise. Impact direct et immédiat pour RSSI et architectes SI.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html">Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations</a> — The Hacker News. Raison : Incident majeur de supply chain sur PyPI avec vol de secrets, impact potentiel sur plus de 2100 organisations. Critique pour RSSI et CTO.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html">SAP Commerce Cloud Flaw Could Let Unauthenticated Attackers Execute Arbitrary Code</a> — The Hacker News. Raison : CVE critique (CVSS 10.0) sur SAP Commerce Cloud, impact direct sur une plateforme utilisée en entreprise, nécessite patch immédiat.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html">ShieldBreak Zero-Day PoC Claims Microsoft Defender Patch Bypass With SYSTEM Access</a> — The Hacker News. Raison : Zero-day PoC pour contournement de Microsoft Defender avec élévation de privilèges SYSTEM. Impact direct sur une techno critique en entreprise.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html">Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS</a> — The Hacker News. Raison : CVE-2026-20349 est une vulnérabilité critique (CVSS 8.6) exploitée dans la nature, impactant directement les pare-feu Cisco ASA/FTD, équipements critiques en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/signal-adds-new-security-feature-to-thwart-man-in-the-middle-attacks/">Signal adds new security feature to thwart man-in-the-middle attacks</a> — BleepingComputer. Raison : Nouvelle fonctionnalité de sécurité pour Signal, outil de messagerie utilisé en entreprise. Pertinent pour RSSI et CTO, mais pas critique immédiat.</li>
 </ul>
 
-<h2>IA — Labos & éditeurs</h2>
+<h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>OpenAI : modèles de cyber défense sur AWS Bedrock</strong> : Daybreak Red et Daybreak Blue, deux modèles spécialisés d'OpenAI pour la cyber défense (offensif et défensif), sont désormais disponibles via Amazon Bedrock pour les clients éligibles, avec une isolation forte assurée par un accès opérateur bloqué au niveau matériel. <a href="https://aws.amazon.com/blogs/machine-learning/accelerate-cyber-defense-with-openai-and-aws-daybreak-red-daybreak-blue-now-available-to-eligible-customers-on-amazon-bedrock/">AWS Machine Learning</a></li>
+<li><strong>Ingérence numérique iranienne</strong> : Un réseau de faux comptes X piloté depuis l'Iran a été détecté par les autorités françaises, visant à amplifier les tensions politiques internes. <a href="https://www.journaldunet.com/business/action-publique/1553647-ingerence-numerique-iranienne-des-faux-comptes-x-pilotes-depuis-l-iran-pour-amplifier-les-fractures-politiques-francaises/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuite de données chez Bloctel</strong> : La plateforme anti-démarchage, fermée le 11 août, a subi une fuite exposant jusqu'à 3 millions de numéros de téléphone inscrits. <a href="https://www.bfmtv.com/tech/cybersecurite/jusqu-a-3-millions-de-numeros-concernes-fermee-le-11-aout-la-plateforme-bloctel-qui-luttait-contre-les-appels-indesirables-victime-d-une-fuite-de-donnees_AV-202608120262.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Watermarking obligatoire dans l'IA générative</strong> : Anthropic ajoute des tatouages numériques aux textes et images produits par Claude, une exigence de l'AI Act européen en vigueur depuis le 2 août. Apple prépare de son côté un système pour certifier l'authenticité des photos prises avec un iPhone, face aux progrès des images synthétiques. <a href="https://next.ink/251192/anthropic-va-tatouer-les-textes-et-les-images-generes-par-claude/">Next.ink (Anthropic)</a> · <a href="https://next.ink/brief-article/apple-prepare-un-systeme-pour-prouver-quune-photo-vient-bien-dun-iphone/">Next.ink (Apple)</a></li>
+</ul>
+
+<ul>
+<li><strong>Cyberattaques dopées à l'IA et transition NIS 2</strong> : L'usage de l'IA générative par les cybercriminels accélère la menace, rendant risqué d'attendre l'entrée en vigueur de NIS 2 pour renforcer ses défenses. <a href="https://www.journaldunet.com/intelligence-artificielle/1553613-face-aux-cyberattaques-dopees-a-l-ia-attendre-nis-2-est-devenu-un-pari-risque/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Préparation cyber de Taïwan face à la Chine</strong> : L'île, qui subit 2,63 millions d'attaques par jour, simule des coupures d'Internet dans le cadre d'exercices militaires pour anticiper un conflit hybride avec Pékin. <a href="https://www.bfmtv.com/tech/cybersecurite/elle-subit-2-63-millions-de-cyberattaques-par-jour-taiwan-simule-des-coupures-d-internet-pour-se-preparer-a-la-guerre-hybride-contre-la-chine_AV-202608120242.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Régulation des réseaux sociaux pour mineurs</strong> : L'interdiction d'accès aux moins de 15 ans adoptée en France sera inefficace sans réguler les mécanismes addictifs comme le scroll infini ou les algorithmes de recommandation. <a href="https://www.journaldunet.com/cybersecurite/1553085-restriction-de-l-acces-aux-reseaux-sociaux-aux-mineurs-pour-que-ca-marche-il-faut-egalement-comprendre-pourquoi-ils-leur-font-du-mal/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Facturation électronique</strong> : Pour les éditeurs de logiciels, obtenir le statut de Plateforme de Dématérialisation Partenaire (PDP) implique une transformation profonde de leur activité au-delà du simple enjeu de conformité réglementaire. <a href="https://www.journaldunet.com/management/direction-generale/1553579-facturation-electronique-devenir-plateforme-agreee-c-est-changer-de-metier/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Souveraineté numérique et capital de maîtrise</strong> : La souveraineté ne dépend pas uniquement de la localisation des données mais de la capacité réelle d'une organisation à reprendre le contrôle en cas de rupture avec un fournisseur. <a href="https://www.journaldunet.com/fintech/1553595-le-capital-de-maitrise-l-indicateur-oublie-de-la-souverainete-numerique/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>AI Act : entre alarmisme et déni</strong> : Depuis le 2 août, deux discours trompeurs circulent : celui d'une application immédiate et généralisée de sanctions, et celui d'un report complet à 2027. <a href="https://www.journaldunet.com/intelligence-artificielle/1553599-depuis-le-2-aout-l-ai-act-a-deux-faux-prophetes-celui-qui-crie-et-celui-qui-berce/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Proxmox sur Raspberry Pi</strong> : Un tutoriel détaille l'installation de Proxmox sur architecture ARM pour faire fonctionner des machines virtuelles sur un Raspberry Pi, avec les limites propres à cette plateforme. <a href="https://next.ink/251209/tuto-installer-proxmox-en-version-arm-sur-un-raspberry-pi/">Next.ink</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/accelerate-cyber-defense-with-openai-and-aws-daybreak-red-daybreak-blue-now-available-to-eligible-customers-on-amazon-bedrock/">Accelerate cyber defense with OpenAI and AWS: Daybreak Red & Daybreak Blue now available to eligible customers on Amazon Bedrock</a> — AWS Machine Learning. Raison : Annonce de modèles IA dédiés à la défense cyber sur Bedrock avec sécurité chip-level. Intéressant mais détails techniques manquants, à survoler pour évaluer l'impact réel.</li>
+<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/business/action-publique/1553647-ingerence-numerique-iranienne-des-faux-comptes-x-pilotes-depuis-l-iran-pour-amplifier-les-fractures-politiques-francaises/">Ingérence numérique iranienne : des faux comptes X pilotés depuis l'Iran pour amplifier les fractures politiques françaises</a> — Journal du Net. Raison : Campagne d'ingérence numérique étatique ciblant la France, documentée par les autorités. Pertinent pour RSSI/CTO sur la menace informationnelle et la gouvernance cyber.</li>
+<li><strong>4/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/jusqu-a-3-millions-de-numeros-concernes-fermee-le-11-aout-la-plateforme-bloctel-qui-luttait-contre-les-appels-indesirables-victime-d-une-fuite-de-donnees_AV-202608120262.html">Jusqu'à 3 millions de numéros concernés: fermée le 11 août, la plateforme Bloctel qui luttait contre les appels indésirables… victime d'une fuite de données</a> — BFM Tech. Raison : Incident de fuite de données touchant une plateforme régulée, impactant potentiellement des millions de numéros. Pertinent pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://next.ink/251192/anthropic-va-tatouer-les-textes-et-les-images-generes-par-claude/">Anthropic va tatouer les textes et les images générés par Claude</a> — Next.ink. Raison : Obligation réglementaire AI Act avec impact direct sur la traçabilité des contenus IA, sujet pertinent pour RSSI et CTO en conformité.</li>
+<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/intelligence-artificielle/1553613-face-aux-cyberattaques-dopees-a-l-ia-attendre-nis-2-est-devenu-un-pari-risque/">Face aux cyberattaques dopées à l'IA, attendre NIS 2 est devenu un pari risqué</a> — Journal du Net. Raison : Analyse de l'impact de l'IA générative sur les cyberattaques et lien avec l'échéance réglementaire NIS 2, pertinent pour RSSI et CTO.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/251209/tuto-installer-proxmox-en-version-arm-sur-un-raspberry-pi/">\[Tuto\] Installer Proxmox en version Arm sur un Raspberry Pi</a> — Next.ink. Raison : Tutoriel technique pour installer Proxmox sur Raspberry Pi, utile pour expérimentation mais non officiel et sans impact sécurité ou stratégie majeur.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/elle-subit-2-63-millions-de-cyberattaques-par-jour-taiwan-simule-des-coupures-d-internet-pour-se-preparer-a-la-guerre-hybride-contre-la-chine_AV-202608120242.html">Elle subit 2,63 millions de cyberattaques par jour: Taïwan simule des coupures d’Internet pour se préparer à la guerre hybride contre la Chine</a> — BFM Tech. Raison : Article sur la préparation cyber de Taïwan face à la Chine. Intéressant pour la stratégie de résilience, mais sans détails techniques exploitables pour un public expert.</li>
+<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1553085-restriction-de-l-acces-aux-reseaux-sociaux-aux-mineurs-pour-que-ca-marche-il-faut-egalement-comprendre-pourquoi-ils-leur-font-du-mal/">Restriction de l'accès aux réseaux sociaux aux mineurs : pour que ça marche, il faut également comprendre pourquoi ils leur font du mal</a> — Journal du Net. Raison : Article d'opinion sur la régulation des réseaux sociaux pour mineurs. Pertinent pour la gouvernance cyber, mais sans contenu technique ou réglementaire structurant pour des experts.</li>
+<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/management/direction-generale/1553579-facturation-electronique-devenir-plateforme-agreee-c-est-changer-de-metier/">Facturation électronique : devenir Plateforme Agréée, c'est changer de métier</a> — Journal du Net. Raison : Article sur la facturation électronique et le changement de métier pour les éditeurs. Pertinent pour la stratégie SI mais sans angle cyber ou technique direct.</li>
+<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/fintech/1553595-le-capital-de-maitrise-l-indicateur-oublie-de-la-souverainete-numerique/">Le capital de maîtrise : l'indicateur oublié de la souveraineté numérique</a> — Journal du Net. Raison : Article d'opinion sur un concept de souveraineté numérique. Pertinent pour la réflexion stratégique mais sans contenu technique ni référence à une régulation concrète.</li>
+<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/intelligence-artificielle/1553599-depuis-le-2-aout-l-ai-act-a-deux-faux-prophetes-celui-qui-crie-et-celui-qui-berce/">Depuis le 2 août, l'AI Act a deux faux prophètes : celui qui crie et celui qui berce</a> — Journal du Net. Raison : Analyse des interprétations contradictoires de l'AI Act, utile pour la gouvernance mais sans information technique ou réglementaire nouvelle.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/brief-article/apple-prepare-un-systeme-pour-prouver-quune-photo-vient-bien-dun-iphone/">☕️ Apple prépare un système pour prouver qu’une photo vient bien d’un iPhone</a> — Next.ink. Raison : Annonce d'une fonctionnalité Apple pour authentifier les photos, intéressante pour la lutte contre la désinformation mais sans détail technique ni impact immédiat sur la sécurité des SI.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>NVIDIA pousse les architectures MoE pour l'exécution d'agents</strong> : NVIDIA publie Nemotron 3.5 Lightning, un modèle ouvert de 30 milliards de paramètres n'activant que 3 milliards de paramètres, couplé au routeur Switchyard qui oriente dynamiquement chaque étape vers le modèle le plus économique capable de la traiter. L'ensemble est spécifiquement conçu pour la couche d'exécution des agents IA. <a href="https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Les rédactions automatisées commencent à devancer les médias traditionnels</strong> : Une salle de rédaction entièrement IA a réussi à publier en premier une information sensible sur OpenAI et le piratage, coiffant au poteau des rédactions humaines comme WIRED. Ce fait marque un basculement concret dans la capacité des systèmes automatisés à réaliser du journalisme de nouvelle chaude, au-delà de la simple réécriture. <a href="https://www.wired.com/story/ai-newsrooms-are-breaking-news-now-haha-im-in-danger/">Wired</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/08/11/nvidia-ai-releases-nemotron-3-5-lightning-and-nemo-switchyard/">NVIDIA AI Releases Nemotron 3.5 Lightning: A 30B Open MoE with 3B Active Parameters, and NeMo Switchyard Model Router</a> — MarkTechPost. Raison : Nouveau modèle MoE open source de NVIDIA avec routage intelligent, pertinent pour l'optimisation des agents IA en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://www.wired.com/story/ai-newsrooms-are-breaking-news-now-haha-im-in-danger/">Oh Lord, AI Reporters Are Actually Breaking Big News</a> — Wired — AI. Raison : Annonce d'une IA battant les journalistes sur un scoop hacking, mais sans détail technique ni impact direct pour les experts ciblés.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260812-0639</guid>
-      <pubDate>Wed, 12 Aug 2026 06:39:45 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260812-1204</guid>
+      <pubDate>Wed, 12 Aug 2026 12:04:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
