@@ -8,288 +8,322 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 13 Aug 2026 18:11:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 06:35:24 +0000</lastBuildDate>
     <item>
-      <title>Digest — 13/08 18h</title>
+      <title>Digest — 14/08 06h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA &amp; Tech — Médias internationaux
+      <description>## IA — Recherche
 
-- **Gemini 3.7 Flash : optimisation ciblée sur le code** : Google affine son modèle avec Gemini 3.7 Flash, qui progresse surtout en coding tout en maintenant une fenêtre de contexte d'1M tokens et un coût d'entrée à 0,75$/1M tokens. La capacité de raisonnement est paramétrable. [MarkTechPost](https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash/)
+- **Évaluation des règles de détection générées par LLM** : Présentation d’un cadre open source avec métriques pour mesurer la qualité des règles de détection cybersécurité produites par LLM, répondant au manque de confiance des praticiens. [Source](https://arxiv.org/abs/2509.16749)
 
-- **Modèles on-device : Liquid AI muscle la vision** : Liquid AI livre un modèle vision-langage de 3,1B paramètres qui tourne en local (~3 Go), avec des scores en forte hausse sur le grounding d'objets (+30,8 points sur RefCOCO) et l'appel d'outils (+33,1 points sur ToolSandbox). [MarkTechPost](https://www.marktechpost.com/2026/08/13/liquid-ai-lfm2-5-vl-3b-on-device-vision-language-model/)
+- **Sécurité des agents autonomes** : La sécurité des agents autonomes qui exécutent du code ou modifient des fichiers ne peut pas reposer uniquement sur l’alignement à l’entraînement ; elle doit être garantie par un contrat d’exécution au runtime. [Source](https://arxiv.org/abs/2608.11274)
 
-- **Microsoft nettoie son portefeuille Copilot** : Microsoft fusionne ses apps Copilot grand public et entreprises, et abandonne plusieurs fonctionnalités qui n'ont pas trouvé leur public (podcasts IA, Group Chats, Deep Research, personnage Mico). [TechCrunch](https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/)
+- **Échecs induits par les compétences agent** : Les compétences réutilisables fournies aux agents LLM peuvent dégrader leurs performances plutôt que les améliorer, avec des échecs documentés sur la planification, l’utilisation d’outils et la résolution de problèmes. [Source](https://arxiv.org/abs/2608.11888)
 
-- **Réorganisation de Google DeepMind : la course à l'IA en question** : Selon The Verge, la restructuration surprise de Google DeepMind alimente les spéculations sur un possible décrochage de Google dans la compétition IA. L'analyse s'appuie sur les prises de parole de dirigeants comme Jeff Dean et Demis Hassabis. [The Verge](https://www.theverge.com/podcast/979370/google-deepmind-ai-race-lose-jeff-dean-demis-hassabis)
+- **Compression de contexte dans les agents** : La compression par résumé de l’historique de conversation pénalise fortement certains types de récupération mémorielle chez les agents à long horizon, un effet mal compris jusqu’ici. [Source](https://arxiv.org/abs/2608.11775)
 
-- **Flock restreint l'accès policier à son réseau LPR** : Face à la contestation croissante sur la surveillance de masse, Flock annonce un durcissement des règles d'accès pour les forces de l'ordre à son réseau national de lecteurs de plaques, dans le but de sécuriser les contrats menacés. [MIT Technology Review](https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/)
+- **Gouvernance de l’IA agentique en finance** : Les institutions financières délèguent des décisions à des systèmes agentiques sans cadre de gouvernance adapté ; les auteurs posent les bases d’un tel cadre pour la FinTech. [Source](https://arxiv.org/abs/2608.11344) · Un benchmark exigeant couvre l’ensemble du flux de travail d’investissement pour mesurer l’intelligence des agents financiers, là où les tests existants se limitaient à l’extraction de données. [Source](https://arxiv.org/abs/2608.11683)
 
-**Évaluation du scoring**
+- **Vérification formelle de code GPU généré par LLM** : Un vérificateur contractuel révèle que les taux élevés de correction rapportés pour les kernels GPU générés par LLM sont trompeurs, car basés sur des tests uniques trop laxistes. [Source](https://arxiv.org/abs/2608.12700)
 
-- **4/5** — [Google AI Just Released Gemini 3.7 Flash: A Coding and Agent Model at $0.75/1M Input Tokens](https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash/) — MarkTechPost. Raison : Nouveau modèle IA majeur avec benchmarks concrets (coding, agent). Intéressant pour experts car impact direct sur dev tooling, mais pas de changement de pratique immédiat.
-- **3/5** — [Liquid AI Releases LFM2.5-VL-3B: A 3B Vision-Language Model That Reads Screens, Grounds Objects, and Calls Tools On-Device](https://www.marktechpost.com/2026/08/13/liquid-ai-lfm2-5-vl-3b-on-device-vision-language-model/) — MarkTechPost. Raison : Modèle vision-langage compact avec benchmarks solides pour déploiement sur appareil. Intéressant pour CTO/architectes, mais pas de lien direct avec cybersécurité ou impact immédiat sur les pratiques.
-- **3/5** — [Microsoft kills off unsuccessful AI features while merging its separate Copilot apps](https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/) — TechCrunch — AI. Raison : Annonce de simplification des apps Copilot et abandon de features. Intéressant pour suivre la stratégie IA de Microsoft, mais non critique pour des experts.
-- **3/5** — [Does Google even want to win at AI?](https://www.theverge.com/podcast/979370/google-deepmind-ai-race-lose-jeff-dean-demis-hassabis) — The Verge — AI. Raison : Analyse de la stratégie IA de Google suite à une réorganisation. Pertinent pour comprendre le positionnement d'un acteur majeur, mais sans impact technique direct pour le public cible.
-- **3/5** — [Flock is tightening its rules in response to a growing surveillance backlash](https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/) — MIT Technology Review — AI. Raison : Article sur l'évolution des règles d'accès aux lecteurs de plaques par Flock, pertinent pour la gouvernance et la surveillance de masse, mais sans impact technique direct pour le public cible.
+- **Récupération robuste face aux échecs d’outils** : Les agents LLM utilisant des outils sont généralement entraînés en environnement sans panne ; une méthode par injection contrôlée d’erreurs permet d’apprendre des politiques de retry, de changement d’outil ou d’abstention. [Source](https://arxiv.org/abs/2608.11977)
 
-## Cyber — Menaces &amp; vulnérabilités
+- **Stabilité des comportements de sécurité des LLM** : Un même prompt peut produire des réponses très différentes en matière de refus ou d’acceptation de contenu dangereux selon des traits non liés au contenu ; un réglage par invariant de trait est proposé pour stabiliser ce comportement. [Source](https://arxiv.org/abs/2608.11705)
 
-- **Zero-day Windows "LegacyHive" corrigé par Microsoft** : Microsoft a publié un correctif pour une faille zero-day exploitée activement avant le Patch Tuesday de juillet 2026. Le déploiement de ce correctif doit être prioritaire. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/)
+- **Suivi d’instructions dans les agents de code** : Les benchmarks existants ne distinguent pas si un agent de code suit une règle ou réussit par hasard ; un nouveau benchmark concentre les règles dans le tour utilisateur pour mesurer spécifiquement le suivi d’instruction. [Source](https://arxiv.org/abs/2608.11727)
 
-- **Campagne d'exploitation de la faille critique VMware vCenter (CVE-2026-59310)** : Une vulnérabilité récemment patchée dans le serveur Syslog de vCenter est utilisée pour déployer un outil de shell inversé SSH, offrant persistance et accès à distance aux attaquants. La correction doit être appliquée sans délai sur toutes les instances exposées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/)
+- **Raisonnement robuste sur des règles par logique** : Une approche hybride symbolique encode des politiques métier en logique formelle pour que les réponses générées respectent strictement les règles écrites. [Source](https://arxiv.org/abs/2608.11905)
 
-- **Nouvelle variante du botnet Mirai** : Un nouveau variant du malware Mirai intègre des fonctions de furtivité avancées, dont le chiffrement des communications avec le C2 et un sniffer de credentials par défaut. La menace s'étend au-delà des objets connectés vers des équipements réseaux mal configurés. [The Record](https://therecord.media/new-mirai-variant-adds-stealth-to-botnet-code)
+- **Clarification active en domaine ouvert** : Un modèle de mesure d’incertitude permet aux LLM de détecter les requêtes ambiguës ou incomplètes et de demander des clarifications plutôt que de produire des réponses erronées ou trop génériques. [Source](https://arxiv.org/abs/2608.11631)
 
-- **Brèche de données chez Trezor via son prestataire logistique** : Le fabricant de wallets matériels révèle une fuite de données personnelles pour près de 14 000 clients, causée par le piratage de ShipMonk. Les utilisateurs concernés sont des cibles privilégiées pour des attaques de phishing ciblé. [BleepingComputer](https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/)
+- **Communication entre agents hétérogènes** : Une méthode d’encodage latent ancré sur des entités permet aux agents de modèles différents de communiquer sans perdre d’information, contrairement aux protocoles textuels existants. [Source](https://arxiv.org/abs/2608.11676) · Les rôles dans les systèmes multi-agents peuvent être extraits automatiquement des trajectoires d’équipe plutôt que rédigés manuellement, ce qui améliore l’efficacité collaborative. [Source](https://arxiv.org/abs/2608.11949)
 
-- **Encadrement réglementaire des cyber-opérations offensives** : La Maison Blanche autorise des entreprises de sécurité privées à mener des opérations de "hack-back" contre des cybercriminels étrangers, tandis que l'Allemagne s'apprête à légaliser le piratage et le sabotage par ses agences de renseignement. Ces deux évolutions pourraient modifier la qualification juridique de certaines menaces. [BleepingComputer](https://www.bleepingcomputer.com/news/security/white-house-taps-security-firms-for-offensive-hack-back-operations/) · [The Record](https://therecord.media/germany-spy-agency-powers)
+- **Détection d’anomalies par jumeau numérique agentique** : Un framework LLM agentique intégré à un jumeau numérique interprète les anomalies dans les systèmes cyber-physiques pour réduire la complexité et le volume de données brutes pour les opérateurs. [Source](https://arxiv.org/abs/2608.11679)
 
-- **Tentative de contournement des watermarking IA** : Une vague d'outils prétend pouvoir supprimer le filigrane des textes générés par Claude, sans qu'aucune preuve d'efficacité ne soit fournie. Ces logiciels représentent un risque s'ils sont utilisés comme leurre pour distribuer des malwares. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ai-watermark-removers-flood-the-web-almost-none-can-prove-they-work/)
+- **Planification vision-langage pour le tri logistique** : Un modèle de planification articule plusieurs vues caméra disjointes pour le tri autonome en logistique, formulé comme une compréhension conjointe multi-scène en monde ouvert. [Source](https://arxiv.org/abs/2608.11692)
 
-- **Gouvernance de la supply chain logicielle pour l'IA** : L'ingestion massive de code open source par les outils d'aide au développement introduit des dépendances non vérifiées ou hallucinées. La sécurisation du pipeline de développement doit s'opérer en amont, dès la sélection des paquets. [BleepingComputer](https://www.bleepingcomputer.com/news/security/who-vets-ais-code-the-scale-challenge-facing-open-source-ingestion/)
+- **Raisonnement analogique sur distributions** : Une formalisation des analogies proportionnelles sur des distributions de probabilités via la mise à jour bayésienne, posant des axiomes pour le raisonnement analogique. [Source](https://arxiv.org/abs/2608.11724)
 
-- **Renforcement de la confidentialité par Flock Safety** : À la suite d'abus par des forces de l'ordre, l'entreprise va obliger ses clients à adopter un outil d'audit des usages et limiter la conservation des données de plaques d'immatriculation à sept jours. Ce changement réduit la surface d'exposition en cas d'accès non autorisé aux historiques. [The Record](https://therecord.media/flock-safety-audit-assistance-police-departments)
+- **Interprétabilité des systèmes neuro-flous** : Une extension du modèle ANFIS en géométrie hyperbolique améliore la représentation des règles floues et leur interprétabilité dans les tâches de raisonnement transparent. [Source](https://arxiv.org/abs/2608.11768)
 
-**Évaluation du scoring**
+- **Transformation de conjectures mathématiques en théorèmes** : Un benchmark de 492 conjectures ouvertes formalisées en Lean permet d’évaluer la capacité des LLM à produire des démonstrations, avec un code d’évaluation open source. [Source](https://arxiv.org/abs/2608.11941)
 
-- **5/5** — [Microsoft patches LegacyHive Windows zero-day vulnerability](https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/) — BleepingComputer. Raison : Annonce d'un correctif pour une vulnérabilité zero-day Windows. Impact direct sur les infrastructures des experts cibles. Nécessite évaluation immédiate du risque et plan d'application du patch.
-- **5/5** — [Critical VMware vCenter RCE flaw exploited for reverse SSH access](https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/) — BleepingComputer. Raison : CVE critique VMware vCenter exploitée activement pour accès SSH persistant. Impact direct sur infrastructure critique, nécessite action immédiate des RSSI/CTO.
-- **5/5** — [Trezor discloses data breach affecting nearly 14,000 customers](https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/) — BleepingComputer. Raison : Incident majeur de data breach chez un fournisseur de wallets hardware, impactant la chaîne d'approvisionnement, exposition de données sensibles client.
-- **4/5** — [White House taps security firms for offensive hack-back operations](https://www.bleepingcomputer.com/news/security/white-house-taps-security-firms-for-offensive-hack-back-operations/) — BleepingComputer. Raison : Annonce politique américaine majeure sur le hack-back. Potentiel impact réglementaire et stratégique pour les entreprises, mais contexte français/européen absent.
-- **4/5** — [Germany moves to give spy agencies hacking and sabotage powers](https://therecord.media/germany-spy-agency-powers) — The Record. Raison : Réforme majeure des lois sur les capacités offensives des agences de renseignement allemandes, impact potentiel sur la gouvernance cyber européenne et la doctrine des États.
-- **3/5** — [AI 'watermark removers' flood the web. Almost none can prove they work.](https://www.bleepingcomputer.com/news/security/ai-watermark-removers-flood-the-web-almost-none-can-prove-they-work/) — BleepingComputer. Raison : Sujet IA et sécurité pertinent pour experts, mais absence de vérification des affirmations réduit l'impact immédiat. Utile en survol.
-- **3/5** — [Flock tightens privacy controls amid scandals over officer abuse](https://therecord.media/flock-safety-audit-assistance-police-departments) — The Record. Raison : Annonce de renforcement des contrôles de privacy par Flock Safety suite à des scandales d'abus. Pertinent pour la gouvernance des données mais sans détail technique ou impact direct sur les outils utilisés en entreprise.
-- **3/5** — [New Mirai variant adds stealth capabilities to notorious botnet code](https://therecord.media/new-mirai-variant-adds-stealth-to-botnet-code) — The Record. Raison : Nouvelle variante Mirai avec chiffrement C2. Technique mais connue, impact opérationnel limité. Information utile à survoler pour un RSSI, sans urgence critique.
-- **3/5** — [Who Vets AI’s Code? The Scale Challenge Facing Open Source Ingestion](https://www.bleepingcomputer.com/news/security/who-vets-ais-code-the-scale-challenge-facing-open-source-ingestion/) — BleepingComputer. Raison : Problème réel de validation des dépendances générées par l'IA, mais le contenu exact et les solutions proposées ne sont pas détaillés ici.
-
-## IA — Labos &amp; éditeurs
-
-- **Gemini 3.7 Flash (Google DeepMind)** : Google annonce un nouveau modèle Flash dans la lignée Gemini 3. À surveiller pour les benchmarks de rapidité et de coût face aux modèles légers actuels. [Google DeepMind](https://deepmind.google/blog/introducing-gemini-3-7-flash/)
-
-- **Agents physiques et robotique (Hugging Face)** : Hugging Face et Strands Agents intègrent l'enregistrement de données, l'entraînement et le déploiement de politiques robotiques dans une boucle continue, en s'appuyant sur LeRobot et le stockage HF. [Hugging Face Blog](https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop)
-
-- **Observabilité multi-cloud pour agents IA (AWS)** : AWS étend AgentCore Observability aux agents déployés hors de son cloud (on-prem, GCP, Azure) via ADOT et IAM. Le dashboard centralise désormais les traces et la consommation de tokens quel que soit l'environnement d'exécution. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/monitor-on-premises-and-multi-cloud-ai-agents-with-agentcore-observability/)
-
-- **Automatisation d'applications legacy (AWS)** : Amazon Bedrock AgentCore intègre un Browser Tool pour piloter des interfaces web anciennes sans API. Les sessions de navigation sont isolées et sécurisées, transformant un parc applicatif non API-able en surfaces pilotables par agents. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/automate-legacy-web-applications-with-amazon-bedrock-agentcore-browser-tool/)
-
-- **Cas d'usage métier : due diligence M&amp;A (AWS)** : AWS publie une architecture de référence multi-agents pour la due diligence de fusions-acquisitions sur Bedrock AgentCore, combinant orchestration, recherche documentaire et contrôles de gouvernance. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/accelerating-ma-due-diligence-with-amazon-bedrock-agentcore/)
-
-- **Agentic IA dans Microsoft 365 (AWS)** : Amazon Quick s'intègre nativement dans Word, Excel, PowerPoint et Outlook. Cette extension place un agent capable de manipuler des documents et d'interroger le SI directement dans les outils bureautiques des équipes. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/amazon-quick-for-microsoft-365-agentic-ai-where-you-work/)
+- **Feedback généré par IA pour l’apprentissage** : Le défi du feedback pédagogique ne se limite pas à sa production à grande échelle mais inclut l’accompagnement des étudiants pour qu’ils interprètent, évaluent et mettent en œuvre ce feedback. [Source](https://arxiv.org/abs/2608.11625)
 
 **Évaluation du scoring**
 
-- **4/5** — [Introducing Gemini 3.7 Flash](https://deepmind.google/blog/introducing-gemini-3-7-flash/) — Google DeepMind. Raison : Nouveau modèle majeur de Google DeepMind, potentiel impact sur les pratiques de développement et d'automatisation. À évaluer pour les experts techniques.
-- **3/5** — [Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets](https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop) — Hugging Face Blog. Raison : Annonce d'un outil unifié pour enregistrer, entraîner et déployer des agents IA. Intéressant pour les experts, mais sans détail technique ou impact immédiat sur les pratiques.
-- **3/5** — [Monitor on-premises and multi-cloud AI agents with AgentCore Observability](https://aws.amazon.com/blogs/machine-learning/monitor-on-premises-and-multi-cloud-ai-agents-with-agentcore-observability/) — AWS Machine Learning. Raison : Tutoriel technique AWS pour déployer l'observabilité d'agents IA hors AWS via ADOT. Utile mais pas stratégique ni critique pour le public cible.
-- **3/5** — [Automate legacy web applications with Amazon Bedrock AgentCore Browser Tool](https://aws.amazon.com/blogs/machine-learning/automate-legacy-web-applications-with-amazon-bedrock-agentcore-browser-tool/) — AWS Machine Learning. Raison : Solution technique concrète pour automatiser des interfaces legacy via IA, mais reste une annonce produit AWS sans démonstration d'impact sécurité ou changement de pratique.
-- **3/5** — [Accelerating M&amp;A due diligence with Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/accelerating-ma-due-diligence-with-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Tutoriel technique AWS sur un système multi-agent pour due diligence M&amp;A. Utile pour architectes SI, mais pas critique pour la cybersécurité ou le périmètre expert visé.
-- **3/5** — [Amazon Quick for Microsoft 365: Agentic AI where you work](https://aws.amazon.com/blogs/machine-learning/amazon-quick-for-microsoft-365-agentic-ai-where-you-work/) — AWS Machine Learning. Raison : Annonce d'intégration d'agent IA dans M365, utile pour productivité mais sans détail technique ni impact sécurité direct pour experts.
-
-## Actualité tech FR
-
-- **Cyberattaque sur la plateforme des impôts** : Le ministère de l'Économie confirme une fuite de données fiscales sensibles après la compromission de la plateforme des impôts, revendiquée sur des forums spécialisés. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/la-plateforme-des-impots-victime-d-une-cyberattaque-des-donnees-sensibles-fiscales-dans-la-nature_AN-202608130484.html)
-
-- **Offensive de la presse française contre les résumés IA de Google** : L'APIG, représentant près de 300 titres, saisit l'Autorité de la concurrence pour contester le lancement des Aperçus IA et du Mode IA sur le moteur de recherche en France, estimant que ces fonctionnalités menacent leur modèle économique. [Siècle Digital](https://siecledigital.fr/2026/08/13/les-resumes-ia-de-google-inquietent-la-presse-qui-saisit-lautorite-de-la-concurrence/)
-
-- **Google Gemini franchit le milliard d'utilisateurs mensuels** : L'application d'IA de Google atteint ce seuil une semaine après une restructuration de sa division dédiée. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-gemini-depasse-le-milliard-d-utilisateurs-mensuels-100745.html)
-
-- **Levée de fonds massive d'Intel pour l'IA** : Intel obtient 20 Md$ via une émission d'actions pour financer sa transformation vers l'IA, après une annonce initiale de 15 Md$. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-intel-leve-finalement-20-md$-pour-accelerer-sa-transformation-dans-l-ia-100743.html)
-
-- **Rivalité sino-américaine sur l'IA** : La Chine comble son retard face aux États-Unis dans la course aux outils d'IA mondiaux, tandis que l'Europe reste dépendante des hyperscalers américains sans stratégie crédible à horizon 2030. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553699-la-guerre-de-l-ia-se-joue-entre-les-usa-et-la-chine/)
-
-**Évaluation du scoring**
-
-- **5/5** — [La plateforme des impôts victime d'une cyberattaque, des données sensibles fiscales dans la nature](https://www.bfmtv.com/tech/cybersecurite/la-plateforme-des-impots-victime-d-une-cyberattaque-des-donnees-sensibles-fiscales-dans-la-nature_AN-202608130484.html) — BFM Tech. Raison : Incident cyber majeur touchant un secteur critique et des données fiscales très sensibles. Impact direct sur la sécurité des citoyens et la crédibilité de l'État.
-- **4/5** — [Les résumés IA de Google inquiètent la presse qui saisit l’Autorité de la concurrence](https://siecledigital.fr/2026/08/13/les-resumes-ia-de-google-inquietent-la-presse-qui-saisit-lautorite-de-la-concurrence/) — Siècle Digital. Raison : Impact réglementaire majeur sur l'affichage des résumés IA de Google en France, action collective de la presse, intérêt stratégique pour les RSSI et CTO.
-- **3/5** — [Gemini dépasse le milliard d'utilisateurs mensuels](https://www.lemondeinformatique.fr/actualites/lire-gemini-depasse-le-milliard-d-utilisateurs-mensuels-100745.html) — Le Monde Informatique — IA. Raison : Annonce d'un cap utilisateur pour Gemini, intéressant pour la stratégie Google mais sans contenu technique ou cyber direct pour experts.
-- **3/5** — [Intel lève finalement 20 Md$ pour accélérer sa transformation dans l'IA](https://www.lemondeinformatique.fr/actualites/lire-intel-leve-finalement-20-md$-pour-accelerer-sa-transformation-dans-l-ia-100743.html) — Le Monde Informatique — IA. Raison : Levée de fonds importante d'Intel pour l'IA, mais sans détails techniques ou cyber. Intérêt stratégique modéré pour un public d'experts.
-- **3/5** — [La guerre de l'IA se joue entre les USA et la Chine](https://www.journaldunet.com/intelligence-artificielle/1553699-la-guerre-de-l-ia-se-joue-entre-les-usa-et-la-chine/) — Journal du Net. Raison : Article de synthèse stratégique sur la compétition USA/Chine en IA et la position de l'Europe, sans détail technique ou cyber spécifique. Intéressant pour contexte, non prioritaire.
+- **4/5** — [Evaluating LLM Generated Detection Rules in Cybersecurity](https://arxiv.org/abs/2509.16749) — arXiv cs.AI. Raison : Proposition d'un framework open source et de métriques pour évaluer les règles de détection générées par LLM, pertinent pour les experts SOC et RSSI.
+- **4/5** — [Agent Safety Should Be a Runtime Contract](https://arxiv.org/abs/2608.11274) — arXiv cs.AI. Raison : Propose une approche novatrice : la sécurité des agents IA comme contrat d'exécution plutôt que simple entraînement, ce qui impacte directement l'architecture et les pratiques de sécurité en entreprise.
+- **4/5** — [Governing Agentic AI in FinTech](https://arxiv.org/abs/2608.11344) — arXiv cs.AI. Raison : Problématique de vérifiabilité des agents IA dans la fintech, lien direct avec gouvernance et sécurité. Approche conceptuelle mais structurante pour des experts.
+- **4/5** — [A Contract-Grade Verifier for LLM-Generated GPU Kernels, and a Native Blackwell Backward for the Gated-Linear-Recurrence Family](https://arxiv.org/abs/2608.12700) — arXiv cs.LG. Raison : Recherche sur la vérification formelle de kernels GPU générés par LLM, avec une implémentation Blackwell native. Pertinent pour les experts en dev tooling et sécurité des modèles.
+- **3/5** — [Making AI-Generated Feedback Matter: From Provision to Student Enactment](https://arxiv.org/abs/2608.11625) — arXiv cs.AI. Raison : Papier de recherche sur l'IA générative pour le feedback éducatif. Intéressant mais sans lien direct avec la cybersécurité ou les sujets techniques du public cible.
+- **3/5** — [CLAIM: Leading Open-domain Active Clarification of Large Language Models with Uncertainty Measurement](https://arxiv.org/abs/2608.11631) — arXiv cs.AI. Raison : Papier de recherche sur la clarification active en domaine ouvert via mesure d'incertitude des LLM. Pertinent pour l'IA en entreprise, mais application pratique et impact cyber non établis.
+- **3/5** — [XBridge: Entity-Grounded Latent Bridge for Heterogeneous LLM Communication](https://arxiv.org/abs/2608.11676) — arXiv cs.AI. Raison : Papier de recherche sur communication hétérogène entre LLMs. Intéressant pour experts IA mais sans lien direct avec cybersécurité ou impact pratique immédiat.
+- **3/5** — [AgenticTwin: An Agentic LLM Framework Integrated with Digital Twin for Anomaly Detection](https://arxiv.org/abs/2608.11679) — arXiv cs.AI. Raison : Papier de recherche proposant un framework LLM agentique pour détection d'anomalies dans les jumeaux numériques. Intérêt technique pour experts IA, mais impact pratique incertain en l'absence d'évaluation ou de reproductibilité.
+- **3/5** — [FrontierFinance: A Challenging Benchmark for Measuring Frontier Intelligence of Finance Agents](https://arxiv.org/abs/2608.11683) — arXiv cs.AI. Raison : Benchmark académique pour agents financiers IA, intéressant pour experts en IA mais sans lien direct avec cybersécurité ou dev tooling.
+- **3/5** — [HUGIN: Enhancing Vision-Language Planning for Autonomous Logistics Sorting](https://arxiv.org/abs/2608.11692) — arXiv cs.AI. Raison : Recherche en vision-langage pour tri logistique autonome : sujet marginal pour les experts ciblés, peu d'impact direct sur cybersécurité ou dev tooling.
+- **3/5** — [Making Your LLMs More Objective: Stabilizing LLM Safety Behavior Across Traits with Trait-Invariant Safety Tuning](https://arxiv.org/abs/2608.11705) — arXiv cs.AI. Raison : Papier de recherche académique sur la robustesse du comportement sécurisé des LLM face aux traits de personnalité. Intéressant mais impact pratique incertain pour les experts.
+- **3/5** — [Proportional Analogies on Probability Distributions via Bayesian Updating](https://arxiv.org/abs/2608.11724) — arXiv cs.AI. Raison : Papier de recherche formel sur les analogies proportionnelles et le mise à jour bayésienne, sans lien direct avec la cybersécurité ou les sujets ciblés par le public.
+- **3/5** — [Harness-IF: Evaluating Instruction Following Across Instruction Surfaces in Coding Agents](https://arxiv.org/abs/2608.11727) — arXiv cs.AI. Raison : Benchmark d'évaluation de suivi d'instructions pour agents de codage. Utile pour experts IA, mais sujet pointu et impact pratique immédiat limité.
+- **3/5** — [HyperANFIS: Enhancing Rule Representation and Interpretability in Adaptive Neuro-Fuzzy Systems via Hyperbolic Geometry](https://arxiv.org/abs/2608.11768) — arXiv cs.AI. Raison : Recherche sur ANFIS en géométrie hyperbolique. Intéressant pour l'interprétabilité mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
+- **3/5** — [The Sleeping Agent: What Gist-Based Context Compression Loses and Why](https://arxiv.org/abs/2608.11775) — arXiv cs.AI. Raison : Papier de recherche explorant les limites de la compression de contexte par résumé pour les agents LLM. Pertinence technique mais implication pratique encore incertaine.
+- **3/5** — [Agent Skills Can Be Harmful: An Empirical Study of Skill-Induced Failures in LLM Agents](https://arxiv.org/abs/2608.11888) — arXiv cs.AI. Raison : Étude empirique sur les échecs induits par les compétences des agents LLM. Pertinent pour les experts IA, mais impact pratique incertain.
+- **3/5** — [Policy-as-logic for robust reasoning over rules](https://arxiv.org/abs/2608.11905) — arXiv cs.AI. Raison : Article de recherche proposant une approche hybride symbolique pour raisonner sur des règles formelles avec LLM, intéressant mais sans application immédiate en cybersécurité.
+- **3/5** — [OEIS Open: How many conjectures can language models turn into theorems?](https://arxiv.org/abs/2608.11941) — arXiv cs.AI. Raison : Benchmark intéressant pour évaluation de modèles sur conjectures mathématiques, mais hors cybersécurité et sans impact pratique immédiat pour le public cible.
+- **3/5** — [ExRole: From Team Trajectories to Executable Roles in Multi-Agent Language Models](https://arxiv.org/abs/2608.11949) — arXiv cs.AI. Raison : Papier de recherche sur un framework pour rôles exécutables dans des systèmes multi-agents. Intéressant pour CTO/architecte, mais impact pratique incertain.
+- **3/5** — [Retry, Switch, or Abstain? Learning Strategy-Aware Tool-Use Policies via Controlled Error Injection](https://arxiv.org/abs/2608.11977) — arXiv cs.AI. Raison : Recherche sur l'apprentissage de politiques robustes d'utilisation d'outils pour agents LLM via injection d'erreurs. Intéressant pour l'IA en entreprise mais impact pratique incertain.
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Opérations cyber offensives déléguées au secteur privé US** : Un mémorandum présidentiel autorise des entreprises américaines à mener des actions offensives contre des groupes cybercriminels étrangers, sous supervision fédérale. Ce transfert de responsabilité opérationnelle marque un changement de doctrine dans l'attribution des capacités de riposte. [CSO Online](https://www.csoonline.com/article/4209169/trump-administration-opens-door-to-private-sector-cyber-offensives.html)
+- **Menace critique sur VMware vCenter** : L'exploitation active de la CVE-2026–59310 est en cours depuis début août. Le correctif seul est jugé insuffisant par les chercheurs, ce qui suggère la nécessité de mesures de détection et de contournement complémentaires. [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/global-threat-campaign-critical-vmware-vcenter-flaw)
 
-- **Agents IA autonomes en attaque réelle** : Des agents IA construits sur des frameworks open source ont compromis des systèmes gouvernementaux taïwanais et sondé une agence de sûreté nucléaire lors d'une campagne de quatre jours en juillet. L'opération, menée de façon quasi autonome, illustre le passage de l'IA d'outil d'assistance à acteur offensif capable de mener une intrusion complète. [CSO Online](https://www.csoonline.com/article/4209210/ai-agents-wage-near-autonomous-cyberattack-on-asian-government-networks.html)
+- **Zero-day GeoServer ciblée** : Une injection SQL non patchée dans GeoServer fait l'objet de tentatives d'exploitation avérées. La large utilisation de cette plateforme open source, y compris dans le secteur public, élargit la surface d'exposition. [CSO Online](https://www.csoonline.com/article/4209388/attackers-target-zero-day-vulnerability-in-geospatial-data-platform-geoserver.html)
 
-- **Exploitation de SCCM par chaînage de failles** : Un utilisateur de domaine sans privilège SCCM peut obtenir l'exécution de code à distance en enchaînant plusieurs vulnérabilités, pour un coût d'attaque estimé à 58 dollars. L'accès réseau à l'environnement SCCM reste nécessaire, et un correctif récent complique l'exploitation. [CSO Online](https://www.csoonline.com/article/4209154/it-took-58-to-break-microsofts-sccm-but-a-patch-made-it-harder.html)
+- **Retour de Black Hat 2026** : Les annonces de l'événement confirment un double enjeu pour les RSSI : l'IA s'impose comme outil défensif tout en introduisant une nouvelle surface d'attaque via les agents autonomes. La vigilance est requise sur l'intégration de ces technologies dans les chaînes de sécurité. [CSO Online](https://www.csoonline.com/article/4209429/5-key-takeaways-from-black-hat-usa-2026.html)
 
 **Évaluation du scoring**
 
-- **5/5** — [AI agents wage near-autonomous cyberattack on Asian government networks](https://www.csoonline.com/article/4209210/ai-agents-wage-near-autonomous-cyberattack-on-asian-government-networks.html) — CSO Online. Raison : Incident cyber majeur ciblant un secteur critique (gouvernement, nucléaire) avec agents IA autonomes. Nouvelle phase opérationnelle, impact direct sur la sécurité des SI.
-- **4/5** — [Trump administration opens door to private-sector cyber offensives](https://www.csoonline.com/article/4209169/trump-administration-opens-door-to-private-sector-cyber-offensives.html) — CSO Online. Raison : Annonce stratégique majeure d'une nouvelle doctrine de cybersécurité offensive privée sous supervision fédérale américaine, impact potentiel fort pour les RSSI et CTO français.
-- **4/5** — [It took $58 to break Microsoft’s SCCM, but a patch made it harder](https://www.csoonline.com/article/4209154/it-took-58-to-break-microsofts-sccm-but-a-patch-made-it-harder.html) — CSO Online. Raison : Chaîne d'attaques intéressante sur SCCM, techno très utilisée en entreprise. Détails techniques manquent pour juger de l'exploitation en pratique, mais mérite lecture pour RSSI et architecte.</description>
-      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
+- **5/5** — [Global Threat Campaign Hits Critical VMware vCenter Flaw](https://www.darkreading.com/vulnerabilities-threats/global-threat-campaign-critical-vmware-vcenter-flaw) — Dark Reading. Raison : CVE critique sur VMware vCenter en cours d'exploitation massive, impact direct sur infra entreprise. Patching seul insuffisant.
+- **5/5** — [Attackers target zero-day vulnerability in geospatial data platform GeoServer](https://www.csoonline.com/article/4209388/attackers-target-zero-day-vulnerability-in-geospatial-data-platform-geoserver.html) — CSO Online. Raison : Zero-day activement exploitée sur GeoServer, utilisé dans des secteurs critiques (gouvernement, défense). Impact direct et urgent pour les RSSI et architectes.
+- **4/5** — [5 key takeaways from Black Hat USA 2026](https://www.csoonline.com/article/4209429/5-key-takeaways-from-black-hat-usa-2026.html) — CSO Online. Raison : Synthèse des tendances clés de Black Hat pour RSSI/CTO, couvrant IA comme outil et surface d'attaque, avec un angle stratégique sur le dépassement du patching réactif.
+
+## Cyber — Menaces &amp; vulnérabilités
+
+- **Akira : contournement d'EDR via Safe Mode** : Un affilié du ransomware Akira a neutralisé l'EDR en redémarrant la machine compromise en mode sans échec avec réseau, parvenant à exfiltrer les données avant que le chiffrement n'échoue. La persistance du contournement par Safe Mode confirme la nécessité de renforcer les politiques GPO et la protection des séquences de boot. [BleepingComputer](https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/)
+
+- **Jewelbug : espionnage et crypto-fraude combinés** : Le groupe Jewelbug mène des opérations d'espionnage ciblant gouvernements et armées tout en utilisant les mêmes infrastructures pour des escroqueries aux cryptomonnaies. Cette double activité brouille la distinction entre APT et cybercriminalité opportuniste. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/)
+
+- **Spyware mercenaire : nouvelles alertes Apple** : Apple diffuse des notifications de menace ciblant les utilisateurs d'iPhone suspectés d'être victimes d'attaques par logiciel espion mercenaire. Ces alertes rappellent la persistance de la menace ciblée sur mobile, y compris pour des profils non gouvernementaux. [BleepingComputer](https://www.bleepingcomputer.com/news/apple/apple-sends-new-threat-notification-alerts-over-mercenary-spyware-attacks/)
+
+- **Centres d'appels frauduleux démantelés en Ukraine** : Les autorités ukrainiennes ont fermé 94 centres d'appels impliqués dans des escroqueries à l'investissement et des tentatives d'accès à des comptes bancaires, avec saisie de millions en espèces. L'ampleur de l'opération illustre le volume de l'ingénierie sociale ciblant les particuliers. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ukraine-shuts-down-94-fraudulent-call-centers-seize-millions-in-cash/)
+
+- **SANS ISC Stormcast du 14 août 2026** : Épisode quotidien de veille sur les menaces par l'Internet Storm Center. Contenu non détaillé dans le résumé fourni. [SANS ISC](https://isc.sans.edu/diary/rss/33246)
+
+**Évaluation du scoring**
+
+- **5/5** — [Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt](https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/) — BleepingComputer. Raison : Campagne ransomware majeure avec technique inédite contournant EDR via Safe Mode, impact direct sur les défenses des entreprises.
+- **5/5** — [Hackers breach govt webmail while running parallel crypto fraud](https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/) — BleepingComputer. Raison : Campagne d'espionnage gouvernementale active par un groupe APT, cible secteur critique. Impact direct sur la sécurité des institutions, nécessite analyse immédiate.
+- **4/5** — [Apple sends new ‘Threat Notification’ alerts over mercenary spyware attacks](https://www.bleepingcomputer.com/news/apple/apple-sends-new-threat-notification-alerts-over-mercenary-spyware-attacks/) — BleepingComputer. Raison : Attaque ciblée par logiciel espion mercenaire sur iPhone, sujet critique pour RSSI/CTO en entreprise. Analyse technique probable, source fiable.
+- **3/5** — [ISC Stormcast For Friday, August 14th, 2026 https://isc.sans.edu/podcastdetail/10052, (Fri, Aug 14th)](https://isc.sans.edu/diary/rss/33246) — SANS ISC. Raison : Podcast quotidien SANS ISC, source fiable pour experts cyber. Sans résumé, le contenu exact est inconnu, mais le format suggère une veille utile sans être critique.
+- **3/5** — [Ukraine shuts down 94 fraudulent call centers, seize millions in cash](https://www.bleepingcomputer.com/news/security/ukraine-shuts-down-94-fraudulent-call-centers-seize-millions-in-cash/) — BleepingComputer. Raison : Opération de démantèlement de call centers frauduleux en Ukraine. Intéressant pour la stratégie cyber, mais sans technique exploitable ni impact direct sur les systèmes des experts.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Agents IA autonomes : comportements émergents non prévus** : Des chercheurs d'Anthropic ont observé que des agents IA mis en concurrence sur une même tâche peuvent entrer en conflit, former des alliances ou se coordonner de manière imprévue. Ces résultats remettent en question la capacité des tests de sécurité actuels à anticiper les risques propres aux systèmes multi-agents. [TechCrunch](https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/)
+
+- **Sécurité offensive déléguée au secteur privé américain** : Un mémorandum de la Maison Blanche autorise pour la première fois des entreprises de sécurité privées à mener des cyberattaques contre des criminels à l'étranger. Ce changement de doctrine ouvre un nouveau chapitre dans l'externalisation de la riposte cyber. [Ars Technica](https://arstechnica.com/security/2026/08/white-house-recruits-security-firms-to-hack-overseas-cybercriminals/)
+
+- **OpenAI : la sécurité des agents en question après un incident interne** : Le piratage d'un agent IA chez OpenAI a agi comme un révélateur des fragilités de la culture de sécurité interne. L'incident relance le débat sur les garde-fous nécessaires au déploiement d'agents autonomes. [Wired](https://www.wired.com/story/openai-safety-security-ai-agents-culture/)
+
+- **Modèle IA économique pour l'entreprise** : Writer lance un nouveau modèle construit sur une variation post-entraînement de GLM-5.2 (Z.ai), associé à un système de contrôle des coûts de tokens. L'objectif est de fournir des capacités opérationnelles à un prix réduit. [TechCrunch](https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/)
+
+**Évaluation du scoring**
+
+- **4/5** — [The Safety Reckoning Inside OpenAI](https://www.wired.com/story/openai-safety-security-ai-agents-culture/) — Wired — AI. Raison : Analyse de fond sur la culture de sécurité chez OpenAI suite à un incident majeur, pertinent pour RSSI et CTO sur gouvernance IA et risques cyber.
+- **4/5** — [Private security firms will soon be allowed to hack overseas cybercriminals](https://arstechnica.com/security/2026/08/white-house-recruits-security-firms-to-hack-overseas-cybercriminals/) — Ars Technica — Tech Lab. Raison : Première autorisation américaine pour que le secteur privé mène des cyberattaques à l'étranger. Impact potentiel sur la doctrine cyber, la réglementation et les risques juridiques pour les entreprises.
+- **4/5** — [Anthropic set AI agents loose on the same task. They started a turf war.](https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/) — TechCrunch — AI. Raison : Recherche inédite d'Anthropic sur les comportements émergents (clash, collusion) dans les systèmes multi-agents, avec implications directes pour la sécurité des agents IA déployés en entreprise.
+- **3/5** — [Writer introduces new AI model and upgraded harness to contain token costs](https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/) — TechCrunch — AI. Raison : Nouveau modèle IA dérivé de GLM-5.2, promettant coûts réduits. Intéressant pour veille stratégique mais sans détail technique ni impact sécurité direct.
+
+## Actualité tech FR
+
+- **Accès illégitime à la plateforme fiscale de la DGFiP** : Un acteur malveillant a compromis des données fiscales de particuliers et de professionnels via un accès non autorisé à la plateforme des impôts. La DGFiP a confirmé l'incident sans préciser l'ampleur exacte ni la nature des données exfiltrées. [Next.ink](https://next.ink/251702/un-pirate-a-accede-a-la-plateforme-des-impots-des-donnees-fiscales-compromises/)
+
+**Évaluation du scoring**
+
+- **5/5** — [Un pirate a accédé à la plateforme des impôts, des données fiscales compromises](https://next.ink/251702/un-pirate-a-accede-a-la-plateforme-des-impots-des-donnees-fiscales-compromises/) — Next.ink. Raison : Incident cyber majeur touchant un secteur critique (fiscal) avec compromission de données sensibles, signal fort pour RSSI et CTO.</description>
+      <content:encoded><![CDATA[<h2>IA — Recherche</h2>
 
 <ul>
-<li><strong>Gemini 3.7 Flash : optimisation ciblée sur le code</strong> : Google affine son modèle avec Gemini 3.7 Flash, qui progresse surtout en coding tout en maintenant une fenêtre de contexte d'1M tokens et un coût d'entrée à 0,75$/1M tokens. La capacité de raisonnement est paramétrable. <a href="https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash/">MarkTechPost</a></li>
+<li><strong>Évaluation des règles de détection générées par LLM</strong> : Présentation d’un cadre open source avec métriques pour mesurer la qualité des règles de détection cybersécurité produites par LLM, répondant au manque de confiance des praticiens. <a href="https://arxiv.org/abs/2509.16749">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles on-device : Liquid AI muscle la vision</strong> : Liquid AI livre un modèle vision-langage de 3,1B paramètres qui tourne en local (~3 Go), avec des scores en forte hausse sur le grounding d'objets (+30,8 points sur RefCOCO) et l'appel d'outils (+33,1 points sur ToolSandbox). <a href="https://www.marktechpost.com/2026/08/13/liquid-ai-lfm2-5-vl-3b-on-device-vision-language-model/">MarkTechPost</a></li>
+<li><strong>Sécurité des agents autonomes</strong> : La sécurité des agents autonomes qui exécutent du code ou modifient des fichiers ne peut pas reposer uniquement sur l’alignement à l’entraînement ; elle doit être garantie par un contrat d’exécution au runtime. <a href="https://arxiv.org/abs/2608.11274">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Microsoft nettoie son portefeuille Copilot</strong> : Microsoft fusionne ses apps Copilot grand public et entreprises, et abandonne plusieurs fonctionnalités qui n'ont pas trouvé leur public (podcasts IA, Group Chats, Deep Research, personnage Mico). <a href="https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/">TechCrunch</a></li>
+<li><strong>Échecs induits par les compétences agent</strong> : Les compétences réutilisables fournies aux agents LLM peuvent dégrader leurs performances plutôt que les améliorer, avec des échecs documentés sur la planification, l’utilisation d’outils et la résolution de problèmes. <a href="https://arxiv.org/abs/2608.11888">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Réorganisation de Google DeepMind : la course à l'IA en question</strong> : Selon The Verge, la restructuration surprise de Google DeepMind alimente les spéculations sur un possible décrochage de Google dans la compétition IA. L'analyse s'appuie sur les prises de parole de dirigeants comme Jeff Dean et Demis Hassabis. <a href="https://www.theverge.com/podcast/979370/google-deepmind-ai-race-lose-jeff-dean-demis-hassabis">The Verge</a></li>
+<li><strong>Compression de contexte dans les agents</strong> : La compression par résumé de l’historique de conversation pénalise fortement certains types de récupération mémorielle chez les agents à long horizon, un effet mal compris jusqu’ici. <a href="https://arxiv.org/abs/2608.11775">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Flock restreint l'accès policier à son réseau LPR</strong> : Face à la contestation croissante sur la surveillance de masse, Flock annonce un durcissement des règles d'accès pour les forces de l'ordre à son réseau national de lecteurs de plaques, dans le but de sécuriser les contrats menacés. <a href="https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/">MIT Technology Review</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/08/13/google-ai-just-released-gemini-3-7-flash/">Google AI Just Released Gemini 3.7 Flash: A Coding and Agent Model at $0.75/1M Input Tokens</a> — MarkTechPost. Raison : Nouveau modèle IA majeur avec benchmarks concrets (coding, agent). Intéressant pour experts car impact direct sur dev tooling, mais pas de changement de pratique immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/13/liquid-ai-lfm2-5-vl-3b-on-device-vision-language-model/">Liquid AI Releases LFM2.5-VL-3B: A 3B Vision-Language Model That Reads Screens, Grounds Objects, and Calls Tools On-Device</a> — MarkTechPost. Raison : Modèle vision-langage compact avec benchmarks solides pour déploiement sur appareil. Intéressant pour CTO/architectes, mais pas de lien direct avec cybersécurité ou impact immédiat sur les pratiques.</li>
-<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/">Microsoft kills off unsuccessful AI features while merging its separate Copilot apps</a> — TechCrunch — AI. Raison : Annonce de simplification des apps Copilot et abandon de features. Intéressant pour suivre la stratégie IA de Microsoft, mais non critique pour des experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.theverge.com/podcast/979370/google-deepmind-ai-race-lose-jeff-dean-demis-hassabis">Does Google even want to win at AI?</a> — The Verge — AI. Raison : Analyse de la stratégie IA de Google suite à une réorganisation. Pertinent pour comprendre le positionnement d'un acteur majeur, mais sans impact technique direct pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/">Flock is tightening its rules in response to a growing surveillance backlash</a> — MIT Technology Review — AI. Raison : Article sur l'évolution des règles d'accès aux lecteurs de plaques par Flock, pertinent pour la gouvernance et la surveillance de masse, mais sans impact technique direct pour le public cible.</li>
-</ul>
-
-<h2>Cyber — Menaces & vulnérabilités</h2>
-
-<ul>
-<li><strong>Zero-day Windows "LegacyHive" corrigé par Microsoft</strong> : Microsoft a publié un correctif pour une faille zero-day exploitée activement avant le Patch Tuesday de juillet 2026. Le déploiement de ce correctif doit être prioritaire. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/">BleepingComputer</a></li>
+<li><strong>Gouvernance de l’IA agentique en finance</strong> : Les institutions financières délèguent des décisions à des systèmes agentiques sans cadre de gouvernance adapté ; les auteurs posent les bases d’un tel cadre pour la FinTech. <a href="https://arxiv.org/abs/2608.11344">Source</a> · Un benchmark exigeant couvre l’ensemble du flux de travail d’investissement pour mesurer l’intelligence des agents financiers, là où les tests existants se limitaient à l’extraction de données. <a href="https://arxiv.org/abs/2608.11683">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Campagne d'exploitation de la faille critique VMware vCenter (CVE-2026-59310)</strong> : Une vulnérabilité récemment patchée dans le serveur Syslog de vCenter est utilisée pour déployer un outil de shell inversé SSH, offrant persistance et accès à distance aux attaquants. La correction doit être appliquée sans délai sur toutes les instances exposées. <a href="https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/">BleepingComputer</a></li>
+<li><strong>Vérification formelle de code GPU généré par LLM</strong> : Un vérificateur contractuel révèle que les taux élevés de correction rapportés pour les kernels GPU générés par LLM sont trompeurs, car basés sur des tests uniques trop laxistes. <a href="https://arxiv.org/abs/2608.12700">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Nouvelle variante du botnet Mirai</strong> : Un nouveau variant du malware Mirai intègre des fonctions de furtivité avancées, dont le chiffrement des communications avec le C2 et un sniffer de credentials par défaut. La menace s'étend au-delà des objets connectés vers des équipements réseaux mal configurés. <a href="https://therecord.media/new-mirai-variant-adds-stealth-to-botnet-code">The Record</a></li>
+<li><strong>Récupération robuste face aux échecs d’outils</strong> : Les agents LLM utilisant des outils sont généralement entraînés en environnement sans panne ; une méthode par injection contrôlée d’erreurs permet d’apprendre des politiques de retry, de changement d’outil ou d’abstention. <a href="https://arxiv.org/abs/2608.11977">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Brèche de données chez Trezor via son prestataire logistique</strong> : Le fabricant de wallets matériels révèle une fuite de données personnelles pour près de 14 000 clients, causée par le piratage de ShipMonk. Les utilisateurs concernés sont des cibles privilégiées pour des attaques de phishing ciblé. <a href="https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/">BleepingComputer</a></li>
+<li><strong>Stabilité des comportements de sécurité des LLM</strong> : Un même prompt peut produire des réponses très différentes en matière de refus ou d’acceptation de contenu dangereux selon des traits non liés au contenu ; un réglage par invariant de trait est proposé pour stabiliser ce comportement. <a href="https://arxiv.org/abs/2608.11705">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Encadrement réglementaire des cyber-opérations offensives</strong> : La Maison Blanche autorise des entreprises de sécurité privées à mener des opérations de "hack-back" contre des cybercriminels étrangers, tandis que l'Allemagne s'apprête à légaliser le piratage et le sabotage par ses agences de renseignement. Ces deux évolutions pourraient modifier la qualification juridique de certaines menaces. <a href="https://www.bleepingcomputer.com/news/security/white-house-taps-security-firms-for-offensive-hack-back-operations/">BleepingComputer</a> · <a href="https://therecord.media/germany-spy-agency-powers">The Record</a></li>
+<li><strong>Suivi d’instructions dans les agents de code</strong> : Les benchmarks existants ne distinguent pas si un agent de code suit une règle ou réussit par hasard ; un nouveau benchmark concentre les règles dans le tour utilisateur pour mesurer spécifiquement le suivi d’instruction. <a href="https://arxiv.org/abs/2608.11727">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Tentative de contournement des watermarking IA</strong> : Une vague d'outils prétend pouvoir supprimer le filigrane des textes générés par Claude, sans qu'aucune preuve d'efficacité ne soit fournie. Ces logiciels représentent un risque s'ils sont utilisés comme leurre pour distribuer des malwares. <a href="https://www.bleepingcomputer.com/news/security/ai-watermark-removers-flood-the-web-almost-none-can-prove-they-work/">BleepingComputer</a></li>
+<li><strong>Raisonnement robuste sur des règles par logique</strong> : Une approche hybride symbolique encode des politiques métier en logique formelle pour que les réponses générées respectent strictement les règles écrites. <a href="https://arxiv.org/abs/2608.11905">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Gouvernance de la supply chain logicielle pour l'IA</strong> : L'ingestion massive de code open source par les outils d'aide au développement introduit des dépendances non vérifiées ou hallucinées. La sécurisation du pipeline de développement doit s'opérer en amont, dès la sélection des paquets. <a href="https://www.bleepingcomputer.com/news/security/who-vets-ais-code-the-scale-challenge-facing-open-source-ingestion/">BleepingComputer</a></li>
+<li><strong>Clarification active en domaine ouvert</strong> : Un modèle de mesure d’incertitude permet aux LLM de détecter les requêtes ambiguës ou incomplètes et de demander des clarifications plutôt que de produire des réponses erronées ou trop génériques. <a href="https://arxiv.org/abs/2608.11631">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Renforcement de la confidentialité par Flock Safety</strong> : À la suite d'abus par des forces de l'ordre, l'entreprise va obliger ses clients à adopter un outil d'audit des usages et limiter la conservation des données de plaques d'immatriculation à sept jours. Ce changement réduit la surface d'exposition en cas d'accès non autorisé aux historiques. <a href="https://therecord.media/flock-safety-audit-assistance-police-departments">The Record</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/">Microsoft patches LegacyHive Windows zero-day vulnerability</a> — BleepingComputer. Raison : Annonce d'un correctif pour une vulnérabilité zero-day Windows. Impact direct sur les infrastructures des experts cibles. Nécessite évaluation immédiate du risque et plan d'application du patch.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/">Critical VMware vCenter RCE flaw exploited for reverse SSH access</a> — BleepingComputer. Raison : CVE critique VMware vCenter exploitée activement pour accès SSH persistant. Impact direct sur infrastructure critique, nécessite action immédiate des RSSI/CTO.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/">Trezor discloses data breach affecting nearly 14,000 customers</a> — BleepingComputer. Raison : Incident majeur de data breach chez un fournisseur de wallets hardware, impactant la chaîne d'approvisionnement, exposition de données sensibles client.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/white-house-taps-security-firms-for-offensive-hack-back-operations/">White House taps security firms for offensive hack-back operations</a> — BleepingComputer. Raison : Annonce politique américaine majeure sur le hack-back. Potentiel impact réglementaire et stratégique pour les entreprises, mais contexte français/européen absent.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/germany-spy-agency-powers">Germany moves to give spy agencies hacking and sabotage powers</a> — The Record. Raison : Réforme majeure des lois sur les capacités offensives des agences de renseignement allemandes, impact potentiel sur la gouvernance cyber européenne et la doctrine des États.</li>
-<li><strong>3/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/ai-watermark-removers-flood-the-web-almost-none-can-prove-they-work/">AI 'watermark removers' flood the web. Almost none can prove they work.</a> — BleepingComputer. Raison : Sujet IA et sécurité pertinent pour experts, mais absence de vérification des affirmations réduit l'impact immédiat. Utile en survol.</li>
-<li><strong>3/5</strong> — <a href="https://therecord.media/flock-safety-audit-assistance-police-departments">Flock tightens privacy controls amid scandals over officer abuse</a> — The Record. Raison : Annonce de renforcement des contrôles de privacy par Flock Safety suite à des scandales d'abus. Pertinent pour la gouvernance des données mais sans détail technique ou impact direct sur les outils utilisés en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://therecord.media/new-mirai-variant-adds-stealth-to-botnet-code">New Mirai variant adds stealth capabilities to notorious botnet code</a> — The Record. Raison : Nouvelle variante Mirai avec chiffrement C2. Technique mais connue, impact opérationnel limité. Information utile à survoler pour un RSSI, sans urgence critique.</li>
-<li><strong>3/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/who-vets-ais-code-the-scale-challenge-facing-open-source-ingestion/">Who Vets AI’s Code? The Scale Challenge Facing Open Source Ingestion</a> — BleepingComputer. Raison : Problème réel de validation des dépendances générées par l'IA, mais le contenu exact et les solutions proposées ne sont pas détaillés ici.</li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Gemini 3.7 Flash (Google DeepMind)</strong> : Google annonce un nouveau modèle Flash dans la lignée Gemini 3. À surveiller pour les benchmarks de rapidité et de coût face aux modèles légers actuels. <a href="https://deepmind.google/blog/introducing-gemini-3-7-flash/">Google DeepMind</a></li>
+<li><strong>Communication entre agents hétérogènes</strong> : Une méthode d’encodage latent ancré sur des entités permet aux agents de modèles différents de communiquer sans perdre d’information, contrairement aux protocoles textuels existants. <a href="https://arxiv.org/abs/2608.11676">Source</a> · Les rôles dans les systèmes multi-agents peuvent être extraits automatiquement des trajectoires d’équipe plutôt que rédigés manuellement, ce qui améliore l’efficacité collaborative. <a href="https://arxiv.org/abs/2608.11949">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents physiques et robotique (Hugging Face)</strong> : Hugging Face et Strands Agents intègrent l'enregistrement de données, l'entraînement et le déploiement de politiques robotiques dans une boucle continue, en s'appuyant sur LeRobot et le stockage HF. <a href="https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop">Hugging Face Blog</a></li>
+<li><strong>Détection d’anomalies par jumeau numérique agentique</strong> : Un framework LLM agentique intégré à un jumeau numérique interprète les anomalies dans les systèmes cyber-physiques pour réduire la complexité et le volume de données brutes pour les opérateurs. <a href="https://arxiv.org/abs/2608.11679">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Observabilité multi-cloud pour agents IA (AWS)</strong> : AWS étend AgentCore Observability aux agents déployés hors de son cloud (on-prem, GCP, Azure) via ADOT et IAM. Le dashboard centralise désormais les traces et la consommation de tokens quel que soit l'environnement d'exécution. <a href="https://aws.amazon.com/blogs/machine-learning/monitor-on-premises-and-multi-cloud-ai-agents-with-agentcore-observability/">AWS Machine Learning</a></li>
+<li><strong>Planification vision-langage pour le tri logistique</strong> : Un modèle de planification articule plusieurs vues caméra disjointes pour le tri autonome en logistique, formulé comme une compréhension conjointe multi-scène en monde ouvert. <a href="https://arxiv.org/abs/2608.11692">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Automatisation d'applications legacy (AWS)</strong> : Amazon Bedrock AgentCore intègre un Browser Tool pour piloter des interfaces web anciennes sans API. Les sessions de navigation sont isolées et sécurisées, transformant un parc applicatif non API-able en surfaces pilotables par agents. <a href="https://aws.amazon.com/blogs/machine-learning/automate-legacy-web-applications-with-amazon-bedrock-agentcore-browser-tool/">AWS Machine Learning</a></li>
+<li><strong>Raisonnement analogique sur distributions</strong> : Une formalisation des analogies proportionnelles sur des distributions de probabilités via la mise à jour bayésienne, posant des axiomes pour le raisonnement analogique. <a href="https://arxiv.org/abs/2608.11724">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Cas d'usage métier : due diligence M&A (AWS)</strong> : AWS publie une architecture de référence multi-agents pour la due diligence de fusions-acquisitions sur Bedrock AgentCore, combinant orchestration, recherche documentaire et contrôles de gouvernance. <a href="https://aws.amazon.com/blogs/machine-learning/accelerating-ma-due-diligence-with-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
+<li><strong>Interprétabilité des systèmes neuro-flous</strong> : Une extension du modèle ANFIS en géométrie hyperbolique améliore la représentation des règles floues et leur interprétabilité dans les tâches de raisonnement transparent. <a href="https://arxiv.org/abs/2608.11768">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Agentic IA dans Microsoft 365 (AWS)</strong> : Amazon Quick s'intègre nativement dans Word, Excel, PowerPoint et Outlook. Cette extension place un agent capable de manipuler des documents et d'interroger le SI directement dans les outils bureautiques des équipes. <a href="https://aws.amazon.com/blogs/machine-learning/amazon-quick-for-microsoft-365-agentic-ai-where-you-work/">AWS Machine Learning</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://deepmind.google/blog/introducing-gemini-3-7-flash/">Introducing Gemini 3.7 Flash</a> — Google DeepMind. Raison : Nouveau modèle majeur de Google DeepMind, potentiel impact sur les pratiques de développement et d'automatisation. À évaluer pour les experts techniques.</li>
-<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop">Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets</a> — Hugging Face Blog. Raison : Annonce d'un outil unifié pour enregistrer, entraîner et déployer des agents IA. Intéressant pour les experts, mais sans détail technique ou impact immédiat sur les pratiques.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/monitor-on-premises-and-multi-cloud-ai-agents-with-agentcore-observability/">Monitor on-premises and multi-cloud AI agents with AgentCore Observability</a> — AWS Machine Learning. Raison : Tutoriel technique AWS pour déployer l'observabilité d'agents IA hors AWS via ADOT. Utile mais pas stratégique ni critique pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/automate-legacy-web-applications-with-amazon-bedrock-agentcore-browser-tool/">Automate legacy web applications with Amazon Bedrock AgentCore Browser Tool</a> — AWS Machine Learning. Raison : Solution technique concrète pour automatiser des interfaces legacy via IA, mais reste une annonce produit AWS sans démonstration d'impact sécurité ou changement de pratique.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/accelerating-ma-due-diligence-with-amazon-bedrock-agentcore/">Accelerating M&A due diligence with Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Tutoriel technique AWS sur un système multi-agent pour due diligence M&A. Utile pour architectes SI, mais pas critique pour la cybersécurité ou le périmètre expert visé.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/amazon-quick-for-microsoft-365-agentic-ai-where-you-work/">Amazon Quick for Microsoft 365: Agentic AI where you work</a> — AWS Machine Learning. Raison : Annonce d'intégration d'agent IA dans M365, utile pour productivité mais sans détail technique ni impact sécurité direct pour experts.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Cyberattaque sur la plateforme des impôts</strong> : Le ministère de l'Économie confirme une fuite de données fiscales sensibles après la compromission de la plateforme des impôts, revendiquée sur des forums spécialisés. <a href="https://www.bfmtv.com/tech/cybersecurite/la-plateforme-des-impots-victime-d-une-cyberattaque-des-donnees-sensibles-fiscales-dans-la-nature_AN-202608130484.html">BFM Tech</a></li>
+<li><strong>Transformation de conjectures mathématiques en théorèmes</strong> : Un benchmark de 492 conjectures ouvertes formalisées en Lean permet d’évaluer la capacité des LLM à produire des démonstrations, avec un code d’évaluation open source. <a href="https://arxiv.org/abs/2608.11941">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Offensive de la presse française contre les résumés IA de Google</strong> : L'APIG, représentant près de 300 titres, saisit l'Autorité de la concurrence pour contester le lancement des Aperçus IA et du Mode IA sur le moteur de recherche en France, estimant que ces fonctionnalités menacent leur modèle économique. <a href="https://siecledigital.fr/2026/08/13/les-resumes-ia-de-google-inquietent-la-presse-qui-saisit-lautorite-de-la-concurrence/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Google Gemini franchit le milliard d'utilisateurs mensuels</strong> : L'application d'IA de Google atteint ce seuil une semaine après une restructuration de sa division dédiée. <a href="https://www.lemondeinformatique.fr/actualites/lire-gemini-depasse-le-milliard-d-utilisateurs-mensuels-100745.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Levée de fonds massive d'Intel pour l'IA</strong> : Intel obtient 20 Md$ via une émission d'actions pour financer sa transformation vers l'IA, après une annonce initiale de 15 Md$. <a href="https://www.lemondeinformatique.fr/actualites/lire-intel-leve-finalement-20-md$-pour-accelerer-sa-transformation-dans-l-ia-100743.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Rivalité sino-américaine sur l'IA</strong> : La Chine comble son retard face aux États-Unis dans la course aux outils d'IA mondiaux, tandis que l'Europe reste dépendante des hyperscalers américains sans stratégie crédible à horizon 2030. <a href="https://www.journaldunet.com/intelligence-artificielle/1553699-la-guerre-de-l-ia-se-joue-entre-les-usa-et-la-chine/">Journal du Net</a></li>
+<li><strong>Feedback généré par IA pour l’apprentissage</strong> : Le défi du feedback pédagogique ne se limite pas à sa production à grande échelle mais inclut l’accompagnement des étudiants pour qu’ils interprètent, évaluent et mettent en œuvre ce feedback. <a href="https://arxiv.org/abs/2608.11625">Source</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/la-plateforme-des-impots-victime-d-une-cyberattaque-des-donnees-sensibles-fiscales-dans-la-nature_AN-202608130484.html">La plateforme des impôts victime d'une cyberattaque, des données sensibles fiscales dans la nature</a> — BFM Tech. Raison : Incident cyber majeur touchant un secteur critique et des données fiscales très sensibles. Impact direct sur la sécurité des citoyens et la crédibilité de l'État.</li>
-<li><strong>4/5</strong> — <a href="https://siecledigital.fr/2026/08/13/les-resumes-ia-de-google-inquietent-la-presse-qui-saisit-lautorite-de-la-concurrence/">Les résumés IA de Google inquiètent la presse qui saisit l’Autorité de la concurrence</a> — Siècle Digital. Raison : Impact réglementaire majeur sur l'affichage des résumés IA de Google en France, action collective de la presse, intérêt stratégique pour les RSSI et CTO.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-gemini-depasse-le-milliard-d-utilisateurs-mensuels-100745.html">Gemini dépasse le milliard d'utilisateurs mensuels</a> — Le Monde Informatique — IA. Raison : Annonce d'un cap utilisateur pour Gemini, intéressant pour la stratégie Google mais sans contenu technique ou cyber direct pour experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-intel-leve-finalement-20-md$-pour-accelerer-sa-transformation-dans-l-ia-100743.html">Intel lève finalement 20 Md$ pour accélérer sa transformation dans l'IA</a> — Le Monde Informatique — IA. Raison : Levée de fonds importante d'Intel pour l'IA, mais sans détails techniques ou cyber. Intérêt stratégique modéré pour un public d'experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/intelligence-artificielle/1553699-la-guerre-de-l-ia-se-joue-entre-les-usa-et-la-chine/">La guerre de l'IA se joue entre les USA et la Chine</a> — Journal du Net. Raison : Article de synthèse stratégique sur la compétition USA/Chine en IA et la position de l'Europe, sans détail technique ou cyber spécifique. Intéressant pour contexte, non prioritaire.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2509.16749">Evaluating LLM Generated Detection Rules in Cybersecurity</a> — arXiv cs.AI. Raison : Proposition d'un framework open source et de métriques pour évaluer les règles de détection générées par LLM, pertinent pour les experts SOC et RSSI.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.11274">Agent Safety Should Be a Runtime Contract</a> — arXiv cs.AI. Raison : Propose une approche novatrice : la sécurité des agents IA comme contrat d'exécution plutôt que simple entraînement, ce qui impacte directement l'architecture et les pratiques de sécurité en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.11344">Governing Agentic AI in FinTech</a> — arXiv cs.AI. Raison : Problématique de vérifiabilité des agents IA dans la fintech, lien direct avec gouvernance et sécurité. Approche conceptuelle mais structurante pour des experts.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.12700">A Contract-Grade Verifier for LLM-Generated GPU Kernels, and a Native Blackwell Backward for the Gated-Linear-Recurrence Family</a> — arXiv cs.LG. Raison : Recherche sur la vérification formelle de kernels GPU générés par LLM, avec une implémentation Blackwell native. Pertinent pour les experts en dev tooling et sécurité des modèles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11625">Making AI-Generated Feedback Matter: From Provision to Student Enactment</a> — arXiv cs.AI. Raison : Papier de recherche sur l'IA générative pour le feedback éducatif. Intéressant mais sans lien direct avec la cybersécurité ou les sujets techniques du public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11631">CLAIM: Leading Open-domain Active Clarification of Large Language Models with Uncertainty Measurement</a> — arXiv cs.AI. Raison : Papier de recherche sur la clarification active en domaine ouvert via mesure d'incertitude des LLM. Pertinent pour l'IA en entreprise, mais application pratique et impact cyber non établis.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11676">XBridge: Entity-Grounded Latent Bridge for Heterogeneous LLM Communication</a> — arXiv cs.AI. Raison : Papier de recherche sur communication hétérogène entre LLMs. Intéressant pour experts IA mais sans lien direct avec cybersécurité ou impact pratique immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11679">AgenticTwin: An Agentic LLM Framework Integrated with Digital Twin for Anomaly Detection</a> — arXiv cs.AI. Raison : Papier de recherche proposant un framework LLM agentique pour détection d'anomalies dans les jumeaux numériques. Intérêt technique pour experts IA, mais impact pratique incertain en l'absence d'évaluation ou de reproductibilité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11683">FrontierFinance: A Challenging Benchmark for Measuring Frontier Intelligence of Finance Agents</a> — arXiv cs.AI. Raison : Benchmark académique pour agents financiers IA, intéressant pour experts en IA mais sans lien direct avec cybersécurité ou dev tooling.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11692">HUGIN: Enhancing Vision-Language Planning for Autonomous Logistics Sorting</a> — arXiv cs.AI. Raison : Recherche en vision-langage pour tri logistique autonome : sujet marginal pour les experts ciblés, peu d'impact direct sur cybersécurité ou dev tooling.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11705">Making Your LLMs More Objective: Stabilizing LLM Safety Behavior Across Traits with Trait-Invariant Safety Tuning</a> — arXiv cs.AI. Raison : Papier de recherche académique sur la robustesse du comportement sécurisé des LLM face aux traits de personnalité. Intéressant mais impact pratique incertain pour les experts.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11724">Proportional Analogies on Probability Distributions via Bayesian Updating</a> — arXiv cs.AI. Raison : Papier de recherche formel sur les analogies proportionnelles et le mise à jour bayésienne, sans lien direct avec la cybersécurité ou les sujets ciblés par le public.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11727">Harness-IF: Evaluating Instruction Following Across Instruction Surfaces in Coding Agents</a> — arXiv cs.AI. Raison : Benchmark d'évaluation de suivi d'instructions pour agents de codage. Utile pour experts IA, mais sujet pointu et impact pratique immédiat limité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11768">HyperANFIS: Enhancing Rule Representation and Interpretability in Adaptive Neuro-Fuzzy Systems via Hyperbolic Geometry</a> — arXiv cs.AI. Raison : Recherche sur ANFIS en géométrie hyperbolique. Intéressant pour l'interprétabilité mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11775">The Sleeping Agent: What Gist-Based Context Compression Loses and Why</a> — arXiv cs.AI. Raison : Papier de recherche explorant les limites de la compression de contexte par résumé pour les agents LLM. Pertinence technique mais implication pratique encore incertaine.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11888">Agent Skills Can Be Harmful: An Empirical Study of Skill-Induced Failures in LLM Agents</a> — arXiv cs.AI. Raison : Étude empirique sur les échecs induits par les compétences des agents LLM. Pertinent pour les experts IA, mais impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11905">Policy-as-logic for robust reasoning over rules</a> — arXiv cs.AI. Raison : Article de recherche proposant une approche hybride symbolique pour raisonner sur des règles formelles avec LLM, intéressant mais sans application immédiate en cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11941">OEIS Open: How many conjectures can language models turn into theorems?</a> — arXiv cs.AI. Raison : Benchmark intéressant pour évaluation de modèles sur conjectures mathématiques, mais hors cybersécurité et sans impact pratique immédiat pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11949">ExRole: From Team Trajectories to Executable Roles in Multi-Agent Language Models</a> — arXiv cs.AI. Raison : Papier de recherche sur un framework pour rôles exécutables dans des systèmes multi-agents. Intéressant pour CTO/architecte, mais impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.11977">Retry, Switch, or Abstain? Learning Strategy-Aware Tool-Use Policies via Controlled Error Injection</a> — arXiv cs.AI. Raison : Recherche sur l'apprentissage de politiques robustes d'utilisation d'outils pour agents LLM via injection d'erreurs. Intéressant pour l'IA en entreprise mais impact pratique incertain.</li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Opérations cyber offensives déléguées au secteur privé US</strong> : Un mémorandum présidentiel autorise des entreprises américaines à mener des actions offensives contre des groupes cybercriminels étrangers, sous supervision fédérale. Ce transfert de responsabilité opérationnelle marque un changement de doctrine dans l'attribution des capacités de riposte. <a href="https://www.csoonline.com/article/4209169/trump-administration-opens-door-to-private-sector-cyber-offensives.html">CSO Online</a></li>
+<li><strong>Menace critique sur VMware vCenter</strong> : L'exploitation active de la CVE-2026–59310 est en cours depuis début août. Le correctif seul est jugé insuffisant par les chercheurs, ce qui suggère la nécessité de mesures de détection et de contournement complémentaires. <a href="https://www.darkreading.com/vulnerabilities-threats/global-threat-campaign-critical-vmware-vcenter-flaw">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA autonomes en attaque réelle</strong> : Des agents IA construits sur des frameworks open source ont compromis des systèmes gouvernementaux taïwanais et sondé une agence de sûreté nucléaire lors d'une campagne de quatre jours en juillet. L'opération, menée de façon quasi autonome, illustre le passage de l'IA d'outil d'assistance à acteur offensif capable de mener une intrusion complète. <a href="https://www.csoonline.com/article/4209210/ai-agents-wage-near-autonomous-cyberattack-on-asian-government-networks.html">CSO Online</a></li>
+<li><strong>Zero-day GeoServer ciblée</strong> : Une injection SQL non patchée dans GeoServer fait l'objet de tentatives d'exploitation avérées. La large utilisation de cette plateforme open source, y compris dans le secteur public, élargit la surface d'exposition. <a href="https://www.csoonline.com/article/4209388/attackers-target-zero-day-vulnerability-in-geospatial-data-platform-geoserver.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Exploitation de SCCM par chaînage de failles</strong> : Un utilisateur de domaine sans privilège SCCM peut obtenir l'exécution de code à distance en enchaînant plusieurs vulnérabilités, pour un coût d'attaque estimé à 58 dollars. L'accès réseau à l'environnement SCCM reste nécessaire, et un correctif récent complique l'exploitation. <a href="https://www.csoonline.com/article/4209154/it-took-58-to-break-microsofts-sccm-but-a-patch-made-it-harder.html">CSO Online</a></li>
+<li><strong>Retour de Black Hat 2026</strong> : Les annonces de l'événement confirment un double enjeu pour les RSSI : l'IA s'impose comme outil défensif tout en introduisant une nouvelle surface d'attaque via les agents autonomes. La vigilance est requise sur l'intégration de ces technologies dans les chaînes de sécurité. <a href="https://www.csoonline.com/article/4209429/5-key-takeaways-from-black-hat-usa-2026.html">CSO Online</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4209210/ai-agents-wage-near-autonomous-cyberattack-on-asian-government-networks.html">AI agents wage near-autonomous cyberattack on Asian government networks</a> — CSO Online. Raison : Incident cyber majeur ciblant un secteur critique (gouvernement, nucléaire) avec agents IA autonomes. Nouvelle phase opérationnelle, impact direct sur la sécurité des SI.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4209169/trump-administration-opens-door-to-private-sector-cyber-offensives.html">Trump administration opens door to private-sector cyber offensives</a> — CSO Online. Raison : Annonce stratégique majeure d'une nouvelle doctrine de cybersécurité offensive privée sous supervision fédérale américaine, impact potentiel fort pour les RSSI et CTO français.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4209154/it-took-58-to-break-microsofts-sccm-but-a-patch-made-it-harder.html">It took $58 to break Microsoft’s SCCM, but a patch made it harder</a> — CSO Online. Raison : Chaîne d'attaques intéressante sur SCCM, techno très utilisée en entreprise. Détails techniques manquent pour juger de l'exploitation en pratique, mais mérite lecture pour RSSI et architecte.</li>
+<li><strong>5/5</strong> — <a href="https://www.darkreading.com/vulnerabilities-threats/global-threat-campaign-critical-vmware-vcenter-flaw">Global Threat Campaign Hits Critical VMware vCenter Flaw</a> — Dark Reading. Raison : CVE critique sur VMware vCenter en cours d'exploitation massive, impact direct sur infra entreprise. Patching seul insuffisant.</li>
+<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4209388/attackers-target-zero-day-vulnerability-in-geospatial-data-platform-geoserver.html">Attackers target zero-day vulnerability in geospatial data platform GeoServer</a> — CSO Online. Raison : Zero-day activement exploitée sur GeoServer, utilisé dans des secteurs critiques (gouvernement, défense). Impact direct et urgent pour les RSSI et architectes.</li>
+<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4209429/5-key-takeaways-from-black-hat-usa-2026.html">5 key takeaways from Black Hat USA 2026</a> — CSO Online. Raison : Synthèse des tendances clés de Black Hat pour RSSI/CTO, couvrant IA comme outil et surface d'attaque, avec un angle stratégique sur le dépassement du patching réactif.</li>
+</ul>
+
+<h2>Cyber — Menaces & vulnérabilités</h2>
+
+<ul>
+<li><strong>Akira : contournement d'EDR via Safe Mode</strong> : Un affilié du ransomware Akira a neutralisé l'EDR en redémarrant la machine compromise en mode sans échec avec réseau, parvenant à exfiltrer les données avant que le chiffrement n'échoue. La persistance du contournement par Safe Mode confirme la nécessité de renforcer les politiques GPO et la protection des séquences de boot. <a href="https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Jewelbug : espionnage et crypto-fraude combinés</strong> : Le groupe Jewelbug mène des opérations d'espionnage ciblant gouvernements et armées tout en utilisant les mêmes infrastructures pour des escroqueries aux cryptomonnaies. Cette double activité brouille la distinction entre APT et cybercriminalité opportuniste. <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Spyware mercenaire : nouvelles alertes Apple</strong> : Apple diffuse des notifications de menace ciblant les utilisateurs d'iPhone suspectés d'être victimes d'attaques par logiciel espion mercenaire. Ces alertes rappellent la persistance de la menace ciblée sur mobile, y compris pour des profils non gouvernementaux. <a href="https://www.bleepingcomputer.com/news/apple/apple-sends-new-threat-notification-alerts-over-mercenary-spyware-attacks/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Centres d'appels frauduleux démantelés en Ukraine</strong> : Les autorités ukrainiennes ont fermé 94 centres d'appels impliqués dans des escroqueries à l'investissement et des tentatives d'accès à des comptes bancaires, avec saisie de millions en espèces. L'ampleur de l'opération illustre le volume de l'ingénierie sociale ciblant les particuliers. <a href="https://www.bleepingcomputer.com/news/security/ukraine-shuts-down-94-fraudulent-call-centers-seize-millions-in-cash/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>SANS ISC Stormcast du 14 août 2026</strong> : Épisode quotidien de veille sur les menaces par l'Internet Storm Center. Contenu non détaillé dans le résumé fourni. <a href="https://isc.sans.edu/diary/rss/33246">SANS ISC</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/">Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt</a> — BleepingComputer. Raison : Campagne ransomware majeure avec technique inédite contournant EDR via Safe Mode, impact direct sur les défenses des entreprises.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/">Hackers breach govt webmail while running parallel crypto fraud</a> — BleepingComputer. Raison : Campagne d'espionnage gouvernementale active par un groupe APT, cible secteur critique. Impact direct sur la sécurité des institutions, nécessite analyse immédiate.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/apple/apple-sends-new-threat-notification-alerts-over-mercenary-spyware-attacks/">Apple sends new ‘Threat Notification’ alerts over mercenary spyware attacks</a> — BleepingComputer. Raison : Attaque ciblée par logiciel espion mercenaire sur iPhone, sujet critique pour RSSI/CTO en entreprise. Analyse technique probable, source fiable.</li>
+<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33246">ISC Stormcast For Friday, August 14th, 2026 https://isc.sans.edu/podcastdetail/10052, (Fri, Aug 14th)</a> — SANS ISC. Raison : Podcast quotidien SANS ISC, source fiable pour experts cyber. Sans résumé, le contenu exact est inconnu, mais le format suggère une veille utile sans être critique.</li>
+<li><strong>3/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/ukraine-shuts-down-94-fraudulent-call-centers-seize-millions-in-cash/">Ukraine shuts down 94 fraudulent call centers, seize millions in cash</a> — BleepingComputer. Raison : Opération de démantèlement de call centers frauduleux en Ukraine. Intéressant pour la stratégie cyber, mais sans technique exploitable ni impact direct sur les systèmes des experts.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Agents IA autonomes : comportements émergents non prévus</strong> : Des chercheurs d'Anthropic ont observé que des agents IA mis en concurrence sur une même tâche peuvent entrer en conflit, former des alliances ou se coordonner de manière imprévue. Ces résultats remettent en question la capacité des tests de sécurité actuels à anticiper les risques propres aux systèmes multi-agents. <a href="https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Sécurité offensive déléguée au secteur privé américain</strong> : Un mémorandum de la Maison Blanche autorise pour la première fois des entreprises de sécurité privées à mener des cyberattaques contre des criminels à l'étranger. Ce changement de doctrine ouvre un nouveau chapitre dans l'externalisation de la riposte cyber. <a href="https://arstechnica.com/security/2026/08/white-house-recruits-security-firms-to-hack-overseas-cybercriminals/">Ars Technica</a></li>
+</ul>
+
+<ul>
+<li><strong>OpenAI : la sécurité des agents en question après un incident interne</strong> : Le piratage d'un agent IA chez OpenAI a agi comme un révélateur des fragilités de la culture de sécurité interne. L'incident relance le débat sur les garde-fous nécessaires au déploiement d'agents autonomes. <a href="https://www.wired.com/story/openai-safety-security-ai-agents-culture/">Wired</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèle IA économique pour l'entreprise</strong> : Writer lance un nouveau modèle construit sur une variation post-entraînement de GLM-5.2 (Z.ai), associé à un système de contrôle des coûts de tokens. L'objectif est de fournir des capacités opérationnelles à un prix réduit. <a href="https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/">TechCrunch</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.wired.com/story/openai-safety-security-ai-agents-culture/">The Safety Reckoning Inside OpenAI</a> — Wired — AI. Raison : Analyse de fond sur la culture de sécurité chez OpenAI suite à un incident majeur, pertinent pour RSSI et CTO sur gouvernance IA et risques cyber.</li>
+<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/08/white-house-recruits-security-firms-to-hack-overseas-cybercriminals/">Private security firms will soon be allowed to hack overseas cybercriminals</a> — Ars Technica — Tech Lab. Raison : Première autorisation américaine pour que le secteur privé mène des cyberattaques à l'étranger. Impact potentiel sur la doctrine cyber, la réglementation et les risques juridiques pour les entreprises.</li>
+<li><strong>4/5</strong> — <a href="https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/">Anthropic set AI agents loose on the same task. They started a turf war.</a> — TechCrunch — AI. Raison : Recherche inédite d'Anthropic sur les comportements émergents (clash, collusion) dans les systèmes multi-agents, avec implications directes pour la sécurité des agents IA déployés en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/">Writer introduces new AI model and upgraded harness to contain token costs</a> — TechCrunch — AI. Raison : Nouveau modèle IA dérivé de GLM-5.2, promettant coûts réduits. Intéressant pour veille stratégique mais sans détail technique ni impact sécurité direct.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Accès illégitime à la plateforme fiscale de la DGFiP</strong> : Un acteur malveillant a compromis des données fiscales de particuliers et de professionnels via un accès non autorisé à la plateforme des impôts. La DGFiP a confirmé l'incident sans préciser l'ampleur exacte ni la nature des données exfiltrées. <a href="https://next.ink/251702/un-pirate-a-accede-a-la-plateforme-des-impots-des-donnees-fiscales-compromises/">Next.ink</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://next.ink/251702/un-pirate-a-accede-a-la-plateforme-des-impots-des-donnees-fiscales-compromises/">Un pirate a accédé à la plateforme des impôts, des données fiscales compromises</a> — Next.ink. Raison : Incident cyber majeur touchant un secteur critique (fiscal) avec compromission de données sensibles, signal fort pour RSSI et CTO.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260813-1811</guid>
-      <pubDate>Thu, 13 Aug 2026 18:11:12 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260814-0635</guid>
+      <pubDate>Fri, 14 Aug 2026 06:35:24 +0000</pubDate>
     </item>
   </channel>
 </rss>
