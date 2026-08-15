@@ -8,264 +8,292 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 14 Aug 2026 18:06:06 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 05:41:55 +0000</lastBuildDate>
     <item>
-      <title>Digest — 14/08 18h</title>
+      <title>Digest — 15/08 05h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA — Produits, agents &amp; dev tooling
+      <description>## IA — Recherche
 
-- **Observabilité des agents IA** : Le passage en production des workflows agentiques nécessite une observabilité dédiée pour tracer le comportement, diagnostiquer les échecs et assurer la fiabilité des chaînes d'actions. [Building AI Agent Observability for Production Workflows](https://blog.n8n.io/ai-agent-observability/)
+- **Détournement des méthodes d'alignement pour la censure** : Les techniques d'alignement conçues pour sécuriser les modèles constituent une arme à double usage, exploitables par des acteurs malveillants pour construire des outils de censure et de manipulation à large échelle. [Source](https://arxiv.org/abs/2608.12346)
 
-- **Architectures asynchrones et event-driven** : Les APIs asynchrones découplent requête et réponse pour passer à l'échelle, tandis que l'architecture microservices orientée événements impose de maîtriser les compromis entre files d'attente et flux, ainsi que les anti-patterns courants. [Async API: How Asynchronous APIs Work and When To Use Them](https://blog.n8n.io/async-api/) · [Event-Driven Microservices: Architecture, Patterns, and Production Tradeoffs](https://blog.n8n.io/event-driven-microservices/)
+- **Contournement multilingue des garde-fous** : L'évaluation de neuf modèles issus de six fournisseurs montre que la langue du prompt modifie radicalement les décisions des LLM. Une requête en japonais peut débloquer des recommandations que le modèle refuse en anglais, exposant une faille dans l'alignement de sécurité monolingue. [Source](https://arxiv.org/abs/2608.12373)
 
-- **Sécurisation des APIs REST** : Le choix de la méthode d'authentification (clés, tokens) doit résulter d'un arbitrage entre sécurité et complexité opérationnelle, avec des bonnes pratiques spécifiques à la production. [API Authentication Methods Explained: From Keys to Tokens](https://blog.n8n.io/api-authentication-methods/)
+- **Gouvernance des agents autonomes** : Deux travaux distincts abordent le contrôle des agents à longue durée de vie. L'un introduit un benchmark pour la décision de validation humaine ou automatique juste avant l'exécution d'une action critique (email, paiement). L'autre, *Governed Persistent Memory*, propose une mémoire persistance capable de refuser de s'appuyer sur des données périmées, supprimées ou contradictoires pour justifier une action sortante. [SteerBench-Work](https://arxiv.org/abs/2608.12654) · [GPM](https://arxiv.org/abs/2608.12476)
 
-**Évaluation du scoring**
+- **Intégrité des workflows agentiques** : Évaluer un workflow agentique sur le seul résultat correct est insuffisant en contexte institutionnel. Une action juste peut provenir d'une autorité illégitime, d'une complétion non supportée ou d'un contexte rendu obsolète. [Source](https://arxiv.org/abs/2608.12761)
 
-- **3/5** — [API Authentication Methods Explained: From Keys to Tokens](https://blog.n8n.io/api-authentication-methods/) — n8n Blog. Raison : Article de blog généraliste sur les méthodes d'authentification API. Utile pour un survol mais sans profondeur technique ni angle original pour un public expert.
-- **3/5** — [Event-Driven Microservices: Architecture, Patterns, and Production Tradeoffs](https://blog.n8n.io/event-driven-microservices/) — n8n Blog. Raison : Article technique sur les microservices événementiels utile pour un architecte ou CTO, mais pas critique immédiatement pour la cybersécurité ou l'IA.
-- **3/5** — [Building AI Agent Observability for Production Workflows](https://blog.n8n.io/ai-agent-observability/) — n8n Blog. Raison : Sujet utile pour experts en automatisation et workflows IA, mais contenu probablement générique sur l'observabilité de base, sans spécificité technique ou critique.
-- **3/5** — [Async API: How Asynchronous APIs Work and When To Use Them](https://blog.n8n.io/async-api/) — n8n Blog. Raison : Article technique sur les API asynchrones, utile pour les développeurs et architectes, mais sans lien direct avec la cybersécurité ou l'IA. Pertinent pour la veille dev tooling.
+- **Désalignement par fonction de perte** : Chaque fonction de perte utilisée lors de l'entraînement (pré-entraînement, SFT, RLHF) produit une saveur de désalignement distincte. [Source](https://www.lesswrong.com/posts/GRmvZsHXH4vaijPMv/four-llm-loss-functions-four-flavors-of-llm-misalignment)
 
-## IA — Labos &amp; éditeurs
+- **Débat sur la nature du raisonnement** : Une prise de position défend que le raisonnement autonome est fondamentalement un processus apprenable basé sur des règles, contrastant avec la domination actuelle des modèles génératifs probabilistes profonds. [Source](https://arxiv.org/abs/2608.12325)
 
-- **Conception de fonctions de récompense pour RL multi-tour** : AWS détaille la construction de fonctions de récompense composites pour l'entraînement par renforcement multi-tour avec Amazon Nova Forge, en insistant sur l'exécution sécurisée du code généré et l'instrumentation de chaque composant pour détecter les dérives. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/custom-reward-functions-for-multi-turn-reinforcement-learning-with-amazon-nova-forge/)
+- **Intégrité scientifique des co-scientists IA** : *IntegrityBench* évalue la capacité des LLM déployés comme co-scientifiques à maintenir l'intégrité de la recherche sous pression institutionnelle, via la classification d'inconduites et la recommandation d'actions éthiques. [Source](https://arxiv.org/abs/2608.12345)
 
-- **Workflows multi-agents avec SageMaker AI et Bedrock** : AWS montre comment orchestrer des agents spécialisés utilisant chacun le modèle le plus adapté, en connectant les endpoints compatibles OpenAI de SageMaker AI au runtime Bedrock AgentCore, avec une observabilité au niveau du token sur les endpoints SageMaker. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-agentic-workflows-with-sagemaker-ai-and-bedrock-agentcore/)
+- **Fondements moraux divergents malgré l'accord de surface** : L'accord entre jugements humains et LLM sur des labels éthiques ne garantit pas l'alignement. Deux agents peuvent aboutir à la même conclusion en s'appuyant sur des raisonnements moraux radicalement différents. [Source](https://arxiv.org/abs/2608.12368)
 
-**Évaluation du scoring**
+- **Déploiement industriel et cas d'usage métier** : AstraZeneca détaille son système agentique interne *Research Assistant* pour l'exploration de données biomédicales par les scientifiques. Un autre article propose un système multi-agent avec négociation assistée par LLM pour l'ordonnancement en edge computing mobile. [AstraZeneca](https://arxiv.org/abs/2608.12395) · [Edge Computing](https://arxiv.org/abs/2608.12371)
 
-- **3/5** — [Custom reward functions for multi-turn reinforcement learning with Amazon Nova Forge](https://aws.amazon.com/blogs/machine-learning/custom-reward-functions-for-multi-turn-reinforcement-learning-with-amazon-nova-forge/) — AWS Machine Learning. Raison : Article technique sur conception de reward functions pour RL multi-turn sur Amazon Nova Forge. Intéressant pour experts IA produit/recherche, mais pas impact direct cybersécurité.
-- **3/5** — [Building agentic workflows with SageMaker AI and Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/building-agentic-workflows-with-sagemaker-ai-and-bedrock-agentcore/) — AWS Machine Learning. Raison : Article technique couplant SageMaker AI et Bedrock AgentCore pour workflows multi-agents avec observabilité. Utile pour CTO/Architecte SI mais pas critique ni innovant.
+- **Alignement cognitif vs alignement comportemental** : Dans les décisions à haut risque, l'alignement doit refléter le raisonnement humain et non se limiter à imiter les décisions finales. [Source](https://arxiv.org/abs/2608.12372)
 
-## Cyber — Stratégie &amp; analyse
+- **Optimisation de l'inférence** : Les *Dual-Flow Transformers* découplent la phase de préremplissage parallèle de la phase de décodage pour réduire le coût d'inférence cumulé. [Source](https://arxiv.org/abs/2608.12385)
 
-- **Campagne « City-Forum » ciblant les données SaaS** : Des attaquants, possiblement liés au groupe d'extorsion ShinyHunters, exploitent les plateformes Salesforce et ServiceNow pour exfiltrer des données. La compromission de ces CRM et ITSM expose directement les informations clients et les processus métiers. [CSO Online](https://www.csoonline.com/article/4209788/salesforce-servicenow-data-targeted-in-city-forum-attacks.html)
+- **Personnalisation frugale** : *Meta-LoRA* adresse la personnalisation cross-domaine en quelques exemples en calibrant l'amplitude de mise à jour sous données éparses. [Source](https://arxiv.org/abs/2608.12389)
 
-- **Risque technologique et gouvernance** : La sous-estimation chronique du risque IT par les conseils d'administration jusqu'à la crise provient d'un déficit de traduction entre enjeux techniques et enjeux d'affaires. Le RSSI doit adapter son reporting pour rendre le risque concret et stratégique. [Dark Reading](https://www.darkreading.com/cyber-risk/what-boards-must-know-tech-risk)
+- **Saturation des contraintes** : Les LLM suivent bien les instructions individuelles mais subissent une transition de phase quand le nombre de contraintes compositionnelles augmente, menant à l'échec. [Source](https://arxiv.org/abs/2608.12426)
 
-- **Effet domino chez les sous-traitants publics** : Une brèche signalée par le parquet écossais pourrait s'étendre à d'autres agences gouvernementales, la source étant un prestataire tiers partagé. Cela rappelle la nécessité de cartographier les interdépendances et de durcir les clauses de sécurité. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office)
+- **Mémoire agentique évolutive** : *MindMemOS* introduit une couche mémoire portable et auto-évolutive pour agents. *ε-MemEvo* permet le transfert adaptatif d'expérience de recherche entre tâches pour l'évolution de programmes. [MindMemOS](https://arxiv.org/abs/2608.12428) · [ε-MemEvo](https://arxiv.org/abs/2608.12522)
 
-- **Convergence données-identité pour les agents IA** : Cyera débourse 1 milliard de dollars pour acquérir Oasis Security afin de bâtir un plan de contrôle unifié. L'enjeu est de redéfinir les privilèges d'accès des agents IA sur des critères métier dynamiques, et non plus sur des rôles statiques. [Dark Reading](https://www.darkreading.com/identity-access-management-security/cyera-oasis-security-acquisition-ai-agent-control)
+- **Explicabilité causale** : Le *Causal Attribution Score* (CAS) permet d'attribuer un effet d'intervention sur le résultat réel, dépassant les méthodes d'explication prédictive qui se contentent d'attribuer une sortie de modèle. [Source](https://arxiv.org/abs/2608.12555)
 
-- **Centralisation du risque base de données** : Oracle lance « Database Security Central », gratuit pendant six mois, pour offrir une vue unifiée des vulnérabilités sur l'ensemble du parc de bases. Ce type d'outil devient critique face à l'augmentation des attaques ciblant les SGBD. [CSO Online](https://www.csoonline.com/article/4209792/oracles-new-database-security-tool-is-free-for-six-months-2.html)
+- **Décodage contraint scalable** : Des automates à trie permettent le décodage contraint sur de grands ensembles finis pour forcer les sorties structurées conformes à un schéma. [Source](https://arxiv.org/abs/2608.12574)
+
+- **Évaluation des traces de raisonnement** : *Reasoning Jury* propose un mécanisme de consensus multi-modèle pour juger la qualité des longues traces de raisonnement, servant à la curation de données et au signal d'entraînement en RL. [Source](https://arxiv.org/abs/2608.12585)
 
 **Évaluation du scoring**
 
-- **5/5** — [Salesforce, ServiceNow data targeted in ‘City-Forum’ attacks](https://www.csoonline.com/article/4209788/salesforce-servicenow-data-targeted-in-city-forum-attacks.html) — CSO Online. Raison : Campagne ciblant Salesforce et ServiceNow, plateformes critiques en entreprise. Similaire à ShinyHunters, groupe actif et dangereux. Impact direct sur données sensibles.
-- **4/5** — [Scottish Govt Suffers Potentially Widening Data Breach at Prosecutor's Office](https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office) — Dark Reading. Raison : Incident potentiel d'ampleur via un prestataire commun à plusieurs agences gouvernementales écossaises, impact possible sur la chaîne d'approvisionnement et la gouvernance.
-- **4/5** — [What Boards Need to Know About Tech Risk](https://www.darkreading.com/cyber-risk/what-boards-must-know-tech-risk) — Dark Reading. Raison : Article ciblant la gouvernance du risque tech pour les boards, sujet clé pour RSSI/CTO. Source crédible, angle stratégique pertinent pour un public expert.
-- **3/5** — [Oracle’s new database security tool is free — for six months](https://www.csoonline.com/article/4209792/oracles-new-database-security-tool-is-free-for-six-months-2.html) — CSO Online. Raison : Outil de centralisation des risques base de données Oracle, gratuit temporairement. Intéressant pour RSSI/CTO mais pas critique immédiat.
-- **3/5** — [Cyera's Oasis Security Buy Is All About AI Agent Control](https://www.darkreading.com/identity-access-management-security/cyera-oasis-security-acquisition-ai-agent-control) — Dark Reading. Raison : Acquisition stratégique liant sécurité des données et des identités pour agents IA. Intéressant pour la réflexion mais le résumé manque de détails techniques exploitables.
-
-## IA &amp; Tech — Médias internationaux
-
-- **Stratégie open-weight chez Meta** : Meta publie Glimmer, un modèle open-weight exécutable en local, tout en maintenant Muse Spark sous API propriétaire, illustrant une stratégie à deux vitesses malgré le discours d'accessibilité. [TechCrunch](https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/)
-
-- **Optimisation de l'inférence GPU** : La startup française Kog remet en cause l'idée que les GPU seraient intrinsèquement inadaptés aux workflows agentiques, en proposant une approche qui exploite davantage la profondeur des calculs. [TechCrunch](https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/)
-
-- **Modèles d'IA pour wearables santé** : Samsung Research America présente deux modèles de fondation entraînés sur les biosignaux de montres connectées (rythme cardiaque, sommeil, activité physique), dans le cadre de sa vision Connected Care. [AI News](https://www.artificialintelligence-news.com/news/samsung-health-ai-models-analyse-wearable-biosignal-data/)
-
-**Évaluation du scoring**
-
-- **3/5** — [Does Mark Zuckerberg really believe AI is ‘for everyone’?](https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/) — TechCrunch — AI. Raison : Lancement d'un modèle open-weight par Meta et plaidoyer stratégique de Zuckerberg. Pertinent pour la stratégie IA mais sans détail technique ou impact immédiat sur la sécurité.
-- **3/5** — [Kog is going deeper to squeeze more inference out of GPUs](https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/) — TechCrunch — AI. Raison : Article technique sur l'optimisation de l'inférence GPU pour workflows agentiques, potentiellement utile mais sans détail concret sur la méthode ou l'impact.
-- **3/5** — [Samsung health AI models analyse wearable biosignal data](https://www.artificialintelligence-news.com/news/samsung-health-ai-models-analyse-wearable-biosignal-data/) — AI News. Raison : Modèles IA pour wearables, intéressant pour la santé connectée mais sans lien direct avec la cybersécurité ou les priorités techniques du public cible.
-
-## Actualité tech FR
-
-- **Vol de données aux Finances publiques** : La DGFiP confirme que la cyberattaque de sa plateforme a exposé des centaines de milliers d'usagers à un vol de données. [BFM Tech](https://www.bfmtv.com/tech/actualites/cybersecurite/la-direction-generale-des-finances-publiques-indique-que-quelques-centaines-de-milliers-d-usagers-concernes-par-le-piratage-de-la-plateforme-des-impots_AD-202608140349.html)
-
-- **Alertes spyware d'Apple** : Une nouvelle vague de notifications a été envoyée à des utilisateurs d'iPhone dans 110 pays pour les avertir d'un ciblage par des logiciels espions mercenaires. [Siècle Digital](https://siecledigital.fr/2026/08/14/apple-alerte-des-utilisateurs-diphone-cibles-par-de-puissants-logiciels-espions/)
-
-- **IA générative et exploitation des données** : Twitch intègre désormais les streams de ses créateurs dans le périmètre d'entraînement des modèles d'IA d'Amazon, tandis qu'Apple négocie avec des éditeurs de presse pour alimenter Siri AI en contenu fiable et éviter les hallucinations sur l'actualité. [Siècle Digital](https://siecledigital.fr/2026/08/14/twitch-utilise-desormais-les-streams-de-ses-createurs-pour-entrainer-lia-damazon/) · [Next.ink](https://next.ink/brief-article/apple-veut-eviter-que-siri-ai-raconte-nimporte-quoi/)
-
-- **Régulation des plateformes et de l'App Store** : Le Conseil constitutionnel censure l'interdiction des réseaux sociaux aux moins de 15 ans pour atteinte disproportionnée à la liberté d'expression, tandis qu'Apple propose un nouveau règlement pour rétablir sa commission sur les achats externes aux États-Unis. [BFM Tech](https://www.bfmtv.com/tech/video-le-conseil-constitutionnel-censure-l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-car-elle-porte-une-atteinte-disproportionnee-a-leur-liberte-d-expression_VN-202608140360.html) · [Next.ink](https://next.ink/251778/apple-veut-retablir-sa-commission-sur-les-achats-externes-aux-etats-unis/)
-
-**Évaluation du scoring**
-
-- **5/5** — [La direction générale des finances publiques indique que "quelques centaines de milliers d'usagers" sont concernés par le piratage de la plateforme des impôts](https://www.bfmtv.com/tech/actualites/cybersecurite/la-direction-generale-des-finances-publiques-indique-que-quelques-centaines-de-milliers-d-usagers-concernes-par-le-piratage-de-la-plateforme-des-impots_AD-202608140349.html) — BFM Tech. Raison : Incident cyber majeur touchant un secteur critique et des données sensibles de centaines de milliers d'usagers. Impact direct sur la gouvernance et la sécurité des SI publics.
-- **4/5** — [Apple alerte des utilisateurs d’iPhone ciblés par de puissants logiciels espions](https://siecledigital.fr/2026/08/14/apple-alerte-des-utilisateurs-diphone-cibles-par-de-puissants-logiciels-espions/) — Siècle Digital. Raison : Alerte Apple sur logiciels espions mercenaires ciblant des utilisateurs dans 110 pays. Information stratégique pour RSSI/CTO sur la menace et la réactivité d'Apple.
-- **3/5** — [☕️ Apple veut éviter que Siri AI raconte n’importe quoi sur l’actualité](https://next.ink/brief-article/apple-veut-eviter-que-siri-ai-raconte-nimporte-quoi/) — Next.ink. Raison : Information sur la stratégie d'Apple pour fiabiliser Siri avec des sources presse. Intéressant pour la veille IA mais pas de détail technique ou cyber direct.
-- **3/5** — [Le Conseil constitutionnel censure l'interdiction des réseaux sociaux aux moins de 15 ans car elle porte "une atteinte disproportionnée" à leur liberté d'expression](https://www.bfmtv.com/tech/video-le-conseil-constitutionnel-censure-l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-car-elle-porte-une-atteinte-disproportionnee-a-leur-liberte-d-expression_VN-202608140360.html) — BFM Tech. Raison : Décision du Conseil constitutionnel sur régulation des réseaux sociaux, impacte la gouvernance numérique mais sans lien direct avec cybersécurité ou techno. Utile pour contexte réglementaire.
-- **3/5** — [Apple veut rétablir sa commission sur les achats externes aux États-Unis](https://next.ink/251778/apple-veut-retablir-sa-commission-sur-les-achats-externes-aux-etats-unis/) — Next.ink. Raison : Sujet juridico-commercial Apple/Epic sans profondeur technique immédiate. Peut impacter indirectement les écosystèmes mobiles mais pas critique pour cybersécurité ou dev tooling.
-- **3/5** — [Twitch utilise désormais les streams de ses créateurs pour entraîner l’IA d’Amazon](https://siecledigital.fr/2026/08/14/twitch-utilise-desormais-les-streams-de-ses-createurs-pour-entrainer-lia-damazon/) — Siècle Digital. Raison : Annonce stratégique de Twitch/Amazon sur l'utilisation des streams pour l'IA. Pertinent pour comprendre les pratiques des grands acteurs, mais sans détail technique ou impact immédiat.
+- **4/5** — [Position: The Alignment Community is Unintentionally Building a Censor's Toolkit](https://arxiv.org/abs/2608.12346) — arXiv cs.AI. Raison : Papier de recherche sur le détournement des méthodes d'alignement IA pour la censure. Pertinent pour RSSI et CTO sur les risques émergents.
+- **4/5** — [Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in Japanese](https://arxiv.org/abs/2608.12373) — arXiv cs.AI. Raison : Recherche sur le contournement des alignements de sécurité des LLM selon la langue du prompt. Implication forte pour l'usage expert en entreprise et la gouvernance des IA.
+- **4/5** — [SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries](https://arxiv.org/abs/2608.12654) — arXiv cs.AI. Raison : Benchmark dédié à la décision de laisser agir un agent IA ou de réquisitionner un humain, cas critique pour la sécurité des agents en entreprise.
+- **4/5** — [Correct Is Not Governed: Provenance Integrity in Agentic Workflows](https://arxiv.org/abs/2608.12761) — arXiv cs.AI. Raison : Article de recherche sur la gouvernance des workflows agentiques, critique pour la sécurité et la conformité en entreprise. Pertinent pour RSSI et CTO.
+- **4/5** — [Four LLM loss functions → four flavors of LLM misalignment](https://www.lesswrong.com/posts/GRmvZsHXH4vaijPMv/four-llm-loss-functions-four-flavors-of-llm-misalignment) — LessWrong — AI. Raison : Analyse originale des biais d'alignement des LLM par fonction de perte, pertinente pour experts IA et sécurité. Source crédible (LessWrong).
+- **3/5** — [Position: Reasoning is a Learnable Rule-Based Process](https://arxiv.org/abs/2608.12325) — arXiv cs.AI. Raison : Papier de recherche arXiv sur le raisonnement comme processus basé sur des règles. Intéressant pour experts IA mais implication pratique incertaine.
+- **3/5** — [Diagnostic Foundation for Evaluating LLMs' Research Integrity as Co-Scientists](https://arxiv.org/abs/2608.12345) — arXiv cs.AI. Raison : Benchmark sur l'intégrité en recherche des LLMs, pertinent mais secondaire pour un public cybersécurité. À survoler si temps libre.
+- **3/5** — [Agreement Is Not Alignment: Divergent Moral Grounds in Human and LLM Ethical Judgments](https://arxiv.org/abs/2608.12368) — arXiv cs.AI. Raison : Article de recherche sur l'alignement moral des LLM. Intéressant pour les experts IA, mais impact pratique incertain pour le public cible.
+- **3/5** — [Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing](https://arxiv.org/abs/2608.12371) — arXiv cs.AI. Raison : Recherche sur ordonnancement multi-agents avec LLM pour edge computing. Intéressant pour l'architecture SI, mais sans lien direct cybersécurité.
+- **3/5** — [Position: We Need Practical AI Alignment Methods to Mirror Human Reasoning](https://arxiv.org/abs/2608.12372) — arXiv cs.AI. Raison : Papier de position sur l'alignement IA cognitif pour la prise de décision. Pertinent pour la recherche mais implications pratiques encore incertaines pour les experts.
+- **3/5** — [Dual-Flow Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation](https://arxiv.org/abs/2608.12385) — arXiv cs.AI. Raison : Papier de recherche architecturale sur l'optimisation des LLMs, intéressant pour CTO/Architecte mais sans implication directe cybersécurité ou produit disponible.
+- **3/5** — [Learning to Adapt Cross-Domain Preferences via Meta-LoRA for LLM Personalization](https://arxiv.org/abs/2608.12389) — arXiv cs.AI. Raison : Papier de recherche sur la personnalisation LLM par adaptation cross-domain. Intéressant pour l'IA en entreprise mais sans lien direct avec la cybersécurité ou les priorités du public cible.
+- **3/5** — [Research Assistant: AstraZeneca's Agentic System for R&amp;D](https://arxiv.org/abs/2608.12395) — arXiv cs.AI. Raison : Papier de recherche sur un système agentique interne d'AstraZeneca. Intéressant pour l'usage de l'IA en entreprise, mais sans lien direct avec la cybersécurité ou les sujets ciblés.
+- **3/5** — [Large Language Models Can Follow Instructions, But Not Many at Once: Phase Transitions in Compositional Constraint Satisfaction](https://arxiv.org/abs/2608.12426) — arXiv cs.AI. Raison : Papier de recherche sur les limites des LLM à suivre plusieurs contraintes simultanément. Intéressant pour l'IA en entreprise mais impact pratique incertain.
+- **3/5** — [MindMemOS: A Portable and Self-Evolving Memory Operating Layer for AI Agents](https://arxiv.org/abs/2608.12428) — arXiv cs.AI. Raison : Article de recherche sur la mémoire adaptative pour agents IA, pertinent mais sans impact immédiat démontré en sécurité ou production.
+- **3/5** — [Governed Persistent Memory: Source-Bound State Semantics and Fail-Closed Release for Long-Horizon Agents](https://arxiv.org/abs/2608.12476) — arXiv cs.AI. Raison : Papier de recherche sur mémoire persistante pour agents long horizon. Intéressant pour experts en IA et sécurité, mais implication pratique incertaine.
+- **3/5** — [$\\varepsilon$-MemEvo: Adaptive Cross-Task Memory Transfer for LLM Program Evolution](https://arxiv.org/abs/2608.12522) — arXiv cs.AI. Raison : Recherche sur transfert de connaissance entre tâches pour l'évolution de programmes par LLM. Intéressant pour experts IA, mais lien direct avec cybersécurité et pratique immédiate non établi.
+- **3/5** — [CAS: A Causal Attribution Score for Local and Global Explainable Artificial Intelligence](https://arxiv.org/abs/2608.12555) — arXiv cs.AI. Raison : Papier de recherche proposant une métrique d'attribution causale pour l'IA explicable. Intéressant pour un public expert mais impact pratique incertain.
+- **3/5** — [Trie Automata for Constrained Decoding over Large Finite Sets](https://arxiv.org/abs/2608.12574) — arXiv cs.AI. Raison : Papier de recherche sur le décodage contraint pour LLM, intéressant mais sans implication pratique immédiate ni lien direct avec la cybersécurité.
+- **3/5** — [Reasoning Jury: Multi-Model Consensus for Evaluating Reasoning Traces](https://arxiv.org/abs/2608.12585) — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation des traces de raisonnement LLM via consensus multi-modèle. Intéressant mais impact pratique incertain pour les experts cyber.
 
 ## Cyber — Menaces &amp; vulnérabilités
 
-- **Exploitation active d'une vulnérabilité macOS Screen Sharing** : Le NCSC néerlandais alerte sur l'exploitation en cours d'une faille de contournement d'authentification dans le partage d'écran macOS, utilisée pour déployer un mineur Monero. Un exploit public est disponible. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/)
-
-- **Ciblage immédiat d'une faille critique SAP Commerce Cloud** : Une vulnérabilité d'exécution de code à distance (score maximal) corrigée le 1er avril est déjà exploitée en conditions réelles. Le correctif doit être appliqué sans délai. [BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/)
-
-- **Revendication Clop contre Shell** : Le groupe de ransomware Clop affirme avoir dérobé 89 Go de données à Shell, qui confirme enquêter sur un incident potentiel. Cette revendication s'inscrit dans une campagne plus large ciblant des services de transfert de fichiers. [BleepingComputer](https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/)
-
-- **Brèche à la DGFiP** : Les autorités françaises confirment un accès non autorisé aux systèmes de la Direction générale des Finances publiques fin juin, via une usurpation d'identité. L'étendue exacte des données compromises reste à préciser. [The Record](https://therecord.media/french-tax-authority-dgfip-confirms-data-breach)
-
-- **Chaîne d'attaque sur Google Workspace** : Au-delà du phishing, les tokens OAuth compromis représentent un vecteur d'accès persistant vers Gmail et Drive. La défense doit couvrir l'ensemble de cette chaîne, y compris les applications connectées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-modern-attack-chain-rethinking-google-workspace-security-in-the-age-of-ai/)
+- **Fraude bancaire via un prestataire** : L'arrestation de quatre individus au Brésil et la mise en cause de trois autres en Europe mettent en lumière une compromission de prestataire de services ayant permis le détournement de 30 millions d'euros sur des comptes Commerzbank. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/)
+- **Tatouage numérique des sorties de LLM** : Anthropic développe un mécanisme de watermarking pour les textes générés par Claude, visant à fiabiliser la distinction entre contenu humain et synthétique. [BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/how-anthropic-plans-to-watermark-claudes-ai-generated-text/)
 
 **Évaluation du scoring**
 
-- **5/5** — [Hackers exploit macOS Screen Sharing flaw to deploy Monero miner](https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/) — BleepingComputer. Raison : Exploitation active d'une vulnérabilité macOS avec code public, signalée par un NCSC. Impact direct sur les postes macOS en entreprise, nécessite action immédiate.
-- **5/5** — [Max severity SAP Commerce Cloud flaw now targeted in attacks](https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/) — BleepingComputer. Raison : Critique SAP commerce cloud vulnérabilité de score maximal, patch récent et exploitation active en cours, impact direct sur les entreprises utilisant cette plateforme.
-- **5/5** — [Shell investigates 'potential incident' after Clop data theft claims](https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/) — BleepingComputer. Raison : Incident cyber majeur touchant un grand groupe pétrolier et chaîne d'approvisionnement, avec revendication du ransomware Clop, nécessitant une analyse immédiate par les RSSI.
-- **4/5** — [The Modern Attack Chain: Rethinking Google Workspace Security in the Age of AI](https://www.bleepingcomputer.com/news/security/the-modern-attack-chain-rethinking-google-workspace-security-in-the-age-of-ai/) — BleepingComputer. Raison : Analyse de la chaîne d'attaque Workspace via OAuth, sujet critique pour RSSI/CTO. Source fiable, angle technique sur un vecteur sous-estimé.
-- **4/5** — [France investigates tax authority breach after hacker claims 600,000 victims](https://therecord.media/french-tax-authority-dgfip-confirms-data-breach) — The Record. Raison : Incident cyber touchant une administration fiscale française avec 600k victimes potentielles, analyse utile pour gouvernance et retour d'expérience.</description>
-      <content:encoded><![CDATA[<h2>IA — Produits, agents & dev tooling</h2>
+- **4/5** — [How Anthropic plans to watermark Claude's AI-generated text](https://www.bleepingcomputer.com/news/artificial-intelligence/how-anthropic-plans-to-watermark-claudes-ai-generated-text/) — BleepingComputer. Raison : Annonce d'une méthode concrète de watermarking par Anthropic, intéressante pour la détection des contenus IA, mais sans détail technique ou impact critique immédiat.
+- **4/5** — [Hackers arrested over €30M bank fraud exploiting service provider flaw](https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/) — BleepingComputer. Raison : Incident bancaire réel exploitant une vulnérabilité chez un prestataire, avec arrestations. Pertinent pour RSSI/CTO sur risque chaîne d'approvisionnement.
+
+## IA — Produits, agents &amp; dev tooling
+
+- **Automatisation : RPA vs Workflow** : La RPA fragilise souvent la sécurité et l'observabilité en s'appuyant sur l'UI, tandis que l'automatisation par workflows (API-first) offre une meilleure fiabilité et scalabilité pour les processus métier durables. [Source](https://blog.n8n.io/rpa-vs-workflow-automation/)
+- **Critères de choix pour plateformes d'automatisation IA** : Privilégier les solutions permettant l'auto-hébergement, l'orchestration multi-agents et l'extensibilité par code pour éviter la dépendance fournisseur et conserver la gouvernance sur les données. [Source](https://blog.n8n.io/workato-alternatives-2/)
+- **Chaîne de pensée (CoT) : usage et limites** : Le prompting par chaîne de pensée améliore le raisonnement des LLM sur des tâches complexes, mais devient inutile voire contre-productif avec des modèles très récents ou pour des requêtes simples. [Source](https://blog.n8n.io/chain-of-thought-prompting-techniques-and-when-to-use-them/)
+
+**Évaluation du scoring**
+
+- **4/5** — [RPA vs. Workflow Automation: Building Automation That Lasts](https://blog.n8n.io/rpa-vs-workflow-automation/) — n8n Blog. Raison : Comparatif technique RPA vs workflow automation sur fiabilité, sécurité, passage à l'échelle. Pertinent pour architectes SI et CTO évaluant des solutions d'automatisation durables.
+- **4/5** — [n8n Alternatives: Which AI Automation Platform Can You Deploy?](https://blog.n8n.io/workato-alternatives-2/) — n8n Blog. Raison : Comparatif structuré de plateformes d'automatisation IA avec critères pertinents pour experts (self-hosting, gouvernance, lock-in). Utile pour évaluer des alternatives déployables en entreprise.
+- **3/5** — [Chain-of-Thought Prompting: Techniques and When To Use Them](https://blog.n8n.io/chain-of-thought-prompting-techniques-and-when-to-use-them/) — n8n Blog. Raison : Article technique sur le prompting CoT, utile pour comprendre le raisonnement des LLM, mais sans lien direct avec la cybersécurité ou les priorités opérationnelles des experts ciblés.
+
+## Cyber — Stratégie &amp; analyse
+
+- **L'IA comme réponse à la surcharge de vulnérabilités** : Le NIST envisage d'utiliser l'IA pour traiter le volume croissant de vulnérabilités généré par les outils de recherche et de scan augmentés par l'IA. [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/ai-driven-bug-tsunami-nist-looks-to-ai)
+
+- **Évolution du rôle du RSSI dans le secteur bancaire** : Le CISO de Standard Chartered souligne la nécessité pour les responsables sécurité de maîtriser les enjeux business et de passer d'un profil technique à un positionnement stratégique, tandis que l'IA redéfinit à la fois les capacités défensives et les tactiques adverses. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/mission-driven-security-inside-global-bank-defense)
+
+**Évaluation du scoring**
+
+- **4/5** — [Amid AI-Driven Bug-Hunt Tsunami, NIST Looks to … AI](https://www.darkreading.com/vulnerabilities-threats/ai-driven-bug-tsunami-nist-looks-to-ai) — Dark Reading. Raison : NIST explore l'IA pour gérer l'afflux de vulnérabilités. Sujet stratégique pour RSSI/CTO, croise gouvernance cyber et adoption IA.
+- **3/5** — [Mission-Driven Security: Inside a Global Bank's Defense](https://www.darkreading.com/cybersecurity-operations/mission-driven-security-inside-global-bank-defense) — Dark Reading. Raison : Retour d'expérience d'un CISO sur la transition de technical à stratégique et l'impact de l'IA en banque, intéressant mais sans détails techniques exploitables.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Vulnérabilité critique macOS sous exploitation active** : Une faille de partage d'écran sur Mac permet à un attaquant distant de se connecter sans mot de passe et de prendre le contrôle total du système. La vulnérabilité est activement exploitée. [Ars Technica](https://arstechnica.com/security/2026/08/vulnerability-giving-attackers-full-control-of-macs-is-under-active-exploitation/)
+
+- **Perte de données suite à une défaillance de cloud provider** : Une chaîne PBS risque de perdre 50 To de données après avoir perdu tout contact avec son fournisseur Iron Mountain, qui déclare ne plus avoir accès aux données sur ses propres serveurs. [Ars Technica](https://arstechnica.com/information-technology/2026/08/pbs-station-fears-losing-50tb-of-data-after-being-ghosted-by-cloud-storage-provider/)
+
+**Évaluation du scoring**
+
+- **5/5** — [Vulnerability giving attackers full control of Macs is under active exploitation](https://arstechnica.com/security/2026/08/vulnerability-giving-attackers-full-control-of-macs-is-under-active-exploitation/) — Ars Technica — Tech Lab. Raison : CVE critique sous exploitation active, permettant un contrôle total sans authentification. Impact direct sur les Macs en entreprise, nécessite une action immédiate.
+- **4/5** — [PBS station fears losing 50TB of data after being ghosted by cloud storage provider](https://arstechnica.com/information-technology/2026/08/pbs-station-fears-losing-50tb-of-data-after-being-ghosted-by-cloud-storage-provider/) — Ars Technica — Tech Lab. Raison : Incident de perte d'accès à 50 To de données chez un fournisseur cloud, illustrant un risque majeur de dépendance et de continuité d'activité pour les RSSI/CTO.
+
+## Actualité tech FR
+
+- **Vol de données sur la plateforme des impôts** : La DGFiP a précisé l'ampleur du piratage de sa plateforme, qui a entraîné la compromission des données de 678 000 comptes. L'attaque a permis une exfiltration de données, et non une simple consultation. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/video-plateforme-des-impots-piratee-678-000-personnes-concernees-par-la-cyberattaque_VN-202608140484.html)
+
+**Évaluation du scoring**
+
+- **5/5** — [Plateforme des impôts piratée: 678.000 personnes concernées par la cyberattaque](https://www.bfmtv.com/tech/cybersecurite/video-plateforme-des-impots-piratee-678-000-personnes-concernees-par-la-cyberattaque_VN-202608140484.html) — BFM Tech. Raison : Incident cyber majeur touchant un secteur critique (impôts) avec vol de données massif (678k comptes). Impact direct sur la sécurité des citoyens et la gouvernance.</description>
+      <content:encoded><![CDATA[<h2>IA — Recherche</h2>
 
 <ul>
-<li><strong>Observabilité des agents IA</strong> : Le passage en production des workflows agentiques nécessite une observabilité dédiée pour tracer le comportement, diagnostiquer les échecs et assurer la fiabilité des chaînes d'actions. <a href="https://blog.n8n.io/ai-agent-observability/">Building AI Agent Observability for Production Workflows</a></li>
+<li><strong>Détournement des méthodes d'alignement pour la censure</strong> : Les techniques d'alignement conçues pour sécuriser les modèles constituent une arme à double usage, exploitables par des acteurs malveillants pour construire des outils de censure et de manipulation à large échelle. <a href="https://arxiv.org/abs/2608.12346">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Architectures asynchrones et event-driven</strong> : Les APIs asynchrones découplent requête et réponse pour passer à l'échelle, tandis que l'architecture microservices orientée événements impose de maîtriser les compromis entre files d'attente et flux, ainsi que les anti-patterns courants. <a href="https://blog.n8n.io/async-api/">Async API: How Asynchronous APIs Work and When To Use Them</a> · <a href="https://blog.n8n.io/event-driven-microservices/">Event-Driven Microservices: Architecture, Patterns, and Production Tradeoffs</a></li>
+<li><strong>Contournement multilingue des garde-fous</strong> : L'évaluation de neuf modèles issus de six fournisseurs montre que la langue du prompt modifie radicalement les décisions des LLM. Une requête en japonais peut débloquer des recommandations que le modèle refuse en anglais, exposant une faille dans l'alignement de sécurité monolingue. <a href="https://arxiv.org/abs/2608.12373">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurisation des APIs REST</strong> : Le choix de la méthode d'authentification (clés, tokens) doit résulter d'un arbitrage entre sécurité et complexité opérationnelle, avec des bonnes pratiques spécifiques à la production. <a href="https://blog.n8n.io/api-authentication-methods/">API Authentication Methods Explained: From Keys to Tokens</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>3/5</strong> — <a href="https://blog.n8n.io/api-authentication-methods/">API Authentication Methods Explained: From Keys to Tokens</a> — n8n Blog. Raison : Article de blog généraliste sur les méthodes d'authentification API. Utile pour un survol mais sans profondeur technique ni angle original pour un public expert.</li>
-<li><strong>3/5</strong> — <a href="https://blog.n8n.io/event-driven-microservices/">Event-Driven Microservices: Architecture, Patterns, and Production Tradeoffs</a> — n8n Blog. Raison : Article technique sur les microservices événementiels utile pour un architecte ou CTO, mais pas critique immédiatement pour la cybersécurité ou l'IA.</li>
-<li><strong>3/5</strong> — <a href="https://blog.n8n.io/ai-agent-observability/">Building AI Agent Observability for Production Workflows</a> — n8n Blog. Raison : Sujet utile pour experts en automatisation et workflows IA, mais contenu probablement générique sur l'observabilité de base, sans spécificité technique ou critique.</li>
-<li><strong>3/5</strong> — <a href="https://blog.n8n.io/async-api/">Async API: How Asynchronous APIs Work and When To Use Them</a> — n8n Blog. Raison : Article technique sur les API asynchrones, utile pour les développeurs et architectes, mais sans lien direct avec la cybersécurité ou l'IA. Pertinent pour la veille dev tooling.</li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Conception de fonctions de récompense pour RL multi-tour</strong> : AWS détaille la construction de fonctions de récompense composites pour l'entraînement par renforcement multi-tour avec Amazon Nova Forge, en insistant sur l'exécution sécurisée du code généré et l'instrumentation de chaque composant pour détecter les dérives. <a href="https://aws.amazon.com/blogs/machine-learning/custom-reward-functions-for-multi-turn-reinforcement-learning-with-amazon-nova-forge/">AWS Machine Learning</a></li>
+<li><strong>Gouvernance des agents autonomes</strong> : Deux travaux distincts abordent le contrôle des agents à longue durée de vie. L'un introduit un benchmark pour la décision de validation humaine ou automatique juste avant l'exécution d'une action critique (email, paiement). L'autre, *Governed Persistent Memory*, propose une mémoire persistance capable de refuser de s'appuyer sur des données périmées, supprimées ou contradictoires pour justifier une action sortante. <a href="https://arxiv.org/abs/2608.12654">SteerBench-Work</a> · <a href="https://arxiv.org/abs/2608.12476">GPM</a></li>
 </ul>
 
 <ul>
-<li><strong>Workflows multi-agents avec SageMaker AI et Bedrock</strong> : AWS montre comment orchestrer des agents spécialisés utilisant chacun le modèle le plus adapté, en connectant les endpoints compatibles OpenAI de SageMaker AI au runtime Bedrock AgentCore, avec une observabilité au niveau du token sur les endpoints SageMaker. <a href="https://aws.amazon.com/blogs/machine-learning/building-agentic-workflows-with-sagemaker-ai-and-bedrock-agentcore/">AWS Machine Learning</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/custom-reward-functions-for-multi-turn-reinforcement-learning-with-amazon-nova-forge/">Custom reward functions for multi-turn reinforcement learning with Amazon Nova Forge</a> — AWS Machine Learning. Raison : Article technique sur conception de reward functions pour RL multi-turn sur Amazon Nova Forge. Intéressant pour experts IA produit/recherche, mais pas impact direct cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/building-agentic-workflows-with-sagemaker-ai-and-bedrock-agentcore/">Building agentic workflows with SageMaker AI and Bedrock AgentCore</a> — AWS Machine Learning. Raison : Article technique couplant SageMaker AI et Bedrock AgentCore pour workflows multi-agents avec observabilité. Utile pour CTO/Architecte SI mais pas critique ni innovant.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Campagne « City-Forum » ciblant les données SaaS</strong> : Des attaquants, possiblement liés au groupe d'extorsion ShinyHunters, exploitent les plateformes Salesforce et ServiceNow pour exfiltrer des données. La compromission de ces CRM et ITSM expose directement les informations clients et les processus métiers. <a href="https://www.csoonline.com/article/4209788/salesforce-servicenow-data-targeted-in-city-forum-attacks.html">CSO Online</a></li>
+<li><strong>Intégrité des workflows agentiques</strong> : Évaluer un workflow agentique sur le seul résultat correct est insuffisant en contexte institutionnel. Une action juste peut provenir d'une autorité illégitime, d'une complétion non supportée ou d'un contexte rendu obsolète. <a href="https://arxiv.org/abs/2608.12761">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Risque technologique et gouvernance</strong> : La sous-estimation chronique du risque IT par les conseils d'administration jusqu'à la crise provient d'un déficit de traduction entre enjeux techniques et enjeux d'affaires. Le RSSI doit adapter son reporting pour rendre le risque concret et stratégique. <a href="https://www.darkreading.com/cyber-risk/what-boards-must-know-tech-risk">Dark Reading</a></li>
+<li><strong>Désalignement par fonction de perte</strong> : Chaque fonction de perte utilisée lors de l'entraînement (pré-entraînement, SFT, RLHF) produit une saveur de désalignement distincte. <a href="https://www.lesswrong.com/posts/GRmvZsHXH4vaijPMv/four-llm-loss-functions-four-flavors-of-llm-misalignment">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Effet domino chez les sous-traitants publics</strong> : Une brèche signalée par le parquet écossais pourrait s'étendre à d'autres agences gouvernementales, la source étant un prestataire tiers partagé. Cela rappelle la nécessité de cartographier les interdépendances et de durcir les clauses de sécurité. <a href="https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office">Dark Reading</a></li>
+<li><strong>Débat sur la nature du raisonnement</strong> : Une prise de position défend que le raisonnement autonome est fondamentalement un processus apprenable basé sur des règles, contrastant avec la domination actuelle des modèles génératifs probabilistes profonds. <a href="https://arxiv.org/abs/2608.12325">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Convergence données-identité pour les agents IA</strong> : Cyera débourse 1 milliard de dollars pour acquérir Oasis Security afin de bâtir un plan de contrôle unifié. L'enjeu est de redéfinir les privilèges d'accès des agents IA sur des critères métier dynamiques, et non plus sur des rôles statiques. <a href="https://www.darkreading.com/identity-access-management-security/cyera-oasis-security-acquisition-ai-agent-control">Dark Reading</a></li>
+<li><strong>Intégrité scientifique des co-scientists IA</strong> : *IntegrityBench* évalue la capacité des LLM déployés comme co-scientifiques à maintenir l'intégrité de la recherche sous pression institutionnelle, via la classification d'inconduites et la recommandation d'actions éthiques. <a href="https://arxiv.org/abs/2608.12345">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Centralisation du risque base de données</strong> : Oracle lance « Database Security Central », gratuit pendant six mois, pour offrir une vue unifiée des vulnérabilités sur l'ensemble du parc de bases. Ce type d'outil devient critique face à l'augmentation des attaques ciblant les SGBD. <a href="https://www.csoonline.com/article/4209792/oracles-new-database-security-tool-is-free-for-six-months-2.html">CSO Online</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4209788/salesforce-servicenow-data-targeted-in-city-forum-attacks.html">Salesforce, ServiceNow data targeted in ‘City-Forum’ attacks</a> — CSO Online. Raison : Campagne ciblant Salesforce et ServiceNow, plateformes critiques en entreprise. Similaire à ShinyHunters, groupe actif et dangereux. Impact direct sur données sensibles.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/scottish-govt-data-breach-prosecutors-office">Scottish Govt Suffers Potentially Widening Data Breach at Prosecutor's Office</a> — Dark Reading. Raison : Incident potentiel d'ampleur via un prestataire commun à plusieurs agences gouvernementales écossaises, impact possible sur la chaîne d'approvisionnement et la gouvernance.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyber-risk/what-boards-must-know-tech-risk">What Boards Need to Know About Tech Risk</a> — Dark Reading. Raison : Article ciblant la gouvernance du risque tech pour les boards, sujet clé pour RSSI/CTO. Source crédible, angle stratégique pertinent pour un public expert.</li>
-<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/4209792/oracles-new-database-security-tool-is-free-for-six-months-2.html">Oracle’s new database security tool is free — for six months</a> — CSO Online. Raison : Outil de centralisation des risques base de données Oracle, gratuit temporairement. Intéressant pour RSSI/CTO mais pas critique immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://www.darkreading.com/identity-access-management-security/cyera-oasis-security-acquisition-ai-agent-control">Cyera's Oasis Security Buy Is All About AI Agent Control</a> — Dark Reading. Raison : Acquisition stratégique liant sécurité des données et des identités pour agents IA. Intéressant pour la réflexion mais le résumé manque de détails techniques exploitables.</li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Stratégie open-weight chez Meta</strong> : Meta publie Glimmer, un modèle open-weight exécutable en local, tout en maintenant Muse Spark sous API propriétaire, illustrant une stratégie à deux vitesses malgré le discours d'accessibilité. <a href="https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/">TechCrunch</a></li>
+<li><strong>Fondements moraux divergents malgré l'accord de surface</strong> : L'accord entre jugements humains et LLM sur des labels éthiques ne garantit pas l'alignement. Deux agents peuvent aboutir à la même conclusion en s'appuyant sur des raisonnements moraux radicalement différents. <a href="https://arxiv.org/abs/2608.12368">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Optimisation de l'inférence GPU</strong> : La startup française Kog remet en cause l'idée que les GPU seraient intrinsèquement inadaptés aux workflows agentiques, en proposant une approche qui exploite davantage la profondeur des calculs. <a href="https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/">TechCrunch</a></li>
+<li><strong>Déploiement industriel et cas d'usage métier</strong> : AstraZeneca détaille son système agentique interne *Research Assistant* pour l'exploration de données biomédicales par les scientifiques. Un autre article propose un système multi-agent avec négociation assistée par LLM pour l'ordonnancement en edge computing mobile. <a href="https://arxiv.org/abs/2608.12395">AstraZeneca</a> · <a href="https://arxiv.org/abs/2608.12371">Edge Computing</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles d'IA pour wearables santé</strong> : Samsung Research America présente deux modèles de fondation entraînés sur les biosignaux de montres connectées (rythme cardiaque, sommeil, activité physique), dans le cadre de sa vision Connected Care. <a href="https://www.artificialintelligence-news.com/news/samsung-health-ai-models-analyse-wearable-biosignal-data/">AI News</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>3/5</strong> — <a href="https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/">Does Mark Zuckerberg really believe AI is ‘for everyone’?</a> — TechCrunch — AI. Raison : Lancement d'un modèle open-weight par Meta et plaidoyer stratégique de Zuckerberg. Pertinent pour la stratégie IA mais sans détail technique ou impact immédiat sur la sécurité.</li>
-<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/">Kog is going deeper to squeeze more inference out of GPUs</a> — TechCrunch — AI. Raison : Article technique sur l'optimisation de l'inférence GPU pour workflows agentiques, potentiellement utile mais sans détail concret sur la méthode ou l'impact.</li>
-<li><strong>3/5</strong> — <a href="https://www.artificialintelligence-news.com/news/samsung-health-ai-models-analyse-wearable-biosignal-data/">Samsung health AI models analyse wearable biosignal data</a> — AI News. Raison : Modèles IA pour wearables, intéressant pour la santé connectée mais sans lien direct avec la cybersécurité ou les priorités techniques du public cible.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Vol de données aux Finances publiques</strong> : La DGFiP confirme que la cyberattaque de sa plateforme a exposé des centaines de milliers d'usagers à un vol de données. <a href="https://www.bfmtv.com/tech/actualites/cybersecurite/la-direction-generale-des-finances-publiques-indique-que-quelques-centaines-de-milliers-d-usagers-concernes-par-le-piratage-de-la-plateforme-des-impots_AD-202608140349.html">BFM Tech</a></li>
+<li><strong>Alignement cognitif vs alignement comportemental</strong> : Dans les décisions à haut risque, l'alignement doit refléter le raisonnement humain et non se limiter à imiter les décisions finales. <a href="https://arxiv.org/abs/2608.12372">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Alertes spyware d'Apple</strong> : Une nouvelle vague de notifications a été envoyée à des utilisateurs d'iPhone dans 110 pays pour les avertir d'un ciblage par des logiciels espions mercenaires. <a href="https://siecledigital.fr/2026/08/14/apple-alerte-des-utilisateurs-diphone-cibles-par-de-puissants-logiciels-espions/">Siècle Digital</a></li>
+<li><strong>Optimisation de l'inférence</strong> : Les *Dual-Flow Transformers* découplent la phase de préremplissage parallèle de la phase de décodage pour réduire le coût d'inférence cumulé. <a href="https://arxiv.org/abs/2608.12385">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>IA générative et exploitation des données</strong> : Twitch intègre désormais les streams de ses créateurs dans le périmètre d'entraînement des modèles d'IA d'Amazon, tandis qu'Apple négocie avec des éditeurs de presse pour alimenter Siri AI en contenu fiable et éviter les hallucinations sur l'actualité. <a href="https://siecledigital.fr/2026/08/14/twitch-utilise-desormais-les-streams-de-ses-createurs-pour-entrainer-lia-damazon/">Siècle Digital</a> · <a href="https://next.ink/brief-article/apple-veut-eviter-que-siri-ai-raconte-nimporte-quoi/">Next.ink</a></li>
+<li><strong>Personnalisation frugale</strong> : *Meta-LoRA* adresse la personnalisation cross-domaine en quelques exemples en calibrant l'amplitude de mise à jour sous données éparses. <a href="https://arxiv.org/abs/2608.12389">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Régulation des plateformes et de l'App Store</strong> : Le Conseil constitutionnel censure l'interdiction des réseaux sociaux aux moins de 15 ans pour atteinte disproportionnée à la liberté d'expression, tandis qu'Apple propose un nouveau règlement pour rétablir sa commission sur les achats externes aux États-Unis. <a href="https://www.bfmtv.com/tech/video-le-conseil-constitutionnel-censure-l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-car-elle-porte-une-atteinte-disproportionnee-a-leur-liberte-d-expression_VN-202608140360.html">BFM Tech</a> · <a href="https://next.ink/251778/apple-veut-retablir-sa-commission-sur-les-achats-externes-aux-etats-unis/">Next.ink</a></li>
+<li><strong>Saturation des contraintes</strong> : Les LLM suivent bien les instructions individuelles mais subissent une transition de phase quand le nombre de contraintes compositionnelles augmente, menant à l'échec. <a href="https://arxiv.org/abs/2608.12426">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Mémoire agentique évolutive</strong> : *MindMemOS* introduit une couche mémoire portable et auto-évolutive pour agents. *ε-MemEvo* permet le transfert adaptatif d'expérience de recherche entre tâches pour l'évolution de programmes. <a href="https://arxiv.org/abs/2608.12428">MindMemOS</a> · <a href="https://arxiv.org/abs/2608.12522">ε-MemEvo</a></li>
+</ul>
+
+<ul>
+<li><strong>Explicabilité causale</strong> : Le *Causal Attribution Score* (CAS) permet d'attribuer un effet d'intervention sur le résultat réel, dépassant les méthodes d'explication prédictive qui se contentent d'attribuer une sortie de modèle. <a href="https://arxiv.org/abs/2608.12555">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Décodage contraint scalable</strong> : Des automates à trie permettent le décodage contraint sur de grands ensembles finis pour forcer les sorties structurées conformes à un schéma. <a href="https://arxiv.org/abs/2608.12574">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation des traces de raisonnement</strong> : *Reasoning Jury* propose un mécanisme de consensus multi-modèle pour juger la qualité des longues traces de raisonnement, servant à la curation de données et au signal d'entraînement en RL. <a href="https://arxiv.org/abs/2608.12585">Source</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/cybersecurite/la-direction-generale-des-finances-publiques-indique-que-quelques-centaines-de-milliers-d-usagers-concernes-par-le-piratage-de-la-plateforme-des-impots_AD-202608140349.html">La direction générale des finances publiques indique que "quelques centaines de milliers d'usagers" sont concernés par le piratage de la plateforme des impôts</a> — BFM Tech. Raison : Incident cyber majeur touchant un secteur critique et des données sensibles de centaines de milliers d'usagers. Impact direct sur la gouvernance et la sécurité des SI publics.</li>
-<li><strong>4/5</strong> — <a href="https://siecledigital.fr/2026/08/14/apple-alerte-des-utilisateurs-diphone-cibles-par-de-puissants-logiciels-espions/">Apple alerte des utilisateurs d’iPhone ciblés par de puissants logiciels espions</a> — Siècle Digital. Raison : Alerte Apple sur logiciels espions mercenaires ciblant des utilisateurs dans 110 pays. Information stratégique pour RSSI/CTO sur la menace et la réactivité d'Apple.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/brief-article/apple-veut-eviter-que-siri-ai-raconte-nimporte-quoi/">☕️ Apple veut éviter que Siri AI raconte n’importe quoi sur l’actualité</a> — Next.ink. Raison : Information sur la stratégie d'Apple pour fiabiliser Siri avec des sources presse. Intéressant pour la veille IA mais pas de détail technique ou cyber direct.</li>
-<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/video-le-conseil-constitutionnel-censure-l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-car-elle-porte-une-atteinte-disproportionnee-a-leur-liberte-d-expression_VN-202608140360.html">Le Conseil constitutionnel censure l'interdiction des réseaux sociaux aux moins de 15 ans car elle porte "une atteinte disproportionnée" à leur liberté d'expression</a> — BFM Tech. Raison : Décision du Conseil constitutionnel sur régulation des réseaux sociaux, impacte la gouvernance numérique mais sans lien direct avec cybersécurité ou techno. Utile pour contexte réglementaire.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/251778/apple-veut-retablir-sa-commission-sur-les-achats-externes-aux-etats-unis/">Apple veut rétablir sa commission sur les achats externes aux États-Unis</a> — Next.ink. Raison : Sujet juridico-commercial Apple/Epic sans profondeur technique immédiate. Peut impacter indirectement les écosystèmes mobiles mais pas critique pour cybersécurité ou dev tooling.</li>
-<li><strong>3/5</strong> — <a href="https://siecledigital.fr/2026/08/14/twitch-utilise-desormais-les-streams-de-ses-createurs-pour-entrainer-lia-damazon/">Twitch utilise désormais les streams de ses créateurs pour entraîner l’IA d’Amazon</a> — Siècle Digital. Raison : Annonce stratégique de Twitch/Amazon sur l'utilisation des streams pour l'IA. Pertinent pour comprendre les pratiques des grands acteurs, mais sans détail technique ou impact immédiat.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.12346">Position: The Alignment Community is Unintentionally Building a Censor's Toolkit</a> — arXiv cs.AI. Raison : Papier de recherche sur le détournement des méthodes d'alignement IA pour la censure. Pertinent pour RSSI et CTO sur les risques émergents.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.12373">Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in Japanese</a> — arXiv cs.AI. Raison : Recherche sur le contournement des alignements de sécurité des LLM selon la langue du prompt. Implication forte pour l'usage expert en entreprise et la gouvernance des IA.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.12654">SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries</a> — arXiv cs.AI. Raison : Benchmark dédié à la décision de laisser agir un agent IA ou de réquisitionner un humain, cas critique pour la sécurité des agents en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.12761">Correct Is Not Governed: Provenance Integrity in Agentic Workflows</a> — arXiv cs.AI. Raison : Article de recherche sur la gouvernance des workflows agentiques, critique pour la sécurité et la conformité en entreprise. Pertinent pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://www.lesswrong.com/posts/GRmvZsHXH4vaijPMv/four-llm-loss-functions-four-flavors-of-llm-misalignment">Four LLM loss functions → four flavors of LLM misalignment</a> — LessWrong — AI. Raison : Analyse originale des biais d'alignement des LLM par fonction de perte, pertinente pour experts IA et sécurité. Source crédible (LessWrong).</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12325">Position: Reasoning is a Learnable Rule-Based Process</a> — arXiv cs.AI. Raison : Papier de recherche arXiv sur le raisonnement comme processus basé sur des règles. Intéressant pour experts IA mais implication pratique incertaine.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12345">Diagnostic Foundation for Evaluating LLMs' Research Integrity as Co-Scientists</a> — arXiv cs.AI. Raison : Benchmark sur l'intégrité en recherche des LLMs, pertinent mais secondaire pour un public cybersécurité. À survoler si temps libre.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12368">Agreement Is Not Alignment: Divergent Moral Grounds in Human and LLM Ethical Judgments</a> — arXiv cs.AI. Raison : Article de recherche sur l'alignement moral des LLM. Intéressant pour les experts IA, mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12371">Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing</a> — arXiv cs.AI. Raison : Recherche sur ordonnancement multi-agents avec LLM pour edge computing. Intéressant pour l'architecture SI, mais sans lien direct cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12372">Position: We Need Practical AI Alignment Methods to Mirror Human Reasoning</a> — arXiv cs.AI. Raison : Papier de position sur l'alignement IA cognitif pour la prise de décision. Pertinent pour la recherche mais implications pratiques encore incertaines pour les experts.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12385">Dual-Flow Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation</a> — arXiv cs.AI. Raison : Papier de recherche architecturale sur l'optimisation des LLMs, intéressant pour CTO/Architecte mais sans implication directe cybersécurité ou produit disponible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12389">Learning to Adapt Cross-Domain Preferences via Meta-LoRA for LLM Personalization</a> — arXiv cs.AI. Raison : Papier de recherche sur la personnalisation LLM par adaptation cross-domain. Intéressant pour l'IA en entreprise mais sans lien direct avec la cybersécurité ou les priorités du public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12395">Research Assistant: AstraZeneca's Agentic System for R&D</a> — arXiv cs.AI. Raison : Papier de recherche sur un système agentique interne d'AstraZeneca. Intéressant pour l'usage de l'IA en entreprise, mais sans lien direct avec la cybersécurité ou les sujets ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12426">Large Language Models Can Follow Instructions, But Not Many at Once: Phase Transitions in Compositional Constraint Satisfaction</a> — arXiv cs.AI. Raison : Papier de recherche sur les limites des LLM à suivre plusieurs contraintes simultanément. Intéressant pour l'IA en entreprise mais impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12428">MindMemOS: A Portable and Self-Evolving Memory Operating Layer for AI Agents</a> — arXiv cs.AI. Raison : Article de recherche sur la mémoire adaptative pour agents IA, pertinent mais sans impact immédiat démontré en sécurité ou production.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12476">Governed Persistent Memory: Source-Bound State Semantics and Fail-Closed Release for Long-Horizon Agents</a> — arXiv cs.AI. Raison : Papier de recherche sur mémoire persistante pour agents long horizon. Intéressant pour experts en IA et sécurité, mais implication pratique incertaine.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12522">$\\varepsilon$-MemEvo: Adaptive Cross-Task Memory Transfer for LLM Program Evolution</a> — arXiv cs.AI. Raison : Recherche sur transfert de connaissance entre tâches pour l'évolution de programmes par LLM. Intéressant pour experts IA, mais lien direct avec cybersécurité et pratique immédiate non établi.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12555">CAS: A Causal Attribution Score for Local and Global Explainable Artificial Intelligence</a> — arXiv cs.AI. Raison : Papier de recherche proposant une métrique d'attribution causale pour l'IA explicable. Intéressant pour un public expert mais impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12574">Trie Automata for Constrained Decoding over Large Finite Sets</a> — arXiv cs.AI. Raison : Papier de recherche sur le décodage contraint pour LLM, intéressant mais sans implication pratique immédiate ni lien direct avec la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.12585">Reasoning Jury: Multi-Model Consensus for Evaluating Reasoning Traces</a> — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation des traces de raisonnement LLM via consensus multi-modèle. Intéressant mais impact pratique incertain pour les experts cyber.</li>
 </ul>
 
 <h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Exploitation active d'une vulnérabilité macOS Screen Sharing</strong> : Le NCSC néerlandais alerte sur l'exploitation en cours d'une faille de contournement d'authentification dans le partage d'écran macOS, utilisée pour déployer un mineur Monero. Un exploit public est disponible. <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Ciblage immédiat d'une faille critique SAP Commerce Cloud</strong> : Une vulnérabilité d'exécution de code à distance (score maximal) corrigée le 1er avril est déjà exploitée en conditions réelles. Le correctif doit être appliqué sans délai. <a href="https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Revendication Clop contre Shell</strong> : Le groupe de ransomware Clop affirme avoir dérobé 89 Go de données à Shell, qui confirme enquêter sur un incident potentiel. Cette revendication s'inscrit dans une campagne plus large ciblant des services de transfert de fichiers. <a href="https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Brèche à la DGFiP</strong> : Les autorités françaises confirment un accès non autorisé aux systèmes de la Direction générale des Finances publiques fin juin, via une usurpation d'identité. L'étendue exacte des données compromises reste à préciser. <a href="https://therecord.media/french-tax-authority-dgfip-confirms-data-breach">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Chaîne d'attaque sur Google Workspace</strong> : Au-delà du phishing, les tokens OAuth compromis représentent un vecteur d'accès persistant vers Gmail et Drive. La défense doit couvrir l'ensemble de cette chaîne, y compris les applications connectées. <a href="https://www.bleepingcomputer.com/news/security/the-modern-attack-chain-rethinking-google-workspace-security-in-the-age-of-ai/">BleepingComputer</a></li>
+<li><strong>Fraude bancaire via un prestataire</strong> : L'arrestation de quatre individus au Brésil et la mise en cause de trois autres en Europe mettent en lumière une compromission de prestataire de services ayant permis le détournement de 30 millions d'euros sur des comptes Commerzbank. <a href="https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/">BleepingComputer</a></li>
+<li><strong>Tatouage numérique des sorties de LLM</strong> : Anthropic développe un mécanisme de watermarking pour les textes générés par Claude, visant à fiabiliser la distinction entre contenu humain et synthétique. <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/how-anthropic-plans-to-watermark-claudes-ai-generated-text/">BleepingComputer</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/">Hackers exploit macOS Screen Sharing flaw to deploy Monero miner</a> — BleepingComputer. Raison : Exploitation active d'une vulnérabilité macOS avec code public, signalée par un NCSC. Impact direct sur les postes macOS en entreprise, nécessite action immédiate.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/">Max severity SAP Commerce Cloud flaw now targeted in attacks</a> — BleepingComputer. Raison : Critique SAP commerce cloud vulnérabilité de score maximal, patch récent et exploitation active en cours, impact direct sur les entreprises utilisant cette plateforme.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/">Shell investigates 'potential incident' after Clop data theft claims</a> — BleepingComputer. Raison : Incident cyber majeur touchant un grand groupe pétrolier et chaîne d'approvisionnement, avec revendication du ransomware Clop, nécessitant une analyse immédiate par les RSSI.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/the-modern-attack-chain-rethinking-google-workspace-security-in-the-age-of-ai/">The Modern Attack Chain: Rethinking Google Workspace Security in the Age of AI</a> — BleepingComputer. Raison : Analyse de la chaîne d'attaque Workspace via OAuth, sujet critique pour RSSI/CTO. Source fiable, angle technique sur un vecteur sous-estimé.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/french-tax-authority-dgfip-confirms-data-breach">France investigates tax authority breach after hacker claims 600,000 victims</a> — The Record. Raison : Incident cyber touchant une administration fiscale française avec 600k victimes potentielles, analyse utile pour gouvernance et retour d'expérience.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/how-anthropic-plans-to-watermark-claudes-ai-generated-text/">How Anthropic plans to watermark Claude's AI-generated text</a> — BleepingComputer. Raison : Annonce d'une méthode concrète de watermarking par Anthropic, intéressante pour la détection des contenus IA, mais sans détail technique ou impact critique immédiat.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/">Hackers arrested over €30M bank fraud exploiting service provider flaw</a> — BleepingComputer. Raison : Incident bancaire réel exploitant une vulnérabilité chez un prestataire, avec arrestations. Pertinent pour RSSI/CTO sur risque chaîne d'approvisionnement.</li>
+</ul>
+
+<h2>IA — Produits, agents & dev tooling</h2>
+
+<ul>
+<li><strong>Automatisation : RPA vs Workflow</strong> : La RPA fragilise souvent la sécurité et l'observabilité en s'appuyant sur l'UI, tandis que l'automatisation par workflows (API-first) offre une meilleure fiabilité et scalabilité pour les processus métier durables. <a href="https://blog.n8n.io/rpa-vs-workflow-automation/">Source</a></li>
+<li><strong>Critères de choix pour plateformes d'automatisation IA</strong> : Privilégier les solutions permettant l'auto-hébergement, l'orchestration multi-agents et l'extensibilité par code pour éviter la dépendance fournisseur et conserver la gouvernance sur les données. <a href="https://blog.n8n.io/workato-alternatives-2/">Source</a></li>
+<li><strong>Chaîne de pensée (CoT) : usage et limites</strong> : Le prompting par chaîne de pensée améliore le raisonnement des LLM sur des tâches complexes, mais devient inutile voire contre-productif avec des modèles très récents ou pour des requêtes simples. <a href="https://blog.n8n.io/chain-of-thought-prompting-techniques-and-when-to-use-them/">Source</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://blog.n8n.io/rpa-vs-workflow-automation/">RPA vs. Workflow Automation: Building Automation That Lasts</a> — n8n Blog. Raison : Comparatif technique RPA vs workflow automation sur fiabilité, sécurité, passage à l'échelle. Pertinent pour architectes SI et CTO évaluant des solutions d'automatisation durables.</li>
+<li><strong>4/5</strong> — <a href="https://blog.n8n.io/workato-alternatives-2/">n8n Alternatives: Which AI Automation Platform Can You Deploy?</a> — n8n Blog. Raison : Comparatif structuré de plateformes d'automatisation IA avec critères pertinents pour experts (self-hosting, gouvernance, lock-in). Utile pour évaluer des alternatives déployables en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://blog.n8n.io/chain-of-thought-prompting-techniques-and-when-to-use-them/">Chain-of-Thought Prompting: Techniques and When To Use Them</a> — n8n Blog. Raison : Article technique sur le prompting CoT, utile pour comprendre le raisonnement des LLM, mais sans lien direct avec la cybersécurité ou les priorités opérationnelles des experts ciblés.</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>L'IA comme réponse à la surcharge de vulnérabilités</strong> : Le NIST envisage d'utiliser l'IA pour traiter le volume croissant de vulnérabilités généré par les outils de recherche et de scan augmentés par l'IA. <a href="https://www.darkreading.com/vulnerabilities-threats/ai-driven-bug-tsunami-nist-looks-to-ai">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Évolution du rôle du RSSI dans le secteur bancaire</strong> : Le CISO de Standard Chartered souligne la nécessité pour les responsables sécurité de maîtriser les enjeux business et de passer d'un profil technique à un positionnement stratégique, tandis que l'IA redéfinit à la fois les capacités défensives et les tactiques adverses. <a href="https://www.darkreading.com/cybersecurity-operations/mission-driven-security-inside-global-bank-defense">Dark Reading</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/vulnerabilities-threats/ai-driven-bug-tsunami-nist-looks-to-ai">Amid AI-Driven Bug-Hunt Tsunami, NIST Looks to … AI</a> — Dark Reading. Raison : NIST explore l'IA pour gérer l'afflux de vulnérabilités. Sujet stratégique pour RSSI/CTO, croise gouvernance cyber et adoption IA.</li>
+<li><strong>3/5</strong> — <a href="https://www.darkreading.com/cybersecurity-operations/mission-driven-security-inside-global-bank-defense">Mission-Driven Security: Inside a Global Bank's Defense</a> — Dark Reading. Raison : Retour d'expérience d'un CISO sur la transition de technical à stratégique et l'impact de l'IA en banque, intéressant mais sans détails techniques exploitables.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Vulnérabilité critique macOS sous exploitation active</strong> : Une faille de partage d'écran sur Mac permet à un attaquant distant de se connecter sans mot de passe et de prendre le contrôle total du système. La vulnérabilité est activement exploitée. <a href="https://arstechnica.com/security/2026/08/vulnerability-giving-attackers-full-control-of-macs-is-under-active-exploitation/">Ars Technica</a></li>
+</ul>
+
+<ul>
+<li><strong>Perte de données suite à une défaillance de cloud provider</strong> : Une chaîne PBS risque de perdre 50 To de données après avoir perdu tout contact avec son fournisseur Iron Mountain, qui déclare ne plus avoir accès aux données sur ses propres serveurs. <a href="https://arstechnica.com/information-technology/2026/08/pbs-station-fears-losing-50tb-of-data-after-being-ghosted-by-cloud-storage-provider/">Ars Technica</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://arstechnica.com/security/2026/08/vulnerability-giving-attackers-full-control-of-macs-is-under-active-exploitation/">Vulnerability giving attackers full control of Macs is under active exploitation</a> — Ars Technica — Tech Lab. Raison : CVE critique sous exploitation active, permettant un contrôle total sans authentification. Impact direct sur les Macs en entreprise, nécessite une action immédiate.</li>
+<li><strong>4/5</strong> — <a href="https://arstechnica.com/information-technology/2026/08/pbs-station-fears-losing-50tb-of-data-after-being-ghosted-by-cloud-storage-provider/">PBS station fears losing 50TB of data after being ghosted by cloud storage provider</a> — Ars Technica — Tech Lab. Raison : Incident de perte d'accès à 50 To de données chez un fournisseur cloud, illustrant un risque majeur de dépendance et de continuité d'activité pour les RSSI/CTO.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Vol de données sur la plateforme des impôts</strong> : La DGFiP a précisé l'ampleur du piratage de sa plateforme, qui a entraîné la compromission des données de 678 000 comptes. L'attaque a permis une exfiltration de données, et non une simple consultation. <a href="https://www.bfmtv.com/tech/cybersecurite/video-plateforme-des-impots-piratee-678-000-personnes-concernees-par-la-cyberattaque_VN-202608140484.html">BFM Tech</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/video-plateforme-des-impots-piratee-678-000-personnes-concernees-par-la-cyberattaque_VN-202608140484.html">Plateforme des impôts piratée: 678.000 personnes concernées par la cyberattaque</a> — BFM Tech. Raison : Incident cyber majeur touchant un secteur critique (impôts) avec vol de données massif (678k comptes). Impact direct sur la sécurité des citoyens et la gouvernance.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260814-1806</guid>
-      <pubDate>Fri, 14 Aug 2026 18:06:06 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260815-0541</guid>
+      <pubDate>Sat, 15 Aug 2026 05:41:55 +0000</pubDate>
     </item>
   </channel>
 </rss>
