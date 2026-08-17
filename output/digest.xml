@@ -8,70 +8,236 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 16 Aug 2026 17:27:13 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 05:57:25 +0000</lastBuildDate>
     <item>
-      <title>Digest — 16/08 17h</title>
+      <title>Digest — 17/08 05h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## IA — Recherche
 
-- **AmnesiaStealer cible macOS via ClickFix** : Un nouveau stealer macOS intègre un module de streaming permettant à l'attaquant de prendre le contrôle interactif du navigateur de la victime pour détourner des sessions authentifiées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-amnesiastealer-macos-malware-hijacks-browser-sessions-via-remote-control/)
+- **Agents : gouvernance, autorisation et confinement** : Mandato propose une couche protocolaire (extension de MCP) pour contraindre les actions d’un agent à ce qu’un principal a explicitement signé, avec pistes d’audit chaînées cryptographiquement. Agentao, de son côté, fournit un runtime local-first qui limite les risques de sur-privilèges et d’exfiltration pour les agents manipulant des outils et des états persistants. [Mandato](https://arxiv.org/abs/2608.14074) · [Agentao](https://arxiv.org/abs/2608.13574)
+
+- **Évaluation des agents LLM : angles morts et dérives** : Évaluer un agent sur son seul taux de succès masque sa consistance comportementale d’une tâche à l’autre. L’usage d’un second LLM comme juge automatique (reward-free) introduit un biais de « sur-crédit » qui fausse la mesure de performance réelle. [Measuring Cross-Task Behavioral Consistency](https://arxiv.org/abs/2608.13598) · [Inducing Reward-Free Judging Rubrics](https://arxiv.org/abs/2608.13564)
+
+- **Apprentissage agentique sans labels en cybersécurité** : Des systèmes couplant un LLM à une mémoire ou un module de retrieval améliorent leur efficacité en cybersécurité par retour d’expérience, sans réentraînement, et cette valeur est mesurable même sans données labellisées. [Evaluating Agentic Learning Harness](https://arxiv.org/abs/2608.13608)
+
+- **Régression silencieuse lors des mises à jour de modèles** : Un nouveau modèle surpasse l’ancien en moyenne, mais aucun signal universel ne permet de prédire les échantillons individuels où la réponse se dégrade. Ce phénomène de régression au niveau de l’échantillon est structurellement difficile à anticiper. [No Universal Signal Predicts Sample-Level LLM Regression](https://arxiv.org/abs/2608.13607)
+
+- **Erreurs stables à haute confiance dans les LLM** : Les erreurs commises avec une confiance élevée ne sont pas toujours des artefacts fragiles ; certaines restent stables sous de petites perturbations, ce qui indique une « miscalibration stable » plutôt qu’une défaillance ponctuelle de l’inférence. [Stable Miscalibration in Large Language Models](https://arxiv.org/abs/2608.13591)
+
+- **Serving LLM sur un an : traces réelles, cache et load-balancing** : Une étude de grande ampleur sur des traces de production montre que les charges de serving LLM évoluent rapidement et que les mécanismes de cache et d’équilibrage de charge doivent être repensés pour cette typologie de workload. [A Year in LLM Serving](https://arxiv.org/abs/2608.13573)
+
+- **Sensibilité des architectures Mixture-of-Experts selon la profondeur** : Toutes les couches d’experts ne se valent pas ; une analyse de sensibilité par masquage basé sur la magnitude révèle de fortes disparités dans l’importance relative des couches MoE, ouvrant des pistes d’élagage ciblé. [Depth-Aware Sensitivity Analysis of MoE](https://arxiv.org/abs/2608.13565)
+
+- **Modularité cognitive émergente dans les LLM** : La spécialisation fonctionnelle (raisonnement, langage, théorie de l’esprit) observée dans le cerveau humain émerge aussi dans les grands modèles de langue, suggérant une organisation modulaire spontanée qui n’est pas explicitement conçue. [Modular Cognitive Architecture Emerges in LLMs](https://arxiv.org/abs/2608.13567)
+
+- **Planification sémantique structurée pour données d’entreprise** : Le benchmark SemPlan évalue la capacité des LLM à traduire des requêtes ambiguës en plans exécutables et gouvernables sur des données d’entreprise, en contrôlant les requêtes invalides, les violations de politiques et les coûts. [SemPlan](https://arxiv.org/abs/2608.13612)
+
+- **Agents personnels persistants et mémoire long-terme** : MobileMem explore l’apprentissage continu à partir d’un an d’expériences mobiles, visant des assistants capables de se souvenir et d’apprendre des habitudes sans session explicite. [MobileMem](https://arxiv.org/abs/2608.13606)
+
+- **Désambiguïsation par perception active en robotique** : Des agents incarnés peuvent lever des ambiguïtés non seulement sur l’intention de l’utilisateur mais aussi sur des preuves physiques manquantes, en interrogeant activement l’environnement plutôt qu’en demandant des clarifications à l’humain. [Active Perception for Embodied Disambiguation](https://arxiv.org/abs/2608.13605)
+
+- **Taxonomie cross-disciplinaire du malentendu pour les agents IA** : Le passage à des canaux médiés par IA coupe les interlocuteurs des mécanismes naturels de réparation du malentendu ; une taxonomie unifiée est proposée pour la génération, l’amplification et la détection des malentendus. [Cross-Disciplinary Taxonomy of Misunderstanding](https://arxiv.org/abs/2608.13604)
+
+- **Pipeline neuro-symbolique pour la conformité clinique** : Un pipeline expert contraint un LLM à vérifier la conformité de traitements (ici le sepsis) à des protocoles basés sur des preuves, combinant raisonnement symbolique strict et flexibilité du langage naturel. [How Compliant is Sepsis Treatment?](https://arxiv.org/abs/2608.13617)
+
+- **Responsabilité médicale et algorithmes discriminants** : Une règle de responsabilité introduite aux États-Unis vise à traiter les biais de précision d’un algorithme clinique entre groupes de patients, avec des implications directes pour la conception des dispositifs d’IA médicale. [Algorithm Design and Physician Liability](https://arxiv.org/abs/2608.13618)
+
+- **Repenser l’évaluation de l’IA pour qu’elle travaille avec les humains** : Le paradigme dominant visant la performance autonome surhumaine oriente le développement dans une impasse ; un papier de position défend une évaluation centrée sur la collaboration humain-IA et non le remplacement. [AI Evaluation Should Work With Humans](https://arxiv.org/abs/2608.13577)
+
+- **Équité en comparaison d’agents en interaction ouverte** : La métrique ARC permet de comparer des agents dans des environnements où plusieurs comportements sont valides (clarifier, confirmer, agir) sans que l’approche standard de comparaison par rollouts ne casse. [ARC: Fair Relative Advantage Comparison](https://arxiv.org/abs/2608.13622)
+
+- **JEPA probabiliste réinterprété en modèle de Markov caché** : Le formalisme Joint Embedding Predictive Architecture se réduit à un modèle de Markov caché lorsqu’il est probabiliste et indexé dans le temps, ce qui éclaire ses mécanismes d’inférence et de propagation. [Your Probabilistic JEPA Is Secretly a Hidden Markov Model](https://arxiv.org/abs/2608.13621)
 
 **Évaluation du scoring**
 
-- **4/5** — [New AmnesiaStealer macOS malware hijacks browser sessions via remote control](https://www.bleepingcomputer.com/news/security/new-amnesiastealer-macos-malware-hijacks-browser-sessions-via-remote-control/) — BleepingComputer. Raison : Nouveau malware macOS avec contrôle à distance du navigateur. Technique ClickFix et module streaming inédit. Pertinent pour RSSI et architectes SI exposés au risque macOS.
+- **5/5** — [From BERT to Frontier Agents: Eight Years of Language-Model Progress, the Collapse of the Capability-Cost Curve, and the Rise of Task-Targeted Models](https://arxiv.org/abs/2608.13675) — arXiv cs.LG. Raison : Article de recherche montrant une progression massive des capacités des modèles de langage de BERT aux agents frontière, avec des gains de performance de 6x par an et une chute des coûts, impact direct sur les architectures SI et la stratégie IA en entreprise.
+- **4/5** — [Evaluating Agentic Learning Harness Capabilities Without Labels via the Scaling Hypothesis](https://arxiv.org/abs/2608.13608) — arXiv cs.AI. Raison : Propose une méthode d'évaluation d'agents IA en cybersécurité sans labels, pertinent pour les experts confrontés au manque de benchmarks en opérationnel.
+- **4/5** — [Mandato: Protocol-Level Enforcement of Digitally Signed Mandates on AI Agent Actions with Cryptographically Chained Audit Trails](https://arxiv.org/abs/2608.14074) — arXiv cs.AI. Raison : Proposition d'un protocole de signature numérique et chaîne d'audit pour contraindre les actions des agents IA, pertinent pour la gouvernance et la sécurité des agents en entreprise.
+- **3/5** — [Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation](https://arxiv.org/abs/2608.13564) — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation d'agents LLM, pertinent pour l'IA en entreprise mais sans lien direct avec la cybersécurité ou les pratiques opérationnelles.
+- **3/5** — [Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking](https://arxiv.org/abs/2608.13565) — arXiv cs.AI. Raison : Recherche sur l'importance relative des couches dans MoE pour compression. Intéressant, mais sans lien direct cybersécurité, ni impact pratique immédiat pour les experts cibles.
+- **3/5** — [Modular Cognitive Architecture Emerges in Large Language Models](https://arxiv.org/abs/2608.13567) — arXiv cs.AI. Raison : Papier de recherche explorant l'émergence d'une architecture cognitive modulaire dans les LLM, intéressant pour la compréhension des modèles mais sans application pratique immédiate pour le public cible.
+- **3/5** — [A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing](https://arxiv.org/abs/2608.13573) — arXiv cs.AI. Raison : Papier de recherche sur l'évolution des workloads de serving LLM, utile pour architectes SI mais sans lien direct avec la cybersécurité.
+- **3/5** — [Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents](https://arxiv.org/abs/2608.13574) — arXiv cs.AI. Raison : Papier de recherche sur la gouvernance des agents LLM, pertinent pour la sécurité des agents IA en entreprise, mais sans démonstration pratique immédiate.
+- **3/5** — [AI Evaluation Should Work With Humans](https://arxiv.org/abs/2608.13577) — arXiv cs.AI. Raison : Papier de positionnement sur l'évaluation IA collaborative. Intéressant pour la réflexion sur l'IA en entreprise, mais sans implication pratique immédiate.
+- **3/5** — [Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors](https://arxiv.org/abs/2608.13591) — arXiv cs.AI. Raison : Papier de recherche sur le mauvais calibrage des LLM, sujet pertinent mais implication pratique incertaine pour des experts en entreprise.
+- **3/5** — [Measuring Cross-Task Behavioral Consistency in Language Model Agents](https://arxiv.org/abs/2608.13598) — arXiv cs.AI. Raison : Papier de recherche proposant une métrique de cohérence comportementale pour agents IA. Intéressant pour évaluer la fiabilité, mais impact pratique incertain pour le public cible.
+- **3/5** — [Cross-Disciplinary Taxonomy and Modeling of Misunderstanding Generation, Amplification, and Detection, from Pragmatics to AI Agents](https://arxiv.org/abs/2608.13604) — arXiv cs.AI. Raison : Recherche académique en pragmatique computationnelle ; sujet intéressant pour l'IA dans les communications mais peu d'impact direct sur cybersécurité ou devops à ce stade.
+- **3/5** — [Active Perception for Embodied Disambiguation](https://arxiv.org/abs/2608.13605) — arXiv cs.AI. Raison : Papier de recherche sur la désambiguïsation robotique via perception active, sans lien direct avec la cybersécurité ou les priorités du public cible.
+- **3/5** — [MobileMem: Learning from a Year of Mobile Experiences](https://arxiv.org/abs/2608.13606) — arXiv cs.AI. Raison : Papier de recherche sur la mémoire à long terme pour agents IA. Intéressant pour l'IA en entreprise, mais impact pratique et reproductibilité non précisés.
+- **3/5** — [No Universal Signal Predicts Sample-Level LLM Regression under Version Updates](https://arxiv.org/abs/2608.13607) — arXiv cs.AI. Raison : Papier de recherche sur la régression des LLMs entre versions. Intéressant pour la fiabilité IA, mais impact pratique incertain pour le public cible.
+- **3/5** — [SemPlan: Benchmarking Structured Semantic Planning for LLM-Based Queries over Enterprise Data](https://arxiv.org/abs/2608.13612) — arXiv cs.AI. Raison : Benchmark académique sur le plan sémantique pour requêtes en langage naturel sur données d'entreprise. Pertinent pour l'IA en entreprise mais sans application pratique immédiate ni lien cyber.
+- **3/5** — [How Compliant is Sepsis Treatment? An Expert-Guided Neuro-symbolic Pipeline for Generating Clinical Compliance Insights](https://arxiv.org/abs/2608.13617) — arXiv cs.AI. Raison : Recherche IA appliquée au domaine médical. Hors cible cybersécurité/gouvernance IT pour ce public d'experts, mais méthode neuro-symbolique potentiellement transposable.
+- **3/5** — [Algorithm Design and Physician Liability](https://arxiv.org/abs/2608.13618) — arXiv cs.AI. Raison : Papier de recherche sur l'équité des algorithmes cliniques et la responsabilité médicale, intéressant mais sans lien direct avec la cybersécurité ou l'IA en entreprise.
+- **3/5** — [Your Probabilistic JEPA Is Secretly a Hidden Markov Model: A State-Space Interpretation of Joint-Embedding Predictive Learning](https://arxiv.org/abs/2608.13621) — arXiv cs.AI. Raison : Papier de recherche théorique reliant PIB-VJEPA à un HMM. Intéressant pour le fond mais sans application pratique immédiate pour ce public.
+- **3/5** — [ARC: Fair Relative Advantage Comparison in Open-Ended Real-World Interaction](https://arxiv.org/abs/2608.13622) — arXiv cs.AI. Raison : Papier de recherche IA sur l'apprentissage par renforcement en environnement ouvert. Intéressant pour experts IA mais sans lien direct avec cybersécurité ou dev tooling.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **ChatGPT macOS enregistre désormais l'activité utilisateur** : La nouvelle fonction "Computer History" de l'application desktop capture les clics et frappes pour constituer une chronologie d'activité servant de base d'entraînement et de contexte pour les suggestions d'automatisation. [The Verge](https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes)
+- **OpenAI dissout son équipe "preparedness"** : L'équipe chargée d'évaluer les risques graves des modèles (comme le piratage autonome) et de développer des contre-mesures a été démantelée fin juillet. [The Verge](https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team)
+
+- **Microsoft repousse la sortie d'Exchange SE, la dette technique IA en cause** : La mise à jour majeure d'Exchange, promise comme un service par abonnement, est bloquée sans nouvelle date ; Microsoft invoque le temps consommé par la correction de bugs générés par l'IA dans sa chaîne de développement. [The Register](https://www.theregister.com/software/2026/08/17/microsoft-blames-ai-for-delayed-exchange-update-cant-say-when-it-will-arrive/5288227)
 
 **Évaluation du scoring**
 
-- **4/5** — [ChatGPT’s Computer History tracks your clicks and keystrokes](https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes) — The Verge — AI. Raison : Fonctionnalité enregistrant clics et frappes pour entraînement IA, pose un risque majeur de fuite de données sensibles en entreprise.
+- **3/5** — [Microsoft blames AI for delayed Exchange update, can’t say when it will arrive](https://www.theregister.com/software/2026/08/17/microsoft-blames-ai-for-delayed-exchange-update-cant-say-when-it-will-arrive/5288227) — The Register — AI/ML. Raison : Impact de l'IA sur le cycle de patch critique, mais absence de calendrier ou de contournement technique rend l'info peu actionnable immédiatement.
+- **3/5** — [OpenAI reportedly disbanded its preparedness team](https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team) — The Verge — AI. Raison : Information stratégique sur la suppression d'une équipe de préparation aux risques chez OpenAI, mais sans détail technique ou impact immédiat pour les experts.
 
-## Actualité tech FR
+## Cyber — Menaces &amp; vulnérabilités
 
-- **Piratages massifs : des sénateurs poussent pour une commission d'enquête** : Les sénateurs socialistes demandent une commission d'enquête parlementaire après la succession de cyberattaques contre des services publics, dont le fisc (678 000 victimes). L'objectif est d'identifier si ces incidents exploitent des vulnérabilités communes à plusieurs administrations. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/une-succession-d-incidents-les-senateurs-socialistes-reclament-une-commission-d-enquete-sur-les-piratages-massifs-le-dernier-a-touche-les-donnees-de-678-000-francais_AD-202608160183.html)
+- **Attaque DDoS contre Threema** : Le service de messagerie sécurisée a subi de multiples attaques par déni de service distribué, provoquant des interruptions sévères. L'incident rappelle que même les solutions chiffrées restent dépendantes de la disponibilité de leur infrastructure réseau. [BleepingComputer](https://www.bleepingcomputer.com/news/security/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service/)
+
+- **Fuite de données chez SafePal** : Une vulnérabilité exploitée a exposé les informations de commande de 39 798 clients du fournisseur de portefeuilles matériels crypto. Les données dérobées sont actuellement mises en vente par un acteur malveillant. [BleepingComputer](https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/)
+
+- **Panne majeure d'Anthropic (Claude)** : Le service Claude et plusieurs services associés subissent une indisponibilité importante, avec des problèmes d'authentification et de performances dégradées. La dépendance opérationnelle à ces modèles d'IA doit être évaluée en termes de continuité d'activité. [BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/)
+
+- **Correctifs Wireshark** : La version 4.6.8 corrige 28 vulnérabilités et 25 bugs. La mise à jour est prioritaire pour tout poste d'analyse réseau exposé à du trafic non fiable. [SANS ISC](https://isc.sans.edu/diary/rss/33248)
 
 **Évaluation du scoring**
 
-- **4/5** — ["Une succession d'incidents": les sénateurs socialistes réclament une commission d'enquête sur les piratages massifs (le dernier a touché les données de 678.000 Français)](https://www.bfmtv.com/tech/cybersecurite/une-succession-d-incidents-les-senateurs-socialistes-reclament-une-commission-d-enquete-sur-les-piratages-massifs-le-dernier-a-touche-les-donnees-de-678-000-francais_AD-202608160183.html) — BFM Tech. Raison : Incident cyber majeur touchant des données sensibles de 678 000 Français, avec demande de commission d'enquête parlementaire. Analyse de gouvernance et réglementation pertinente pour RSSI et CTO.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **5/5** — [Large-scale DDoS attacks disrupted Threema secure messaging service](https://www.bleepingcomputer.com/news/security/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service/) — BleepingComputer. Raison : Incident majeur touchant un service de messagerie sécurisé avec fortes implications pour les RSSI et DSI. Détails techniques de l'attaque à évaluer.
+- **4/5** — [SafePal data breach impacts 39,798 customers, stolen info for sale](https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/) — BleepingComputer. Raison : Incident de sécurité chez un fournisseur de hardware wallet crypto, avec vol de données clients et mise en vente. Impact potentiel sur la chaîne d'approvisionnement et la confiance.
+- **4/5** — [Anthropic confirms Claude is down in major outage affecting multiple services](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/) — BleepingComputer. Raison : Panne majeure d'un acteur IA clé (Anthropic) impactant plusieurs services ; pertinent pour RSSI/CTO évaluant la résilience des fournisseurs IA en entreprise.
+- **4/5** — [Wireshark 4.6.8 Released, (Sun, Aug 16th)](https://isc.sans.edu/diary/rss/33248) — SANS ISC. Raison : Mise à jour majeure d'un outil standard du diagnostic réseau, corrigeant 28 vulnérabilités. Intéressant pour un RSSI/CTO pour évaluer l'impact sur les postes de travail.</description>
+      <content:encoded><![CDATA[<h2>IA — Recherche</h2>
 
 <ul>
-<li><strong>AmnesiaStealer cible macOS via ClickFix</strong> : Un nouveau stealer macOS intègre un module de streaming permettant à l'attaquant de prendre le contrôle interactif du navigateur de la victime pour détourner des sessions authentifiées. <a href="https://www.bleepingcomputer.com/news/security/new-amnesiastealer-macos-malware-hijacks-browser-sessions-via-remote-control/">BleepingComputer</a></li>
+<li><strong>Agents : gouvernance, autorisation et confinement</strong> : Mandato propose une couche protocolaire (extension de MCP) pour contraindre les actions d’un agent à ce qu’un principal a explicitement signé, avec pistes d’audit chaînées cryptographiquement. Agentao, de son côté, fournit un runtime local-first qui limite les risques de sur-privilèges et d’exfiltration pour les agents manipulant des outils et des états persistants. <a href="https://arxiv.org/abs/2608.14074">Mandato</a> · <a href="https://arxiv.org/abs/2608.13574">Agentao</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation des agents LLM : angles morts et dérives</strong> : Évaluer un agent sur son seul taux de succès masque sa consistance comportementale d’une tâche à l’autre. L’usage d’un second LLM comme juge automatique (reward-free) introduit un biais de « sur-crédit » qui fausse la mesure de performance réelle. <a href="https://arxiv.org/abs/2608.13598">Measuring Cross-Task Behavioral Consistency</a> · <a href="https://arxiv.org/abs/2608.13564">Inducing Reward-Free Judging Rubrics</a></li>
+</ul>
+
+<ul>
+<li><strong>Apprentissage agentique sans labels en cybersécurité</strong> : Des systèmes couplant un LLM à une mémoire ou un module de retrieval améliorent leur efficacité en cybersécurité par retour d’expérience, sans réentraînement, et cette valeur est mesurable même sans données labellisées. <a href="https://arxiv.org/abs/2608.13608">Evaluating Agentic Learning Harness</a></li>
+</ul>
+
+<ul>
+<li><strong>Régression silencieuse lors des mises à jour de modèles</strong> : Un nouveau modèle surpasse l’ancien en moyenne, mais aucun signal universel ne permet de prédire les échantillons individuels où la réponse se dégrade. Ce phénomène de régression au niveau de l’échantillon est structurellement difficile à anticiper. <a href="https://arxiv.org/abs/2608.13607">No Universal Signal Predicts Sample-Level LLM Regression</a></li>
+</ul>
+
+<ul>
+<li><strong>Erreurs stables à haute confiance dans les LLM</strong> : Les erreurs commises avec une confiance élevée ne sont pas toujours des artefacts fragiles ; certaines restent stables sous de petites perturbations, ce qui indique une « miscalibration stable » plutôt qu’une défaillance ponctuelle de l’inférence. <a href="https://arxiv.org/abs/2608.13591">Stable Miscalibration in Large Language Models</a></li>
+</ul>
+
+<ul>
+<li><strong>Serving LLM sur un an : traces réelles, cache et load-balancing</strong> : Une étude de grande ampleur sur des traces de production montre que les charges de serving LLM évoluent rapidement et que les mécanismes de cache et d’équilibrage de charge doivent être repensés pour cette typologie de workload. <a href="https://arxiv.org/abs/2608.13573">A Year in LLM Serving</a></li>
+</ul>
+
+<ul>
+<li><strong>Sensibilité des architectures Mixture-of-Experts selon la profondeur</strong> : Toutes les couches d’experts ne se valent pas ; une analyse de sensibilité par masquage basé sur la magnitude révèle de fortes disparités dans l’importance relative des couches MoE, ouvrant des pistes d’élagage ciblé. <a href="https://arxiv.org/abs/2608.13565">Depth-Aware Sensitivity Analysis of MoE</a></li>
+</ul>
+
+<ul>
+<li><strong>Modularité cognitive émergente dans les LLM</strong> : La spécialisation fonctionnelle (raisonnement, langage, théorie de l’esprit) observée dans le cerveau humain émerge aussi dans les grands modèles de langue, suggérant une organisation modulaire spontanée qui n’est pas explicitement conçue. <a href="https://arxiv.org/abs/2608.13567">Modular Cognitive Architecture Emerges in LLMs</a></li>
+</ul>
+
+<ul>
+<li><strong>Planification sémantique structurée pour données d’entreprise</strong> : Le benchmark SemPlan évalue la capacité des LLM à traduire des requêtes ambiguës en plans exécutables et gouvernables sur des données d’entreprise, en contrôlant les requêtes invalides, les violations de politiques et les coûts. <a href="https://arxiv.org/abs/2608.13612">SemPlan</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents personnels persistants et mémoire long-terme</strong> : MobileMem explore l’apprentissage continu à partir d’un an d’expériences mobiles, visant des assistants capables de se souvenir et d’apprendre des habitudes sans session explicite. <a href="https://arxiv.org/abs/2608.13606">MobileMem</a></li>
+</ul>
+
+<ul>
+<li><strong>Désambiguïsation par perception active en robotique</strong> : Des agents incarnés peuvent lever des ambiguïtés non seulement sur l’intention de l’utilisateur mais aussi sur des preuves physiques manquantes, en interrogeant activement l’environnement plutôt qu’en demandant des clarifications à l’humain. <a href="https://arxiv.org/abs/2608.13605">Active Perception for Embodied Disambiguation</a></li>
+</ul>
+
+<ul>
+<li><strong>Taxonomie cross-disciplinaire du malentendu pour les agents IA</strong> : Le passage à des canaux médiés par IA coupe les interlocuteurs des mécanismes naturels de réparation du malentendu ; une taxonomie unifiée est proposée pour la génération, l’amplification et la détection des malentendus. <a href="https://arxiv.org/abs/2608.13604">Cross-Disciplinary Taxonomy of Misunderstanding</a></li>
+</ul>
+
+<ul>
+<li><strong>Pipeline neuro-symbolique pour la conformité clinique</strong> : Un pipeline expert contraint un LLM à vérifier la conformité de traitements (ici le sepsis) à des protocoles basés sur des preuves, combinant raisonnement symbolique strict et flexibilité du langage naturel. <a href="https://arxiv.org/abs/2608.13617">How Compliant is Sepsis Treatment?</a></li>
+</ul>
+
+<ul>
+<li><strong>Responsabilité médicale et algorithmes discriminants</strong> : Une règle de responsabilité introduite aux États-Unis vise à traiter les biais de précision d’un algorithme clinique entre groupes de patients, avec des implications directes pour la conception des dispositifs d’IA médicale. <a href="https://arxiv.org/abs/2608.13618">Algorithm Design and Physician Liability</a></li>
+</ul>
+
+<ul>
+<li><strong>Repenser l’évaluation de l’IA pour qu’elle travaille avec les humains</strong> : Le paradigme dominant visant la performance autonome surhumaine oriente le développement dans une impasse ; un papier de position défend une évaluation centrée sur la collaboration humain-IA et non le remplacement. <a href="https://arxiv.org/abs/2608.13577">AI Evaluation Should Work With Humans</a></li>
+</ul>
+
+<ul>
+<li><strong>Équité en comparaison d’agents en interaction ouverte</strong> : La métrique ARC permet de comparer des agents dans des environnements où plusieurs comportements sont valides (clarifier, confirmer, agir) sans que l’approche standard de comparaison par rollouts ne casse. <a href="https://arxiv.org/abs/2608.13622">ARC: Fair Relative Advantage Comparison</a></li>
+</ul>
+
+<ul>
+<li><strong>JEPA probabiliste réinterprété en modèle de Markov caché</strong> : Le formalisme Joint Embedding Predictive Architecture se réduit à un modèle de Markov caché lorsqu’il est probabiliste et indexé dans le temps, ce qui éclaire ses mécanismes d’inférence et de propagation. <a href="https://arxiv.org/abs/2608.13621">Your Probabilistic JEPA Is Secretly a Hidden Markov Model</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/new-amnesiastealer-macos-malware-hijacks-browser-sessions-via-remote-control/">New AmnesiaStealer macOS malware hijacks browser sessions via remote control</a> — BleepingComputer. Raison : Nouveau malware macOS avec contrôle à distance du navigateur. Technique ClickFix et module streaming inédit. Pertinent pour RSSI et architectes SI exposés au risque macOS.</li>
+<li><strong>5/5</strong> — <a href="https://arxiv.org/abs/2608.13675">From BERT to Frontier Agents: Eight Years of Language-Model Progress, the Collapse of the Capability-Cost Curve, and the Rise of Task-Targeted Models</a> — arXiv cs.LG. Raison : Article de recherche montrant une progression massive des capacités des modèles de langage de BERT aux agents frontière, avec des gains de performance de 6x par an et une chute des coûts, impact direct sur les architectures SI et la stratégie IA en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.13608">Evaluating Agentic Learning Harness Capabilities Without Labels via the Scaling Hypothesis</a> — arXiv cs.AI. Raison : Propose une méthode d'évaluation d'agents IA en cybersécurité sans labels, pertinent pour les experts confrontés au manque de benchmarks en opérationnel.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.14074">Mandato: Protocol-Level Enforcement of Digitally Signed Mandates on AI Agent Actions with Cryptographically Chained Audit Trails</a> — arXiv cs.AI. Raison : Proposition d'un protocole de signature numérique et chaîne d'audit pour contraindre les actions des agents IA, pertinent pour la gouvernance et la sécurité des agents en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13564">Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation</a> — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation d'agents LLM, pertinent pour l'IA en entreprise mais sans lien direct avec la cybersécurité ou les pratiques opérationnelles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13565">Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking</a> — arXiv cs.AI. Raison : Recherche sur l'importance relative des couches dans MoE pour compression. Intéressant, mais sans lien direct cybersécurité, ni impact pratique immédiat pour les experts cibles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13567">Modular Cognitive Architecture Emerges in Large Language Models</a> — arXiv cs.AI. Raison : Papier de recherche explorant l'émergence d'une architecture cognitive modulaire dans les LLM, intéressant pour la compréhension des modèles mais sans application pratique immédiate pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13573">A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing</a> — arXiv cs.AI. Raison : Papier de recherche sur l'évolution des workloads de serving LLM, utile pour architectes SI mais sans lien direct avec la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13574">Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents</a> — arXiv cs.AI. Raison : Papier de recherche sur la gouvernance des agents LLM, pertinent pour la sécurité des agents IA en entreprise, mais sans démonstration pratique immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13577">AI Evaluation Should Work With Humans</a> — arXiv cs.AI. Raison : Papier de positionnement sur l'évaluation IA collaborative. Intéressant pour la réflexion sur l'IA en entreprise, mais sans implication pratique immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13591">Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors</a> — arXiv cs.AI. Raison : Papier de recherche sur le mauvais calibrage des LLM, sujet pertinent mais implication pratique incertaine pour des experts en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13598">Measuring Cross-Task Behavioral Consistency in Language Model Agents</a> — arXiv cs.AI. Raison : Papier de recherche proposant une métrique de cohérence comportementale pour agents IA. Intéressant pour évaluer la fiabilité, mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13604">Cross-Disciplinary Taxonomy and Modeling of Misunderstanding Generation, Amplification, and Detection, from Pragmatics to AI Agents</a> — arXiv cs.AI. Raison : Recherche académique en pragmatique computationnelle ; sujet intéressant pour l'IA dans les communications mais peu d'impact direct sur cybersécurité ou devops à ce stade.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13605">Active Perception for Embodied Disambiguation</a> — arXiv cs.AI. Raison : Papier de recherche sur la désambiguïsation robotique via perception active, sans lien direct avec la cybersécurité ou les priorités du public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13606">MobileMem: Learning from a Year of Mobile Experiences</a> — arXiv cs.AI. Raison : Papier de recherche sur la mémoire à long terme pour agents IA. Intéressant pour l'IA en entreprise, mais impact pratique et reproductibilité non précisés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13607">No Universal Signal Predicts Sample-Level LLM Regression under Version Updates</a> — arXiv cs.AI. Raison : Papier de recherche sur la régression des LLMs entre versions. Intéressant pour la fiabilité IA, mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13612">SemPlan: Benchmarking Structured Semantic Planning for LLM-Based Queries over Enterprise Data</a> — arXiv cs.AI. Raison : Benchmark académique sur le plan sémantique pour requêtes en langage naturel sur données d'entreprise. Pertinent pour l'IA en entreprise mais sans application pratique immédiate ni lien cyber.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13617">How Compliant is Sepsis Treatment? An Expert-Guided Neuro-symbolic Pipeline for Generating Clinical Compliance Insights</a> — arXiv cs.AI. Raison : Recherche IA appliquée au domaine médical. Hors cible cybersécurité/gouvernance IT pour ce public d'experts, mais méthode neuro-symbolique potentiellement transposable.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13618">Algorithm Design and Physician Liability</a> — arXiv cs.AI. Raison : Papier de recherche sur l'équité des algorithmes cliniques et la responsabilité médicale, intéressant mais sans lien direct avec la cybersécurité ou l'IA en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13621">Your Probabilistic JEPA Is Secretly a Hidden Markov Model: A State-Space Interpretation of Joint-Embedding Predictive Learning</a> — arXiv cs.AI. Raison : Papier de recherche théorique reliant PIB-VJEPA à un HMM. Intéressant pour le fond mais sans application pratique immédiate pour ce public.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.13622">ARC: Fair Relative Advantage Comparison in Open-Ended Real-World Interaction</a> — arXiv cs.AI. Raison : Papier de recherche IA sur l'apprentissage par renforcement en environnement ouvert. Intéressant pour experts IA mais sans lien direct avec cybersécurité ou dev tooling.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>ChatGPT macOS enregistre désormais l'activité utilisateur</strong> : La nouvelle fonction "Computer History" de l'application desktop capture les clics et frappes pour constituer une chronologie d'activité servant de base d'entraînement et de contexte pour les suggestions d'automatisation. <a href="https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes">The Verge</a></li>
+<li><strong>OpenAI dissout son équipe "preparedness"</strong> : L'équipe chargée d'évaluer les risques graves des modèles (comme le piratage autonome) et de développer des contre-mesures a été démantelée fin juillet. <a href="https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team">The Verge</a></li>
+</ul>
+
+<ul>
+<li><strong>Microsoft repousse la sortie d'Exchange SE, la dette technique IA en cause</strong> : La mise à jour majeure d'Exchange, promise comme un service par abonnement, est bloquée sans nouvelle date ; Microsoft invoque le temps consommé par la correction de bugs générés par l'IA dans sa chaîne de développement. <a href="https://www.theregister.com/software/2026/08/17/microsoft-blames-ai-for-delayed-exchange-update-cant-say-when-it-will-arrive/5288227">The Register</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes">ChatGPT’s Computer History tracks your clicks and keystrokes</a> — The Verge — AI. Raison : Fonctionnalité enregistrant clics et frappes pour entraînement IA, pose un risque majeur de fuite de données sensibles en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://www.theregister.com/software/2026/08/17/microsoft-blames-ai-for-delayed-exchange-update-cant-say-when-it-will-arrive/5288227">Microsoft blames AI for delayed Exchange update, can’t say when it will arrive</a> — The Register — AI/ML. Raison : Impact de l'IA sur le cycle de patch critique, mais absence de calendrier ou de contournement technique rend l'info peu actionnable immédiatement.</li>
+<li><strong>3/5</strong> — <a href="https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team">OpenAI reportedly disbanded its preparedness team</a> — The Verge — AI. Raison : Information stratégique sur la suppression d'une équipe de préparation aux risques chez OpenAI, mais sans détail technique ou impact immédiat pour les experts.</li>
 </ul>
 
-<h2>Actualité tech FR</h2>
+<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Piratages massifs : des sénateurs poussent pour une commission d'enquête</strong> : Les sénateurs socialistes demandent une commission d'enquête parlementaire après la succession de cyberattaques contre des services publics, dont le fisc (678 000 victimes). L'objectif est d'identifier si ces incidents exploitent des vulnérabilités communes à plusieurs administrations. <a href="https://www.bfmtv.com/tech/cybersecurite/une-succession-d-incidents-les-senateurs-socialistes-reclament-une-commission-d-enquete-sur-les-piratages-massifs-le-dernier-a-touche-les-donnees-de-678-000-francais_AD-202608160183.html">BFM Tech</a></li>
+<li><strong>Attaque DDoS contre Threema</strong> : Le service de messagerie sécurisée a subi de multiples attaques par déni de service distribué, provoquant des interruptions sévères. L'incident rappelle que même les solutions chiffrées restent dépendantes de la disponibilité de leur infrastructure réseau. <a href="https://www.bleepingcomputer.com/news/security/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuite de données chez SafePal</strong> : Une vulnérabilité exploitée a exposé les informations de commande de 39 798 clients du fournisseur de portefeuilles matériels crypto. Les données dérobées sont actuellement mises en vente par un acteur malveillant. <a href="https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Panne majeure d'Anthropic (Claude)</strong> : Le service Claude et plusieurs services associés subissent une indisponibilité importante, avec des problèmes d'authentification et de performances dégradées. La dépendance opérationnelle à ces modèles d'IA doit être évaluée en termes de continuité d'activité. <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Correctifs Wireshark</strong> : La version 4.6.8 corrige 28 vulnérabilités et 25 bugs. La mise à jour est prioritaire pour tout poste d'analyse réseau exposé à du trafic non fiable. <a href="https://isc.sans.edu/diary/rss/33248">SANS ISC</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/une-succession-d-incidents-les-senateurs-socialistes-reclament-une-commission-d-enquete-sur-les-piratages-massifs-le-dernier-a-touche-les-donnees-de-678-000-francais_AD-202608160183.html">"Une succession d'incidents": les sénateurs socialistes réclament une commission d'enquête sur les piratages massifs (le dernier a touché les données de 678.000 Français)</a> — BFM Tech. Raison : Incident cyber majeur touchant des données sensibles de 678 000 Français, avec demande de commission d'enquête parlementaire. Analyse de gouvernance et réglementation pertinente pour RSSI et CTO.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/large-scale-ddos-attacks-disrupted-threema-secure-messaging-service/">Large-scale DDoS attacks disrupted Threema secure messaging service</a> — BleepingComputer. Raison : Incident majeur touchant un service de messagerie sécurisé avec fortes implications pour les RSSI et DSI. Détails techniques de l'attaque à évaluer.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/">SafePal data breach impacts 39,798 customers, stolen info for sale</a> — BleepingComputer. Raison : Incident de sécurité chez un fournisseur de hardware wallet crypto, avec vol de données clients et mise en vente. Impact potentiel sur la chaîne d'approvisionnement et la confiance.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-confirms-claude-is-down-in-major-outage-affecting-multiple-services/">Anthropic confirms Claude is down in major outage affecting multiple services</a> — BleepingComputer. Raison : Panne majeure d'un acteur IA clé (Anthropic) impactant plusieurs services ; pertinent pour RSSI/CTO évaluant la résilience des fournisseurs IA en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://isc.sans.edu/diary/rss/33248">Wireshark 4.6.8 Released, (Sun, Aug 16th)</a> — SANS ISC. Raison : Mise à jour majeure d'un outil standard du diagnostic réseau, corrigeant 28 vulnérabilités. Intéressant pour un RSSI/CTO pour évaluer l'impact sur les postes de travail.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260816-1727</guid>
-      <pubDate>Sun, 16 Aug 2026 17:27:13 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260817-0557</guid>
+      <pubDate>Mon, 17 Aug 2026 05:57:25 +0000</pubDate>
     </item>
   </channel>
 </rss>
