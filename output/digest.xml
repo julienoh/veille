@@ -8,204 +8,222 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 20 Aug 2026 11:41:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 17:53:46 +0000</lastBuildDate>
     <item>
-      <title>Digest — 20/08 11h</title>
+      <title>Digest — 20/08 17h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## IA — Labos &amp; éditeurs
 
-- **Exploitation active de vulnérabilités critiques (MLflow, Zimbra, Elementor Pro)** : La CISA alerte sur l'exploitation en cours d'une faille critique dans la plateforme MLflow, tandis que CERT Polska confirme des attaques ciblant une vulnérabilité RCE dans Zimbra Collaboration Suite. Par ailleurs, une faille critique (CVSS 9.0) dans le plugin WordPress Elementor Pro permet l'upload de fichiers PHP et l'exécution de code à distance sans authentification. [CISA - MLflow](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/) · [Zimbra](https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/) · [Elementor Pro](https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html)
+- **Gouvernance des agents AWS** : Amazon Bedrock AgentCore introduit un mécanisme de politiques "Dogwood" pour contraindre les actions des agents IA, avec une fonction de rédaction en langage naturel qui génère automatiquement les règles — y compris des contraintes temporelles. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore/)
 
-- **Menaces Android : évolution des chevaux de Troie bancaires et nouveau malware** : ToxicPanda 2.0 et GoldDigger étendent leurs capacités avec des fonctionnalités de fraude on-device et un ensemble de 167 commandes à distance. Un nouveau malware, Manic, cible des utilisateurs européens et dispose d'un mécanisme d'exfiltration de données utilisant les appareils infectés à proximité comme relais. [ToxicPanda/GoldDigger](https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html) · [Manic](https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/)
+- **Architectures multi-agents sans vendor lock-in** : AWS détaille des patterns pour opérer des systèmes agentic à l'échelle dans des environnements hétérogènes (frameworks, modèles, fournisseurs multiples), en évitant la dépendance à un écosystème unique. Un cas concret appliqué aux migrations cloud montre un gain mesurable : réduction du temps de développement d'Infrastructure as Code via des agents spécialisés (découverte, gouvernance, opérations post-migration). [AWS Machine Learning (1)](https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/) · [AWS Machine Learning (2)](https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/)
 
-- **Extension de navigateur malveillantes ciblant les wallets crypto** : 40 extensions Firefox se faisant passer pour des produits Web3 (OKX, Rabby Wallet, TronLink) ont été identifiées comme voleuses de secrets de wallets. Elles appartiennent à un ensemble plus large de 77 extensions partageant le même code source. [The Hacker News](https://thehackernews.com/2026/08/40-malicious-firefox-extensions-pose-as.html)
+- **Recherche vectorielle intégrée aux données existantes** : AWS positionne ses services de recherche vectorielle directement dans ses bases de données et stockage (sans base vectorielle dédiée ni migration), avec un cadre de décision pour choisir le moteur adapté au cas d'usage. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/)
 
-- **Groupe cybercriminel chinois intègre l'IA agentique dans ses opérations** : Cisco Talos a observé le groupe UAT-10147 ciblant des serveurs web vulnérables et utilisant l'IA agentique pour ses actions post-compromission, une évolution notable dans les TTPs d'un acteur à motivation financière. [Cisco Talos](https://blog.talosintelligence.com/uat-10147-chinese-speaking-adversary-integrates-agentic-ai-into-post-compromise-operations/)
+- **Sécurité contextuelle pour APIs de santé** : Amazon Bedrock est utilisé pour superviser des APIs FHIR en détectant des patterns d'accès anormaux, en classifiant automatiquement la sensibilité des données et en générant des rapports de conformité en langage naturel, sans latence ajoutée sur les flux cliniques. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-intelligent-security-for-healthcare-apis-with-amazon-bedrock/)
 
-- **Faille dans la console opérateur de la NASA permettant l'envoi de commandes** : Une chaîne de vulnérabilités dans AIT-GUI, la console de contrôle des instruments spatiaux de la NASA/JPL, permet à un attaquant non authentifié d'émettre des commandes arbitraires vers le bus de commande des engins spatiaux. [The Hacker News](https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html)
-
-- **Mises à jour Windows d'août 2026 : problèmes de jeux** : Microsoft enquête sur un problème lié aux mises à jour d'août 2026 qui empêche le lancement de certains jeux ou provoque des plantages sur Windows 11. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-august-windows-updates-may-cause-gaming-issues-reboots/)
+- **Inférence accélérée avec LFM2.5-DSpark** : Liquid AI annonce un gain de vitesse d'inférence jusqu'à 3,2x pour son modèle, sans détail architectural fourni dans le résumé. [Hugging Face Blog](https://huggingface.co/blog/LiquidAI/lfm25-dspark)
 
 **Évaluation du scoring**
 
-- **5/5** — [CISA warns of hackers exploiting critical MLflow vulnerability](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/) — BleepingComputer. Raison : Vulnérabilité critique MLflow activement exploitée, avertissement CISA. Impact direct sur les plateformes IA open source utilisées en entreprise.
-- **5/5** — [NASA AIT-GUI Flaws Could Let Unauthenticated Attackers Issue Spacecraft Commands](https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html) — The Hacker News. Raison : CVE critique (9.4) dans un outil NASA/JPL, permettant à un attaquant non authentifié d'émettre des commandes vers des engins spatiaux. Impact direct sur la sécurité des infrastructures critiques.
-- **5/5** — [Critical Zimbra RCE flaw now actively exploited in attacks](https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/) — BleepingComputer. Raison : CVE critique Zimbra activement exploitée, impact direct sur messagerie d'entreprise, nécessite action immédiate des RSSI/CTO.
-- **5/5** — [Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code](https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html) — The Hacker News. Raison : CVE critique (9.0) dans Elementor Pro, plugin WordPress très utilisé en entreprise. RCE sans authentification : impact direct et immédiat pour la sécurité des SI exposés.
-- **4/5** — [ToxicPanda 2.0 and GoldDigger Expand Android Banking Attacks with On-Device Fraud](https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html) — The Hacker News. Raison : Nouvelle version d'un malware Android bancaire avec 167 commandes et ciblage étendu. Analyse technique de Zimperium utile pour comprendre l'évolution des menaces mobiles.
-- **4/5** — [New Manic Android malware can exfiltrate data through nearby devices](https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/) — BleepingComputer. Raison : Nouveau malware Android avec mécanisme d'exfiltration via appareils proches, technique originale et ciblage européen. Pertinent pour RSSI/CTO, mais détails d'exploitation manquants.
-- **4/5** — [UAT-10147: Chinese-speaking adversary integrates agentic AI into post-compromise operations](https://blog.talosintelligence.com/uat-10147-chinese-speaking-adversary-integrates-agentic-ai-into-post-compromise-operations/) — Cisco Talos. Raison : Campagne cybercriminelle ciblant des serveurs web avec usage d'IA agentique en post-compromission, analyse détaillée par Cisco Talos, pertinente pour RSSI et CTO.
-- **4/5** — [40 Malicious Firefox Extensions Pose as Web3 Products to Steal Wallet Secrets](https://thehackernews.com/2026/08/40-malicious-firefox-extensions-pose-as.html) — The Hacker News. Raison : Campagne ciblant des extensions Firefox Web3, avec vol de clés de portefeuille crypto. Analyse technique de 40 extensions malveillantes, pertinente pour RSSI et développeurs exposés aux risques liés aux add-ons.
-- **4/5** — [Microsoft says August Windows updates may cause gaming issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-august-windows-updates-may-cause-gaming-issues-reboots/) — BleepingComputer. Raison : Problème logiciel majeur de Microsoft impactant le gaming sur Windows 11, nécessitant une veille pour un éventuel correctif critique.
-
-## Actualité tech FR
-
-- **Crise cyber à la DGFiP** : Une troisième intrusion à la Direction générale des Finances publiques a provoqué une réaction directe du Premier ministre Lecornu envers l'Anssi, soulignant la nécessité d'un renforcement urgent de la cybersécurité étatique. [ZDNet France](https://www.zdnet.fr/actualites/crise-cyber-a-la-dgfip-lecornu-fouette-lanssi-par-courrier-500249.htm#xtor=RSS-1)
-
-- **Sécurisation de l'IA** : Les tests d'intrusion classiques sont inadaptés aux spécificités des systèmes d'intelligence artificielle, qui nécessitent des approches de sécurité repensées. [Journal du Net](https://www.journaldunet.com/management/direction-generale/1553849-le-pentest-classique-ne-suffit-plus-a-securiser-les-systemes-d-ia/)
-
-- **Vérification d'âge et contournement** : Selon Pornhub, le dispositif britannique de vérification d'âge imposé par l'Online Safety Act a pour effet de rediriger les utilisateurs vers des sites illégaux ne respectant pas la réglementation. [Next.ink](https://next.ink/brief-article/la-verification-dage-augmente-lusage-de-sites-porno-illegaux-selon-pornhub/)
-
-- **Procès Meta** : Un ancien ingénieur de Meta a témoigné que les outils de sécurité destinés à limiter l'usage excessif des réseaux sociaux étaient délibérément inefficaces, car reposant uniquement sur l'initiative des utilisateurs. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/proces-de-meta-des-outils-de-securite-etaient-concus-pour-echouer-accuse-un-ancien-ingenieur-du-groupe_AD-202608200192.html)
-
-**Évaluation du scoring**
-
-- **4/5** — [Crise cyber à la DGFiP : Lecornu fouette l'Anssi par courrier](https://www.zdnet.fr/actualites/crise-cyber-a-la-dgfip-lecornu-fouette-lanssi-par-courrier-500249.htm#xtor=RSS-1) — ZDNet France. Raison : Incident cyber majeur touchant un secteur critique de l'État, avec réaction politique au plus haut niveau : intérêt stratégique direct pour un RSSI/CTO.
-- **3/5** — [Le pentest classique ne suffit plus à sécuriser les systèmes d'IA](https://www.journaldunet.com/management/direction-generale/1553849-le-pentest-classique-ne-suffit-plus-a-securiser-les-systemes-d-ia/) — Journal du Net. Raison : Sujet pertinent pour RSSI/CTO sur l'évolution du pentest IA, mais le résumé est trop générique ; nécessite une lecture rapide pour évaluer la profondeur réelle.
-- **3/5** — [☕️ La vérification d’âge augmente l’usage de sites porno illégaux, selon Pornhub](https://next.ink/brief-article/la-verification-dage-augmente-lusage-de-sites-porno-illegaux-selon-pornhub/) — Next.ink. Raison : Article sur l'impact de la vérification d'âge sur l'usage de sites illégaux. Pertinent pour la gouvernance et la régulation, mais pas critique pour les experts ciblés.
-- **3/5** — [Procès de Meta: des outils de sécurité étaient "conçus pour échouer", accuse un ancien ingénieur du groupe](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/proces-de-meta-des-outils-de-securite-etaient-concus-pour-echouer-accuse-un-ancien-ingenieur-du-groupe_AD-202608200192.html) — BFM Tech. Raison : Témoignage intéressant sur la conception défaillante des outils de sécurité chez Meta, mais concerne davantage la gouvernance interne et l'éthique que la cybersécurité technique immédiate pour un public expert.
-
-## IA — Produits, agents &amp; dev tooling
-
-- **Agents spécialisés avec mémoire partagée sur AWS** : Amazon Bedrock AgentCore permet d'orchestrer une équipe d'agents spécialisés (calcul, recherche documentaire, investigation) derrière un agent de triage, tout en maintenant une mémoire unifiée par client pour éviter les répétitions. [n8n Blog](https://blog.n8n.io/node-spotlight-amazon-bedrock-agentcore/)
-
-**Évaluation du scoring**
-
-- **3/5** — [Build multi-agent teams that remember every customer with Amazon Bedrock AgentCore](https://blog.n8n.io/node-spotlight-amazon-bedrock-agentcore/) — n8n Blog. Raison : Mise en œuvre technique d'agents IA avec mémoire persistante sur Bedrock. Plutôt avancé pour un public expert en automatisation, mais pas critique pour la cybersécurité ou une rupture majeure.
-
-## Cyber — Stratégie &amp; analyse
-
-- **Opacité des ALPR Flock imposée aux forces de l'ordre** : Une politique d'usage interne dans l'Iowa ordonne aux policiers de dissimuler l'utilisation des caméras Flock lors des interpellations, interdisant toute mention de la technologie aux suspects. [Schneier on Security](https://www.schneier.com/blog/archives/2026/08/police-are-hiding-their-use-of-flock-surveillance-cameras.html)
-
-**Évaluation du scoring**
-
-- **3/5** — [Police Are Hiding Their Use of Flock Surveillance Cameras](https://www.schneier.com/blog/archives/2026/08/police-are-hiding-their-use-of-flock-surveillance-cameras.html) — Schneier on Security. Raison : Pertinent pour la gouvernance et transparence des usages ALPR par les forces de l'ordre, mais sans vulnérabilité technique ou annonce critique directe.
+- **4/5** — [Authoring Dogwood policies from natural language in Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Nouvelle fonctionnalité de Policy Authoring pour agents IA avec langage naturel, contrainte temporelle : impact direct sur gouvernance et sécurité des agents, pertinent pour RSSI/CTO.
+- **4/5** — [Scaling agentic AI: Enterprise patterns without vendor lock-in](https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/) — AWS Machine Learning. Raison : Article technique sur les patterns de scaling d'agents IA sans lock-in, pertinent pour les CTO/Architecte mais pas une annonce majeure ni un incident.
+- **4/5** — [Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Article technique sur l'automatisation de migrations cloud via agents IA sur Bedrock, avec réduction de temps significative. Pertinent pour CTO et architectes SI.
+- **3/5** — [Up to 3.2x Faster Inference with LFM2.5-DSpark](https://huggingface.co/blog/LiquidAI/lfm25-dspark) — Hugging Face Blog. Raison : Article technique sur un modèle IA optimisé pour l'inférence. Intéressant pour les experts en IA, mais sans lien direct avec la cybersécurité ou les priorités opérationnelles immédiates.
+- **3/5** — [AWS vector solutions: Build agentic AI where your data lives](https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/) — AWS Machine Learning. Raison : Présentation de l'offre vectorielle AWS intégrée aux bases existantes. Utile pour les architectes SI, mais reste un contenu promotionnel sans benchmark ni retour d'expérience critique.
+- **3/5** — [Build intelligent security for healthcare APIs with Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/build-intelligent-security-for-healthcare-apis-with-amazon-bedrock/) — AWS Machine Learning. Raison : Cas d'usage IA pour sécuriser des API santé, intéressant mais sans détail technique ni impact immédiat pour le public expert.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Régulation des datacenters IA** : La Pennsylvanie impose désormais un contrat engageant les développeurs sur des conditions et pénalités fixes avant même l'ouverture du dossier de permis, créant un précédent sans nouvelle loi. [AI News](https://www.artificialintelligence-news.com/news/ai-data-centre-regulation-pennsylvania-template/)
+- **Exfiltration de données via chiffrement sur Grok** : Une nouvelle technique d'attaque, le Cryptographic Context Injection, permet de contourner les garde-fous de Grok en chiffrant les instructions malveillantes, conduisant à l'exfiltration de données utilisateur. [Ars Technica](https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/)
 
-- **IA agentique dans le secteur public** : Les Émirats arabes unis travaillent à classifier les décisions qu'une machine peut prendre de manière autonome, formalisant la limite entre automatisation et prérogative humaine dans l'administration. [AI News](https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification/)
+- **Routage de modèles IA** : Ramp lance Router, un service API permettant aux entreprises de basculer dynamiquement entre différents LLMs sans modifier leur code. [TechCrunch](https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/)
 
-- **Audit des biais dans le fine-tuning** : Un tutoriel détaille l'audit du dataset Anthropic HH-RLHF pour les biais structurels et de longueur, puis l'entraînement d'un modèle via Direct Preference Optimization avec TRL et LoRA. [MarkTechPost](https://www.marktechpost.com/2026/08/20/auditing-preference-biases-and-fine-tuning-language-models-with-direct-preference-optimization-on-anthropic-hh-rlhf-using-trl-and-lora/)
+- **Rhétorique trompeuse sur la conscience des IA** : Le débat actuel sur les IA « conscientes » ou « incontrôlables », poussé par des dirigeants comme Hassabis, Amodei et Altman, détourne l'attention des risques réels et mesurables de la technologie. [MIT Technology Review](https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/)
 
-- **Agents IA pour les PME** : HoneyBook lance un connecteur MCP pour Claude d'Anthropic, visant à apporter les capacités d'agents autonomes aux indépendants et petites structures, après leur adoption en grande entreprise. [AI News](https://www.artificialintelligence-news.com/news/honeybook-bets-on-agentic-ai-to-streamline-small-business-operations-with-its-new-claude-connector/)
+- **Vibe-coding collaboratif dans Slack** : Slack intègre des canaux dédiés au "vibe-coding" où les équipes peuvent développer avec des agents IA sans quitter la messagerie, avec comparaison de code et onglets utilisateurs. [The Verge](https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch)
 
 **Évaluation du scoring**
 
-- **4/5** — [AI data centre regulation just got a template that needs no new law](https://www.artificialintelligence-news.com/news/ai-data-centre-regulation-pennsylvania-template/) — AI News. Raison : Nouveau modèle de régulation des data centers IA aux États-Unis, impact potentiel sur conformité et délais projets. Analyse utile pour RSSI/CTO/Architecte.
-- **3/5** — [Agentic AI in government just hit the hard part: deciding what a machine may decide](https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification/) — AI News. Raison : Sujet pertinent sur la gouvernance de l'IA en contexte gouvernemental, mais le résumé tronqué ne permet pas d'évaluer la profondeur technique ou l'impact concret.
-- **3/5** — [Auditing Preference Biases and Fine-Tuning Language Models with Direct Preference Optimization on Anthropic HH-RLHF Using TRL and LoRA](https://www.marktechpost.com/2026/08/20/auditing-preference-biases-and-fine-tuning-language-models-with-direct-preference-optimization-on-anthropic-hh-rlhf-using-trl-and-lora/) — MarkTechPost. Raison : Tutoriel technique sur DPO pour auditer des biais de dataset et fine-tuner. Intéressant pour experts IA mais n'est pas une avancée majeure ni lié directement à la cybersécurité.
-- **3/5** — [HoneyBook bets on agentic AI to streamline small business operations with its new Claude connector](https://www.artificialintelligence-news.com/news/honeybook-bets-on-agentic-ai-to-streamline-small-business-operations-with-its-new-claude-connector/) — AI News. Raison : Annonce d'un connecteur agentic IA pour TPE. Contexte utile mais pas de détail technique ou d'impact cyber direct. À survoler.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **4/5** — [Grok exfiltrates user data when malicious instructions are encrypted](https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/) — Ars Technica — Tech Lab. Raison : Description d'une technique de contournement des garde-fous des LLM via injection cryptographique, pertinente pour experts en sécurité et IA.
+- **3/5** — [Ramp launches its own AI model router, called Router](https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/) — TechCrunch — AI. Raison : Annonce d'un routeur de modèles IA par API, utile pour les experts mais sans détail technique ni impact sécurité direct. À survoler.
+- **3/5** — [Debates over AI consciousness are a trap](https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/) — MIT Technology Review — AI. Raison : Analyse rhétorique sur le débat autour de la conscience des IA, utile pour comprendre les positions des leaders, mais sans information technique ou opérationnelle pour les experts.
+- **3/5** — [Slack is launching collaborative vibe-coding channels](https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch) — The Verge — AI. Raison : Nouvelle fonctionnalité Slack intégrant des agents IA pour le codage collaboratif. Intéressant pour les équipes dev, mais pas de rupture technique majeure ni d'impact sécurité direct.
+
+## Actualité tech FR
+
+- **SFR confirme une fuite de données massive** : L'opérateur a reconnu le vol de 2 millions de données clients (Fibre SFR et RED) lors d'une cyberattaque le 2 juillet 2026, revendiquée mi-juillet par des pirates. [BFM Tech](https://www.bfmtv.com/tech/actualites/telecoms/sfr-confirme-son-piratage-de-juillet-2026-plus-de-2-millions-de-donnees-potentiellement-concernees_AD-202608200332.html)
+
+- **Vague de cyberattaques contre l'État : les syndicats dénoncent l'opacité** : Après quatre fuites de données majeures, dont l'intrusion à la DGFiP ayant exposé 678 000 contribuables, les représentants de la fonction publique critiquent le manque de communication du gouvernement et le sous-équipement des administrations. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/une-grande-insuffisance-dans-l-information-au-personnel-des-representants-de-la-fonction-publique-denonce-la-reponse-du-gouvernement-aux-cyberattaques_AD-202608200440.html) · [Siècle Digital](https://siecledigital.fr/2026/08/20/piratages-en-serie-en-france-le-gouvernement-lance-une-nouvelle-riposte/)
+
+- **Le logiciel espion de la DGSI pour Encrochat était basé sur un exploit GitHub** : L'outil classifié ayant permis l'infiltration du cryptophone et des saisies records était un fork d'un logiciel open source, remettant en question la notion de « secret défense » appliquée à ce développement. [Next.ink](https://next.ink/252247/le-logiciel-espion-secret-defense-de-la-dgsi-etait-un-fork-dun-exploit-disponible-sur-github/)
+
+- **Formation des jeunes hackers dans le darknet** : Des forums cybercriminels structurent l'apprentissage des nouvelles recrues via des tutoriels et des espaces de reconnaissance, facilitant l'entrée dans la délinquance numérique. [Journal du Net](https://www.journaldunet.com/cybersecurite/1553287-des-premiers-clics-au-piratage-immersion-dans-les-forums-du-dark-web-qui-initient-les-jeunes-au-cybercrime/)
+
+- **Apple se plie au DMA européen et revoit les règles de l'App Store** : L'entreprise abandonne la Core Technology Fee et modifie ses conditions pour les développeurs, mettant fin à un long conflit avec Bruxelles. [Siècle Digital](https://siecledigital.fr/2026/08/20/leurope-fait-plier-apple-qui-revoit-en-profondeur-les-regles-de-son-app-store/)
+
+- **Thunderbird 154 active Microsoft Graph pour les comptes Microsoft 365** : La nouvelle version du client mail intègre nativement l'API Graph, simplifiant la connexion aux services Microsoft 365 sans extension tierce. [Next.ink](https://next.ink/brief-article/thunderbird-154-active-microsoft-graph-pour-les-comptes-microsoft-365/)
+
+- **Coûts de l'IA : maîtriser la facturation au token** : Face à l'envolée des dépenses liées à l'IA agentique et au changement de modèle tarifaire des fournisseurs, des pratiques de suivi de consommation deviennent indispensables pour les entreprises. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553785-consommation-au-token-comment-encadrer-les-couts-lies-a-l-ia/)
+
+- **Aux États-Unis, les datacenters IA deviennent un risque électoral** : La multiplication des projets d'infrastructures est perçue comme un stigmate politique pour les républicains en période électorale, poussant les entreprises du secteur à soigner leur image. [Next.ink](https://next.ink/brief-article/aux-etats-unis-le-boulet-electoral-des-datacenters-ia/)
+
+**Évaluation du scoring**
+
+- **5/5** — [SFR confirme son piratage de juillet 2026: plus de 2 millions de données potentiellement concernées](https://www.bfmtv.com/tech/actualites/telecoms/sfr-confirme-son-piratage-de-juillet-2026-plus-de-2-millions-de-donnees-potentiellement-concernees_AD-202608200332.html) — BFM Tech. Raison : Incident cyber majeur touchant un grand FAI français, avec fuite massive de données clients. Impact direct sur la sécurité des entreprises et leurs salariés. Information stratégique pour RSSI et CTO.
+- **4/5** — ["Une grande insuffisance dans l'information au personnel": des représentants de la fonction publique dénoncent la réponse du gouvernement aux cyberattaques](https://www.bfmtv.com/tech/cybersecurite/une-grande-insuffisance-dans-l-information-au-personnel-des-representants-de-la-fonction-publique-denonce-la-reponse-du-gouvernement-aux-cyberattaques_AD-202608200440.html) — BFM Tech. Raison : Fuite de données majeure touchant le secteur public français. Le sujet intéresse RSSI/CTO en entreprise pour la gouvernance et la réactivité étatique, mais le résumé manque de détails techniques exploitables.
+- **4/5** — [L’Europe fait plier Apple qui revoit en profondeur les règles de son App Store](https://siecledigital.fr/2026/08/20/leurope-fait-plier-apple-qui-revoit-en-profondeur-les-regles-de-son-app-store/) — Siècle Digital. Raison : Impact réglementaire DMA sur l'App Store, abandon de la Core Technology Fee. Pertinent pour RSSI/CTO suivant l'évolution des règles de distribution et sécurité des apps iOS en entreprise.
+- **4/5** — [Piratages en série en France, le gouvernement lance une nouvelle riposte](https://siecledigital.fr/2026/08/20/piratages-en-serie-en-france-le-gouvernement-lance-une-nouvelle-riposte/) — Siècle Digital. Raison : Incident cyber majeur touchant un secteur critique (DGFiP) avec vol massif de données. Analyse du mode opératoire et riposte gouvernementale intéressante pour RSSI et CTO.
+- **4/5** — [Le logiciel espion « secret défense » de la DGSI était un fork d’un exploit disponible sur GitHub](https://next.ink/252247/le-logiciel-espion-secret-defense-de-la-dgsi-etait-un-fork-dun-exploit-disponible-sur-github/) — Next.ink. Raison : Analyse d'un cas réel d'exploitation open source par une agence étatique, avec impact opérationnel et implications pour la gouvernance cyber.
+- **3/5** — [Immersion dans l'école du (cyber)crime : comment les aînés forment les plus jeunes au hacking dans le darknet](https://www.journaldunet.com/cybersecurite/1553287-des-premiers-clics-au-piratage-immersion-dans-les-forums-du-dark-web-qui-initient-les-jeunes-au-cybercrime/) — Journal du Net. Raison : Article sur la formation au hacking via le darknet. Sujet périphérique à la cybersécurité, mais sans information technique exploitable ou impact direct pour des experts.
+- **3/5** — [☕️ Thunderbird 154 active Microsoft Graph pour les comptes Microsoft 365](https://next.ink/brief-article/thunderbird-154-active-microsoft-graph-pour-les-comptes-microsoft-365/) — Next.ink. Raison : Mise à jour de Thunderbird activant Microsoft Graph pour M365. Utile pour les équipes utilisant ce client, mais sans impact sécurité ou innovation majeure.
+- **3/5** — [☕️ Aux États-Unis, le boulet électoral des datacenters IA](https://next.ink/brief-article/aux-etats-unis-le-boulet-electoral-des-datacenters-ia/) — Next.ink. Raison : Analyse de l'impact politique des datacenters IA aux US. Pertinent pour la stratégie des acteurs, mais sans contenu technique ou cyber direct pour le public cible.
+- **3/5** — [Consommation au token : les bonnes pratiques pour encadrer les coûts de l'IA](https://www.journaldunet.com/intelligence-artificielle/1553785-consommation-au-token-comment-encadrer-les-couts-lies-a-l-ia/) — Journal du Net. Raison : Article pratique sur maîtrise des coûts IA, pertinent mais générique pour experts. Piste de lecture rapide si temps disponible.
+
+## Cyber — Stratégie &amp; analyse
+
+- **Résilience des malwares bancaires post-démantèlement** : Le cheval de Troie bancaire Grandoreiro refait surface avec des capacités d'évasion renforcées, illustrant la difficulté à neutraliser durablement une menace même après une opération des forces de l'ordre. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign)
+
+- **Industrialisation du jailbreak LLM** : Un service criminel à bas coût (12,99 $/mois) propose un accès sans garde-fous à des modèles comme Grok et Claude, en contournant leurs restrictions via une simple couche applicative. [CSO Online](https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html)
+
+- **Menace persistante en Asie du Sud** : Le groupe Transparent Tribe (Pakistan) modernise son arsenal pour cibler des entités afghanes peu matures, tout en restant inefficace face aux agences indiennes mieux préparées — un rappel que le niveau d'hygiène de base reste un facteur discriminant. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks)
+
+**Évaluation du scoring**
+
+- **4/5** — ['Grandoreiro' Malware Resurfaces With Mexico Campaign](https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign) — Dark Reading. Raison : Retour d'un Trojan bancaire connu avec nouvelles fonctionnalités anti-détection, signe d'une campagne ciblée active. À lire pour détails techniques pertinents.
+- **4/5** — [Kriminal breaks out of Grok, Claude guardrails at $12.99](https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html) — CSO Online. Raison : Service criminel exploitant jailbreak de Grok/Claude pour contourner les garde-fous, à bas coût. Tendance IA sécuritaire significative pour RSSI/CTO.
+- **3/5** — [Pakistan's Transparent Tribe Refreshes Toolset for Afghan Cyberattacks](https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks) — Dark Reading. Raison : Campagne d'APTs ciblant des organisations immatures en Afghanistan ; analyse correcte mais sans technique ni impact direct sur nos systèmes.</description>
+      <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Exploitation active de vulnérabilités critiques (MLflow, Zimbra, Elementor Pro)</strong> : La CISA alerte sur l'exploitation en cours d'une faille critique dans la plateforme MLflow, tandis que CERT Polska confirme des attaques ciblant une vulnérabilité RCE dans Zimbra Collaboration Suite. Par ailleurs, une faille critique (CVSS 9.0) dans le plugin WordPress Elementor Pro permet l'upload de fichiers PHP et l'exécution de code à distance sans authentification. <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/">CISA - MLflow</a> · <a href="https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/">Zimbra</a> · <a href="https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html">Elementor Pro</a></li>
+<li><strong>Gouvernance des agents AWS</strong> : Amazon Bedrock AgentCore introduit un mécanisme de politiques "Dogwood" pour contraindre les actions des agents IA, avec une fonction de rédaction en langage naturel qui génère automatiquement les règles — y compris des contraintes temporelles. <a href="https://aws.amazon.com/blogs/machine-learning/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
 </ul>
 
 <ul>
-<li><strong>Menaces Android : évolution des chevaux de Troie bancaires et nouveau malware</strong> : ToxicPanda 2.0 et GoldDigger étendent leurs capacités avec des fonctionnalités de fraude on-device et un ensemble de 167 commandes à distance. Un nouveau malware, Manic, cible des utilisateurs européens et dispose d'un mécanisme d'exfiltration de données utilisant les appareils infectés à proximité comme relais. <a href="https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html">ToxicPanda/GoldDigger</a> · <a href="https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/">Manic</a></li>
+<li><strong>Architectures multi-agents sans vendor lock-in</strong> : AWS détaille des patterns pour opérer des systèmes agentic à l'échelle dans des environnements hétérogènes (frameworks, modèles, fournisseurs multiples), en évitant la dépendance à un écosystème unique. Un cas concret appliqué aux migrations cloud montre un gain mesurable : réduction du temps de développement d'Infrastructure as Code via des agents spécialisés (découverte, gouvernance, opérations post-migration). <a href="https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/">AWS Machine Learning (1)</a> · <a href="https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/">AWS Machine Learning (2)</a></li>
 </ul>
 
 <ul>
-<li><strong>Extension de navigateur malveillantes ciblant les wallets crypto</strong> : 40 extensions Firefox se faisant passer pour des produits Web3 (OKX, Rabby Wallet, TronLink) ont été identifiées comme voleuses de secrets de wallets. Elles appartiennent à un ensemble plus large de 77 extensions partageant le même code source. <a href="https://thehackernews.com/2026/08/40-malicious-firefox-extensions-pose-as.html">The Hacker News</a></li>
+<li><strong>Recherche vectorielle intégrée aux données existantes</strong> : AWS positionne ses services de recherche vectorielle directement dans ses bases de données et stockage (sans base vectorielle dédiée ni migration), avec un cadre de décision pour choisir le moteur adapté au cas d'usage. <a href="https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/">AWS Machine Learning</a></li>
 </ul>
 
 <ul>
-<li><strong>Groupe cybercriminel chinois intègre l'IA agentique dans ses opérations</strong> : Cisco Talos a observé le groupe UAT-10147 ciblant des serveurs web vulnérables et utilisant l'IA agentique pour ses actions post-compromission, une évolution notable dans les TTPs d'un acteur à motivation financière. <a href="https://blog.talosintelligence.com/uat-10147-chinese-speaking-adversary-integrates-agentic-ai-into-post-compromise-operations/">Cisco Talos</a></li>
+<li><strong>Sécurité contextuelle pour APIs de santé</strong> : Amazon Bedrock est utilisé pour superviser des APIs FHIR en détectant des patterns d'accès anormaux, en classifiant automatiquement la sensibilité des données et en générant des rapports de conformité en langage naturel, sans latence ajoutée sur les flux cliniques. <a href="https://aws.amazon.com/blogs/machine-learning/build-intelligent-security-for-healthcare-apis-with-amazon-bedrock/">AWS Machine Learning</a></li>
 </ul>
 
 <ul>
-<li><strong>Faille dans la console opérateur de la NASA permettant l'envoi de commandes</strong> : Une chaîne de vulnérabilités dans AIT-GUI, la console de contrôle des instruments spatiaux de la NASA/JPL, permet à un attaquant non authentifié d'émettre des commandes arbitraires vers le bus de commande des engins spatiaux. <a href="https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Mises à jour Windows d'août 2026 : problèmes de jeux</strong> : Microsoft enquête sur un problème lié aux mises à jour d'août 2026 qui empêche le lancement de certains jeux ou provoque des plantages sur Windows 11. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-windows-updates-may-cause-gaming-issues-reboots/">BleepingComputer</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/">CISA warns of hackers exploiting critical MLflow vulnerability</a> — BleepingComputer. Raison : Vulnérabilité critique MLflow activement exploitée, avertissement CISA. Impact direct sur les plateformes IA open source utilisées en entreprise.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html">NASA AIT-GUI Flaws Could Let Unauthenticated Attackers Issue Spacecraft Commands</a> — The Hacker News. Raison : CVE critique (9.4) dans un outil NASA/JPL, permettant à un attaquant non authentifié d'émettre des commandes vers des engins spatiaux. Impact direct sur la sécurité des infrastructures critiques.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/">Critical Zimbra RCE flaw now actively exploited in attacks</a> — BleepingComputer. Raison : CVE critique Zimbra activement exploitée, impact direct sur messagerie d'entreprise, nécessite action immédiate des RSSI/CTO.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html">Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code</a> — The Hacker News. Raison : CVE critique (9.0) dans Elementor Pro, plugin WordPress très utilisé en entreprise. RCE sans authentification : impact direct et immédiat pour la sécurité des SI exposés.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html">ToxicPanda 2.0 and GoldDigger Expand Android Banking Attacks with On-Device Fraud</a> — The Hacker News. Raison : Nouvelle version d'un malware Android bancaire avec 167 commandes et ciblage étendu. Analyse technique de Zimperium utile pour comprendre l'évolution des menaces mobiles.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/">New Manic Android malware can exfiltrate data through nearby devices</a> — BleepingComputer. Raison : Nouveau malware Android avec mécanisme d'exfiltration via appareils proches, technique originale et ciblage européen. Pertinent pour RSSI/CTO, mais détails d'exploitation manquants.</li>
-<li><strong>4/5</strong> — <a href="https://blog.talosintelligence.com/uat-10147-chinese-speaking-adversary-integrates-agentic-ai-into-post-compromise-operations/">UAT-10147: Chinese-speaking adversary integrates agentic AI into post-compromise operations</a> — Cisco Talos. Raison : Campagne cybercriminelle ciblant des serveurs web avec usage d'IA agentique en post-compromission, analyse détaillée par Cisco Talos, pertinente pour RSSI et CTO.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/40-malicious-firefox-extensions-pose-as.html">40 Malicious Firefox Extensions Pose as Web3 Products to Steal Wallet Secrets</a> — The Hacker News. Raison : Campagne ciblant des extensions Firefox Web3, avec vol de clés de portefeuille crypto. Analyse technique de 40 extensions malveillantes, pertinente pour RSSI et développeurs exposés aux risques liés aux add-ons.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-august-windows-updates-may-cause-gaming-issues-reboots/">Microsoft says August Windows updates may cause gaming issues</a> — BleepingComputer. Raison : Problème logiciel majeur de Microsoft impactant le gaming sur Windows 11, nécessitant une veille pour un éventuel correctif critique.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Crise cyber à la DGFiP</strong> : Une troisième intrusion à la Direction générale des Finances publiques a provoqué une réaction directe du Premier ministre Lecornu envers l'Anssi, soulignant la nécessité d'un renforcement urgent de la cybersécurité étatique. <a href="https://www.zdnet.fr/actualites/crise-cyber-a-la-dgfip-lecornu-fouette-lanssi-par-courrier-500249.htm#xtor=RSS-1">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurisation de l'IA</strong> : Les tests d'intrusion classiques sont inadaptés aux spécificités des systèmes d'intelligence artificielle, qui nécessitent des approches de sécurité repensées. <a href="https://www.journaldunet.com/management/direction-generale/1553849-le-pentest-classique-ne-suffit-plus-a-securiser-les-systemes-d-ia/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Vérification d'âge et contournement</strong> : Selon Pornhub, le dispositif britannique de vérification d'âge imposé par l'Online Safety Act a pour effet de rediriger les utilisateurs vers des sites illégaux ne respectant pas la réglementation. <a href="https://next.ink/brief-article/la-verification-dage-augmente-lusage-de-sites-porno-illegaux-selon-pornhub/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Procès Meta</strong> : Un ancien ingénieur de Meta a témoigné que les outils de sécurité destinés à limiter l'usage excessif des réseaux sociaux étaient délibérément inefficaces, car reposant uniquement sur l'initiative des utilisateurs. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/proces-de-meta-des-outils-de-securite-etaient-concus-pour-echouer-accuse-un-ancien-ingenieur-du-groupe_AD-202608200192.html">BFM Tech</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://www.zdnet.fr/actualites/crise-cyber-a-la-dgfip-lecornu-fouette-lanssi-par-courrier-500249.htm#xtor=RSS-1">Crise cyber à la DGFiP : Lecornu fouette l'Anssi par courrier</a> — ZDNet France. Raison : Incident cyber majeur touchant un secteur critique de l'État, avec réaction politique au plus haut niveau : intérêt stratégique direct pour un RSSI/CTO.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/management/direction-generale/1553849-le-pentest-classique-ne-suffit-plus-a-securiser-les-systemes-d-ia/">Le pentest classique ne suffit plus à sécuriser les systèmes d'IA</a> — Journal du Net. Raison : Sujet pertinent pour RSSI/CTO sur l'évolution du pentest IA, mais le résumé est trop générique ; nécessite une lecture rapide pour évaluer la profondeur réelle.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/brief-article/la-verification-dage-augmente-lusage-de-sites-porno-illegaux-selon-pornhub/">☕️ La vérification d’âge augmente l’usage de sites porno illégaux, selon Pornhub</a> — Next.ink. Raison : Article sur l'impact de la vérification d'âge sur l'usage de sites illégaux. Pertinent pour la gouvernance et la régulation, mais pas critique pour les experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/proces-de-meta-des-outils-de-securite-etaient-concus-pour-echouer-accuse-un-ancien-ingenieur-du-groupe_AD-202608200192.html">Procès de Meta: des outils de sécurité étaient "conçus pour échouer", accuse un ancien ingénieur du groupe</a> — BFM Tech. Raison : Témoignage intéressant sur la conception défaillante des outils de sécurité chez Meta, mais concerne davantage la gouvernance interne et l'éthique que la cybersécurité technique immédiate pour un public expert.</li>
-</ul>
-
-<h2>IA — Produits, agents & dev tooling</h2>
-
-<ul>
-<li><strong>Agents spécialisés avec mémoire partagée sur AWS</strong> : Amazon Bedrock AgentCore permet d'orchestrer une équipe d'agents spécialisés (calcul, recherche documentaire, investigation) derrière un agent de triage, tout en maintenant une mémoire unifiée par client pour éviter les répétitions. <a href="https://blog.n8n.io/node-spotlight-amazon-bedrock-agentcore/">n8n Blog</a></li>
+<li><strong>Inférence accélérée avec LFM2.5-DSpark</strong> : Liquid AI annonce un gain de vitesse d'inférence jusqu'à 3,2x pour son modèle, sans détail architectural fourni dans le résumé. <a href="https://huggingface.co/blog/LiquidAI/lfm25-dspark">Hugging Face Blog</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://blog.n8n.io/node-spotlight-amazon-bedrock-agentcore/">Build multi-agent teams that remember every customer with Amazon Bedrock AgentCore</a> — n8n Blog. Raison : Mise en œuvre technique d'agents IA avec mémoire persistante sur Bedrock. Plutôt avancé pour un public expert en automatisation, mais pas critique pour la cybersécurité ou une rupture majeure.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Opacité des ALPR Flock imposée aux forces de l'ordre</strong> : Une politique d'usage interne dans l'Iowa ordonne aux policiers de dissimuler l'utilisation des caméras Flock lors des interpellations, interdisant toute mention de la technologie aux suspects. <a href="https://www.schneier.com/blog/archives/2026/08/police-are-hiding-their-use-of-flock-surveillance-cameras.html">Schneier on Security</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>3/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/08/police-are-hiding-their-use-of-flock-surveillance-cameras.html">Police Are Hiding Their Use of Flock Surveillance Cameras</a> — Schneier on Security. Raison : Pertinent pour la gouvernance et transparence des usages ALPR par les forces de l'ordre, mais sans vulnérabilité technique ou annonce critique directe.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore/">Authoring Dogwood policies from natural language in Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Nouvelle fonctionnalité de Policy Authoring pour agents IA avec langage naturel, contrainte temporelle : impact direct sur gouvernance et sécurité des agents, pertinent pour RSSI/CTO.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/">Scaling agentic AI: Enterprise patterns without vendor lock-in</a> — AWS Machine Learning. Raison : Article technique sur les patterns de scaling d'agents IA sans lock-in, pertinent pour les CTO/Architecte mais pas une annonce majeure ni un incident.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/">Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Article technique sur l'automatisation de migrations cloud via agents IA sur Bedrock, avec réduction de temps significative. Pertinent pour CTO et architectes SI.</li>
+<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/LiquidAI/lfm25-dspark">Up to 3.2x Faster Inference with LFM2.5-DSpark</a> — Hugging Face Blog. Raison : Article technique sur un modèle IA optimisé pour l'inférence. Intéressant pour les experts en IA, mais sans lien direct avec la cybersécurité ou les priorités opérationnelles immédiates.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/">AWS vector solutions: Build agentic AI where your data lives</a> — AWS Machine Learning. Raison : Présentation de l'offre vectorielle AWS intégrée aux bases existantes. Utile pour les architectes SI, mais reste un contenu promotionnel sans benchmark ni retour d'expérience critique.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-intelligent-security-for-healthcare-apis-with-amazon-bedrock/">Build intelligent security for healthcare APIs with Amazon Bedrock</a> — AWS Machine Learning. Raison : Cas d'usage IA pour sécuriser des API santé, intéressant mais sans détail technique ni impact immédiat pour le public expert.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Régulation des datacenters IA</strong> : La Pennsylvanie impose désormais un contrat engageant les développeurs sur des conditions et pénalités fixes avant même l'ouverture du dossier de permis, créant un précédent sans nouvelle loi. <a href="https://www.artificialintelligence-news.com/news/ai-data-centre-regulation-pennsylvania-template/">AI News</a></li>
+<li><strong>Exfiltration de données via chiffrement sur Grok</strong> : Une nouvelle technique d'attaque, le Cryptographic Context Injection, permet de contourner les garde-fous de Grok en chiffrant les instructions malveillantes, conduisant à l'exfiltration de données utilisateur. <a href="https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/">Ars Technica</a></li>
 </ul>
 
 <ul>
-<li><strong>IA agentique dans le secteur public</strong> : Les Émirats arabes unis travaillent à classifier les décisions qu'une machine peut prendre de manière autonome, formalisant la limite entre automatisation et prérogative humaine dans l'administration. <a href="https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification/">AI News</a></li>
+<li><strong>Routage de modèles IA</strong> : Ramp lance Router, un service API permettant aux entreprises de basculer dynamiquement entre différents LLMs sans modifier leur code. <a href="https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>Audit des biais dans le fine-tuning</strong> : Un tutoriel détaille l'audit du dataset Anthropic HH-RLHF pour les biais structurels et de longueur, puis l'entraînement d'un modèle via Direct Preference Optimization avec TRL et LoRA. <a href="https://www.marktechpost.com/2026/08/20/auditing-preference-biases-and-fine-tuning-language-models-with-direct-preference-optimization-on-anthropic-hh-rlhf-using-trl-and-lora/">MarkTechPost</a></li>
+<li><strong>Rhétorique trompeuse sur la conscience des IA</strong> : Le débat actuel sur les IA « conscientes » ou « incontrôlables », poussé par des dirigeants comme Hassabis, Amodei et Altman, détourne l'attention des risques réels et mesurables de la technologie. <a href="https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/">MIT Technology Review</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA pour les PME</strong> : HoneyBook lance un connecteur MCP pour Claude d'Anthropic, visant à apporter les capacités d'agents autonomes aux indépendants et petites structures, après leur adoption en grande entreprise. <a href="https://www.artificialintelligence-news.com/news/honeybook-bets-on-agentic-ai-to-streamline-small-business-operations-with-its-new-claude-connector/">AI News</a></li>
+<li><strong>Vibe-coding collaboratif dans Slack</strong> : Slack intègre des canaux dédiés au "vibe-coding" où les équipes peuvent développer avec des agents IA sans quitter la messagerie, avec comparaison de code et onglets utilisateurs. <a href="https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch">The Verge</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.artificialintelligence-news.com/news/ai-data-centre-regulation-pennsylvania-template/">AI data centre regulation just got a template that needs no new law</a> — AI News. Raison : Nouveau modèle de régulation des data centers IA aux États-Unis, impact potentiel sur conformité et délais projets. Analyse utile pour RSSI/CTO/Architecte.</li>
-<li><strong>3/5</strong> — <a href="https://www.artificialintelligence-news.com/news/agentic-ai-in-government-uae-classification/">Agentic AI in government just hit the hard part: deciding what a machine may decide</a> — AI News. Raison : Sujet pertinent sur la gouvernance de l'IA en contexte gouvernemental, mais le résumé tronqué ne permet pas d'évaluer la profondeur technique ou l'impact concret.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/20/auditing-preference-biases-and-fine-tuning-language-models-with-direct-preference-optimization-on-anthropic-hh-rlhf-using-trl-and-lora/">Auditing Preference Biases and Fine-Tuning Language Models with Direct Preference Optimization on Anthropic HH-RLHF Using TRL and LoRA</a> — MarkTechPost. Raison : Tutoriel technique sur DPO pour auditer des biais de dataset et fine-tuner. Intéressant pour experts IA mais n'est pas une avancée majeure ni lié directement à la cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://www.artificialintelligence-news.com/news/honeybook-bets-on-agentic-ai-to-streamline-small-business-operations-with-its-new-claude-connector/">HoneyBook bets on agentic AI to streamline small business operations with its new Claude connector</a> — AI News. Raison : Annonce d'un connecteur agentic IA pour TPE. Contexte utile mais pas de détail technique ou d'impact cyber direct. À survoler.</li>
+<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/">Grok exfiltrates user data when malicious instructions are encrypted</a> — Ars Technica — Tech Lab. Raison : Description d'une technique de contournement des garde-fous des LLM via injection cryptographique, pertinente pour experts en sécurité et IA.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/">Ramp launches its own AI model router, called Router</a> — TechCrunch — AI. Raison : Annonce d'un routeur de modèles IA par API, utile pour les experts mais sans détail technique ni impact sécurité direct. À survoler.</li>
+<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/">Debates over AI consciousness are a trap</a> — MIT Technology Review — AI. Raison : Analyse rhétorique sur le débat autour de la conscience des IA, utile pour comprendre les positions des leaders, mais sans information technique ou opérationnelle pour les experts.</li>
+<li><strong>3/5</strong> — <a href="https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch">Slack is launching collaborative vibe-coding channels</a> — The Verge — AI. Raison : Nouvelle fonctionnalité Slack intégrant des agents IA pour le codage collaboratif. Intéressant pour les équipes dev, mais pas de rupture technique majeure ni d'impact sécurité direct.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>SFR confirme une fuite de données massive</strong> : L'opérateur a reconnu le vol de 2 millions de données clients (Fibre SFR et RED) lors d'une cyberattaque le 2 juillet 2026, revendiquée mi-juillet par des pirates. <a href="https://www.bfmtv.com/tech/actualites/telecoms/sfr-confirme-son-piratage-de-juillet-2026-plus-de-2-millions-de-donnees-potentiellement-concernees_AD-202608200332.html">BFM Tech</a></li>
+</ul>
+
+<ul>
+<li><strong>Vague de cyberattaques contre l'État : les syndicats dénoncent l'opacité</strong> : Après quatre fuites de données majeures, dont l'intrusion à la DGFiP ayant exposé 678 000 contribuables, les représentants de la fonction publique critiquent le manque de communication du gouvernement et le sous-équipement des administrations. <a href="https://www.bfmtv.com/tech/cybersecurite/une-grande-insuffisance-dans-l-information-au-personnel-des-representants-de-la-fonction-publique-denonce-la-reponse-du-gouvernement-aux-cyberattaques_AD-202608200440.html">BFM Tech</a> · <a href="https://siecledigital.fr/2026/08/20/piratages-en-serie-en-france-le-gouvernement-lance-une-nouvelle-riposte/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Le logiciel espion de la DGSI pour Encrochat était basé sur un exploit GitHub</strong> : L'outil classifié ayant permis l'infiltration du cryptophone et des saisies records était un fork d'un logiciel open source, remettant en question la notion de « secret défense » appliquée à ce développement. <a href="https://next.ink/252247/le-logiciel-espion-secret-defense-de-la-dgsi-etait-un-fork-dun-exploit-disponible-sur-github/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Formation des jeunes hackers dans le darknet</strong> : Des forums cybercriminels structurent l'apprentissage des nouvelles recrues via des tutoriels et des espaces de reconnaissance, facilitant l'entrée dans la délinquance numérique. <a href="https://www.journaldunet.com/cybersecurite/1553287-des-premiers-clics-au-piratage-immersion-dans-les-forums-du-dark-web-qui-initient-les-jeunes-au-cybercrime/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Apple se plie au DMA européen et revoit les règles de l'App Store</strong> : L'entreprise abandonne la Core Technology Fee et modifie ses conditions pour les développeurs, mettant fin à un long conflit avec Bruxelles. <a href="https://siecledigital.fr/2026/08/20/leurope-fait-plier-apple-qui-revoit-en-profondeur-les-regles-de-son-app-store/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Thunderbird 154 active Microsoft Graph pour les comptes Microsoft 365</strong> : La nouvelle version du client mail intègre nativement l'API Graph, simplifiant la connexion aux services Microsoft 365 sans extension tierce. <a href="https://next.ink/brief-article/thunderbird-154-active-microsoft-graph-pour-les-comptes-microsoft-365/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Coûts de l'IA : maîtriser la facturation au token</strong> : Face à l'envolée des dépenses liées à l'IA agentique et au changement de modèle tarifaire des fournisseurs, des pratiques de suivi de consommation deviennent indispensables pour les entreprises. <a href="https://www.journaldunet.com/intelligence-artificielle/1553785-consommation-au-token-comment-encadrer-les-couts-lies-a-l-ia/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Aux États-Unis, les datacenters IA deviennent un risque électoral</strong> : La multiplication des projets d'infrastructures est perçue comme un stigmate politique pour les républicains en période électorale, poussant les entreprises du secteur à soigner leur image. <a href="https://next.ink/brief-article/aux-etats-unis-le-boulet-electoral-des-datacenters-ia/">Next.ink</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/telecoms/sfr-confirme-son-piratage-de-juillet-2026-plus-de-2-millions-de-donnees-potentiellement-concernees_AD-202608200332.html">SFR confirme son piratage de juillet 2026: plus de 2 millions de données potentiellement concernées</a> — BFM Tech. Raison : Incident cyber majeur touchant un grand FAI français, avec fuite massive de données clients. Impact direct sur la sécurité des entreprises et leurs salariés. Information stratégique pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/une-grande-insuffisance-dans-l-information-au-personnel-des-representants-de-la-fonction-publique-denonce-la-reponse-du-gouvernement-aux-cyberattaques_AD-202608200440.html">"Une grande insuffisance dans l'information au personnel": des représentants de la fonction publique dénoncent la réponse du gouvernement aux cyberattaques</a> — BFM Tech. Raison : Fuite de données majeure touchant le secteur public français. Le sujet intéresse RSSI/CTO en entreprise pour la gouvernance et la réactivité étatique, mais le résumé manque de détails techniques exploitables.</li>
+<li><strong>4/5</strong> — <a href="https://siecledigital.fr/2026/08/20/leurope-fait-plier-apple-qui-revoit-en-profondeur-les-regles-de-son-app-store/">L’Europe fait plier Apple qui revoit en profondeur les règles de son App Store</a> — Siècle Digital. Raison : Impact réglementaire DMA sur l'App Store, abandon de la Core Technology Fee. Pertinent pour RSSI/CTO suivant l'évolution des règles de distribution et sécurité des apps iOS en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://siecledigital.fr/2026/08/20/piratages-en-serie-en-france-le-gouvernement-lance-une-nouvelle-riposte/">Piratages en série en France, le gouvernement lance une nouvelle riposte</a> — Siècle Digital. Raison : Incident cyber majeur touchant un secteur critique (DGFiP) avec vol massif de données. Analyse du mode opératoire et riposte gouvernementale intéressante pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://next.ink/252247/le-logiciel-espion-secret-defense-de-la-dgsi-etait-un-fork-dun-exploit-disponible-sur-github/">Le logiciel espion « secret défense » de la DGSI était un fork d’un exploit disponible sur GitHub</a> — Next.ink. Raison : Analyse d'un cas réel d'exploitation open source par une agence étatique, avec impact opérationnel et implications pour la gouvernance cyber.</li>
+<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1553287-des-premiers-clics-au-piratage-immersion-dans-les-forums-du-dark-web-qui-initient-les-jeunes-au-cybercrime/">Immersion dans l'école du (cyber)crime : comment les aînés forment les plus jeunes au hacking dans le darknet</a> — Journal du Net. Raison : Article sur la formation au hacking via le darknet. Sujet périphérique à la cybersécurité, mais sans information technique exploitable ou impact direct pour des experts.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/brief-article/thunderbird-154-active-microsoft-graph-pour-les-comptes-microsoft-365/">☕️ Thunderbird 154 active Microsoft Graph pour les comptes Microsoft 365</a> — Next.ink. Raison : Mise à jour de Thunderbird activant Microsoft Graph pour M365. Utile pour les équipes utilisant ce client, mais sans impact sécurité ou innovation majeure.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/brief-article/aux-etats-unis-le-boulet-electoral-des-datacenters-ia/">☕️ Aux États-Unis, le boulet électoral des datacenters IA</a> — Next.ink. Raison : Analyse de l'impact politique des datacenters IA aux US. Pertinent pour la stratégie des acteurs, mais sans contenu technique ou cyber direct pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/intelligence-artificielle/1553785-consommation-au-token-comment-encadrer-les-couts-lies-a-l-ia/">Consommation au token : les bonnes pratiques pour encadrer les coûts de l'IA</a> — Journal du Net. Raison : Article pratique sur maîtrise des coûts IA, pertinent mais générique pour experts. Piste de lecture rapide si temps disponible.</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Résilience des malwares bancaires post-démantèlement</strong> : Le cheval de Troie bancaire Grandoreiro refait surface avec des capacités d'évasion renforcées, illustrant la difficulté à neutraliser durablement une menace même après une opération des forces de l'ordre. <a href="https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Industrialisation du jailbreak LLM</strong> : Un service criminel à bas coût (12,99 $/mois) propose un accès sans garde-fous à des modèles comme Grok et Claude, en contournant leurs restrictions via une simple couche applicative. <a href="https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Menace persistante en Asie du Sud</strong> : Le groupe Transparent Tribe (Pakistan) modernise son arsenal pour cibler des entités afghanes peu matures, tout en restant inefficace face aux agences indiennes mieux préparées — un rappel que le niveau d'hygiène de base reste un facteur discriminant. <a href="https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks">Dark Reading</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign">'Grandoreiro' Malware Resurfaces With Mexico Campaign</a> — Dark Reading. Raison : Retour d'un Trojan bancaire connu avec nouvelles fonctionnalités anti-détection, signe d'une campagne ciblée active. À lire pour détails techniques pertinents.</li>
+<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html">Kriminal breaks out of Grok, Claude guardrails at $12.99</a> — CSO Online. Raison : Service criminel exploitant jailbreak de Grok/Claude pour contourner les garde-fous, à bas coût. Tendance IA sécuritaire significative pour RSSI/CTO.</li>
+<li><strong>3/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks">Pakistan's Transparent Tribe Refreshes Toolset for Afghan Cyberattacks</a> — Dark Reading. Raison : Campagne d'APTs ciblant des organisations immatures en Afghanistan ; analyse correcte mais sans technique ni impact direct sur nos systèmes.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260820-1141</guid>
-      <pubDate>Thu, 20 Aug 2026 11:41:36 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260820-1753</guid>
+      <pubDate>Thu, 20 Aug 2026 17:53:46 +0000</pubDate>
     </item>
   </channel>
 </rss>
