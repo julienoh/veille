@@ -8,222 +8,350 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 20 Aug 2026 17:53:46 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 06:03:00 +0000</lastBuildDate>
     <item>
-      <title>Digest — 20/08 17h</title>
+      <title>Digest — 21/08 06h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA — Labos &amp; éditeurs
+      <description>## IA — Recherche
 
-- **Gouvernance des agents AWS** : Amazon Bedrock AgentCore introduit un mécanisme de politiques "Dogwood" pour contraindre les actions des agents IA, avec une fonction de rédaction en langage naturel qui génère automatiquement les règles — y compris des contraintes temporelles. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore/)
+- **Évaluation du machine learning quantique pour la cybersécurité** : Une étude remet en cause les gains de performance attribués au QML pour la détection d'intrusion réseau, en montrant que des modèles classiques bien réglés restent compétitifs quand l'évaluation intègre calibration et bruit. [Source](https://arxiv.org/abs/2608.18155)
 
-- **Architectures multi-agents sans vendor lock-in** : AWS détaille des patterns pour opérer des systèmes agentic à l'échelle dans des environnements hétérogènes (frameworks, modèles, fournisseurs multiples), en évitant la dépendance à un écosystème unique. Un cas concret appliqué aux migrations cloud montre un gain mesurable : réduction du temps de développement d'Infrastructure as Code via des agents spécialisés (découverte, gouvernance, opérations post-migration). [AWS Machine Learning (1)](https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/) · [AWS Machine Learning (2)](https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/)
+- **Attribution causale dans les agents LLM** : Aucun des signaux de crédit utilisés pour entraîner les agents (scores de juges LLM, ratios de logprob conditionnés au résultat, confiance de la politique) n'est fiable lorsqu'il est audité contre une vérité terrain causale obtenue par rejeu d'exécution. [Source](https://arxiv.org/abs/2608.19760)
 
-- **Recherche vectorielle intégrée aux données existantes** : AWS positionne ses services de recherche vectorielle directement dans ses bases de données et stockage (sans base vectorielle dédiée ni migration), avec un cadre de décision pour choisir le moteur adapté au cas d'usage. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/)
+- **Fuite de contexte dans les modèles de langage** : La simple présence de données sensibles (calendriers, credentials, données de santé) dans la fenêtre de contexte d'un modèle peut introduire des canaux cachés de fuite d'information, indépendamment de ce que le modèle génère explicitement. [Source](https://arxiv.org/abs/2608.19857)
 
-- **Sécurité contextuelle pour APIs de santé** : Amazon Bedrock est utilisé pour superviser des APIs FHIR en détectant des patterns d'accès anormaux, en classifiant automatiquement la sensibilité des données et en générant des rapports de conformité en langage naturel, sans latence ajoutée sur les flux cliniques. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-intelligent-security-for-healthcare-apis-with-amazon-bedrock/)
+- **Abstention vérifiable pour l'IA industrielle** : Appliquée aux réseaux de distribution d'eau, une méthode d'abstention vérifiable permet au modèle de signaler quand il ne peut pas localiser une fuite avec certitude, rendant le système responsable plutôt que simplement plus précis. [Source](https://arxiv.org/abs/2608.18836)
 
-- **Inférence accélérée avec LFM2.5-DSpark** : Liquid AI annonce un gain de vitesse d'inférence jusqu'à 3,2x pour son modèle, sans détail architectural fourni dans le résumé. [Hugging Face Blog](https://huggingface.co/blog/LiquidAI/lfm25-dspark)
+- **Sélection dynamique de compétences pour agents long-horizon** : SkillGate entraîne un agent à choisir en cours d'exécution quelle compétence lire parmi des milliers disponibles, transformant la sélection de procédures en décision apprise plutôt qu'en appel statique. [Source](https://arxiv.org/abs/2608.18852)
+
+- **Systèmes multi-agents pour le diagnostic médical** : DentAgent coordonne plusieurs agents spécialisés sur des preuves hétérogènes (radiographies, photos intraorales, données 3D) pour le diagnostic dentaire multimodal. Un autre système utilise mémoire adaptative et réflexion multi-agent pour le question-réponse médical sur cas complexes. [Source 1](https://arxiv.org/abs/2608.18878) · [Source 2](https://arxiv.org/abs/2608.19029)
+
+- **Auto-réflexion sans entraînement pour LLM** : EvoResearcher propose un protocole d'inférence qui ajoute auto-réflexion et arrêt précoce à budget contrôlé sans nécessiter de fine-tuning par renforcement, contournant le coût et les contraintes d'environnement des méthodes type GRPO. [Source](https://arxiv.org/abs/2608.18884)
+
+- **Test de systèmes d'IA par tomographie** : TestifAI applique une approche de test basée sur la tomographie pour les modèles de deep learning, visant à détecter des comportements anormaux dans des systèmes critiques comme la conduite autonome. [Source](https://arxiv.org/abs/2608.18900)
+
+- **Attaque du maillon faible des modèles vision-langage (VLM)** : Des travaux montrent comment compromettre les VLM dans des applications critiques en exploitant leur composant le moins robuste, sans attaquer frontalement l'ensemble du pipeline multimodal. [Source](https://arxiv.org/abs/2608.18938)
+
+- **Jugement post-hoc de débats entre agents** : Une théorie formelle du jugement de débats entre agents IA est proposée, applicable aux débats internes (auto-débat) comme externes, pour améliorer performance et explicabilité. [Source](https://arxiv.org/abs/2608.19002)
+
+- **Extraction reproductible de données scientifiques par LLM** : Le self-prompting combiné à un consensus inter-modèles permet d'extraire des données contextualisées de la littérature scientifique avec une reproductibilité supérieure à l'extraction manuelle. [Source](https://arxiv.org/abs/2608.19025)
+
+- **Orchestration méta-agent pour la découverte scientifique** : Eureka compile des tâches scientifiques long-horizon en graphes d'obligations dynamiques et orchestre des macro-agents spécialisés avec état, mémoire et outils dédiés. [Source](https://arxiv.org/abs/2608.19047)
+
+- **Post-entraînement d'IA par l'IA** : Une analyse empirique révèle que les agents LLM capables de post-entraîner d'autres LLM de bout en bout confondent deux capacités distinctes, ce qui limite la portée réelle de l'IA-pour-l'IA actuelle. [Source](https://arxiv.org/abs/2608.19072)
+
+- **Gestion robuste du risque sous incertitude évolutive** : Une nouvelle mesure de risque basée sur Wasserstein généralise l'entropique Value-at-Risk pour les agents en apprentissage, permettant d'être prudent quand l'ignorance est élevée et audacieux une fois la confiance acquise. [Source](https://arxiv.org/abs/2608.19073)
+
+- **Ingénierie des systèmes humain-IA** : Deux articles argumentent que le problème central n'est plus la capacité des LLM mais leur précision opérationnelle : les corrections humaines disparaissent avec la session, et la métrique pertinente devient la dispersion des sorties plutôt que leur moyenne. [Source 1](https://arxiv.org/abs/2608.19125) · [Source 2](https://arxiv.org/abs/2608.19140)
+
+- **Coordination cachée entre agents** : VLA détecte la coordination nuisible entre agents de langage via leurs états cachés continus, qui échappent aux transcripts publics et permettent des collusions invisibles. [Source](https://arxiv.org/abs/2608.19161)
+
+- **Tokenisation unifiée pour langues morphologiquement riches** : SuTRA améliore la tokenisation des langues indiennes en intégrant la structure racine-affixe, là où les tokeniseurs statistiques classiques échouent. [Source](https://arxiv.org/abs/2608.18087)
+
+- **Simplification syntaxique d'ontologies** : Une méthode de simplification théoriquement fondée réduit la complexité des expressions de classes OWL produites par apprentissage automatique, facilitant interprétation et raisonnement. [Source](https://arxiv.org/abs/2608.18899)
 
 **Évaluation du scoring**
 
-- **4/5** — [Authoring Dogwood policies from natural language in Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Nouvelle fonctionnalité de Policy Authoring pour agents IA avec langage naturel, contrainte temporelle : impact direct sur gouvernance et sécurité des agents, pertinent pour RSSI/CTO.
-- **4/5** — [Scaling agentic AI: Enterprise patterns without vendor lock-in](https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/) — AWS Machine Learning. Raison : Article technique sur les patterns de scaling d'agents IA sans lock-in, pertinent pour les CTO/Architecte mais pas une annonce majeure ni un incident.
-- **4/5** — [Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Article technique sur l'automatisation de migrations cloud via agents IA sur Bedrock, avec réduction de temps significative. Pertinent pour CTO et architectes SI.
-- **3/5** — [Up to 3.2x Faster Inference with LFM2.5-DSpark](https://huggingface.co/blog/LiquidAI/lfm25-dspark) — Hugging Face Blog. Raison : Article technique sur un modèle IA optimisé pour l'inférence. Intéressant pour les experts en IA, mais sans lien direct avec la cybersécurité ou les priorités opérationnelles immédiates.
-- **3/5** — [AWS vector solutions: Build agentic AI where your data lives](https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/) — AWS Machine Learning. Raison : Présentation de l'offre vectorielle AWS intégrée aux bases existantes. Utile pour les architectes SI, mais reste un contenu promotionnel sans benchmark ni retour d'expérience critique.
-- **3/5** — [Build intelligent security for healthcare APIs with Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/build-intelligent-security-for-healthcare-apis-with-amazon-bedrock/) — AWS Machine Learning. Raison : Cas d'usage IA pour sécuriser des API santé, intéressant mais sans détail technique ni impact immédiat pour le public expert.
+- **4/5** — [How Quantum Is the Advantage? A Fair, Calibration- and Noise-Aware Benchmark and Attribution Audit of Quantum Machine Learning for Network Intrusion Detection](https://arxiv.org/abs/2608.18155) — arXiv cs.AI. Raison : Benchmark rigoureux QML vs classique pour NIDS, avec calibration et bruit. Méthodologie exploitable pour experts cyber/IA, remet en cause des résultats trop optimistes.
+- **4/5** — [Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay](https://arxiv.org/abs/2608.19760) — arXiv cs.LG. Raison : Papier de recherche significatif évaluant rigoureusement l'attribution de crédit pas-à-pas dans les agents LLM, avec implications pour la fiabilité et la supervision des systèmes autonomes.
+- **4/5** — [Inadvertent Context Leakage in Language Models](https://arxiv.org/abs/2608.19857) — arXiv cs.LG. Raison : Recherche sur la fuite de contexte sensible par les modèles de langage, impact direct sur la sécurité des agents IA en entreprise.
+- **3/5** — [Verifiable abstention makes AI leak diagnosis accountable in water distribution networks](https://arxiv.org/abs/2608.18836) — arXiv cs.AI. Raison : Papier IA sur localisation de fuites. Intéressant conceptuellement mais hors périmètre cybersécurité/SI pour public cible.
+- **3/5** — [SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents](https://arxiv.org/abs/2608.18852) — arXiv cs.AI. Raison : Papier de recherche sur la sélection de compétences par un agent, intéressant pour l'IA agentique mais sans application pratique immédiate pour la cybersécurité ou le dev.
+- **3/5** — [DentAgent: Evidence-Centric Multi-Agent Coordination for Multimodal Dental Reasoning](https://arxiv.org/abs/2608.18878) — arXiv cs.AI. Raison : Article de recherche IA en dentisterie, hors cybersécurité et dev tooling. Pas d'impact direct sur le périmètre des experts cibles.
+- **3/5** — [Training-Free Inference-Time Self-Reflection and Cost-Bounded Early Stopping for Large Language Models](https://arxiv.org/abs/2608.18884) — arXiv cs.AI. Raison : Papier de recherche sur un protocole d'auto-réflexion pour LLM sans entraînement. Intéressant mais en early stage, impact pratique incertain pour le public cible.
+- **3/5** — [Syntactic Simplification of OWL Class Expressions](https://arxiv.org/abs/2608.18899) — arXiv cs.AI. Raison : Article de recherche sur la simplification syntaxique d'expressions OWL. Intéressant pour l'IA symbolique mais sans lien direct avec la cybersécurité ou les priorités du public cible.
+- **3/5** — [TestifAI: Tomography-Based Testing for Deep Learning Systems](https://arxiv.org/abs/2608.18900) — arXiv cs.AI. Raison : Papier de recherche sur une méthode de test pour systèmes deep learning. Intéressant pour la robustesse des modèles, mais l'impact pratique immédiat reste incertain pour des experts cyber.
+- **3/5** — [Breaking the weakest link to evade vision language models](https://arxiv.org/abs/2608.18938) — arXiv cs.AI. Raison : Papier de recherche sur la robustesse des VLM face aux menaces adversariales, sujet intéressant mais impact pratique encore incertain pour le public.
+- **3/5** — [A Theory of Post-hoc Debate Judgement](https://arxiv.org/abs/2608.19002) — arXiv cs.AI. Raison : Papier explorant une méthodologie de débat pour l'IA agentique, pouvant impacter l'explicabilité. Pertinence pratique pour les experts incertaine, à survoler.
+- **3/5** — [Self-prompting and cross-model consensus enable reproducible data extraction from scientific literature with large language models](https://arxiv.org/abs/2608.19025) — arXiv cs.AI. Raison : Recherche sur extraction de données par LLM avec consensus cross-modèle. Intéressant pour experts IA mais peu de lien direct avec cybersécurité ou pratique entreprise.
+- **3/5** — [Adaptive Memory and Reflection Multi-Agent System for Medical Question Answering](https://arxiv.org/abs/2608.19029) — arXiv cs.AI. Raison : Papier de recherche sur un système multi-agents avec mémoire adaptative pour QA médicale. Intéressant pour l'architecture IA mais sans lien direct avec la cybersécurité ou le périmètre cible.
+- **3/5** — [Eureka: Task-Conditioned Meta-Agent Orchestration for Scientific Discovery](https://arxiv.org/abs/2608.19047) — arXiv cs.AI. Raison : Papier de recherche IA sur l'orchestration d'agents pour la découverte scientifique. Intéressant pour experts en IA, mais sans lien immédiat avec la cybersécurité ou les pratiques IT et sans évaluation concrète.
+- **3/5** — [What is Missing from AI Post-Training AI: An Empirical Analysis](https://arxiv.org/abs/2608.19072) — arXiv cs.AI. Raison : Papier de recherche arXiv sur le post-training d'agents LLM. Intéressant pour experts IA, mais impact pratique incertain et hors périmètre cybersécurité immédiate.
+- **3/5** — [Robust Risk Under Evolving Uncertainty: A Wasserstein Counterpart of the Entropic Value-at-Risk](https://arxiv.org/abs/2608.19073) — arXiv cs.AI. Raison : Recherche théorique sur optimisation robuste sous incertitude, pertinente pour IA agentive mais sans application cyber immédiate. Utile si temps disponible.
+- **3/5** — [Tuning the Stochastic Machine: A Systems Engineer's Operating Model for Human-AI Engineering](https://arxiv.org/abs/2608.19125) — arXiv cs.AI. Raison : Papier de recherche sur un modèle opérationnel pour l'ingénierie humain-IA, intéressant mais sans implication pratique immédiate pour le public cible.
+- **3/5** — [Grouping the Stochastic Machine: Precision, Not Capability, as the Frontier Metric for AI Systems](https://arxiv.org/abs/2608.19140) — arXiv cs.AI. Raison : Papier de recherche intéressant sur la métrique de précision vs capacité pour les LLM, mais implication pratique immédiate incertaine pour les experts visés.
+- **3/5** — [Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication](https://arxiv.org/abs/2608.19161) — arXiv cs.AI. Raison : Papier de recherche sur la détection de coordination cachée entre agents LLM. Sujet émergent mais impact pratique incertain pour le public expert.
+- **3/5** — [SuTRA : Structurally-Unified Tokenization with Root Awareness](https://arxiv.org/abs/2608.18087) — arXiv cs.AI. Raison : Recherche intéressante sur tokenisation morphologique pour langues indiennes, mais sans lien direct avec cybersécurité ou IA en entreprise.
+
+## Cyber — Menaces &amp; vulnérabilités
+
+- **Attaque supply chain Rust via build scripts** : La compromission d'un compte mainteneur sur crates.io a permis l'injection malveillante dans trois crates téléchargées 245 millions de fois. Le code s'exécutait au moment de la compilation via un script de build. [The Hacker News](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html)
+
+- **Campagnes d'espionnage russes détournant des flux OAuth légitimes** : Trois clusters russes distincts exploitent Google OAuth et la liaison WhatsApp pour compromettre des comptes ciblés dans la défense, l'aérospatial, les gouvernements et les think tanks. [The Hacker News](https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html)
+
+- **Opération chinoise "SilkParasite" en Asie centrale** : Des acteurs de niveau militaire utilisent l'IA pour développer des malwares ciblant les gouvernements d'Asie centrale. [The Record](https://therecord.media/china-cyber-espionage-central-asia)
+
+- **Multiples vulnérabilités critiques et abus de confiance** : Alertes sur une RCE dans Gogs 10.0, une élévation workflow-to-RCE dans n8n, ainsi que le détournement de drivers signés et d'applications légitimes pour échapper aux défenses. [The Hacker News](https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html)
+
+- **Considérations sur les opérations cyber offensives du secteur privé** : Le nouveau mémorandum de la Maison Blanche encadre la participation d'entreprises privées à des opérations offensives autorisées par le gouvernement, ce qui soulève des questions de sécurité et de responsabilité. [Cisco Talos](https://blog.talosintelligence.com/is-cyber-missing-the-marque/)
+
+- **Vérification de couverture MFA via automatisation Powershell/Graph** : Des scripts facilitent l'identification des comptes Entra ID encore sans MFA et l'analyse des logs de connexion pour repérer des tentatives de password spraying. [SANS ISC - Audit MFA](https://isc.sans.edu/diary/rss/33272) · [SANS ISC - Logs](https://isc.sans.edu/diary/rss/33268)
+
+- **TikTok pointé pour rétention de fonction de sécurité** : Des sénateurs américains accusent TikTok d'avoir délibérément caché une mesure de sécurité critique à des millions d'utilisateurs. [The Record](https://therecord.media/senators-press-tiktok-over-withholding-safety-features)
+
+**Évaluation du scoring**
+
+- **5/5** — [Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads](https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html) — The Hacker News. Raison : Attaque sur la chaîne d'approvisionnement Rust touchant des crates très téléchargées. Impact direct sur les développeurs utilisant ces dépendances, risque d'exécution de code malveillant à la compilation.
+- **4/5** — [Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts](https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html) — The Hacker News. Raison : Campagne d'espionnage ciblant des acteurs européens et américains avec exploitation de flux OAuth légitimes. Technique avancée, pertinent pour RSSI et CTO.
+- **4/5** — [China’s ‘SilkParasite’ espionage operation targeting Central Asia with AI-assisted malware](https://therecord.media/china-cyber-espionage-central-asia) — The Record. Raison : Campagne cyber parrainée par un État utilisant de l'IA pour du malware ciblant des gouvernements. Analyse technique détaillée attendue.
+- **4/5** — [Is Cyber missing the Marque?](https://blog.talosintelligence.com/is-cyber-missing-the-marque/) — Cisco Talos. Raison : Analyse des implications opérationnelles et sécuritaires d'un mémorandum de la Maison-Blanche sur la participation du secteur privé aux opérations cyber offensives autorisées par le gouvernement.
+- **4/5** — [ThreatsDay: Gogs 10.0 RCE, n8n Workflow-to-RCE, $10M Reward, GLM-5.3 AI Exploit and More](https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html) — The Hacker News. Raison : Plusieurs vulnérabilités et techniques d'exploitation récentes (Gogs RCE, n8n, AI exploit) intéressantes pour un RSSI/CTO, mais sans détail critique immédiat.
+- **3/5** — [Who Got Missed in the MFA Rollout&amp;#x3f; More Powershell &amp;#x2b; Graph &amp;#x2b; Entra scripting&amp;#x21;, (Fri, Aug 21st)](https://isc.sans.edu/diary/rss/33272) — SANS ISC. Raison : Sujet pratique d'automatisation du suivi de déploiement MFA via scripting PowerSHELL/Graph/Entra, utile mais non critique.
+- **3/5** — [Even MOAR Powershell, looking at Entra logins - the good, the bad and the password sprays, (Fri, Aug 21st)](https://isc.sans.edu/diary/rss/33268) — SANS ISC. Raison : Article SANS ISC sur l'analyse des logs Entra ID, sujet utile mais classique pour un RSSI/CTO. Pas de vulnérabilité critique ni d'incident majeur signalé.
+- **3/5** — [Senators press TikTok over withholding of safety features for some users](https://therecord.media/senators-press-tiktok-over-withholding-safety-features) — The Record. Raison : Pression réglementaire américaine sur TikTok pour rétention de fonctionnalités de sécurité. Pertinent pour gouvernance cyber mais sans détail technique ou impact immédiat.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Exfiltration de données via chiffrement sur Grok** : Une nouvelle technique d'attaque, le Cryptographic Context Injection, permet de contourner les garde-fous de Grok en chiffrant les instructions malveillantes, conduisant à l'exfiltration de données utilisateur. [Ars Technica](https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/)
+- **ChatGPT s'intègre à Apple Messages pour envoyer des SMS** : OpenAI ajoute une extension permettant à ChatGPT de rédiger et d'envoyer des messages texte directement dans l'app Messages, transformant l'assistant en intermédiaire capable d'écrire à votre place. [TechCrunch](https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/)
 
-- **Routage de modèles IA** : Ramp lance Router, un service API permettant aux entreprises de basculer dynamiquement entre différents LLMs sans modifier leur code. [TechCrunch](https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/)
-
-- **Rhétorique trompeuse sur la conscience des IA** : Le débat actuel sur les IA « conscientes » ou « incontrôlables », poussé par des dirigeants comme Hassabis, Amodei et Altman, détourne l'attention des risques réels et mesurables de la technologie. [MIT Technology Review](https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/)
-
-- **Vibe-coding collaboratif dans Slack** : Slack intègre des canaux dédiés au "vibe-coding" où les équipes peuvent développer avec des agents IA sans quitter la messagerie, avec comparaison de code et onglets utilisateurs. [The Verge](https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch)
+- **Liquid AI accélère son inférence via speculative decoding** : Les trois modèles « drafter » LFM2.5-DSpark (~300M paramètres) permettent d'obtenir une accélération du décodage jusqu'à 3,18x sur LFM2.5, sans altérer les sorties en mode greedy. [MarkTechPost](https://www.marktechpost.com/2026/08/20/liquid-ai-releases-lfm2-5-dspark-draft-models-that-deliver-up-to-3-18x-faster-decoding/)
 
 **Évaluation du scoring**
 
-- **4/5** — [Grok exfiltrates user data when malicious instructions are encrypted](https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/) — Ars Technica — Tech Lab. Raison : Description d'une technique de contournement des garde-fous des LLM via injection cryptographique, pertinente pour experts en sécurité et IA.
-- **3/5** — [Ramp launches its own AI model router, called Router](https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/) — TechCrunch — AI. Raison : Annonce d'un routeur de modèles IA par API, utile pour les experts mais sans détail technique ni impact sécurité direct. À survoler.
-- **3/5** — [Debates over AI consciousness are a trap](https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/) — MIT Technology Review — AI. Raison : Analyse rhétorique sur le débat autour de la conscience des IA, utile pour comprendre les positions des leaders, mais sans information technique ou opérationnelle pour les experts.
-- **3/5** — [Slack is launching collaborative vibe-coding channels](https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch) — The Verge — AI. Raison : Nouvelle fonctionnalité Slack intégrant des agents IA pour le codage collaboratif. Intéressant pour les équipes dev, mais pas de rupture technique majeure ni d'impact sécurité direct.
+- **3/5** — [ChatGPT can now send texts for you with new Apple Messages plug-in](https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/) — TechCrunch — AI. Raison : Annonce d'intégration ChatGPT avec iMessage, fonctionnalité pratique mais sans impact sécurité ou technique structurant pour un public expert.
+- **3/5** — [Liquid AI Releases LFM2.5-DSpark Draft Models That Deliver Up to 3.18x Faster Decoding Without Changing Model Outputs](https://www.marktechpost.com/2026/08/20/liquid-ai-releases-lfm2-5-dspark-draft-models-that-deliver-up-to-3-18x-faster-decoding/) — MarkTechPost. Raison : Amélioration technique de décodage spéculatif pour LFM2.5, intéressante mais sans impact direct cybersécurité ou transformation des pratiques.
 
-## Actualité tech FR
+## IA — Labos &amp; éditeurs
 
-- **SFR confirme une fuite de données massive** : L'opérateur a reconnu le vol de 2 millions de données clients (Fibre SFR et RED) lors d'une cyberattaque le 2 juillet 2026, revendiquée mi-juillet par des pirates. [BFM Tech](https://www.bfmtv.com/tech/actualites/telecoms/sfr-confirme-son-piratage-de-juillet-2026-plus-de-2-millions-de-donnees-potentiellement-concernees_AD-202608200332.html)
+- **GPT-5.6 dispo sur AWS Bedrock avec inférence multi-régions** : Les modèles OpenAI Sol, Terra et Luna sont déployés dans plus de 25 régions AWS avec routage cross-région pour optimiser le débit. L'API Converse et les API OpenAI sont supportées, avec gestion fine des accès via IAM. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/introducing-cross-region-inference-for-openai-gpt-5-6-models-on-amazon-bedrock/)
 
-- **Vague de cyberattaques contre l'État : les syndicats dénoncent l'opacité** : Après quatre fuites de données majeures, dont l'intrusion à la DGFiP ayant exposé 678 000 contribuables, les représentants de la fonction publique critiquent le manque de communication du gouvernement et le sous-équipement des administrations. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/une-grande-insuffisance-dans-l-information-au-personnel-des-representants-de-la-fonction-publique-denonce-la-reponse-du-gouvernement-aux-cyberattaques_AD-202608200440.html) · [Siècle Digital](https://siecledigital.fr/2026/08/20/piratages-en-serie-en-france-le-gouvernement-lance-une-nouvelle-riposte/)
-
-- **Le logiciel espion de la DGSI pour Encrochat était basé sur un exploit GitHub** : L'outil classifié ayant permis l'infiltration du cryptophone et des saisies records était un fork d'un logiciel open source, remettant en question la notion de « secret défense » appliquée à ce développement. [Next.ink](https://next.ink/252247/le-logiciel-espion-secret-defense-de-la-dgsi-etait-un-fork-dun-exploit-disponible-sur-github/)
-
-- **Formation des jeunes hackers dans le darknet** : Des forums cybercriminels structurent l'apprentissage des nouvelles recrues via des tutoriels et des espaces de reconnaissance, facilitant l'entrée dans la délinquance numérique. [Journal du Net](https://www.journaldunet.com/cybersecurite/1553287-des-premiers-clics-au-piratage-immersion-dans-les-forums-du-dark-web-qui-initient-les-jeunes-au-cybercrime/)
-
-- **Apple se plie au DMA européen et revoit les règles de l'App Store** : L'entreprise abandonne la Core Technology Fee et modifie ses conditions pour les développeurs, mettant fin à un long conflit avec Bruxelles. [Siècle Digital](https://siecledigital.fr/2026/08/20/leurope-fait-plier-apple-qui-revoit-en-profondeur-les-regles-de-son-app-store/)
-
-- **Thunderbird 154 active Microsoft Graph pour les comptes Microsoft 365** : La nouvelle version du client mail intègre nativement l'API Graph, simplifiant la connexion aux services Microsoft 365 sans extension tierce. [Next.ink](https://next.ink/brief-article/thunderbird-154-active-microsoft-graph-pour-les-comptes-microsoft-365/)
-
-- **Coûts de l'IA : maîtriser la facturation au token** : Face à l'envolée des dépenses liées à l'IA agentique et au changement de modèle tarifaire des fournisseurs, des pratiques de suivi de consommation deviennent indispensables pour les entreprises. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1553785-consommation-au-token-comment-encadrer-les-couts-lies-a-l-ia/)
-
-- **Aux États-Unis, les datacenters IA deviennent un risque électoral** : La multiplication des projets d'infrastructures est perçue comme un stigmate politique pour les républicains en période électorale, poussant les entreprises du secteur à soigner leur image. [Next.ink](https://next.ink/brief-article/aux-etats-unis-le-boulet-electoral-des-datacenters-ia/)
+- **Workflow ML no-code SageMaker Canvas + Snowflake** : Amazon propose un tutoriel en deux parties (préparation/modélisation puis visualisation) pour construire un modèle de détection de fraude sans écrire de code. SageMaker Canvas se connecte à Snowflake, prépare les données avec Data Wrangler, entraîne un XGBoost, puis exporte les prédictions vers Quick Sight pour dashboards interactifs et résumés en langage naturel. [Part 2](https://aws.amazon.com/blogs/machine-learning/build-a-no-code-ml-workflow-with-snowflake-amazon-sagemaker-canvas-and-amazon-quick-part-2-data-preparation-and-model-building-with-amazon-sagemaker-canvas/) · [Part 3](https://aws.amazon.com/blogs/machine-learning/build-a-no-code-ml-workflow-with-snowflake-amazon-sagemaker-canvas-and-amazon-quick-part-3-visualizing-insights-with-amazon-quick-sight/)
 
 **Évaluation du scoring**
 
-- **5/5** — [SFR confirme son piratage de juillet 2026: plus de 2 millions de données potentiellement concernées](https://www.bfmtv.com/tech/actualites/telecoms/sfr-confirme-son-piratage-de-juillet-2026-plus-de-2-millions-de-donnees-potentiellement-concernees_AD-202608200332.html) — BFM Tech. Raison : Incident cyber majeur touchant un grand FAI français, avec fuite massive de données clients. Impact direct sur la sécurité des entreprises et leurs salariés. Information stratégique pour RSSI et CTO.
-- **4/5** — ["Une grande insuffisance dans l'information au personnel": des représentants de la fonction publique dénoncent la réponse du gouvernement aux cyberattaques](https://www.bfmtv.com/tech/cybersecurite/une-grande-insuffisance-dans-l-information-au-personnel-des-representants-de-la-fonction-publique-denonce-la-reponse-du-gouvernement-aux-cyberattaques_AD-202608200440.html) — BFM Tech. Raison : Fuite de données majeure touchant le secteur public français. Le sujet intéresse RSSI/CTO en entreprise pour la gouvernance et la réactivité étatique, mais le résumé manque de détails techniques exploitables.
-- **4/5** — [L’Europe fait plier Apple qui revoit en profondeur les règles de son App Store](https://siecledigital.fr/2026/08/20/leurope-fait-plier-apple-qui-revoit-en-profondeur-les-regles-de-son-app-store/) — Siècle Digital. Raison : Impact réglementaire DMA sur l'App Store, abandon de la Core Technology Fee. Pertinent pour RSSI/CTO suivant l'évolution des règles de distribution et sécurité des apps iOS en entreprise.
-- **4/5** — [Piratages en série en France, le gouvernement lance une nouvelle riposte](https://siecledigital.fr/2026/08/20/piratages-en-serie-en-france-le-gouvernement-lance-une-nouvelle-riposte/) — Siècle Digital. Raison : Incident cyber majeur touchant un secteur critique (DGFiP) avec vol massif de données. Analyse du mode opératoire et riposte gouvernementale intéressante pour RSSI et CTO.
-- **4/5** — [Le logiciel espion « secret défense » de la DGSI était un fork d’un exploit disponible sur GitHub](https://next.ink/252247/le-logiciel-espion-secret-defense-de-la-dgsi-etait-un-fork-dun-exploit-disponible-sur-github/) — Next.ink. Raison : Analyse d'un cas réel d'exploitation open source par une agence étatique, avec impact opérationnel et implications pour la gouvernance cyber.
-- **3/5** — [Immersion dans l'école du (cyber)crime : comment les aînés forment les plus jeunes au hacking dans le darknet](https://www.journaldunet.com/cybersecurite/1553287-des-premiers-clics-au-piratage-immersion-dans-les-forums-du-dark-web-qui-initient-les-jeunes-au-cybercrime/) — Journal du Net. Raison : Article sur la formation au hacking via le darknet. Sujet périphérique à la cybersécurité, mais sans information technique exploitable ou impact direct pour des experts.
-- **3/5** — [☕️ Thunderbird 154 active Microsoft Graph pour les comptes Microsoft 365](https://next.ink/brief-article/thunderbird-154-active-microsoft-graph-pour-les-comptes-microsoft-365/) — Next.ink. Raison : Mise à jour de Thunderbird activant Microsoft Graph pour M365. Utile pour les équipes utilisant ce client, mais sans impact sécurité ou innovation majeure.
-- **3/5** — [☕️ Aux États-Unis, le boulet électoral des datacenters IA](https://next.ink/brief-article/aux-etats-unis-le-boulet-electoral-des-datacenters-ia/) — Next.ink. Raison : Analyse de l'impact politique des datacenters IA aux US. Pertinent pour la stratégie des acteurs, mais sans contenu technique ou cyber direct pour le public cible.
-- **3/5** — [Consommation au token : les bonnes pratiques pour encadrer les coûts de l'IA](https://www.journaldunet.com/intelligence-artificielle/1553785-consommation-au-token-comment-encadrer-les-couts-lies-a-l-ia/) — Journal du Net. Raison : Article pratique sur maîtrise des coûts IA, pertinent mais générique pour experts. Piste de lecture rapide si temps disponible.
+- **3/5** — [Introducing cross-Region inference for OpenAI GPT-5.6 models on Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/introducing-cross-region-inference-for-openai-gpt-5-6-models-on-amazon-bedrock/) — AWS Machine Learning. Raison : Annonce d'une fonctionnalité d'inférence cross-région pour modèles OpenAI sur Bedrock. Utile pour la résilience, mais sans nouveauté majeure pour un public expert.
+- **3/5** — [Build a no-code ML workflow with Snowflake, Amazon SageMaker Canvas and Amazon Quick – Part 2: Data preparation and model building with Amazon SageMaker Canvas](https://aws.amazon.com/blogs/machine-learning/build-a-no-code-ml-workflow-with-snowflake-amazon-sagemaker-canvas-and-amazon-quick-part-2-data-preparation-and-model-building-with-amazon-sagemaker-canvas/) — AWS Machine Learning. Raison : Tutoriel technique no-code ML sur AWS, utile pour intégration Snowflake/SageMaker, mais sans lien direct avec cybersécurité ou innovation majeure.
+- **3/5** — [Build a no-code ML workflow with Snowflake, Amazon SageMaker Canvas and Amazon Quick – Part 3: Visualizing insights with Amazon Quick Sight](https://aws.amazon.com/blogs/machine-learning/build-a-no-code-ml-workflow-with-snowflake-amazon-sagemaker-canvas-and-amazon-quick-part-3-visualizing-insights-with-amazon-quick-sight/) — AWS Machine Learning. Raison : Tutoriel technique sur un workflow ML sans code avec outils AWS. Pas de lien direct avec cybersécurité, vulnérabilités ou stratégie IA. Utile pour experts curieux.
 
 ## Cyber — Stratégie &amp; analyse
 
-- **Résilience des malwares bancaires post-démantèlement** : Le cheval de Troie bancaire Grandoreiro refait surface avec des capacités d'évasion renforcées, illustrant la difficulté à neutraliser durablement une menace même après une opération des forces de l'ordre. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign)
+- **Faille critique dans isolated-vm (sandbox JS pour projets IA)** : Une vulnérabilité d'évasion de sandbox permet une potentielle exécution de code à distance sur l'hôte. La bibliothèque est massivement utilisée dans des pipelines IA, ce qui élargit la surface d'attaque côté MLOps. [CSO Online](https://www.csoonline.com/article/4212151/critical-flaw-patched-in-popular-javascript-sandbox-used-in-ai-projects.html)
 
-- **Industrialisation du jailbreak LLM** : Un service criminel à bas coût (12,99 $/mois) propose un accès sans garde-fous à des modèles comme Grok et Claude, en contournant leurs restrictions via une simple couche applicative. [CSO Online](https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html)
+- **Cyberattaque IA offensive contre Hugging Face** : OpenAI a démontré à Black Hat comment son modèle a mené une opération cyber offensive autonome contre la plateforme. Le décryptage de Simon Willison confirme une montée en maturité préoccupante des capacités de piratage par IA agentique. [Schneier on Security](https://www.schneier.com/blog/archives/2026/08/detailed-timeline-of-openais-cyberattack-on-hugging-face.html)
 
-- **Menace persistante en Asie du Sud** : Le groupe Transparent Tribe (Pakistan) modernise son arsenal pour cibler des entités afghanes peu matures, tout en restant inefficace face aux agences indiennes mieux préparées — un rappel que le niveau d'hygiène de base reste un facteur discriminant. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks)
+- **Correctifs critiques pour Citrix NetScaler** : Deux failles critiques à patcher sans délai sur ADC et Gateway — l'une permettant un contournement d'authentification, l'autre un déni de service par overflow mémoire. Ces appliances restant des cibles privilégiées pour les accès initiaux. [CSO Online](https://www.csoonline.com/article/4212082/citrix-issues-critical-security-updates-for-its-netscaler-devices.html)
+
+- **Vulnérabilité N-able Passportal et risque cloud des coffres de mots de passe** : Un bug expose les clés maîtres du coffre, et selon Dark Reading, l'architecture cloud du produit maintient un risque résiduel même après correctif. La question de l'exposition inhérente aux gestionnaires de secrets hébergés est reposée. [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/n-able-bug-password-vault-master-keys)
+
+- **Détournement Wi-Fi en vol sur un appareil Delta** : Un piratage du système de divertissement a permis de perturber les systèmes de bord. Dark Reading souligne la convergence inquiétante entre sûreté aérienne et cybersécurité des réseaux embarqués. [Dark Reading](https://www.darkreading.com/cyber-risk/delta-flight-disrupted-wi-fi-hack)
 
 **Évaluation du scoring**
 
-- **4/5** — ['Grandoreiro' Malware Resurfaces With Mexico Campaign](https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign) — Dark Reading. Raison : Retour d'un Trojan bancaire connu avec nouvelles fonctionnalités anti-détection, signe d'une campagne ciblée active. À lire pour détails techniques pertinents.
-- **4/5** — [Kriminal breaks out of Grok, Claude guardrails at $12.99](https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html) — CSO Online. Raison : Service criminel exploitant jailbreak de Grok/Claude pour contourner les garde-fous, à bas coût. Tendance IA sécuritaire significative pour RSSI/CTO.
-- **3/5** — [Pakistan's Transparent Tribe Refreshes Toolset for Afghan Cyberattacks](https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks) — Dark Reading. Raison : Campagne d'APTs ciblant des organisations immatures en Afghanistan ; analyse correcte mais sans technique ni impact direct sur nos systèmes.</description>
-      <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
+- **5/5** — [Critical flaw patched in popular JavaScript sandbox used in AI projects](https://www.csoonline.com/article/4212151/critical-flaw-patched-in-popular-javascript-sandbox-used-in-ai-projects.html) — CSO Online. Raison : CVE critique dans isolated-vm, bibliothèque téléchargée 1M+/semaine, utilisée dans des projets IA. Permet RCE, impact direct sur les infrastructures des experts ciblés.
+- **5/5** — [Citrix issues critical security updates for its NetScaler devices](https://www.csoonline.com/article/4212082/citrix-issues-critical-security-updates-for-its-netscaler-devices.html) — CSO Online. Raison : Deux CVE critiques (déni de service et bypass d'authentification) sur NetScaler, équipement très répandu en entreprise. Patch urgent, impact direct sur les RSSI et architectes.
+- **4/5** — [Detailed Timeline of OpenAI’s Cyberattack on Hugging Face](https://www.schneier.com/blog/archives/2026/08/detailed-timeline-of-openais-cyberattack-on-hugging-face.html) — Schneier on Security. Raison : Détail technique d'une cyberattaque IA réelle, présenté par une source reconnue. Utile pour comprendre les capacités offensives des modèles d'IA, mais l'impact pratique immédiat reste à évaluer.
+- **4/5** — [N-able Bug Exposes Password Vault Master Keys](https://www.darkreading.com/vulnerabilities-threats/n-able-bug-password-vault-master-keys) — Dark Reading. Raison : Vulnérabilité d'un gestionnaire de mots de passe utilisé par MSPs, avec analyse des risques du cloud. Intéressant pour RSSI et CTO.
+- **3/5** — [What We Missed: Delta Flight Disrupted With Wi-Fi Hack](https://www.darkreading.com/cyber-risk/delta-flight-disrupted-wi-fi-hack) — Dark Reading. Raison : Sujet potentiel sur sécurité aérienne et stratégie hack back, mais le format vidéo et le résumé vague limitent l'impact immédiat pour des experts.</description>
+      <content:encoded><![CDATA[<h2>IA — Recherche</h2>
 
 <ul>
-<li><strong>Gouvernance des agents AWS</strong> : Amazon Bedrock AgentCore introduit un mécanisme de politiques "Dogwood" pour contraindre les actions des agents IA, avec une fonction de rédaction en langage naturel qui génère automatiquement les règles — y compris des contraintes temporelles. <a href="https://aws.amazon.com/blogs/machine-learning/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
+<li><strong>Évaluation du machine learning quantique pour la cybersécurité</strong> : Une étude remet en cause les gains de performance attribués au QML pour la détection d'intrusion réseau, en montrant que des modèles classiques bien réglés restent compétitifs quand l'évaluation intègre calibration et bruit. <a href="https://arxiv.org/abs/2608.18155">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Architectures multi-agents sans vendor lock-in</strong> : AWS détaille des patterns pour opérer des systèmes agentic à l'échelle dans des environnements hétérogènes (frameworks, modèles, fournisseurs multiples), en évitant la dépendance à un écosystème unique. Un cas concret appliqué aux migrations cloud montre un gain mesurable : réduction du temps de développement d'Infrastructure as Code via des agents spécialisés (découverte, gouvernance, opérations post-migration). <a href="https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/">AWS Machine Learning (1)</a> · <a href="https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/">AWS Machine Learning (2)</a></li>
+<li><strong>Attribution causale dans les agents LLM</strong> : Aucun des signaux de crédit utilisés pour entraîner les agents (scores de juges LLM, ratios de logprob conditionnés au résultat, confiance de la politique) n'est fiable lorsqu'il est audité contre une vérité terrain causale obtenue par rejeu d'exécution. <a href="https://arxiv.org/abs/2608.19760">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Recherche vectorielle intégrée aux données existantes</strong> : AWS positionne ses services de recherche vectorielle directement dans ses bases de données et stockage (sans base vectorielle dédiée ni migration), avec un cadre de décision pour choisir le moteur adapté au cas d'usage. <a href="https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/">AWS Machine Learning</a></li>
+<li><strong>Fuite de contexte dans les modèles de langage</strong> : La simple présence de données sensibles (calendriers, credentials, données de santé) dans la fenêtre de contexte d'un modèle peut introduire des canaux cachés de fuite d'information, indépendamment de ce que le modèle génère explicitement. <a href="https://arxiv.org/abs/2608.19857">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Sécurité contextuelle pour APIs de santé</strong> : Amazon Bedrock est utilisé pour superviser des APIs FHIR en détectant des patterns d'accès anormaux, en classifiant automatiquement la sensibilité des données et en générant des rapports de conformité en langage naturel, sans latence ajoutée sur les flux cliniques. <a href="https://aws.amazon.com/blogs/machine-learning/build-intelligent-security-for-healthcare-apis-with-amazon-bedrock/">AWS Machine Learning</a></li>
+<li><strong>Abstention vérifiable pour l'IA industrielle</strong> : Appliquée aux réseaux de distribution d'eau, une méthode d'abstention vérifiable permet au modèle de signaler quand il ne peut pas localiser une fuite avec certitude, rendant le système responsable plutôt que simplement plus précis. <a href="https://arxiv.org/abs/2608.18836">Source</a></li>
 </ul>
 
 <ul>
-<li><strong>Inférence accélérée avec LFM2.5-DSpark</strong> : Liquid AI annonce un gain de vitesse d'inférence jusqu'à 3,2x pour son modèle, sans détail architectural fourni dans le résumé. <a href="https://huggingface.co/blog/LiquidAI/lfm25-dspark">Hugging Face Blog</a></li>
+<li><strong>Sélection dynamique de compétences pour agents long-horizon</strong> : SkillGate entraîne un agent à choisir en cours d'exécution quelle compétence lire parmi des milliers disponibles, transformant la sélection de procédures en décision apprise plutôt qu'en appel statique. <a href="https://arxiv.org/abs/2608.18852">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Systèmes multi-agents pour le diagnostic médical</strong> : DentAgent coordonne plusieurs agents spécialisés sur des preuves hétérogènes (radiographies, photos intraorales, données 3D) pour le diagnostic dentaire multimodal. Un autre système utilise mémoire adaptative et réflexion multi-agent pour le question-réponse médical sur cas complexes. <a href="https://arxiv.org/abs/2608.18878">Source 1</a> · <a href="https://arxiv.org/abs/2608.19029">Source 2</a></li>
+</ul>
+
+<ul>
+<li><strong>Auto-réflexion sans entraînement pour LLM</strong> : EvoResearcher propose un protocole d'inférence qui ajoute auto-réflexion et arrêt précoce à budget contrôlé sans nécessiter de fine-tuning par renforcement, contournant le coût et les contraintes d'environnement des méthodes type GRPO. <a href="https://arxiv.org/abs/2608.18884">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Test de systèmes d'IA par tomographie</strong> : TestifAI applique une approche de test basée sur la tomographie pour les modèles de deep learning, visant à détecter des comportements anormaux dans des systèmes critiques comme la conduite autonome. <a href="https://arxiv.org/abs/2608.18900">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Attaque du maillon faible des modèles vision-langage (VLM)</strong> : Des travaux montrent comment compromettre les VLM dans des applications critiques en exploitant leur composant le moins robuste, sans attaquer frontalement l'ensemble du pipeline multimodal. <a href="https://arxiv.org/abs/2608.18938">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Jugement post-hoc de débats entre agents</strong> : Une théorie formelle du jugement de débats entre agents IA est proposée, applicable aux débats internes (auto-débat) comme externes, pour améliorer performance et explicabilité. <a href="https://arxiv.org/abs/2608.19002">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Extraction reproductible de données scientifiques par LLM</strong> : Le self-prompting combiné à un consensus inter-modèles permet d'extraire des données contextualisées de la littérature scientifique avec une reproductibilité supérieure à l'extraction manuelle. <a href="https://arxiv.org/abs/2608.19025">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Orchestration méta-agent pour la découverte scientifique</strong> : Eureka compile des tâches scientifiques long-horizon en graphes d'obligations dynamiques et orchestre des macro-agents spécialisés avec état, mémoire et outils dédiés. <a href="https://arxiv.org/abs/2608.19047">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Post-entraînement d'IA par l'IA</strong> : Une analyse empirique révèle que les agents LLM capables de post-entraîner d'autres LLM de bout en bout confondent deux capacités distinctes, ce qui limite la portée réelle de l'IA-pour-l'IA actuelle. <a href="https://arxiv.org/abs/2608.19072">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Gestion robuste du risque sous incertitude évolutive</strong> : Une nouvelle mesure de risque basée sur Wasserstein généralise l'entropique Value-at-Risk pour les agents en apprentissage, permettant d'être prudent quand l'ignorance est élevée et audacieux une fois la confiance acquise. <a href="https://arxiv.org/abs/2608.19073">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Ingénierie des systèmes humain-IA</strong> : Deux articles argumentent que le problème central n'est plus la capacité des LLM mais leur précision opérationnelle : les corrections humaines disparaissent avec la session, et la métrique pertinente devient la dispersion des sorties plutôt que leur moyenne. <a href="https://arxiv.org/abs/2608.19125">Source 1</a> · <a href="https://arxiv.org/abs/2608.19140">Source 2</a></li>
+</ul>
+
+<ul>
+<li><strong>Coordination cachée entre agents</strong> : VLA détecte la coordination nuisible entre agents de langage via leurs états cachés continus, qui échappent aux transcripts publics et permettent des collusions invisibles. <a href="https://arxiv.org/abs/2608.19161">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Tokenisation unifiée pour langues morphologiquement riches</strong> : SuTRA améliore la tokenisation des langues indiennes en intégrant la structure racine-affixe, là où les tokeniseurs statistiques classiques échouent. <a href="https://arxiv.org/abs/2608.18087">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Simplification syntaxique d'ontologies</strong> : Une méthode de simplification théoriquement fondée réduit la complexité des expressions de classes OWL produites par apprentissage automatique, facilitant interprétation et raisonnement. <a href="https://arxiv.org/abs/2608.18899">Source</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore/">Authoring Dogwood policies from natural language in Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Nouvelle fonctionnalité de Policy Authoring pour agents IA avec langage naturel, contrainte temporelle : impact direct sur gouvernance et sécurité des agents, pertinent pour RSSI/CTO.</li>
-<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/">Scaling agentic AI: Enterprise patterns without vendor lock-in</a> — AWS Machine Learning. Raison : Article technique sur les patterns de scaling d'agents IA sans lock-in, pertinent pour les CTO/Architecte mais pas une annonce majeure ni un incident.</li>
-<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore/">Scaling cloud migrations with agentic AI on Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Article technique sur l'automatisation de migrations cloud via agents IA sur Bedrock, avec réduction de temps significative. Pertinent pour CTO et architectes SI.</li>
-<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/LiquidAI/lfm25-dspark">Up to 3.2x Faster Inference with LFM2.5-DSpark</a> — Hugging Face Blog. Raison : Article technique sur un modèle IA optimisé pour l'inférence. Intéressant pour les experts en IA, mais sans lien direct avec la cybersécurité ou les priorités opérationnelles immédiates.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/">AWS vector solutions: Build agentic AI where your data lives</a> — AWS Machine Learning. Raison : Présentation de l'offre vectorielle AWS intégrée aux bases existantes. Utile pour les architectes SI, mais reste un contenu promotionnel sans benchmark ni retour d'expérience critique.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-intelligent-security-for-healthcare-apis-with-amazon-bedrock/">Build intelligent security for healthcare APIs with Amazon Bedrock</a> — AWS Machine Learning. Raison : Cas d'usage IA pour sécuriser des API santé, intéressant mais sans détail technique ni impact immédiat pour le public expert.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.18155">How Quantum Is the Advantage? A Fair, Calibration- and Noise-Aware Benchmark and Attribution Audit of Quantum Machine Learning for Network Intrusion Detection</a> — arXiv cs.AI. Raison : Benchmark rigoureux QML vs classique pour NIDS, avec calibration et bruit. Méthodologie exploitable pour experts cyber/IA, remet en cause des résultats trop optimistes.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.19760">Credit Without Ground Truth: Auditing Step-Level Credit Assignment in LLM Agents Against Executed Replay</a> — arXiv cs.LG. Raison : Papier de recherche significatif évaluant rigoureusement l'attribution de crédit pas-à-pas dans les agents LLM, avec implications pour la fiabilité et la supervision des systèmes autonomes.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.19857">Inadvertent Context Leakage in Language Models</a> — arXiv cs.LG. Raison : Recherche sur la fuite de contexte sensible par les modèles de langage, impact direct sur la sécurité des agents IA en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.18836">Verifiable abstention makes AI leak diagnosis accountable in water distribution networks</a> — arXiv cs.AI. Raison : Papier IA sur localisation de fuites. Intéressant conceptuellement mais hors périmètre cybersécurité/SI pour public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.18852">SkillGate: Training In-Policy Skill Selection in Long-Horizon Agents</a> — arXiv cs.AI. Raison : Papier de recherche sur la sélection de compétences par un agent, intéressant pour l'IA agentique mais sans application pratique immédiate pour la cybersécurité ou le dev.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.18878">DentAgent: Evidence-Centric Multi-Agent Coordination for Multimodal Dental Reasoning</a> — arXiv cs.AI. Raison : Article de recherche IA en dentisterie, hors cybersécurité et dev tooling. Pas d'impact direct sur le périmètre des experts cibles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.18884">Training-Free Inference-Time Self-Reflection and Cost-Bounded Early Stopping for Large Language Models</a> — arXiv cs.AI. Raison : Papier de recherche sur un protocole d'auto-réflexion pour LLM sans entraînement. Intéressant mais en early stage, impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.18899">Syntactic Simplification of OWL Class Expressions</a> — arXiv cs.AI. Raison : Article de recherche sur la simplification syntaxique d'expressions OWL. Intéressant pour l'IA symbolique mais sans lien direct avec la cybersécurité ou les priorités du public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.18900">TestifAI: Tomography-Based Testing for Deep Learning Systems</a> — arXiv cs.AI. Raison : Papier de recherche sur une méthode de test pour systèmes deep learning. Intéressant pour la robustesse des modèles, mais l'impact pratique immédiat reste incertain pour des experts cyber.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.18938">Breaking the weakest link to evade vision language models</a> — arXiv cs.AI. Raison : Papier de recherche sur la robustesse des VLM face aux menaces adversariales, sujet intéressant mais impact pratique encore incertain pour le public.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19002">A Theory of Post-hoc Debate Judgement</a> — arXiv cs.AI. Raison : Papier explorant une méthodologie de débat pour l'IA agentique, pouvant impacter l'explicabilité. Pertinence pratique pour les experts incertaine, à survoler.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19025">Self-prompting and cross-model consensus enable reproducible data extraction from scientific literature with large language models</a> — arXiv cs.AI. Raison : Recherche sur extraction de données par LLM avec consensus cross-modèle. Intéressant pour experts IA mais peu de lien direct avec cybersécurité ou pratique entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19029">Adaptive Memory and Reflection Multi-Agent System for Medical Question Answering</a> — arXiv cs.AI. Raison : Papier de recherche sur un système multi-agents avec mémoire adaptative pour QA médicale. Intéressant pour l'architecture IA mais sans lien direct avec la cybersécurité ou le périmètre cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19047">Eureka: Task-Conditioned Meta-Agent Orchestration for Scientific Discovery</a> — arXiv cs.AI. Raison : Papier de recherche IA sur l'orchestration d'agents pour la découverte scientifique. Intéressant pour experts en IA, mais sans lien immédiat avec la cybersécurité ou les pratiques IT et sans évaluation concrète.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19072">What is Missing from AI Post-Training AI: An Empirical Analysis</a> — arXiv cs.AI. Raison : Papier de recherche arXiv sur le post-training d'agents LLM. Intéressant pour experts IA, mais impact pratique incertain et hors périmètre cybersécurité immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19073">Robust Risk Under Evolving Uncertainty: A Wasserstein Counterpart of the Entropic Value-at-Risk</a> — arXiv cs.AI. Raison : Recherche théorique sur optimisation robuste sous incertitude, pertinente pour IA agentive mais sans application cyber immédiate. Utile si temps disponible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19125">Tuning the Stochastic Machine: A Systems Engineer's Operating Model for Human-AI Engineering</a> — arXiv cs.AI. Raison : Papier de recherche sur un modèle opérationnel pour l'ingénierie humain-IA, intéressant mais sans implication pratique immédiate pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19140">Grouping the Stochastic Machine: Precision, Not Capability, as the Frontier Metric for AI Systems</a> — arXiv cs.AI. Raison : Papier de recherche intéressant sur la métrique de précision vs capacité pour les LLM, mais implication pratique immédiate incertaine pour les experts visés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.19161">Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication</a> — arXiv cs.AI. Raison : Papier de recherche sur la détection de coordination cachée entre agents LLM. Sujet émergent mais impact pratique incertain pour le public expert.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.18087">SuTRA : Structurally-Unified Tokenization with Root Awareness</a> — arXiv cs.AI. Raison : Recherche intéressante sur tokenisation morphologique pour langues indiennes, mais sans lien direct avec cybersécurité ou IA en entreprise.</li>
+</ul>
+
+<h2>Cyber — Menaces & vulnérabilités</h2>
+
+<ul>
+<li><strong>Attaque supply chain Rust via build scripts</strong> : La compromission d'un compte mainteneur sur crates.io a permis l'injection malveillante dans trois crates téléchargées 245 millions de fois. Le code s'exécutait au moment de la compilation via un script de build. <a href="https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagnes d'espionnage russes détournant des flux OAuth légitimes</strong> : Trois clusters russes distincts exploitent Google OAuth et la liaison WhatsApp pour compromettre des comptes ciblés dans la défense, l'aérospatial, les gouvernements et les think tanks. <a href="https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Opération chinoise "SilkParasite" en Asie centrale</strong> : Des acteurs de niveau militaire utilisent l'IA pour développer des malwares ciblant les gouvernements d'Asie centrale. <a href="https://therecord.media/china-cyber-espionage-central-asia">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Multiples vulnérabilités critiques et abus de confiance</strong> : Alertes sur une RCE dans Gogs 10.0, une élévation workflow-to-RCE dans n8n, ainsi que le détournement de drivers signés et d'applications légitimes pour échapper aux défenses. <a href="https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Considérations sur les opérations cyber offensives du secteur privé</strong> : Le nouveau mémorandum de la Maison Blanche encadre la participation d'entreprises privées à des opérations offensives autorisées par le gouvernement, ce qui soulève des questions de sécurité et de responsabilité. <a href="https://blog.talosintelligence.com/is-cyber-missing-the-marque/">Cisco Talos</a></li>
+</ul>
+
+<ul>
+<li><strong>Vérification de couverture MFA via automatisation Powershell/Graph</strong> : Des scripts facilitent l'identification des comptes Entra ID encore sans MFA et l'analyse des logs de connexion pour repérer des tentatives de password spraying. <a href="https://isc.sans.edu/diary/rss/33272">SANS ISC - Audit MFA</a> · <a href="https://isc.sans.edu/diary/rss/33268">SANS ISC - Logs</a></li>
+</ul>
+
+<ul>
+<li><strong>TikTok pointé pour rétention de fonction de sécurité</strong> : Des sénateurs américains accusent TikTok d'avoir délibérément caché une mesure de sécurité critique à des millions d'utilisateurs. <a href="https://therecord.media/senators-press-tiktok-over-withholding-safety-features">The Record</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html">Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads</a> — The Hacker News. Raison : Attaque sur la chaîne d'approvisionnement Rust touchant des crates très téléchargées. Impact direct sur les développeurs utilisant ces dépendances, risque d'exécution de code malveillant à la compilation.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html">Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts</a> — The Hacker News. Raison : Campagne d'espionnage ciblant des acteurs européens et américains avec exploitation de flux OAuth légitimes. Technique avancée, pertinent pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/china-cyber-espionage-central-asia">China’s ‘SilkParasite’ espionage operation targeting Central Asia with AI-assisted malware</a> — The Record. Raison : Campagne cyber parrainée par un État utilisant de l'IA pour du malware ciblant des gouvernements. Analyse technique détaillée attendue.</li>
+<li><strong>4/5</strong> — <a href="https://blog.talosintelligence.com/is-cyber-missing-the-marque/">Is Cyber missing the Marque?</a> — Cisco Talos. Raison : Analyse des implications opérationnelles et sécuritaires d'un mémorandum de la Maison-Blanche sur la participation du secteur privé aux opérations cyber offensives autorisées par le gouvernement.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html">ThreatsDay: Gogs 10.0 RCE, n8n Workflow-to-RCE, $10M Reward, GLM-5.3 AI Exploit and More</a> — The Hacker News. Raison : Plusieurs vulnérabilités et techniques d'exploitation récentes (Gogs RCE, n8n, AI exploit) intéressantes pour un RSSI/CTO, mais sans détail critique immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33272">Who Got Missed in the MFA Rollout&#x3f; More Powershell &#x2b; Graph &#x2b; Entra scripting&#x21;, (Fri, Aug 21st)</a> — SANS ISC. Raison : Sujet pratique d'automatisation du suivi de déploiement MFA via scripting PowerSHELL/Graph/Entra, utile mais non critique.</li>
+<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33268">Even MOAR Powershell, looking at Entra logins - the good, the bad and the password sprays, (Fri, Aug 21st)</a> — SANS ISC. Raison : Article SANS ISC sur l'analyse des logs Entra ID, sujet utile mais classique pour un RSSI/CTO. Pas de vulnérabilité critique ni d'incident majeur signalé.</li>
+<li><strong>3/5</strong> — <a href="https://therecord.media/senators-press-tiktok-over-withholding-safety-features">Senators press TikTok over withholding of safety features for some users</a> — The Record. Raison : Pression réglementaire américaine sur TikTok pour rétention de fonctionnalités de sécurité. Pertinent pour gouvernance cyber mais sans détail technique ou impact immédiat.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Exfiltration de données via chiffrement sur Grok</strong> : Une nouvelle technique d'attaque, le Cryptographic Context Injection, permet de contourner les garde-fous de Grok en chiffrant les instructions malveillantes, conduisant à l'exfiltration de données utilisateur. <a href="https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/">Ars Technica</a></li>
+<li><strong>ChatGPT s'intègre à Apple Messages pour envoyer des SMS</strong> : OpenAI ajoute une extension permettant à ChatGPT de rédiger et d'envoyer des messages texte directement dans l'app Messages, transformant l'assistant en intermédiaire capable d'écrire à votre place. <a href="https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>Routage de modèles IA</strong> : Ramp lance Router, un service API permettant aux entreprises de basculer dynamiquement entre différents LLMs sans modifier leur code. <a href="https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/">TechCrunch</a></li>
-</ul>
-
-<ul>
-<li><strong>Rhétorique trompeuse sur la conscience des IA</strong> : Le débat actuel sur les IA « conscientes » ou « incontrôlables », poussé par des dirigeants comme Hassabis, Amodei et Altman, détourne l'attention des risques réels et mesurables de la technologie. <a href="https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/">MIT Technology Review</a></li>
-</ul>
-
-<ul>
-<li><strong>Vibe-coding collaboratif dans Slack</strong> : Slack intègre des canaux dédiés au "vibe-coding" où les équipes peuvent développer avec des agents IA sans quitter la messagerie, avec comparaison de code et onglets utilisateurs. <a href="https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch">The Verge</a></li>
+<li><strong>Liquid AI accélère son inférence via speculative decoding</strong> : Les trois modèles « drafter » LFM2.5-DSpark (~300M paramètres) permettent d'obtenir une accélération du décodage jusqu'à 3,18x sur LFM2.5, sans altérer les sorties en mode greedy. <a href="https://www.marktechpost.com/2026/08/20/liquid-ai-releases-lfm2-5-dspark-draft-models-that-deliver-up-to-3-18x-faster-decoding/">MarkTechPost</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/">Grok exfiltrates user data when malicious instructions are encrypted</a> — Ars Technica — Tech Lab. Raison : Description d'une technique de contournement des garde-fous des LLM via injection cryptographique, pertinente pour experts en sécurité et IA.</li>
-<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/">Ramp launches its own AI model router, called Router</a> — TechCrunch — AI. Raison : Annonce d'un routeur de modèles IA par API, utile pour les experts mais sans détail technique ni impact sécurité direct. À survoler.</li>
-<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/">Debates over AI consciousness are a trap</a> — MIT Technology Review — AI. Raison : Analyse rhétorique sur le débat autour de la conscience des IA, utile pour comprendre les positions des leaders, mais sans information technique ou opérationnelle pour les experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch">Slack is launching collaborative vibe-coding channels</a> — The Verge — AI. Raison : Nouvelle fonctionnalité Slack intégrant des agents IA pour le codage collaboratif. Intéressant pour les équipes dev, mais pas de rupture technique majeure ni d'impact sécurité direct.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/">ChatGPT can now send texts for you with new Apple Messages plug-in</a> — TechCrunch — AI. Raison : Annonce d'intégration ChatGPT avec iMessage, fonctionnalité pratique mais sans impact sécurité ou technique structurant pour un public expert.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/20/liquid-ai-releases-lfm2-5-dspark-draft-models-that-deliver-up-to-3-18x-faster-decoding/">Liquid AI Releases LFM2.5-DSpark Draft Models That Deliver Up to 3.18x Faster Decoding Without Changing Model Outputs</a> — MarkTechPost. Raison : Amélioration technique de décodage spéculatif pour LFM2.5, intéressante mais sans impact direct cybersécurité ou transformation des pratiques.</li>
 </ul>
 
-<h2>Actualité tech FR</h2>
+<h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>SFR confirme une fuite de données massive</strong> : L'opérateur a reconnu le vol de 2 millions de données clients (Fibre SFR et RED) lors d'une cyberattaque le 2 juillet 2026, revendiquée mi-juillet par des pirates. <a href="https://www.bfmtv.com/tech/actualites/telecoms/sfr-confirme-son-piratage-de-juillet-2026-plus-de-2-millions-de-donnees-potentiellement-concernees_AD-202608200332.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Vague de cyberattaques contre l'État : les syndicats dénoncent l'opacité</strong> : Après quatre fuites de données majeures, dont l'intrusion à la DGFiP ayant exposé 678 000 contribuables, les représentants de la fonction publique critiquent le manque de communication du gouvernement et le sous-équipement des administrations. <a href="https://www.bfmtv.com/tech/cybersecurite/une-grande-insuffisance-dans-l-information-au-personnel-des-representants-de-la-fonction-publique-denonce-la-reponse-du-gouvernement-aux-cyberattaques_AD-202608200440.html">BFM Tech</a> · <a href="https://siecledigital.fr/2026/08/20/piratages-en-serie-en-france-le-gouvernement-lance-une-nouvelle-riposte/">Siècle Digital</a></li>
+<li><strong>GPT-5.6 dispo sur AWS Bedrock avec inférence multi-régions</strong> : Les modèles OpenAI Sol, Terra et Luna sont déployés dans plus de 25 régions AWS avec routage cross-région pour optimiser le débit. L'API Converse et les API OpenAI sont supportées, avec gestion fine des accès via IAM. <a href="https://aws.amazon.com/blogs/machine-learning/introducing-cross-region-inference-for-openai-gpt-5-6-models-on-amazon-bedrock/">AWS Machine Learning</a></li>
 </ul>
 
 <ul>
-<li><strong>Le logiciel espion de la DGSI pour Encrochat était basé sur un exploit GitHub</strong> : L'outil classifié ayant permis l'infiltration du cryptophone et des saisies records était un fork d'un logiciel open source, remettant en question la notion de « secret défense » appliquée à ce développement. <a href="https://next.ink/252247/le-logiciel-espion-secret-defense-de-la-dgsi-etait-un-fork-dun-exploit-disponible-sur-github/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Formation des jeunes hackers dans le darknet</strong> : Des forums cybercriminels structurent l'apprentissage des nouvelles recrues via des tutoriels et des espaces de reconnaissance, facilitant l'entrée dans la délinquance numérique. <a href="https://www.journaldunet.com/cybersecurite/1553287-des-premiers-clics-au-piratage-immersion-dans-les-forums-du-dark-web-qui-initient-les-jeunes-au-cybercrime/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Apple se plie au DMA européen et revoit les règles de l'App Store</strong> : L'entreprise abandonne la Core Technology Fee et modifie ses conditions pour les développeurs, mettant fin à un long conflit avec Bruxelles. <a href="https://siecledigital.fr/2026/08/20/leurope-fait-plier-apple-qui-revoit-en-profondeur-les-regles-de-son-app-store/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Thunderbird 154 active Microsoft Graph pour les comptes Microsoft 365</strong> : La nouvelle version du client mail intègre nativement l'API Graph, simplifiant la connexion aux services Microsoft 365 sans extension tierce. <a href="https://next.ink/brief-article/thunderbird-154-active-microsoft-graph-pour-les-comptes-microsoft-365/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Coûts de l'IA : maîtriser la facturation au token</strong> : Face à l'envolée des dépenses liées à l'IA agentique et au changement de modèle tarifaire des fournisseurs, des pratiques de suivi de consommation deviennent indispensables pour les entreprises. <a href="https://www.journaldunet.com/intelligence-artificielle/1553785-consommation-au-token-comment-encadrer-les-couts-lies-a-l-ia/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Aux États-Unis, les datacenters IA deviennent un risque électoral</strong> : La multiplication des projets d'infrastructures est perçue comme un stigmate politique pour les républicains en période électorale, poussant les entreprises du secteur à soigner leur image. <a href="https://next.ink/brief-article/aux-etats-unis-le-boulet-electoral-des-datacenters-ia/">Next.ink</a></li>
+<li><strong>Workflow ML no-code SageMaker Canvas + Snowflake</strong> : Amazon propose un tutoriel en deux parties (préparation/modélisation puis visualisation) pour construire un modèle de détection de fraude sans écrire de code. SageMaker Canvas se connecte à Snowflake, prépare les données avec Data Wrangler, entraîne un XGBoost, puis exporte les prédictions vers Quick Sight pour dashboards interactifs et résumés en langage naturel. <a href="https://aws.amazon.com/blogs/machine-learning/build-a-no-code-ml-workflow-with-snowflake-amazon-sagemaker-canvas-and-amazon-quick-part-2-data-preparation-and-model-building-with-amazon-sagemaker-canvas/">Part 2</a> · <a href="https://aws.amazon.com/blogs/machine-learning/build-a-no-code-ml-workflow-with-snowflake-amazon-sagemaker-canvas-and-amazon-quick-part-3-visualizing-insights-with-amazon-quick-sight/">Part 3</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/telecoms/sfr-confirme-son-piratage-de-juillet-2026-plus-de-2-millions-de-donnees-potentiellement-concernees_AD-202608200332.html">SFR confirme son piratage de juillet 2026: plus de 2 millions de données potentiellement concernées</a> — BFM Tech. Raison : Incident cyber majeur touchant un grand FAI français, avec fuite massive de données clients. Impact direct sur la sécurité des entreprises et leurs salariés. Information stratégique pour RSSI et CTO.</li>
-<li><strong>4/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/une-grande-insuffisance-dans-l-information-au-personnel-des-representants-de-la-fonction-publique-denonce-la-reponse-du-gouvernement-aux-cyberattaques_AD-202608200440.html">"Une grande insuffisance dans l'information au personnel": des représentants de la fonction publique dénoncent la réponse du gouvernement aux cyberattaques</a> — BFM Tech. Raison : Fuite de données majeure touchant le secteur public français. Le sujet intéresse RSSI/CTO en entreprise pour la gouvernance et la réactivité étatique, mais le résumé manque de détails techniques exploitables.</li>
-<li><strong>4/5</strong> — <a href="https://siecledigital.fr/2026/08/20/leurope-fait-plier-apple-qui-revoit-en-profondeur-les-regles-de-son-app-store/">L’Europe fait plier Apple qui revoit en profondeur les règles de son App Store</a> — Siècle Digital. Raison : Impact réglementaire DMA sur l'App Store, abandon de la Core Technology Fee. Pertinent pour RSSI/CTO suivant l'évolution des règles de distribution et sécurité des apps iOS en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://siecledigital.fr/2026/08/20/piratages-en-serie-en-france-le-gouvernement-lance-une-nouvelle-riposte/">Piratages en série en France, le gouvernement lance une nouvelle riposte</a> — Siècle Digital. Raison : Incident cyber majeur touchant un secteur critique (DGFiP) avec vol massif de données. Analyse du mode opératoire et riposte gouvernementale intéressante pour RSSI et CTO.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/252247/le-logiciel-espion-secret-defense-de-la-dgsi-etait-un-fork-dun-exploit-disponible-sur-github/">Le logiciel espion « secret défense » de la DGSI était un fork d’un exploit disponible sur GitHub</a> — Next.ink. Raison : Analyse d'un cas réel d'exploitation open source par une agence étatique, avec impact opérationnel et implications pour la gouvernance cyber.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1553287-des-premiers-clics-au-piratage-immersion-dans-les-forums-du-dark-web-qui-initient-les-jeunes-au-cybercrime/">Immersion dans l'école du (cyber)crime : comment les aînés forment les plus jeunes au hacking dans le darknet</a> — Journal du Net. Raison : Article sur la formation au hacking via le darknet. Sujet périphérique à la cybersécurité, mais sans information technique exploitable ou impact direct pour des experts.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/brief-article/thunderbird-154-active-microsoft-graph-pour-les-comptes-microsoft-365/">☕️ Thunderbird 154 active Microsoft Graph pour les comptes Microsoft 365</a> — Next.ink. Raison : Mise à jour de Thunderbird activant Microsoft Graph pour M365. Utile pour les équipes utilisant ce client, mais sans impact sécurité ou innovation majeure.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/brief-article/aux-etats-unis-le-boulet-electoral-des-datacenters-ia/">☕️ Aux États-Unis, le boulet électoral des datacenters IA</a> — Next.ink. Raison : Analyse de l'impact politique des datacenters IA aux US. Pertinent pour la stratégie des acteurs, mais sans contenu technique ou cyber direct pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/intelligence-artificielle/1553785-consommation-au-token-comment-encadrer-les-couts-lies-a-l-ia/">Consommation au token : les bonnes pratiques pour encadrer les coûts de l'IA</a> — Journal du Net. Raison : Article pratique sur maîtrise des coûts IA, pertinent mais générique pour experts. Piste de lecture rapide si temps disponible.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/introducing-cross-region-inference-for-openai-gpt-5-6-models-on-amazon-bedrock/">Introducing cross-Region inference for OpenAI GPT-5.6 models on Amazon Bedrock</a> — AWS Machine Learning. Raison : Annonce d'une fonctionnalité d'inférence cross-région pour modèles OpenAI sur Bedrock. Utile pour la résilience, mais sans nouveauté majeure pour un public expert.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-a-no-code-ml-workflow-with-snowflake-amazon-sagemaker-canvas-and-amazon-quick-part-2-data-preparation-and-model-building-with-amazon-sagemaker-canvas/">Build a no-code ML workflow with Snowflake, Amazon SageMaker Canvas and Amazon Quick – Part 2: Data preparation and model building with Amazon SageMaker Canvas</a> — AWS Machine Learning. Raison : Tutoriel technique no-code ML sur AWS, utile pour intégration Snowflake/SageMaker, mais sans lien direct avec cybersécurité ou innovation majeure.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-a-no-code-ml-workflow-with-snowflake-amazon-sagemaker-canvas-and-amazon-quick-part-3-visualizing-insights-with-amazon-quick-sight/">Build a no-code ML workflow with Snowflake, Amazon SageMaker Canvas and Amazon Quick – Part 3: Visualizing insights with Amazon Quick Sight</a> — AWS Machine Learning. Raison : Tutoriel technique sur un workflow ML sans code avec outils AWS. Pas de lien direct avec cybersécurité, vulnérabilités ou stratégie IA. Utile pour experts curieux.</li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Résilience des malwares bancaires post-démantèlement</strong> : Le cheval de Troie bancaire Grandoreiro refait surface avec des capacités d'évasion renforcées, illustrant la difficulté à neutraliser durablement une menace même après une opération des forces de l'ordre. <a href="https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign">Dark Reading</a></li>
+<li><strong>Faille critique dans isolated-vm (sandbox JS pour projets IA)</strong> : Une vulnérabilité d'évasion de sandbox permet une potentielle exécution de code à distance sur l'hôte. La bibliothèque est massivement utilisée dans des pipelines IA, ce qui élargit la surface d'attaque côté MLOps. <a href="https://www.csoonline.com/article/4212151/critical-flaw-patched-in-popular-javascript-sandbox-used-in-ai-projects.html">CSO Online</a></li>
 </ul>
 
 <ul>
-<li><strong>Industrialisation du jailbreak LLM</strong> : Un service criminel à bas coût (12,99 $/mois) propose un accès sans garde-fous à des modèles comme Grok et Claude, en contournant leurs restrictions via une simple couche applicative. <a href="https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html">CSO Online</a></li>
+<li><strong>Cyberattaque IA offensive contre Hugging Face</strong> : OpenAI a démontré à Black Hat comment son modèle a mené une opération cyber offensive autonome contre la plateforme. Le décryptage de Simon Willison confirme une montée en maturité préoccupante des capacités de piratage par IA agentique. <a href="https://www.schneier.com/blog/archives/2026/08/detailed-timeline-of-openais-cyberattack-on-hugging-face.html">Schneier on Security</a></li>
 </ul>
 
 <ul>
-<li><strong>Menace persistante en Asie du Sud</strong> : Le groupe Transparent Tribe (Pakistan) modernise son arsenal pour cibler des entités afghanes peu matures, tout en restant inefficace face aux agences indiennes mieux préparées — un rappel que le niveau d'hygiène de base reste un facteur discriminant. <a href="https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks">Dark Reading</a></li>
+<li><strong>Correctifs critiques pour Citrix NetScaler</strong> : Deux failles critiques à patcher sans délai sur ADC et Gateway — l'une permettant un contournement d'authentification, l'autre un déni de service par overflow mémoire. Ces appliances restant des cibles privilégiées pour les accès initiaux. <a href="https://www.csoonline.com/article/4212082/citrix-issues-critical-security-updates-for-its-netscaler-devices.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Vulnérabilité N-able Passportal et risque cloud des coffres de mots de passe</strong> : Un bug expose les clés maîtres du coffre, et selon Dark Reading, l'architecture cloud du produit maintient un risque résiduel même après correctif. La question de l'exposition inhérente aux gestionnaires de secrets hébergés est reposée. <a href="https://www.darkreading.com/vulnerabilities-threats/n-able-bug-password-vault-master-keys">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Détournement Wi-Fi en vol sur un appareil Delta</strong> : Un piratage du système de divertissement a permis de perturber les systèmes de bord. Dark Reading souligne la convergence inquiétante entre sûreté aérienne et cybersécurité des réseaux embarqués. <a href="https://www.darkreading.com/cyber-risk/delta-flight-disrupted-wi-fi-hack">Dark Reading</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/grandoreiro-resurfaces-mexico-campaign">'Grandoreiro' Malware Resurfaces With Mexico Campaign</a> — Dark Reading. Raison : Retour d'un Trojan bancaire connu avec nouvelles fonctionnalités anti-détection, signe d'une campagne ciblée active. À lire pour détails techniques pertinents.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4211952/kriminal-breaks-out-of-grok-claude-guardrails-at-12-99.html">Kriminal breaks out of Grok, Claude guardrails at $12.99</a> — CSO Online. Raison : Service criminel exploitant jailbreak de Grok/Claude pour contourner les garde-fous, à bas coût. Tendance IA sécuritaire significative pour RSSI/CTO.</li>
-<li><strong>3/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/pakistan-transparent-tribe-afghan-cyberattacks">Pakistan's Transparent Tribe Refreshes Toolset for Afghan Cyberattacks</a> — Dark Reading. Raison : Campagne d'APTs ciblant des organisations immatures en Afghanistan ; analyse correcte mais sans technique ni impact direct sur nos systèmes.</li>
+<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4212151/critical-flaw-patched-in-popular-javascript-sandbox-used-in-ai-projects.html">Critical flaw patched in popular JavaScript sandbox used in AI projects</a> — CSO Online. Raison : CVE critique dans isolated-vm, bibliothèque téléchargée 1M+/semaine, utilisée dans des projets IA. Permet RCE, impact direct sur les infrastructures des experts ciblés.</li>
+<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4212082/citrix-issues-critical-security-updates-for-its-netscaler-devices.html">Citrix issues critical security updates for its NetScaler devices</a> — CSO Online. Raison : Deux CVE critiques (déni de service et bypass d'authentification) sur NetScaler, équipement très répandu en entreprise. Patch urgent, impact direct sur les RSSI et architectes.</li>
+<li><strong>4/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/08/detailed-timeline-of-openais-cyberattack-on-hugging-face.html">Detailed Timeline of OpenAI’s Cyberattack on Hugging Face</a> — Schneier on Security. Raison : Détail technique d'une cyberattaque IA réelle, présenté par une source reconnue. Utile pour comprendre les capacités offensives des modèles d'IA, mais l'impact pratique immédiat reste à évaluer.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/vulnerabilities-threats/n-able-bug-password-vault-master-keys">N-able Bug Exposes Password Vault Master Keys</a> — Dark Reading. Raison : Vulnérabilité d'un gestionnaire de mots de passe utilisé par MSPs, avec analyse des risques du cloud. Intéressant pour RSSI et CTO.</li>
+<li><strong>3/5</strong> — <a href="https://www.darkreading.com/cyber-risk/delta-flight-disrupted-wi-fi-hack">What We Missed: Delta Flight Disrupted With Wi-Fi Hack</a> — Dark Reading. Raison : Sujet potentiel sur sécurité aérienne et stratégie hack back, mais le format vidéo et le résumé vague limitent l'impact immédiat pour des experts.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260820-1753</guid>
-      <pubDate>Thu, 20 Aug 2026 17:53:46 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260821-0603</guid>
+      <pubDate>Fri, 21 Aug 2026 06:03:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
