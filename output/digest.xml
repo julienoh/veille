@@ -8,218 +8,154 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 24 Aug 2026 05:53:03 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 11:39:52 +0000</lastBuildDate>
     <item>
-      <title>Digest — 24/08 05h</title>
+      <title>Digest — 24/08 11h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA &amp; Tech — Médias internationaux
+      <description>## Actualité tech FR
 
-- **GPU Neoclouds : modèles économiques divergents en 2026** : CoreWeave, Nebius, Lambda, Crusoe et Groq opèrent désormais selon des logiques de marché distinctes — certains sont cotés ou en voie d'IPO, d'autres se repositionnent sur l'inférence. Une comparaison de leurs tarifs publics et capacités électriques contractées met en lumière ces écarts stratégiques. [MarkTechPost](https://www.marktechpost.com/2026/08/23/best-gpu-neoclouds-2026/)
+- **Amende RGPD record pour Uber** : L'autorité néerlandaise inflige 825 M€ d'amende à Uber pour un système de suspension automatisée des chauffeurs, sans intervention humaine, en violation du RGPD. [Next.ink](https://next.ink/252848/uber-825-millions-deuros-damende-pour-la-suspension-automatique-de-chauffeurs/)
 
-- **Analyse de données scientifiques avec LabPlot en Python** : Un tutoriel montre comment reproduire en Python le workflow structuré de LabPlot (import de données, traitement du signal, fitting de pics spectraux, visualisation) en conservant son modèle à base d'arbre d'aspects et de kernels d'analyse. [MarkTechPost](https://www.marktechpost.com/2026/08/23/scientific-data-analysis-with-labplot-in-python-signal-processing-spectral-peak-fitting-visualization-and-batch-automation/)
+- **Piratage d'EncroChat via une faille Android** : Les autorités françaises auraient exploité la vulnérabilité « Bad Binder » pour infiltrer les téléphones chiffrés EncroChat, selon un rapport de cybersécurité. [ZDNet France](https://www.zdnet.fr/actualites/piratage-des-telephones-encrochat-la-piste-de-la-faille-bad-binder-500427.htm#xtor=RSS-1)
 
-**Évaluation du scoring**
+- **Mistral AI améliore la recherche documentaire** : La startup française lance Agentic Search, une technologie qui vérifie les sources et corrige les limites du RAG traditionnel, avec des gains significatifs sur plusieurs benchmarks. [ZDNet France](https://www.zdnet.fr/actualites/mistral-ai-lance-une-ia-capable-de-chercher-et-verifier-les-informations-dans-les-documents-500439.htm#xtor=RSS-1)
 
-- **3/5** — [Best GPU Neoclouds 2026: CoreWeave, Nebius, Lambda, Crusoe, and Groq Ranked by Published Pricing and Contracted Power](https://www.marktechpost.com/2026/08/23/best-gpu-neoclouds-2026/) — MarkTechPost. Raison : Comparaison tarifaire et stratégique des GPU neoclouds, utile pour choix d'infra IA, mais sans angle cyber ni technique approfondi.
-- **3/5** — [Scientific Data Analysis with LabPlot in Python: Signal Processing, Spectral Peak Fitting, Visualization, and Batch Automation](https://www.marktechpost.com/2026/08/23/scientific-data-analysis-with-labplot-in-python-signal-processing-spectral-peak-fitting-visualization-and-batch-automation/) — MarkTechPost. Raison : Tutoriel technique sur l'analyse de données scientifiques en Python, hors cybersécurité et IA stratégique. Utile pour un développement outillé mais pas prioritaire pour un RSSI/CTO.
+- **Stripe acquiert OpenRouter pour 7,5 Md$** : L'opération marque un pivot stratégique : Stripe veut désormais gérer à la fois les flux de paiement et les coûts d'infrastructure IA de ses clients. [ZDNet France](https://www.zdnet.fr/actualites/stripe-rachete-openrouter-pour-75-milliards-de-dollars-et-muscle-son-infrastructure-ia-500433.htm#xtor=RSS-1)
 
-## IA — Recherche
-
-- **Sécurité des LLM face au jailbreak multi-tours** : Une méthode de certification bornée est proposée pour garantir la robustesse des LLM contre les attaques manipulant progressivement le contexte de conversation, dépassant les limites des approches monotour existantes. [arXiv:2608.20820](https://arxiv.org/abs/2608.20820)
-
-- **Alignement de sécurité superficiel des LLM** : L'alignement actuel repose sur des refus tardifs sans effacer la connaissance profonde des concepts nuisibles. Une vérification d'intention latente est proposée pour contrer ce "camouflage sémantique". [arXiv:2608.20378](https://arxiv.org/abs/2608.20378)
-
-- **Agents logiciels et orchestration** : SDAD propose un cycle de développement logiciel (SDLC) natif IA piloté par spécifications. Parallèlement, PrimeAgentOrchestrator amorce des agents de codage avec la mémoire de sessions antérieures pour éviter de repartir d'un contexte vide. [arXiv:2608.20341](https://arxiv.org/abs/2608.20341) · [arXiv:2608.20342](https://arxiv.org/abs/2608.20342)
-
-- **Infrastructure et performance des agents** : Nexus réduit la latence des LLM agentiques en évitant de ré-encoder les schémas d'outils à chaque tour (cache KV adaptatif). Une autre étude identifie un mode de défaillance préalable à la recherche où l'éviction supprime des prérequis structurels essentiels à la récupération en mémoire. [arXiv:2608.20397](https://arxiv.org/abs/2608.20397) · [arXiv:2608.20400](https://arxiv.org/abs/2608.20400)
-
-- **Découverte et routage de compétences** : La représentation des compétences influence directement leur classement par un LLM. Un routage par similarité de représentations s'avère plus efficace qu'une sélection en contexte quand la bibliothèque de compétences grandit. [arXiv:2608.20389](https://arxiv.org/abs/2608.20389)
-
-- **Agents en ligne de commande** : Une revue unifiée positionne les agents opérant dans des terminaux comme une catégorie à part entière, distincte de l'ingénierie logicielle ou de l'utilisation générique d'ordinateur. [arXiv:2608.20485](https://arxiv.org/abs/2608.20485)
-
-- **État de l'art des frameworks agentiques multimodaux** : Une revue couvre les fondations et frontières des frameworks combinant perception, mémoire et prise de décision autour de LLMs multimodaux. [arXiv:2608.20379](https://arxiv.org/abs/2608.20379)
-
-- **Délégation réelle du travail à l'IA** : Une étude sur 53 000 configurations d'agents montre un écart entre l'exposition théorique des métiers à l'IA et l'adoption effective de la délégation par les travailleurs. [arXiv:2608.20425](https://arxiv.org/abs/2608.20425)
-
-- **IA et valeurs culturelles** : Les principes éthiques universels (équité, transparence) ne s'opérationnalisent pas de manière uniforme. Une enquête auprès d'experts de 10 pays révèle des réinterprétations contextuelles majeures de ces valeurs. [arXiv:2608.20490](https://arxiv.org/abs/2608.20490)
-
-- **Modèles du monde et systèmes agent-environnement** : Une taxonomie des modèles du monde distingue les modèles de l'environnement, de l'agent et du système conjoint agent-environnement, avant même de considérer les variables prédites. [arXiv:2608.20401](https://arxiv.org/abs/2608.20401)
-
-- **Interprétabilité en classification multimodale** : Des ensembles d'arbres discriminants linéaires offrent une classification précise et des explications compréhensibles des indices textuels, audio et visuels ayant motivé la décision. [arXiv:2608.20384](https://arxiv.org/abs/2608.20384)
-
-- **Reconstruction d'état spatial par les modèles vision-langage** : Le benchmark StateSight isole spécifiquement la capacité des VLMs à reconstruire la structure spatiale latente d'une image, compétence souvent noyée dans les benchmarks larges. [arXiv:2608.20414](https://arxiv.org/abs/2608.20414)
-
-- **IA volumétrique en radiologie** : L'extension des LLMs multimodaux à la radiologie volumétrique se heurte à un défi fondamental de représentation, malgré les progrès en compréhension et raisonnement sur les images 2D. [arXiv:2608.20549](https://arxiv.org/abs/2608.20549)
-
-- **Phénoménologie et conscience artificielle** : Une approche "phénoménologie d'abord" modélise la conscience comme une expérience subjective émergeant de l'interface d'un agent avec le monde, en se concentrant sur les structures à la première personne. [arXiv:2608.20420](https://arxiv.org/abs/2608.20420)
-
-- **IA générative et écologie** : Un papier de position critique la valeur de maximalisme intégrée dans la conception des systèmes d'IA générative et propose des principes de conception pour une "IA lente" environnementale. [arXiv:2608.20398](https://arxiv.org/abs/2608.20398)
-
-- **Planification pour la réponse aux inondations** : Une approche de planification temporelle coordonne automatiquement des actions sous contraintes de ressources sévères pour répondre à des inondations simultanées. [arXiv:2608.20510](https://arxiv.org/abs/2608.20510)
-
-- **Opérateurs neuronaux conditionnels pour les EDP** : Un nouvel opérateur conditionne ses prédictions sur la séquence d'états futurs observés pour capturer la dynamique temporelle de systèmes physiques, au-delà des seuls états passés et descripteurs statiques. [arXiv:2608.20477](https://arxiv.org/abs/2608.20477)
-
-- **Apprentissage fédéré et orchestration multi-agents** : FL-MAESTRO utilise des agents LLM pour décider de la topologie, de l'agrégation et de l'allocation des ressources d'un apprentissage fédéré sur des liens et dispositifs instables. [arXiv:2608.20518](https://arxiv.org/abs/2608.20518)
+- **Algorithmes et recrutement de mineurs par des groupes armés** : Une enquête de Human Rights Watch montre que les algorithmes de Facebook et TikTok promeuvent activement des contenus faisant l'apologie de factions armées colombiennes, facilitant l'enrôlement de mineurs. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/colombie-comment-les-algorithmes-de-facebook-et-tik-tok-favorisent-l-enrolement-de-mineurs-dans-les-groupes-armes-et-semblent-meme-le-promouvoir_AD-202608240362.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence](https://arxiv.org/abs/2608.20820) — arXiv cs.AI. Raison : Papier de recherche proposant une méthode de robustesse certifiée multi-tour pour la sécurité des LLMs, pertinent pour l'évaluation des risques IA par des experts.
-- **3/5** — [SDAD: Spec-Driven Agentic Development for the AI-Native SDLC](https://arxiv.org/abs/2608.20341) — arXiv cs.AI. Raison : Papier de recherche sur l'IA pour le cycle de développement, potentiel impact sur les pratiques Dev, mais implication pratique et sécurité non démontrées.
-- **3/5** — [PrimeAgentOrchestrator: Memory-Primed Agent Spawning for Personal AI Infrastructure](https://arxiv.org/abs/2608.20342) — arXiv cs.AI. Raison : Paper intéressant sur un agent coding avec mémoire persistante, mais impact pratique pour des experts français encore incertain.
-- **3/5** — [Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification](https://arxiv.org/abs/2608.20378) — arXiv cs.AI. Raison : Papier de recherche sur une vulnérabilité conceptuelle des LLM (camouflage sémantique), intéressant mais impact pratique immédiat incertain pour des experts métier.
-- **3/5** — [A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications](https://arxiv.org/abs/2608.20379) — arXiv cs.AI. Raison : Papier de recherche sur les frameworks agentiques multimodaux. Intéressant pour l'état de l'art, mais sans application pratique immédiate ni lien direct avec la cybersécurité.
-- **3/5** — [Interpretable Multimodal Classification with Linear Discriminant Tree Ensembles](https://arxiv.org/abs/2608.20384) — arXiv cs.AI. Raison : Papier de recherche sur une méthode de classification multimodale interprétable. Intéressant pour experts IA, mais sans lien direct avec cybersécurité ou impact pratique immédiat.
-- **3/5** — [Representation Affects Retrieval: A Case Study of Skill Discovery and Routing in a Multimodal Agent Harness](https://arxiv.org/abs/2608.20389) — arXiv cs.AI. Raison : Papier de recherche IA explorant la sélection de compétences dans un agent multimodal. Intéressant mais sans impact immédiat pour la cybersécurité métier.
-- **3/5** — [Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory](https://arxiv.org/abs/2608.20397) — arXiv cs.AI. Raison : Papier de recherche IA sur l'optimisation du cache KV pour LLM agents. Le gain pratique pour le public cible est incertain, le résumé partiel ne permet pas d'évaluer l'impact réel.
-- **3/5** — [Environmental Slow AI: Design Principles for Generative Systems](https://arxiv.org/abs/2608.20398) — arXiv cs.AI. Raison : Papier de position sur les valeurs du design des IA génératives. Intellectuellement intéressant mais sans implication pratique immédiate pour la cyber ou l'IT.
-- **3/5** — [When Retrieval Fails Before It Begins: Structurally Indirect Prerequisite Eviction as a Retention Failure in Agentic Memory](https://arxiv.org/abs/2608.20400) — arXiv cs.AI. Raison : Papier de recherche arXiv sur un mécanisme d'échec pré-requête dans la mémoire agentique, intéressant mais sans application pratique immédiate pour le public expert cible.
-- **3/5** — [World models of environment, agent and joint agent-environment systems](https://arxiv.org/abs/2608.20401) — arXiv cs.AI. Raison : Article de recherche fondamentale sur les world models en RL, potentiellement utile pour comprendre les modèles d'agent-environnement, mais sans implication pratique ou lien direct avec la cybersécurité.
-- **3/5** — [StateSight: Benchmarking Latent Spatial-State Reconstruction in Vision-Language Models](https://arxiv.org/abs/2608.20414) — arXiv cs.AI. Raison : Papier de recherche sur un benchmark spatial pour modèles vision-langage. Intéressant mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
-- **3/5** — [Categorical AI phenomenology: A first-person approach](https://arxiv.org/abs/2608.20420) — arXiv cs.AI. Raison : Papier de recherche sur conscience artificielle via catégories mathématiques et Q-networks. Hors périmètre cyber/sécurité, applicable indirectement IA, intérêt incertain pour experts.
-- **3/5** — [Who Delegates to AI? Evidence from 53,000 Agent Configurations](https://arxiv.org/abs/2608.20425) — arXiv cs.AI. Raison : Article de recherche sur l'adoption de l'IA dans les workflows, basé sur 53 000 configurations. Pertinent pour les experts IA en entreprise mais implication pratique incertaine.
-- **3/5** — [STCO: Conditional Neural Operators for Time-Dependent PDEs](https://arxiv.org/abs/2608.20477) — arXiv cs.AI. Raison : Papier de recherche sur les neural operators pour EDP, intéressant mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
-- **3/5** — [Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485) — arXiv cs.AI. Raison : Survey académique sur les agents IA en terminal. Pertinent pour experts mais sans implication pratique immédiate ni lien fort avec la cybersécurité.
-- **3/5** — [Lost in Translation: How Universal Ethical Values Fail to Translate Across Global Contexts](https://arxiv.org/abs/2608.20490) — arXiv cs.AI. Raison : Papier de recherche intéressant sur l'éthique de l'IA dans différents contextes culturels mais sans lien direct avec la cybersécurité ou les préoccupations techniques des experts ciblés.
-- **3/5** — [A Temporal Planning Approach for Intelligent Flood Response](https://arxiv.org/abs/2608.20510) — arXiv cs.AI. Raison : Recherche en planification temporelle pour réponse aux inondations. Pertinente pour automatisation, mais sans lien direct avec cybersécurité ou IA en entreprise.
-- **3/5** — [FL-MAESTRO: Multi-Agent LLM Orchestration for Resource-Constrained Federated Learning](https://arxiv.org/abs/2608.20518) — arXiv cs.AI. Raison : Article de recherche sur l'orchestration multi-agent LLM pour le federated learning, sujet technique avancé mais sans lien direct avec la cybersécurité, la gouvernance ou les priorités immédiates du public cible.
-- **3/5** — [Volumetric Radiology AI in the Era of Multimodal Large Language Models](https://arxiv.org/abs/2608.20549) — arXiv cs.AI. Raison : Papier de recherche sur l'extension des MLLMs à la radiologie volumétrique. Intéressant pour l'IA en entreprise mais sans lien direct avec la cybersécurité ou les priorités opérationnelles des experts ciblés.
+- **5/5** — [Uber : 825 millions d’euros d’amende pour la suspension automatique de chauffeurs](https://next.ink/252848/uber-825-millions-deuros-damende-pour-la-suspension-automatique-de-chauffeurs/) — Next.ink. Raison : Décision réglementaire majeure (RGPD), amende record de 825 M€ avec impact direct sur la gouvernance des processus automatisés en entreprise.
+- **4/5** — [Piratage des téléphones EncroChat : la piste de la faille « Bad Binder »](https://www.zdnet.fr/actualites/piratage-des-telephones-encrochat-la-piste-de-la-faille-bad-binder-500427.htm#xtor=RSS-1) — ZDNet France. Raison : Analyse d'une vulnérabilité (Bad Binder) utilisée pour pirater EncroChat, sujet technique pertinent pour experts cyber. Source sérieuse.
+- **4/5** — [Mistral AI lance une IA capable de chercher et vérifier les informations dans les documents](https://www.zdnet.fr/actualites/mistral-ai-lance-une-ia-capable-de-chercher-et-verifier-les-informations-dans-les-documents-500439.htm#xtor=RSS-1) — ZDNet France. Raison : Nouveau produit IA de Mistral corrigeant des faiblesses du RAG, avec gains annoncés sur benchmarks documentaires. Pertinent pour CTO et RSSI.
+- **4/5** — [Stripe rachète OpenRouter pour 7,5 milliards de dollars et muscle son infrastructure IA](https://www.zdnet.fr/actualites/stripe-rachete-openrouter-pour-75-milliards-de-dollars-et-muscle-son-infrastructure-ia-500433.htm#xtor=RSS-1) — ZDNet France. Raison : Acquisition majeure de 7,5 Md$ par Stripe pour intégrer l'IA dans sa plateforme de paiement, impact stratégique fort pour les clients entreprises.
+- **3/5** — [Colombie: comment les algorithmes de Facebook et TikTok favorisent l'enrôlement de mineurs dans les groupes armés et "semblent même le promouvoir"](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/colombie-comment-les-algorithmes-de-facebook-et-tik-tok-favorisent-l-enrolement-de-mineurs-dans-les-groupes-armes-et-semblent-meme-le-promouvoir_AD-202608240362.html) — BFM Tech. Raison : Sujet intéressant sur l'utilisation des algorithmes pour le recrutement de mineurs, mais hors du périmètre cybersécurité ou IA technique pour un public d'experts.
 
 ## Cyber — Menaces &amp; vulnérabilités
 
-- **Pas de digest produit** : un seul article source est fourni pour la période, ce qui est insuffisant pour constituer un digest.
+- **Exploitation active d'une faille Zimbra** : La CISA impose aux agences fédérales US un correctif sous 3 jours pour une vulnérabilité critique dans Zimbra Collaboration Suite, signe d'une menace immédiate pour les instances exposées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/)
+
+- **Campagne UAT-10147 assistée par IA** : Un groupe cycriminel sinophone cible massivement des serveurs Windows et Linux via une chaîne d'attaque intégrant un bypass EDR et un rootkit Linux, avec usage d'IA pour scaler les opérations. [The Hacker News](https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html)
+
+- **Instabilité gaming sous Windows 11** : Les mises à jour d'août 2026 provoquent des dégradations de performance sur les jeux ; un correctif temporaire est disponible, mais la résolution définitive n'est pas encore intégrée aux cumulatifs. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-temporary-fix-for-windows-11-gaming-issues/)
+
+- **DOUBLECUP : stéganographie opportuniste dans des PNG** : Le malware DOUBLECUP dissimule son payload dans des images PNG, mais la technique employée relève plus d'une obfuscation basique que d'une stéganographie robuste. [SANS ISC](https://isc.sans.edu/diary/rss/33274)
 
 **Évaluation du scoring**
 
-- **3/5** — [ISC Stormcast For Monday, August 24th, 2026 https://isc.sans.edu/podcastdetail/10064, (Mon, Aug 24th)](https://isc.sans.edu/diary/rss/33276) — SANS ISC. Raison : Podcast SANS ISC sur actualité cyber du jour, probablement technique mais sans détail dans le résumé. Intérêt modéré pour experts si sujet pertinent.</description>
-      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
+- **5/5** — [CISA orders urgent patching of actively exploited Zimbra flaw](https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/) — BleepingComputer. Raison : CVE activement exploitée, ordre de patching urgent de CISA, impact direct sur Zimbra utilisé en entreprise.
+- **4/5** — [UAT-10147 Uses AI to Scale Server Attacks, Deploys SPECTRE With EDR Bypass and Linux Rootkit](https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html) — The Hacker News. Raison : Nouveau groupe cybercriminel ciblant serveurs web avec IA, EDR bypass et rootkit Linux. Campagne multi-secteurs, technique détaillée pertinente pour RSSI et architecte.
+- **3/5** — [Microsoft shares temporary fix for Windows 11 gaming issues](https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-temporary-fix-for-windows-11-gaming-issues/) — BleepingComputer. Raison : Problème de performance lié à une mise à jour Windows, correctif temporaire partagé. Impact potentiel pour les postes de travail, mais pas de vulnérabilité de sécurité critique.
+- **3/5** — [DOUBLECUP's PNG Payload, (Mon, Aug 24th)](https://isc.sans.edu/diary/rss/33274) — SANS ISC. Raison : Sujet technique (stéganographie et malware) intéressant pour experts, mais le résumé indique une approche décevante et sans nouveauté réelle.
+
+## Cyber — Stratégie &amp; analyse
+
+- **Fraude entrepreneuriale comme déception organisée** : Une étude sur les fraudes dans la Silicon Valley (2000-2023) analyse comment les entrepreneurs instrumentalisent la tromperie criminelle pour abuser investisseurs et parties prenantes, en s'appuyant sur des données judiciaires. [Schneier on Security](https://www.schneier.com/blog/archives/2026/08/criminal-deception-in-silicon-valley.html)
+
+- **IA au service des opérations de sécurité** : L'IA est présentée comme un levier de transformation pour renforcer la sécurité des entreprises, en redéfinissant l'interaction entre humains, processus et technologies via l'autonomie et l'innovation. [CSO Online](https://www.csoonline.com/article/4212560/7-ways-ai-can-be-used-to-enhance-security-operations.html)
+
+**Évaluation du scoring**
+
+- **3/5** — [Criminal Deception in Silicon Valley](https://www.schneier.com/blog/archives/2026/08/criminal-deception-in-silicon-valley.html) — Schneier on Security. Raison : Analyse académique de la fraude entrepreneuriale dans la Silicon Valley via le concept de façading. Intéressant pour comprendre les mécanismes de tromperie corporate mais sans implication directe pour un public technique.
+- **3/5** — [7 ways AI can be used to enhance security operations](https://www.csoonline.com/article/4212560/7-ways-ai-can-be-used-to-enhance-security-operations.html) — CSO Online. Raison : Article générique sur les usages de l'IA en sécurité. Pas de détail technique, benchmark ou cas concret. Peut être survolé pour tendances, sans profondeur pour experts.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Traduction automatique C vers Rust** : Canonical finance une recherche à Bristol sur l'usage d'IA pour convertir du code C legacy en Rust memory-safe. L'enjeu est de déterminer si le code mature conserve ses propriétés fonctionnelles après transformation automatique. [The Register](https://www.theregister.com/software/2026/08/24/canonical-backs-quest-to-translate-mountains-of-c-into-safe-rust-with-ai/5290959)
+
+**Évaluation du scoring**
+
+- **3/5** — [Canonical backs quest to translate mountains of C into safe Rust with AI](https://www.theregister.com/software/2026/08/24/canonical-backs-quest-to-translate-mountains-of-c-into-safe-rust-with-ai/5290959) — The Register — AI/ML. Raison : Article sur conversion de code C en Rust via IA, intéressant pour la sécurité mémoire mais impact pratique incertain. À survoler.</description>
+      <content:encoded><![CDATA[<h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>GPU Neoclouds : modèles économiques divergents en 2026</strong> : CoreWeave, Nebius, Lambda, Crusoe et Groq opèrent désormais selon des logiques de marché distinctes — certains sont cotés ou en voie d'IPO, d'autres se repositionnent sur l'inférence. Une comparaison de leurs tarifs publics et capacités électriques contractées met en lumière ces écarts stratégiques. <a href="https://www.marktechpost.com/2026/08/23/best-gpu-neoclouds-2026/">MarkTechPost</a></li>
+<li><strong>Amende RGPD record pour Uber</strong> : L'autorité néerlandaise inflige 825 M€ d'amende à Uber pour un système de suspension automatisée des chauffeurs, sans intervention humaine, en violation du RGPD. <a href="https://next.ink/252848/uber-825-millions-deuros-damende-pour-la-suspension-automatique-de-chauffeurs/">Next.ink</a></li>
 </ul>
 
 <ul>
-<li><strong>Analyse de données scientifiques avec LabPlot en Python</strong> : Un tutoriel montre comment reproduire en Python le workflow structuré de LabPlot (import de données, traitement du signal, fitting de pics spectraux, visualisation) en conservant son modèle à base d'arbre d'aspects et de kernels d'analyse. <a href="https://www.marktechpost.com/2026/08/23/scientific-data-analysis-with-labplot-in-python-signal-processing-spectral-peak-fitting-visualization-and-batch-automation/">MarkTechPost</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/23/best-gpu-neoclouds-2026/">Best GPU Neoclouds 2026: CoreWeave, Nebius, Lambda, Crusoe, and Groq Ranked by Published Pricing and Contracted Power</a> — MarkTechPost. Raison : Comparaison tarifaire et stratégique des GPU neoclouds, utile pour choix d'infra IA, mais sans angle cyber ni technique approfondi.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/23/scientific-data-analysis-with-labplot-in-python-signal-processing-spectral-peak-fitting-visualization-and-batch-automation/">Scientific Data Analysis with LabPlot in Python: Signal Processing, Spectral Peak Fitting, Visualization, and Batch Automation</a> — MarkTechPost. Raison : Tutoriel technique sur l'analyse de données scientifiques en Python, hors cybersécurité et IA stratégique. Utile pour un développement outillé mais pas prioritaire pour un RSSI/CTO.</li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Sécurité des LLM face au jailbreak multi-tours</strong> : Une méthode de certification bornée est proposée pour garantir la robustesse des LLM contre les attaques manipulant progressivement le contexte de conversation, dépassant les limites des approches monotour existantes. <a href="https://arxiv.org/abs/2608.20820">arXiv:2608.20820</a></li>
+<li><strong>Piratage d'EncroChat via une faille Android</strong> : Les autorités françaises auraient exploité la vulnérabilité « Bad Binder » pour infiltrer les téléphones chiffrés EncroChat, selon un rapport de cybersécurité. <a href="https://www.zdnet.fr/actualites/piratage-des-telephones-encrochat-la-piste-de-la-faille-bad-binder-500427.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>Alignement de sécurité superficiel des LLM</strong> : L'alignement actuel repose sur des refus tardifs sans effacer la connaissance profonde des concepts nuisibles. Une vérification d'intention latente est proposée pour contrer ce "camouflage sémantique". <a href="https://arxiv.org/abs/2608.20378">arXiv:2608.20378</a></li>
+<li><strong>Mistral AI améliore la recherche documentaire</strong> : La startup française lance Agentic Search, une technologie qui vérifie les sources et corrige les limites du RAG traditionnel, avec des gains significatifs sur plusieurs benchmarks. <a href="https://www.zdnet.fr/actualites/mistral-ai-lance-une-ia-capable-de-chercher-et-verifier-les-informations-dans-les-documents-500439.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents logiciels et orchestration</strong> : SDAD propose un cycle de développement logiciel (SDLC) natif IA piloté par spécifications. Parallèlement, PrimeAgentOrchestrator amorce des agents de codage avec la mémoire de sessions antérieures pour éviter de repartir d'un contexte vide. <a href="https://arxiv.org/abs/2608.20341">arXiv:2608.20341</a> · <a href="https://arxiv.org/abs/2608.20342">arXiv:2608.20342</a></li>
+<li><strong>Stripe acquiert OpenRouter pour 7,5 Md$</strong> : L'opération marque un pivot stratégique : Stripe veut désormais gérer à la fois les flux de paiement et les coûts d'infrastructure IA de ses clients. <a href="https://www.zdnet.fr/actualites/stripe-rachete-openrouter-pour-75-milliards-de-dollars-et-muscle-son-infrastructure-ia-500433.htm#xtor=RSS-1">ZDNet France</a></li>
 </ul>
 
 <ul>
-<li><strong>Infrastructure et performance des agents</strong> : Nexus réduit la latence des LLM agentiques en évitant de ré-encoder les schémas d'outils à chaque tour (cache KV adaptatif). Une autre étude identifie un mode de défaillance préalable à la recherche où l'éviction supprime des prérequis structurels essentiels à la récupération en mémoire. <a href="https://arxiv.org/abs/2608.20397">arXiv:2608.20397</a> · <a href="https://arxiv.org/abs/2608.20400">arXiv:2608.20400</a></li>
-</ul>
-
-<ul>
-<li><strong>Découverte et routage de compétences</strong> : La représentation des compétences influence directement leur classement par un LLM. Un routage par similarité de représentations s'avère plus efficace qu'une sélection en contexte quand la bibliothèque de compétences grandit. <a href="https://arxiv.org/abs/2608.20389">arXiv:2608.20389</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents en ligne de commande</strong> : Une revue unifiée positionne les agents opérant dans des terminaux comme une catégorie à part entière, distincte de l'ingénierie logicielle ou de l'utilisation générique d'ordinateur. <a href="https://arxiv.org/abs/2608.20485">arXiv:2608.20485</a></li>
-</ul>
-
-<ul>
-<li><strong>État de l'art des frameworks agentiques multimodaux</strong> : Une revue couvre les fondations et frontières des frameworks combinant perception, mémoire et prise de décision autour de LLMs multimodaux. <a href="https://arxiv.org/abs/2608.20379">arXiv:2608.20379</a></li>
-</ul>
-
-<ul>
-<li><strong>Délégation réelle du travail à l'IA</strong> : Une étude sur 53 000 configurations d'agents montre un écart entre l'exposition théorique des métiers à l'IA et l'adoption effective de la délégation par les travailleurs. <a href="https://arxiv.org/abs/2608.20425">arXiv:2608.20425</a></li>
-</ul>
-
-<ul>
-<li><strong>IA et valeurs culturelles</strong> : Les principes éthiques universels (équité, transparence) ne s'opérationnalisent pas de manière uniforme. Une enquête auprès d'experts de 10 pays révèle des réinterprétations contextuelles majeures de ces valeurs. <a href="https://arxiv.org/abs/2608.20490">arXiv:2608.20490</a></li>
-</ul>
-
-<ul>
-<li><strong>Modèles du monde et systèmes agent-environnement</strong> : Une taxonomie des modèles du monde distingue les modèles de l'environnement, de l'agent et du système conjoint agent-environnement, avant même de considérer les variables prédites. <a href="https://arxiv.org/abs/2608.20401">arXiv:2608.20401</a></li>
-</ul>
-
-<ul>
-<li><strong>Interprétabilité en classification multimodale</strong> : Des ensembles d'arbres discriminants linéaires offrent une classification précise et des explications compréhensibles des indices textuels, audio et visuels ayant motivé la décision. <a href="https://arxiv.org/abs/2608.20384">arXiv:2608.20384</a></li>
-</ul>
-
-<ul>
-<li><strong>Reconstruction d'état spatial par les modèles vision-langage</strong> : Le benchmark StateSight isole spécifiquement la capacité des VLMs à reconstruire la structure spatiale latente d'une image, compétence souvent noyée dans les benchmarks larges. <a href="https://arxiv.org/abs/2608.20414">arXiv:2608.20414</a></li>
-</ul>
-
-<ul>
-<li><strong>IA volumétrique en radiologie</strong> : L'extension des LLMs multimodaux à la radiologie volumétrique se heurte à un défi fondamental de représentation, malgré les progrès en compréhension et raisonnement sur les images 2D. <a href="https://arxiv.org/abs/2608.20549">arXiv:2608.20549</a></li>
-</ul>
-
-<ul>
-<li><strong>Phénoménologie et conscience artificielle</strong> : Une approche "phénoménologie d'abord" modélise la conscience comme une expérience subjective émergeant de l'interface d'un agent avec le monde, en se concentrant sur les structures à la première personne. <a href="https://arxiv.org/abs/2608.20420">arXiv:2608.20420</a></li>
-</ul>
-
-<ul>
-<li><strong>IA générative et écologie</strong> : Un papier de position critique la valeur de maximalisme intégrée dans la conception des systèmes d'IA générative et propose des principes de conception pour une "IA lente" environnementale. <a href="https://arxiv.org/abs/2608.20398">arXiv:2608.20398</a></li>
-</ul>
-
-<ul>
-<li><strong>Planification pour la réponse aux inondations</strong> : Une approche de planification temporelle coordonne automatiquement des actions sous contraintes de ressources sévères pour répondre à des inondations simultanées. <a href="https://arxiv.org/abs/2608.20510">arXiv:2608.20510</a></li>
-</ul>
-
-<ul>
-<li><strong>Opérateurs neuronaux conditionnels pour les EDP</strong> : Un nouvel opérateur conditionne ses prédictions sur la séquence d'états futurs observés pour capturer la dynamique temporelle de systèmes physiques, au-delà des seuls états passés et descripteurs statiques. <a href="https://arxiv.org/abs/2608.20477">arXiv:2608.20477</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage fédéré et orchestration multi-agents</strong> : FL-MAESTRO utilise des agents LLM pour décider de la topologie, de l'agrégation et de l'allocation des ressources d'un apprentissage fédéré sur des liens et dispositifs instables. <a href="https://arxiv.org/abs/2608.20518">arXiv:2608.20518</a></li>
+<li><strong>Algorithmes et recrutement de mineurs par des groupes armés</strong> : Une enquête de Human Rights Watch montre que les algorithmes de Facebook et TikTok promeuvent activement des contenus faisant l'apologie de factions armées colombiennes, facilitant l'enrôlement de mineurs. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/colombie-comment-les-algorithmes-de-facebook-et-tik-tok-favorisent-l-enrolement-de-mineurs-dans-les-groupes-armes-et-semblent-meme-le-promouvoir_AD-202608240362.html">BFM Tech</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2608.20820">Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence</a> — arXiv cs.AI. Raison : Papier de recherche proposant une méthode de robustesse certifiée multi-tour pour la sécurité des LLMs, pertinent pour l'évaluation des risques IA par des experts.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20341">SDAD: Spec-Driven Agentic Development for the AI-Native SDLC</a> — arXiv cs.AI. Raison : Papier de recherche sur l'IA pour le cycle de développement, potentiel impact sur les pratiques Dev, mais implication pratique et sécurité non démontrées.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20342">PrimeAgentOrchestrator: Memory-Primed Agent Spawning for Personal AI Infrastructure</a> — arXiv cs.AI. Raison : Paper intéressant sur un agent coding avec mémoire persistante, mais impact pratique pour des experts français encore incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20378">Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification</a> — arXiv cs.AI. Raison : Papier de recherche sur une vulnérabilité conceptuelle des LLM (camouflage sémantique), intéressant mais impact pratique immédiat incertain pour des experts métier.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20379">A Survey on Foundations and Frontiers of Multimodal Agentic Frameworks: Techniques and Applications</a> — arXiv cs.AI. Raison : Papier de recherche sur les frameworks agentiques multimodaux. Intéressant pour l'état de l'art, mais sans application pratique immédiate ni lien direct avec la cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20384">Interpretable Multimodal Classification with Linear Discriminant Tree Ensembles</a> — arXiv cs.AI. Raison : Papier de recherche sur une méthode de classification multimodale interprétable. Intéressant pour experts IA, mais sans lien direct avec cybersécurité ou impact pratique immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20389">Representation Affects Retrieval: A Case Study of Skill Discovery and Routing in a Multimodal Agent Harness</a> — arXiv cs.AI. Raison : Papier de recherche IA explorant la sélection de compétences dans un agent multimodal. Intéressant mais sans impact immédiat pour la cybersécurité métier.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20397">Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory</a> — arXiv cs.AI. Raison : Papier de recherche IA sur l'optimisation du cache KV pour LLM agents. Le gain pratique pour le public cible est incertain, le résumé partiel ne permet pas d'évaluer l'impact réel.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20398">Environmental Slow AI: Design Principles for Generative Systems</a> — arXiv cs.AI. Raison : Papier de position sur les valeurs du design des IA génératives. Intellectuellement intéressant mais sans implication pratique immédiate pour la cyber ou l'IT.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20400">When Retrieval Fails Before It Begins: Structurally Indirect Prerequisite Eviction as a Retention Failure in Agentic Memory</a> — arXiv cs.AI. Raison : Papier de recherche arXiv sur un mécanisme d'échec pré-requête dans la mémoire agentique, intéressant mais sans application pratique immédiate pour le public expert cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20401">World models of environment, agent and joint agent-environment systems</a> — arXiv cs.AI. Raison : Article de recherche fondamentale sur les world models en RL, potentiellement utile pour comprendre les modèles d'agent-environnement, mais sans implication pratique ou lien direct avec la cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20414">StateSight: Benchmarking Latent Spatial-State Reconstruction in Vision-Language Models</a> — arXiv cs.AI. Raison : Papier de recherche sur un benchmark spatial pour modèles vision-langage. Intéressant mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20420">Categorical AI phenomenology: A first-person approach</a> — arXiv cs.AI. Raison : Papier de recherche sur conscience artificielle via catégories mathématiques et Q-networks. Hors périmètre cyber/sécurité, applicable indirectement IA, intérêt incertain pour experts.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20425">Who Delegates to AI? Evidence from 53,000 Agent Configurations</a> — arXiv cs.AI. Raison : Article de recherche sur l'adoption de l'IA dans les workflows, basé sur 53 000 configurations. Pertinent pour les experts IA en entreprise mais implication pratique incertaine.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20477">STCO: Conditional Neural Operators for Time-Dependent PDEs</a> — arXiv cs.AI. Raison : Papier de recherche sur les neural operators pour EDP, intéressant mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20485">Terminal Agents: A Survey of AI Agents in Command-Line Environments</a> — arXiv cs.AI. Raison : Survey académique sur les agents IA en terminal. Pertinent pour experts mais sans implication pratique immédiate ni lien fort avec la cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20490">Lost in Translation: How Universal Ethical Values Fail to Translate Across Global Contexts</a> — arXiv cs.AI. Raison : Papier de recherche intéressant sur l'éthique de l'IA dans différents contextes culturels mais sans lien direct avec la cybersécurité ou les préoccupations techniques des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20510">A Temporal Planning Approach for Intelligent Flood Response</a> — arXiv cs.AI. Raison : Recherche en planification temporelle pour réponse aux inondations. Pertinente pour automatisation, mais sans lien direct avec cybersécurité ou IA en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20518">FL-MAESTRO: Multi-Agent LLM Orchestration for Resource-Constrained Federated Learning</a> — arXiv cs.AI. Raison : Article de recherche sur l'orchestration multi-agent LLM pour le federated learning, sujet technique avancé mais sans lien direct avec la cybersécurité, la gouvernance ou les priorités immédiates du public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2608.20549">Volumetric Radiology AI in the Era of Multimodal Large Language Models</a> — arXiv cs.AI. Raison : Papier de recherche sur l'extension des MLLMs à la radiologie volumétrique. Intéressant pour l'IA en entreprise mais sans lien direct avec la cybersécurité ou les priorités opérationnelles des experts ciblés.</li>
+<li><strong>5/5</strong> — <a href="https://next.ink/252848/uber-825-millions-deuros-damende-pour-la-suspension-automatique-de-chauffeurs/">Uber : 825 millions d’euros d’amende pour la suspension automatique de chauffeurs</a> — Next.ink. Raison : Décision réglementaire majeure (RGPD), amende record de 825 M€ avec impact direct sur la gouvernance des processus automatisés en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://www.zdnet.fr/actualites/piratage-des-telephones-encrochat-la-piste-de-la-faille-bad-binder-500427.htm#xtor=RSS-1">Piratage des téléphones EncroChat : la piste de la faille « Bad Binder »</a> — ZDNet France. Raison : Analyse d'une vulnérabilité (Bad Binder) utilisée pour pirater EncroChat, sujet technique pertinent pour experts cyber. Source sérieuse.</li>
+<li><strong>4/5</strong> — <a href="https://www.zdnet.fr/actualites/mistral-ai-lance-une-ia-capable-de-chercher-et-verifier-les-informations-dans-les-documents-500439.htm#xtor=RSS-1">Mistral AI lance une IA capable de chercher et vérifier les informations dans les documents</a> — ZDNet France. Raison : Nouveau produit IA de Mistral corrigeant des faiblesses du RAG, avec gains annoncés sur benchmarks documentaires. Pertinent pour CTO et RSSI.</li>
+<li><strong>4/5</strong> — <a href="https://www.zdnet.fr/actualites/stripe-rachete-openrouter-pour-75-milliards-de-dollars-et-muscle-son-infrastructure-ia-500433.htm#xtor=RSS-1">Stripe rachète OpenRouter pour 7,5 milliards de dollars et muscle son infrastructure IA</a> — ZDNet France. Raison : Acquisition majeure de 7,5 Md$ par Stripe pour intégrer l'IA dans sa plateforme de paiement, impact stratégique fort pour les clients entreprises.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/colombie-comment-les-algorithmes-de-facebook-et-tik-tok-favorisent-l-enrolement-de-mineurs-dans-les-groupes-armes-et-semblent-meme-le-promouvoir_AD-202608240362.html">Colombie: comment les algorithmes de Facebook et TikTok favorisent l'enrôlement de mineurs dans les groupes armés et "semblent même le promouvoir"</a> — BFM Tech. Raison : Sujet intéressant sur l'utilisation des algorithmes pour le recrutement de mineurs, mais hors du périmètre cybersécurité ou IA technique pour un public d'experts.</li>
 </ul>
 
 <h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Pas de digest produit</strong> : un seul article source est fourni pour la période, ce qui est insuffisant pour constituer un digest.</li>
+<li><strong>Exploitation active d'une faille Zimbra</strong> : La CISA impose aux agences fédérales US un correctif sous 3 jours pour une vulnérabilité critique dans Zimbra Collaboration Suite, signe d'une menace immédiate pour les instances exposées. <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne UAT-10147 assistée par IA</strong> : Un groupe cycriminel sinophone cible massivement des serveurs Windows et Linux via une chaîne d'attaque intégrant un bypass EDR et un rootkit Linux, avec usage d'IA pour scaler les opérations. <a href="https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Instabilité gaming sous Windows 11</strong> : Les mises à jour d'août 2026 provoquent des dégradations de performance sur les jeux ; un correctif temporaire est disponible, mais la résolution définitive n'est pas encore intégrée aux cumulatifs. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-temporary-fix-for-windows-11-gaming-issues/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>DOUBLECUP : stéganographie opportuniste dans des PNG</strong> : Le malware DOUBLECUP dissimule son payload dans des images PNG, mais la technique employée relève plus d'une obfuscation basique que d'une stéganographie robuste. <a href="https://isc.sans.edu/diary/rss/33274">SANS ISC</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33276">ISC Stormcast For Monday, August 24th, 2026 https://isc.sans.edu/podcastdetail/10064, (Mon, Aug 24th)</a> — SANS ISC. Raison : Podcast SANS ISC sur actualité cyber du jour, probablement technique mais sans détail dans le résumé. Intérêt modéré pour experts si sujet pertinent.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/">CISA orders urgent patching of actively exploited Zimbra flaw</a> — BleepingComputer. Raison : CVE activement exploitée, ordre de patching urgent de CISA, impact direct sur Zimbra utilisé en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html">UAT-10147 Uses AI to Scale Server Attacks, Deploys SPECTRE With EDR Bypass and Linux Rootkit</a> — The Hacker News. Raison : Nouveau groupe cybercriminel ciblant serveurs web avec IA, EDR bypass et rootkit Linux. Campagne multi-secteurs, technique détaillée pertinente pour RSSI et architecte.</li>
+<li><strong>3/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-temporary-fix-for-windows-11-gaming-issues/">Microsoft shares temporary fix for Windows 11 gaming issues</a> — BleepingComputer. Raison : Problème de performance lié à une mise à jour Windows, correctif temporaire partagé. Impact potentiel pour les postes de travail, mais pas de vulnérabilité de sécurité critique.</li>
+<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33274">DOUBLECUP's PNG Payload, (Mon, Aug 24th)</a> — SANS ISC. Raison : Sujet technique (stéganographie et malware) intéressant pour experts, mais le résumé indique une approche décevante et sans nouveauté réelle.</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Fraude entrepreneuriale comme déception organisée</strong> : Une étude sur les fraudes dans la Silicon Valley (2000-2023) analyse comment les entrepreneurs instrumentalisent la tromperie criminelle pour abuser investisseurs et parties prenantes, en s'appuyant sur des données judiciaires. <a href="https://www.schneier.com/blog/archives/2026/08/criminal-deception-in-silicon-valley.html">Schneier on Security</a></li>
+</ul>
+
+<ul>
+<li><strong>IA au service des opérations de sécurité</strong> : L'IA est présentée comme un levier de transformation pour renforcer la sécurité des entreprises, en redéfinissant l'interaction entre humains, processus et technologies via l'autonomie et l'innovation. <a href="https://www.csoonline.com/article/4212560/7-ways-ai-can-be-used-to-enhance-security-operations.html">CSO Online</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/08/criminal-deception-in-silicon-valley.html">Criminal Deception in Silicon Valley</a> — Schneier on Security. Raison : Analyse académique de la fraude entrepreneuriale dans la Silicon Valley via le concept de façading. Intéressant pour comprendre les mécanismes de tromperie corporate mais sans implication directe pour un public technique.</li>
+<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/4212560/7-ways-ai-can-be-used-to-enhance-security-operations.html">7 ways AI can be used to enhance security operations</a> — CSO Online. Raison : Article générique sur les usages de l'IA en sécurité. Pas de détail technique, benchmark ou cas concret. Peut être survolé pour tendances, sans profondeur pour experts.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Traduction automatique C vers Rust</strong> : Canonical finance une recherche à Bristol sur l'usage d'IA pour convertir du code C legacy en Rust memory-safe. L'enjeu est de déterminer si le code mature conserve ses propriétés fonctionnelles après transformation automatique. <a href="https://www.theregister.com/software/2026/08/24/canonical-backs-quest-to-translate-mountains-of-c-into-safe-rust-with-ai/5290959">The Register</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://www.theregister.com/software/2026/08/24/canonical-backs-quest-to-translate-mountains-of-c-into-safe-rust-with-ai/5290959">Canonical backs quest to translate mountains of C into safe Rust with AI</a> — The Register — AI/ML. Raison : Article sur conversion de code C en Rust via IA, intéressant pour la sécurité mémoire mais impact pratique incertain. À survoler.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260824-0553</guid>
-      <pubDate>Mon, 24 Aug 2026 05:53:03 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260824-1139</guid>
+      <pubDate>Mon, 24 Aug 2026 11:39:52 +0000</pubDate>
     </item>
   </channel>
 </rss>
