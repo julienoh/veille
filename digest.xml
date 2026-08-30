@@ -8,66 +8,88 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 30 Aug 2026 10:31:10 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 15:23:07 +0000</lastBuildDate>
     <item>
-      <title>Digest — 30/08 10h</title>
+      <title>Digest — 30/08 15h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Évolution de ClickFix vers TerminalFix** : Microsoft a identifié une variante de la campagne ClickFix qui abuse désormais du Windows Terminal ou PowerShell plutôt que de la boîte de dialogue Exécuter pour faire exécuter des commandes malveillantes à l'utilisateur. [The Hacker News](https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html)
+- **Fuite de données à Manchester Airports Group** : FulcrumSec revendique le vol de 86 Go de données (clients, réservations, voyages), avec un périmètre d'exfiltration plus large que celui annoncé par l'exploitant. [BleepingComputer](https://www.bleepingcomputer.com/news/security/fulcrumsec-claims-manchester-airports-hack-theft-of-86-gb-of-data/)
 
-- **Mise à jour YARA-X 1.20.0** : La nouvelle version de l'outil de détection apporte 14 améliorations et 13 correctifs. [SANS ISC](https://isc.sans.edu/diary/rss/33288)
+- **Sessions Claude compromises par infostealers** : Anthropic alerte sur des vols de sessions actives Claude via infostealer, permettant aux attaquants de consommer les crédits des comptes piratés. [BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/)
+
+- **Extensions Chrome Web Store malveillantes** : Plusieurs extensions pour Chrome et Edge déploient un framework modulaire de vol de cryptomonnaie, de données sensibles et d'injection de leurres ClickFix. [BleepingComputer](https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/)
 
 **Évaluation du scoring**
 
-- **4/5** — [TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor](https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html) — The Hacker News. Raison : Nouvelle variante de ClickFix exploitant Windows Terminal pour déployer un backdoor via un faux CAPTCHA Cloudflare. Technique intéressante pour RSSI et experts SOC.
-- **3/5** — [YARA-X 1.20.0 Release, (Sun, Aug 30th)](https://isc.sans.edu/diary/rss/33288) — SANS ISC. Raison : Release mineure d'un outil de détection de malwares. Intéressant pour les experts utilisant YARA, mais sans vulnérabilité critique ni changement majeur.
+- **4/5** — [FulcrumSec claims Manchester Airports hack, theft of 86 GB of data](https://www.bleepingcomputer.com/news/security/fulcrumsec-claims-manchester-airports-hack-theft-of-86-gb-of-data/) — BleepingComputer. Raison : Incident cyber majeur touchant un aéroport avec fuite de données validée. Analyse utile pour évaluer l'impact et la réponse, mais pas de 0-day ou campagne ransomware active.
+- **4/5** — [Anthropic warns infostealer malware is hijacking Claude sessions to drain usage](https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/) — BleepingComputer. Raison : Infostealer détournant sessions Claude : menace concrète pour usage IA entreprise et gestion des accès. Alerte officielle d'Anthropic, à analyser pour adapter les politiques de sécurité.
+- **4/5** — [Chrome Web Store extensions caught stealing crypto, browser data](https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/) — BleepingComputer. Raison : Campagne active de vol de données via extensions Chrome/Edge. Cible directe des RSSI et devs. Analyse technique probablement utile.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Anthropic publie un standard ouvert pour le pilotage d'appareils physiques par IA** : Le Model Hardware Standard (MHS) propose une spécification commune permettant aux agents IA de découvrir et contrôler des équipements physiques de manière sécurisée, réduisant les délais d'intégration de plusieurs semaines à quelques heures sur un cas d'usage en laboratoire universitaire. [MarkTechPost](https://www.marktechpost.com/2026/08/29/anthropic-opens-a-research-preview-of-the-model-hardware-standard-mhs-a-shared-specification-for-ai-agents-to-safely-operate-physical-devices/)
-
-- **Extraction de modèles physiques exécutables à partir de vidéos réelles** : Code-as-World convertit des séquences vidéo en programmes MuJoCo éditables, produisant une représentation vérifiée de la scène qui sert ensuite à l'entraînement de raisonnement physique pour des agents. [MarkTechPost](https://www.marktechpost.com/2026/08/29/mirros-code-as-world-executable-world-representations/)
+- **Robotisation de l'exploitation des datacenters** : Meta teste l'utilisation de robots pour remplacer les techniciens sur certaines tâches en datacenter. Cette approche rejoint celle de Caterpillar, qui transpose son expérience en automatisation de sites miniers isolés au déploiement de l'IA en contexte industriel. [TechCrunch](https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/) · [Ars Technica](https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/)
 
 **Évaluation du scoring**
 
-- **4/5** — [Anthropic Opens a Research Preview of the Model Hardware Standard (MHS): A Shared Specification for AI Agents to Safely Operate Physical Devices](https://www.marktechpost.com/2026/08/29/anthropic-opens-a-research-preview-of-the-model-hardware-standard-mhs-a-shared-specification-for-ai-agents-to-safely-operate-physical-devices/) — MarkTechPost. Raison : Spécification ouverte pour agents IA interagissant avec du hardware physique. Résultats concrets (CMU, QuEra) montrent un gain opérationnel fort. Pertinent pour RSSI/CTO/architecte.
-- **3/5** — [Meet ‘Code-as-World’: An Agentic Loop That Rewrites Real Videos Into Executable MuJoCo Physics Programs](https://www.marktechpost.com/2026/08/29/mirros-code-as-world-executable-world-representations/) — MarkTechPost. Raison : Recherche intéressante sur la génération de code MuJoCo à partir de vidéos, mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</description>
+- **3/5** — [Caterpillar is bringing to AI deployment what it learned from automating mining](https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/) — TechCrunch — AI. Raison : Retour d'expérience industriel sur le déploiement de l'IA par Caterpillar. Intéressant pour la stratégie mais peut manquer de détails techniques utiles à des experts.
+- **3/5** — [Inside Meta’s push to put robots to work in data centers](https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/) — Ars Technica — Tech Lab. Raison : Sujet intéressant sur l'usage de robots dans les data centers Meta, mais manque de détails techniques ou d'impact cybersécurité pour un public expert.
+
+## Actualité tech FR
+
+- **Présidentielle 2027 : absence de débat structuré sur la tech** : À La REF du MEDEF, aucun temps dédié n'a été accordé à l'IA ou à l'innovation malgré leur omniprésence en filigrane dans les échanges entre les sept candidats. [Frenchweb](https://www.frenchweb.fr/presidentielle-2027-ce-que-les-candidats-ont-reellement-compris-de-la-puissance-technologique/463107)
+
+**Évaluation du scoring**
+
+- **3/5** — [Présidentielle 2027 : ce que les candidats ont réellement compris de la puissance technologique](https://www.frenchweb.fr/presidentielle-2027-ce-que-les-candidats-ont-reellement-compris-de-la-puissance-technologique/463107) — Frenchweb. Raison : Article politique sur l'IA dans le débat présidentiel, sans détail technique ni cyber. Utile pour comprendre le contexte réglementaire et stratégique, mais pas prioritaire pour des experts.</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Évolution de ClickFix vers TerminalFix</strong> : Microsoft a identifié une variante de la campagne ClickFix qui abuse désormais du Windows Terminal ou PowerShell plutôt que de la boîte de dialogue Exécuter pour faire exécuter des commandes malveillantes à l'utilisateur. <a href="https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html">The Hacker News</a></li>
+<li><strong>Fuite de données à Manchester Airports Group</strong> : FulcrumSec revendique le vol de 86 Go de données (clients, réservations, voyages), avec un périmètre d'exfiltration plus large que celui annoncé par l'exploitant. <a href="https://www.bleepingcomputer.com/news/security/fulcrumsec-claims-manchester-airports-hack-theft-of-86-gb-of-data/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Mise à jour YARA-X 1.20.0</strong> : La nouvelle version de l'outil de détection apporte 14 améliorations et 13 correctifs. <a href="https://isc.sans.edu/diary/rss/33288">SANS ISC</a></li>
+<li><strong>Sessions Claude compromises par infostealers</strong> : Anthropic alerte sur des vols de sessions actives Claude via infostealer, permettant aux attaquants de consommer les crédits des comptes piratés. <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Extensions Chrome Web Store malveillantes</strong> : Plusieurs extensions pour Chrome et Edge déploient un framework modulaire de vol de cryptomonnaie, de données sensibles et d'injection de leurres ClickFix. <a href="https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/">BleepingComputer</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html">TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor</a> — The Hacker News. Raison : Nouvelle variante de ClickFix exploitant Windows Terminal pour déployer un backdoor via un faux CAPTCHA Cloudflare. Technique intéressante pour RSSI et experts SOC.</li>
-<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33288">YARA-X 1.20.0 Release, (Sun, Aug 30th)</a> — SANS ISC. Raison : Release mineure d'un outil de détection de malwares. Intéressant pour les experts utilisant YARA, mais sans vulnérabilité critique ni changement majeur.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/fulcrumsec-claims-manchester-airports-hack-theft-of-86-gb-of-data/">FulcrumSec claims Manchester Airports hack, theft of 86 GB of data</a> — BleepingComputer. Raison : Incident cyber majeur touchant un aéroport avec fuite de données validée. Analyse utile pour évaluer l'impact et la réponse, mais pas de 0-day ou campagne ransomware active.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/">Anthropic warns infostealer malware is hijacking Claude sessions to drain usage</a> — BleepingComputer. Raison : Infostealer détournant sessions Claude : menace concrète pour usage IA entreprise et gestion des accès. Alerte officielle d'Anthropic, à analyser pour adapter les politiques de sécurité.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/chrome-web-store-extensions-caught-stealing-crypto-browser-data/">Chrome Web Store extensions caught stealing crypto, browser data</a> — BleepingComputer. Raison : Campagne active de vol de données via extensions Chrome/Edge. Cible directe des RSSI et devs. Analyse technique probablement utile.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Anthropic publie un standard ouvert pour le pilotage d'appareils physiques par IA</strong> : Le Model Hardware Standard (MHS) propose une spécification commune permettant aux agents IA de découvrir et contrôler des équipements physiques de manière sécurisée, réduisant les délais d'intégration de plusieurs semaines à quelques heures sur un cas d'usage en laboratoire universitaire. <a href="https://www.marktechpost.com/2026/08/29/anthropic-opens-a-research-preview-of-the-model-hardware-standard-mhs-a-shared-specification-for-ai-agents-to-safely-operate-physical-devices/">MarkTechPost</a></li>
-</ul>
-
-<ul>
-<li><strong>Extraction de modèles physiques exécutables à partir de vidéos réelles</strong> : Code-as-World convertit des séquences vidéo en programmes MuJoCo éditables, produisant une représentation vérifiée de la scène qui sert ensuite à l'entraînement de raisonnement physique pour des agents. <a href="https://www.marktechpost.com/2026/08/29/mirros-code-as-world-executable-world-representations/">MarkTechPost</a></li>
+<li><strong>Robotisation de l'exploitation des datacenters</strong> : Meta teste l'utilisation de robots pour remplacer les techniciens sur certaines tâches en datacenter. Cette approche rejoint celle de Caterpillar, qui transpose son expérience en automatisation de sites miniers isolés au déploiement de l'IA en contexte industriel. <a href="https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/">TechCrunch</a> · <a href="https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/">Ars Technica</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/08/29/anthropic-opens-a-research-preview-of-the-model-hardware-standard-mhs-a-shared-specification-for-ai-agents-to-safely-operate-physical-devices/">Anthropic Opens a Research Preview of the Model Hardware Standard (MHS): A Shared Specification for AI Agents to Safely Operate Physical Devices</a> — MarkTechPost. Raison : Spécification ouverte pour agents IA interagissant avec du hardware physique. Résultats concrets (CMU, QuEra) montrent un gain opérationnel fort. Pertinent pour RSSI/CTO/architecte.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/08/29/mirros-code-as-world-executable-world-representations/">Meet ‘Code-as-World’: An Agentic Loop That Rewrites Real Videos Into Executable MuJoCo Physics Programs</a> — MarkTechPost. Raison : Recherche intéressante sur la génération de code MuJoCo à partir de vidéos, mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/">Caterpillar is bringing to AI deployment what it learned from automating mining</a> — TechCrunch — AI. Raison : Retour d'expérience industriel sur le déploiement de l'IA par Caterpillar. Intéressant pour la stratégie mais peut manquer de détails techniques utiles à des experts.</li>
+<li><strong>3/5</strong> — <a href="https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/">Inside Meta’s push to put robots to work in data centers</a> — Ars Technica — Tech Lab. Raison : Sujet intéressant sur l'usage de robots dans les data centers Meta, mais manque de détails techniques ou d'impact cybersécurité pour un public expert.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Présidentielle 2027 : absence de débat structuré sur la tech</strong> : À La REF du MEDEF, aucun temps dédié n'a été accordé à l'IA ou à l'innovation malgré leur omniprésence en filigrane dans les échanges entre les sept candidats. <a href="https://www.frenchweb.fr/presidentielle-2027-ce-que-les-candidats-ont-reellement-compris-de-la-puissance-technologique/463107">Frenchweb</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://www.frenchweb.fr/presidentielle-2027-ce-que-les-candidats-ont-reellement-compris-de-la-puissance-technologique/463107">Présidentielle 2027 : ce que les candidats ont réellement compris de la puissance technologique</a> — Frenchweb. Raison : Article politique sur l'IA dans le débat présidentiel, sans détail technique ni cyber. Utile pour comprendre le contexte réglementaire et stratégique, mais pas prioritaire pour des experts.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260830-1031</guid>
-      <pubDate>Sun, 30 Aug 2026 10:31:10 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260830-1523</guid>
+      <pubDate>Sun, 30 Aug 2026 15:23:07 +0000</pubDate>
     </item>
   </channel>
 </rss>
