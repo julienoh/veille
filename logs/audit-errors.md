@@ -120,3 +120,6 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-08-10 06:16 UTC | scoring | Modernisation et performances de Windows 11 : Microsoft a en (Next.ink) | Rate limit fournisseur LLM atteint |
 | 2026-08-10 06:16 UTC | scoring | Amazon écoule les stocks du bracelet connecté Google Fitbit  (BFM Tech) | Rate limit fournisseur LLM atteint |
 | 2026-08-10 06:17 UTC | scoring | Learning to Predict Middle-Layer Attention in MLLMs for Visu (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-08-31 22:04 UTC | scoring | New York Governor Kathy Hochul thinks AI should be ‘less evi (The Verge — AI) | Rate limit fournisseur LLM atteint |
+| 2026-08-31 22:20 UTC | synthese | Actualité tech FR | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"The dec |
+| 2026-08-31 22:21 UTC | synthese | IA — Produits, agents & dev tooling | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"The dec |
