@@ -123,3 +123,7 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-08-31 22:04 UTC | scoring | New York Governor Kathy Hochul thinks AI should be ‘less evi (The Verge — AI) | Rate limit fournisseur LLM atteint |
 | 2026-08-31 22:20 UTC | synthese | Actualité tech FR | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"The dec |
 | 2026-08-31 22:21 UTC | synthese | IA — Produits, agents & dev tooling | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"The dec |
+| 2026-09-01 10:17 UTC | synthese | Cyber — Stratégie & analyse | Rate limit fournisseur LLM atteint |
+| 2026-09-01 10:17 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
+| 2026-09-01 10:17 UTC | synthese | Cyber — Menaces & vulnérabilités | Rate limit fournisseur LLM atteint |
+| 2026-09-01 10:17 UTC | synthese | IA — Recherche | Rate limit fournisseur LLM atteint |
