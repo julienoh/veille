@@ -129,3 +129,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-09-01 10:17 UTC | synthese | IA — Recherche | Rate limit fournisseur LLM atteint |
 | 2026-09-01 19:54 UTC | scoring | Sequoia-incubated Empirik launches with $21M to predict outa (TechCrunch — AI) | Rate limit fournisseur LLM atteint |
 | 2026-09-02 15:16 UTC | scoring | États-Unis : les caméras Flock, détestées depuis tous les bo (Next.ink) | Rate limit fournisseur LLM atteint |
+| 2026-09-02 19:51 UTC | synthese | IA & Tech — Médias internationaux | Rate limit fournisseur LLM atteint |
