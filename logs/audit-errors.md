@@ -130,3 +130,6 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-09-01 19:54 UTC | scoring | Sequoia-incubated Empirik launches with $21M to predict outa (TechCrunch — AI) | Rate limit fournisseur LLM atteint |
 | 2026-09-02 15:16 UTC | scoring | États-Unis : les caméras Flock, détestées depuis tous les bo (Next.ink) | Rate limit fournisseur LLM atteint |
 | 2026-09-02 19:51 UTC | synthese | IA & Tech — Médias internationaux | Rate limit fournisseur LLM atteint |
+| 2026-09-03 19:47 UTC | scoring | Large group of Serbian opposition, activist figures targeted (The Record) | Rate limit fournisseur LLM atteint |
+| 2026-09-03 19:53 UTC | scoring | ChatGPT, Grok, and Claude all went down at the same time (The Verge — AI) | Rate limit fournisseur LLM atteint |
+| 2026-09-03 19:54 UTC | scoring | BraZetsu Malware Turns Compromised Windows Hosts Into Crimin (The Hacker News) | Rate limit fournisseur LLM atteint |
