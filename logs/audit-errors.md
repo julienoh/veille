@@ -133,3 +133,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-09-03 19:47 UTC | scoring | Large group of Serbian opposition, activist figures targeted (The Record) | Rate limit fournisseur LLM atteint |
 | 2026-09-03 19:53 UTC | scoring | ChatGPT, Grok, and Claude all went down at the same time (The Verge — AI) | Rate limit fournisseur LLM atteint |
 | 2026-09-03 19:54 UTC | scoring | BraZetsu Malware Turns Compromised Windows Hosts Into Crimin (The Hacker News) | Rate limit fournisseur LLM atteint |
+| 2026-09-04 09:49 UTC | synthese | Cyber — Menaces & vulnérabilités | Rate limit fournisseur LLM atteint |
