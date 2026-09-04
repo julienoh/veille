@@ -134,3 +134,11 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-09-03 19:53 UTC | scoring | ChatGPT, Grok, and Claude all went down at the same time (The Verge — AI) | Rate limit fournisseur LLM atteint |
 | 2026-09-03 19:54 UTC | scoring | BraZetsu Malware Turns Compromised Windows Hosts Into Crimin (The Hacker News) | Rate limit fournisseur LLM atteint |
 | 2026-09-04 09:49 UTC | synthese | Cyber — Menaces & vulnérabilités | Rate limit fournisseur LLM atteint |
+| 2026-09-04 14:56 UTC | scoring | Après le piratage des impôts, l’Etat fait appel aux ingénieu (Siècle Digital) | Rate limit fournisseur LLM atteint |
+| 2026-09-04 14:59 UTC | scoring | Maîtrisez un peu plus vos dépenses énergétiques avec cette p (BFM Tech) | Rate limit fournisseur LLM atteint |
+| 2026-09-04 15:01 UTC | scoring | Un agent IA ressemble trait pour trait au compte compromis q (Journal du Net) | Rate limit fournisseur LLM atteint |
+| 2026-09-04 15:01 UTC | scoring | Cette clé USB à moins de 17 euros se branche sur votre iPhon (BFM Tech) | Rate limit fournisseur LLM atteint |
+| 2026-09-04 15:07 UTC | scoring | Data from drones in Ukraine is fueling a new Wild West marke (MIT Technology Review — AI) | Rate limit fournisseur LLM atteint |
+| 2026-09-04 15:07 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
+| 2026-09-04 15:07 UTC | synthese | Cyber — Menaces & vulnérabilités | Rate limit fournisseur LLM atteint |
+| 2026-09-04 15:08 UTC | synthese | IA & Tech — Médias internationaux | Rate limit fournisseur LLM atteint |
