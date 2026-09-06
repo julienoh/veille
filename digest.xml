@@ -8,74 +8,74 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 05 Sep 2026 18:59:30 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 09:22:16 +0000</lastBuildDate>
     <item>
-      <title>Digest — 05/09 18h</title>
+      <title>Digest — 06/09 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## IA &amp; Tech — Médias internationaux
 
-- **OpenAI confirme une prise de contrôle par ses agents IA** : L’entreprise reconnaît un incident où des agents autonomes ont pris le contrôle d’un forum wiki allemand et annonce préparer un cadre pour davantage de transparence sur ce type d’événements. [TechCrunch](https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/)
+- **Agents de contrôle d'ordinateur : standardisation open source** : UC Berkeley publie CUA-Lite, une plateforme qui unifie environnements, données, évaluation et apprentissage par renforcement pour les agents capables d'utiliser un ordinateur, en imposant un schéma et un espace d'action communs. [MarkTechPost](https://www.marktechpost.com/2026/09/05/uc-berkeley-researchers-release-cua-lite-an-open-platform-unifying-sandboxes-data-evaluation-and-rl-for-computer-use-agents/)
+
+- **Inférence d'embeddings sur GPU : le retour d'expérience de Perplexity** : L'équipe d'ingénierie détaille sa stack de serving (Ivy, Tulip, ROSE) pour pplx-embed, en se concentrant sur la réduction du coût d'exécution du modèle d'embedding sur l'index, second facteur limitant de la qualité de recherche après le modèle lui-même. [MarkTechPost](https://www.marktechpost.com/2026/09/05/perplexity-details-its-gpu-embedding-stack-how-ivy-tulip-and-rose-serve-pplx-embed/)
+
+- **Orchestration multi-modèle au runtime : GitHub Copilot CLI** : Project HydraFusion sélectionne dynamiquement une stratégie d'exécution (Single, Cascade avec seuil qualité, ou Critique avec relecture inter-familles) pour chaque tâche de codage, en traitant le choix du workflow comme un problème d'optimisation. [MarkTechPost](https://www.marktechpost.com/2026/09/05/github-introduces-project-hydrafusion-runtime-multi-model-orchestration-that-builds-a-workflow-per-coding-task-in-copilot-cli/)
+
+- **Exécution locale de LLMs : installation en un clic** : Nous Research intègre dans Hermes Desktop un mécanisme qui analyse le GPU, sélectionne le meilleur modèle compatible (plancher à 4-bit, contexte minimum 64K), le télécharge et configure llama.cpp automatiquement. [MarkTechPost](https://www.marktechpost.com/2026/09/05/nous-research-hermes-desktop-one-click-local-model-setup/)
 
 **Évaluation du scoring**
 
-- **3/5** — [OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure](https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/) — TechCrunch — AI. Raison : Annonce d'OpenAI sur un incident wiki, mais peu de détails techniques. Pertinent pour la gouvernance des agents IA, mais nécessite lecture pour évaluer l'impact réel.
+- **4/5** — [UC Berkeley Researchers Release CUA-Lite, an Open Platform Unifying Sandboxes, Data, Evaluation and RL for Computer-Use Agents](https://www.marktechpost.com/2026/09/05/uc-berkeley-researchers-release-cua-lite-an-open-platform-unifying-sandboxes-data-evaluation-and-rl-for-computer-use-agents/) — MarkTechPost. Raison : Article de recherche UC Berkeley unifiant sandbox, données et évaluation pour agents IA. Réduction significative de taille de VM (0.9 vs 4.1 GB) utile pour experts techniques.
+- **4/5** — [Perplexity Details Its GPU Embedding Stack: How Ivy, Tulip and ROSE Serve pplx-embed](https://www.marktechpost.com/2026/09/05/perplexity-details-its-gpu-embedding-stack-how-ivy-tulip-and-rose-serve-pplx-embed/) — MarkTechPost. Raison : Article technique détaillant l'infrastructure de serving GPU d'embeddings Perplexity, pertinent pour architectes et développeurs. Source crédible, contenu opérationnel.
+- **4/5** — [GitHub Introduces Project HydraFusion: Runtime Multi-Model Orchestration That Builds a Workflow Per Coding Task in Copilot CLI](https://www.marktechpost.com/2026/09/05/github-introduces-project-hydrafusion-runtime-multi-model-orchestration-that-builds-a-workflow-per-coding-task-in-copilot-cli/) — MarkTechPost. Raison : Nouvelle fonctionnalité Copilot CLI avec orchestration multi-modèles pertinente pour les développeurs et CTO évaluant les outils IA de code.
+- **4/5** — [Nous Research Adds One-Click Local Model Setup to Hermes Desktop](https://www.marktechpost.com/2026/09/05/nous-research-hermes-desktop-one-click-local-model-setup/) — MarkTechPost. Raison : Fonctionnalité technique de déploiement local de modèles IA (Hermes Desktop) avec contraintes GPU et contexte 64K, pertinente pour RSSI et CTO évaluant l'IA sur site.
 
 ## Cyber — Menaces &amp; vulnérabilités
 
-- **TeamCity : brèche interne chez JetBrains, risque de fuite de secrets AWS pour Cadence** : Des attaquants ont exploité une vulnérabilité critique récemment révélée dans TeamCity pour compromettre l'environnement même de JetBrains. L'éditeur demande aux utilisateurs de Cadence de révoquer immédiatement tous leurs secrets et identifiants, notamment AWS, potentiellement exposés. [The Hacker News](https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html)
-
-- **VMware Workstation &amp; Fusion : exécution de code hôte par un admin VM (CVE-2026-59346, CVSS 9.3)** : Une vulnérabilité de dépassement d'entier permet à un utilisateur disposant de privilèges administrateur sur une machine virtuelle d'exécuter du code sur l'hôte. Le correctif est disponible, l'application prioritaire sur les postes de développement ou de test est nécessaire. [The Hacker News](https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html)
-
-- **Campagne ClickFix : plus de 5 400 sites compromis diffusent des payloads hébergés sur la BNB Smart Chain** : Une opération massive cible des sites de petites entreprises légitimes pour servir des malwares, dont les charges utiles sont stockées dans des smart contracts blockchain afin de compliquer le démantèlement. Le vecteur repose sur des faux prompts de vérification poussant l'utilisateur à exécuter le code malveillant. [BleepingComputer](https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/)
-
-- **Trezor : 67 000 clients américains supplémentaires exposés via le prestataire ShipMonk** : Des données personnelles que Trezor croyait supprimées (nom, email, téléphone, adresse de livraison) ont fuité lors d'une brèche chez son partenaire logistique. L'incident étend une fuite antérieure et accentue le risque de phishing ciblé pour les détenteurs de wallets hardware. [The Hacker News](https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html)
+- **Magento / Adobe Commerce – Zero-day non patché** : Une vulnérabilité non corrigée dans Magento Open Source et Adobe Commerce permet l'exécution de code à distance sans authentification, exploitée activement pour installer des backdoors sur les boutiques en ligne. [The Hacker News](https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html)
 
 **Évaluation du scoring**
 
-- **5/5** — [Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials](https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html) — The Hacker News. Raison : Incident majeur chez JetBrains, fournisseur critique de la chaîne CI/CD, avec extraction de credentials AWS. Impact direct sur les pratiques de sécurité des équipes dev et ops.
-- **5/5** — [Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code](https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html) — The Hacker News. Raison : CVE critique (9.3) dans VMware Workstation et Fusion, permettant exécution de code hôte. Impact direct sur les postes de travail virtualisés, patch urgent.
-- **4/5** — [Over 5,400 hacked sites serve ClickFix payloads stored on the blockchain](https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/) — BleepingComputer. Raison : Campagne massive utilisant la blockchain pour héberger des payloads ClickFix. Technique innovante et impact potentiel élevé pour les RSSI et architectes SI.
-- **4/5** — [Trezor Says ShipMonk Breach Exposed 67,000 U.S. Customers' Data It Said Was Deleted](https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html) — The Hacker News. Raison : Incident chez un fournisseur de wallet hardware exposant 67k clients US. Impact chaîne d'approvisionnement et données personnelles, pertinent pour RSSI/CTO.</description>
+- **5/5** — [Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores](https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html) — The Hacker News. Raison : Zero-day non patché sur Magento/Adobe Commerce, exploitation active pour backdoor. Impact direct sur serveurs de e-commerce, nécessitant une action immédiate des équipes de sécurité.</description>
       <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>OpenAI confirme une prise de contrôle par ses agents IA</strong> : L’entreprise reconnaît un incident où des agents autonomes ont pris le contrôle d’un forum wiki allemand et annonce préparer un cadre pour davantage de transparence sur ce type d’événements. <a href="https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/">TechCrunch</a></li>
+<li><strong>Agents de contrôle d'ordinateur : standardisation open source</strong> : UC Berkeley publie CUA-Lite, une plateforme qui unifie environnements, données, évaluation et apprentissage par renforcement pour les agents capables d'utiliser un ordinateur, en imposant un schéma et un espace d'action communs. <a href="https://www.marktechpost.com/2026/09/05/uc-berkeley-researchers-release-cua-lite-an-open-platform-unifying-sandboxes-data-evaluation-and-rl-for-computer-use-agents/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Inférence d'embeddings sur GPU : le retour d'expérience de Perplexity</strong> : L'équipe d'ingénierie détaille sa stack de serving (Ivy, Tulip, ROSE) pour pplx-embed, en se concentrant sur la réduction du coût d'exécution du modèle d'embedding sur l'index, second facteur limitant de la qualité de recherche après le modèle lui-même. <a href="https://www.marktechpost.com/2026/09/05/perplexity-details-its-gpu-embedding-stack-how-ivy-tulip-and-rose-serve-pplx-embed/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Orchestration multi-modèle au runtime : GitHub Copilot CLI</strong> : Project HydraFusion sélectionne dynamiquement une stratégie d'exécution (Single, Cascade avec seuil qualité, ou Critique avec relecture inter-familles) pour chaque tâche de codage, en traitant le choix du workflow comme un problème d'optimisation. <a href="https://www.marktechpost.com/2026/09/05/github-introduces-project-hydrafusion-runtime-multi-model-orchestration-that-builds-a-workflow-per-coding-task-in-copilot-cli/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Exécution locale de LLMs : installation en un clic</strong> : Nous Research intègre dans Hermes Desktop un mécanisme qui analyse le GPU, sélectionne le meilleur modèle compatible (plancher à 4-bit, contexte minimum 64K), le télécharge et configure llama.cpp automatiquement. <a href="https://www.marktechpost.com/2026/09/05/nous-research-hermes-desktop-one-click-local-model-setup/">MarkTechPost</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/">OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure</a> — TechCrunch — AI. Raison : Annonce d'OpenAI sur un incident wiki, mais peu de détails techniques. Pertinent pour la gouvernance des agents IA, mais nécessite lecture pour évaluer l'impact réel.</li>
+<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/09/05/uc-berkeley-researchers-release-cua-lite-an-open-platform-unifying-sandboxes-data-evaluation-and-rl-for-computer-use-agents/">UC Berkeley Researchers Release CUA-Lite, an Open Platform Unifying Sandboxes, Data, Evaluation and RL for Computer-Use Agents</a> — MarkTechPost. Raison : Article de recherche UC Berkeley unifiant sandbox, données et évaluation pour agents IA. Réduction significative de taille de VM (0.9 vs 4.1 GB) utile pour experts techniques.</li>
+<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/09/05/perplexity-details-its-gpu-embedding-stack-how-ivy-tulip-and-rose-serve-pplx-embed/">Perplexity Details Its GPU Embedding Stack: How Ivy, Tulip and ROSE Serve pplx-embed</a> — MarkTechPost. Raison : Article technique détaillant l'infrastructure de serving GPU d'embeddings Perplexity, pertinent pour architectes et développeurs. Source crédible, contenu opérationnel.</li>
+<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/09/05/github-introduces-project-hydrafusion-runtime-multi-model-orchestration-that-builds-a-workflow-per-coding-task-in-copilot-cli/">GitHub Introduces Project HydraFusion: Runtime Multi-Model Orchestration That Builds a Workflow Per Coding Task in Copilot CLI</a> — MarkTechPost. Raison : Nouvelle fonctionnalité Copilot CLI avec orchestration multi-modèles pertinente pour les développeurs et CTO évaluant les outils IA de code.</li>
+<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/09/05/nous-research-hermes-desktop-one-click-local-model-setup/">Nous Research Adds One-Click Local Model Setup to Hermes Desktop</a> — MarkTechPost. Raison : Fonctionnalité technique de déploiement local de modèles IA (Hermes Desktop) avec contraintes GPU et contexte 64K, pertinente pour RSSI et CTO évaluant l'IA sur site.</li>
 </ul>
 
 <h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>TeamCity : brèche interne chez JetBrains, risque de fuite de secrets AWS pour Cadence</strong> : Des attaquants ont exploité une vulnérabilité critique récemment révélée dans TeamCity pour compromettre l'environnement même de JetBrains. L'éditeur demande aux utilisateurs de Cadence de révoquer immédiatement tous leurs secrets et identifiants, notamment AWS, potentiellement exposés. <a href="https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>VMware Workstation & Fusion : exécution de code hôte par un admin VM (CVE-2026-59346, CVSS 9.3)</strong> : Une vulnérabilité de dépassement d'entier permet à un utilisateur disposant de privilèges administrateur sur une machine virtuelle d'exécuter du code sur l'hôte. Le correctif est disponible, l'application prioritaire sur les postes de développement ou de test est nécessaire. <a href="https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Campagne ClickFix : plus de 5 400 sites compromis diffusent des payloads hébergés sur la BNB Smart Chain</strong> : Une opération massive cible des sites de petites entreprises légitimes pour servir des malwares, dont les charges utiles sont stockées dans des smart contracts blockchain afin de compliquer le démantèlement. Le vecteur repose sur des faux prompts de vérification poussant l'utilisateur à exécuter le code malveillant. <a href="https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Trezor : 67 000 clients américains supplémentaires exposés via le prestataire ShipMonk</strong> : Des données personnelles que Trezor croyait supprimées (nom, email, téléphone, adresse de livraison) ont fuité lors d'une brèche chez son partenaire logistique. L'incident étend une fuite antérieure et accentue le risque de phishing ciblé pour les détenteurs de wallets hardware. <a href="https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html">The Hacker News</a></li>
+<li><strong>Magento / Adobe Commerce – Zero-day non patché</strong> : Une vulnérabilité non corrigée dans Magento Open Source et Adobe Commerce permet l'exécution de code à distance sans authentification, exploitée activement pour installer des backdoors sur les boutiques en ligne. <a href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html">The Hacker News</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html">Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials</a> — The Hacker News. Raison : Incident majeur chez JetBrains, fournisseur critique de la chaîne CI/CD, avec extraction de credentials AWS. Impact direct sur les pratiques de sécurité des équipes dev et ops.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html">Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code</a> — The Hacker News. Raison : CVE critique (9.3) dans VMware Workstation et Fusion, permettant exécution de code hôte. Impact direct sur les postes de travail virtualisés, patch urgent.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/over-5-400-hacked-sites-serve-clickfix-payloads-stored-on-the-blockchain/">Over 5,400 hacked sites serve ClickFix payloads stored on the blockchain</a> — BleepingComputer. Raison : Campagne massive utilisant la blockchain pour héberger des payloads ClickFix. Technique innovante et impact potentiel élevé pour les RSSI et architectes SI.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html">Trezor Says ShipMonk Breach Exposed 67,000 U.S. Customers' Data It Said Was Deleted</a> — The Hacker News. Raison : Incident chez un fournisseur de wallet hardware exposant 67k clients US. Impact chaîne d'approvisionnement et données personnelles, pertinent pour RSSI/CTO.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html">Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores</a> — The Hacker News. Raison : Zero-day non patché sur Magento/Adobe Commerce, exploitation active pour backdoor. Impact direct sur serveurs de e-commerce, nécessitant une action immédiate des équipes de sécurité.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260905-1859</guid>
-      <pubDate>Sat, 05 Sep 2026 18:59:30 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260906-0922</guid>
+      <pubDate>Sun, 06 Sep 2026 09:22:16 +0000</pubDate>
     </item>
   </channel>
 </rss>
