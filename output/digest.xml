@@ -8,30 +8,210 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 06 Sep 2026 19:06:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 10:30:10 +0000</lastBuildDate>
     <item>
-      <title>Digest — 06/09 19h</title>
+      <title>Digest — 07/09 10h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## Cyber — Stratégie &amp; analyse
 
-- **Hameçonnage par caractères Unicode invisibles** : Des acteurs malveillants utilisent la technique d'« ASCII smuggling » pour insérer des caractères Unicode invisibles dans les emails, contournant ainsi les filtres de sécurité. [BleepingComputer](https://www.bleepingcomputer.com/news/security/attackers-conceal-phishing-lures-using-invisible-unicode-characters/)
+- **Confiance des RSSI face aux risques IA** : Selon l'enquête IANS, 41% des RSSI se disent optimistes quant à leur capacité à gérer les risques de sécurité liés à l'IA sur les deux prochaines années. Cette confiance repose sur des facteurs précis, notamment la maturité des programmes de gouvernance IA et l'implication directe des équipes sécurité dans les projets data. [CSO Online](https://www.csoonline.com/article/4218433/what-do-cisos-need-to-rest-easy-about-future-ai-risks.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [Attackers conceal phishing lures using invisible Unicode characters](https://www.bleepingcomputer.com/news/security/attackers-conceal-phishing-lures-using-invisible-unicode-characters/) — BleepingComputer. Raison : Technique d'évasion de filtres par caractères Unicode invisibles, pertinente pour RSSI et architectes SI. Analyse de menace concrète, utile sans être critique.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **4/5** — [What do CISOs need to rest easy about future AI risks?](https://www.csoonline.com/article/4218433/what-do-cisos-need-to-rest-easy-about-future-ai-risks.html) — CSO Online. Raison : Analyse de la confiance des RSSI face aux risques IA, basée sur une enquête. Utile pour la gouvernance et la stratégie cyber, sans détail technique.
+
+## IA — Recherche
+
+- **Agents LLM en finance : meilleurs modèles = systèmes plus risqués** : L'amélioration des capacités individuelles d'un LLM peut dégrader les performances au niveau système, avec des preuves empiriques issues d'agents sur les marchés financiers. Un modèle fondamental de séries temporelles (EXAONE Finance) est par ailleurs proposé pour la prévision financière, visant de bonnes performances en zero-shot. [Why Better Models Can Create Riskier Systems](https://arxiv.org/abs/2609.04373) · [EXAONE Forecast for Finance](https://arxiv.org/abs/2609.04239)
+
+- **Agents LLM pour l'entreprise : évaluation en écologies de marché concurrentielles** : ERPBench est un banc d'essai qui teste si les conclusions d'agents LLM pour la prise de décision métier se transfèrent d'une écologie de marché concurrentielle à une autre, allant au-delà des évaluations statiques habituelles. [ERPBench](https://arxiv.org/abs/2609.04667)
+
+- **Infrastructure unifiée pour l'évaluation d'agents** : Harbor Adapters fournit une infrastructure unifiée pour évaluer des agents sur de multiples benchmarks, simplifiant l'intégration d'environnements complexes. Un méta-jeu de données curé, Harbor-Index, accompagne cette infrastructure. [Harbor Adapters and Harbor-Index](https://arxiv.org/abs/2609.04298)
+
+- **Agents de recherche web entraînés à grande échelle** : Les modèles Iris-mini (35B) et Iris-pro (397B) sont des agents de recherche dont l'entraînement repose sur des tâches reconstruites à partir de la structure hypertexte d'un corpus web. [Iris](https://arxiv.org/abs/2609.04304)
+
+- **Fidélité des agents de codage en production** : Les pipelines de post-entraînement pour agents de codage souffrent d'erreurs de fidélité car les environnements d'entraînement simplifiés ne correspondent pas aux déploiements de production. Un entraînement "token-faithful" est proposé pour corriger cet écart. [Train What You Deploy](https://arxiv.org/abs/2609.04678)
+
+- **Apprentissage par renforcement multi-harness pour agents de code** : L'étude isole les effets de l'exposition d'une politique à plusieurs harnais d'exécution et de la comparaison de leurs récompenses, analysant l'attribution de crédit et la portabilité des compétences acquises. [What Does Multi-Harness RL Learn?](https://arxiv.org/abs/2609.04518)
+
+- **Génération agentique de kernels pour TPU** : MaxKernel utilise un système agentique couplant LLM et retour en temps réel du compilateur pour concevoir des kernels personnalisés haute performance pour accélérateurs, une tâche requérant normalement une expertise matérielle pointue. [MaxKernel](https://arxiv.org/abs/2609.04523)
+
+- **Fiabilité des explications et des prédictions de LLM** : Une méthode de suppression de caractéristiques améliore la fidélité des explications de LLM au moment de l'inférence. Par ailleurs, une nouvelle approche estime l'incertitude aléatoire liée à l'ambiguïté des entrées, en passant de la prédiction de réponses à celle d'interprétations. [A Removal Based Approach to Improve LLM Faithfulness](https://arxiv.org/abs/2609.04343) · [From Answers to Interpretations](https://arxiv.org/abs/2609.04543)
+
+- **Modèle de langage d'entreprise souverain et auditable** : Le concept de "Corporate Language Model" (CLM) vise à transformer la connaissance tacite et fragmentée de l'entreprise en une couche d'intelligence exécutable, souveraine et auditable, palliant l'absence de connaissances ontologiques spécifiques des LLM génériques et la fragilité du RAG. [Corporate Language Model](https://arxiv.org/abs/2609.04377)
+
+- **Injection indirecte de prompt reformulée comme problème de recherche** : L'injection indirecte de prompt est modélisée comme une recherche au moment du test sur une surface d'attaque dépendante de la tâche. Un attaquant agentique doté d'une heuristique de recherche dédiée est introduit pour opérationnaliser cette formulation. [Rethinking Indirect Prompt Injection](https://arxiv.org/abs/2609.04495)
+
+- **Benchmark de raisonnement LLM sur la performance matérielle** : PerfReasoning évalue la capacité des LLM à raisonner de manière structurée sur le calcul, la réutilisation de données et le mouvement mémoire, compétences centrales pour la modélisation de performance en conception matérielle et optimisation logicielle. [PerfReasoning](https://arxiv.org/abs/2609.04476)
+
+- **Quantification et inférence temporelle dans les réseaux récurrents** : La quantification basse précision peut altérer la mémoire d'état dans les réseaux récurrents, car la règle de stockage de l'état quantifié modifie la dynamique temporelle lors de l'inférence. [When Quantization Breaks Memory](https://arxiv.org/abs/2609.04490)
+
+- **Prédiction de trafic et de QoE pour la réalité étendue (XR)** : ResLearn-XR est un framework d'apprentissage résiduel pour prédire le trafic réseau XR et estimer le risque de qualité d'expérience (QoE), utilisant une structure d'apprentissage temporel en deux étapes. [ResLearn-XR](https://arxiv.org/abs/2609.04493)
+
+- **Revue des systèmes d'IA pour le recrutement** : L'IA pour le recrutement a évolué de l'appariement de profils vers l'automatisation de workflows multi-étapes. Cette revue narrative systématisée couvre l'évaluation et la gouvernance de ces systèmes. [From Matching Models to Recruiting Agents](https://arxiv.org/abs/2609.04286)
+
+- **Benchmark de l'évitement de dommages par des agents LLM** : HarvestBench est un simulateur de ferme où des agents LLM doivent payer pour éviter de tuer des animaux, mesurant ainsi le prix qu'ils sont prêts à mettre pour éviter un effet secondaire nommé. [HarvestBench](https://arxiv.org/abs/2609.04444)
+
+- **Biomarqueur numérique multimodal pour la physiologie** : BioSync fusionne des mesures cardiaques, neuronales et comportementales issues d'appareils portables en un indice composite continu (BSI) via une fusion cross-modale basée sur des transformers. [BioSync](https://arxiv.org/abs/2609.04504)
+
+- **Découverte de modèles constitutifs pour matériaux numériques** : Une approche data-driven découvre des modèles constitutifs dépendant de la composition pour l'hyperélasticité et la viscoélasticité de matériaux fabriqués par impression 3D multi-matériaux. [Data-Driven Discovery of Composition-Dependent Constitutive Models](https://arxiv.org/abs/2609.04541)
+
+- **Programmes comme langage universel des concepts** : Une revue propose que les programmes informatiques sont un candidat solide pour une représentation universelle des concepts, capable de capturer la richesse structurelle de la connaissance humaine. [Towards a universal language of concepts](https://arxiv.org/abs/2609.04528)
+
+**Évaluation du scoring**
+
+- **4/5** — [From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance](https://arxiv.org/abs/2609.04286) — arXiv cs.AI. Raison : Revue systématisée sur l'évolution des systèmes IA de recrutement, incluant gouvernance et évaluation. Pertinent pour les experts en IA et conformité.
+- **4/5** — [Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets](https://arxiv.org/abs/2609.04373) — arXiv cs.AI. Raison : Article de recherche montrant que des modèles plus performants peuvent dégrader les résultats système, avec un cas d'usage concret en finance, pertinent pour l'évaluation des risques IA.
+- **4/5** — [PerfReasoning: How Well Do LLMs Reason on Hardware Performance?](https://arxiv.org/abs/2609.04476) — arXiv cs.AI. Raison : Benchmark innovant sur le raisonnement des LLMs en performance matérielle, sujet utile pour architectes SI et CTO cherchant à automatiser l'optimisation code/infra.
+- **4/5** — [ERPBench: Evaluating LLM Agents for Enterprise Decision-Making Across Competitive Market Ecologies](https://arxiv.org/abs/2609.04667) — arXiv cs.AI. Raison : Benchmark LLM pour ERP, evaluation réaliste des agents décisionnaires en compétition de marché. Méthodologie exploitable pour experts SI.
+- **4/5** — [Train What You Deploy:Token-Faithful Post-Training of a Production Coding](https://arxiv.org/abs/2609.04678) — arXiv cs.AI. Raison : Problème critique de fidélité des tokens dans les pipelines de post-entraînement pour agents de codage, avec une approche formelle de correction. Pertinent pour les experts en production et sécurité.
+- **3/5** — [EXAONE Forecast for Finance](https://arxiv.org/abs/2609.04239) — arXiv cs.AI. Raison : Papier de recherche sur un modèle de séries temporelles financières. Intéressant pour l'IA en entreprise mais hors périmètre cybersécurité et sans application pratique immédiate.
+- **3/5** — [Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation](https://arxiv.org/abs/2609.04298) — arXiv cs.AI. Raison : Papier de recherche proposant une infrastructure unifiée pour l'évaluation d'agents IA sur plus de 80 benchmarks. Intéressant pour les experts en IA, mais impact pratique immédiat incertain.
+- **3/5** — [Iris: Climbing to the Search Frontier](https://arxiv.org/abs/2609.04304) — arXiv cs.AI. Raison : Papier de recherche (arXiv) sur deux agents de recherche, avec données et recette d'entraînement. Intéressant pour experts IA, mais sans lien direct avec les priorités cyber ou produit immédiat.
+- **3/5** — [A Removal Based Approach to Improve LLM Faithfulness at Test-Time](https://arxiv.org/abs/2609.04343) — arXiv cs.AI. Raison : Papier de recherche sur la fidélité des explications des LLM, via une approche de suppression. Intéressant pour experts IA, mais impact pratique incertain.
+- **3/5** — [Corporate Language Model (CLM): Transforming Tacit and Fragmented Enterprise Knowledge into a Sovereign, Auditable, and Executable Corporate Intelligence Layer](https://arxiv.org/abs/2609.04377) — arXiv cs.AI. Raison : Papier proposant un cadre pour intégrer la connaissance d'entreprise dans un modèle de langage souverain et actionnable. Pertinent mais sans démonstration ni comparaison concrète.
+- **3/5** — [HarvestBench: Measuring Whether LLM Agents Will Pay to Avoid Killing Animals](https://arxiv.org/abs/2609.04444) — arXiv cs.AI. Raison : Premier benchmark mettant un prix sur l'évitement de dommages collatéraux, sujet intéressant pour l'IA agentique mais absence d'implication pratique immédiate pour la cybersécurité.
+- **3/5** — [When Quantization Breaks Memory: Recurrent-State Write-Back in Low-Precision Temporal Inference](https://arxiv.org/abs/2609.04490) — arXiv cs.AI. Raison : Papier de recherche ciblé sur l'impact du quantificateur dans les réseaux récurrents. Intéressant pour experts en IA embarquée, mais hors cybersécurité et sans application pratique immédiate.
+- **3/5** — [ResLearn-XR: Residual Learning for Network Traffic and Quality-of-Experience-Aware Modeling in Extended Reality](https://arxiv.org/abs/2609.04493) — arXiv cs.AI. Raison : Papier de recherche sur un framework d'apprentissage résiduel pour trafic XR et QoE. Intéressant mais impact pratique incertain pour le public expert cible.
+- **3/5** — [Rethinking Indirect Prompt Injection as a Test-Time Search Problem](https://arxiv.org/abs/2609.04495) — arXiv cs.AI. Raison : Méthode originale pour traiter les injections indirectes via un problème de recherche, mais application pratique et reproductibilité encore floues.
+- **3/5** — [BioSync: Transformer-Based Cross-Modal Fusion for a Multimodal Physiological Digital Biomarker](https://arxiv.org/abs/2609.04504) — arXiv cs.AI. Raison : Recherche académique sur IA multimodale pour biomarqueurs. Intérêt technique limité car hors cybersécurité ou dev tooling, sans impact direct pour le public cible.
+- **3/5** — [What Does Multi-Harness RL Learn? Credit Assignment and Portability in Coding Agents](https://arxiv.org/abs/2609.04518) — arXiv cs.AI. Raison : Papier de recherche sur l'apprentissage par renforcement multi-harnais pour agents de codage. Intéressant mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
+- **3/5** — [MaxKernel: Agentic Kernel Generation for TPUs](https://arxiv.org/abs/2609.04523) — arXiv cs.AI. Raison : Recherche académique sur génération agentique de kernels pour TPU, intéressante pour experts en optimisation, mais impact pratique incertain.
+- **3/5** — [Towards a universal language of concepts: A survey](https://arxiv.org/abs/2609.04528) — arXiv cs.AI. Raison : Recherche académique sur les programmes comme représentation universelle des concepts. Intérêt général pour l'IA, mais lien indirect et incertain avec la cybersécurité ou le développement.
+- **3/5** — [Data-Driven Discovery of Composition-Dependent Constitutive Models for Hyperelasticity and Viscoelasticity of Digital Materials](https://arxiv.org/abs/2609.04541) — arXiv cs.AI. Raison : Papier de recherche sur la modélisation de matériaux numériques imprimés 3D. Intéressant pour un public IA/architecture, mais sans lien direct avec la cybersécurité ou les sujets cibles.
+- **3/5** — [From Answers to Interpretations: Rethinking Ambiguity-Induced Aleatoric Uncertainty Estimation in LLMs](https://arxiv.org/abs/2609.04543) — arXiv cs.AI. Raison : Papier de recherche sur l'incertitude aléatoire dans les LLMs. Intéressant pour la fiabilité des modèles, mais sans application pratique immédiate pour la cybersécurité ou le développement.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Nouvelles poursuites pour violation de copyright contre OpenAI et Microsoft** : Le Seattle Times et Newsday attaquent les deux entreprises, accusant leurs modèles d’avoir été entraînés sans autorisation sur leurs articles et de reproduire des extraits dans les réponses aux utilisateurs. [The Verge](https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft)
+
+**Évaluation du scoring**
+
+- **3/5** — [Seattle Times and Newsday sue OpenAI and Microsoft for infringement](https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft) — The Verge — AI. Raison : Poursuite pour violation de copyright par entraînement IA. Suivi juridique pertinent pour stratégie IA en entreprise, mais sans impact technique immédiat.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Hameçonnage par caractères Unicode invisibles</strong> : Des acteurs malveillants utilisent la technique d'« ASCII smuggling » pour insérer des caractères Unicode invisibles dans les emails, contournant ainsi les filtres de sécurité. <a href="https://www.bleepingcomputer.com/news/security/attackers-conceal-phishing-lures-using-invisible-unicode-characters/">BleepingComputer</a></li>
+<li><strong>Confiance des RSSI face aux risques IA</strong> : Selon l'enquête IANS, 41% des RSSI se disent optimistes quant à leur capacité à gérer les risques de sécurité liés à l'IA sur les deux prochaines années. Cette confiance repose sur des facteurs précis, notamment la maturité des programmes de gouvernance IA et l'implication directe des équipes sécurité dans les projets data. <a href="https://www.csoonline.com/article/4218433/what-do-cisos-need-to-rest-easy-about-future-ai-risks.html">CSO Online</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/attackers-conceal-phishing-lures-using-invisible-unicode-characters/">Attackers conceal phishing lures using invisible Unicode characters</a> — BleepingComputer. Raison : Technique d'évasion de filtres par caractères Unicode invisibles, pertinente pour RSSI et architectes SI. Analyse de menace concrète, utile sans être critique.</li>
+<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4218433/what-do-cisos-need-to-rest-easy-about-future-ai-risks.html">What do CISOs need to rest easy about future AI risks?</a> — CSO Online. Raison : Analyse de la confiance des RSSI face aux risques IA, basée sur une enquête. Utile pour la gouvernance et la stratégie cyber, sans détail technique.</li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Agents LLM en finance : meilleurs modèles = systèmes plus risqués</strong> : L'amélioration des capacités individuelles d'un LLM peut dégrader les performances au niveau système, avec des preuves empiriques issues d'agents sur les marchés financiers. Un modèle fondamental de séries temporelles (EXAONE Finance) est par ailleurs proposé pour la prévision financière, visant de bonnes performances en zero-shot. <a href="https://arxiv.org/abs/2609.04373">Why Better Models Can Create Riskier Systems</a> · <a href="https://arxiv.org/abs/2609.04239">EXAONE Forecast for Finance</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents LLM pour l'entreprise : évaluation en écologies de marché concurrentielles</strong> : ERPBench est un banc d'essai qui teste si les conclusions d'agents LLM pour la prise de décision métier se transfèrent d'une écologie de marché concurrentielle à une autre, allant au-delà des évaluations statiques habituelles. <a href="https://arxiv.org/abs/2609.04667">ERPBench</a></li>
+</ul>
+
+<ul>
+<li><strong>Infrastructure unifiée pour l'évaluation d'agents</strong> : Harbor Adapters fournit une infrastructure unifiée pour évaluer des agents sur de multiples benchmarks, simplifiant l'intégration d'environnements complexes. Un méta-jeu de données curé, Harbor-Index, accompagne cette infrastructure. <a href="https://arxiv.org/abs/2609.04298">Harbor Adapters and Harbor-Index</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents de recherche web entraînés à grande échelle</strong> : Les modèles Iris-mini (35B) et Iris-pro (397B) sont des agents de recherche dont l'entraînement repose sur des tâches reconstruites à partir de la structure hypertexte d'un corpus web. <a href="https://arxiv.org/abs/2609.04304">Iris</a></li>
+</ul>
+
+<ul>
+<li><strong>Fidélité des agents de codage en production</strong> : Les pipelines de post-entraînement pour agents de codage souffrent d'erreurs de fidélité car les environnements d'entraînement simplifiés ne correspondent pas aux déploiements de production. Un entraînement "token-faithful" est proposé pour corriger cet écart. <a href="https://arxiv.org/abs/2609.04678">Train What You Deploy</a></li>
+</ul>
+
+<ul>
+<li><strong>Apprentissage par renforcement multi-harness pour agents de code</strong> : L'étude isole les effets de l'exposition d'une politique à plusieurs harnais d'exécution et de la comparaison de leurs récompenses, analysant l'attribution de crédit et la portabilité des compétences acquises. <a href="https://arxiv.org/abs/2609.04518">What Does Multi-Harness RL Learn?</a></li>
+</ul>
+
+<ul>
+<li><strong>Génération agentique de kernels pour TPU</strong> : MaxKernel utilise un système agentique couplant LLM et retour en temps réel du compilateur pour concevoir des kernels personnalisés haute performance pour accélérateurs, une tâche requérant normalement une expertise matérielle pointue. <a href="https://arxiv.org/abs/2609.04523">MaxKernel</a></li>
+</ul>
+
+<ul>
+<li><strong>Fiabilité des explications et des prédictions de LLM</strong> : Une méthode de suppression de caractéristiques améliore la fidélité des explications de LLM au moment de l'inférence. Par ailleurs, une nouvelle approche estime l'incertitude aléatoire liée à l'ambiguïté des entrées, en passant de la prédiction de réponses à celle d'interprétations. <a href="https://arxiv.org/abs/2609.04343">A Removal Based Approach to Improve LLM Faithfulness</a> · <a href="https://arxiv.org/abs/2609.04543">From Answers to Interpretations</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèle de langage d'entreprise souverain et auditable</strong> : Le concept de "Corporate Language Model" (CLM) vise à transformer la connaissance tacite et fragmentée de l'entreprise en une couche d'intelligence exécutable, souveraine et auditable, palliant l'absence de connaissances ontologiques spécifiques des LLM génériques et la fragilité du RAG. <a href="https://arxiv.org/abs/2609.04377">Corporate Language Model</a></li>
+</ul>
+
+<ul>
+<li><strong>Injection indirecte de prompt reformulée comme problème de recherche</strong> : L'injection indirecte de prompt est modélisée comme une recherche au moment du test sur une surface d'attaque dépendante de la tâche. Un attaquant agentique doté d'une heuristique de recherche dédiée est introduit pour opérationnaliser cette formulation. <a href="https://arxiv.org/abs/2609.04495">Rethinking Indirect Prompt Injection</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmark de raisonnement LLM sur la performance matérielle</strong> : PerfReasoning évalue la capacité des LLM à raisonner de manière structurée sur le calcul, la réutilisation de données et le mouvement mémoire, compétences centrales pour la modélisation de performance en conception matérielle et optimisation logicielle. <a href="https://arxiv.org/abs/2609.04476">PerfReasoning</a></li>
+</ul>
+
+<ul>
+<li><strong>Quantification et inférence temporelle dans les réseaux récurrents</strong> : La quantification basse précision peut altérer la mémoire d'état dans les réseaux récurrents, car la règle de stockage de l'état quantifié modifie la dynamique temporelle lors de l'inférence. <a href="https://arxiv.org/abs/2609.04490">When Quantization Breaks Memory</a></li>
+</ul>
+
+<ul>
+<li><strong>Prédiction de trafic et de QoE pour la réalité étendue (XR)</strong> : ResLearn-XR est un framework d'apprentissage résiduel pour prédire le trafic réseau XR et estimer le risque de qualité d'expérience (QoE), utilisant une structure d'apprentissage temporel en deux étapes. <a href="https://arxiv.org/abs/2609.04493">ResLearn-XR</a></li>
+</ul>
+
+<ul>
+<li><strong>Revue des systèmes d'IA pour le recrutement</strong> : L'IA pour le recrutement a évolué de l'appariement de profils vers l'automatisation de workflows multi-étapes. Cette revue narrative systématisée couvre l'évaluation et la gouvernance de ces systèmes. <a href="https://arxiv.org/abs/2609.04286">From Matching Models to Recruiting Agents</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmark de l'évitement de dommages par des agents LLM</strong> : HarvestBench est un simulateur de ferme où des agents LLM doivent payer pour éviter de tuer des animaux, mesurant ainsi le prix qu'ils sont prêts à mettre pour éviter un effet secondaire nommé. <a href="https://arxiv.org/abs/2609.04444">HarvestBench</a></li>
+</ul>
+
+<ul>
+<li><strong>Biomarqueur numérique multimodal pour la physiologie</strong> : BioSync fusionne des mesures cardiaques, neuronales et comportementales issues d'appareils portables en un indice composite continu (BSI) via une fusion cross-modale basée sur des transformers. <a href="https://arxiv.org/abs/2609.04504">BioSync</a></li>
+</ul>
+
+<ul>
+<li><strong>Découverte de modèles constitutifs pour matériaux numériques</strong> : Une approche data-driven découvre des modèles constitutifs dépendant de la composition pour l'hyperélasticité et la viscoélasticité de matériaux fabriqués par impression 3D multi-matériaux. <a href="https://arxiv.org/abs/2609.04541">Data-Driven Discovery of Composition-Dependent Constitutive Models</a></li>
+</ul>
+
+<ul>
+<li><strong>Programmes comme langage universel des concepts</strong> : Une revue propose que les programmes informatiques sont un candidat solide pour une représentation universelle des concepts, capable de capturer la richesse structurelle de la connaissance humaine. <a href="https://arxiv.org/abs/2609.04528">Towards a universal language of concepts</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2609.04286">From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance</a> — arXiv cs.AI. Raison : Revue systématisée sur l'évolution des systèmes IA de recrutement, incluant gouvernance et évaluation. Pertinent pour les experts en IA et conformité.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2609.04373">Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets</a> — arXiv cs.AI. Raison : Article de recherche montrant que des modèles plus performants peuvent dégrader les résultats système, avec un cas d'usage concret en finance, pertinent pour l'évaluation des risques IA.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2609.04476">PerfReasoning: How Well Do LLMs Reason on Hardware Performance?</a> — arXiv cs.AI. Raison : Benchmark innovant sur le raisonnement des LLMs en performance matérielle, sujet utile pour architectes SI et CTO cherchant à automatiser l'optimisation code/infra.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2609.04667">ERPBench: Evaluating LLM Agents for Enterprise Decision-Making Across Competitive Market Ecologies</a> — arXiv cs.AI. Raison : Benchmark LLM pour ERP, evaluation réaliste des agents décisionnaires en compétition de marché. Méthodologie exploitable pour experts SI.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2609.04678">Train What You Deploy:Token-Faithful Post-Training of a Production Coding</a> — arXiv cs.AI. Raison : Problème critique de fidélité des tokens dans les pipelines de post-entraînement pour agents de codage, avec une approche formelle de correction. Pertinent pour les experts en production et sécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04239">EXAONE Forecast for Finance</a> — arXiv cs.AI. Raison : Papier de recherche sur un modèle de séries temporelles financières. Intéressant pour l'IA en entreprise mais hors périmètre cybersécurité et sans application pratique immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04298">Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation</a> — arXiv cs.AI. Raison : Papier de recherche proposant une infrastructure unifiée pour l'évaluation d'agents IA sur plus de 80 benchmarks. Intéressant pour les experts en IA, mais impact pratique immédiat incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04304">Iris: Climbing to the Search Frontier</a> — arXiv cs.AI. Raison : Papier de recherche (arXiv) sur deux agents de recherche, avec données et recette d'entraînement. Intéressant pour experts IA, mais sans lien direct avec les priorités cyber ou produit immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04343">A Removal Based Approach to Improve LLM Faithfulness at Test-Time</a> — arXiv cs.AI. Raison : Papier de recherche sur la fidélité des explications des LLM, via une approche de suppression. Intéressant pour experts IA, mais impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04377">Corporate Language Model (CLM): Transforming Tacit and Fragmented Enterprise Knowledge into a Sovereign, Auditable, and Executable Corporate Intelligence Layer</a> — arXiv cs.AI. Raison : Papier proposant un cadre pour intégrer la connaissance d'entreprise dans un modèle de langage souverain et actionnable. Pertinent mais sans démonstration ni comparaison concrète.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04444">HarvestBench: Measuring Whether LLM Agents Will Pay to Avoid Killing Animals</a> — arXiv cs.AI. Raison : Premier benchmark mettant un prix sur l'évitement de dommages collatéraux, sujet intéressant pour l'IA agentique mais absence d'implication pratique immédiate pour la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04490">When Quantization Breaks Memory: Recurrent-State Write-Back in Low-Precision Temporal Inference</a> — arXiv cs.AI. Raison : Papier de recherche ciblé sur l'impact du quantificateur dans les réseaux récurrents. Intéressant pour experts en IA embarquée, mais hors cybersécurité et sans application pratique immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04493">ResLearn-XR: Residual Learning for Network Traffic and Quality-of-Experience-Aware Modeling in Extended Reality</a> — arXiv cs.AI. Raison : Papier de recherche sur un framework d'apprentissage résiduel pour trafic XR et QoE. Intéressant mais impact pratique incertain pour le public expert cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04495">Rethinking Indirect Prompt Injection as a Test-Time Search Problem</a> — arXiv cs.AI. Raison : Méthode originale pour traiter les injections indirectes via un problème de recherche, mais application pratique et reproductibilité encore floues.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04504">BioSync: Transformer-Based Cross-Modal Fusion for a Multimodal Physiological Digital Biomarker</a> — arXiv cs.AI. Raison : Recherche académique sur IA multimodale pour biomarqueurs. Intérêt technique limité car hors cybersécurité ou dev tooling, sans impact direct pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04518">What Does Multi-Harness RL Learn? Credit Assignment and Portability in Coding Agents</a> — arXiv cs.AI. Raison : Papier de recherche sur l'apprentissage par renforcement multi-harnais pour agents de codage. Intéressant mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04523">MaxKernel: Agentic Kernel Generation for TPUs</a> — arXiv cs.AI. Raison : Recherche académique sur génération agentique de kernels pour TPU, intéressante pour experts en optimisation, mais impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04528">Towards a universal language of concepts: A survey</a> — arXiv cs.AI. Raison : Recherche académique sur les programmes comme représentation universelle des concepts. Intérêt général pour l'IA, mais lien indirect et incertain avec la cybersécurité ou le développement.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04541">Data-Driven Discovery of Composition-Dependent Constitutive Models for Hyperelasticity and Viscoelasticity of Digital Materials</a> — arXiv cs.AI. Raison : Papier de recherche sur la modélisation de matériaux numériques imprimés 3D. Intéressant pour un public IA/architecture, mais sans lien direct avec la cybersécurité ou les sujets cibles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.04543">From Answers to Interpretations: Rethinking Ambiguity-Induced Aleatoric Uncertainty Estimation in LLMs</a> — arXiv cs.AI. Raison : Papier de recherche sur l'incertitude aléatoire dans les LLMs. Intéressant pour la fiabilité des modèles, mais sans application pratique immédiate pour la cybersécurité ou le développement.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Nouvelles poursuites pour violation de copyright contre OpenAI et Microsoft</strong> : Le Seattle Times et Newsday attaquent les deux entreprises, accusant leurs modèles d’avoir été entraînés sans autorisation sur leurs articles et de reproduire des extraits dans les réponses aux utilisateurs. <a href="https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft">The Verge</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft">Seattle Times and Newsday sue OpenAI and Microsoft for infringement</a> — The Verge — AI. Raison : Poursuite pour violation de copyright par entraînement IA. Suivi juridique pertinent pour stratégie IA en entreprise, mais sans impact technique immédiat.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260906-1906</guid>
-      <pubDate>Sun, 06 Sep 2026 19:06:04 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260907-1030</guid>
+      <pubDate>Mon, 07 Sep 2026 10:30:10 +0000</pubDate>
     </item>
   </channel>
 </rss>
