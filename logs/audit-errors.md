@@ -157,3 +157,6 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-09-08 19:56 UTC | scoring | Slim Spider Steals Crypto Custody Secrets From Brazilian Fin (The Hacker News) | Rate limit fournisseur LLM atteint |
 | 2026-09-09 15:14 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
 | 2026-09-10 09:45 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
+| 2026-09-11 10:01 UTC | synthese | Cyber — Stratégie & analyse | Rate limit fournisseur LLM atteint |
+| 2026-09-11 10:01 UTC | synthese | IA & Tech — Médias internationaux | Rate limit fournisseur LLM atteint |
+| 2026-09-11 10:02 UTC | synthese | IA — Labos & éditeurs | Rate limit fournisseur LLM atteint |
