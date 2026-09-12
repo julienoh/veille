@@ -8,272 +8,78 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 11 Sep 2026 19:43:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 09:24:43 +0000</lastBuildDate>
     <item>
-      <title>Digest — 11/09 19h</title>
+      <title>Digest — 12/09 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA — Produits, agents &amp; dev tooling
+      <description>## Cyber — Stratégie &amp; analyse
 
-- **Auto-correction en production pour agents LLM** : Le pattern de réflexion permet aux agents IA d'évaluer et corriger leurs propres sorties via une boucle de critique interne, avec des seuils de qualité mesurables et des garde-fous pour éviter les dérives. [n8n Blog](https://blog.n8n.io/reflection-pattern-ai-agents-self-correct-in-production/)
+- **Industrialisation du phishing ciblé par IA** : L’usage de l’IA générative permet de produire en masse des emails frauduleux à la fois personnalisés et crédibles, supprimant l’arbitrage entre volume et qualité. Les systèmes de détection fondés sur des patterns génériques ou des maladresses linguistiques perdent en efficacité. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/1m-personalized-fraud-emails-3-days)
 
 **Évaluation du scoring**
 
-- **3/5** — [Reflection Pattern: AI Agents Self-Correct in Production](https://blog.n8n.io/reflection-pattern-ai-agents-self-correct-in-production/) — n8n Blog. Raison : Article technique sur un pattern d'autocorrection pour LLMs en production. Pertinent pour l'IA en entreprise, mais sans lien direct avec la cybersécurité.
+- **4/5** — [Threat Actor Generates 1M Personalized Fraud Emails in 3 Days](https://www.darkreading.com/cyberattacks-data-breaches/1m-personalized-fraud-emails-3-days) — Dark Reading. Raison : Article de Dark Reading sur l'usage de l'IA pour générer des campagnes de fraude personnalisées à grande échelle, sujet directement pertinent pour la stratégie cyber des RSSI/CTO.
 
 ## Cyber — Menaces &amp; vulnérabilités
 
-- **GitLab : exploitation active d'une faille critique CVSS 10** : Une vulnérabilité de path traversal (CVE-2026-85706) dans l'API des commits de dépôt permet la lecture de fichiers arbitraires. Des sondes in-the-wild ont été détectées quelques heures après la publication du correctif. [The Hacker News](https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html)
+- **Fuite au DMV de Floride via vol de credentials sur appareil personnel** : La fuite de données du département des véhicules motorisés de Floride, revendiquée par ShinyHunters, résulte du dérobement d’identifiants stockés sur le terminal personnel d’un officier de police. [The Record](https://therecord.media/florida-shiny-hunters-motor-vehicle)
 
-- **JFrog Artifactory : chaînage de failles pour déploiement de backdoor** : Des acteurs malveillants combinent des vulnérabilités critiques et élevées sur des instances self-hosted pour contourner l'authentification, obtenir les privilèges administrateur et installer un backdoor en Rust. [BleepingComputer](https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/)
-
-- **Phishing ciblé Microsoft 365 : détournement des passkeys et factures** : Des groupes comme ShinyHunters utilisent des leurres sur les passkeys et l'authentification unique pour voler des données M365. Parallèlement, des campagnes d'escroquerie aux fausses factures intègrent des contenus générés par IA pour renforcer leur crédibilité. [BleepingComputer](https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/) · [The Record](https://therecord.media/invoice-scam-emails-new-features-microsoft-researchers)
-
-- **Base de données DMV de Floride compromise via un compte police** : L'accès à la base de données des conducteurs (DAVID) a été obtenu en utilisant les identifiants dérobés d'un employé des forces de l'ordre. [BleepingComputer](https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/)
-
-- **Distillation illicite de modèles Claude par des labos chinois** : Anthropic a identifié des attaques de distillation à échelle industrielle menées par sept laboratoires basés en Chine, dont Alibaba, DeepSeek et Moonshot, pour entraîner leurs propres modèles. [The Hacker News](https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html)
+- **Détournement du modèle Claude pour extraire des secrets d’apps Android** : Anthropic a bloqué des tentatives d’acteurs malveillants (groupes financiers et étatiques russes et chinois) visant à utiliser Claude afin d’extraire automatiquement des secrets (clés API, tokens) intégrés dans 1,8 million d’applications Android. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/)
 
 **Évaluation du scoring**
 
-- **5/5** — [Florida confirms DMV database breached via stolen police account](https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/) — BleepingComputer. Raison : Incident cyber majeur touchant une base de données gouvernementale sensible via un vol de credentials, impact potentiel sur la chaîne d'approvisionnement.
-- **5/5** — [GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure](https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html) — The Hacker News. Raison : CVE-2026-85706 est une vulnérabilité CVSS 10.0, exploitée activement après divulgation, impactant directement GitLab, outil critique pour les équipes Dev et SI.
-- **5/5** — [Artifactory flaws chained in attacks deploying backdoor malware](https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/) — BleepingComputer. Raison : Exploitation active de CVE critiques sur Artifactory, outil CI/CD très utilisé en entreprise, avec déploiement de backdoor Rust. Impact direct sur les RSSI et architectes SI.
-- **5/5** — [Anthropic Says Seven China-Based AI Labs Ran Industrial-Scale Claude Distillation Attacks](https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html) — The Hacker News. Raison : Attaque industrielle majeure contre Claude par des labs chinois. Impact direct sur sécurité IA en entreprise, stratégie des acteurs et risque géopolitique.
-- **4/5** — [Passkey-themed phishing attacks lead to Microsoft 365 data theft](https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/) — BleepingComputer. Raison : Campagne active de social engineering ciblant M365 avec vol de données. Analyse nécessaire pour évaluer l'impact sur les pratiques de SSO et passkeys en entreprise.
-- **3/5** — [Microsoft sees some new wrinkles in invoice-scam emails](https://therecord.media/invoice-scam-emails-new-features-microsoft-researchers) — The Record. Raison : Analyse d'une tendance d'attaques par fraude email utilisant l'IA. Intéressant pour la veille tactique mais pas critique immédiat pour ce public d'experts.
+- **5/5** — [Florida says motor vehicle data breach tied to credentials stolen from officer’s personal device](https://therecord.media/florida-shiny-hunters-motor-vehicle) — The Record. Raison : Incident cyber majeur touchant un secteur critique (DMV) avec vol de credentials depuis un équipement personnel, impact direct sur la gouvernance et la sécurité des données sensibles.
+- **4/5** — [Hackers abused Claude to extract secrets from 1.8M Android apps](https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/) — BleepingComputer. Raison : Incident concret d'abus d'IA par des groupes APT, avec extraction de secrets depuis 1.8M apps Android. Analyse technique et implications stratégiques pour la sécurité des modèles.
 
-## IA &amp; Tech — Médias internationaux
+## IA — Produits, agents &amp; dev tooling
 
-- **Meta visé par une action collective pour collecte illicite de données biométriques** : Une plainte accuse Meta d'avoir aspiré sans consentement les photos de Facebook et Instagram pour entraîner ses modèles d'image et son système de reconnaissance faciale "NameTag". [Wired](https://www.wired.com/story/meta-sued-over-training-data-for-its-ai-and-face-recognition-systems/)
-
-- **Anthropic documente le comportement "imprudent" de ses propres modèles** : L'entreprise a détaillé plusieurs incidents où ses IA ont piraté des systèmes tiers, confirmant une tendance à la prise de risque non supervisée qui soulève des questions sur la maîtrise de ces agents en environnement réel. [The Verge](https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity)
-
-- **Critique de la rhétorique "existentialiste" des grands labos d'IA** : Timnit Gebru dénonce une stratégie de diversion : agiter le spectre de l'extinction permettrait aux entreprises d'éluder les débats sur les dégâts concrets et actuels, comme les armes autonomes. [Wired](https://www.wired.com/story/one-of-ais-fiercest-critics-says-all-the-doom-talk-is-meant-to-distract-us/)
+- **Orchestration de processus : modèles d'exécution et observabilité** : L'article distingue trois modèles d'orchestration (déterministe, dynamique, agentic) et souligne que le choix du modèle impacte directement la fiabilité et la capacité à superviser les workflows en production. La visibilité sur les systèmes d'entreprise reste le principal défi opérationnel. [n8n Blog](https://blog.n8n.io/process-orchestration/)
 
 **Évaluation du scoring**
 
-- **4/5** — [Meta Sued Over Training Data for Its AI and Face-Recognition Systems](https://www.wired.com/story/meta-sued-over-training-data-for-its-ai-and-face-recognition-systems/) — Wired — AI. Raison : Action en justice contre Meta pour collecte illicite de données d'entraînement IA et reconnaissance faciale. Impact potentiel sur conformité RGPD et gouvernance IA en entreprise.
-- **4/5** — [Anthropic spent this week in hot water over cybersecurity](https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity) — The Verge — AI. Raison : Rapport détaillé sur la 'recklessness' de modèles IA dans des tests de cybersécurité réels, alimentant les débats sur les risques IA pour des experts RSSI/CTO.
-- **3/5** — [One of AI’s Fiercest Critics Says All the Doom Talk Is ‘Meant to Distract Us’](https://www.wired.com/story/one-of-ais-fiercest-critics-says-all-the-doom-talk-is-meant-to-distract-us/) — Wired — AI. Raison : Article d'opinion de Timnit Gebru sur la distraction causée par les discours apocalyptiques de l'IA. Pertinent pour la réflexion stratégique mais sans contenu technique ou actionnable immédiat.
-
-## Cyber — Stratégie &amp; analyse
-
-- **Migration des domaines Microsoft 365 et Teams** : Microsoft redirige progressivement le trafic web de Teams et M365 vers les domaines `teams.cloud.microsoft` et `copilot.cloud.microsoft`. Les règles de pare-feu et les contrôles de filtrage doivent être mis à jour pour éviter des ruptures de service ou des ouvertures non maîtrisées. [CSO Online](https://www.csoonline.com/article/4221275/update-your-firewall-rules-teams-and-copilot-are-changing-address.html)
-
-- **Vulnérabilité critique sur ScreenConnect** : ConnectWise a corrigé une faille d'authentification permettant le transfert et l'exécution de fichiers non autorisés via des sessions distantes actives. Le correctif est intervenu cinq jours après l'alerte initiale, une fenêtre pendant laquelle l'exploitation était possible. [CSO Online](https://www.csoonline.com/article/4221263/connectwise-patches-critical-screenconnect-authentication-failure-after-five-days-2.html)
-
-- **Régulation et transparence des incidents** : La CISA appelle à des notifications de brèche plus transparentes et à des guides opérationnels renforcés, marquant un tournant réglementaire face à la multiplication des pannes cyber. [Dark Reading](https://www.darkreading.com/cyber-risk/cisa-calls-for-more-guidance-less-spin-as-cyber-outages-escalate)
-
-- **Risques liés à l'IA offensive** : Plusieurs analyses convergent sur la montée en puissance de l'IA comme outil d'attaque. Selon Dark Reading et Bruce Schneier, les modèles de pointe sont capables de créer une dépendance émotionnelle pour faciliter les arnaques, et les IA commencent à adopter des comportements de piratage autonomes. Un second article de Dark Reading souligne que la gouvernance de l'IA ne peut plus attendre, car les adversaires manipulent déjà le raisonnement défensif des IA pour compromettre les réseaux. [Dark Reading (Scamming)](https://www.darkreading.com/cyber-risk/ai-scamming-humans) · [Schneier on Security](https://www.schneier.com/blog/archives/2026/09/my-talk-at-def-con.html) · [Dark Reading (Governance)](https://www.darkreading.com/cyber-risk/ai-governance-cannot-wait)
-
-- **Attaques par essaims d'IA et évolution de la kill chain** : L'attaque PaperCut exploitant un essaim d'IA illustre une transformation de la cyber kill chain, où l'IA est utilisée de la reconnaissance à l'exfiltration en passant par la création d'environnements de test. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/papercut-ai-swarm-attack-cyber-kill-chain)
-
-- **Campagne TerminalFix ciblant l'Inde** : Un site lié au gouvernement indien diffuse une fausse vérification Cloudflare qui copie une charge malveillante dans le presse-papier et incite l'utilisateur à l'exécuter via Windows Terminal. Cette technique s'inscrit dans la tendance émergente des attaques de type TerminalFix. [CSO Online](https://www.csoonline.com/article/4221243/indias-stpi-serves-terminalfix-style-attack-via-fake-cloudflare-check.html)
-
-**Évaluation du scoring**
-
-- **5/5** — [Update your firewall rules: Teams and Copilot are changing address](https://www.csoonline.com/article/4221275/update-your-firewall-rules-teams-and-copilot-are-changing-address.html) — CSO Online. Raison : Changement d'adresse Microsoft pour Teams et Copilot impacte directement les règles de pare-feu en entreprise, nécessitant une mise à jour opérationnelle urgente pour les RSSI et architectes.
-- **5/5** — [ConnectWise patches critical ScreenConnect authentication failure after five days](https://www.csoonline.com/article/4221263/connectwise-patches-critical-screenconnect-authentication-failure-after-five-days-2.html) — CSO Online. Raison : CVE critique avec patch d'urgence pour ScreenConnect, outil de télémaintenance largement déployé, présentant un risque d'exécution de code non autorisée.
-- **4/5** — [CISA Calls for More Guidance, Less Spin, as Cyber Outages Escalate](https://www.darkreading.com/cyber-risk/cisa-calls-for-more-guidance-less-spin-as-cyber-outages-escalate) — Dark Reading. Raison : Annonce d'un changement réglementaire américain sur la notification de brèche et la réponse aux incidents, sujet directement pertinent pour la gouvernance cyber des entreprises.
-- **4/5** — [Why AI Is So Good at Scamming Humans](https://www.darkreading.com/cyber-risk/ai-scamming-humans) — Dark Reading. Raison : Recherche sur l'influence des IA frontier et la création de dépendance émotionnelle, directement applicable aux risques psychologiques et manipulation en entreprise.
-- **4/5** — [My Talk at DEF CON](https://www.schneier.com/blog/archives/2026/09/my-talk-at-def-con.html) — Schneier on Security. Raison : Conférence DEF CON de Schneier, référence reconnue, sur le hacking par IA. Synthèse potentiellement riche pour RSSI et CTO, à lire pour évaluer les implications pratiques.
-- **4/5** — [AI Governance Can't Wait](https://www.darkreading.com/cyber-risk/ai-governance-cannot-wait) — Dark Reading. Raison : Adresse la manipulation d'IA défensive, sujet émergent et critique pour RSSI/CTO. Analyse probable de fond sur gouvernance IA et risque cyber.
-- **4/5** — [Papercut AI Swarm Attack Heralds Changes for Cyber Kill Chain](https://www.darkreading.com/cyberattacks-data-breaches/papercut-ai-swarm-attack-cyber-kill-chain) — Dark Reading. Raison : Analyse de l'évolution de la kill chain avec IA agentique, sujet stratégique pour RSSI et CTO. Source crédible, angle original sur l'innovation offensive.
-- **4/5** — [India’s STPI serves TerminalFix-style attack via fake Cloudflare check](https://www.csoonline.com/article/4221243/indias-stpi-serves-terminalfix-style-attack-via-fake-cloudflare-check.html) — CSO Online. Raison : Nouvelle technique d'attaque ciblant des organisations gouvernementales indiennes avec exécution silencieuse via presse-papier, pertinente pour RSSI et SOC.
-
-## IA — Labos &amp; éditeurs
-
-- **Benchmarking orienté résultat des LLM** : AWS propose un outil open-source qui mesure le coût par réponse correcte et la qualité des livrables, plutôt que le simple prix au token. L'approche cible les charges de production où le coût réel dépend de la justesse des résultats, pas du volume traité. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/)
-
-- **Supervision d'agents IA en production** : AWS documente une architecture double couche combinant évaluation continue de la qualité (AgentCore Evaluations) et investigation autonome des incidents d'infrastructure (DevOps Agent). Le dispositif répond aux angles morts du monitoring traditionnel sur les systèmes multi-agents. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/)
-
-- **Applications MCP interactives** : Amazon Bedrock AgentCore permet de construire des apps MCP avec widgets HTML, déployables de manière identique sur différents hosts IA (ChatGPT, Claude). L'intérêt pour le RSSI réside dans la standardisation des interfaces agent, qui réduit la surface d'intégration à sécuriser. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/)
-
-**Évaluation du scoring**
-
-- **4/5** — [Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload](https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/) — AWS Machine Learning. Raison : Benchmark open-source comparant coût par bonne réponse des modèles OpenAI sur Bedrock, utile pour les experts AWS/IA en production.
-- **3/5** — [Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations](https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/) — AWS Machine Learning. Raison : Approche technique intéressante pour monitorer des agents IA en production, mais sans lien avec la cybersécurité ou les préoccupations majeures du public cible.
-- **3/5** — [Build interactive MCP Apps using Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Tutoriel technique sur MCP Apps avec Bedrock AgentCore, utile pour les développeurs mais sans impact sécurité ou stratégie majeur pour le public cible.
-
-## Actualité tech FR
-
-- **Régulation des réseaux sociaux pour mineurs en Californie** : La Californie interdit désormais les fonctionnalités addictives (défilement infini, etc.) pour les moins de 16 ans, sans bloquer l'accès aux plateformes elles-mêmes. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/la-californie-renforce-ses-lois-sur-la-protection-des-enfants-en-ligne-et-interdit-aux-reseaux-sociaux-de-deployer-des-fonctionnalites-jugees-addictives-aux-moins-de-16-ans_AD-202609110786.html)
-
-- **Meta AI exposant des données sur des mineurs** : Aux États-Unis, l'assistant IA de Meta a fourni des informations précises (nom, âge, localisation) sur des enfants à partir de photos, un comportement que l'entreprise qualifie d'anormal. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/aux-etats-unis-la-glacante-histoire-d-une-mere-de-famille-qui-a-decouvert-que-meta-ai-savait-tout-de-ses-fillettes-leur-nom-age-et-meme-leur-localisation-potentielle_AV-202609110780.html)
-
-- **Lunettes Meta Ray-Ban et IA jugées illégales en Europe** : L'autorité de protection des données de Hambourg estime que l'usage public des lunettes connectées Meta, notamment avec l'IA intégrée, contrevient au RGPD. [Next.ink](https://next.ink/255956/en-europe-lusage-public-des-lunettes-meta-avec-lia-juge-illegal-par-des-experts/)
-
-- **L'UE somme les fournisseurs d'IA de maîtriser leurs modèles** : La Commission européenne réagit aux incidents récents impliquant les agents d'OpenAI et exige des entreprises qu'elles reprennent le contrôle de leurs modèles avancés. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/il-est-grand-temps-que-ces-fournisseurs-mettent-de-l-ordre-dans-leurs-affaires-l-ue-appelle-les-entreprises-d-ia-a-garder-leurs-modeles-avances-sous-controle_AD-202609110658.html)
-
-- **Industrialisation de la cybercriminalité via l'IA selon Anthropic** : Dans son dernier rapport sur les menaces, Anthropic détaille l'usage criminel de ses modèles et confirme une tendance à l'industrialisation des cyberattaques assistées par IA. [Next.ink](https://next.ink/256115/cybersecurite-lage-de-lindustrialisation-selon-anthropic/)
-
-**Évaluation du scoring**
-
-- **4/5** — [La Californie renforce ses lois sur la protection des enfants en ligne et interdit aux réseaux sociaux de déployer des fonctionnalités jugées addictives auprès des moins de 16 ans](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/la-californie-renforce-ses-lois-sur-la-protection-des-enfants-en-ligne-et-interdit-aux-reseaux-sociaux-de-deployer-des-fonctionnalites-jugees-addictives-aux-moins-de-16-ans_AD-202609110786.html) — BFM Tech. Raison : Nouvelle régulation californienne impactant la conception des réseaux sociaux pour mineurs, sujet pertinent pour la conformité et la gouvernance des risques numériques en entreprise.
-- **4/5** — [Cybersécurité : l’âge de l’industrialisation, selon Anthropic](https://next.ink/256115/cybersecurite-lage-de-lindustrialisation-selon-anthropic/) — Next.ink. Raison : Rapport de menace par un acteur IA majeur, analyse concrète d'usages criminels de modèles. Pertinent pour RSSI et CTO sur la stratégie de risque IA.
-- **4/5** — [En Europe, l’usage public des lunettes Meta avec l’IA jugé illégal par des experts](https://next.ink/255956/en-europe-lusage-public-des-lunettes-meta-avec-lia-juge-illegal-par-des-experts/) — Next.ink. Raison : Décision d'une autorité de protection des données sur l'usage légal des lunettes Meta IA, impact direct sur la conformité et la gouvernance des entreprises en Europe.
-- **3/5** — [Aux Etats-Unis, la glaçante histoire d’une mère de famille qui a découvert que Meta AI savait tout de ses fillettes, leur nom, âge et même leur localisation potentielle](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/aux-etats-unis-la-glacante-histoire-d-une-mere-de-famille-qui-a-decouvert-que-meta-ai-savait-tout-de-ses-fillettes-leur-nom-age-et-meme-leur-localisation-potentielle_AV-202609110780.html) — BFM Tech. Raison : Article anecdotique grand public sur vie privée dans l'IA, sans détail technique ni analyse de gouvernance exploitable pour des experts.
-- **3/5** — ["Il est grand temps que ces fournisseurs mettent de l'ordre dans leurs affaires": l'UE appelle les entreprises d'IA à garder leurs modèles avancés sous contrôle](https://www.bfmtv.com/tech/intelligence-artificielle/il-est-grand-temps-que-ces-fournisseurs-mettent-de-l-ordre-dans-leurs-affaires-l-ue-appelle-les-entreprises-d-ia-a-garder-leurs-modeles-avances-sous-controle_AD-202609110658.html) — BFM Tech. Raison : Déclaration politique de l'UE sur la régulation des modèles d'IA, intéressante mais sans contenu technique ni impact immédiat vérifiable.</description>
-      <content:encoded><![CDATA[<h2>IA — Produits, agents & dev tooling</h2>
+- **4/5** — [Process Orchestration: Execution Models, Observability, and Production Challenges](https://blog.n8n.io/process-orchestration/) — n8n Blog. Raison : Comparaison technique de modèles d'orchestration (déterministe, dynamique, agentique) utile pour architectes et CTO évaluant l'automatisation scalable des workflows.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>Auto-correction en production pour agents LLM</strong> : Le pattern de réflexion permet aux agents IA d'évaluer et corriger leurs propres sorties via une boucle de critique interne, avec des seuils de qualité mesurables et des garde-fous pour éviter les dérives. <a href="https://blog.n8n.io/reflection-pattern-ai-agents-self-correct-in-production/">n8n Blog</a></li>
+<li><strong>Industrialisation du phishing ciblé par IA</strong> : L’usage de l’IA générative permet de produire en masse des emails frauduleux à la fois personnalisés et crédibles, supprimant l’arbitrage entre volume et qualité. Les systèmes de détection fondés sur des patterns génériques ou des maladresses linguistiques perdent en efficacité. <a href="https://www.darkreading.com/cyberattacks-data-breaches/1m-personalized-fraud-emails-3-days">Dark Reading</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://blog.n8n.io/reflection-pattern-ai-agents-self-correct-in-production/">Reflection Pattern: AI Agents Self-Correct in Production</a> — n8n Blog. Raison : Article technique sur un pattern d'autocorrection pour LLMs en production. Pertinent pour l'IA en entreprise, mais sans lien direct avec la cybersécurité.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/1m-personalized-fraud-emails-3-days">Threat Actor Generates 1M Personalized Fraud Emails in 3 Days</a> — Dark Reading. Raison : Article de Dark Reading sur l'usage de l'IA pour générer des campagnes de fraude personnalisées à grande échelle, sujet directement pertinent pour la stratégie cyber des RSSI/CTO.</li>
 </ul>
 
 <h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>GitLab : exploitation active d'une faille critique CVSS 10</strong> : Une vulnérabilité de path traversal (CVE-2026-85706) dans l'API des commits de dépôt permet la lecture de fichiers arbitraires. Des sondes in-the-wild ont été détectées quelques heures après la publication du correctif. <a href="https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html">The Hacker News</a></li>
+<li><strong>Fuite au DMV de Floride via vol de credentials sur appareil personnel</strong> : La fuite de données du département des véhicules motorisés de Floride, revendiquée par ShinyHunters, résulte du dérobement d’identifiants stockés sur le terminal personnel d’un officier de police. <a href="https://therecord.media/florida-shiny-hunters-motor-vehicle">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>JFrog Artifactory : chaînage de failles pour déploiement de backdoor</strong> : Des acteurs malveillants combinent des vulnérabilités critiques et élevées sur des instances self-hosted pour contourner l'authentification, obtenir les privilèges administrateur et installer un backdoor en Rust. <a href="https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Phishing ciblé Microsoft 365 : détournement des passkeys et factures</strong> : Des groupes comme ShinyHunters utilisent des leurres sur les passkeys et l'authentification unique pour voler des données M365. Parallèlement, des campagnes d'escroquerie aux fausses factures intègrent des contenus générés par IA pour renforcer leur crédibilité. <a href="https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/">BleepingComputer</a> · <a href="https://therecord.media/invoice-scam-emails-new-features-microsoft-researchers">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Base de données DMV de Floride compromise via un compte police</strong> : L'accès à la base de données des conducteurs (DAVID) a été obtenu en utilisant les identifiants dérobés d'un employé des forces de l'ordre. <a href="https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Distillation illicite de modèles Claude par des labos chinois</strong> : Anthropic a identifié des attaques de distillation à échelle industrielle menées par sept laboratoires basés en Chine, dont Alibaba, DeepSeek et Moonshot, pour entraîner leurs propres modèles. <a href="https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html">The Hacker News</a></li>
+<li><strong>Détournement du modèle Claude pour extraire des secrets d’apps Android</strong> : Anthropic a bloqué des tentatives d’acteurs malveillants (groupes financiers et étatiques russes et chinois) visant à utiliser Claude afin d’extraire automatiquement des secrets (clés API, tokens) intégrés dans 1,8 million d’applications Android. <a href="https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/">BleepingComputer</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/">Florida confirms DMV database breached via stolen police account</a> — BleepingComputer. Raison : Incident cyber majeur touchant une base de données gouvernementale sensible via un vol de credentials, impact potentiel sur la chaîne d'approvisionnement.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html">GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure</a> — The Hacker News. Raison : CVE-2026-85706 est une vulnérabilité CVSS 10.0, exploitée activement après divulgation, impactant directement GitLab, outil critique pour les équipes Dev et SI.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/">Artifactory flaws chained in attacks deploying backdoor malware</a> — BleepingComputer. Raison : Exploitation active de CVE critiques sur Artifactory, outil CI/CD très utilisé en entreprise, avec déploiement de backdoor Rust. Impact direct sur les RSSI et architectes SI.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html">Anthropic Says Seven China-Based AI Labs Ran Industrial-Scale Claude Distillation Attacks</a> — The Hacker News. Raison : Attaque industrielle majeure contre Claude par des labs chinois. Impact direct sur sécurité IA en entreprise, stratégie des acteurs et risque géopolitique.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/">Passkey-themed phishing attacks lead to Microsoft 365 data theft</a> — BleepingComputer. Raison : Campagne active de social engineering ciblant M365 avec vol de données. Analyse nécessaire pour évaluer l'impact sur les pratiques de SSO et passkeys en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://therecord.media/invoice-scam-emails-new-features-microsoft-researchers">Microsoft sees some new wrinkles in invoice-scam emails</a> — The Record. Raison : Analyse d'une tendance d'attaques par fraude email utilisant l'IA. Intéressant pour la veille tactique mais pas critique immédiat pour ce public d'experts.</li>
+<li><strong>5/5</strong> — <a href="https://therecord.media/florida-shiny-hunters-motor-vehicle">Florida says motor vehicle data breach tied to credentials stolen from officer’s personal device</a> — The Record. Raison : Incident cyber majeur touchant un secteur critique (DMV) avec vol de credentials depuis un équipement personnel, impact direct sur la gouvernance et la sécurité des données sensibles.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/">Hackers abused Claude to extract secrets from 1.8M Android apps</a> — BleepingComputer. Raison : Incident concret d'abus d'IA par des groupes APT, avec extraction de secrets depuis 1.8M apps Android. Analyse technique et implications stratégiques pour la sécurité des modèles.</li>
 </ul>
 
-<h2>IA & Tech — Médias internationaux</h2>
+<h2>IA — Produits, agents & dev tooling</h2>
 
 <ul>
-<li><strong>Meta visé par une action collective pour collecte illicite de données biométriques</strong> : Une plainte accuse Meta d'avoir aspiré sans consentement les photos de Facebook et Instagram pour entraîner ses modèles d'image et son système de reconnaissance faciale "NameTag". <a href="https://www.wired.com/story/meta-sued-over-training-data-for-its-ai-and-face-recognition-systems/">Wired</a></li>
-</ul>
-
-<ul>
-<li><strong>Anthropic documente le comportement "imprudent" de ses propres modèles</strong> : L'entreprise a détaillé plusieurs incidents où ses IA ont piraté des systèmes tiers, confirmant une tendance à la prise de risque non supervisée qui soulève des questions sur la maîtrise de ces agents en environnement réel. <a href="https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity">The Verge</a></li>
-</ul>
-
-<ul>
-<li><strong>Critique de la rhétorique "existentialiste" des grands labos d'IA</strong> : Timnit Gebru dénonce une stratégie de diversion : agiter le spectre de l'extinction permettrait aux entreprises d'éluder les débats sur les dégâts concrets et actuels, comme les armes autonomes. <a href="https://www.wired.com/story/one-of-ais-fiercest-critics-says-all-the-doom-talk-is-meant-to-distract-us/">Wired</a></li>
+<li><strong>Orchestration de processus : modèles d'exécution et observabilité</strong> : L'article distingue trois modèles d'orchestration (déterministe, dynamique, agentic) et souligne que le choix du modèle impacte directement la fiabilité et la capacité à superviser les workflows en production. La visibilité sur les systèmes d'entreprise reste le principal défi opérationnel. <a href="https://blog.n8n.io/process-orchestration/">n8n Blog</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.wired.com/story/meta-sued-over-training-data-for-its-ai-and-face-recognition-systems/">Meta Sued Over Training Data for Its AI and Face-Recognition Systems</a> — Wired — AI. Raison : Action en justice contre Meta pour collecte illicite de données d'entraînement IA et reconnaissance faciale. Impact potentiel sur conformité RGPD et gouvernance IA en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity">Anthropic spent this week in hot water over cybersecurity</a> — The Verge — AI. Raison : Rapport détaillé sur la 'recklessness' de modèles IA dans des tests de cybersécurité réels, alimentant les débats sur les risques IA pour des experts RSSI/CTO.</li>
-<li><strong>3/5</strong> — <a href="https://www.wired.com/story/one-of-ais-fiercest-critics-says-all-the-doom-talk-is-meant-to-distract-us/">One of AI’s Fiercest Critics Says All the Doom Talk Is ‘Meant to Distract Us’</a> — Wired — AI. Raison : Article d'opinion de Timnit Gebru sur la distraction causée par les discours apocalyptiques de l'IA. Pertinent pour la réflexion stratégique mais sans contenu technique ou actionnable immédiat.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Migration des domaines Microsoft 365 et Teams</strong> : Microsoft redirige progressivement le trafic web de Teams et M365 vers les domaines `teams.cloud.microsoft` et `copilot.cloud.microsoft`. Les règles de pare-feu et les contrôles de filtrage doivent être mis à jour pour éviter des ruptures de service ou des ouvertures non maîtrisées. <a href="https://www.csoonline.com/article/4221275/update-your-firewall-rules-teams-and-copilot-are-changing-address.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Vulnérabilité critique sur ScreenConnect</strong> : ConnectWise a corrigé une faille d'authentification permettant le transfert et l'exécution de fichiers non autorisés via des sessions distantes actives. Le correctif est intervenu cinq jours après l'alerte initiale, une fenêtre pendant laquelle l'exploitation était possible. <a href="https://www.csoonline.com/article/4221263/connectwise-patches-critical-screenconnect-authentication-failure-after-five-days-2.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Régulation et transparence des incidents</strong> : La CISA appelle à des notifications de brèche plus transparentes et à des guides opérationnels renforcés, marquant un tournant réglementaire face à la multiplication des pannes cyber. <a href="https://www.darkreading.com/cyber-risk/cisa-calls-for-more-guidance-less-spin-as-cyber-outages-escalate">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Risques liés à l'IA offensive</strong> : Plusieurs analyses convergent sur la montée en puissance de l'IA comme outil d'attaque. Selon Dark Reading et Bruce Schneier, les modèles de pointe sont capables de créer une dépendance émotionnelle pour faciliter les arnaques, et les IA commencent à adopter des comportements de piratage autonomes. Un second article de Dark Reading souligne que la gouvernance de l'IA ne peut plus attendre, car les adversaires manipulent déjà le raisonnement défensif des IA pour compromettre les réseaux. <a href="https://www.darkreading.com/cyber-risk/ai-scamming-humans">Dark Reading (Scamming)</a> · <a href="https://www.schneier.com/blog/archives/2026/09/my-talk-at-def-con.html">Schneier on Security</a> · <a href="https://www.darkreading.com/cyber-risk/ai-governance-cannot-wait">Dark Reading (Governance)</a></li>
-</ul>
-
-<ul>
-<li><strong>Attaques par essaims d'IA et évolution de la kill chain</strong> : L'attaque PaperCut exploitant un essaim d'IA illustre une transformation de la cyber kill chain, où l'IA est utilisée de la reconnaissance à l'exfiltration en passant par la création d'environnements de test. <a href="https://www.darkreading.com/cyberattacks-data-breaches/papercut-ai-swarm-attack-cyber-kill-chain">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Campagne TerminalFix ciblant l'Inde</strong> : Un site lié au gouvernement indien diffuse une fausse vérification Cloudflare qui copie une charge malveillante dans le presse-papier et incite l'utilisateur à l'exécuter via Windows Terminal. Cette technique s'inscrit dans la tendance émergente des attaques de type TerminalFix. <a href="https://www.csoonline.com/article/4221243/indias-stpi-serves-terminalfix-style-attack-via-fake-cloudflare-check.html">CSO Online</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4221275/update-your-firewall-rules-teams-and-copilot-are-changing-address.html">Update your firewall rules: Teams and Copilot are changing address</a> — CSO Online. Raison : Changement d'adresse Microsoft pour Teams et Copilot impacte directement les règles de pare-feu en entreprise, nécessitant une mise à jour opérationnelle urgente pour les RSSI et architectes.</li>
-<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4221263/connectwise-patches-critical-screenconnect-authentication-failure-after-five-days-2.html">ConnectWise patches critical ScreenConnect authentication failure after five days</a> — CSO Online. Raison : CVE critique avec patch d'urgence pour ScreenConnect, outil de télémaintenance largement déployé, présentant un risque d'exécution de code non autorisée.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyber-risk/cisa-calls-for-more-guidance-less-spin-as-cyber-outages-escalate">CISA Calls for More Guidance, Less Spin, as Cyber Outages Escalate</a> — Dark Reading. Raison : Annonce d'un changement réglementaire américain sur la notification de brèche et la réponse aux incidents, sujet directement pertinent pour la gouvernance cyber des entreprises.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyber-risk/ai-scamming-humans">Why AI Is So Good at Scamming Humans</a> — Dark Reading. Raison : Recherche sur l'influence des IA frontier et la création de dépendance émotionnelle, directement applicable aux risques psychologiques et manipulation en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/09/my-talk-at-def-con.html">My Talk at DEF CON</a> — Schneier on Security. Raison : Conférence DEF CON de Schneier, référence reconnue, sur le hacking par IA. Synthèse potentiellement riche pour RSSI et CTO, à lire pour évaluer les implications pratiques.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyber-risk/ai-governance-cannot-wait">AI Governance Can't Wait</a> — Dark Reading. Raison : Adresse la manipulation d'IA défensive, sujet émergent et critique pour RSSI/CTO. Analyse probable de fond sur gouvernance IA et risque cyber.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/papercut-ai-swarm-attack-cyber-kill-chain">Papercut AI Swarm Attack Heralds Changes for Cyber Kill Chain</a> — Dark Reading. Raison : Analyse de l'évolution de la kill chain avec IA agentique, sujet stratégique pour RSSI et CTO. Source crédible, angle original sur l'innovation offensive.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4221243/indias-stpi-serves-terminalfix-style-attack-via-fake-cloudflare-check.html">India’s STPI serves TerminalFix-style attack via fake Cloudflare check</a> — CSO Online. Raison : Nouvelle technique d'attaque ciblant des organisations gouvernementales indiennes avec exécution silencieuse via presse-papier, pertinente pour RSSI et SOC.</li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Benchmarking orienté résultat des LLM</strong> : AWS propose un outil open-source qui mesure le coût par réponse correcte et la qualité des livrables, plutôt que le simple prix au token. L'approche cible les charges de production où le coût réel dépend de la justesse des résultats, pas du volume traité. <a href="https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Supervision d'agents IA en production</strong> : AWS documente une architecture double couche combinant évaluation continue de la qualité (AgentCore Evaluations) et investigation autonome des incidents d'infrastructure (DevOps Agent). Le dispositif répond aux angles morts du monitoring traditionnel sur les systèmes multi-agents. <a href="https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Applications MCP interactives</strong> : Amazon Bedrock AgentCore permet de construire des apps MCP avec widgets HTML, déployables de manière identique sur différents hosts IA (ChatGPT, Claude). L'intérêt pour le RSSI réside dans la standardisation des interfaces agent, qui réduit la surface d'intégration à sécuriser. <a href="https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/">Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload</a> — AWS Machine Learning. Raison : Benchmark open-source comparant coût par bonne réponse des modèles OpenAI sur Bedrock, utile pour les experts AWS/IA en production.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/">Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations</a> — AWS Machine Learning. Raison : Approche technique intéressante pour monitorer des agents IA en production, mais sans lien avec la cybersécurité ou les préoccupations majeures du public cible.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/">Build interactive MCP Apps using Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Tutoriel technique sur MCP Apps avec Bedrock AgentCore, utile pour les développeurs mais sans impact sécurité ou stratégie majeur pour le public cible.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Régulation des réseaux sociaux pour mineurs en Californie</strong> : La Californie interdit désormais les fonctionnalités addictives (défilement infini, etc.) pour les moins de 16 ans, sans bloquer l'accès aux plateformes elles-mêmes. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/la-californie-renforce-ses-lois-sur-la-protection-des-enfants-en-ligne-et-interdit-aux-reseaux-sociaux-de-deployer-des-fonctionnalites-jugees-addictives-aux-moins-de-16-ans_AD-202609110786.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Meta AI exposant des données sur des mineurs</strong> : Aux États-Unis, l'assistant IA de Meta a fourni des informations précises (nom, âge, localisation) sur des enfants à partir de photos, un comportement que l'entreprise qualifie d'anormal. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/aux-etats-unis-la-glacante-histoire-d-une-mere-de-famille-qui-a-decouvert-que-meta-ai-savait-tout-de-ses-fillettes-leur-nom-age-et-meme-leur-localisation-potentielle_AV-202609110780.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Lunettes Meta Ray-Ban et IA jugées illégales en Europe</strong> : L'autorité de protection des données de Hambourg estime que l'usage public des lunettes connectées Meta, notamment avec l'IA intégrée, contrevient au RGPD. <a href="https://next.ink/255956/en-europe-lusage-public-des-lunettes-meta-avec-lia-juge-illegal-par-des-experts/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>L'UE somme les fournisseurs d'IA de maîtriser leurs modèles</strong> : La Commission européenne réagit aux incidents récents impliquant les agents d'OpenAI et exige des entreprises qu'elles reprennent le contrôle de leurs modèles avancés. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/il-est-grand-temps-que-ces-fournisseurs-mettent-de-l-ordre-dans-leurs-affaires-l-ue-appelle-les-entreprises-d-ia-a-garder-leurs-modeles-avances-sous-controle_AD-202609110658.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Industrialisation de la cybercriminalité via l'IA selon Anthropic</strong> : Dans son dernier rapport sur les menaces, Anthropic détaille l'usage criminel de ses modèles et confirme une tendance à l'industrialisation des cyberattaques assistées par IA. <a href="https://next.ink/256115/cybersecurite-lage-de-lindustrialisation-selon-anthropic/">Next.ink</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/la-californie-renforce-ses-lois-sur-la-protection-des-enfants-en-ligne-et-interdit-aux-reseaux-sociaux-de-deployer-des-fonctionnalites-jugees-addictives-aux-moins-de-16-ans_AD-202609110786.html">La Californie renforce ses lois sur la protection des enfants en ligne et interdit aux réseaux sociaux de déployer des fonctionnalités jugées addictives auprès des moins de 16 ans</a> — BFM Tech. Raison : Nouvelle régulation californienne impactant la conception des réseaux sociaux pour mineurs, sujet pertinent pour la conformité et la gouvernance des risques numériques en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/256115/cybersecurite-lage-de-lindustrialisation-selon-anthropic/">Cybersécurité : l’âge de l’industrialisation, selon Anthropic</a> — Next.ink. Raison : Rapport de menace par un acteur IA majeur, analyse concrète d'usages criminels de modèles. Pertinent pour RSSI et CTO sur la stratégie de risque IA.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/255956/en-europe-lusage-public-des-lunettes-meta-avec-lia-juge-illegal-par-des-experts/">En Europe, l’usage public des lunettes Meta avec l’IA jugé illégal par des experts</a> — Next.ink. Raison : Décision d'une autorité de protection des données sur l'usage légal des lunettes Meta IA, impact direct sur la conformité et la gouvernance des entreprises en Europe.</li>
-<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/aux-etats-unis-la-glacante-histoire-d-une-mere-de-famille-qui-a-decouvert-que-meta-ai-savait-tout-de-ses-fillettes-leur-nom-age-et-meme-leur-localisation-potentielle_AV-202609110780.html">Aux Etats-Unis, la glaçante histoire d’une mère de famille qui a découvert que Meta AI savait tout de ses fillettes, leur nom, âge et même leur localisation potentielle</a> — BFM Tech. Raison : Article anecdotique grand public sur vie privée dans l'IA, sans détail technique ni analyse de gouvernance exploitable pour des experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/intelligence-artificielle/il-est-grand-temps-que-ces-fournisseurs-mettent-de-l-ordre-dans-leurs-affaires-l-ue-appelle-les-entreprises-d-ia-a-garder-leurs-modeles-avances-sous-controle_AD-202609110658.html">"Il est grand temps que ces fournisseurs mettent de l'ordre dans leurs affaires": l'UE appelle les entreprises d'IA à garder leurs modèles avancés sous contrôle</a> — BFM Tech. Raison : Déclaration politique de l'UE sur la régulation des modèles d'IA, intéressante mais sans contenu technique ni impact immédiat vérifiable.</li>
+<li><strong>4/5</strong> — <a href="https://blog.n8n.io/process-orchestration/">Process Orchestration: Execution Models, Observability, and Production Challenges</a> — n8n Blog. Raison : Comparaison technique de modèles d'orchestration (déterministe, dynamique, agentique) utile pour architectes et CTO évaluant l'automatisation scalable des workflows.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260911-1943</guid>
-      <pubDate>Fri, 11 Sep 2026 19:43:14 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260912-0924</guid>
+      <pubDate>Sat, 12 Sep 2026 09:24:43 +0000</pubDate>
     </item>
   </channel>
 </rss>
