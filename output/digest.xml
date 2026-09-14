@@ -8,154 +8,186 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 14 Sep 2026 17:03:09 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 20:58:47 +0000</lastBuildDate>
     <item>
-      <title>Digest — 14/09 17h</title>
+      <title>Digest — 14/09 20h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Stratégie &amp; analyse
+      <description>## IA &amp; Tech — Médias internationaux
 
-- **Détournement de l'IA pour l'armement** : Anthropic a documenté l'usage de ses modèles Claude par un groupe basé au Yémen pour développer des programmes d'armement, incluant une roquette guidée. Cela illustre la difficulté croissante à empêcher le détournement de l'IA générative à des fins militaires par des acteurs non-étatiques. [Schneier on Security](https://www.schneier.com/blog/archives/2026/09/using-ai-for-weapons-development.html)
+- **Alternative à la rétropropagation** : Sakana AI propose PC-ALM, une méthode d'apprentissage local par couche qui permet d'entraîner des réseaux jusqu'à 1000 couches sans recourir à la rétropropagation classique, en conservant la précision de cette dernière via des multiplicateurs de Lagrange. [MarkTechPost](https://www.marktechpost.com/2026/09/14/sakana-ai-researchers-introduce-pc-alm-a-layer-local-alternative-to-backpropagation-that-trains-1000-layer-networks/)
 
-- **Record de correctifs Microsoft** : Le Patch Tuesday de septembre corrige 972 vulnérabilités, dont 112 critiques, établissant un nouveau record deux mois seulement après le précédent. Cette inflation du volume de correctifs complexifie la priorisation et augmente la fenêtre d'exposition pour les organisations. [Schneier on Security](https://www.schneier.com/blog/archives/2026/09/microsofts-patching.html)
+- **Appel à une pause dans le développement des LLMs** : Dario Amodei, CEO d'Anthropic, a publié un essai demandant un ralentissement du rythme de développement des grands modèles de langage, invoquant des dangers imminents liés à la technologie. [MIT Technology Review](https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/)
 
 **Évaluation du scoring**
 
-- **5/5** — [Using AI for Weapons Development](https://www.schneier.com/blog/archives/2026/09/using-ai-for-weapons-development.html) — Schneier on Security. Raison : Anthropic documente l'usage réel de Claude par des acteurs étatiques pour développer des armes guidées et balistiques, un signal fort sur les risques IA.
-- **5/5** — [Microsoft’s Patching](https://www.schneier.com/blog/archives/2026/09/microsofts-patching.html) — Schneier on Security. Raison : Volume record de vulnérabilités corrigées (972), dont 112 critiques, avec une tendance à la hausse. Impact direct sur les systèmes Windows en entreprise.
+- **3/5** — [Sakana AI Researchers Introduce PC-ALM, a Layer-Local Alternative to Backpropagation That Trains 1000-Layer Networks](https://www.marktechpost.com/2026/09/14/sakana-ai-researchers-introduce-pc-alm-a-layer-local-alternative-to-backpropagation-that-trains-1000-layer-networks/) — MarkTechPost. Raison : Recherche intéressante mais non reproductible, implication pratique incertaine pour le public expert et hors cybersécurité.
+- **3/5** — [The AI industry has taken a doomer turn. What now?](https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/) — MIT Technology Review — AI. Raison : Appel à ralentir les LLMs par le CEO d'Anthropic, sujet pertinent mais angle opinion sans données techniques nouvelles ou impact cyber direct.
+
+## Cyber — Menaces &amp; vulnérabilités
+
+- **Fuite de données via VPN au Japon** : Une faille dans un équipement VPN a exposé environ 246 000 enregistrements de données personnelles d'agents gouvernementaux japonais. [BleepingComputer](https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/)
+
+- **Attaque DDRop contre le confidential computing** : Une nouvelle attaque matérielle nommée DDRop permet de contourner les protections d'enclaves sécurisées Intel TDX et AMD SEV-SNP en supprimant silencieusement des écritures mémoire, forçant le processeur à lire d'anciennes données chiffrées. L'exploitation nécessite un accès physique au serveur. [The Hacker News](https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html)
+
+- **Campagne d'exploitation de Gitea par Red Heron** : Un acteur suspecté chinois a exploité une RCE dans Gitea pour compromettre des instances exposées sur Internet, touchant 13 organisations dans 6 pays après avoir scanné 1 386 instances. [The Hacker News](https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html)
+
+- **Intrusion persistante chez un FAI thaïlandais** : Un attaquant a maintenu un accès root sur des machines internes du fournisseur d'accès 3BB en utilisant MeshCentral, un outil légitime d'administration à distance, pour cibler les identifiants d'abonnés. [The Hacker News](https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html)
+
+- **Vol de tokens OAuth via une extension Twitch** : L'extension navigateur "Twitch Enhanced Viewer | JeetBot", installée 30 000 fois, exfiltre les tokens de session OAuth Twitch des utilisateurs vers un service de bot commercial. [BleepingComputer](https://www.bleepingcomputer.com/news/security/twitch-extension-with-30k-installs-exposes-users-oauth-tokens/)
+
+- **Compromission de compte Reddit HBO Max pour diffusion de malware** : Des attaquants ont pris le contrôle du compte Reddit officiel d'HBO Max pour diffuser des publicités malveillantes menant à des attaques ClickFix, déployant des infostealers sur Windows et macOS. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-hijack-hbo-max-reddit-account-to-push-malware-in-clickfix-ads/)
+
+- **Faille Telegram Desktop dans les exports HTML** : Une vulnérabilité dans Telegram Desktop permet à un bot d'injecter du JavaScript caché dans un message, qui s'exécute lorsqu'un utilisateur exporte la conversation au format HTML, exposant le contenu des chats. [The Hacker News](https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html)
+
+- **Correctifs massifs Apple et mise à jour Homebrew** : Apple a corrigé 261 vulnérabilités dans ses OS, un record pour l'éditeur. Par ailleurs, Homebrew 7.0.0 intègre un scanner de vulnérabilités natif et une interface graphique. [SANS ISC](https://isc.sans.edu/diary/rss/33336) · [BleepingComputer](https://www.bleepingcomputer.com/news/security/homebrew-700-gets-built-in-gui-better-security-controls/)
+
+**Évaluation du scoring**
+
+- **5/5** — [Japan's Digital Agency says VPN flaw exposed 246,000 personnel records](https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/) — BleepingComputer. Raison : Incident majeur exposant 246 000 données sensibles de fonctionnaires japonais, impact direct sur la gouvernance et la sécurité des SI publics.
+- **5/5** — [New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing](https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html) — The Hacker News. Raison : Attaque matérielle (DDRop) cassant la confidentialité des processeurs Intel TDX et AMD SEV-SNP, impact direct sur les infrastructures critiques.
+- **5/5** — [3BB Attacker Used MeshCentral Backdoor for Root Access, Targeted Subscriber Credentials](https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html) — The Hacker News. Raison : Incident cyber majeur chez un grand FAI avec accès root via outil légitime, ciblant données abonnés. Impact direct sur infrastructure critique et chaîne d'approvisionnement.
+- **5/5** — [Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries](https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html) — The Hacker News. Raison : Exploitation active d'une CVE sur Gitea (outil DevOps courant) en campagne multi-pays. Impact direct sur les infrastructures SI des experts ciblés.
+- **4/5** — [Homebrew 7.0.0 gets built-in GUI, better security controls](https://www.bleepingcomputer.com/news/security/homebrew-700-gets-built-in-gui-better-security-controls/) — BleepingComputer. Raison : Release majeure d'un outil largement utilisé (Homebrew) avec intégration d'un scanner de vulnérabilité et GUI, impact direct sur les développeurs et RSSI.
+- **4/5** — [Twitch extension with 30K installs exposes users’ OAuth tokens](https://www.bleepingcomputer.com/news/security/twitch-extension-with-30k-installs-exposes-users-oauth-tokens/) — BleepingComputer. Raison : Vulnérabilité réelle dans une extension Chrome/Firefox avec 30K installs exposant des tokens OAuth Twitch. Impact potentiel pour les utilisateurs et les entreprises.
+- **4/5** — [Hackers hijack HBO Max Reddit account to push malware in ClickFix ads](https://www.bleepingcomputer.com/news/security/hackers-hijack-hbo-max-reddit-account-to-push-malware-in-clickfix-ads/) — BleepingComputer. Raison : Campagne active de compromission de compte officiel pour distribuer un malware via ClickFix. Impact direct sur la sécurité des entreprises et la vigilance des équipes SOC.
+- **4/5** — [Apple Updates Everything, (Mon, Sep 14th)](https://isc.sans.edu/diary/rss/33336) — SANS ISC. Raison : Annonce de 261 correctifs massifs Apple toutes plateformes. Volume record mais contexte post-AI nuancé. Intéressant pour RSSI/Architecte SI exposés à l'écosystème Apple en entreprise.
+- **4/5** — [Telegram Desktop Flaw Lets Hidden JavaScript Exfiltrate Messages From HTML Exports](https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html) — The Hacker News. Raison : Vulnérabilité Telegram Desktop permettant exfiltration via HTML export. Technique, exploitable, impact potentiel sur messagerie utilisée en entreprise.
 
 ## IA — Labos &amp; éditeurs
 
-- **Agents IA spécialisés en production** : Ninth Wave déploie un assistant multi-agent sur Amazon Bedrock AgentCore qui valide des API bancaires contre les standards FDX, évalue la conformité et réduit l'onboarding open finance de plusieurs semaines à quelques minutes, le tout en environnement certifié SOC 2 et PCI DSS. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-ninth-wave-built-ai-powered-open-finance-onboarding-on-amazon-bedrock/)
-
-- **Exécution autonome des prévisions** : Un pipeline boucle fermée sur Databricks et Amazon Quick utilise des modèles de fondation pour la prévision de demande, puis réconcilie automatiquement les pics avec la disponibilité fournisseur et déclenche des réapprovisionnements sans intervention humaine. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/automate-replenishment-with-mmf-databricks-genie-and-amazon-quick/)
-
-- **Stratégie de personnalisation des LLM** : AWS propose un cadre décisionnel en 8 étapes pour choisir entre prompt engineering, RAG, fine-tuning et pré-entraînement continu, avec une règle simple : commencer par le moins complexe et n'escalader que si nécessaire. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/)
-
-- **Agents IA en exécution locale sur PC** : Perplexity lance Portable Computer sur Windows, une version locale de son agent capable de planifier et d'exécuter des tâches multi-étapes en conservant les données sensibles sur l'appareil, accélérée par GPU NVIDIA RTX. [NVIDIA Blog](https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/)
+- **Portail de consentement OAuth pour agents IA** : AWS introduit dans Bedrock AgentCore Identity un portail de consentement managé, permettant aux utilisateurs finaux d’autoriser et de tracer les accès OAuth accordés à des agents IA vers des services tiers (GitHub, Slack). [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/)
 
 **Évaluation du scoring**
 
-- **4/5** — [How Ninth Wave built AI-powered open finance onboarding on Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/how-ninth-wave-built-ai-powered-open-finance-onboarding-on-amazon-bedrock/) — AWS Machine Learning. Raison : Article détaillant un cas concret d'agent IA pour l'onboarding financier automatisé, avec conformité SOC 2 et PCI DSS, directement utile pour RSSI et CTO.
-- **3/5** — [The generative AI customization spectrum: From prompt engineering to custom models on AWS](https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/) — AWS Machine Learning. Raison : Article AWS sur le choix de personnalisation IA (prompt engineering, RAG, fine-tuning). Utile pour les experts en adoption IA, mais reste un guide produit sans profondeur technique ou sécurité.
-- **3/5** — [Automate replenishment with MMF, Databricks Genie, and Amazon Quick](https://aws.amazon.com/blogs/machine-learning/automate-replenishment-with-mmf-databricks-genie-and-amazon-quick/) — AWS Machine Learning. Raison : Article technique sur l'automatisation des réapprovisionnements avec MMF, Databricks et QuickSight. Intéressant pour l'automatisation mais pas directement lié à la cybersécurité ou aux priorités des experts ciblés.
-- **3/5** — [Perplexity Portable Computer Is Now Available on Windows, Powered by NVIDIA RTX](https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/) — NVIDIA Blog. Raison : Annonce d'un agent IA local sur PC avec accélération NVIDIA. Intéressant pour la confidentialité des données, mais reste un lancement produit sans détail technique ou impact immédiat.
+- **3/5** — [Manage end-user OAuth consent for AI agents with Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Nouvelle fonctionnalité AWS pour la gestion des consentements OAuth des agents IA, utile pour la sécurité des flux, mais reste un tutoriel produit sans impact majeur immédiat.
+
+## Cyber — Stratégie &amp; analyse
+
+- **Faille critique GitLab (CVSS 10) menace les chaînes logicielles** : Une vulnérabilité de path traversal (CVE-2026-85706) affecte les éditions Community et Enterprise de GitLab, avec un score de sévérité maximal. L'exploitation permet de compromettre l'intégrité des pipelines CI/CD et des dépôts. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/maximum-severity-gitlab-flaw-supply-chains-risk)
+
+- **Contrôle vs performance de l'IA : un appel à la pause** : Le CEO d'Anthropic, Dario Amodei, estime que le rythme d'amélioration des modèles d'IA de pointe doit ralentir pour laisser les mécanismes de sécurité et de gestion des risques rattraper leur retard. La question centrale pour les entreprises devient la gouvernance des usages plutôt que la course à l'adoption. [Dark Reading](https://www.darkreading.com/cyber-risk/anthropic-ceo-shift-from-improving-to-controlling-ai)
+
+**Évaluation du scoring**
+
+- **5/5** — [Maximum Severity GitLab Flaw Puts Supply Chains at Risk](https://www.darkreading.com/cyberattacks-data-breaches/maximum-severity-gitlab-flaw-supply-chains-risk) — Dark Reading. Raison : CVE critique CVSS 10 affectant GitLab, outil central des chaînes CI/CD, menace directe pour les supply chains des entreprises.
+- **4/5** — [Anthropic CEO: Time to Shift From Improving to Controlling AI](https://www.darkreading.com/cyber-risk/anthropic-ceo-shift-from-improving-to-controlling-ai) — Dark Reading. Raison : Appel d'un CEO majeur à ralentir l'IA pour prioriser la sécurité. Impact potentiel sur la stratégie d'adoption et la gouvernance des entreprises.
 
 ## Actualité tech FR
 
-- **Régulation européenne : protection des mineurs, cyber-résilience et paquet numérique** : La Commission européenne présentera le 17 septembre un projet de loi sur la protection des enfants en ligne. Par ailleurs, le Cyber Resilience Act impose désormais aux fabricants de signaler les failles activement exploitées sous 24 heures. Le Digital Fairness Act sera dévoilé plus tôt que prévu, tandis que le paquet Digital Omnibus prend du retard et que la CNIL prépare de nouvelles recommandations. [BFM Tech](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/un-projet-de-loi-europeenne-pour-la-protection-des-enfants-en-ligne-est-en-cours-de-preparation-il-sera-presente-le-17-septembre_AD-202609140631.html) · [Siècle Digital (CRA)](https://siecledigital.fr/2026/09/14/nouvelle-obligation-pour-les-professionnels-du-numerique-certaines-failles-doivent-etre-signalees-sous-24-heures/) · [Journal du Net](https://www.journaldunet.com/adtech/1554601-dfa-digital-omnibus-ia-act-recommandations-de-la-cnil-le-point-de-cette-rentree/)
-
-- **Revolut victime de fausses demandes officielles** : La fintech a transmis des données clients à un tiers non autorisé après avoir répondu à des réquisitions frauduleuses semblant émaner d'une administration légitime. Aucun piratage des systèmes internes n'est en cause. [Siècle Digital](https://siecledigital.fr/2026/09/14/revolut-sest-fait-pieger-par-de-fausses-demandes-officielles-et-a-transmis-des-donnees-de-ses-clients/)
-
-- **Ransomware : le vrai problème est interne, pas l'attaquant** : Retour d'expérience sur trois cellules de crise : une demande de rançon à 10 millions d'euros, un règlement à 1 million, et une feuille de route de sécurité restée lettre morte. L'attaquant n'était jamais le maillon faible. [Journal du Net](https://www.journaldunet.com/cybersecurite/1554779-ransomware-j-ai-dirige-trois-cellules-de-crise-l-attaquant-n-etait-jamais-le-probleme/)
-
-- **L'indice de résilience numérique (IRN) vise les PME et l'Europe** : L'association aDRI prévoit de simplifier les critères d'évaluation pour les PME et d'étendre l'IRN au niveau européen en s'appuyant sur les caisses des dépôts du continent. [Journal du Net](https://www.journaldunet.com/cybersecurite/1554773-exclu-les-ambitions-de-l-irn-acces-aux-pme-plus-de-consultants-europeanisation/)
-
-- **IA : la Maison-Blanche refuse le ralentissement réclamé par l'industrie** : Anthropic, OpenAI et Elon Musk plaident pour une pause dans le développement des modèles frontières au nom de la sécurité, mais l'administration américaine s'y oppose pour des raisons géopolitiques et économiques. [Next.ink](https://next.ink/256165/anthropic-openai-et-elon-musk-veulent-ralentir-sur-lia-la-maison-blanche-dit-non/)
-
-- **Fraude aux streams : l'industrie musicale encadre les morceaux générés par IA** : Les distributeurs adoptent de nouvelles lignes directrices pour bloquer l'arrivée sur les plateformes de streaming des titres frauduleux produits par intelligence artificielle. [Next.ink](https://next.ink/256248/lindustrie-musicale-sorganise-contre-la-fraude-aux-streams-ia/)
-
-- **Robotique humanoïde open source : un écosystème en construction** : Hugging Face, Tnkr et Asimov figurent parmi les acteurs qui développent plateformes logicielles, modèles d'IA et robots en open source, couvrant progressivement toutes les couches de la robotique humanoïde. [Journal du Net](https://www.journaldunet.com/economie/industrie/1554519-hugging-face-tnkr-asimov-qui-sont-les-acteurs-de-la-robotique-humanoide-open-source/)
+- **Normalisation de l’IA** : OpenAI, Anthropic et Google discutent depuis juillet de la création d’un organisme commun de normalisation, alors même qu’ils multiplient les alertes sur les risques de l’intelligence artificielle. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/face-aux-dangers-de-l
 
 **Évaluation du scoring**
 
-- **4/5** — [Un projet de loi européenne pour la “protection des enfants en ligne” est en cours de préparation, il sera présenté le 17 septembre](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/un-projet-de-loi-europeenne-pour-la-protection-des-enfants-en-ligne-est-en-cours-de-preparation-il-sera-presente-le-17-septembre_AD-202609140631.html) — BFM Tech. Raison : Projet de loi européen structurant sur la protection des enfants en ligne, impact potentiel sur la gouvernance et la conformité des entreprises.
-- **4/5** — [Revolut s’est fait piéger par de fausses demandes officielles et a transmis des données de ses clients](https://siecledigital.fr/2026/09/14/revolut-sest-fait-pieger-par-de-fausses-demandes-officielles-et-a-transmis-des-donnees-de-ses-clients/) — Siècle Digital. Raison : Incident de sécurité impliquant une fintech majeure via usurpation d'identité administrative. Analyse utile pour les RSSI sur les risques de fraude par ingénierie sociale ciblant les processus de conformité.
-- **4/5** — [Nouvelle obligation pour les professionnels du numérique, certaines failles doivent être signalées sous 24 heures](https://siecledigital.fr/2026/09/14/nouvelle-obligation-pour-les-professionnels-du-numerique-certaines-failles-doivent-etre-signalees-sous-24-heures/) — Siècle Digital. Raison : Nouvelle obligation réglementaire européenne (CRA) avec impact direct sur les fabricants et RSSI. Délai de signalement de 24h pour certaines failles, à connaître pour la conformité.
-- **4/5** — [Anthropic, OpenAI et Elon Musk veulent ralentir sur l’IA, la Maison-Blanche dit non](https://next.ink/256165/anthropic-openai-et-elon-musk-veulent-ralentir-sur-lia-la-maison-blanche-dit-non/) — Next.ink. Raison : Articule sécurité IA, régulation et pressions géopolitiques/économiques ; intéresse RSSI et CTO sur la gouvernance et la stratégie des acteurs majeurs.
-- **4/5** — [Ransomware : j'ai dirigé trois cellules de crise, l'attaquant n'était jamais le problème](https://www.journaldunet.com/cybersecurite/1554779-ransomware-j-ai-dirige-trois-cellules-de-crise-l-attaquant-n-etait-jamais-le-probleme/) — Journal du Net. Raison : RETEX concret de RSSI sur gestion de crise ransomware et échec de gouvernance. Public expert y trouvera analyse exploitable, pas de buzz.
-- **4/5** — [DFA, Digital Omnibus, IA Act… Les 5 épreuves de la rentrée digitale](https://www.journaldunet.com/adtech/1554601-dfa-digital-omnibus-ia-act-recommandations-de-la-cnil-le-point-de-cette-rentree/) — Journal du Net. Raison : Article sur les échéances réglementaires (DFA, IA Act) et recommandations CNIL, impact direct sur la gouvernance et conformité des entreprises.
-- **3/5** — [Info JDN. L'indice de résilience numérique va s'élargir aux PME et à toute l'Europe](https://www.journaldunet.com/cybersecurite/1554773-exclu-les-ambitions-de-l-irn-acces-aux-pme-plus-de-consultants-europeanisation/) — Journal du Net. Raison : Annonce d'extension d'un indice de résilience aux PME et en Europe. Sujet réglementaire potentiel mais résumé trop vague pour juger de l'impact concret.
-- **3/5** — [L’industrie musicale s’organise contre la fraude aux streams IA](https://next.ink/256248/lindustrie-musicale-sorganise-contre-la-fraude-aux-streams-ia/) — Next.ink. Raison : Sujet intéressant pour les experts en IA/cyber, mais le contenu semble être une actualité de régulation, sans impact technique immédiat ou détail exploitable.
-- **3/5** — [Hugging Face, Tnkr, Asimov… Qui sont les acteurs de la robotique humanoïde open source ?](https://www.journaldunet.com/economie/industrie/1554519-hugging-face-tnkr-asimov-qui-sont-les-acteurs-de-la-robotique-humanoide-open-source/) — Journal du Net. Raison : Sujet open source robotique humanoïde périphérique pour RSSI/CTO. Peut éclairer une tendance tech, mais sans angle sécurité ou IA entreprise concret.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
+- **3/5** — [Face aux dangers de l'IA, OpenAI, Anthropic et Google travailleraient à l'élaboration d'un organisme de normalisation de l'intelligence artificielle](https://www.bfmtv.com/tech/intelligence-artificielle/face-aux-dangers-de-l-ia-open-ai-anthropic-et-google-travailleraient-a-l-elaboration-d-un-organisme-de-normalisation_AV-202609150035.html) — BFM Tech. Raison : Annonce de normalisation IA par trois acteurs majeurs, mais aucune information concrète sur le périmètre ou l'impact immédiat pour les experts.
+- **3/5** — [Dérogations d'accès et chasse aux fonctions addictives: ce que l'on sait de la nouvelle loi sur l'interdiction des réseaux sociaux aux moins de 15 ans](https://www.bfmtv.com/tech/actualites/reseaux-sociaux/derogations-d-acces-et-chasse-aux-fonctions-addictives-ce-que-l-on-sait-de-la-nouvelle-loi-sur-l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans_AD-202609140754.html) — BFM Tech. Raison : Sujet réglementaire européen sur l'interdiction des réseaux sociaux aux mineurs. Pertinent pour la gouvernance, mais sans lien direct avec la cybersécurité technique ou les risques opérationnels immédiats.</description>
+      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Détournement de l'IA pour l'armement</strong> : Anthropic a documenté l'usage de ses modèles Claude par un groupe basé au Yémen pour développer des programmes d'armement, incluant une roquette guidée. Cela illustre la difficulté croissante à empêcher le détournement de l'IA générative à des fins militaires par des acteurs non-étatiques. <a href="https://www.schneier.com/blog/archives/2026/09/using-ai-for-weapons-development.html">Schneier on Security</a></li>
+<li><strong>Alternative à la rétropropagation</strong> : Sakana AI propose PC-ALM, une méthode d'apprentissage local par couche qui permet d'entraîner des réseaux jusqu'à 1000 couches sans recourir à la rétropropagation classique, en conservant la précision de cette dernière via des multiplicateurs de Lagrange. <a href="https://www.marktechpost.com/2026/09/14/sakana-ai-researchers-introduce-pc-alm-a-layer-local-alternative-to-backpropagation-that-trains-1000-layer-networks/">MarkTechPost</a></li>
 </ul>
 
 <ul>
-<li><strong>Record de correctifs Microsoft</strong> : Le Patch Tuesday de septembre corrige 972 vulnérabilités, dont 112 critiques, établissant un nouveau record deux mois seulement après le précédent. Cette inflation du volume de correctifs complexifie la priorisation et augmente la fenêtre d'exposition pour les organisations. <a href="https://www.schneier.com/blog/archives/2026/09/microsofts-patching.html">Schneier on Security</a></li>
+<li><strong>Appel à une pause dans le développement des LLMs</strong> : Dario Amodei, CEO d'Anthropic, a publié un essai demandant un ralentissement du rythme de développement des grands modèles de langage, invoquant des dangers imminents liés à la technologie. <a href="https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/">MIT Technology Review</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/09/using-ai-for-weapons-development.html">Using AI for Weapons Development</a> — Schneier on Security. Raison : Anthropic documente l'usage réel de Claude par des acteurs étatiques pour développer des armes guidées et balistiques, un signal fort sur les risques IA.</li>
-<li><strong>5/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/09/microsofts-patching.html">Microsoft’s Patching</a> — Schneier on Security. Raison : Volume record de vulnérabilités corrigées (972), dont 112 critiques, avec une tendance à la hausse. Impact direct sur les systèmes Windows en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/09/14/sakana-ai-researchers-introduce-pc-alm-a-layer-local-alternative-to-backpropagation-that-trains-1000-layer-networks/">Sakana AI Researchers Introduce PC-ALM, a Layer-Local Alternative to Backpropagation That Trains 1000-Layer Networks</a> — MarkTechPost. Raison : Recherche intéressante mais non reproductible, implication pratique incertaine pour le public expert et hors cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/">The AI industry has taken a doomer turn. What now?</a> — MIT Technology Review — AI. Raison : Appel à ralentir les LLMs par le CEO d'Anthropic, sujet pertinent mais angle opinion sans données techniques nouvelles ou impact cyber direct.</li>
+</ul>
+
+<h2>Cyber — Menaces & vulnérabilités</h2>
+
+<ul>
+<li><strong>Fuite de données via VPN au Japon</strong> : Une faille dans un équipement VPN a exposé environ 246 000 enregistrements de données personnelles d'agents gouvernementaux japonais. <a href="https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Attaque DDRop contre le confidential computing</strong> : Une nouvelle attaque matérielle nommée DDRop permet de contourner les protections d'enclaves sécurisées Intel TDX et AMD SEV-SNP en supprimant silencieusement des écritures mémoire, forçant le processeur à lire d'anciennes données chiffrées. L'exploitation nécessite un accès physique au serveur. <a href="https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne d'exploitation de Gitea par Red Heron</strong> : Un acteur suspecté chinois a exploité une RCE dans Gitea pour compromettre des instances exposées sur Internet, touchant 13 organisations dans 6 pays après avoir scanné 1 386 instances. <a href="https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Intrusion persistante chez un FAI thaïlandais</strong> : Un attaquant a maintenu un accès root sur des machines internes du fournisseur d'accès 3BB en utilisant MeshCentral, un outil légitime d'administration à distance, pour cibler les identifiants d'abonnés. <a href="https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Vol de tokens OAuth via une extension Twitch</strong> : L'extension navigateur "Twitch Enhanced Viewer | JeetBot", installée 30 000 fois, exfiltre les tokens de session OAuth Twitch des utilisateurs vers un service de bot commercial. <a href="https://www.bleepingcomputer.com/news/security/twitch-extension-with-30k-installs-exposes-users-oauth-tokens/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Compromission de compte Reddit HBO Max pour diffusion de malware</strong> : Des attaquants ont pris le contrôle du compte Reddit officiel d'HBO Max pour diffuser des publicités malveillantes menant à des attaques ClickFix, déployant des infostealers sur Windows et macOS. <a href="https://www.bleepingcomputer.com/news/security/hackers-hijack-hbo-max-reddit-account-to-push-malware-in-clickfix-ads/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Faille Telegram Desktop dans les exports HTML</strong> : Une vulnérabilité dans Telegram Desktop permet à un bot d'injecter du JavaScript caché dans un message, qui s'exécute lorsqu'un utilisateur exporte la conversation au format HTML, exposant le contenu des chats. <a href="https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Correctifs massifs Apple et mise à jour Homebrew</strong> : Apple a corrigé 261 vulnérabilités dans ses OS, un record pour l'éditeur. Par ailleurs, Homebrew 7.0.0 intègre un scanner de vulnérabilités natif et une interface graphique. <a href="https://isc.sans.edu/diary/rss/33336">SANS ISC</a> · <a href="https://www.bleepingcomputer.com/news/security/homebrew-700-gets-built-in-gui-better-security-controls/">BleepingComputer</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/">Japan's Digital Agency says VPN flaw exposed 246,000 personnel records</a> — BleepingComputer. Raison : Incident majeur exposant 246 000 données sensibles de fonctionnaires japonais, impact direct sur la gouvernance et la sécurité des SI publics.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html">New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing</a> — The Hacker News. Raison : Attaque matérielle (DDRop) cassant la confidentialité des processeurs Intel TDX et AMD SEV-SNP, impact direct sur les infrastructures critiques.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html">3BB Attacker Used MeshCentral Backdoor for Root Access, Targeted Subscriber Credentials</a> — The Hacker News. Raison : Incident cyber majeur chez un grand FAI avec accès root via outil légitime, ciblant données abonnés. Impact direct sur infrastructure critique et chaîne d'approvisionnement.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html">Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries</a> — The Hacker News. Raison : Exploitation active d'une CVE sur Gitea (outil DevOps courant) en campagne multi-pays. Impact direct sur les infrastructures SI des experts ciblés.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/homebrew-700-gets-built-in-gui-better-security-controls/">Homebrew 7.0.0 gets built-in GUI, better security controls</a> — BleepingComputer. Raison : Release majeure d'un outil largement utilisé (Homebrew) avec intégration d'un scanner de vulnérabilité et GUI, impact direct sur les développeurs et RSSI.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/twitch-extension-with-30k-installs-exposes-users-oauth-tokens/">Twitch extension with 30K installs exposes users’ OAuth tokens</a> — BleepingComputer. Raison : Vulnérabilité réelle dans une extension Chrome/Firefox avec 30K installs exposant des tokens OAuth Twitch. Impact potentiel pour les utilisateurs et les entreprises.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-hijack-hbo-max-reddit-account-to-push-malware-in-clickfix-ads/">Hackers hijack HBO Max Reddit account to push malware in ClickFix ads</a> — BleepingComputer. Raison : Campagne active de compromission de compte officiel pour distribuer un malware via ClickFix. Impact direct sur la sécurité des entreprises et la vigilance des équipes SOC.</li>
+<li><strong>4/5</strong> — <a href="https://isc.sans.edu/diary/rss/33336">Apple Updates Everything, (Mon, Sep 14th)</a> — SANS ISC. Raison : Annonce de 261 correctifs massifs Apple toutes plateformes. Volume record mais contexte post-AI nuancé. Intéressant pour RSSI/Architecte SI exposés à l'écosystème Apple en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html">Telegram Desktop Flaw Lets Hidden JavaScript Exfiltrate Messages From HTML Exports</a> — The Hacker News. Raison : Vulnérabilité Telegram Desktop permettant exfiltration via HTML export. Technique, exploitable, impact potentiel sur messagerie utilisée en entreprise.</li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Agents IA spécialisés en production</strong> : Ninth Wave déploie un assistant multi-agent sur Amazon Bedrock AgentCore qui valide des API bancaires contre les standards FDX, évalue la conformité et réduit l'onboarding open finance de plusieurs semaines à quelques minutes, le tout en environnement certifié SOC 2 et PCI DSS. <a href="https://aws.amazon.com/blogs/machine-learning/how-ninth-wave-built-ai-powered-open-finance-onboarding-on-amazon-bedrock/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Exécution autonome des prévisions</strong> : Un pipeline boucle fermée sur Databricks et Amazon Quick utilise des modèles de fondation pour la prévision de demande, puis réconcilie automatiquement les pics avec la disponibilité fournisseur et déclenche des réapprovisionnements sans intervention humaine. <a href="https://aws.amazon.com/blogs/machine-learning/automate-replenishment-with-mmf-databricks-genie-and-amazon-quick/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Stratégie de personnalisation des LLM</strong> : AWS propose un cadre décisionnel en 8 étapes pour choisir entre prompt engineering, RAG, fine-tuning et pré-entraînement continu, avec une règle simple : commencer par le moins complexe et n'escalader que si nécessaire. <a href="https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents IA en exécution locale sur PC</strong> : Perplexity lance Portable Computer sur Windows, une version locale de son agent capable de planifier et d'exécuter des tâches multi-étapes en conservant les données sensibles sur l'appareil, accélérée par GPU NVIDIA RTX. <a href="https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/">NVIDIA Blog</a></li>
+<li><strong>Portail de consentement OAuth pour agents IA</strong> : AWS introduit dans Bedrock AgentCore Identity un portail de consentement managé, permettant aux utilisateurs finaux d’autoriser et de tracer les accès OAuth accordés à des agents IA vers des services tiers (GitHub, Slack). <a href="https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/how-ninth-wave-built-ai-powered-open-finance-onboarding-on-amazon-bedrock/">How Ninth Wave built AI-powered open finance onboarding on Amazon Bedrock</a> — AWS Machine Learning. Raison : Article détaillant un cas concret d'agent IA pour l'onboarding financier automatisé, avec conformité SOC 2 et PCI DSS, directement utile pour RSSI et CTO.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/">The generative AI customization spectrum: From prompt engineering to custom models on AWS</a> — AWS Machine Learning. Raison : Article AWS sur le choix de personnalisation IA (prompt engineering, RAG, fine-tuning). Utile pour les experts en adoption IA, mais reste un guide produit sans profondeur technique ou sécurité.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/automate-replenishment-with-mmf-databricks-genie-and-amazon-quick/">Automate replenishment with MMF, Databricks Genie, and Amazon Quick</a> — AWS Machine Learning. Raison : Article technique sur l'automatisation des réapprovisionnements avec MMF, Databricks et QuickSight. Intéressant pour l'automatisation mais pas directement lié à la cybersécurité ou aux priorités des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/">Perplexity Portable Computer Is Now Available on Windows, Powered by NVIDIA RTX</a> — NVIDIA Blog. Raison : Annonce d'un agent IA local sur PC avec accélération NVIDIA. Intéressant pour la confidentialité des données, mais reste un lancement produit sans détail technique ou impact immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/manage-end-user-oauth-consent-for-ai-agents-with-amazon-bedrock-agentcore/">Manage end-user OAuth consent for AI agents with Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Nouvelle fonctionnalité AWS pour la gestion des consentements OAuth des agents IA, utile pour la sécurité des flux, mais reste un tutoriel produit sans impact majeur immédiat.</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Faille critique GitLab (CVSS 10) menace les chaînes logicielles</strong> : Une vulnérabilité de path traversal (CVE-2026-85706) affecte les éditions Community et Enterprise de GitLab, avec un score de sévérité maximal. L'exploitation permet de compromettre l'intégrité des pipelines CI/CD et des dépôts. <a href="https://www.darkreading.com/cyberattacks-data-breaches/maximum-severity-gitlab-flaw-supply-chains-risk">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Contrôle vs performance de l'IA : un appel à la pause</strong> : Le CEO d'Anthropic, Dario Amodei, estime que le rythme d'amélioration des modèles d'IA de pointe doit ralentir pour laisser les mécanismes de sécurité et de gestion des risques rattraper leur retard. La question centrale pour les entreprises devient la gouvernance des usages plutôt que la course à l'adoption. <a href="https://www.darkreading.com/cyber-risk/anthropic-ceo-shift-from-improving-to-controlling-ai">Dark Reading</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/maximum-severity-gitlab-flaw-supply-chains-risk">Maximum Severity GitLab Flaw Puts Supply Chains at Risk</a> — Dark Reading. Raison : CVE critique CVSS 10 affectant GitLab, outil central des chaînes CI/CD, menace directe pour les supply chains des entreprises.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyber-risk/anthropic-ceo-shift-from-improving-to-controlling-ai">Anthropic CEO: Time to Shift From Improving to Controlling AI</a> — Dark Reading. Raison : Appel d'un CEO majeur à ralentir l'IA pour prioriser la sécurité. Impact potentiel sur la stratégie d'adoption et la gouvernance des entreprises.</li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Régulation européenne : protection des mineurs, cyber-résilience et paquet numérique</strong> : La Commission européenne présentera le 17 septembre un projet de loi sur la protection des enfants en ligne. Par ailleurs, le Cyber Resilience Act impose désormais aux fabricants de signaler les failles activement exploitées sous 24 heures. Le Digital Fairness Act sera dévoilé plus tôt que prévu, tandis que le paquet Digital Omnibus prend du retard et que la CNIL prépare de nouvelles recommandations. <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/un-projet-de-loi-europeenne-pour-la-protection-des-enfants-en-ligne-est-en-cours-de-preparation-il-sera-presente-le-17-septembre_AD-202609140631.html">BFM Tech</a> · <a href="https://siecledigital.fr/2026/09/14/nouvelle-obligation-pour-les-professionnels-du-numerique-certaines-failles-doivent-etre-signalees-sous-24-heures/">Siècle Digital (CRA)</a> · <a href="https://www.journaldunet.com/adtech/1554601-dfa-digital-omnibus-ia-act-recommandations-de-la-cnil-le-point-de-cette-rentree/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Revolut victime de fausses demandes officielles</strong> : La fintech a transmis des données clients à un tiers non autorisé après avoir répondu à des réquisitions frauduleuses semblant émaner d'une administration légitime. Aucun piratage des systèmes internes n'est en cause. <a href="https://siecledigital.fr/2026/09/14/revolut-sest-fait-pieger-par-de-fausses-demandes-officielles-et-a-transmis-des-donnees-de-ses-clients/">Siècle Digital</a></li>
-</ul>
-
-<ul>
-<li><strong>Ransomware : le vrai problème est interne, pas l'attaquant</strong> : Retour d'expérience sur trois cellules de crise : une demande de rançon à 10 millions d'euros, un règlement à 1 million, et une feuille de route de sécurité restée lettre morte. L'attaquant n'était jamais le maillon faible. <a href="https://www.journaldunet.com/cybersecurite/1554779-ransomware-j-ai-dirige-trois-cellules-de-crise-l-attaquant-n-etait-jamais-le-probleme/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>L'indice de résilience numérique (IRN) vise les PME et l'Europe</strong> : L'association aDRI prévoit de simplifier les critères d'évaluation pour les PME et d'étendre l'IRN au niveau européen en s'appuyant sur les caisses des dépôts du continent. <a href="https://www.journaldunet.com/cybersecurite/1554773-exclu-les-ambitions-de-l-irn-acces-aux-pme-plus-de-consultants-europeanisation/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>IA : la Maison-Blanche refuse le ralentissement réclamé par l'industrie</strong> : Anthropic, OpenAI et Elon Musk plaident pour une pause dans le développement des modèles frontières au nom de la sécurité, mais l'administration américaine s'y oppose pour des raisons géopolitiques et économiques. <a href="https://next.ink/256165/anthropic-openai-et-elon-musk-veulent-ralentir-sur-lia-la-maison-blanche-dit-non/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Fraude aux streams : l'industrie musicale encadre les morceaux générés par IA</strong> : Les distributeurs adoptent de nouvelles lignes directrices pour bloquer l'arrivée sur les plateformes de streaming des titres frauduleux produits par intelligence artificielle. <a href="https://next.ink/256248/lindustrie-musicale-sorganise-contre-la-fraude-aux-streams-ia/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Robotique humanoïde open source : un écosystème en construction</strong> : Hugging Face, Tnkr et Asimov figurent parmi les acteurs qui développent plateformes logicielles, modèles d'IA et robots en open source, couvrant progressivement toutes les couches de la robotique humanoïde. <a href="https://www.journaldunet.com/economie/industrie/1554519-hugging-face-tnkr-asimov-qui-sont-les-acteurs-de-la-robotique-humanoide-open-source/">Journal du Net</a></li>
+<li><strong>Normalisation de l’IA</strong> : OpenAI, Anthropic et Google discutent depuis juillet de la création d’un organisme commun de normalisation, alors même qu’ils multiplient les alertes sur les risques de l’intelligence artificielle. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/face-aux-dangers-de-l</li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/un-projet-de-loi-europeenne-pour-la-protection-des-enfants-en-ligne-est-en-cours-de-preparation-il-sera-presente-le-17-septembre_AD-202609140631.html">Un projet de loi européenne pour la “protection des enfants en ligne” est en cours de préparation, il sera présenté le 17 septembre</a> — BFM Tech. Raison : Projet de loi européen structurant sur la protection des enfants en ligne, impact potentiel sur la gouvernance et la conformité des entreprises.</li>
-<li><strong>4/5</strong> — <a href="https://siecledigital.fr/2026/09/14/revolut-sest-fait-pieger-par-de-fausses-demandes-officielles-et-a-transmis-des-donnees-de-ses-clients/">Revolut s’est fait piéger par de fausses demandes officielles et a transmis des données de ses clients</a> — Siècle Digital. Raison : Incident de sécurité impliquant une fintech majeure via usurpation d'identité administrative. Analyse utile pour les RSSI sur les risques de fraude par ingénierie sociale ciblant les processus de conformité.</li>
-<li><strong>4/5</strong> — <a href="https://siecledigital.fr/2026/09/14/nouvelle-obligation-pour-les-professionnels-du-numerique-certaines-failles-doivent-etre-signalees-sous-24-heures/">Nouvelle obligation pour les professionnels du numérique, certaines failles doivent être signalées sous 24 heures</a> — Siècle Digital. Raison : Nouvelle obligation réglementaire européenne (CRA) avec impact direct sur les fabricants et RSSI. Délai de signalement de 24h pour certaines failles, à connaître pour la conformité.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/256165/anthropic-openai-et-elon-musk-veulent-ralentir-sur-lia-la-maison-blanche-dit-non/">Anthropic, OpenAI et Elon Musk veulent ralentir sur l’IA, la Maison-Blanche dit non</a> — Next.ink. Raison : Articule sécurité IA, régulation et pressions géopolitiques/économiques ; intéresse RSSI et CTO sur la gouvernance et la stratégie des acteurs majeurs.</li>
-<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1554779-ransomware-j-ai-dirige-trois-cellules-de-crise-l-attaquant-n-etait-jamais-le-probleme/">Ransomware : j'ai dirigé trois cellules de crise, l'attaquant n'était jamais le problème</a> — Journal du Net. Raison : RETEX concret de RSSI sur gestion de crise ransomware et échec de gouvernance. Public expert y trouvera analyse exploitable, pas de buzz.</li>
-<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/adtech/1554601-dfa-digital-omnibus-ia-act-recommandations-de-la-cnil-le-point-de-cette-rentree/">DFA, Digital Omnibus, IA Act… Les 5 épreuves de la rentrée digitale</a> — Journal du Net. Raison : Article sur les échéances réglementaires (DFA, IA Act) et recommandations CNIL, impact direct sur la gouvernance et conformité des entreprises.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1554773-exclu-les-ambitions-de-l-irn-acces-aux-pme-plus-de-consultants-europeanisation/">Info JDN. L'indice de résilience numérique va s'élargir aux PME et à toute l'Europe</a> — Journal du Net. Raison : Annonce d'extension d'un indice de résilience aux PME et en Europe. Sujet réglementaire potentiel mais résumé trop vague pour juger de l'impact concret.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/256248/lindustrie-musicale-sorganise-contre-la-fraude-aux-streams-ia/">L’industrie musicale s’organise contre la fraude aux streams IA</a> — Next.ink. Raison : Sujet intéressant pour les experts en IA/cyber, mais le contenu semble être une actualité de régulation, sans impact technique immédiat ou détail exploitable.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/economie/industrie/1554519-hugging-face-tnkr-asimov-qui-sont-les-acteurs-de-la-robotique-humanoide-open-source/">Hugging Face, Tnkr, Asimov… Qui sont les acteurs de la robotique humanoïde open source ?</a> — Journal du Net. Raison : Sujet open source robotique humanoïde périphérique pour RSSI/CTO. Peut éclairer une tendance tech, mais sans angle sécurité ou IA entreprise concret.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/intelligence-artificielle/face-aux-dangers-de-l-ia-open-ai-anthropic-et-google-travailleraient-a-l-elaboration-d-un-organisme-de-normalisation_AV-202609150035.html">Face aux dangers de l'IA, OpenAI, Anthropic et Google travailleraient à l'élaboration d'un organisme de normalisation de l'intelligence artificielle</a> — BFM Tech. Raison : Annonce de normalisation IA par trois acteurs majeurs, mais aucune information concrète sur le périmètre ou l'impact immédiat pour les experts.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/reseaux-sociaux/derogations-d-acces-et-chasse-aux-fonctions-addictives-ce-que-l-on-sait-de-la-nouvelle-loi-sur-l-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans_AD-202609140754.html">Dérogations d'accès et chasse aux fonctions addictives: ce que l'on sait de la nouvelle loi sur l'interdiction des réseaux sociaux aux moins de 15 ans</a> — BFM Tech. Raison : Sujet réglementaire européen sur l'interdiction des réseaux sociaux aux mineurs. Pertinent pour la gouvernance, mais sans lien direct avec la cybersécurité technique ou les risques opérationnels immédiats.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260914-1703</guid>
-      <pubDate>Mon, 14 Sep 2026 17:03:09 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260914-2058</guid>
+      <pubDate>Mon, 14 Sep 2026 20:58:47 +0000</pubDate>
     </item>
   </channel>
 </rss>
