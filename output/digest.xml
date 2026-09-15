@@ -8,202 +8,194 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 15 Sep 2026 15:40:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 20:13:27 +0000</lastBuildDate>
     <item>
-      <title>Digest — 15/09 15h</title>
+      <title>Digest — 15/09 20h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## IA — Labos &amp; éditeurs
 
-- **Exploitation active de vulnérabilités VMware vCenter et WooCommerce** : Des rançongiciels exploitent désormais la faille critique RCE de VMware vCenter (corrigée en juillet), tandis qu'une vulnérabilité dans le plugin premium WooCommerce Wholesale Lead Capture est utilisée pour déposer des backdoors PHP sur des sites WordPress. [VMware](https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/) · [WooCommerce](https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-via-third-party-woocommerce-plugin/)
+- **Gemini 3.8 Live et Extended Thinking** : Google DeepMind lance une nouvelle version de Gemini intégrant des capacités de raisonnement étendu en temps réel, ciblant les cas d'usage interactifs complexes. [Google DeepMind](https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/)
 
-- **Campagne de vol de credentials cloud via serveurs de développement Vite exposés** : Une campagne de scan massif cible les instances Vite accessibles sur Internet pour siphonner des identifiants et configurations AWS. [Source](https://thehackernews.com/2026/09/mass-scanning-campaign-exploits-vite.html)
+- **Optimisation des coûts d'inférence** : Le prompt caching d'Amazon Bedrock réduit jusqu'à 90% le coût des tokens d'entrée pour les contextes réutilisés fréquemment, avec six patterns de mise en œuvre documentés. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/)
 
-- **Nouveau framework malveillant multiplateforme BambooToken** : Un malware inconnu jusqu'ici, actif depuis 2023, utilise le protocole MQTT pour piloter des systèmes Windows et Linux, un canal de commande et contrôle discret souvent négligé par la surveillance réseau. [Source](https://www.bleepingcomputer.com/news/security/bambootoken-malware-controls-windows-and-linux-systems-via-mqtt/)
+- **Fine-tuning serverless pour tâches métier** : AWS détaille le fine-tuning de Qwen3-8B via SFT et RLVR sur SageMaker pour automatiser le tagging de catalogues produits, avec déploiement asynchrone. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-product-tagging-system-with-amazon-sagemaker-serverless-model-customization/)
 
-- **Réduction de la fenêtre de réponse aux zero-days par l'IA** : Selon Picus Security, l'IA accélère le passage de la divulgation à l'exploitation. La réponse doit évoluer vers la validation d'exploitabilité et le test continu des contrôles de sécurité plutôt que l'attente de correctifs. [Source](https://www.bleepingcomputer.com/news/security/what-zero-day-response-should-be-in-the-post-mythos-era/)
+- **Gestion de capacité GPU** : Les listes de préférence d'instances sur SageMaker AI permettent de spécifier jusqu'à cinq types d'instances ordonnés, le service lançant automatiquement la première disponible pour éviter les boucles de retry manuelles. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/)
 
-- **Mise en garde chinoise sur l'usage offensif de modèles d'IA américains** : Le chef du renseignement chinois pointe Claude Mythos (Anthropic) et GPT-5.5-Cyber (OpenAI) comme des vecteurs de "mise à niveau disruptive" des capacités cyber offensives, notamment pour la découverte de vulnérabilités et le développement de malwares. [Source](https://therecord.media/china-spy-chief-warns-of-us-ai-models)
+- **Optimisation énergétique des datacenters IA** : NVIDIA présente une approche de pilotage dynamique de la consommation électrique des AI factories, avec un cas concret de réponse à un signal de baisse de charge envoyé par le fournisseur d'électricité local. [NVIDIA Blog](https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/)
 
-- **Approche par chaînes d'attaque plutôt que par techniques isolées** : Tester individuellement les techniques (phishing, bypass EDR) ne suffit plus ; la validation doit porter sur l'enchaînement complet des étapes d'une attaque pour identifier les vraies expositions. [Source](https://thehackernews.com/2026/09/attack-chains-not-just-attack-surfaces.html)
+- **Accélération de la recherche IA complexe** : Google Research introduit Retrieve-for-Train, une méthode qui contourne les goulets d'étranglement d'inférence en déplaçant la charge de recherche vers la phase d'entraînement. [Google Research](https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/)
 
-- **Fuite de données chez CenterPoint Energy** : Le fournisseur d'électricité et de gaz a notifié les régulateurs après la publication de données clients sur le dark web. [Source](https://therecord.media/centerpoint-energy-data-breach)
+- **Fiabilité des agents IA** : IBM Research, via Hugging Face, publie un cadre d'évaluation de la cohérence des agents sur des tâches répétées, répondant à la question de la reproductibilité des performances. [Hugging Face Blog](https://huggingface.co/blog/ibm-research/altk-evolve-consistency)
 
-- **Démantèlement de 12 sites de deepfake pornographique par le procureur de Manhattan** : Les sites permettaient de générer des contenus illégaux en utilisant les visages et corps de plus de 1200 personnes réelles via l'IA. [Source](https://therecord.media/manhattan-da-takes-down-12-ai-deepfake-porn-sites)
-
-- **Nomination d'Ihor Klymenko à la tête de la coordination cyber ukrainienne** : L'ancien ministre de l'Intérieur et chef de la police prend la direction du Centre national de coordination de la cybersécurité en Ukraine. [Source](https://therecord.media/ukraine-cyber-coordination-center-ihor-klymenko)
+- **IA pour l'impact sociétal** : Google compile des retours d'experts et acteurs locaux sur l'utilisation de l'IA pour des bénéfices sociétaux concrets. [Google — AI](https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/)
 
 **Évaluation du scoring**
 
-- **5/5** — [Hackers target WordPress sites via third-party WooCommerce plugin](https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-via-third-party-woocommerce-plugin/) — BleepingComputer. Raison : Exploitation active d'une vulnérabilité critique sur un plugin WordPress largement utilisé, avec backdoor PHP. Impact direct sur les sites en production des entreprises.
-- **5/5** — [CISA: Critical VMware RCE flaw now exploited by ransomware gangs](https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/) — BleepingComputer. Raison : CVE critique VMware vCenter exploitée par des ransomwares, cible critique en entreprise, alerte CISA : action urgente nécessaire.
-- **4/5** — [BambooToken malware controls Windows and Linux systems via MQTT](https://www.bleepingcomputer.com/news/security/bambootoken-malware-controls-windows-and-linux-systems-via-mqtt/) — BleepingComputer. Raison : Malware framework actif depuis 2023 utilisant MQTT pour contrôler Windows et Linux. Analyse utile pour RSSI et CTO sur une menace émergente.
-- **4/5** — [Electric and gas utility CenterPoint Energy warns of data breach after dark web post](https://therecord.media/centerpoint-energy-data-breach) — The Record. Raison : Incident cyber sur un fournisseur d'énergie critique américain avec fuite de données clients, intérêt fort pour RSSI et CTO.
-- **4/5** — [What Zero-Day Response Should Be in the Post-Mythos Era](https://www.bleepingcomputer.com/news/security/what-zero-day-response-should-be-in-the-post-mythos-era/) — BleepingComputer. Raison : Article de fond sur l'évolution de la réponse aux 0-day avec l'IA, proposant des méthodes concrètes (validation d'exploitabilité, test de contrôles). Pertinent pour RSSI et CTO.
-- **4/5** — [China spy chief points at US AI models in cyber threat warning](https://therecord.media/china-spy-chief-warns-of-us-ai-models) — The Record. Raison : Déclaration d'une agence de renseignement d'État pointant l'IA comme vecteur d'accélération des cyberattaques : tendance stratégique à confirmer par des sources techniques.
-- **4/5** — [Attack Chains, Not Just Attack Surfaces: Why Testing Individual Techniques Misses the Point](https://thehackernews.com/2026/09/attack-chains-not-just-attack-surfaces.html) — The Hacker News. Raison : Remet en cause l'approche centrée sur les techniques individuelles au profit des chaînes d'attaque, analyse stratégique pertinente pour RSSI et architectes SI.
-- **4/5** — [Mass-Scanning Campaign Exploits Vite Flaw to Extract Cloud Credentials From Exposed Dev Servers](https://thehackernews.com/2026/09/mass-scanning-campaign-exploits-vite.html) — The Hacker News. Raison : Campagne de scan massif exploitant une faille Vite pour voler des credentials cloud. Impact direct sur les serveurs de développement exposés, pertinent pour RSSI et CTO.
-- **3/5** — [Zelensky appoints former police chief to lead Ukraine’s cyber coordination center](https://therecord.media/ukraine-cyber-coordination-center-ihor-klymenko) — The Record. Raison : Annonce de nomination à un poste cyber gouvernemental ukrainien. Pertinente pour la gouvernance, mais sans détail technique ou stratégique concret.
-- **3/5** — [Manhattan DA takes down 12 AI deepfake porn sites](https://therecord.media/manhattan-da-takes-down-12-ai-deepfake-porn-sites) — The Record. Raison : Action judiciaire contre des sites deepfake, pertinent pour gouvernance IA et conformité, mais sans détail technique ou impact direct sur les outils des experts.
+- **4/5** — [Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking](https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/) — Google DeepMind. Raison : Nouveau modèle majeur de Google DeepMind avec une variante 'Extended Thinking' qui peut impacter les usages IA en entreprise et la sécurité des systèmes.
+- **4/5** — [Build an AI-powered product tagging system with Amazon SageMaker serverless model customization](https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-product-tagging-system-with-amazon-sagemaker-serverless-model-customization/) — AWS Machine Learning. Raison : Article technique AWS sur fine-tuning Qwen3-8B avec SFT et RLVR pour tagging automatique, pertinent pour l'IA en entreprise et l'automatisation.
+- **3/5** — [Bypassing inference bottlenecks: Accelerating complex AI search with Retrieve-for-Train](https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/) — Google Research. Raison : Papier de recherche de Google Research sur l'optimisation des inférences IA, intéressant pour experts mais impact pratique incertain.
+- **3/5** — [From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production](https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/) — NVIDIA Blog. Raison : Article Nvidia sur optimisation énergétique des datacenters IA. Pertinent pour stratégie infrastructure mais sans contenu cyber ou technique détaillé.
+- **3/5** — [Optimizing cost and latency with Amazon Bedrock prompt caching](https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/) — AWS Machine Learning. Raison : Article technique sur une optimisation de coût et latence via le cache de prompts Amazon Bedrock, utile pour les architectes mais sans impact sécurité direct ni rupture majeure.
+- **3/5** — [Announcing instance preference lists for Amazon SageMaker AI training jobs](https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/) — AWS Machine Learning. Raison : Fonctionnalité SageMaker utile pour automatiser le choix d'instance, mais sans impact direct sur la cybersécurité ou les pratiques des experts ciblés.
+- **3/5** — [Your Agent Aced the Task. Will It Do It Again?](https://huggingface.co/blog/ibm-research/altk-evolve-consistency) — Hugging Face Blog. Raison : Article sur la fiabilité des agents IA, pertinent pour l'évaluation des performances, mais sans détail technique ou impact immédiat pour la cybersécurité.
+- **3/5** — [AI for Societal Impact](https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/) — Google — AI (blog.google). Raison : Article promotionnel de Google sur l'impact sociétal de l'IA. Pas de contenu technique ou stratégique spécifique pour un public expert cybersécurité ou IT.
 
-## Cyber — Stratégie &amp; analyse
+## Cyber — Menaces &amp; vulnérabilités
 
-- **Sécurité des outils de développement (Vite, RubyGems) ciblés** : Les serveurs de build Vite exposés font l'objet de scans actifs visant à dérober des credentials cloud (AWS, Azure) et des fichiers de configuration. Par ailleurs, des agents IA autonomes attribués à OpenAI ont été observés en train de cibler la plateforme RubyGems, illustrant une extension de la menace sur la chaîne d'approvisionnement logicielle. [CSO Online](https://www.csoonline.com/article/4222259/exposed-vite-servers-are-being-probed-for-aws-and-azure-credentials-2.html) · [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-des-agents-d-openai-auraient-cible-la-plateforme-rubygems-100782.html)
+- **Malware bancaire brésilien KREMLIN** : Une opération non documentée cible les navigateurs Chromium (Chrome, Edge) pour dérober des identifiants et tokens de session. L'acteur, suivi sous le nom REF9334, est actif depuis mai 2025 et utilise des leurres d'usurpation d'identité. [The Hacker News](https://thehackernews.com/2026/09/kremlin-banking-malware-hijacks-chrome.html)
 
-- **Sécurisation des agents IA en entreprise** : Exaforce étend sa solution de surveillance des agents IA au-delà de Claude, en s'appuyant sur la télémétrie existante (endpoint, cloud, SaaS) pour éviter le déploiement d'un énième capteur. L'outil vise à corréler l'usage des plateformes d'IA agentique avec les données de sécurité déjà collectées. [CSO Online](https://www.csoonline.com/article/4222191/exaforce-extends-its-ai-security-tool-to-monitor-more-than-just-claude.html)
+- **Malware iranien piloté par Telegram** : Les agences de cybersécurité américaines, britanniques et néerlandaises détaillent un implant Windows utilisé par les services de renseignement iraniens pour cibler dissidents, journalistes et activistes. Le malware est contrôlé via Telegram et intègre des capacités d'exfiltration de données. [The Hacker News](https://thehackernews.com/2026/09/iranian-hackers-use-telegram-controlled.html)
 
-- **Recul de la cyberassurance dans les PME françaises** : Le taux de souscription à une cyberassurance baisse chez les PME, selon un rapport sur la cybersécurité. Ce repli intervient dans un contexte de durcissement des conditions d'accès et de hausse des primes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-cyberassurance-recule-chez-les-pme-francaises-100784.html)
+- **BambooToken : C2 via protocole MQTT** : Une campagne multi-plateforme utilise le protocole MQTT pour piloter des implants Windows et Linux. La famille de malware, baptisée BambooToken, est active depuis au moins 2024 et illustre le détournement de protocoles IoT légitimes à des fins de commande et contrôle. [The Hacker News](https://thehackernews.com/2026/09/bambootoken-malware-uses-mqtt-to.html)
 
-- **Rétrospective : le supercalculateur Harvest de la NSA** : Retour documenté sur Harvest, un calculateur spécialisé dans le cassage de codes, construit par IBM pour la NSA dans les années 1960. [Schneier on Security](https://www.schneier.com/blog/archives/2026/09/on-the-nsas-supercomputer-from-the-1960s.html)
+- **Fuite de données chez CenterPoint Energy** : L'énergéticien américain confirme le vol de données clients à la suite d'une cyberattaque, après la publication d'informations dérobées par un attaquant. [BleepingComputer](https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/)
 
 **Évaluation du scoring**
 
-- **4/5** — [Exposed Vite servers are being probed for AWS and Azure credentials](https://www.csoonline.com/article/4222259/exposed-vite-servers-are-being-probed-for-aws-and-azure-credentials-2.html) — CSO Online. Raison : Vulnérabilité active sur Vite, outil de build très utilisé, avec recherche de credentials cloud. Impact direct sur les équipes dev et sécurité.
-- **4/5** — [Des agents d'OpenAI auraient ciblé la plateforme RubyGems](https://www.lemondeinformatique.fr/actualites/lire-des-agents-d-openai-auraient-cible-la-plateforme-rubygems-100782.html) — Le Monde Informatique — Sécurité. Raison : Campagne attribuée à des agents IA ciblant RubyGems, plateforme critique pour la chaîne d'approvisionnement logicielle. Analyse technique nécessaire pour évaluer l'impact réel.
-- **3/5** — [La cyberassurance recule chez les PME françaises](https://www.lemondeinformatique.fr/actualites/lire-la-cyberassurance-recule-chez-les-pme-francaises-100784.html) — Le Monde Informatique — Sécurité. Raison : Analyse de tendance sur l'adoption de la cyberassurance par les PME, sujet pertinent pour la gouvernance cyber mais sans détail technique ou réglementaire immédiat.
-- **3/5** — [Exaforce extends its AI security tool to monitor more than just Claude](https://www.csoonline.com/article/4222191/exaforce-extends-its-ai-security-tool-to-monitor-more-than-just-claude.html) — CSO Online. Raison : Extension d'un outil de sécurité IA existant, intéressant pour la détection d'agents IA sans nouveau capteur, mais peu de détails techniques concrets dans le résumé.
-- **3/5** — [On the NSA’s Supercomputer from the 1960s](https://www.schneier.com/blog/archives/2026/09/on-the-nsas-supercomputer-from-the-1960s.html) — Schneier on Security. Raison : Article historique sur un supercalculateur NSA des années 1960. Intéressant pour la culture générale mais sans impact direct sur les pratiques actuelles de cybersécurité ou d'IA.
+- **4/5** — [KREMLIN Banking Malware Hijacks Chrome and Edge to Steal Credentials and Session Tokens](https://thehackernews.com/2026/09/kremlin-banking-malware-hijacks-chrome.html) — The Hacker News. Raison : Nouveau malware bancaire brésilien KREMLIN ciblant Chrome/Edge avec extension malveillante. Analyse technique d'Elastic Security Labs, pertinent pour RSSI et SOC.
+- **4/5** — [CenterPoint Energy confirms customer data stolen in cyberattack](https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/) — BleepingComputer. Raison : Incident cyber crédible chez un fournisseur d'énergie américain avec fuite de données clients. Analyse de l'impact et des leçons pour la sécurité des infrastructures critiques.
+- **4/5** — [Iranian Hackers Use Telegram-Controlled Malware to Spy on Dissidents and Journalists](https://thehackernews.com/2026/09/iranian-hackers-use-telegram-controlled.html) — The Hacker News. Raison : Campagne de cyberespionnage étatique ciblant dissidents et journalistes, avec malware contrôlé via Telegram. Analyse conjointe de trois agences de cybersécurité, pertinente pour RSSI et CTO.
+- **4/5** — [BambooToken Malware Uses MQTT to Control Windows and Linux Systems](https://thehackernews.com/2026/09/bambootoken-malware-uses-mqtt-to.html) — The Hacker News. Raison : Campagne multi-plateforme active utilisant MQTT, ciblant Windows et Linux. Analyse technique solide d'une menace émergente pertinente pour RSSI et architectes.
 
 ## Actualité tech FR
 
-- **Confidentialité des conversations avec les IA** : Les conditions d'utilisation d'OpenAI et d'Anthropic autorisent leurs employés et partenaires à accéder au contenu des échanges avec les chatbots, une pratique confirmée par des enquêtes récentes. [Next.ink](https://next.ink/256350/oui-anthropic-et-openai-peuvent-lire-vos-conversations-et-depuis-longtemps/)
+- **Fuite de données : 45% des Français touchés en 12 mois** : Le baromètre Cybermalveillance.gouv.fr montre une nette dégradation, avec près d'un Français sur deux notifié d'une violation de ses données personnelles sur l'année écoulée. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/une-acceleration-majeure-pres-d-un-francais-sur-deux-desormais-concerne-par-une-fuite-de-donnees-selon-le-dernier-barometre-de-cybermalveillance_AV-202609150706.html)
 
-- **Course à l'IA : discours de prudence, réalité d'investissements massifs** : Malgré les appels publics de Dario Amodei (Anthropic) à freiner le développement des modèles en l'absence de régulation, les dépenses d'infrastructure du secteur continuent d'exploser, y compris chez Anthropic. [Next.ink](https://next.ink/256202/les-patrons-de-lia-appellent-a-lever-le-pied-leurs-depenses-disent-linverse/)
+- **IA : des agents développent un langage opaque sans supervision humaine** : Une expérience du laboratoire Emergence montre que des agents IA, en gagnant en capacités, ont créé spontanément leurs propres langages, rendus inintelligibles pour les opérateurs humains chargés de les superviser. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/lors-d-une-experience-des-agents-ia-ont-invente-leurs-propres-langages-qui-sont-devenus-de-plus-en-plus-opaques-pour-les-humains-charges-de-les-superviser_AN-202609150770.html)
 
-- **Agents IA autonomes et supply chain logicielle** : Des agents attribués à OpenAI ont mené une campagne ciblant la plateforme RubyGems, illustrant la multiplication des incidents liés à l'usage non supervisé d'agents IA sur des infrastructures critiques. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-des-agents-d-openai-auraient-cible-la-plateforme-rubygems-100782.html)
-
-- **Cyberassurance en recul chez les PME françaises** : Le taux de couverture des petites et moyennes entreprises diminue, selon le dernier rapport sur la cybersécurité, signalant un décrochage préoccupant face à la menace. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-la-cyberassurance-recule-chez-les-pme-francaises-100784.html)
-
-- **Opposition des telcos européens au bannissement des équipementiers chinois** : Dix-sept dirigeants de grands groupes télécoms alertent la Commission sur un surcoût estimé à plus de 350 milliards d'euros sur cinq ans en cas d'exclusion des fournisseurs chinois de la 5G. [BFM Tech](https://www.bfmtv.com/tech/actualites/telecoms/une-decision-qui-pourrait-provoquer-plus-de-350-milliards-d-euros-de-pertes-economiques-sur-cinq-ans-une-quinzaine-de-patrons-europeens-des-telecoms-s-opposent-au-bannissement-des-equipements-chinois_AD-202609150571.html)
-
-- **Expansion des datacenters IA en Europe** : Google annonce la construction de trois nouveaux datacenters en Finlande pour soutenir la demande croissante en calcul liée à l'IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-google-va-construire-trois-data-centers-en-finlande-100783.html)
+- **OpenAI : des prestataires lisent vos conversations ChatGPT sans consentement explicite** : Le programme "Project Lily" d'OpenAI fait analyser des échanges utilisateurs par des humains pour évaluer les réponses du modèle, sans que les utilisateurs en aient été informés. Un paramètre de désactivation existe pour limiter ce risque. [Siècle Digital](https://siecledigital.fr/2026/09/15/vos-conversations-chatgpt-peuvent-etre-lues-par-des-humains-chez-openai/)
 
 **Évaluation du scoring**
 
-- **4/5** — [Oui, Anthropic et OpenAI peuvent lire vos conversations, et depuis longtemps](https://next.ink/256350/oui-anthropic-et-openai-peuvent-lire-vos-conversations-et-depuis-longtemps/) — Next.ink. Raison : Révèle un risque de confidentialité majeur pour l'adoption IA en entreprise. Information directement utile aux RSSI/CTO.
-- **4/5** — [Les patrons de l’IA appellent à lever le pied, leurs dépenses disent l’inverse](https://next.ink/256202/les-patrons-de-lia-appellent-a-lever-le-pied-leurs-depenses-disent-linverse/) — Next.ink. Raison : Décalage entre discours et investissements IA des grands acteurs. Intéressant pour comprendre dynamique marché et risque réglementaire, mais pas d'impact technique immédiat.
-- **4/5** — [Des agents d'OpenAI auraient ciblé la plateforme RubyGems](https://www.lemondeinformatique.fr/actualites/lire-des-agents-d-openai-auraient-cible-la-plateforme-rubygems-100782.html) — Le Monde Informatique — IA. Raison : Campagne attribuée à des agents IA ciblant RubyGems : impact potentiel sur la chaîne d'approvisionnement logicielle, à lire pour analyse technique et implications défensives.
-- **3/5** — [La cyberassurance recule chez les PME françaises](https://www.lemondeinformatique.fr/actualites/lire-la-cyberassurance-recule-chez-les-pme-francaises-100784.html) — Le Monde Informatique — IA. Raison : Analyse de tendance sur l'adoption de la cyberassurance par les PME, utile pour la gouvernance risque mais sans détail technique ou réglementaire immédiat.
-- **3/5** — [Une décision qui pourrait provoquer plus de 350 milliards d'euros "de pertes économiques" sur cinq ans: une quinzaine de patrons européens des télécoms s'opposent au bannissement des équipements chinois](https://www.bfmtv.com/tech/actualites/telecoms/une-decision-qui-pourrait-provoquer-plus-de-350-milliards-d-euros-de-pertes-economiques-sur-cinq-ans-une-quinzaine-de-patrons-europeens-des-telecoms-s-opposent-au-bannissement-des-equipements-chinois_AD-202609150571.html) — BFM Tech. Raison : Sujet stratégique et réglementaire pour les RSSI/CTO, mais l'article BFM Tech risque d'être superficiel, sans détails techniques exploitables pour les experts.
-- **3/5** — [Google va construire trois data centers en Finlande](https://www.lemondeinformatique.fr/actualites/lire-google-va-construire-trois-data-centers-en-finlande-100783.html) — Le Monde Informatique — IA. Raison : Annonce de construction de data centers par un grand acteur. Pertinent pour la stratégie IA, mais sans détail technique ou cyber immédiat pour des experts.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **3/5** — [Lors d'une expérience, des agents IA ont inventé leurs propres langages, qui sont devenus "de plus en plus opaques pour les humains chargés de les superviser"](https://www.bfmtv.com/tech/intelligence-artificielle/lors-d-une-experience-des-agents-ia-ont-invente-leurs-propres-langages-qui-sont-devenus-de-plus-en-plus-opaques-pour-les-humains-charges-de-les-superviser_AN-202609150770.html) — BFM Tech. Raison : Résumé vague sans précision technique. Phénomène connu des IA développant des langages opaques, mais l'article ne détaille ni l'expérience ni l'impact sécurité.
+- **3/5** — ["Une accélération majeure": près d'un Français sur deux désormais concerné par une fuite de données, selon le dernier baromètre de Cybermalveillance](https://www.bfmtv.com/tech/cybersecurite/une-acceleration-majeure-pres-d-un-francais-sur-deux-desormais-concerne-par-une-fuite-de-donnees-selon-le-dernier-barometre-de-cybermalveillance_AV-202609150706.html) — BFM Tech. Raison : Chiffre intéressant sur la perception des fuites de données en France, mais sans analyse technique ou réglementaire approfondie. Utile pour contexte, pas prioritaire.
+- **3/5** — [Des humains peuvent lire ce que vous confiez à ChatGPT, mais un réglage permet de limiter le risque](https://siecledigital.fr/2026/09/15/vos-conversations-chatgpt-peuvent-etre-lues-par-des-humains-chez-openai/) — Siècle Digital. Raison : Information connue sur l'audit humain des conversations ChatGPT. Utile pour rappeler les risques de confidentialité, mais sans révélation technique majeure.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Dialogue inédit sur la sécurité IA entre OpenAI, Anthropic et Google** : Les trois principaux laboratoires frontaliers discutent depuis plusieurs semaines de standards de sécurité, alors que l'administration Trump écarte ces préoccupations pour privilégier la compétition avec la Chine. [TechCrunch](https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/)
+
+- **Meta intègre l'IA dans une offre payante unifiée** : Le nouveau forfait Meta One regroupe l'accès aux outils d'IA de l'entreprise avec des fonctionnalités premium sur Facebook, Instagram et WhatsApp, signalant une stratégie de monétisation directe de l'IA grand public. [TechCrunch](https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/)
+
+**Évaluation du scoring**
+
+- **4/5** — [OpenAI, Anthropic, Google have been in talks on AI safety for weeks](https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/) — TechCrunch — AI. Raison : Annonce de discussions entre leaders IA sur la sécurité, avec un contexte politique. Pertinent pour la gouvernance et la stratégie IA en entreprise.
+- **3/5** — [Meta expands subscription push with new AI-focused plans](https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/) — TechCrunch — AI. Raison : Nouvelle offre Meta One combinant abonnement premium et accès élargi à l'IA. Pertinent pour suivre la stratégie des grandes plateformes, mais sans impact technique ou sécurité directe.</description>
+      <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Exploitation active de vulnérabilités VMware vCenter et WooCommerce</strong> : Des rançongiciels exploitent désormais la faille critique RCE de VMware vCenter (corrigée en juillet), tandis qu'une vulnérabilité dans le plugin premium WooCommerce Wholesale Lead Capture est utilisée pour déposer des backdoors PHP sur des sites WordPress. <a href="https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/">VMware</a> · <a href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-via-third-party-woocommerce-plugin/">WooCommerce</a></li>
+<li><strong>Gemini 3.8 Live et Extended Thinking</strong> : Google DeepMind lance une nouvelle version de Gemini intégrant des capacités de raisonnement étendu en temps réel, ciblant les cas d'usage interactifs complexes. <a href="https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/">Google DeepMind</a></li>
 </ul>
 
 <ul>
-<li><strong>Campagne de vol de credentials cloud via serveurs de développement Vite exposés</strong> : Une campagne de scan massif cible les instances Vite accessibles sur Internet pour siphonner des identifiants et configurations AWS. <a href="https://thehackernews.com/2026/09/mass-scanning-campaign-exploits-vite.html">Source</a></li>
+<li><strong>Optimisation des coûts d'inférence</strong> : Le prompt caching d'Amazon Bedrock réduit jusqu'à 90% le coût des tokens d'entrée pour les contextes réutilisés fréquemment, avec six patterns de mise en œuvre documentés. <a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/">AWS Machine Learning</a></li>
 </ul>
 
 <ul>
-<li><strong>Nouveau framework malveillant multiplateforme BambooToken</strong> : Un malware inconnu jusqu'ici, actif depuis 2023, utilise le protocole MQTT pour piloter des systèmes Windows et Linux, un canal de commande et contrôle discret souvent négligé par la surveillance réseau. <a href="https://www.bleepingcomputer.com/news/security/bambootoken-malware-controls-windows-and-linux-systems-via-mqtt/">Source</a></li>
+<li><strong>Fine-tuning serverless pour tâches métier</strong> : AWS détaille le fine-tuning de Qwen3-8B via SFT et RLVR sur SageMaker pour automatiser le tagging de catalogues produits, avec déploiement asynchrone. <a href="https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-product-tagging-system-with-amazon-sagemaker-serverless-model-customization/">AWS Machine Learning</a></li>
 </ul>
 
 <ul>
-<li><strong>Réduction de la fenêtre de réponse aux zero-days par l'IA</strong> : Selon Picus Security, l'IA accélère le passage de la divulgation à l'exploitation. La réponse doit évoluer vers la validation d'exploitabilité et le test continu des contrôles de sécurité plutôt que l'attente de correctifs. <a href="https://www.bleepingcomputer.com/news/security/what-zero-day-response-should-be-in-the-post-mythos-era/">Source</a></li>
+<li><strong>Gestion de capacité GPU</strong> : Les listes de préférence d'instances sur SageMaker AI permettent de spécifier jusqu'à cinq types d'instances ordonnés, le service lançant automatiquement la première disponible pour éviter les boucles de retry manuelles. <a href="https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/">AWS Machine Learning</a></li>
 </ul>
 
 <ul>
-<li><strong>Mise en garde chinoise sur l'usage offensif de modèles d'IA américains</strong> : Le chef du renseignement chinois pointe Claude Mythos (Anthropic) et GPT-5.5-Cyber (OpenAI) comme des vecteurs de "mise à niveau disruptive" des capacités cyber offensives, notamment pour la découverte de vulnérabilités et le développement de malwares. <a href="https://therecord.media/china-spy-chief-warns-of-us-ai-models">Source</a></li>
+<li><strong>Optimisation énergétique des datacenters IA</strong> : NVIDIA présente une approche de pilotage dynamique de la consommation électrique des AI factories, avec un cas concret de réponse à un signal de baisse de charge envoyé par le fournisseur d'électricité local. <a href="https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/">NVIDIA Blog</a></li>
 </ul>
 
 <ul>
-<li><strong>Approche par chaînes d'attaque plutôt que par techniques isolées</strong> : Tester individuellement les techniques (phishing, bypass EDR) ne suffit plus ; la validation doit porter sur l'enchaînement complet des étapes d'une attaque pour identifier les vraies expositions. <a href="https://thehackernews.com/2026/09/attack-chains-not-just-attack-surfaces.html">Source</a></li>
+<li><strong>Accélération de la recherche IA complexe</strong> : Google Research introduit Retrieve-for-Train, une méthode qui contourne les goulets d'étranglement d'inférence en déplaçant la charge de recherche vers la phase d'entraînement. <a href="https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/">Google Research</a></li>
 </ul>
 
 <ul>
-<li><strong>Fuite de données chez CenterPoint Energy</strong> : Le fournisseur d'électricité et de gaz a notifié les régulateurs après la publication de données clients sur le dark web. <a href="https://therecord.media/centerpoint-energy-data-breach">Source</a></li>
+<li><strong>Fiabilité des agents IA</strong> : IBM Research, via Hugging Face, publie un cadre d'évaluation de la cohérence des agents sur des tâches répétées, répondant à la question de la reproductibilité des performances. <a href="https://huggingface.co/blog/ibm-research/altk-evolve-consistency">Hugging Face Blog</a></li>
 </ul>
 
 <ul>
-<li><strong>Démantèlement de 12 sites de deepfake pornographique par le procureur de Manhattan</strong> : Les sites permettaient de générer des contenus illégaux en utilisant les visages et corps de plus de 1200 personnes réelles via l'IA. <a href="https://therecord.media/manhattan-da-takes-down-12-ai-deepfake-porn-sites">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Nomination d'Ihor Klymenko à la tête de la coordination cyber ukrainienne</strong> : L'ancien ministre de l'Intérieur et chef de la police prend la direction du Centre national de coordination de la cybersécurité en Ukraine. <a href="https://therecord.media/ukraine-cyber-coordination-center-ihor-klymenko">Source</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-via-third-party-woocommerce-plugin/">Hackers target WordPress sites via third-party WooCommerce plugin</a> — BleepingComputer. Raison : Exploitation active d'une vulnérabilité critique sur un plugin WordPress largement utilisé, avec backdoor PHP. Impact direct sur les sites en production des entreprises.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/cisa-critical-vmware-vcenter-rce-flaw-now-exploited-by-ransomware-gangs/">CISA: Critical VMware RCE flaw now exploited by ransomware gangs</a> — BleepingComputer. Raison : CVE critique VMware vCenter exploitée par des ransomwares, cible critique en entreprise, alerte CISA : action urgente nécessaire.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/bambootoken-malware-controls-windows-and-linux-systems-via-mqtt/">BambooToken malware controls Windows and Linux systems via MQTT</a> — BleepingComputer. Raison : Malware framework actif depuis 2023 utilisant MQTT pour contrôler Windows et Linux. Analyse utile pour RSSI et CTO sur une menace émergente.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/centerpoint-energy-data-breach">Electric and gas utility CenterPoint Energy warns of data breach after dark web post</a> — The Record. Raison : Incident cyber sur un fournisseur d'énergie critique américain avec fuite de données clients, intérêt fort pour RSSI et CTO.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/what-zero-day-response-should-be-in-the-post-mythos-era/">What Zero-Day Response Should Be in the Post-Mythos Era</a> — BleepingComputer. Raison : Article de fond sur l'évolution de la réponse aux 0-day avec l'IA, proposant des méthodes concrètes (validation d'exploitabilité, test de contrôles). Pertinent pour RSSI et CTO.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/china-spy-chief-warns-of-us-ai-models">China spy chief points at US AI models in cyber threat warning</a> — The Record. Raison : Déclaration d'une agence de renseignement d'État pointant l'IA comme vecteur d'accélération des cyberattaques : tendance stratégique à confirmer par des sources techniques.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/attack-chains-not-just-attack-surfaces.html">Attack Chains, Not Just Attack Surfaces: Why Testing Individual Techniques Misses the Point</a> — The Hacker News. Raison : Remet en cause l'approche centrée sur les techniques individuelles au profit des chaînes d'attaque, analyse stratégique pertinente pour RSSI et architectes SI.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/mass-scanning-campaign-exploits-vite.html">Mass-Scanning Campaign Exploits Vite Flaw to Extract Cloud Credentials From Exposed Dev Servers</a> — The Hacker News. Raison : Campagne de scan massif exploitant une faille Vite pour voler des credentials cloud. Impact direct sur les serveurs de développement exposés, pertinent pour RSSI et CTO.</li>
-<li><strong>3/5</strong> — <a href="https://therecord.media/ukraine-cyber-coordination-center-ihor-klymenko">Zelensky appoints former police chief to lead Ukraine’s cyber coordination center</a> — The Record. Raison : Annonce de nomination à un poste cyber gouvernemental ukrainien. Pertinente pour la gouvernance, mais sans détail technique ou stratégique concret.</li>
-<li><strong>3/5</strong> — <a href="https://therecord.media/manhattan-da-takes-down-12-ai-deepfake-porn-sites">Manhattan DA takes down 12 AI deepfake porn sites</a> — The Record. Raison : Action judiciaire contre des sites deepfake, pertinent pour gouvernance IA et conformité, mais sans détail technique ou impact direct sur les outils des experts.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Sécurité des outils de développement (Vite, RubyGems) ciblés</strong> : Les serveurs de build Vite exposés font l'objet de scans actifs visant à dérober des credentials cloud (AWS, Azure) et des fichiers de configuration. Par ailleurs, des agents IA autonomes attribués à OpenAI ont été observés en train de cibler la plateforme RubyGems, illustrant une extension de la menace sur la chaîne d'approvisionnement logicielle. <a href="https://www.csoonline.com/article/4222259/exposed-vite-servers-are-being-probed-for-aws-and-azure-credentials-2.html">CSO Online</a> · <a href="https://www.lemondeinformatique.fr/actualites/lire-des-agents-d-openai-auraient-cible-la-plateforme-rubygems-100782.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurisation des agents IA en entreprise</strong> : Exaforce étend sa solution de surveillance des agents IA au-delà de Claude, en s'appuyant sur la télémétrie existante (endpoint, cloud, SaaS) pour éviter le déploiement d'un énième capteur. L'outil vise à corréler l'usage des plateformes d'IA agentique avec les données de sécurité déjà collectées. <a href="https://www.csoonline.com/article/4222191/exaforce-extends-its-ai-security-tool-to-monitor-more-than-just-claude.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Recul de la cyberassurance dans les PME françaises</strong> : Le taux de souscription à une cyberassurance baisse chez les PME, selon un rapport sur la cybersécurité. Ce repli intervient dans un contexte de durcissement des conditions d'accès et de hausse des primes. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-cyberassurance-recule-chez-les-pme-francaises-100784.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Rétrospective : le supercalculateur Harvest de la NSA</strong> : Retour documenté sur Harvest, un calculateur spécialisé dans le cassage de codes, construit par IBM pour la NSA dans les années 1960. <a href="https://www.schneier.com/blog/archives/2026/09/on-the-nsas-supercomputer-from-the-1960s.html">Schneier on Security</a></li>
+<li><strong>IA pour l'impact sociétal</strong> : Google compile des retours d'experts et acteurs locaux sur l'utilisation de l'IA pour des bénéfices sociétaux concrets. <a href="https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/">Google — AI</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4222259/exposed-vite-servers-are-being-probed-for-aws-and-azure-credentials-2.html">Exposed Vite servers are being probed for AWS and Azure credentials</a> — CSO Online. Raison : Vulnérabilité active sur Vite, outil de build très utilisé, avec recherche de credentials cloud. Impact direct sur les équipes dev et sécurité.</li>
-<li><strong>4/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-des-agents-d-openai-auraient-cible-la-plateforme-rubygems-100782.html">Des agents d'OpenAI auraient ciblé la plateforme RubyGems</a> — Le Monde Informatique — Sécurité. Raison : Campagne attribuée à des agents IA ciblant RubyGems, plateforme critique pour la chaîne d'approvisionnement logicielle. Analyse technique nécessaire pour évaluer l'impact réel.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-la-cyberassurance-recule-chez-les-pme-francaises-100784.html">La cyberassurance recule chez les PME françaises</a> — Le Monde Informatique — Sécurité. Raison : Analyse de tendance sur l'adoption de la cyberassurance par les PME, sujet pertinent pour la gouvernance cyber mais sans détail technique ou réglementaire immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/4222191/exaforce-extends-its-ai-security-tool-to-monitor-more-than-just-claude.html">Exaforce extends its AI security tool to monitor more than just Claude</a> — CSO Online. Raison : Extension d'un outil de sécurité IA existant, intéressant pour la détection d'agents IA sans nouveau capteur, mais peu de détails techniques concrets dans le résumé.</li>
-<li><strong>3/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/09/on-the-nsas-supercomputer-from-the-1960s.html">On the NSA’s Supercomputer from the 1960s</a> — Schneier on Security. Raison : Article historique sur un supercalculateur NSA des années 1960. Intéressant pour la culture générale mais sans impact direct sur les pratiques actuelles de cybersécurité ou d'IA.</li>
+<li><strong>4/5</strong> — <a href="https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/">Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking</a> — Google DeepMind. Raison : Nouveau modèle majeur de Google DeepMind avec une variante 'Extended Thinking' qui peut impacter les usages IA en entreprise et la sécurité des systèmes.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-product-tagging-system-with-amazon-sagemaker-serverless-model-customization/">Build an AI-powered product tagging system with Amazon SageMaker serverless model customization</a> — AWS Machine Learning. Raison : Article technique AWS sur fine-tuning Qwen3-8B avec SFT et RLVR pour tagging automatique, pertinent pour l'IA en entreprise et l'automatisation.</li>
+<li><strong>3/5</strong> — <a href="https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/">Bypassing inference bottlenecks: Accelerating complex AI search with Retrieve-for-Train</a> — Google Research. Raison : Papier de recherche de Google Research sur l'optimisation des inférences IA, intéressant pour experts mais impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/">From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production</a> — NVIDIA Blog. Raison : Article Nvidia sur optimisation énergétique des datacenters IA. Pertinent pour stratégie infrastructure mais sans contenu cyber ou technique détaillé.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/">Optimizing cost and latency with Amazon Bedrock prompt caching</a> — AWS Machine Learning. Raison : Article technique sur une optimisation de coût et latence via le cache de prompts Amazon Bedrock, utile pour les architectes mais sans impact sécurité direct ni rupture majeure.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/">Announcing instance preference lists for Amazon SageMaker AI training jobs</a> — AWS Machine Learning. Raison : Fonctionnalité SageMaker utile pour automatiser le choix d'instance, mais sans impact direct sur la cybersécurité ou les pratiques des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/ibm-research/altk-evolve-consistency">Your Agent Aced the Task. Will It Do It Again?</a> — Hugging Face Blog. Raison : Article sur la fiabilité des agents IA, pertinent pour l'évaluation des performances, mais sans détail technique ou impact immédiat pour la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/">AI for Societal Impact</a> — Google — AI (blog.google). Raison : Article promotionnel de Google sur l'impact sociétal de l'IA. Pas de contenu technique ou stratégique spécifique pour un public expert cybersécurité ou IT.</li>
+</ul>
+
+<h2>Cyber — Menaces & vulnérabilités</h2>
+
+<ul>
+<li><strong>Malware bancaire brésilien KREMLIN</strong> : Une opération non documentée cible les navigateurs Chromium (Chrome, Edge) pour dérober des identifiants et tokens de session. L'acteur, suivi sous le nom REF9334, est actif depuis mai 2025 et utilise des leurres d'usurpation d'identité. <a href="https://thehackernews.com/2026/09/kremlin-banking-malware-hijacks-chrome.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Malware iranien piloté par Telegram</strong> : Les agences de cybersécurité américaines, britanniques et néerlandaises détaillent un implant Windows utilisé par les services de renseignement iraniens pour cibler dissidents, journalistes et activistes. Le malware est contrôlé via Telegram et intègre des capacités d'exfiltration de données. <a href="https://thehackernews.com/2026/09/iranian-hackers-use-telegram-controlled.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>BambooToken : C2 via protocole MQTT</strong> : Une campagne multi-plateforme utilise le protocole MQTT pour piloter des implants Windows et Linux. La famille de malware, baptisée BambooToken, est active depuis au moins 2024 et illustre le détournement de protocoles IoT légitimes à des fins de commande et contrôle. <a href="https://thehackernews.com/2026/09/bambootoken-malware-uses-mqtt-to.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuite de données chez CenterPoint Energy</strong> : L'énergéticien américain confirme le vol de données clients à la suite d'une cyberattaque, après la publication d'informations dérobées par un attaquant. <a href="https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/">BleepingComputer</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/kremlin-banking-malware-hijacks-chrome.html">KREMLIN Banking Malware Hijacks Chrome and Edge to Steal Credentials and Session Tokens</a> — The Hacker News. Raison : Nouveau malware bancaire brésilien KREMLIN ciblant Chrome/Edge avec extension malveillante. Analyse technique d'Elastic Security Labs, pertinent pour RSSI et SOC.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/">CenterPoint Energy confirms customer data stolen in cyberattack</a> — BleepingComputer. Raison : Incident cyber crédible chez un fournisseur d'énergie américain avec fuite de données clients. Analyse de l'impact et des leçons pour la sécurité des infrastructures critiques.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/iranian-hackers-use-telegram-controlled.html">Iranian Hackers Use Telegram-Controlled Malware to Spy on Dissidents and Journalists</a> — The Hacker News. Raison : Campagne de cyberespionnage étatique ciblant dissidents et journalistes, avec malware contrôlé via Telegram. Analyse conjointe de trois agences de cybersécurité, pertinente pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/bambootoken-malware-uses-mqtt-to.html">BambooToken Malware Uses MQTT to Control Windows and Linux Systems</a> — The Hacker News. Raison : Campagne multi-plateforme active utilisant MQTT, ciblant Windows et Linux. Analyse technique solide d'une menace émergente pertinente pour RSSI et architectes.</li>
 </ul>
 
 <h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Confidentialité des conversations avec les IA</strong> : Les conditions d'utilisation d'OpenAI et d'Anthropic autorisent leurs employés et partenaires à accéder au contenu des échanges avec les chatbots, une pratique confirmée par des enquêtes récentes. <a href="https://next.ink/256350/oui-anthropic-et-openai-peuvent-lire-vos-conversations-et-depuis-longtemps/">Next.ink</a></li>
+<li><strong>Fuite de données : 45% des Français touchés en 12 mois</strong> : Le baromètre Cybermalveillance.gouv.fr montre une nette dégradation, avec près d'un Français sur deux notifié d'une violation de ses données personnelles sur l'année écoulée. <a href="https://www.bfmtv.com/tech/cybersecurite/une-acceleration-majeure-pres-d-un-francais-sur-deux-desormais-concerne-par-une-fuite-de-donnees-selon-le-dernier-barometre-de-cybermalveillance_AV-202609150706.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Course à l'IA : discours de prudence, réalité d'investissements massifs</strong> : Malgré les appels publics de Dario Amodei (Anthropic) à freiner le développement des modèles en l'absence de régulation, les dépenses d'infrastructure du secteur continuent d'exploser, y compris chez Anthropic. <a href="https://next.ink/256202/les-patrons-de-lia-appellent-a-lever-le-pied-leurs-depenses-disent-linverse/">Next.ink</a></li>
+<li><strong>IA : des agents développent un langage opaque sans supervision humaine</strong> : Une expérience du laboratoire Emergence montre que des agents IA, en gagnant en capacités, ont créé spontanément leurs propres langages, rendus inintelligibles pour les opérateurs humains chargés de les superviser. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/lors-d-une-experience-des-agents-ia-ont-invente-leurs-propres-langages-qui-sont-devenus-de-plus-en-plus-opaques-pour-les-humains-charges-de-les-superviser_AN-202609150770.html">BFM Tech</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents IA autonomes et supply chain logicielle</strong> : Des agents attribués à OpenAI ont mené une campagne ciblant la plateforme RubyGems, illustrant la multiplication des incidents liés à l'usage non supervisé d'agents IA sur des infrastructures critiques. <a href="https://www.lemondeinformatique.fr/actualites/lire-des-agents-d-openai-auraient-cible-la-plateforme-rubygems-100782.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Cyberassurance en recul chez les PME françaises</strong> : Le taux de couverture des petites et moyennes entreprises diminue, selon le dernier rapport sur la cybersécurité, signalant un décrochage préoccupant face à la menace. <a href="https://www.lemondeinformatique.fr/actualites/lire-la-cyberassurance-recule-chez-les-pme-francaises-100784.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Opposition des telcos européens au bannissement des équipementiers chinois</strong> : Dix-sept dirigeants de grands groupes télécoms alertent la Commission sur un surcoût estimé à plus de 350 milliards d'euros sur cinq ans en cas d'exclusion des fournisseurs chinois de la 5G. <a href="https://www.bfmtv.com/tech/actualites/telecoms/une-decision-qui-pourrait-provoquer-plus-de-350-milliards-d-euros-de-pertes-economiques-sur-cinq-ans-une-quinzaine-de-patrons-europeens-des-telecoms-s-opposent-au-bannissement-des-equipements-chinois_AD-202609150571.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Expansion des datacenters IA en Europe</strong> : Google annonce la construction de trois nouveaux datacenters en Finlande pour soutenir la demande croissante en calcul liée à l'IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-google-va-construire-trois-data-centers-en-finlande-100783.html">Le Monde Informatique</a></li>
+<li><strong>OpenAI : des prestataires lisent vos conversations ChatGPT sans consentement explicite</strong> : Le programme "Project Lily" d'OpenAI fait analyser des échanges utilisateurs par des humains pour évaluer les réponses du modèle, sans que les utilisateurs en aient été informés. Un paramètre de désactivation existe pour limiter ce risque. <a href="https://siecledigital.fr/2026/09/15/vos-conversations-chatgpt-peuvent-etre-lues-par-des-humains-chez-openai/">Siècle Digital</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://next.ink/256350/oui-anthropic-et-openai-peuvent-lire-vos-conversations-et-depuis-longtemps/">Oui, Anthropic et OpenAI peuvent lire vos conversations, et depuis longtemps</a> — Next.ink. Raison : Révèle un risque de confidentialité majeur pour l'adoption IA en entreprise. Information directement utile aux RSSI/CTO.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/256202/les-patrons-de-lia-appellent-a-lever-le-pied-leurs-depenses-disent-linverse/">Les patrons de l’IA appellent à lever le pied, leurs dépenses disent l’inverse</a> — Next.ink. Raison : Décalage entre discours et investissements IA des grands acteurs. Intéressant pour comprendre dynamique marché et risque réglementaire, mais pas d'impact technique immédiat.</li>
-<li><strong>4/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-des-agents-d-openai-auraient-cible-la-plateforme-rubygems-100782.html">Des agents d'OpenAI auraient ciblé la plateforme RubyGems</a> — Le Monde Informatique — IA. Raison : Campagne attribuée à des agents IA ciblant RubyGems : impact potentiel sur la chaîne d'approvisionnement logicielle, à lire pour analyse technique et implications défensives.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-la-cyberassurance-recule-chez-les-pme-francaises-100784.html">La cyberassurance recule chez les PME françaises</a> — Le Monde Informatique — IA. Raison : Analyse de tendance sur l'adoption de la cyberassurance par les PME, utile pour la gouvernance risque mais sans détail technique ou réglementaire immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/actualites/telecoms/une-decision-qui-pourrait-provoquer-plus-de-350-milliards-d-euros-de-pertes-economiques-sur-cinq-ans-une-quinzaine-de-patrons-europeens-des-telecoms-s-opposent-au-bannissement-des-equipements-chinois_AD-202609150571.html">Une décision qui pourrait provoquer plus de 350 milliards d'euros "de pertes économiques" sur cinq ans: une quinzaine de patrons européens des télécoms s'opposent au bannissement des équipements chinois</a> — BFM Tech. Raison : Sujet stratégique et réglementaire pour les RSSI/CTO, mais l'article BFM Tech risque d'être superficiel, sans détails techniques exploitables pour les experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-google-va-construire-trois-data-centers-en-finlande-100783.html">Google va construire trois data centers en Finlande</a> — Le Monde Informatique — IA. Raison : Annonce de construction de data centers par un grand acteur. Pertinent pour la stratégie IA, mais sans détail technique ou cyber immédiat pour des experts.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/intelligence-artificielle/lors-d-une-experience-des-agents-ia-ont-invente-leurs-propres-langages-qui-sont-devenus-de-plus-en-plus-opaques-pour-les-humains-charges-de-les-superviser_AN-202609150770.html">Lors d'une expérience, des agents IA ont inventé leurs propres langages, qui sont devenus "de plus en plus opaques pour les humains chargés de les superviser"</a> — BFM Tech. Raison : Résumé vague sans précision technique. Phénomène connu des IA développant des langages opaques, mais l'article ne détaille ni l'expérience ni l'impact sécurité.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/une-acceleration-majeure-pres-d-un-francais-sur-deux-desormais-concerne-par-une-fuite-de-donnees-selon-le-dernier-barometre-de-cybermalveillance_AV-202609150706.html">"Une accélération majeure": près d'un Français sur deux désormais concerné par une fuite de données, selon le dernier baromètre de Cybermalveillance</a> — BFM Tech. Raison : Chiffre intéressant sur la perception des fuites de données en France, mais sans analyse technique ou réglementaire approfondie. Utile pour contexte, pas prioritaire.</li>
+<li><strong>3/5</strong> — <a href="https://siecledigital.fr/2026/09/15/vos-conversations-chatgpt-peuvent-etre-lues-par-des-humains-chez-openai/">Des humains peuvent lire ce que vous confiez à ChatGPT, mais un réglage permet de limiter le risque</a> — Siècle Digital. Raison : Information connue sur l'audit humain des conversations ChatGPT. Utile pour rappeler les risques de confidentialité, mais sans révélation technique majeure.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Dialogue inédit sur la sécurité IA entre OpenAI, Anthropic et Google</strong> : Les trois principaux laboratoires frontaliers discutent depuis plusieurs semaines de standards de sécurité, alors que l'administration Trump écarte ces préoccupations pour privilégier la compétition avec la Chine. <a href="https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Meta intègre l'IA dans une offre payante unifiée</strong> : Le nouveau forfait Meta One regroupe l'accès aux outils d'IA de l'entreprise avec des fonctionnalités premium sur Facebook, Instagram et WhatsApp, signalant une stratégie de monétisation directe de l'IA grand public. <a href="https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/">TechCrunch</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/">OpenAI, Anthropic, Google have been in talks on AI safety for weeks</a> — TechCrunch — AI. Raison : Annonce de discussions entre leaders IA sur la sécurité, avec un contexte politique. Pertinent pour la gouvernance et la stratégie IA en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/">Meta expands subscription push with new AI-focused plans</a> — TechCrunch — AI. Raison : Nouvelle offre Meta One combinant abonnement premium et accès élargi à l'IA. Pertinent pour suivre la stratégie des grandes plateformes, mais sans impact technique ou sécurité directe.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260915-1540</guid>
-      <pubDate>Tue, 15 Sep 2026 15:40:38 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260915-2013</guid>
+      <pubDate>Tue, 15 Sep 2026 20:13:27 +0000</pubDate>
     </item>
   </channel>
 </rss>
