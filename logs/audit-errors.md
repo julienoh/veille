@@ -164,3 +164,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-09-14 10:57 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
 | 2026-09-14 17:02 UTC | synthese | IA & Tech — Médias internationaux | Rate limit fournisseur LLM atteint |
 | 2026-09-14 17:02 UTC | synthese | Cyber — Menaces & vulnérabilités | Rate limit fournisseur LLM atteint |
+| 2026-09-16 15:35 UTC | synthese | IA — Labos & éditeurs | Rate limit fournisseur LLM atteint |
