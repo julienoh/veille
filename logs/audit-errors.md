@@ -166,3 +166,9 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-09-14 17:02 UTC | synthese | Cyber — Menaces & vulnérabilités | Rate limit fournisseur LLM atteint |
 | 2026-09-16 15:35 UTC | synthese | IA — Labos & éditeurs | Rate limit fournisseur LLM atteint |
 | 2026-09-18 09:53 UTC | synthese | IA & Tech — Médias internationaux | Rate limit fournisseur LLM atteint |
+| 2026-09-18 19:33 UTC | synthese | IA & Tech — Médias internationaux | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
+| 2026-09-18 19:33 UTC | synthese | Cyber — Stratégie & analyse | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
+| 2026-09-18 19:33 UTC | synthese | Cyber — Menaces & vulnérabilités | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
+| 2026-09-18 19:33 UTC | synthese | IA — Labos & éditeurs | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
+| 2026-09-18 19:33 UTC | synthese | Actualité tech FR | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
+| 2026-09-18 19:33 UTC | synthese | IA — Produits, agents & dev tooling | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
