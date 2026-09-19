@@ -8,58 +8,74 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 18 Sep 2026 15:05:26 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 09:25:36 +0000</lastBuildDate>
     <item>
-      <title>Digest — 18/09 15h</title>
+      <title>Digest — 19/09 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Stratégie &amp; analyse
+      <description>## Actualité tech FR
 
-- **Mise à jour critique de Chrome** : La correction de 42 vulnérabilités par Google impose une mise à jour immédiate des navigateurs pour limiter la surface d’attaque sur les postes. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-google-corrige-42-failles-de-securite-dans-chrome-100795.html)
-- **IA générative et CAPTCHAs** : Selon un incident documenté par Anthropic, même un modèle avancé comme Claude échoue sur des CAPTCHAs basiques, montrant que les protections anti-bot historiques restent un obstacle pour les IA actuelles. [Schneier on Security](https://www.schneier.com/blog/archives/2026/09/are-ais-still-struggling-with-captchas.html)
-- **Offre IA pour le secteur juridique** : OpenAI lance Astra for Law, déclinaison de GPT-6 pour les cabinets d’avocats, signalant l’entrée de l’IA générative dans des environnements à forte exigence de confidentialité. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-openai-lance-astra-for-law-pour-les-professionnels-du-droit-100794.html)
+- **Cybersquatting politique sur le .fr** : L'Afnic renforce sa surveillance des dépôts de noms de domaine visant les candidats et partis politiques à l'approche de la présidentielle, face à une recrudescence des tentatives de typosquatting à visée parodique ou lucrative. [BFM Tech](https://www.bfmtv.com/tech/vie-numerique/a-l-approche-de-la-presidentielle-pour-rire-ou-faire-de-l-argent-tous-les-coups-sont-permis-comment-l-afnic-qui-gere-les-noms-de-domaine-en-fr-protege-le-web-des-tentatives-de-typosquating_AV-202609190035.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [Google corrige 42 failles de sécurité dans Chrome](https://www.lemondeinformatique.fr/actualites/lire-google-corrige-42-failles-de-securite-dans-chrome-100795.html) — Le Monde Informatique — Sécurité. Raison : Correction massive de 42 vulnérabilités Chrome, dont potentiellement critiques. Impact direct sur la sécurité des postes de travail en entreprise.
-- **3/5** — [OpenAI lance Astra for Law pour les professionnels du droit](https://www.lemondeinformatique.fr/actualites/lire-openai-lance-astra-for-law-pour-les-professionnels-du-droit-100794.html) — Le Monde Informatique — Sécurité. Raison : Annonce d'une déclinaison juridique de GPT-6 Astra. Intérêt pour l'IA en entreprise, mais absence de détails techniques ou d'impact cyber direct pour les experts ciblés.
-- **3/5** — [Are AIs Still Struggling with CAPTCHAs?](https://www.schneier.com/blog/archives/2026/09/are-ais-still-struggling-with-captchas.html) — Schneier on Security. Raison : Illustre une limite actuelle des IA face aux CAPTCHAs, sujet périphérique pour des experts. Intérêt anecdotique, pas d'impact pratique direct ou stratégique majeur.
+- **3/5** — [À l'approche de la présidentielle, pour rire ou faire de l’argent, tous les coups sont permis: comment l'Afnic, qui gère les noms de domaine en .fr, protège le web des tentatives de "typosquating"?](https://www.bfmtv.com/tech/vie-numerique/a-l-approche-de-la-presidentielle-pour-rire-ou-faire-de-l-argent-tous-les-coups-sont-permis-comment-l-afnic-qui-gere-les-noms-de-domaine-en-fr-protege-le-web-des-tentatives-de-typosquating_AV-202609190035.html) — BFM Tech. Raison : Sujet pertinent pour la cybersécurité des noms de domaine et la protection contre le typosquatting, mais l'angle est plus journalistique que technique.
+
+## IA — Produits, agents &amp; dev tooling
+
+- **Optimisation de la latence des workflows IA** : Routage de modèle, mise en cache, exécution parallèle et définition de timeouts/budgets sont des patterns directement actionnables pour réduire les temps de réponse en production. [n8n Blog](https://blog.n8n.io/reducing-ai-workflow-latency/)
+- **Garantie de livraison d’événements avec le pattern Transactional Outbox** : En stockant l’événement dans la même transaction que l’écriture métier, ce pattern élimine le risque d’écritures doubles et assure une publication fiable, même en cas de défaillance — un prérequis pour les architectures événementielles distribuées (y compris celles coordonnant des agents IA). [n8n Blog](https://blog.n8n.io/how-the-transactional-outbox-pattern-guarantees-event-delivery/)
+
+**Évaluation du scoring**
+
+- **3/5** — [Reducing AI Workflow Latency: Patterns That Actually Work](https://blog.n8n.io/reducing-ai-workflow-latency/) — n8n Blog. Raison : Article technique sur l'optimisation de latence des workflows IA avec des patterns concrets, utile mais non critique pour le public expert cible.
+- **3/5** — [How the Transactional Outbox Pattern Guarantees Event Delivery](https://blog.n8n.io/how-the-transactional-outbox-pattern-guarantees-event-delivery/) — n8n Blog. Raison : Article technique bien structuré sur le pattern outbox, utile en pratique mais pas critique pour la sécurité ou stratégie du public cible.
 
 ## IA — Labos &amp; éditeurs
 
-- **HyperPod Inference Gateway (AWS)** : Amazon SageMaker HyperPod Inference Gateway est un add-on Kubernetes pour EKS qui utilise les signaux GPU en temps réel pour router chaque requête d’inférence vers le pod optimal, réduisant la latence du premier token jusqu’à 82 % sans modification des serveurs de modèles ni des applications clientes. [Source](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/)
+- **Amazon SageMaker Inference : 13 nouveautés depuis début 2026** : AWS a livré 13 améliorations d’inférence sur SageMaker, couvrant les endpoints managés et HyperPod. Elles incluent des recommandations d’inférence, des pools d’instances sensibles à la capacité, la mise en cache KV par niveaux et le pré-remplissage désagrégé, pour optimiser performances et coûts. [Source](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-inference-2026-year-to-date-launches-in-review/)
 
 **Évaluation du scoring**
 
-- **4/5** — [Introducing Amazon SageMaker HyperPod Inference Gateway](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/) — AWS Machine Learning. Raison : Annonce d'un add-on Kubernetes natif AWS réduisant fortement la latence inférence, impact direct sur les architectures IA en production des experts ciblés.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
+- **3/5** — [Amazon SageMaker Inference: 2026 year-to-date launches in review](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-inference-2026-year-to-date-launches-in-review/) — AWS Machine Learning. Raison : Article technique listant 13 lancements d'inférence SageMaker, incluant features comme tiered KV caching. Utile pour RSSI/CTO/Architecte mais sans portée stratégique majeure immédiate.</description>
+      <content:encoded><![CDATA[<h2>Actualité tech FR</h2>
 
 <ul>
-<li><strong>Mise à jour critique de Chrome</strong> : La correction de 42 vulnérabilités par Google impose une mise à jour immédiate des navigateurs pour limiter la surface d’attaque sur les postes. <a href="https://www.lemondeinformatique.fr/actualites/lire-google-corrige-42-failles-de-securite-dans-chrome-100795.html">Le Monde Informatique</a></li>
-<li><strong>IA générative et CAPTCHAs</strong> : Selon un incident documenté par Anthropic, même un modèle avancé comme Claude échoue sur des CAPTCHAs basiques, montrant que les protections anti-bot historiques restent un obstacle pour les IA actuelles. <a href="https://www.schneier.com/blog/archives/2026/09/are-ais-still-struggling-with-captchas.html">Schneier on Security</a></li>
-<li><strong>Offre IA pour le secteur juridique</strong> : OpenAI lance Astra for Law, déclinaison de GPT-6 pour les cabinets d’avocats, signalant l’entrée de l’IA générative dans des environnements à forte exigence de confidentialité. <a href="https://www.lemondeinformatique.fr/actualites/lire-openai-lance-astra-for-law-pour-les-professionnels-du-droit-100794.html">Le Monde Informatique</a></li>
+<li><strong>Cybersquatting politique sur le .fr</strong> : L'Afnic renforce sa surveillance des dépôts de noms de domaine visant les candidats et partis politiques à l'approche de la présidentielle, face à une recrudescence des tentatives de typosquatting à visée parodique ou lucrative. <a href="https://www.bfmtv.com/tech/vie-numerique/a-l-approche-de-la-presidentielle-pour-rire-ou-faire-de-l-argent-tous-les-coups-sont-permis-comment-l-afnic-qui-gere-les-noms-de-domaine-en-fr-protege-le-web-des-tentatives-de-typosquating_AV-202609190035.html">BFM Tech</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-google-corrige-42-failles-de-securite-dans-chrome-100795.html">Google corrige 42 failles de sécurité dans Chrome</a> — Le Monde Informatique — Sécurité. Raison : Correction massive de 42 vulnérabilités Chrome, dont potentiellement critiques. Impact direct sur la sécurité des postes de travail en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-openai-lance-astra-for-law-pour-les-professionnels-du-droit-100794.html">OpenAI lance Astra for Law pour les professionnels du droit</a> — Le Monde Informatique — Sécurité. Raison : Annonce d'une déclinaison juridique de GPT-6 Astra. Intérêt pour l'IA en entreprise, mais absence de détails techniques ou d'impact cyber direct pour les experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/09/are-ais-still-struggling-with-captchas.html">Are AIs Still Struggling with CAPTCHAs?</a> — Schneier on Security. Raison : Illustre une limite actuelle des IA face aux CAPTCHAs, sujet périphérique pour des experts. Intérêt anecdotique, pas d'impact pratique direct ou stratégique majeur.</li>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/vie-numerique/a-l-approche-de-la-presidentielle-pour-rire-ou-faire-de-l-argent-tous-les-coups-sont-permis-comment-l-afnic-qui-gere-les-noms-de-domaine-en-fr-protege-le-web-des-tentatives-de-typosquating_AV-202609190035.html">À l'approche de la présidentielle, pour rire ou faire de l’argent, tous les coups sont permis: comment l'Afnic, qui gère les noms de domaine en .fr, protège le web des tentatives de "typosquating"?</a> — BFM Tech. Raison : Sujet pertinent pour la cybersécurité des noms de domaine et la protection contre le typosquatting, mais l'angle est plus journalistique que technique.</li>
+</ul>
+
+<h2>IA — Produits, agents & dev tooling</h2>
+
+<ul>
+<li><strong>Optimisation de la latence des workflows IA</strong> : Routage de modèle, mise en cache, exécution parallèle et définition de timeouts/budgets sont des patterns directement actionnables pour réduire les temps de réponse en production. <a href="https://blog.n8n.io/reducing-ai-workflow-latency/">n8n Blog</a></li>
+<li><strong>Garantie de livraison d’événements avec le pattern Transactional Outbox</strong> : En stockant l’événement dans la même transaction que l’écriture métier, ce pattern élimine le risque d’écritures doubles et assure une publication fiable, même en cas de défaillance — un prérequis pour les architectures événementielles distribuées (y compris celles coordonnant des agents IA). <a href="https://blog.n8n.io/how-the-transactional-outbox-pattern-guarantees-event-delivery/">n8n Blog</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://blog.n8n.io/reducing-ai-workflow-latency/">Reducing AI Workflow Latency: Patterns That Actually Work</a> — n8n Blog. Raison : Article technique sur l'optimisation de latence des workflows IA avec des patterns concrets, utile mais non critique pour le public expert cible.</li>
+<li><strong>3/5</strong> — <a href="https://blog.n8n.io/how-the-transactional-outbox-pattern-guarantees-event-delivery/">How the Transactional Outbox Pattern Guarantees Event Delivery</a> — n8n Blog. Raison : Article technique bien structuré sur le pattern outbox, utile en pratique mais pas critique pour la sécurité ou stratégie du public cible.</li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>HyperPod Inference Gateway (AWS)</strong> : Amazon SageMaker HyperPod Inference Gateway est un add-on Kubernetes pour EKS qui utilise les signaux GPU en temps réel pour router chaque requête d’inférence vers le pod optimal, réduisant la latence du premier token jusqu’à 82 % sans modification des serveurs de modèles ni des applications clientes. <a href="https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/">Source</a></li>
+<li><strong>Amazon SageMaker Inference : 13 nouveautés depuis début 2026</strong> : AWS a livré 13 améliorations d’inférence sur SageMaker, couvrant les endpoints managés et HyperPod. Elles incluent des recommandations d’inférence, des pools d’instances sensibles à la capacité, la mise en cache KV par niveaux et le pré-remplissage désagrégé, pour optimiser performances et coûts. <a href="https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-inference-2026-year-to-date-launches-in-review/">Source</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-inference-gateway/">Introducing Amazon SageMaker HyperPod Inference Gateway</a> — AWS Machine Learning. Raison : Annonce d'un add-on Kubernetes natif AWS réduisant fortement la latence inférence, impact direct sur les architectures IA en production des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-inference-2026-year-to-date-launches-in-review/">Amazon SageMaker Inference: 2026 year-to-date launches in review</a> — AWS Machine Learning. Raison : Article technique listant 13 lancements d'inférence SageMaker, incluant features comme tiered KV caching. Utile pour RSSI/CTO/Architecte mais sans portée stratégique majeure immédiate.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260918-1505</guid>
-      <pubDate>Fri, 18 Sep 2026 15:05:26 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260919-0925</guid>
+      <pubDate>Sat, 19 Sep 2026 09:25:36 +0000</pubDate>
     </item>
   </channel>
 </rss>
