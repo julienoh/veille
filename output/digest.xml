@@ -8,30 +8,74 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 20 Sep 2026 09:45:40 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 14:40:24 +0000</lastBuildDate>
     <item>
-      <title>Digest — 20/09 09h</title>
+      <title>Digest — 20/09 14h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Actualité tech FR
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Confidentialité des conversations ChatGPT** : OpenAI fait appel à des prestataires humains pour relire les conversations utilisateur afin d'améliorer ses modèles. La désactivation de l'historique de chat dans les paramètres empêche ces relectures, mais supprime aussi l'accès à vos conversations passées après 30 jours. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/comment-preserver-vos-conversations-avec-chat-gpt-et-eviter-qu-elles-ne-soient-lues-par-un-operateur-humain_AV-202609200111.html)
+- **Évolution des techniques d'empoisonnement npm** : Une campagne active ciblant le package `indexed-btree` illustre une nouvelle méthode d'évasion où le code malveillant s'exécute lors de l'utilisation normale du package, et non durant la phase d'installation, contournant ainsi les défenses basées sur l'analyse des scripts `preinstall`/`postinstall`. [BleepingComputer](https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/)
+
+- **Évasion de sandbox dans les outils de codage IA** : Des chercheurs ont démontré deux techniques permettant de briser l'isolation du bac à sable d'OpenAI Codex pour exécuter des commandes sur la machine hôte du développeur, y compris depuis le mode le plus restrictif. Les failles ont été corrigées par OpenAI. [BleepingComputer](https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/)
 
 **Évaluation du scoring**
 
-- **3/5** — [Comment préserver vos conversations avec ChatGPT et éviter qu'elles ne soient lues par un opérateur humain?](https://www.bfmtv.com/tech/intelligence-artificielle/comment-preserver-vos-conversations-avec-chat-gpt-et-eviter-qu-elles-ne-soient-lues-par-un-operateur-humain_AV-202609200111.html) — BFM Tech. Raison : Sujet utile pour RSSI/CTO sur la confidentialité des conversations ChatGPT, mais l'angle est pratique et non technique. Source grand public limite la profondeur.</description>
-      <content:encoded><![CDATA[<h2>Actualité tech FR</h2>
+- **4/5** — [Malicious npm packages evade install-script defenses at runtime](https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/) — BleepingComputer. Raison : Nouvelle technique de contournement des défenses npm, intéressante pour RSSI et AppSec. Analyse technique d'une campagne en cours, mais impact immédiat encore non massif.
+- **4/5** — [Researchers escape OpenAI Codex sandbox to run commands on host](https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/) — BleepingComputer. Raison : Vulnérabilité concrète d'un outil IA populaire, avec fuite de sandbox et correctif. Impact direct sur les développeurs utilisant Codex.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Infiltration d’un groupe spécialisé dans les attaques supply chain** : Google a infiltré le cercle restreint du gang TeamPCP, connu pour ses attaques sur la chaîne d’approvisionnement logicielle, grâce à un analyste sous couverture. L’opération confirme la menace persistante et la sophistication de ces groupes. [Ars Technica](https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/)
+
+- **Application Muse de Meta : collecte intrusive de données personnelles pour l’IA** : L’app Muse de Meta active par défaut la collecte de données (y compris coordonnées bancaires, e-mail, passeport) pour entraîner ses modèles d’IA, avec un mécanisme d’opt-out limité. [Wired](https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/)
+
+- **Tensions aux États-Unis entre expansion des data centers et opposition locale** : Le président Trump mise sur le développement massif des data centers et de l’IA, alors que sa base électorale y est majoritairement opposée, créant un climat d’incertitude réglementaire autour des infrastructures numériques. [Wired](https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/)
+
+**Évaluation du scoring**
+
+- **4/5** — [An undercover Google analyst infiltrated a notorious supply-chain hacking gang](https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/) — Ars Technica — Tech Lab. Raison : Infiltration d'un gang de supply-chain hacking par Google : analyse stratégique d'une opération d'espionnage et de ses implications pour la sécurité des chaînes d'approvisionnement.
+- **3/5** — [Meta's Muse Is Better at Surveilling Than Helping Me](https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/) — Wired — AI. Raison : Article de presse grand public sur les pratiques de collecte de données de Meta via Muse. Intéressant pour la gouvernance, mais peu technique et sans détail exploitable pour un expert.
+- **3/5** — [It’s Donald Trump Versus MAGA on Data Centers](https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/) — Wired — AI. Raison : Article politique sur divergence Trump/MAGA vis-à-vis data centers. Hors périmètre technique, cybersécurité ou stratégie IA d'entreprise. Utile uniquement pour contexte géopolitique marginal.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Confidentialité des conversations ChatGPT</strong> : OpenAI fait appel à des prestataires humains pour relire les conversations utilisateur afin d'améliorer ses modèles. La désactivation de l'historique de chat dans les paramètres empêche ces relectures, mais supprime aussi l'accès à vos conversations passées après 30 jours. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/comment-preserver-vos-conversations-avec-chat-gpt-et-eviter-qu-elles-ne-soient-lues-par-un-operateur-humain_AV-202609200111.html">BFM Tech</a></li>
+<li><strong>Évolution des techniques d'empoisonnement npm</strong> : Une campagne active ciblant le package `indexed-btree` illustre une nouvelle méthode d'évasion où le code malveillant s'exécute lors de l'utilisation normale du package, et non durant la phase d'installation, contournant ainsi les défenses basées sur l'analyse des scripts `preinstall`/`postinstall`. <a href="https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Évasion de sandbox dans les outils de codage IA</strong> : Des chercheurs ont démontré deux techniques permettant de briser l'isolation du bac à sable d'OpenAI Codex pour exécuter des commandes sur la machine hôte du développeur, y compris depuis le mode le plus restrictif. Les failles ont été corrigées par OpenAI. <a href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/">BleepingComputer</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/intelligence-artificielle/comment-preserver-vos-conversations-avec-chat-gpt-et-eviter-qu-elles-ne-soient-lues-par-un-operateur-humain_AV-202609200111.html">Comment préserver vos conversations avec ChatGPT et éviter qu'elles ne soient lues par un opérateur humain?</a> — BFM Tech. Raison : Sujet utile pour RSSI/CTO sur la confidentialité des conversations ChatGPT, mais l'angle est pratique et non technique. Source grand public limite la profondeur.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/">Malicious npm packages evade install-script defenses at runtime</a> — BleepingComputer. Raison : Nouvelle technique de contournement des défenses npm, intéressante pour RSSI et AppSec. Analyse technique d'une campagne en cours, mais impact immédiat encore non massif.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/">Researchers escape OpenAI Codex sandbox to run commands on host</a> — BleepingComputer. Raison : Vulnérabilité concrète d'un outil IA populaire, avec fuite de sandbox et correctif. Impact direct sur les développeurs utilisant Codex.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Infiltration d’un groupe spécialisé dans les attaques supply chain</strong> : Google a infiltré le cercle restreint du gang TeamPCP, connu pour ses attaques sur la chaîne d’approvisionnement logicielle, grâce à un analyste sous couverture. L’opération confirme la menace persistante et la sophistication de ces groupes. <a href="https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/">Ars Technica</a></li>
+</ul>
+
+<ul>
+<li><strong>Application Muse de Meta : collecte intrusive de données personnelles pour l’IA</strong> : L’app Muse de Meta active par défaut la collecte de données (y compris coordonnées bancaires, e-mail, passeport) pour entraîner ses modèles d’IA, avec un mécanisme d’opt-out limité. <a href="https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/">Wired</a></li>
+</ul>
+
+<ul>
+<li><strong>Tensions aux États-Unis entre expansion des data centers et opposition locale</strong> : Le président Trump mise sur le développement massif des data centers et de l’IA, alors que sa base électorale y est majoritairement opposée, créant un climat d’incertitude réglementaire autour des infrastructures numériques. <a href="https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/">Wired</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/">An undercover Google analyst infiltrated a notorious supply-chain hacking gang</a> — Ars Technica — Tech Lab. Raison : Infiltration d'un gang de supply-chain hacking par Google : analyse stratégique d'une opération d'espionnage et de ses implications pour la sécurité des chaînes d'approvisionnement.</li>
+<li><strong>3/5</strong> — <a href="https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/">Meta's Muse Is Better at Surveilling Than Helping Me</a> — Wired — AI. Raison : Article de presse grand public sur les pratiques de collecte de données de Meta via Muse. Intéressant pour la gouvernance, mais peu technique et sans détail exploitable pour un expert.</li>
+<li><strong>3/5</strong> — <a href="https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/">It’s Donald Trump Versus MAGA on Data Centers</a> — Wired — AI. Raison : Article politique sur divergence Trump/MAGA vis-à-vis data centers. Hors périmètre technique, cybersécurité ou stratégie IA d'entreprise. Utile uniquement pour contexte géopolitique marginal.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260920-0945</guid>
-      <pubDate>Sun, 20 Sep 2026 09:45:40 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260920-1440</guid>
+      <pubDate>Sun, 20 Sep 2026 14:40:24 +0000</pubDate>
     </item>
   </channel>
 </rss>
