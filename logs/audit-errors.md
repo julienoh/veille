@@ -172,3 +172,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-09-18 19:33 UTC | synthese | IA — Labos & éditeurs | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
 | 2026-09-18 19:33 UTC | synthese | Actualité tech FR | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
 | 2026-09-18 19:33 UTC | synthese | IA — Produits, agents & dev tooling | InternalServerError: Error code: 502 - {'error': {'message': 'Provider returned error', 'code': 502, 'metadata': {'raw': '{"error":{"message":"Cannot |
+| 2026-09-21 17:11 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
