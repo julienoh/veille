@@ -8,74 +8,212 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 20 Sep 2026 14:40:24 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 10:49:14 +0000</lastBuildDate>
     <item>
-      <title>Digest — 20/09 14h</title>
+      <title>Digest — 21/09 10h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Évolution des techniques d'empoisonnement npm** : Une campagne active ciblant le package `indexed-btree` illustre une nouvelle méthode d'évasion où le code malveillant s'exécute lors de l'utilisation normale du package, et non durant la phase d'installation, contournant ainsi les défenses basées sur l'analyse des scripts `preinstall`/`postinstall`. [BleepingComputer](https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/)
+- **Campagne TerminalFix : stéganographie dans des PNG** : Des attaquants dissimulent du code malveillant au sein de fichiers PNG pour échapper à la détection lors d’intrusions multi-étapes, comme le décrit une récente publication de Microsoft Security Research. [SANS ISC](https://isc.sans.edu/diary/rss/33318)
 
-- **Évasion de sandbox dans les outils de codage IA** : Des chercheurs ont démontré deux techniques permettant de briser l'isolation du bac à sable d'OpenAI Codex pour exécuter des commandes sur la machine hôte du développeur, y compris depuis le mode le plus restrictif. Les failles ont été corrigées par OpenAI. [BleepingComputer](https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/)
+- **Nouveau RAT ChainScript distribué via leurres ClickFix** : Un RAT inédit, ChainScript, est déployé par le biais de fausses notifications de mise à jour (ClickFix) et utilise la blockchain Polygon pour faire pivoter ses serveurs de commande et contrôle, rendant le démantèlement plus difficile. [The Hacker News](https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html)
 
-**Évaluation du scoring**
-
-- **4/5** — [Malicious npm packages evade install-script defenses at runtime](https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/) — BleepingComputer. Raison : Nouvelle technique de contournement des défenses npm, intéressante pour RSSI et AppSec. Analyse technique d'une campagne en cours, mais impact immédiat encore non massif.
-- **4/5** — [Researchers escape OpenAI Codex sandbox to run commands on host](https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/) — BleepingComputer. Raison : Vulnérabilité concrète d'un outil IA populaire, avec fuite de sandbox et correctif. Impact direct sur les développeurs utilisant Codex.
-
-## IA &amp; Tech — Médias internationaux
-
-- **Infiltration d’un groupe spécialisé dans les attaques supply chain** : Google a infiltré le cercle restreint du gang TeamPCP, connu pour ses attaques sur la chaîne d’approvisionnement logicielle, grâce à un analyste sous couverture. L’opération confirme la menace persistante et la sophistication de ces groupes. [Ars Technica](https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/)
-
-- **Application Muse de Meta : collecte intrusive de données personnelles pour l’IA** : L’app Muse de Meta active par défaut la collecte de données (y compris coordonnées bancaires, e-mail, passeport) pour entraîner ses modèles d’IA, avec un mécanisme d’opt-out limité. [Wired](https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/)
-
-- **Tensions aux États-Unis entre expansion des data centers et opposition locale** : Le président Trump mise sur le développement massif des data centers et de l’IA, alors que sa base électorale y est majoritairement opposée, créant un climat d’incertitude réglementaire autour des infrastructures numériques. [Wired](https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/)
+- **Jade Sleet cible un prestataire IT indien avec FLATROOF et ROOFDECK** : Le groupe nord-coréen Jade Sleet a compromis une petite société indienne de services IT pour y déployer les portes dérobées FLATROOF et ROOFDECK, confirmant sa focalisation sur les développeurs comme vecteur d’intrusion. [The Hacker News](https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [An undercover Google analyst infiltrated a notorious supply-chain hacking gang](https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/) — Ars Technica — Tech Lab. Raison : Infiltration d'un gang de supply-chain hacking par Google : analyse stratégique d'une opération d'espionnage et de ses implications pour la sécurité des chaînes d'approvisionnement.
-- **3/5** — [Meta's Muse Is Better at Surveilling Than Helping Me](https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/) — Wired — AI. Raison : Article de presse grand public sur les pratiques de collecte de données de Meta via Muse. Intéressant pour la gouvernance, mais peu technique et sans détail exploitable pour un expert.
-- **3/5** — [It’s Donald Trump Versus MAGA on Data Centers](https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/) — Wired — AI. Raison : Article politique sur divergence Trump/MAGA vis-à-vis data centers. Hors périmètre technique, cybersécurité ou stratégie IA d'entreprise. Utile uniquement pour contexte géopolitique marginal.</description>
+- **4/5** — [TerminalFix: PNG Steganography, (Mon, Sep 21st)](https://isc.sans.edu/diary/rss/33318) — SANS ISC. Raison : Analyse technique d'une campagne utilisant la stéganographie PNG, avec IOCs partagés. Pertinent pour RSSI et analystes SOC, mais pas critique immédiat.
+- **4/5** — [ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure](https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html) — The Hacker News. Raison : Nouveau RAT avec techniques d'obfuscation (Polygon C2) et ciblage de logiciels courants. Campagne active documentée, utile pour RSSI et analystes.
+- **4/5** — [Jade Sleet Linked to Indian IT Provider Breach With FLATROOF and ROOFDECK Backdoors](https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html) — The Hacker News. Raison : Campagne attribuée à Jade Sleet ciblant un IT provider indien avec backdoors FLATROOF/ROOFDECK. Analyse technique de SentinelOne, pertinente pour RSSI/CTO/Architecte.
+
+## IA — Recherche
+
+- **Détection des hallucinations par topologie de l'attention** : L'analyse de la courbure de Forman-Ricci dans les graphes d'attention permet de distinguer les réponses hallucinées des réponses fiables, en identifiant des motifs structurels de partage d'information dégradé. [arXiv](https://arxiv.org/abs/2609.21096)
+
+- **Optimisation du prefill pour longs contextes** : RBS-Attention réduit le coût du prefill en sélectionnant des blocs épars via un rayon borné, évitant que les centroïdes de blocs ne masquent des tokens pertinents. [arXiv](https://arxiv.org/abs/2609.20971)
+
+- **Routage amélioré pour Mixture-of-Experts** : Attention-Aware Routing (AAR) enrichit le routeur des MoE avec des informations temporelles et contextuelles issues de l'attention, au lieu de se limiter à l'état caché du token. [arXiv](https://arxiv.org/abs/2609.20974)
+
+- **Raisonnement causal pour modèles de diffusion** : CaLR combine les avantages des modèles autorégressifs et des modèles de langage par diffusion en révisant les représentations latentes pour maintenir une structure causale stricte pendant le raisonnement. [arXiv](https://arxiv.org/abs/2609.20981)
+
+- **Fine-tuning et mécanismes internes des LLM** : Une étude découple les changements de représentations internes de leur importance causale après fine-tuning, montrant que les modifications observées ne reflètent pas nécessairement les mécanismes déterminants pour la tâche. [arXiv](https://arxiv.org/abs/2609.21113)
+
+- **Remplacement économique de l'attention dans les modèles pré-entraînés** : TinyCeNN-LM propose une conversion post-entraînement avec contrôle qualité, substituant l'attention par des couches récurrentes inspirées des réseaux cellulaires tout en préservant la compatibilité des représentations. [arXiv](https://arxiv.org/abs/2609.21139)
+
+- **Conception de puces par agents LLM avec abstraction de haut niveau** : Une comparaison montre que les agents LLM produisent de meilleurs designs de puces en travaillant à partir d'abstractions de plus haut niveau qu'en générant directement du RTL. [arXiv](https://arxiv.org/abs/2609.21157) · Un second travail introduit PlaceReasoner-Beta, qui améliore le placement de macros en VLSI via un raisonnement piloté plutôt que par optimisation de métriques proxy. [arXiv](https://arxiv.org/abs/2609.21263)
+
+- **Optimisation de molécules pour la spécificité de liaison** : SpecOpt utilise un raisonnement par diffusion pour améliorer la sélectivité de molécules existantes contre les liaisons protéiques hors cible, réduisant ainsi les effets indésirables. [arXiv](https://arxiv.org/abs/2609.21165)
+
+- **Évaluation de la cognition machine vs humaine** : CogGym fournit un cadre d'évaluation comparative à grande échelle pour identifier où les réponses des modèles divergent systématiquement de celles des humains. [arXiv](https://arxiv.org/abs/2609.21259)
+
+- **Génération de code fiable par co-entraînement** : Une méthode de co-entraînement vérificateur-codeur utilise des récompenses basées sur le gain d'information et des tests élagués par diversité pour éviter l'effondrement de permissivité dans les approches auto-jouées. [arXiv](https://arxiv.org/abs/2609.21208)
+
+- **Benchmarking efficace d'agents LLM en production** : Une étude sur un agent analytique en production avec des dizaines de milliers d'utilisateurs actifs montre comment évaluer de façon récurrente sans relancer tous les benchmarks complets. [arXiv](https://arxiv.org/abs/2609.21267)
+
+- **Génération autonome de logiciels de jeux** : GameASG-Bench évalue si les composants d'une application générée automatiquement satisfont les exigences comportementales spécifiées, au-delà de la simple exécution. [arXiv](https://arxiv.org/abs/2609.21293)
+
+- **Cadre de déploiement pour IA agentique** : AI-GRACE opérationnalise le passage des objectifs et obligations organisationnelles aux capacités et à l'architecture de déploiement pour les systèmes d'IA agentique. [arXiv](https://arxiv.org/abs/2609.21192)
+
+- **Protocole de certification pour marketplaces d'agents IA** : LEGIT propose un protocole permettant aux acheteurs de déterminer quel agent performera le mieux sur leurs tâches sans avoir à les tester eux-mêmes. [arXiv](https://arxiv.org/abs/2609.21325)
+
+- **Diagnostic cognitif intégrant les facteurs affectifs** : Un modèle découple la maîtrise des concepts par les étudiants des facteurs non cognitifs (émotion, fatigue, engagement) qui influencent également leurs réponses. [arXiv](https://arxiv.org/abs/2609.21214)
+
+- **Planification de tâches neuro-symbolique différentiable** : Un cadre entièrement différentiable combine perception de scènes incertaines et planification respectant des règles logiques, sans discrétisation symbolique intermédiaire. [arXiv](https://arxiv.org/abs/2609.21221)
+
+- **Induction implicite de règles pour tâches de raisonnement abstrait** : Une méthode utilisant des embeddings de tâche au moment du test distingue si un modèle infère réellement la règle sous-jacente ou exploite des raccourcis dans les benchmarks de type ARC. [arXiv](https://arxiv.org/abs/2609.21181)
+
+- **Apprentissage contrastif pour la reconnaissance de cibles en imagerie sonar** : L'adaptation de DINOv3 Vision Transformer avec LoRA améliore la reconnaissance automatique de cibles sur données SAS malgré la rareté des images et le bruit de fond. [arXiv](https://arxiv.org/abs/2609.21061)
+
+- **Assurance qualité pour IA en psychiatrie** : Un cadre permet aux cliniciens d'évaluer les systèmes d'entretien psychiatrique assistés par IA selon leurs propres standards, en tenant compte de la variabilité des styles d'entretien. [arXiv](https://arxiv.org/abs/2609.21149)
+
+**Évaluation du scoring**
+
+- **3/5** — [RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models](https://arxiv.org/abs/2609.20971) — arXiv cs.AI. Raison : Papier de recherche sur optimisation du préfill pour LLM longue-contexte. Technique mais sans lien direct avec cybersécurité ou usage entreprise immédiat.
+- **3/5** — [Attention-Aware Routing: Coupling Routing and Attention in MoEs](https://arxiv.org/abs/2609.20974) — arXiv cs.AI. Raison : Papier de recherche IA sur une méthode d'optimisation de routage dans les MoEs. Intéressant pour experts IA mais sans lien direct avec cybersécurité ou impact pratique immédiat.
+- **3/5** — [CaLR: Causal Latent Revision for Robust Diffusion Reasoning](https://arxiv.org/abs/2609.20981) — arXiv cs.AI. Raison : Papier de recherche sur un nouveau framework combinant modèles autorégressifs et diffusion pour le raisonnement. Intéressant mais sans application pratique immédiate pour le public cible.
+- **3/5** — [LoRA Enhanced Contrastive Learning with SAS Vision Transformers](https://arxiv.org/abs/2609.21061) — arXiv cs.AI. Raison : Papier de recherche sur adaptation de ViT pour SAS ATR. Intéressant pour experts IA, mais hors périmètre cybersécurité et sans impact pratique immédiat.
+- **3/5** — [Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing](https://arxiv.org/abs/2609.21096) — arXiv cs.AI. Raison : Recherche intéressante sur la détection d'hallucinations via topologie des graphes d'attention, mais impact pratique incertain pour le public expert.
+- **3/5** — [Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models](https://arxiv.org/abs/2609.21113) — arXiv cs.AI. Raison : Recherche intéressante sur l'impact du fine-tuning dans les LLMs, mais sans lien direct avec la cybersécurité ou les sujets prioritaires des experts ciblés.
+- **3/5** — [TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers](https://arxiv.org/abs/2609.21139) — arXiv cs.AI. Raison : Papier de recherche IA proposant une méthode de conversion d'attention en couches récurrentes. Intéressant pour experts IA, mais impact pratique incertain et hors cybersécurité.
+- **3/5** — [Clinician-Grounded Quality Assurance for AI-Assisted Psychiatric Intake](https://arxiv.org/abs/2609.21149) — arXiv cs.AI. Raison : Papier de recherche sur l'assurance qualité d'IA en psychiatrie. Intéressant pour la méthodologie d'évaluation, mais hors périmètre cybersécurité/IA entreprise pour ce public.
+- **3/5** — [Can Agents Design Better Chips with a Higher Level Abstraction?](https://arxiv.org/abs/2609.21157) — arXiv cs.AI. Raison : Recherche IA académique sur conception de puces via agents LLM. Intéressant pour CTO/architecte mais pas critique ou directement applicable.
+- **3/5** — [SpecOpt: Contact-Diff Reasoning for Agentic Molecule Optimization Toward Binding Specificity](https://arxiv.org/abs/2609.21165) — arXiv cs.AI. Raison : Papier de recherche IA sur l'optimisation de molécules pour la spécificité de liaison, intéressant mais sans lien direct avec la cybersécurité ou les sujets ciblés.
+- **3/5** — [Implicit Rule Induction with Test-Time Task Embeddings in ARC-like Tasks](https://arxiv.org/abs/2609.21181) — arXiv cs.AI. Raison : Papier de recherche IA sur l'induction de règles implicites dans des tâches de type ARC. Intéressant pour la recherche mais impact pratique incertain pour le public cible.
+- **3/5** — [AI-GRACE: A Use-Case Operationalization Framework for Agentic AI: From Organizational Objectives and Obligations to Deployment Capabilities and Architecture](https://arxiv.org/abs/2609.21192) — arXiv cs.AI. Raison : Papier de recherche académique sur un framework de gouvernance IA agentique. Pertinent mais implication pratique incertaine pour des experts opérationnels.
+- **3/5** — [Information-Gain Rewards over Diversity-Pruned Tests: GT-Anchored Verifier Co-Training for Reliable Code Generation](https://arxiv.org/abs/2609.21208) — arXiv cs.AI. Raison : Papier de recherche IA sur un problème technique de génération de code, intéressant mais sans application pratique immédiate pour le public cible.
+- **3/5** — [Ability-Residual Decoupled Modeling for Affective Cognitive Diagnosis](https://arxiv.org/abs/2609.21214) — arXiv cs.AI. Raison : Papier de recherche en cognitive diagnosis intégrant l'affectif, domaine éloigné de la cybersécurité ou de l'infra IT. Intéressant pour la recherche IA mais sans impact pratique immédiat pour ce public.
+- **3/5** — [A Fully Differentiable Neuro-Soft-Symbolic Framework for Perceptual Task Planning](https://arxiv.org/abs/2609.21221) — arXiv cs.AI. Raison : Recherche en IA pour planification de tâches perceptuelles, sans application directe en cybersécurité ou dev tooling. Utile pour experts curieux mais pas prioritaire.
+- **3/5** — [CogGym: Towards Large-Scale Comparative Evaluation of Human and Machine Cognition](https://arxiv.org/abs/2609.21259) — arXiv cs.AI. Raison : Papier de recherche comparant cognition humaine et IA, intéressant mais sans lien direct avec cybersécurité ou dev tooling. Implication pratique incertaine pour le public cible.
+- **3/5** — [PlaceReasoner-Beta: Reasoning-Driven Macro Placement and Benchmarking](https://arxiv.org/abs/2609.21263) — arXiv cs.AI. Raison : Recherche IA sur le placement de macros VLSI. Spécialisé et sans lien direct avec la cybersécurité ou les priorités du public cible.
+- **3/5** — [Efficient Benchmarking in Production: A Study of an Evolving LLM Agent](https://arxiv.org/abs/2609.21267) — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation d'agents LLM en production, intéressant mais sans lien direct avec la cybersécurité ou impact pratique immédiat pour ce public.
+- **3/5** — [GameASG-Bench: Benchmarking Autonomous Software Generation for Game Development](https://arxiv.org/abs/2609.21293) — arXiv cs.AI. Raison : Benchmark académique sur génération autonome de logiciel pour jeux. Intéressant pour la recherche IA mais sans lien direct avec cybersécurité ou dev tooling pratique.
+- **3/5** — [LEGIT: Credentialing Protocol for Trustworthy AI Agent Marketplaces](https://arxiv.org/abs/2609.21325) — arXiv cs.AI. Raison : Papier de recherche traitant d'un protocole de certification pour agents IA, pertinent pour la sécurité et la gouvernance des agents autonomes, mais implications pratiques encore incertaines.</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Évolution des techniques d'empoisonnement npm</strong> : Une campagne active ciblant le package `indexed-btree` illustre une nouvelle méthode d'évasion où le code malveillant s'exécute lors de l'utilisation normale du package, et non durant la phase d'installation, contournant ainsi les défenses basées sur l'analyse des scripts `preinstall`/`postinstall`. <a href="https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/">BleepingComputer</a></li>
+<li><strong>Campagne TerminalFix : stéganographie dans des PNG</strong> : Des attaquants dissimulent du code malveillant au sein de fichiers PNG pour échapper à la détection lors d’intrusions multi-étapes, comme le décrit une récente publication de Microsoft Security Research. <a href="https://isc.sans.edu/diary/rss/33318">SANS ISC</a></li>
 </ul>
 
 <ul>
-<li><strong>Évasion de sandbox dans les outils de codage IA</strong> : Des chercheurs ont démontré deux techniques permettant de briser l'isolation du bac à sable d'OpenAI Codex pour exécuter des commandes sur la machine hôte du développeur, y compris depuis le mode le plus restrictif. Les failles ont été corrigées par OpenAI. <a href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/">BleepingComputer</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/">Malicious npm packages evade install-script defenses at runtime</a> — BleepingComputer. Raison : Nouvelle technique de contournement des défenses npm, intéressante pour RSSI et AppSec. Analyse technique d'une campagne en cours, mais impact immédiat encore non massif.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/researchers-escape-openai-codex-sandbox-to-run-commands-on-host/">Researchers escape OpenAI Codex sandbox to run commands on host</a> — BleepingComputer. Raison : Vulnérabilité concrète d'un outil IA populaire, avec fuite de sandbox et correctif. Impact direct sur les développeurs utilisant Codex.</li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Infiltration d’un groupe spécialisé dans les attaques supply chain</strong> : Google a infiltré le cercle restreint du gang TeamPCP, connu pour ses attaques sur la chaîne d’approvisionnement logicielle, grâce à un analyste sous couverture. L’opération confirme la menace persistante et la sophistication de ces groupes. <a href="https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/">Ars Technica</a></li>
+<li><strong>Nouveau RAT ChainScript distribué via leurres ClickFix</strong> : Un RAT inédit, ChainScript, est déployé par le biais de fausses notifications de mise à jour (ClickFix) et utilise la blockchain Polygon pour faire pivoter ses serveurs de commande et contrôle, rendant le démantèlement plus difficile. <a href="https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Application Muse de Meta : collecte intrusive de données personnelles pour l’IA</strong> : L’app Muse de Meta active par défaut la collecte de données (y compris coordonnées bancaires, e-mail, passeport) pour entraîner ses modèles d’IA, avec un mécanisme d’opt-out limité. <a href="https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/">Wired</a></li>
-</ul>
-
-<ul>
-<li><strong>Tensions aux États-Unis entre expansion des data centers et opposition locale</strong> : Le président Trump mise sur le développement massif des data centers et de l’IA, alors que sa base électorale y est majoritairement opposée, créant un climat d’incertitude réglementaire autour des infrastructures numériques. <a href="https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/">Wired</a></li>
+<li><strong>Jade Sleet cible un prestataire IT indien avec FLATROOF et ROOFDECK</strong> : Le groupe nord-coréen Jade Sleet a compromis une petite société indienne de services IT pour y déployer les portes dérobées FLATROOF et ROOFDECK, confirmant sa focalisation sur les développeurs comme vecteur d’intrusion. <a href="https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html">The Hacker News</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/">An undercover Google analyst infiltrated a notorious supply-chain hacking gang</a> — Ars Technica — Tech Lab. Raison : Infiltration d'un gang de supply-chain hacking par Google : analyse stratégique d'une opération d'espionnage et de ses implications pour la sécurité des chaînes d'approvisionnement.</li>
-<li><strong>3/5</strong> — <a href="https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/">Meta's Muse Is Better at Surveilling Than Helping Me</a> — Wired — AI. Raison : Article de presse grand public sur les pratiques de collecte de données de Meta via Muse. Intéressant pour la gouvernance, mais peu technique et sans détail exploitable pour un expert.</li>
-<li><strong>3/5</strong> — <a href="https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/">It’s Donald Trump Versus MAGA on Data Centers</a> — Wired — AI. Raison : Article politique sur divergence Trump/MAGA vis-à-vis data centers. Hors périmètre technique, cybersécurité ou stratégie IA d'entreprise. Utile uniquement pour contexte géopolitique marginal.</li>
+<li><strong>4/5</strong> — <a href="https://isc.sans.edu/diary/rss/33318">TerminalFix: PNG Steganography, (Mon, Sep 21st)</a> — SANS ISC. Raison : Analyse technique d'une campagne utilisant la stéganographie PNG, avec IOCs partagés. Pertinent pour RSSI et analystes SOC, mais pas critique immédiat.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html">ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure</a> — The Hacker News. Raison : Nouveau RAT avec techniques d'obfuscation (Polygon C2) et ciblage de logiciels courants. Campagne active documentée, utile pour RSSI et analystes.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html">Jade Sleet Linked to Indian IT Provider Breach With FLATROOF and ROOFDECK Backdoors</a> — The Hacker News. Raison : Campagne attribuée à Jade Sleet ciblant un IT provider indien avec backdoors FLATROOF/ROOFDECK. Analyse technique de SentinelOne, pertinente pour RSSI/CTO/Architecte.</li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Détection des hallucinations par topologie de l'attention</strong> : L'analyse de la courbure de Forman-Ricci dans les graphes d'attention permet de distinguer les réponses hallucinées des réponses fiables, en identifiant des motifs structurels de partage d'information dégradé. <a href="https://arxiv.org/abs/2609.21096">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation du prefill pour longs contextes</strong> : RBS-Attention réduit le coût du prefill en sélectionnant des blocs épars via un rayon borné, évitant que les centroïdes de blocs ne masquent des tokens pertinents. <a href="https://arxiv.org/abs/2609.20971">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Routage amélioré pour Mixture-of-Experts</strong> : Attention-Aware Routing (AAR) enrichit le routeur des MoE avec des informations temporelles et contextuelles issues de l'attention, au lieu de se limiter à l'état caché du token. <a href="https://arxiv.org/abs/2609.20974">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Raisonnement causal pour modèles de diffusion</strong> : CaLR combine les avantages des modèles autorégressifs et des modèles de langage par diffusion en révisant les représentations latentes pour maintenir une structure causale stricte pendant le raisonnement. <a href="https://arxiv.org/abs/2609.20981">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Fine-tuning et mécanismes internes des LLM</strong> : Une étude découple les changements de représentations internes de leur importance causale après fine-tuning, montrant que les modifications observées ne reflètent pas nécessairement les mécanismes déterminants pour la tâche. <a href="https://arxiv.org/abs/2609.21113">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Remplacement économique de l'attention dans les modèles pré-entraînés</strong> : TinyCeNN-LM propose une conversion post-entraînement avec contrôle qualité, substituant l'attention par des couches récurrentes inspirées des réseaux cellulaires tout en préservant la compatibilité des représentations. <a href="https://arxiv.org/abs/2609.21139">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Conception de puces par agents LLM avec abstraction de haut niveau</strong> : Une comparaison montre que les agents LLM produisent de meilleurs designs de puces en travaillant à partir d'abstractions de plus haut niveau qu'en générant directement du RTL. <a href="https://arxiv.org/abs/2609.21157">arXiv</a> · Un second travail introduit PlaceReasoner-Beta, qui améliore le placement de macros en VLSI via un raisonnement piloté plutôt que par optimisation de métriques proxy. <a href="https://arxiv.org/abs/2609.21263">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation de molécules pour la spécificité de liaison</strong> : SpecOpt utilise un raisonnement par diffusion pour améliorer la sélectivité de molécules existantes contre les liaisons protéiques hors cible, réduisant ainsi les effets indésirables. <a href="https://arxiv.org/abs/2609.21165">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation de la cognition machine vs humaine</strong> : CogGym fournit un cadre d'évaluation comparative à grande échelle pour identifier où les réponses des modèles divergent systématiquement de celles des humains. <a href="https://arxiv.org/abs/2609.21259">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Génération de code fiable par co-entraînement</strong> : Une méthode de co-entraînement vérificateur-codeur utilise des récompenses basées sur le gain d'information et des tests élagués par diversité pour éviter l'effondrement de permissivité dans les approches auto-jouées. <a href="https://arxiv.org/abs/2609.21208">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmarking efficace d'agents LLM en production</strong> : Une étude sur un agent analytique en production avec des dizaines de milliers d'utilisateurs actifs montre comment évaluer de façon récurrente sans relancer tous les benchmarks complets. <a href="https://arxiv.org/abs/2609.21267">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Génération autonome de logiciels de jeux</strong> : GameASG-Bench évalue si les composants d'une application générée automatiquement satisfont les exigences comportementales spécifiées, au-delà de la simple exécution. <a href="https://arxiv.org/abs/2609.21293">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Cadre de déploiement pour IA agentique</strong> : AI-GRACE opérationnalise le passage des objectifs et obligations organisationnelles aux capacités et à l'architecture de déploiement pour les systèmes d'IA agentique. <a href="https://arxiv.org/abs/2609.21192">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Protocole de certification pour marketplaces d'agents IA</strong> : LEGIT propose un protocole permettant aux acheteurs de déterminer quel agent performera le mieux sur leurs tâches sans avoir à les tester eux-mêmes. <a href="https://arxiv.org/abs/2609.21325">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Diagnostic cognitif intégrant les facteurs affectifs</strong> : Un modèle découple la maîtrise des concepts par les étudiants des facteurs non cognitifs (émotion, fatigue, engagement) qui influencent également leurs réponses. <a href="https://arxiv.org/abs/2609.21214">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Planification de tâches neuro-symbolique différentiable</strong> : Un cadre entièrement différentiable combine perception de scènes incertaines et planification respectant des règles logiques, sans discrétisation symbolique intermédiaire. <a href="https://arxiv.org/abs/2609.21221">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Induction implicite de règles pour tâches de raisonnement abstrait</strong> : Une méthode utilisant des embeddings de tâche au moment du test distingue si un modèle infère réellement la règle sous-jacente ou exploite des raccourcis dans les benchmarks de type ARC. <a href="https://arxiv.org/abs/2609.21181">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Apprentissage contrastif pour la reconnaissance de cibles en imagerie sonar</strong> : L'adaptation de DINOv3 Vision Transformer avec LoRA améliore la reconnaissance automatique de cibles sur données SAS malgré la rareté des images et le bruit de fond. <a href="https://arxiv.org/abs/2609.21061">arXiv</a></li>
+</ul>
+
+<ul>
+<li><strong>Assurance qualité pour IA en psychiatrie</strong> : Un cadre permet aux cliniciens d'évaluer les systèmes d'entretien psychiatrique assistés par IA selon leurs propres standards, en tenant compte de la variabilité des styles d'entretien. <a href="https://arxiv.org/abs/2609.21149">arXiv</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.20971">RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models</a> — arXiv cs.AI. Raison : Papier de recherche sur optimisation du préfill pour LLM longue-contexte. Technique mais sans lien direct avec cybersécurité ou usage entreprise immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.20974">Attention-Aware Routing: Coupling Routing and Attention in MoEs</a> — arXiv cs.AI. Raison : Papier de recherche IA sur une méthode d'optimisation de routage dans les MoEs. Intéressant pour experts IA mais sans lien direct avec cybersécurité ou impact pratique immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.20981">CaLR: Causal Latent Revision for Robust Diffusion Reasoning</a> — arXiv cs.AI. Raison : Papier de recherche sur un nouveau framework combinant modèles autorégressifs et diffusion pour le raisonnement. Intéressant mais sans application pratique immédiate pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21061">LoRA Enhanced Contrastive Learning with SAS Vision Transformers</a> — arXiv cs.AI. Raison : Papier de recherche sur adaptation de ViT pour SAS ATR. Intéressant pour experts IA, mais hors périmètre cybersécurité et sans impact pratique immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21096">Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing</a> — arXiv cs.AI. Raison : Recherche intéressante sur la détection d'hallucinations via topologie des graphes d'attention, mais impact pratique incertain pour le public expert.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21113">Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models</a> — arXiv cs.AI. Raison : Recherche intéressante sur l'impact du fine-tuning dans les LLMs, mais sans lien direct avec la cybersécurité ou les sujets prioritaires des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21139">TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers</a> — arXiv cs.AI. Raison : Papier de recherche IA proposant une méthode de conversion d'attention en couches récurrentes. Intéressant pour experts IA, mais impact pratique incertain et hors cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21149">Clinician-Grounded Quality Assurance for AI-Assisted Psychiatric Intake</a> — arXiv cs.AI. Raison : Papier de recherche sur l'assurance qualité d'IA en psychiatrie. Intéressant pour la méthodologie d'évaluation, mais hors périmètre cybersécurité/IA entreprise pour ce public.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21157">Can Agents Design Better Chips with a Higher Level Abstraction?</a> — arXiv cs.AI. Raison : Recherche IA académique sur conception de puces via agents LLM. Intéressant pour CTO/architecte mais pas critique ou directement applicable.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21165">SpecOpt: Contact-Diff Reasoning for Agentic Molecule Optimization Toward Binding Specificity</a> — arXiv cs.AI. Raison : Papier de recherche IA sur l'optimisation de molécules pour la spécificité de liaison, intéressant mais sans lien direct avec la cybersécurité ou les sujets ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21181">Implicit Rule Induction with Test-Time Task Embeddings in ARC-like Tasks</a> — arXiv cs.AI. Raison : Papier de recherche IA sur l'induction de règles implicites dans des tâches de type ARC. Intéressant pour la recherche mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21192">AI-GRACE: A Use-Case Operationalization Framework for Agentic AI: From Organizational Objectives and Obligations to Deployment Capabilities and Architecture</a> — arXiv cs.AI. Raison : Papier de recherche académique sur un framework de gouvernance IA agentique. Pertinent mais implication pratique incertaine pour des experts opérationnels.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21208">Information-Gain Rewards over Diversity-Pruned Tests: GT-Anchored Verifier Co-Training for Reliable Code Generation</a> — arXiv cs.AI. Raison : Papier de recherche IA sur un problème technique de génération de code, intéressant mais sans application pratique immédiate pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21214">Ability-Residual Decoupled Modeling for Affective Cognitive Diagnosis</a> — arXiv cs.AI. Raison : Papier de recherche en cognitive diagnosis intégrant l'affectif, domaine éloigné de la cybersécurité ou de l'infra IT. Intéressant pour la recherche IA mais sans impact pratique immédiat pour ce public.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21221">A Fully Differentiable Neuro-Soft-Symbolic Framework for Perceptual Task Planning</a> — arXiv cs.AI. Raison : Recherche en IA pour planification de tâches perceptuelles, sans application directe en cybersécurité ou dev tooling. Utile pour experts curieux mais pas prioritaire.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21259">CogGym: Towards Large-Scale Comparative Evaluation of Human and Machine Cognition</a> — arXiv cs.AI. Raison : Papier de recherche comparant cognition humaine et IA, intéressant mais sans lien direct avec cybersécurité ou dev tooling. Implication pratique incertaine pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21263">PlaceReasoner-Beta: Reasoning-Driven Macro Placement and Benchmarking</a> — arXiv cs.AI. Raison : Recherche IA sur le placement de macros VLSI. Spécialisé et sans lien direct avec la cybersécurité ou les priorités du public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21267">Efficient Benchmarking in Production: A Study of an Evolving LLM Agent</a> — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation d'agents LLM en production, intéressant mais sans lien direct avec la cybersécurité ou impact pratique immédiat pour ce public.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21293">GameASG-Bench: Benchmarking Autonomous Software Generation for Game Development</a> — arXiv cs.AI. Raison : Benchmark académique sur génération autonome de logiciel pour jeux. Intéressant pour la recherche IA mais sans lien direct avec cybersécurité ou dev tooling pratique.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.21325">LEGIT: Credentialing Protocol for Trustworthy AI Agent Marketplaces</a> — arXiv cs.AI. Raison : Papier de recherche traitant d'un protocole de certification pour agents IA, pertinent pour la sécurité et la gouvernance des agents autonomes, mais implications pratiques encore incertaines.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260920-1440</guid>
-      <pubDate>Sun, 20 Sep 2026 14:40:24 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260921-1049</guid>
+      <pubDate>Mon, 21 Sep 2026 10:49:14 +0000</pubDate>
     </item>
   </channel>
 </rss>
