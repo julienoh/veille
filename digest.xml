@@ -8,58 +8,54 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 23 Sep 2026 15:34:39 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 20:12:32 +0000</lastBuildDate>
     <item>
-      <title>Digest — 23/09 15h</title>
+      <title>Digest — 23/09 20h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## IA — Labos &amp; éditeurs
 
-- **NVIDIA Nemotron 3 : diarisation temps réel** : NVIDIA publie un modèle de diarisation vocale capable de distinguer plusieurs locuteurs dans un flux audio en temps réel, accessible sur Hugging Face. [Source](https://huggingface.co/blog/nvidia/nemotron-diarization)
-- **OpenAI étend son soutien cyber à l’Ukraine** : OpenAI fournit un accès à son programme Daybreak au gouvernement ukrainien pour renforcer la défense des infrastructures civiles face aux cybermenaces. [Source](https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense)
+- **Agents IA internes avec MCP** : HEMA a déployé un assistant interne sur Amazon Bedrock AgentCore qui utilise le Model Context Protocol (MCP) pour fournir des réponses contextualisées directement dans les outils existants, sans exposer de credentials AWS côté client. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/)
+
+- **Analyse vidéo conversationnelle par agent** : AWS propose une architecture agentic avec Strands Agents SDK qui orchestre Bedrock, Rekognition et Transcribe pour permettre des requêtes en langage naturel sur des vidéos, le choix des services étant décidé dynamiquement par l'agent. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/)
+
+- **Agents de codage avec modèles open weight** : OpenCode, un agent de codage open-source en terminal, peut s'appuyer sur des modèles open weight hébergés sur Amazon Bedrock, avec un déploiement sans infrastructure à gérer et des données qui restent dans le compte AWS du client. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/)
+
+- **Compute IA privé avec mémoire côté serveur** : Google DeepMind ajoute une mémoire privée côté serveur à son infrastructure Private AI Compute, visant à traiter des données personnelles sans les exposer au fournisseur de cloud. [Google DeepMind](https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/)
 
 **Évaluation du scoring**
 
-- **3/5** — [\*\*Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization\*\*](https://huggingface.co/blog/nvidia/nemotron-diarization) — Hugging Face Blog. Raison : Article technique sur un modèle de diarisation multi-locuteur NVIDIA. Utile pour experts IA, mais pas critique pour cybersécurité ou infrastructure.
-- **3/5** — [OpenAI extends cyber access to Ukraine for civilian defense](https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense) — OpenAI News. Raison : Information utile sur l'extension d'un programme IA pour la défense civile ukrainienne, mais manque de détails techniques concrets pour une lecture approfondie.
-
-## IA &amp; Tech — Médias internationaux
-
-- **Vulnérabilité zero‑day dans l’assistant IA Muse de Meta** : Meta a corrigé une faille de son assistant Muse qui offrait à un attaquant le contrôle total du Mac de la victime, illustrant le risque intrinsèque des agents IA déployés sur les postes de travail. [Wired](https://www.wired.com/story/metas-muse-ai-agent-zero-day/)
-- **IA randomisée pour la logistique militaire américaine** : Le commandement des transports des États‑
-
-**Évaluation du scoring**
-
-- **5/5** — [Meta’s Muse AI Assistant Rolled Out With a Serious Security Flaw](https://www.wired.com/story/metas-muse-ai-agent-zero-day/) — Wired — AI. Raison : Zero-day critique sur un assistant IA majeur (Meta Muse) avec impact direct sur les postes Mac, nécessitant une évaluation immédiate des risques pour l'entreprise.
-- **3/5** — [U.S. TRANSCOM deploys randomised AI to secure military logistics](https://www.artificialintelligence-news.com/news/us-transcom-deploys-randomised-ai-to-secure-military-logistics/) — AI News. Raison : Sujet IA appliqué à la logistique militaire avec angle cybersécurité, mais résumé trop court pour évaluer la profondeur technique ou l'impact direct pour le public cible.</description>
+- **4/5** — [From portal-hopping to instant answers: HEMA’s journey with MCP and Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/) — AWS Machine Learning. Raison : Retour d'expérience concret d'adoption IA en entreprise, intégration MCP et sécurité via Entra ID. Utile pour RSSI/CTO/Architecte, mais pas de rupture technique majeure.
+- **3/5** — [Agentic conversational video intelligence built on AWS](https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/) — AWS Machine Learning. Raison : Article technique AWS sur architecture agentic pour analyse vidéo. Utile pour experts en IA et dev, mais pas critique pour la cybersécurité.
+- **3/5** — [Use open weight models as your AI coding agent with Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/) — AWS Machine Learning. Raison : Article technique sur l'utilisation d'OpenCode avec Amazon Bedrock. Utile pour les experts cherchant un assistant de codage sécurisé, mais sans innovation majeure ni impact stratégique immédiat.
+- **3/5** — [Advancing Private AI Compute with secure, server-side memory](https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/) — Google DeepMind. Raison : Annonce de fonctionnalité mémoire serveur pour IA privée par DeepMind. Intéressant pour sécurité et confidentialité, mais manque de détails techniques concrets pour les experts.</description>
       <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>NVIDIA Nemotron 3 : diarisation temps réel</strong> : NVIDIA publie un modèle de diarisation vocale capable de distinguer plusieurs locuteurs dans un flux audio en temps réel, accessible sur Hugging Face. <a href="https://huggingface.co/blog/nvidia/nemotron-diarization">Source</a></li>
-<li><strong>OpenAI étend son soutien cyber à l’Ukraine</strong> : OpenAI fournit un accès à son programme Daybreak au gouvernement ukrainien pour renforcer la défense des infrastructures civiles face aux cybermenaces. <a href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense">Source</a></li>
+<li><strong>Agents IA internes avec MCP</strong> : HEMA a déployé un assistant interne sur Amazon Bedrock AgentCore qui utilise le Model Context Protocol (MCP) pour fournir des réponses contextualisées directement dans les outils existants, sans exposer de credentials AWS côté client. <a href="https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Analyse vidéo conversationnelle par agent</strong> : AWS propose une architecture agentic avec Strands Agents SDK qui orchestre Bedrock, Rekognition et Transcribe pour permettre des requêtes en langage naturel sur des vidéos, le choix des services étant décidé dynamiquement par l'agent. <a href="https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents de codage avec modèles open weight</strong> : OpenCode, un agent de codage open-source en terminal, peut s'appuyer sur des modèles open weight hébergés sur Amazon Bedrock, avec un déploiement sans infrastructure à gérer et des données qui restent dans le compte AWS du client. <a href="https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Compute IA privé avec mémoire côté serveur</strong> : Google DeepMind ajoute une mémoire privée côté serveur à son infrastructure Private AI Compute, visant à traiter des données personnelles sans les exposer au fournisseur de cloud. <a href="https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/">Google DeepMind</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/nvidia/nemotron-diarization">\*\*Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization\*\*</a> — Hugging Face Blog. Raison : Article technique sur un modèle de diarisation multi-locuteur NVIDIA. Utile pour experts IA, mais pas critique pour cybersécurité ou infrastructure.</li>
-<li><strong>3/5</strong> — <a href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense">OpenAI extends cyber access to Ukraine for civilian defense</a> — OpenAI News. Raison : Information utile sur l'extension d'un programme IA pour la défense civile ukrainienne, mais manque de détails techniques concrets pour une lecture approfondie.</li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Vulnérabilité zero‑day dans l’assistant IA Muse de Meta</strong> : Meta a corrigé une faille de son assistant Muse qui offrait à un attaquant le contrôle total du Mac de la victime, illustrant le risque intrinsèque des agents IA déployés sur les postes de travail. <a href="https://www.wired.com/story/metas-muse-ai-agent-zero-day/">Wired</a></li>
-<li><strong>IA randomisée pour la logistique militaire américaine</strong> : Le commandement des transports des États‑</li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.wired.com/story/metas-muse-ai-agent-zero-day/">Meta’s Muse AI Assistant Rolled Out With a Serious Security Flaw</a> — Wired — AI. Raison : Zero-day critique sur un assistant IA majeur (Meta Muse) avec impact direct sur les postes Mac, nécessitant une évaluation immédiate des risques pour l'entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://www.artificialintelligence-news.com/news/us-transcom-deploys-randomised-ai-to-secure-military-logistics/">U.S. TRANSCOM deploys randomised AI to secure military logistics</a> — AI News. Raison : Sujet IA appliqué à la logistique militaire avec angle cybersécurité, mais résumé trop court pour évaluer la profondeur technique ou l'impact direct pour le public cible.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/">From portal-hopping to instant answers: HEMA’s journey with MCP and Amazon Bedrock</a> — AWS Machine Learning. Raison : Retour d'expérience concret d'adoption IA en entreprise, intégration MCP et sécurité via Entra ID. Utile pour RSSI/CTO/Architecte, mais pas de rupture technique majeure.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/">Agentic conversational video intelligence built on AWS</a> — AWS Machine Learning. Raison : Article technique AWS sur architecture agentic pour analyse vidéo. Utile pour experts en IA et dev, mais pas critique pour la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/">Use open weight models as your AI coding agent with Amazon Bedrock</a> — AWS Machine Learning. Raison : Article technique sur l'utilisation d'OpenCode avec Amazon Bedrock. Utile pour les experts cherchant un assistant de codage sécurisé, mais sans innovation majeure ni impact stratégique immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/">Advancing Private AI Compute with secure, server-side memory</a> — Google DeepMind. Raison : Annonce de fonctionnalité mémoire serveur pour IA privée par DeepMind. Intéressant pour sécurité et confidentialité, mais manque de détails techniques concrets pour les experts.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260923-1534</guid>
-      <pubDate>Wed, 23 Sep 2026 15:34:39 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260923-2012</guid>
+      <pubDate>Wed, 23 Sep 2026 20:12:32 +0000</pubDate>
     </item>
   </channel>
 </rss>
