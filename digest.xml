@@ -8,120 +8,294 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 24 Sep 2026 20:25:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 10:16:12 +0000</lastBuildDate>
     <item>
-      <title>Digest — 24/09 20h</title>
+      <title>Digest — 25/09 10h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA — Labos &amp; éditeurs
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Agent IA multi-compte via MCP** : AWS montre comment un agent central, basé sur Bedrock AgentCore Gateway et le Model Context Protocol, interroge les
+- **Vol massif sur Bitget attribué à la Corée du Nord** : 351,6 millions de dollars ont été dérobés sur les portefeuilles chauds et tièdes de l'exchange crypto Bitget, une opération attribuée au groupe Lazarus. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/)
 
-**Évaluation du scoring**
+- **Fuite de données inter-conteneurs chez Cloudflare** : Une faille dans Cloudflare Containers permettait à un client de lire les données résiduelles laissées sur disque par les conteneurs d'autres clients précédemment exécutés sur le même serveur. Le correctif est déployé. [The Hacker News](https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html)
 
-- **4/5** — [Build a multi-account AI agent with AgentCore Gateway and MCP](https://aws.amazon.com/blogs/machine-learning/build-a-multi-account-ai-agent-with-agentcore-gateway-and-mcp/) — AWS Machine Learning. Raison : Architecture multi-comptes AWS pour agents IA avec MCP et Bedrock. Solution technique concrète sur sécurité des données, intéressante pour RSSI et CTO.
-- **3/5** — [Automating coherent long-form video generation](https://research.google/blog/coherent-long-form-video-generation/) — Google Research. Raison : Recherche Google sur génération vidéo longue, intéressante mais sans lien direct avec cybersécurité ou IA en entreprise pour ce public.
-- **3/5** — [Speaker-labeled transcription with WhisperX on SageMaker AI](https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/) — AWS Machine Learning. Raison : Tutoriel technique AWS pour déploiement WhisperX, utile pour transcription, mais non prioritaire pour cybersécurité ni transformation majeure.
-- **3/5** — [Aderant builds intelligent ticket triage with Amazon Nova](https://aws.amazon.com/blogs/machine-learning/aderant-builds-intelligent-ticket-triage-with-amazon-nova/) — AWS Machine Learning. Raison : Retour d'expérience technique sur l'usage d'Amazon Nova Lite pour le tri de tickets, intéressant pour l'automatisation des opérations cloud mais sans impact cyber direct ni rupture majeure.
+- **Exploitation active de failles WSO2 et Adobe Commerce** : La CISA a inscrit deux vulnérabilités critiques (CVE-2022-29464 dans WSO2 et une autre dans Adobe Commerce/Magento) à son catalogue KEV, confirmant leur exploitation en cours dans des attaques. [The Hacker News](https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html)
 
-## IA &amp; Tech — Médias internationaux
+- **MacSync évolue pour persister via iCloud** : Le malware macOS MacSync utilise désormais des événements de calendriers iCloud publics comme canal de commande et contrôle pour distribuer de nouvelles charges utiles natives. [BleepingComputer](https://www.bleepingcomputer.com/news/security/macsync-malware-uses-public-icloud-calendars-to-deliver-new-payloads/)
 
-- **Muse (Meta) expose son système de fichiers** : Deux développeurs ont obtenu de Muse, avec une simple invite, une archive complète de son système de fichiers racine (fichiers Ubuntu, templates). Cette faille de conception expose des données internes sensibles sans réelle barrière de sécurité. [The Verge](https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem)
+- **Campagne Macfinger ClickFix analysée** : Le SANS ISC détaille les échantillons de malware distribués via la campagne Macfinger ClickFix, une chaîne d'infection ciblant les utilisateurs macOS. [SANS ISC](https://isc.sans.edu/diary/rss/33368)
 
-- **Agent IA Instinct : utilité réelle vs risques sécurité** : Instinct a automatisé avec succès des réservations et détecté une tentative de phishing, mais il a aussi gaspillé 64 $ et son accès profond aux données personnelles pose un problème de sécurité encore non résolu. [Wired](https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/)
+- **Société de forensics US accusée de dissimuler des liens avec la Russie** : Deux dirigeants d'une entreprise de forensics numérique fournissant des agences fédérales américaines ont été arrêtés pour avoir menti sur l'origine russe de leur technologie. [The Record](https://therecord.media/russia-forensics-technology-doj)
 
 **Évaluation du scoring**
 
-- **4/5** — [Muse will apparently let you download its entire filesystem](https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem) — The Verge — AI. Raison : Vulnérabilité de fuite de données via un agent IA Meta, avec exploitation démontrée. Impact direct sur la cybersécurité des entreprises adoptant de tels outils.
-- **3/5** — [I Think I Found an AI Agent Worth the Risk](https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/) — Wired — AI. Raison : Retour d'expérience sur un agent IA avec mention de risque sécurité et coût, mais aspects techniques et niveau de menace restent flous.
-
-## Actualité tech FR
-
-- **Démantèlement d'Eviltokens par Microsoft** : La plateforme de phishing-as-a-service Eviltokens, qui fournissait des kits clés en main pour des campagnes d'hameçonnage, a été neutralisée par l'équipe cybersécurité de Microsoft et ses partenaires. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/comment-une-equipe-d-experts-en-cybersecurite-de-microsoft-a-contribue-a-faire-tomber-eviltokens-une-des-plateformes-stars-du-phishing-as-a-service_AV-202609240767.html)
-
-- **Exposition géopolitique des entreprises sans présence internationale** : Une entreprise peut être exposée à des risques géopolitiques même sans filiale à l'étranger, via ses dépendances en matière de fournisseurs, technologies et infrastructures. [Journal du Net](https://www.journaldunet.com/management/direction-generale/1555349-votre-entreprise-est-geopolitiquement-exposee-meme-sans-filiale-a-l-etranger/)
-
-- **Évolution de la cybersécurité vers une résilience par conception** : La cybersécurité évolue d'une approche purement réactive et opérationnelle vers une résilience numérique intégrée dès la conception et partagée entre acteurs, en Europe comme ailleurs. [Journal du Net](https://www.journaldunet.com/cybersecurite/1555385-vers-une-resilience-numerique-concue-et-partagee/)
-
-**Évaluation du scoring**
-
-- **4/5** — [Comment une équipe d’experts en cybersécurité de Microsoft a contribué à faire tomber Eviltokens, une des plateformes stars du "phishing-as-a-service"](https://www.bfmtv.com/tech/cybersecurite/comment-une-equipe-d-experts-en-cybersecurite-de-microsoft-a-contribue-a-faire-tomber-eviltokens-une-des-plateformes-stars-du-phishing-as-a-service_AV-202609240767.html) — BFM Tech. Raison : Analyse d'une opération de démantèlement d'une plateforme de phishing-as-a-service par Microsoft, pertinente pour comprendre les tactiques adverses et les réponses des grands acteurs.
-- **4/5** — [Votre entreprise est géopolitiquement exposée, même sans filiale à l'étranger](https://www.journaldunet.com/management/direction-generale/1555349-votre-entreprise-est-geopolitiquement-exposee-meme-sans-filiale-a-l-etranger/) — Journal du Net. Raison : Analyse des risques géopolitiques via dépendances fournisseurs et technologies, pertinente pour RSSI/CTO. Sujet stratégique mais sans urgence technique immédiate.
-- **3/5** — [Vers une résilience numérique "conçue" et partagée](https://www.journaldunet.com/cybersecurite/1555385-vers-une-resilience-numerique-concue-et-partagee/) — Journal du Net. Raison : Sujet pertinent pour un public expert (cyber stratégie) mais résumé trop vague pour juger de la profondeur technique. À survoler pour vérifier présence d'analyse concrète.
+- **5/5** — [Hackers steal $351.6 million in Bitget crypto exchange hack](https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/) — BleepingComputer. Raison : Incident cyber majeur touchant une plateforme crypto avec vol massif attribué à des hackers nord-coréens, impact direct sur les stratégies de sécurité et la gestion des risques.
+- **5/5** — [Cloudflare Fixes Flaw That Let One Container Read Another Customer's Leftover Disk Data](https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html) — The Hacker News. Raison : Vulnérabilité critique dans Cloudflare Containers permettant l'exfiltration de données résiduelles de clients. Impact direct sur la sécurité des infrastructures cloud mutualisées.
+- **5/5** — [WSO2 and Adobe Commerce Flaws Exploited in Attacks, Added to CISA KEV](https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html) — The Hacker News. Raison : Ajout au KEV de CISA de deux vulnérabilités critiques (CVSS 9.8) activement exploitées, impactant WSO2 et Adobe Commerce, technos utilisées en entreprise.
+- **4/5** — [MacSync malware uses public iCloud calendars to deliver new payloads](https://www.bleepingcomputer.com/news/security/macsync-malware-uses-public-icloud-calendars-to-deliver-new-payloads/) — BleepingComputer. Raison : Nouvelle variante de malware macOS exploitant iCloud pour C2. Technique originale, cible Apple en entreprise. À lire pour détails IOC et impact.
+- **4/5** — [Digital forensics firm with US federal contracts covered up ties to Russia, DOJ alleges](https://therecord.media/russia-forensics-technology-doj) — The Record. Raison : Allégations graves impliquant une firme de forensique numérique avec contrats fédéraux US et liens avec la Russie. Impact potentiel sur la confiance et la chaîne d'approvisionnement cyber.
+- **3/5** — [A Closer Look at Malware From the Macfinger ClickFix Campaign, (Fri, Sep 25th)](https://isc.sans.edu/diary/rss/33368) — SANS ISC. Raison : Analyse technique d'une campagne malware Mac, source SANS fiable, mais résumé trop court pour juger de la profondeur ou de l'originalité.
 
 ## Cyber — Stratégie &amp; analyse
 
-- **SOC intégré à Microsoft Defender** : Les abonnés Microsoft 365 E5/E7 bénéficient désormais d’un SIEM natif dans Defender (Integrated Security Operations Center), sans licence supplémentaire, regroupant gestion des incidents et opérations de sécurité sur une même plateforme. [CSO Online](https://www.csoonline.com/article/4226195/microsoft-integrates-soc-capabilities-with-defender-for-enterprises.html)
+- **Exécution de code à distance non authentifiée dans WordPress** : Une faille permettant l’exécution de code à distance sans authentification a été corrigée ; des attaques sont déjà en cours. La mise à jour immédiate de toutes les instances exposées s’impose. [CSO Online](https://www.csoonline.com/article/4226330/wordpress-patches-a-critical-severity-security-vulnerability.html)
+
+- **Collecte de données sensibles par les caméras Flock Safety** : Les réseaux de caméras de lecture automatique de plaques facilitent les enquêtes policières, mais ils agrègent des données de localisation personnelles consultables sans réel cadre de contrôle entre agences, suscitant des exigences de régulation. [CSO Online](https://www.csoonline.com/article/4225277/fixing-flock-the-controls-needed-now-that-misuse-patterns-are-clear.html)
+
+- **Guerre hybride russe contre l’Europe** : Cyber-sabotage, désinformation et attaques de drones visent les États européens soutenant l’Ukraine, combinant actions physiques et numériques dans une campagne persistante de déstabilisation. [Dark Reading](https://www.darkreading.com/physical-security/russia-hybrid-cyber-physical-war-europe)
+
+- **Salesbleed : injection d’instructions via l’IA agentique** : Des agents Salesforce peuvent être exploités pour acheminer des instructions malveillantes depuis le Web vers des canaux Slack internes, révélant un nouveau vecteur de phishing inter-applications. [Dark Reading](https://www.darkreading.com/application-security/salesbleed-exploits-salesforce-agents-slack-phishing)
+
+- **SectopRAT dissimulé dans une application légitime** : Le cheval de Troie d’accès distant réappara
 
 **Évaluation du scoring**
 
-- **4/5** — [Microsoft integrates SOC capabilities with Defender for enterprises](https://www.csoonline.com/article/4226195/microsoft-integrates-soc-capabilities-with-defender-for-enterprises.html) — CSO Online. Raison : Intégration SIEM/XDR dans Defender sans surcoût pour E5/E7. Impact direct sur l'architecture SOC des entreprises Microsoft. À lire pour évaluer la maturité et les limites.</description>
-      <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
+- **5/5** — [WordPress patches a critical severity security vulnerability](https://www.csoonline.com/article/4226330/wordpress-patches-a-critical-severity-security-vulnerability.html) — CSO Online. Raison : CVE critique permettant RCE non authentifié, patché mais déjà exploité dans la nature, impact direct sur une techno omniprésente en entreprise (WordPress).
+- **4/5** — [Fixing Flock: The controls needed now that misuse patterns are clear](https://www.csoonline.com/article/4225277/fixing-flock-the-controls-needed-now-that-misuse-patterns-are-clear.html) — CSO Online. Raison : Analyse des enjeux de gouvernance et de contrôle des données de localisation par les forces de l'ordre, pertinent pour les RSSI et CTO.
+- **4/5** — [Russia's Hybrid Cyber-Physical War in Europe Heats Up](https://www.darkreading.com/physical-security/russia-hybrid-cyber-physical-war-europe) — Dark Reading. Raison : Analyse de campagne hybride russe ciblant l'Europe, pertinente pour RSSI/CTO. Sujet stratégique mais sans détail technique immédiat.
+- **4/5** — ['Salesbleed' Exploits Salesforce Agents to Enable Slack Phishing](https://www.darkreading.com/application-security/salesbleed-exploits-salesforce-agents-slack-phishing) — Dark Reading. Raison : Exploitation d'agents IA pour phishing via Salesforce est une attaque innovante et concrète, intéressante pour RSSI et CTO.
+- **3/5** — [SectopRAT Returns, Hiding Inside a Legitimate Application](https://www.darkreading.com/cyberattacks-data-breaches/sectoprat-returns-hiding-inside-legitimate-application) — Dark Reading. Raison : Article sur un RAT se cachant dans une application légitime. Intéressant pour la méthode de détection comportementale, mais sans détail technique ou IOC dans le résumé.
+
+## IA — Recherche
+
+- **Alignement des LLM sur les valeurs personnelles** : Une approche bayésienne permet d'ajuster dynamiquement les sorties d'un LLM au contexte de la requête, dépassant les profils de valeurs statiques pour une personnalisation plus fine. [Source](https://arxiv.org/abs/2609.28942)
+
+- **Fiabilité des agents de prévision** : Des tests de stress comportementaux identifient quand un agent de prévision doit raisonner, chercher de l'information ou s'abstenir, améliorant le routage de la confiance dans les tâches de forecasting binaire. [Source](https://arxiv.org/abs/2609.28475)
+
+- **Benchmarks et environnements pour agents forecasters** : Forecast-Dojo fournit un environnement rejouable avec des questions de marchés prédictifs résolues et des news datées pour entraîner et évaluer des agents LLM de prévision. [Source](https://arxiv.org/abs/2609.28876)
+
+- **Prévision de séries temporelles** : TW3Cast, un routeur gelé de modèles de fondation légèrement fine-tunés, atteint la 3e place du benchmark GIFT-Eval sans recourir à des systèmes agentiques multi-étapes. [Source](https://arxiv.org/abs/2609.28506)
+
+- **Simulation multi-agents pour la finance** : PAWS introduit un dataset liant interventions politiques, communication publique et réactions des parties prenantes à des preuves historiques temporellement alignées pour la simulation financière. [Source](https://arxiv.org/abs/2609.28547)
+
+- **Mémoire agentique pour la décision financière** : L'ajout d'une mémoire épisodique par retrieval augmente la performance des agents LLM de trading en combinant prévisions long-terme et raisonnement court-terme. [Source](https://arxiv.org/abs/2609.28771)
+
+- **Gouvernance des agents LLM en entreprise** : Une méthode de découverte progressive de compétences agit comme un contrôle d'accès structurel, limitant les outils disponibles pour un agent selon son rôle afin de réduire les vulnérabilités de gouvernance. [Source](https://arxiv.org/abs/2609.28693)
+
+- **Routage et coût des agents de codage** : Contrôler le "harnais" qui exécute les agents de codage permet de router les tâches vers le bon modèle et de gouverner les coûts lors de déploiements à grande échelle (dizaines de milliers d'employés). [Source](https://arxiv.org/abs/2609.28919)
+
+- **RLVR pour petits agents de recherche** : Le RL avec récompenses vérifiables fonctionne pour des tâches où la récompense est moins claire qu'en maths ou code, en appliquant la recette "raisonner-chercher" à des agents d'exploration ouverts. [Source](https://arxiv.org/abs/2609.28765)
+
+- **Réduction des hallucinations dans les MLLMs** : DEEPO identifie deux faiblesses dans la chaîne de correction du RL (attribution du crédit et mise à jour des paramètres) et propose une optimisation par double entropie pour réduire les hallucinations. [Source](https://arxiv.org/abs/2609.28570)
+
+- **Agents role-play et curriculum adversarial** : Un curriculum en boucle fermée génère de nouveaux scénarios de manière adversariale pendant l'entraînement RL, évitant le surapprentissage à un pool fixe de scénarios pour les agents de jeu de rôle. [Source](https://arxiv.org/abs/2609.28609)
+
+- **Simulateurs d'utilisateurs multi-tours** : Au-delà de la cohérence stylistique superficielle, l'alignement des simulateurs sur la consistance comportementale reproduit fidèlement l'évolution de l'intention et les résultats des interactions réelles. [Source](https://arxiv.org/abs/2609.28690)
+
+- **Reproductibilité des papiers ML par des agents** : Le benchmark RECLAIM teste si des agents IA peuvent reproduire les claims de 100 papiers NeurIPS 2025, couvrant l'installation, le debug et l'exécution des expériences. [Source](https://arxiv.org/abs/2609.28850)
+
+- **Inférence statistique avec juges IA** : L'utilisation de LLMs comme juges pour des tests d'hypothèses formels nécessite une approche "cost-aware" avec scoring IA sélectif et escalade humaine séquentielle pour garantir la validité statistique. [Source](https://arxiv.org/abs/2609.28859)
+
+- **Modèles multi-tâches** : Un framework apprend les relations inter-tâches en approximant la distribution jointe des labels via des relations par paires, améliorant le transfert learning et l'interprétabilité. [Source](https://arxiv.org/abs/2609.28776)
+
+- **Agents pour pipelines bioinformatiques** : BaseCamp automatise la couche décisionnelle des pipelines de séquençage ADN (contrôle qualité, alignement, variant calling) qui restait manuelle malgré l'orchestration des outils. [Source](https://arxiv.org/abs/2609.28557)
+
+- **Agents pour modélisation épidémiologique** : Le framework Epydemix Agent ajoute une couche en langage naturel au logiciel Epydemix, mais la fiabilité de l'interface agent n'est pas automatique. [Source](https://arxiv.org/abs/2609.28692)
+
+- **Modèles multimodaux Pistis** : Une famille de modèles 9B et 27B paramètres, construits sur Qwen, via un framework de post-training général et scalable visant une base solide avant spécialisation. [Source](https://arxiv.org/abs/2609.28554)
+
+- **Permanence de l'objet dans les world models** : L'entraînement de modèles de génération vidéo sur la permanence et la solidité des objets améliore leur capacité de raisonnement émergent sur le monde physique. [Source](https://arxiv.org/abs/2609.28654)
+
+- **Mémoire conversationnelle** : Le benchmark TWIST mesure la qualité d'intervention pour mettre à jour la mémoire d'un agent au fil d'une longue conversation, une propriété complémentaire au simple rappel. [Source](https://arxiv.org/abs/2609.28575)
+
+**Évaluation du scoring**
+
+- **4/5** — [From Static Personal Values to Contextualized Personalization: Bayesian Personalized Value Alignment for LLMs](https://arxiv.org/abs/2609.28942) — arXiv cs.AI. Raison : Recherche novatrice sur l'alignement contextuel des LLMs, utile pour les experts en IA en entreprise. L'implication pratique reste à confirmer.
+- **3/5** — [When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing](https://arxiv.org/abs/2609.28475) — arXiv cs.AI. Raison : Papier de recherche sur les agents prédictifs, sans lien direct avec la cybersécurité ou les pratiques opérationnelles des experts ciblés.
+- **3/5** — [TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split](https://arxiv.org/abs/2609.28506) — arXiv cs.AI. Raison : Papier de recherche sur un benchmark de séries temporelles, intéressant mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
+- **3/5** — [PAWS: Policy-driven Agentic World Simulation](https://arxiv.org/abs/2609.28547) — arXiv cs.AI. Raison : Papier de recherche sur un dataset de simulation multi-agent économique. Pertinent pour experts IA, mais le lien avec la cybersécurité est absent.
+- **3/5** — [Pistis Technical Report](https://arxiv.org/abs/2609.28554) — arXiv cs.AI. Raison : Nouveau modèle multimodal de taille significative, mais le résumé tronqué ne permet pas d'évaluer l'impact pratique ou la reproductibilité pour un public expert.
+- **3/5** — [BaseCamp --- An Agentic AI Framework for Automating DNA Sequencing Data Pipelines](https://arxiv.org/abs/2609.28557) — arXiv cs.AI. Raison : Papier de recherche sur un framework IA pour pipelines bioinformatiques. Intéressant pour l'approche agentique, mais hors périmètre cybersécurité et sans impact direct pour le public cible.
+- **3/5** — [DEEPO: Dual-Entropy Enhanced Policy Optimization for Hallucination in MLLMs](https://arxiv.org/abs/2609.28570) — arXiv cs.AI. Raison : Recherche sur l'optimisation des MLLM contre les hallucinations, sujet émergent mais technique pure, sans application pratique immédiate pour cybersécurité ou IT.
+- **3/5** — [TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory, with a Human-Validated Draft-Alignment](https://arxiv.org/abs/2609.28575) — arXiv cs.AI. Raison : Proposition de benchmark pour la qualité d'intervention en mémoire conversationnelle. Intéressant pour la recherche IA mais impact pratique incertain pour le public cible.
+- **3/5** — [Adversarial Closed-Loop Curriculum for Evolving Role-Playing Agents](https://arxiv.org/abs/2609.28609) — arXiv cs.AI. Raison : Papier de recherche sur l'évolution des agents conversationnels par curriculum adversarial. Intéressant pour l'IA en entreprise, mais impact pratique incertain pour le public cible.
+- **3/5** — [Training Object Permanence in World Models](https://arxiv.org/abs/2609.28654) — arXiv cs.AI. Raison : Recherche sur l'émergence de la permanence d'objet dans les modèles vidéo génératifs. Intéressant pour l'IA, mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
+- **3/5** — [Beyond Surface Style: Aligning Multi-Turn User Simulators with Behavioral Consistency](https://arxiv.org/abs/2609.28690) — arXiv cs.AI. Raison : Article de recherche sur la simulation d'utilisateurs multi-tours. Intéressant pour l'IA conversationnelle mais sans lien direct avec la cybersécurité.
+- **3/5** — [Driving Epidemic Models with AI Agents: the Epydemix Agent Framework](https://arxiv.org/abs/2609.28692) — arXiv cs.AI. Raison : Papier de recherche sur un framework d'agents IA pour modélisation épidémique. Intéressant pour l'architecture agent, mais hors périmètre cybersécurité et sans impact direct pour le public cible.
+- **3/5** — [Progressive Skill Discovery as Access Control for Tool-Using LLM Agents: Structural Governance through Role-Scoped Capability Delivery](https://arxiv.org/abs/2609.28693) — arXiv cs.AI. Raison : Papier de recherche sur le contrôle d'accès structurel pour agents LLM, pertinent pour gouvernance IA mais impact pratique incertain.
+- **3/5** — [Reinforcement Learning with Verifiable Rewards for Small Search Agents](https://arxiv.org/abs/2609.28765) — arXiv cs.AI. Raison : Article de recherche explorant l'extension du RLVR au question-réponse ouvert, intéressant pour les experts IA mais pertinence cyber immédiate faible.
+- **3/5** — [Agent Memory with Episodic Retrieval for Financial Decision-Making](https://arxiv.org/abs/2609.28771) — arXiv cs.AI. Raison : Papier de recherche sur mémoire épisodique pour agents financiers. Intéressant pour experts IA, mais impact pratique et lien avec cybersécurité non établis.
+- **3/5** — [Learned Cross-Task Relationships in Multi-Task Models](https://arxiv.org/abs/2609.28776) — arXiv cs.AI. Raison : Papier de recherche IA sur l'apprentissage de relations inter-tâches dans les modèles multi-tâches. Intéressant mais sans lien direct avec la cybersécurité ou les outils concrets pour le public cible.
+- **3/5** — [RECLAIM: Can Agents Reproduce the Claims of Machine Learning Papers?](https://arxiv.org/abs/2609.28850) — arXiv cs.AI. Raison : Benchmark de reproductibilité pour articles ML, intéressant mais sans implication directe cybersécurité ou outillage dev. À survoler pour une veille recherche IA.
+- **3/5** — [Human-AI-Powered Hypothesis Testing: Cost-Aware Selective AI Scoring and Sequential Human Escalation](https://arxiv.org/abs/2609.28859) — arXiv cs.AI. Raison : Papier de recherche sur le test d'hypothèse avec IA et escalade humaine, intéressant mais sans application immédiate en cybersécurité ou entreprise.
+- **3/5** — [Forecast-Dojo: Replayable Environments for Benchmarking and Training LLM Forecasting Agents](https://arxiv.org/abs/2609.28876) — arXiv cs.AI. Raison : Article de recherche sur benchmark d'agents LLM pour prévisions, intéressant pour l'évaluation de modèles, mais sans lien direct avec cybersécurité.
+- **3/5** — [Control the Harness, Control the Cost: Routing and Governing AI Coding Agents in the Enterprise](https://arxiv.org/abs/2609.28919) — arXiv cs.AI. Raison : Papier arXiv sur la gouvernance des agents IA en entreprise, sujet pertinent mais résumé trop court pour juger de l'impact pratique immédiat.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Agent IA multi-compte via MCP</strong> : AWS montre comment un agent central, basé sur Bedrock AgentCore Gateway et le Model Context Protocol, interroge les</li>
+<li><strong>Vol massif sur Bitget attribué à la Corée du Nord</strong> : 351,6 millions de dollars ont été dérobés sur les portefeuilles chauds et tièdes de l'exchange crypto Bitget, une opération attribuée au groupe Lazarus. <a href="https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuite de données inter-conteneurs chez Cloudflare</strong> : Une faille dans Cloudflare Containers permettait à un client de lire les données résiduelles laissées sur disque par les conteneurs d'autres clients précédemment exécutés sur le même serveur. Le correctif est déployé. <a href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Exploitation active de failles WSO2 et Adobe Commerce</strong> : La CISA a inscrit deux vulnérabilités critiques (CVE-2022-29464 dans WSO2 et une autre dans Adobe Commerce/Magento) à son catalogue KEV, confirmant leur exploitation en cours dans des attaques. <a href="https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>MacSync évolue pour persister via iCloud</strong> : Le malware macOS MacSync utilise désormais des événements de calendriers iCloud publics comme canal de commande et contrôle pour distribuer de nouvelles charges utiles natives. <a href="https://www.bleepingcomputer.com/news/security/macsync-malware-uses-public-icloud-calendars-to-deliver-new-payloads/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne Macfinger ClickFix analysée</strong> : Le SANS ISC détaille les échantillons de malware distribués via la campagne Macfinger ClickFix, une chaîne d'infection ciblant les utilisateurs macOS. <a href="https://isc.sans.edu/diary/rss/33368">SANS ISC</a></li>
+</ul>
+
+<ul>
+<li><strong>Société de forensics US accusée de dissimuler des liens avec la Russie</strong> : Deux dirigeants d'une entreprise de forensics numérique fournissant des agences fédérales américaines ont été arrêtés pour avoir menti sur l'origine russe de leur technologie. <a href="https://therecord.media/russia-forensics-technology-doj">The Record</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-a-multi-account-ai-agent-with-agentcore-gateway-and-mcp/">Build a multi-account AI agent with AgentCore Gateway and MCP</a> — AWS Machine Learning. Raison : Architecture multi-comptes AWS pour agents IA avec MCP et Bedrock. Solution technique concrète sur sécurité des données, intéressante pour RSSI et CTO.</li>
-<li><strong>3/5</strong> — <a href="https://research.google/blog/coherent-long-form-video-generation/">Automating coherent long-form video generation</a> — Google Research. Raison : Recherche Google sur génération vidéo longue, intéressante mais sans lien direct avec cybersécurité ou IA en entreprise pour ce public.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/">Speaker-labeled transcription with WhisperX on SageMaker AI</a> — AWS Machine Learning. Raison : Tutoriel technique AWS pour déploiement WhisperX, utile pour transcription, mais non prioritaire pour cybersécurité ni transformation majeure.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/aderant-builds-intelligent-ticket-triage-with-amazon-nova/">Aderant builds intelligent ticket triage with Amazon Nova</a> — AWS Machine Learning. Raison : Retour d'expérience technique sur l'usage d'Amazon Nova Lite pour le tri de tickets, intéressant pour l'automatisation des opérations cloud mais sans impact cyber direct ni rupture majeure.</li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Muse (Meta) expose son système de fichiers</strong> : Deux développeurs ont obtenu de Muse, avec une simple invite, une archive complète de son système de fichiers racine (fichiers Ubuntu, templates). Cette faille de conception expose des données internes sensibles sans réelle barrière de sécurité. <a href="https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem">The Verge</a></li>
-</ul>
-
-<ul>
-<li><strong>Agent IA Instinct : utilité réelle vs risques sécurité</strong> : Instinct a automatisé avec succès des réservations et détecté une tentative de phishing, mais il a aussi gaspillé 64 $ et son accès profond aux données personnelles pose un problème de sécurité encore non résolu. <a href="https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/">Wired</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem">Muse will apparently let you download its entire filesystem</a> — The Verge — AI. Raison : Vulnérabilité de fuite de données via un agent IA Meta, avec exploitation démontrée. Impact direct sur la cybersécurité des entreprises adoptant de tels outils.</li>
-<li><strong>3/5</strong> — <a href="https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/">I Think I Found an AI Agent Worth the Risk</a> — Wired — AI. Raison : Retour d'expérience sur un agent IA avec mention de risque sécurité et coût, mais aspects techniques et niveau de menace restent flous.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Démantèlement d'Eviltokens par Microsoft</strong> : La plateforme de phishing-as-a-service Eviltokens, qui fournissait des kits clés en main pour des campagnes d'hameçonnage, a été neutralisée par l'équipe cybersécurité de Microsoft et ses partenaires. <a href="https://www.bfmtv.com/tech/cybersecurite/comment-une-equipe-d-experts-en-cybersecurite-de-microsoft-a-contribue-a-faire-tomber-eviltokens-une-des-plateformes-stars-du-phishing-as-a-service_AV-202609240767.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Exposition géopolitique des entreprises sans présence internationale</strong> : Une entreprise peut être exposée à des risques géopolitiques même sans filiale à l'étranger, via ses dépendances en matière de fournisseurs, technologies et infrastructures. <a href="https://www.journaldunet.com/management/direction-generale/1555349-votre-entreprise-est-geopolitiquement-exposee-meme-sans-filiale-a-l-etranger/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Évolution de la cybersécurité vers une résilience par conception</strong> : La cybersécurité évolue d'une approche purement réactive et opérationnelle vers une résilience numérique intégrée dès la conception et partagée entre acteurs, en Europe comme ailleurs. <a href="https://www.journaldunet.com/cybersecurite/1555385-vers-une-resilience-numerique-concue-et-partagee/">Journal du Net</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/comment-une-equipe-d-experts-en-cybersecurite-de-microsoft-a-contribue-a-faire-tomber-eviltokens-une-des-plateformes-stars-du-phishing-as-a-service_AV-202609240767.html">Comment une équipe d’experts en cybersécurité de Microsoft a contribué à faire tomber Eviltokens, une des plateformes stars du "phishing-as-a-service"</a> — BFM Tech. Raison : Analyse d'une opération de démantèlement d'une plateforme de phishing-as-a-service par Microsoft, pertinente pour comprendre les tactiques adverses et les réponses des grands acteurs.</li>
-<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/management/direction-generale/1555349-votre-entreprise-est-geopolitiquement-exposee-meme-sans-filiale-a-l-etranger/">Votre entreprise est géopolitiquement exposée, même sans filiale à l'étranger</a> — Journal du Net. Raison : Analyse des risques géopolitiques via dépendances fournisseurs et technologies, pertinente pour RSSI/CTO. Sujet stratégique mais sans urgence technique immédiate.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1555385-vers-une-resilience-numerique-concue-et-partagee/">Vers une résilience numérique "conçue" et partagée</a> — Journal du Net. Raison : Sujet pertinent pour un public expert (cyber stratégie) mais résumé trop vague pour juger de la profondeur technique. À survoler pour vérifier présence d'analyse concrète.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/">Hackers steal $351.6 million in Bitget crypto exchange hack</a> — BleepingComputer. Raison : Incident cyber majeur touchant une plateforme crypto avec vol massif attribué à des hackers nord-coréens, impact direct sur les stratégies de sécurité et la gestion des risques.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html">Cloudflare Fixes Flaw That Let One Container Read Another Customer's Leftover Disk Data</a> — The Hacker News. Raison : Vulnérabilité critique dans Cloudflare Containers permettant l'exfiltration de données résiduelles de clients. Impact direct sur la sécurité des infrastructures cloud mutualisées.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html">WSO2 and Adobe Commerce Flaws Exploited in Attacks, Added to CISA KEV</a> — The Hacker News. Raison : Ajout au KEV de CISA de deux vulnérabilités critiques (CVSS 9.8) activement exploitées, impactant WSO2 et Adobe Commerce, technos utilisées en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/macsync-malware-uses-public-icloud-calendars-to-deliver-new-payloads/">MacSync malware uses public iCloud calendars to deliver new payloads</a> — BleepingComputer. Raison : Nouvelle variante de malware macOS exploitant iCloud pour C2. Technique originale, cible Apple en entreprise. À lire pour détails IOC et impact.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/russia-forensics-technology-doj">Digital forensics firm with US federal contracts covered up ties to Russia, DOJ alleges</a> — The Record. Raison : Allégations graves impliquant une firme de forensique numérique avec contrats fédéraux US et liens avec la Russie. Impact potentiel sur la confiance et la chaîne d'approvisionnement cyber.</li>
+<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33368">A Closer Look at Malware From the Macfinger ClickFix Campaign, (Fri, Sep 25th)</a> — SANS ISC. Raison : Analyse technique d'une campagne malware Mac, source SANS fiable, mais résumé trop court pour juger de la profondeur ou de l'originalité.</li>
 </ul>
 
 <h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>SOC intégré à Microsoft Defender</strong> : Les abonnés Microsoft 365 E5/E7 bénéficient désormais d’un SIEM natif dans Defender (Integrated Security Operations Center), sans licence supplémentaire, regroupant gestion des incidents et opérations de sécurité sur une même plateforme. <a href="https://www.csoonline.com/article/4226195/microsoft-integrates-soc-capabilities-with-defender-for-enterprises.html">CSO Online</a></li>
+<li><strong>Exécution de code à distance non authentifiée dans WordPress</strong> : Une faille permettant l’exécution de code à distance sans authentification a été corrigée ; des attaques sont déjà en cours. La mise à jour immédiate de toutes les instances exposées s’impose. <a href="https://www.csoonline.com/article/4226330/wordpress-patches-a-critical-severity-security-vulnerability.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Collecte de données sensibles par les caméras Flock Safety</strong> : Les réseaux de caméras de lecture automatique de plaques facilitent les enquêtes policières, mais ils agrègent des données de localisation personnelles consultables sans réel cadre de contrôle entre agences, suscitant des exigences de régulation. <a href="https://www.csoonline.com/article/4225277/fixing-flock-the-controls-needed-now-that-misuse-patterns-are-clear.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Guerre hybride russe contre l’Europe</strong> : Cyber-sabotage, désinformation et attaques de drones visent les États européens soutenant l’Ukraine, combinant actions physiques et numériques dans une campagne persistante de déstabilisation. <a href="https://www.darkreading.com/physical-security/russia-hybrid-cyber-physical-war-europe">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Salesbleed : injection d’instructions via l’IA agentique</strong> : Des agents Salesforce peuvent être exploités pour acheminer des instructions malveillantes depuis le Web vers des canaux Slack internes, révélant un nouveau vecteur de phishing inter-applications. <a href="https://www.darkreading.com/application-security/salesbleed-exploits-salesforce-agents-slack-phishing">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>SectopRAT dissimulé dans une application légitime</strong> : Le cheval de Troie d’accès distant réappara</li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4226195/microsoft-integrates-soc-capabilities-with-defender-for-enterprises.html">Microsoft integrates SOC capabilities with Defender for enterprises</a> — CSO Online. Raison : Intégration SIEM/XDR dans Defender sans surcoût pour E5/E7. Impact direct sur l'architecture SOC des entreprises Microsoft. À lire pour évaluer la maturité et les limites.</li>
+<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4226330/wordpress-patches-a-critical-severity-security-vulnerability.html">WordPress patches a critical severity security vulnerability</a> — CSO Online. Raison : CVE critique permettant RCE non authentifié, patché mais déjà exploité dans la nature, impact direct sur une techno omniprésente en entreprise (WordPress).</li>
+<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4225277/fixing-flock-the-controls-needed-now-that-misuse-patterns-are-clear.html">Fixing Flock: The controls needed now that misuse patterns are clear</a> — CSO Online. Raison : Analyse des enjeux de gouvernance et de contrôle des données de localisation par les forces de l'ordre, pertinent pour les RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/physical-security/russia-hybrid-cyber-physical-war-europe">Russia's Hybrid Cyber-Physical War in Europe Heats Up</a> — Dark Reading. Raison : Analyse de campagne hybride russe ciblant l'Europe, pertinente pour RSSI/CTO. Sujet stratégique mais sans détail technique immédiat.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/application-security/salesbleed-exploits-salesforce-agents-slack-phishing">'Salesbleed' Exploits Salesforce Agents to Enable Slack Phishing</a> — Dark Reading. Raison : Exploitation d'agents IA pour phishing via Salesforce est une attaque innovante et concrète, intéressante pour RSSI et CTO.</li>
+<li><strong>3/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/sectoprat-returns-hiding-inside-legitimate-application">SectopRAT Returns, Hiding Inside a Legitimate Application</a> — Dark Reading. Raison : Article sur un RAT se cachant dans une application légitime. Intéressant pour la méthode de détection comportementale, mais sans détail technique ou IOC dans le résumé.</li>
+</ul>
+
+<h2>IA — Recherche</h2>
+
+<ul>
+<li><strong>Alignement des LLM sur les valeurs personnelles</strong> : Une approche bayésienne permet d'ajuster dynamiquement les sorties d'un LLM au contexte de la requête, dépassant les profils de valeurs statiques pour une personnalisation plus fine. <a href="https://arxiv.org/abs/2609.28942">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Fiabilité des agents de prévision</strong> : Des tests de stress comportementaux identifient quand un agent de prévision doit raisonner, chercher de l'information ou s'abstenir, améliorant le routage de la confiance dans les tâches de forecasting binaire. <a href="https://arxiv.org/abs/2609.28475">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmarks et environnements pour agents forecasters</strong> : Forecast-Dojo fournit un environnement rejouable avec des questions de marchés prédictifs résolues et des news datées pour entraîner et évaluer des agents LLM de prévision. <a href="https://arxiv.org/abs/2609.28876">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Prévision de séries temporelles</strong> : TW3Cast, un routeur gelé de modèles de fondation légèrement fine-tunés, atteint la 3e place du benchmark GIFT-Eval sans recourir à des systèmes agentiques multi-étapes. <a href="https://arxiv.org/abs/2609.28506">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Simulation multi-agents pour la finance</strong> : PAWS introduit un dataset liant interventions politiques, communication publique et réactions des parties prenantes à des preuves historiques temporellement alignées pour la simulation financière. <a href="https://arxiv.org/abs/2609.28547">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Mémoire agentique pour la décision financière</strong> : L'ajout d'une mémoire épisodique par retrieval augmente la performance des agents LLM de trading en combinant prévisions long-terme et raisonnement court-terme. <a href="https://arxiv.org/abs/2609.28771">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Gouvernance des agents LLM en entreprise</strong> : Une méthode de découverte progressive de compétences agit comme un contrôle d'accès structurel, limitant les outils disponibles pour un agent selon son rôle afin de réduire les vulnérabilités de gouvernance. <a href="https://arxiv.org/abs/2609.28693">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Routage et coût des agents de codage</strong> : Contrôler le "harnais" qui exécute les agents de codage permet de router les tâches vers le bon modèle et de gouverner les coûts lors de déploiements à grande échelle (dizaines de milliers d'employés). <a href="https://arxiv.org/abs/2609.28919">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>RLVR pour petits agents de recherche</strong> : Le RL avec récompenses vérifiables fonctionne pour des tâches où la récompense est moins claire qu'en maths ou code, en appliquant la recette "raisonner-chercher" à des agents d'exploration ouverts. <a href="https://arxiv.org/abs/2609.28765">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Réduction des hallucinations dans les MLLMs</strong> : DEEPO identifie deux faiblesses dans la chaîne de correction du RL (attribution du crédit et mise à jour des paramètres) et propose une optimisation par double entropie pour réduire les hallucinations. <a href="https://arxiv.org/abs/2609.28570">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents role-play et curriculum adversarial</strong> : Un curriculum en boucle fermée génère de nouveaux scénarios de manière adversariale pendant l'entraînement RL, évitant le surapprentissage à un pool fixe de scénarios pour les agents de jeu de rôle. <a href="https://arxiv.org/abs/2609.28609">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Simulateurs d'utilisateurs multi-tours</strong> : Au-delà de la cohérence stylistique superficielle, l'alignement des simulateurs sur la consistance comportementale reproduit fidèlement l'évolution de l'intention et les résultats des interactions réelles. <a href="https://arxiv.org/abs/2609.28690">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Reproductibilité des papiers ML par des agents</strong> : Le benchmark RECLAIM teste si des agents IA peuvent reproduire les claims de 100 papiers NeurIPS 2025, couvrant l'installation, le debug et l'exécution des expériences. <a href="https://arxiv.org/abs/2609.28850">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Inférence statistique avec juges IA</strong> : L'utilisation de LLMs comme juges pour des tests d'hypothèses formels nécessite une approche "cost-aware" avec scoring IA sélectif et escalade humaine séquentielle pour garantir la validité statistique. <a href="https://arxiv.org/abs/2609.28859">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles multi-tâches</strong> : Un framework apprend les relations inter-tâches en approximant la distribution jointe des labels via des relations par paires, améliorant le transfert learning et l'interprétabilité. <a href="https://arxiv.org/abs/2609.28776">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents pour pipelines bioinformatiques</strong> : BaseCamp automatise la couche décisionnelle des pipelines de séquençage ADN (contrôle qualité, alignement, variant calling) qui restait manuelle malgré l'orchestration des outils. <a href="https://arxiv.org/abs/2609.28557">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents pour modélisation épidémiologique</strong> : Le framework Epydemix Agent ajoute une couche en langage naturel au logiciel Epydemix, mais la fiabilité de l'interface agent n'est pas automatique. <a href="https://arxiv.org/abs/2609.28692">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèles multimodaux Pistis</strong> : Une famille de modèles 9B et 27B paramètres, construits sur Qwen, via un framework de post-training général et scalable visant une base solide avant spécialisation. <a href="https://arxiv.org/abs/2609.28554">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Permanence de l'objet dans les world models</strong> : L'entraînement de modèles de génération vidéo sur la permanence et la solidité des objets améliore leur capacité de raisonnement émergent sur le monde physique. <a href="https://arxiv.org/abs/2609.28654">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Mémoire conversationnelle</strong> : Le benchmark TWIST mesure la qualité d'intervention pour mettre à jour la mémoire d'un agent au fil d'une longue conversation, une propriété complémentaire au simple rappel. <a href="https://arxiv.org/abs/2609.28575">Source</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2609.28942">From Static Personal Values to Contextualized Personalization: Bayesian Personalized Value Alignment for LLMs</a> — arXiv cs.AI. Raison : Recherche novatrice sur l'alignement contextuel des LLMs, utile pour les experts en IA en entreprise. L'implication pratique reste à confirmer.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28475">When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing</a> — arXiv cs.AI. Raison : Papier de recherche sur les agents prédictifs, sans lien direct avec la cybersécurité ou les pratiques opérationnelles des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28506">TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split</a> — arXiv cs.AI. Raison : Papier de recherche sur un benchmark de séries temporelles, intéressant mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28547">PAWS: Policy-driven Agentic World Simulation</a> — arXiv cs.AI. Raison : Papier de recherche sur un dataset de simulation multi-agent économique. Pertinent pour experts IA, mais le lien avec la cybersécurité est absent.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28554">Pistis Technical Report</a> — arXiv cs.AI. Raison : Nouveau modèle multimodal de taille significative, mais le résumé tronqué ne permet pas d'évaluer l'impact pratique ou la reproductibilité pour un public expert.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28557">BaseCamp --- An Agentic AI Framework for Automating DNA Sequencing Data Pipelines</a> — arXiv cs.AI. Raison : Papier de recherche sur un framework IA pour pipelines bioinformatiques. Intéressant pour l'approche agentique, mais hors périmètre cybersécurité et sans impact direct pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28570">DEEPO: Dual-Entropy Enhanced Policy Optimization for Hallucination in MLLMs</a> — arXiv cs.AI. Raison : Recherche sur l'optimisation des MLLM contre les hallucinations, sujet émergent mais technique pure, sans application pratique immédiate pour cybersécurité ou IT.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28575">TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory, with a Human-Validated Draft-Alignment</a> — arXiv cs.AI. Raison : Proposition de benchmark pour la qualité d'intervention en mémoire conversationnelle. Intéressant pour la recherche IA mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28609">Adversarial Closed-Loop Curriculum for Evolving Role-Playing Agents</a> — arXiv cs.AI. Raison : Papier de recherche sur l'évolution des agents conversationnels par curriculum adversarial. Intéressant pour l'IA en entreprise, mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28654">Training Object Permanence in World Models</a> — arXiv cs.AI. Raison : Recherche sur l'émergence de la permanence d'objet dans les modèles vidéo génératifs. Intéressant pour l'IA, mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28690">Beyond Surface Style: Aligning Multi-Turn User Simulators with Behavioral Consistency</a> — arXiv cs.AI. Raison : Article de recherche sur la simulation d'utilisateurs multi-tours. Intéressant pour l'IA conversationnelle mais sans lien direct avec la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28692">Driving Epidemic Models with AI Agents: the Epydemix Agent Framework</a> — arXiv cs.AI. Raison : Papier de recherche sur un framework d'agents IA pour modélisation épidémique. Intéressant pour l'architecture agent, mais hors périmètre cybersécurité et sans impact direct pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28693">Progressive Skill Discovery as Access Control for Tool-Using LLM Agents: Structural Governance through Role-Scoped Capability Delivery</a> — arXiv cs.AI. Raison : Papier de recherche sur le contrôle d'accès structurel pour agents LLM, pertinent pour gouvernance IA mais impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28765">Reinforcement Learning with Verifiable Rewards for Small Search Agents</a> — arXiv cs.AI. Raison : Article de recherche explorant l'extension du RLVR au question-réponse ouvert, intéressant pour les experts IA mais pertinence cyber immédiate faible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28771">Agent Memory with Episodic Retrieval for Financial Decision-Making</a> — arXiv cs.AI. Raison : Papier de recherche sur mémoire épisodique pour agents financiers. Intéressant pour experts IA, mais impact pratique et lien avec cybersécurité non établis.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28776">Learned Cross-Task Relationships in Multi-Task Models</a> — arXiv cs.AI. Raison : Papier de recherche IA sur l'apprentissage de relations inter-tâches dans les modèles multi-tâches. Intéressant mais sans lien direct avec la cybersécurité ou les outils concrets pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28850">RECLAIM: Can Agents Reproduce the Claims of Machine Learning Papers?</a> — arXiv cs.AI. Raison : Benchmark de reproductibilité pour articles ML, intéressant mais sans implication directe cybersécurité ou outillage dev. À survoler pour une veille recherche IA.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28859">Human-AI-Powered Hypothesis Testing: Cost-Aware Selective AI Scoring and Sequential Human Escalation</a> — arXiv cs.AI. Raison : Papier de recherche sur le test d'hypothèse avec IA et escalade humaine, intéressant mais sans application immédiate en cybersécurité ou entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28876">Forecast-Dojo: Replayable Environments for Benchmarking and Training LLM Forecasting Agents</a> — arXiv cs.AI. Raison : Article de recherche sur benchmark d'agents LLM pour prévisions, intéressant pour l'évaluation de modèles, mais sans lien direct avec cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2609.28919">Control the Harness, Control the Cost: Routing and Governing AI Coding Agents in the Enterprise</a> — arXiv cs.AI. Raison : Papier arXiv sur la gouvernance des agents IA en entreprise, sujet pertinent mais résumé trop court pour juger de l'impact pratique immédiat.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260924-2025</guid>
-      <pubDate>Thu, 24 Sep 2026 20:25:55 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20260925-1016</guid>
+      <pubDate>Fri, 25 Sep 2026 10:16:12 +0000</pubDate>
     </item>
   </channel>
 </rss>
