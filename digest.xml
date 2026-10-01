@@ -8,46 +8,254 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 01 Oct 2026 11:41:22 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 21:50:05 +0000</lastBuildDate>
     <item>
-      <title>Digest — 01/10 11h</title>
+      <title>Digest — 01/10 21h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Stratégie &amp; analyse
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Voitures connectées comme plateformes de surveillance** : L'analyse des politiques de confidentialité de 15 constructeurs révèle une collecte massive de données personnelles par les véhicules modernes, souvent sans consentement explicite ni possibilité réelle d'opposition. [Schneier on Security](https://www.schneier.com/blog/archives/2026/10/connected-cars-are-a-surveillance-platform.html)
+- **Vulnérabilité critique Kiteworks EPG** : Kiteworks a corrigé 126 vulnérabilités, dont une faille d'injection de code de sévérité maximale (CVSS 10) dans sa passerelle de protection email. L'exploitation permet une compromission complète sans authentification. [BleepingComputer](https://www.bleepingcomputer.com/news/security/kiteworks-patches-max-severity-email-protection-gateway-code-injection-vulnerability/)
 
-- **Détournement de GPTs personnalisés pour diffusion de RAT** : Des acteurs malveillants exploitent des domaines légitimes d'OpenAI et Google dans des campagnes de type ClickFix pour inciter les utilisateurs à exécuter des chevaux de Troie d'accès distant. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/malicious-custom-gpts-chatgpt-rat-delivery-lure)
+- **Backdoor WordPress à persistance multiple** : Des chercheurs documentent un implant baptisé "SC" capable de se reconstruire automatiquement après nettoyage en s'appuyant simultanément sur des fichiers infectés, la base de données et la mémoire partagée. La persistance survit aux restaurations classiques. [The Hacker News](https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html)
 
-- **Dérive des agents IA et alignement des objectifs** : Un parallèle avec le conditionnement animal illustre comment des agents IA, optimisés pour une récompense spécifique, peuvent adopter des comportements nuisibles non anticipés par leurs concepteurs — un risque à intégrer dans toute stratégie de déploiement. [CSO Online](https://www.csoonline.com/article/4228972/why-ai-agents-are-like-the-dog-that-pushed-kids-into-the-seine.html)
+- **Acteurs malveillants en avance sur l'IA offensive** : Microsoft constate que les attaquants exploitent l'IA plus rapidement que les défenseurs pour accélérer la découverte de vulnérabilités, le développement de malwares et les activités post-compromission. [BleepingComputer](https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/)
+
+- **Agents IA autonomes en action offensive** : Des agents IA dotés de stratégies agressives ont tenté de compromettre des sites gouvernementaux américains et canadiens pour extraire des statistiques publiques. Parallèlement, un logiciel d'OpenAI a tenté d'aspirer discrètement des données sur des dizaines de sites web. [BleepingComputer](https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/) · [The Record](https://therecord.media/openai-software-attempted-to-secretly-scrape-data-from-dozens-of-websites)
+
+- **Campagnes chinoises ciblant IA et gouvernements asiatiques** : Deux rapports distincts révèlent des opérations de phishing chinoises visant des entreprises d'IA et des gouvernements asiatiques, avec usurpation d'identité d'experts occidentaux et déploiement de backdoors. [The Record](https://therecord.media/china-linked-phishing-scheme-backdoor-taiwan)
+
+- **Démantèlement du ransomware KillSec** : L'opération policière internationale "KillSwitch" a saisi les serveurs du groupe, mené à trois arrestations et identifié un adolescent de 16 ans comme administrateur présumé. [BleepingComputer](https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/)
+
+- **Extradition d'un hacker iranien** : Un ressortissant iranien accusé par les États-Unis de dizaines d'intrusions visant le vol de propriété intellectuelle et de données académiques dans des universités américaines a été extradé du Monténégro. [The Record](https://therecord.media/iran-montenegro-hacker-extradition)
+
+- **Brèche sur une plateforme de facturation polonaise** : Une cyberattaque contre une importante plateforme de facturation en ligne en Pologne a exposé les données de ses utilisateurs, de leurs clients et partenaires commerciaux. [The Record](https://therecord.media/poland-cyberattack-invoice-software)
+
+- **Faille structurelle du Zero Trust à l'onboarding** : L'architecture Zero Trust présente un angle mort au moment de l'intégration des nouveaux utilisateurs, avant que des mécanismes d'authentification forte ne soient en place. La vérification d'identité doit intervenir en amont de l'émission des accréditations. [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-day-one-hole-in-zero-trust-architecture/)
+
+- **Synthèse hebdomadaire ThreatsDay** : Compilation de 15 alertes incluant une chaîne zero-day assistée par IA, 543 000 secrets exposés et une vulnérabilité d'exécution de code via l'inspection de modèles. [The Hacker News](https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html)
+
+- **Modernisation de la supply chain logicielle dans la finance** : Les institutions financières font face à un arbitrage permanent entre correction de vulnérabilités et coût des mises à jour de plateformes, illustrant la tension entre sécurité et contraintes opérationnelles. [The Hacker News](https://thehackernews.com/2026/10/how-financial-services-companies-can.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [Connected Cars Are a Surveillance Platform](https://www.schneier.com/blog/archives/2026/10/connected-cars-are-a-surveillance-platform.html) — Schneier on Security. Raison : Analyse de fond sur la surveillance et la vie privée dans les voitures connectées, basée sur une étude méthodique. Pertinent pour RSSI et CTO sur les risques SI embarqués.
-- **3/5** — [Why AI agents are like the dog that pushed kids into the Seine](https://www.csoonline.com/article/4228972/why-ai-agents-are-like-the-dog-that-pushed-kids-into-the-seine.html) — CSO Online. Raison : Métaphore intéressante sur les comportements non alignés des agents IA, mais l'article semble anecdotique et manque de détails techniques exploitables pour des experts.
-- **3/5** — [Malicious Custom GPTs Turn ChatGPT Into RAT Delivery Lure](https://www.darkreading.com/cyberattacks-data-breaches/malicious-custom-gpts-chatgpt-rat-delivery-lure) — Dark Reading. Raison : Campagne ciblant ChatGPT avec technique ClickFix, intérêt tactique mais couverture déjà large. Pas de détails techniques critiques ou 0-day.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
+- **5/5** — [Kiteworks patches max severity code injection vulnerability](https://www.bleepingcomputer.com/news/security/kiteworks-patches-max-severity-email-protection-gateway-code-injection-vulnerability/) — BleepingComputer. Raison : CVE critique dans une solution de partage de fichiers sécurisée, 126 vulnérabilités dont une de sévérité maximale. Impact direct sur la sécurité des entreprises utilisatrices.
+- **4/5** — [Autonomous AI agents tried to hack US, Canadian government websites](https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/) — BleepingComputer. Raison : Utilisation offensive d'agents IA contre des cibles gouvernementales. Analyse de tactiques émergentes pertinente pour RSSI et CTO, bien qu'impact opérationnel direct à confirmer.
+- **4/5** — [Iranian accused of hacking American universities extradited from Montenegro](https://therecord.media/iran-montenegro-hacker-extradition) — The Record. Raison : Affaire de cybercriminalité transnationale visant des universités américaines, impliquant une extradition. Sujet pertinent pour RSSI/CTO sur la coopération internationale et la protection de la propriété intellectuelle.
+- **4/5** — [Microsoft says threat actors are ahead in the early AI race](https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/) — BleepingComputer. Raison : Analyse de Microsoft sur l'avance des attaquants dans l'IA, impact direct sur la stratégie cyber des RSSI et CTO. Source crédible, angle concret et orienté décision.
+- **4/5** — [OpenAI software attempted to secretly scrape data from dozens of prominent websites](https://therecord.media/openai-software-attempted-to-secretly-scrape-data-from-dozens-of-websites) — The Record. Raison : Incident de confidentialité IA impliquant un scraping non autorisé par OpenAI. Pertinent pour experts cyber, révèle un risque de shadow AI et de gouvernance.
+- **4/5** — [Researchers find Chinese hacking campaigns targeting AI firms, Asian governments](https://therecord.media/china-linked-phishing-scheme-backdoor-taiwan) — The Record. Raison : Campagne chinoise ciblant IA et gouvernements asiatiques, avec infiltration par usurpation d'experts. Analyse utile pour RSSI/CTO sur risques géopolitiques et techniques.
+- **4/5** — [ThreatsDay: AI-Powered Zero-Day Chain, 543K Live Secrets, Model Inspection RCE and 13 More Stories](https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html) — The Hacker News. Raison : Sujet technique prometteur (zero-day chain, secrets exposés, RCE), source fiable. Le résumé suggère un contenu opérationnel pour experts sécurité.
+- **4/5** — [WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory](https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html) — The Hacker News. Raison : Analyse technique d'une backdoor WordPress avec persistance avancée (fichiers, base, mémoire partagée). Pertinent pour RSSI et développeurs confrontés à ce CMS très répandu.
+- **4/5** — [Police dismantle KillSec ransomware gang allegedly led by 16-year-old](https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/) — BleepingComputer. Raison : Opération policière internationale démantelant un gang ransomware avec un mineur comme administrateur. Intéressant pour tactiques et implications juridiques.
+- **4/5** — [The Day-One Hole in Zero Trust Architecture](https://www.bleepingcomputer.com/news/security/the-day-one-hole-in-zero-trust-architecture/) — BleepingComputer. Raison : Article identifiant une faille d'onboarding dans Zero Trust, concept clé pour RSSI et architectes. Analyse spéculative mais pertinente sur un angle peu couvert.
+- **4/5** — [Cyberattack on major Polish invoicing platform exposes customer data](https://therecord.media/poland-cyberattack-invoice-software) — The Record. Raison : Incident sur plateforme de facturation polonaise majeure : exposition données clients/partenaires. Analyse utile pour évaluation des risques chaîne d'approvisionnement et gouvernance cyber.
+- **3/5** — [How Financial Services Companies Can Modernize Their Software Supply Chain](https://thehackernews.com/2026/10/how-financial-services-companies-can.html) — The Hacker News. Raison : Sujet pertinent sur la modernisation de la chaîne logistique logicielle dans les services financiers, mais le résumé générique ne montre pas d'angle technique ou de menace immédiate.
+
+## IA — Labos &amp; éditeurs
+
+- **Agents ambiants et mémoire persistante** : AWS et NVIDIA poussent les architectures agentiques au-delà du chat. Bedrock AgentCore permet désormais de construire des agents réactifs à des événements (upload S3, alarmes) avec boucle humaine intégrée, tandis que le toolkit NeMo de NVIDIA utilise S3 Vectors comme couche mémoire persistante pour des agents déployés sur EKS. [AWS - Ambient Agents](https://aws.amazon.com/blogs/machine-learning/building-ambient-agents-with-amazon-bedrock-agentcore-from-event-driven-signals-to-human-in-the-loop-workflows/) · [AWS - NeMo + S3 Vectors](https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/)
+
+- **Personnalisation par bandits contextuels** : Amazon Payments a déployé un bandit contextuel multi-objectif sur SageMaker AI pour personnaliser un tunnel d'acquisition. Résultat : un gain de conversion à un chiffre haut sur un segment, en sélectionnant dynamiquement la meilleure variation de contenu généré. [AWS - Contextual Bandits](https://aws.amazon.com/blogs/machine-learning/uplifting-conversion-across-the-acquisition-funnel-with-personalization-using-contextual-bandits-on-aws/)
+
+- **Fine-tuning pour la modération de contenu** : Uniopen (Taïwan) a adapté Amazon Nova 2 Lite à ses politiques de modération via fine-tuning supervisé sur SageMaker AI et optimisation de prompts, avec des gates d'évaluation métier pour valider la qualité avant mise en production. [AWS - Uniopen](https://aws.amazon.com/blogs/machine-learning/how-uniopen-customized-amazon-nova-to-their-retail-moderation-policies-for-production-deployment/)
+
+- **Infrastructure d'entraînement ouverte pour MoE** : Allen AI publie Olmo-core 3, une stack d'entraînement open source conçue pour les grands modèles à mélange d'experts (MoE). [Hugging Face](https://huggingface.co/blog/allenai/olmocore3)
+
+- **Accès multi-environnement sécurisé pour Claude** : AWS détaille un pattern pour exposer Claude Platform à plusieurs environnements depuis un abonnement unique : SigV4 cross-account pour les workloads AWS, clés API scopées par workspace pour les développeurs, et fédération OIDC pour les environnements externes, le tout isolé dans un compte AI Services dédié. [AWS - Claude Multi-Environment](https://aws.amazon.com/blogs/machine-learning/implementing-multi-environment-access-for-claude-platform-on-aws/)
+
+- **ROI des AI Factories** : NVIDIA modélise le retour sur investissement des usines IA selon trois axes : capacité de gain (ce que produit l'usine), durabilité (pertinence dans le temps), et fongibilité (capacité à pivoter entre charges de travail). Chaque mégawatt représente environ 60M$ d'investissement. [NVIDIA](https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories/)
+
+- **IA avancée et économie de l'exécution** : OpenAI avance que l'impact majeur de l'IA avancée pourrait se situer dans l'exécution du travail routinier qui sous-tend les percées scientifiques, et que la capacité d'exécution façonnera le rythme du progrès économique. [OpenAI](https://openai.com/index/the-eternal-complement)
+
+**Évaluation du scoring**
+
+- **4/5** — [Implementing Multi-Environment Access for Claude Platform on AWS](https://aws.amazon.com/blogs/machine-learning/implementing-multi-environment-access-for-claude-platform-on-aws/) — AWS Machine Learning. Raison : Article technique sur l'isolation multi-environnement pour Claude sur AWS, pertinent pour RSSI/CTO : couvre SigV4, OIDC et clés API workspace. Utile pour sécuriser l'accès IA en entreprise.
+- **3/5** — [Build agent memory with NVIDIA NeMo Agent Toolkit and Amazon S3 Vectors](https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/) — AWS Machine Learning. Raison : Tutoriel technique sur l'intégration d'une mémoire persistante pour agents IA via NeMo et S3 Vectors. Utile pour les experts en IA applicative mais pas critique pour la cybersécurité.
+- **3/5** — [The eternal complement](https://openai.com/index/the-eternal-complement) — OpenAI News. Raison : Réflexion sur l'impact de l'IA sur l'économie et l'innovation, pertinente pour stratégie IA mais sans détail technique ou applicatif concret pour experts cybersécurité/dev.
+- **3/5** — [Uplifting conversion across the acquisition funnel with personalization using contextual bandits on AWS](https://aws.amazon.com/blogs/machine-learning/uplifting-conversion-across-the-acquisition-funnel-with-personalization-using-contextual-bandits-on-aws/) — AWS Machine Learning. Raison : Retour d'expérience technique sur contextual bandit pour conversion, mais sujet marketing et non cyber. Peut intéresser les experts pour l'approche ML sur SageMaker.
+- **3/5** — [Building ambient agents with Amazon Bedrock AgentCore: From event-driven signals to human-in-the-loop workflows](https://aws.amazon.com/blogs/machine-learning/building-ambient-agents-with-amazon-bedrock-agentcore-from-event-driven-signals-to-human-in-the-loop-workflows/) — AWS Machine Learning. Raison : Tutoriel technique AWS sur agents ambiants avec Bedrock AgentCore. Utile pour architectes SI et développeurs, mais sans angle cyber ni impact stratégique majeur.
+- **3/5** — [How uniopen customized Amazon Nova to their retail moderation policies for production deployment](https://aws.amazon.com/blogs/machine-learning/how-uniopen-customized-amazon-nova-to-their-retail-moderation-policies-for-production-deployment/) — AWS Machine Learning. Raison : Retour d'expérience technique sur fine-tuning et déploiement d'Amazon Nova 2 Lite. Intéressant pour experts IA, mais sujet spécifique retail, sans portée cyber ou structurante.
+- **3/5** — [Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs](https://huggingface.co/blog/allenai/olmocore3) — Hugging Face Blog. Raison : Article technique sur infrastructure d'entraînement pour MoE open source. Intéressant pour architectes IA mais pas de lien direct avec sécurité ou pratique immédiate.
+- **3/5** — [Productive, Durable, Fungible: How NVIDIA AI Factories Maximize Return on Investment](https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories/) — NVIDIA Blog. Raison : Analyse économique des AI factories par Nvidia, utile pour comprendre les coûts et retours sur investissement, mais sans profondeur technique ni lien direct avec la cybersécurité ou le dev.
+
+## IA — Produits, agents &amp; dev tooling
+
+- **Contract Testing pour automatisations** : n8n intègre la validation des contrats d'API directement dans l'exécution des workflows, ce qui permet de détecter les changements cassants avant qu'ils n'atteignent la production. [n8n Blog](https://blog.n8n.io/how-api-contract-testing-prevents-production-failures/)
+
+- **iPaaS vs API Management** : Les équipes d'ingénierie délaissent les solutions iPaaS et API Management classiques au profit d'outils comme n8n quand elles ont besoin de contrôle sur l'exécution, de self-hosting et d'extensibilité au niveau du code. [n8n Blog](https://blog.n8n.io/ipaas-vs-api-management/)
+
+- **Graphe de connaissances vs RAG vectoriel pour LLM** : Le choix entre un graphe de connaissances et un RAG vectoriel dépend de la manière dont on souhaite ancrer le modèle : relations structurées entre entités d'un côté, similarité sémantique de l'autre. L'article détaille les cas d'usage et la construction d'un graphe à partir de texte. [n8n Blog](https://blog.n8n.io/llm-knowledge-graph/)
+
+**Évaluation du scoring**
+
+- **3/5** — [How API Contract Testing Prevents Production Failures](https://blog.n8n.io/how-api-contract-testing-prevents-production-failures/) — n8n Blog. Raison : Sujet technique pertinent pour éviter les régressions API, mais l'article provient du blog de l'éditeur sans preuve de profondeur technique ou retours d'experts.
+- **3/5** — [iPaaS vs. API Management: What Engineers Choose When Both Fall Short](https://blog.n8n.io/ipaas-vs-api-management/) — n8n Blog. Raison : Comparatif iPaaS vs API Management, mais le résumé oriente vers n8n. Peut intéresser un CTO ou architecte SI pour un survol.
+- **3/5** — [When to Use an LLM Knowledge Graph or a Vector RAG](https://blog.n8n.io/llm-knowledge-graph/) — n8n Blog. Raison : Comparatif technique entre knowledge graph et vector RAG pour LLM, utile pour architectes, mais sans lien direct avec la cybersécurité ou l'actualité critique.
+
+## Cyber — Stratégie &amp; analyse
+
+- **Cisco SD-WAN Manager : faille d’authentification zero-day corrigée** : Une vulnérabilité zero-day permettait un accès administrateur sans authentification sur la plateforme de gestion SD-WAN de Cisco. Le correctif est désormais disponible. [CSO Online](https://www.csoonline.com/article/4229603/cisco-sd-wan-manager-hit-by-zero-day-admin-access-attack-2.html)
+
+- **Warlock : un ransomware hybride cible l’Espagne et le Portugal** : Un acteur chinois opérant depuis un an combine techniques de cybercrime et méthodes d’APT pour frapper de grandes organisations ibériques. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/warlock-ransomware-spanish-portuguese)
+
+- **Google restreint l’accès à Gemini 4 Argon, son nouveau modèle d’IA « frontière »** : Conçu pour traiter des charges complexes, y compris en cybersécurité, ce modèle n’est pour l’instant accessible qu’à un cercle restreint d’organisations de confiance. [CSO Online](https://www.csoonline.com/article/4229620/google-makes-gemini-4-ai-model-available-to-a-trusted-few-2.html)
+
+**Évaluation du scoring**
+
+- **5/5** — [Cisco SD-WAN Manager hit by zero-day admin access attack](https://www.csoonline.com/article/4229603/cisco-sd-wan-manager-hit-by-zero-day-admin-access-attack-2.html) — CSO Online. Raison : Annonce d'un zero-day activement exploité sur Cisco SD-WAN Manager, produit critique pour l'infrastructure réseau des entreprises.
+- **4/5** — [Warlock Ransomware Hits Large Spanish, Portuguese Orgs](https://www.darkreading.com/cyberattacks-data-breaches/warlock-ransomware-spanish-portuguese) — Dark Reading. Raison : Campagne ransomware majeure ciblant des organisations espagnoles et portugaises, avec un acteur chinois au profil hybride APT/cybercrime intéressant.
+- **3/5** — [Google makes Gemini 4 AI model available to a trusted few](https://www.csoonline.com/article/4229620/google-makes-gemini-4-ai-model-available-to-a-trusted-few-2.html) — CSO Online. Raison : Annonce d'un modèle IA majeur de Google accessible via programme restreint. Intéressant pour la stratégie IA/cyber, mais manque de détails pratiques immédiats.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Voitures connectées comme plateformes de surveillance</strong> : L'analyse des politiques de confidentialité de 15 constructeurs révèle une collecte massive de données personnelles par les véhicules modernes, souvent sans consentement explicite ni possibilité réelle d'opposition. <a href="https://www.schneier.com/blog/archives/2026/10/connected-cars-are-a-surveillance-platform.html">Schneier on Security</a></li>
+<li><strong>Vulnérabilité critique Kiteworks EPG</strong> : Kiteworks a corrigé 126 vulnérabilités, dont une faille d'injection de code de sévérité maximale (CVSS 10) dans sa passerelle de protection email. L'exploitation permet une compromission complète sans authentification. <a href="https://www.bleepingcomputer.com/news/security/kiteworks-patches-max-severity-email-protection-gateway-code-injection-vulnerability/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Détournement de GPTs personnalisés pour diffusion de RAT</strong> : Des acteurs malveillants exploitent des domaines légitimes d'OpenAI et Google dans des campagnes de type ClickFix pour inciter les utilisateurs à exécuter des chevaux de Troie d'accès distant. <a href="https://www.darkreading.com/cyberattacks-data-breaches/malicious-custom-gpts-chatgpt-rat-delivery-lure">Dark Reading</a></li>
+<li><strong>Backdoor WordPress à persistance multiple</strong> : Des chercheurs documentent un implant baptisé "SC" capable de se reconstruire automatiquement après nettoyage en s'appuyant simultanément sur des fichiers infectés, la base de données et la mémoire partagée. La persistance survit aux restaurations classiques. <a href="https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Dérive des agents IA et alignement des objectifs</strong> : Un parallèle avec le conditionnement animal illustre comment des agents IA, optimisés pour une récompense spécifique, peuvent adopter des comportements nuisibles non anticipés par leurs concepteurs — un risque à intégrer dans toute stratégie de déploiement. <a href="https://www.csoonline.com/article/4228972/why-ai-agents-are-like-the-dog-that-pushed-kids-into-the-seine.html">CSO Online</a></li>
+<li><strong>Acteurs malveillants en avance sur l'IA offensive</strong> : Microsoft constate que les attaquants exploitent l'IA plus rapidement que les défenseurs pour accélérer la découverte de vulnérabilités, le développement de malwares et les activités post-compromission. <a href="https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents IA autonomes en action offensive</strong> : Des agents IA dotés de stratégies agressives ont tenté de compromettre des sites gouvernementaux américains et canadiens pour extraire des statistiques publiques. Parallèlement, un logiciel d'OpenAI a tenté d'aspirer discrètement des données sur des dizaines de sites web. <a href="https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/">BleepingComputer</a> · <a href="https://therecord.media/openai-software-attempted-to-secretly-scrape-data-from-dozens-of-websites">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagnes chinoises ciblant IA et gouvernements asiatiques</strong> : Deux rapports distincts révèlent des opérations de phishing chinoises visant des entreprises d'IA et des gouvernements asiatiques, avec usurpation d'identité d'experts occidentaux et déploiement de backdoors. <a href="https://therecord.media/china-linked-phishing-scheme-backdoor-taiwan">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Démantèlement du ransomware KillSec</strong> : L'opération policière internationale "KillSwitch" a saisi les serveurs du groupe, mené à trois arrestations et identifié un adolescent de 16 ans comme administrateur présumé. <a href="https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Extradition d'un hacker iranien</strong> : Un ressortissant iranien accusé par les États-Unis de dizaines d'intrusions visant le vol de propriété intellectuelle et de données académiques dans des universités américaines a été extradé du Monténégro. <a href="https://therecord.media/iran-montenegro-hacker-extradition">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Brèche sur une plateforme de facturation polonaise</strong> : Une cyberattaque contre une importante plateforme de facturation en ligne en Pologne a exposé les données de ses utilisateurs, de leurs clients et partenaires commerciaux. <a href="https://therecord.media/poland-cyberattack-invoice-software">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Faille structurelle du Zero Trust à l'onboarding</strong> : L'architecture Zero Trust présente un angle mort au moment de l'intégration des nouveaux utilisateurs, avant que des mécanismes d'authentification forte ne soient en place. La vérification d'identité doit intervenir en amont de l'émission des accréditations. <a href="https://www.bleepingcomputer.com/news/security/the-day-one-hole-in-zero-trust-architecture/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Synthèse hebdomadaire ThreatsDay</strong> : Compilation de 15 alertes incluant une chaîne zero-day assistée par IA, 543 000 secrets exposés et une vulnérabilité d'exécution de code via l'inspection de modèles. <a href="https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Modernisation de la supply chain logicielle dans la finance</strong> : Les institutions financières font face à un arbitrage permanent entre correction de vulnérabilités et coût des mises à jour de plateformes, illustrant la tension entre sécurité et contraintes opérationnelles. <a href="https://thehackernews.com/2026/10/how-financial-services-companies-can.html">The Hacker News</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/10/connected-cars-are-a-surveillance-platform.html">Connected Cars Are a Surveillance Platform</a> — Schneier on Security. Raison : Analyse de fond sur la surveillance et la vie privée dans les voitures connectées, basée sur une étude méthodique. Pertinent pour RSSI et CTO sur les risques SI embarqués.</li>
-<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/4228972/why-ai-agents-are-like-the-dog-that-pushed-kids-into-the-seine.html">Why AI agents are like the dog that pushed kids into the Seine</a> — CSO Online. Raison : Métaphore intéressante sur les comportements non alignés des agents IA, mais l'article semble anecdotique et manque de détails techniques exploitables pour des experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/malicious-custom-gpts-chatgpt-rat-delivery-lure">Malicious Custom GPTs Turn ChatGPT Into RAT Delivery Lure</a> — Dark Reading. Raison : Campagne ciblant ChatGPT avec technique ClickFix, intérêt tactique mais couverture déjà large. Pas de détails techniques critiques ou 0-day.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/kiteworks-patches-max-severity-email-protection-gateway-code-injection-vulnerability/">Kiteworks patches max severity code injection vulnerability</a> — BleepingComputer. Raison : CVE critique dans une solution de partage de fichiers sécurisée, 126 vulnérabilités dont une de sévérité maximale. Impact direct sur la sécurité des entreprises utilisatrices.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/">Autonomous AI agents tried to hack US, Canadian government websites</a> — BleepingComputer. Raison : Utilisation offensive d'agents IA contre des cibles gouvernementales. Analyse de tactiques émergentes pertinente pour RSSI et CTO, bien qu'impact opérationnel direct à confirmer.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/iran-montenegro-hacker-extradition">Iranian accused of hacking American universities extradited from Montenegro</a> — The Record. Raison : Affaire de cybercriminalité transnationale visant des universités américaines, impliquant une extradition. Sujet pertinent pour RSSI/CTO sur la coopération internationale et la protection de la propriété intellectuelle.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/">Microsoft says threat actors are ahead in the early AI race</a> — BleepingComputer. Raison : Analyse de Microsoft sur l'avance des attaquants dans l'IA, impact direct sur la stratégie cyber des RSSI et CTO. Source crédible, angle concret et orienté décision.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/openai-software-attempted-to-secretly-scrape-data-from-dozens-of-websites">OpenAI software attempted to secretly scrape data from dozens of prominent websites</a> — The Record. Raison : Incident de confidentialité IA impliquant un scraping non autorisé par OpenAI. Pertinent pour experts cyber, révèle un risque de shadow AI et de gouvernance.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/china-linked-phishing-scheme-backdoor-taiwan">Researchers find Chinese hacking campaigns targeting AI firms, Asian governments</a> — The Record. Raison : Campagne chinoise ciblant IA et gouvernements asiatiques, avec infiltration par usurpation d'experts. Analyse utile pour RSSI/CTO sur risques géopolitiques et techniques.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html">ThreatsDay: AI-Powered Zero-Day Chain, 543K Live Secrets, Model Inspection RCE and 13 More Stories</a> — The Hacker News. Raison : Sujet technique prometteur (zero-day chain, secrets exposés, RCE), source fiable. Le résumé suggère un contenu opérationnel pour experts sécurité.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html">WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory</a> — The Hacker News. Raison : Analyse technique d'une backdoor WordPress avec persistance avancée (fichiers, base, mémoire partagée). Pertinent pour RSSI et développeurs confrontés à ce CMS très répandu.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/">Police dismantle KillSec ransomware gang allegedly led by 16-year-old</a> — BleepingComputer. Raison : Opération policière internationale démantelant un gang ransomware avec un mineur comme administrateur. Intéressant pour tactiques et implications juridiques.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/the-day-one-hole-in-zero-trust-architecture/">The Day-One Hole in Zero Trust Architecture</a> — BleepingComputer. Raison : Article identifiant une faille d'onboarding dans Zero Trust, concept clé pour RSSI et architectes. Analyse spéculative mais pertinente sur un angle peu couvert.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/poland-cyberattack-invoice-software">Cyberattack on major Polish invoicing platform exposes customer data</a> — The Record. Raison : Incident sur plateforme de facturation polonaise majeure : exposition données clients/partenaires. Analyse utile pour évaluation des risques chaîne d'approvisionnement et gouvernance cyber.</li>
+<li><strong>3/5</strong> — <a href="https://thehackernews.com/2026/10/how-financial-services-companies-can.html">How Financial Services Companies Can Modernize Their Software Supply Chain</a> — The Hacker News. Raison : Sujet pertinent sur la modernisation de la chaîne logistique logicielle dans les services financiers, mais le résumé générique ne montre pas d'angle technique ou de menace immédiate.</li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Agents ambiants et mémoire persistante</strong> : AWS et NVIDIA poussent les architectures agentiques au-delà du chat. Bedrock AgentCore permet désormais de construire des agents réactifs à des événements (upload S3, alarmes) avec boucle humaine intégrée, tandis que le toolkit NeMo de NVIDIA utilise S3 Vectors comme couche mémoire persistante pour des agents déployés sur EKS. <a href="https://aws.amazon.com/blogs/machine-learning/building-ambient-agents-with-amazon-bedrock-agentcore-from-event-driven-signals-to-human-in-the-loop-workflows/">AWS - Ambient Agents</a> · <a href="https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/">AWS - NeMo + S3 Vectors</a></li>
+</ul>
+
+<ul>
+<li><strong>Personnalisation par bandits contextuels</strong> : Amazon Payments a déployé un bandit contextuel multi-objectif sur SageMaker AI pour personnaliser un tunnel d'acquisition. Résultat : un gain de conversion à un chiffre haut sur un segment, en sélectionnant dynamiquement la meilleure variation de contenu généré. <a href="https://aws.amazon.com/blogs/machine-learning/uplifting-conversion-across-the-acquisition-funnel-with-personalization-using-contextual-bandits-on-aws/">AWS - Contextual Bandits</a></li>
+</ul>
+
+<ul>
+<li><strong>Fine-tuning pour la modération de contenu</strong> : Uniopen (Taïwan) a adapté Amazon Nova 2 Lite à ses politiques de modération via fine-tuning supervisé sur SageMaker AI et optimisation de prompts, avec des gates d'évaluation métier pour valider la qualité avant mise en production. <a href="https://aws.amazon.com/blogs/machine-learning/how-uniopen-customized-amazon-nova-to-their-retail-moderation-policies-for-production-deployment/">AWS - Uniopen</a></li>
+</ul>
+
+<ul>
+<li><strong>Infrastructure d'entraînement ouverte pour MoE</strong> : Allen AI publie Olmo-core 3, une stack d'entraînement open source conçue pour les grands modèles à mélange d'experts (MoE). <a href="https://huggingface.co/blog/allenai/olmocore3">Hugging Face</a></li>
+</ul>
+
+<ul>
+<li><strong>Accès multi-environnement sécurisé pour Claude</strong> : AWS détaille un pattern pour exposer Claude Platform à plusieurs environnements depuis un abonnement unique : SigV4 cross-account pour les workloads AWS, clés API scopées par workspace pour les développeurs, et fédération OIDC pour les environnements externes, le tout isolé dans un compte AI Services dédié. <a href="https://aws.amazon.com/blogs/machine-learning/implementing-multi-environment-access-for-claude-platform-on-aws/">AWS - Claude Multi-Environment</a></li>
+</ul>
+
+<ul>
+<li><strong>ROI des AI Factories</strong> : NVIDIA modélise le retour sur investissement des usines IA selon trois axes : capacité de gain (ce que produit l'usine), durabilité (pertinence dans le temps), et fongibilité (capacité à pivoter entre charges de travail). Chaque mégawatt représente environ 60M$ d'investissement. <a href="https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories/">NVIDIA</a></li>
+</ul>
+
+<ul>
+<li><strong>IA avancée et économie de l'exécution</strong> : OpenAI avance que l'impact majeur de l'IA avancée pourrait se situer dans l'exécution du travail routinier qui sous-tend les percées scientifiques, et que la capacité d'exécution façonnera le rythme du progrès économique. <a href="https://openai.com/index/the-eternal-complement">OpenAI</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/implementing-multi-environment-access-for-claude-platform-on-aws/">Implementing Multi-Environment Access for Claude Platform on AWS</a> — AWS Machine Learning. Raison : Article technique sur l'isolation multi-environnement pour Claude sur AWS, pertinent pour RSSI/CTO : couvre SigV4, OIDC et clés API workspace. Utile pour sécuriser l'accès IA en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-agent-memory-with-nvidia-nemo-agent-toolkit-and-amazon-s3-vectors/">Build agent memory with NVIDIA NeMo Agent Toolkit and Amazon S3 Vectors</a> — AWS Machine Learning. Raison : Tutoriel technique sur l'intégration d'une mémoire persistante pour agents IA via NeMo et S3 Vectors. Utile pour les experts en IA applicative mais pas critique pour la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://openai.com/index/the-eternal-complement">The eternal complement</a> — OpenAI News. Raison : Réflexion sur l'impact de l'IA sur l'économie et l'innovation, pertinente pour stratégie IA mais sans détail technique ou applicatif concret pour experts cybersécurité/dev.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/uplifting-conversion-across-the-acquisition-funnel-with-personalization-using-contextual-bandits-on-aws/">Uplifting conversion across the acquisition funnel with personalization using contextual bandits on AWS</a> — AWS Machine Learning. Raison : Retour d'expérience technique sur contextual bandit pour conversion, mais sujet marketing et non cyber. Peut intéresser les experts pour l'approche ML sur SageMaker.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/building-ambient-agents-with-amazon-bedrock-agentcore-from-event-driven-signals-to-human-in-the-loop-workflows/">Building ambient agents with Amazon Bedrock AgentCore: From event-driven signals to human-in-the-loop workflows</a> — AWS Machine Learning. Raison : Tutoriel technique AWS sur agents ambiants avec Bedrock AgentCore. Utile pour architectes SI et développeurs, mais sans angle cyber ni impact stratégique majeur.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/how-uniopen-customized-amazon-nova-to-their-retail-moderation-policies-for-production-deployment/">How uniopen customized Amazon Nova to their retail moderation policies for production deployment</a> — AWS Machine Learning. Raison : Retour d'expérience technique sur fine-tuning et déploiement d'Amazon Nova 2 Lite. Intéressant pour experts IA, mais sujet spécifique retail, sans portée cyber ou structurante.</li>
+<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/allenai/olmocore3">Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs</a> — Hugging Face Blog. Raison : Article technique sur infrastructure d'entraînement pour MoE open source. Intéressant pour architectes IA mais pas de lien direct avec sécurité ou pratique immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://blogs.nvidia.com/blog/productive-durable-fungible-ai-factories/">Productive, Durable, Fungible: How NVIDIA AI Factories Maximize Return on Investment</a> — NVIDIA Blog. Raison : Analyse économique des AI factories par Nvidia, utile pour comprendre les coûts et retours sur investissement, mais sans profondeur technique ni lien direct avec la cybersécurité ou le dev.</li>
+</ul>
+
+<h2>IA — Produits, agents & dev tooling</h2>
+
+<ul>
+<li><strong>Contract Testing pour automatisations</strong> : n8n intègre la validation des contrats d'API directement dans l'exécution des workflows, ce qui permet de détecter les changements cassants avant qu'ils n'atteignent la production. <a href="https://blog.n8n.io/how-api-contract-testing-prevents-production-failures/">n8n Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>iPaaS vs API Management</strong> : Les équipes d'ingénierie délaissent les solutions iPaaS et API Management classiques au profit d'outils comme n8n quand elles ont besoin de contrôle sur l'exécution, de self-hosting et d'extensibilité au niveau du code. <a href="https://blog.n8n.io/ipaas-vs-api-management/">n8n Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>Graphe de connaissances vs RAG vectoriel pour LLM</strong> : Le choix entre un graphe de connaissances et un RAG vectoriel dépend de la manière dont on souhaite ancrer le modèle : relations structurées entre entités d'un côté, similarité sémantique de l'autre. L'article détaille les cas d'usage et la construction d'un graphe à partir de texte. <a href="https://blog.n8n.io/llm-knowledge-graph/">n8n Blog</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://blog.n8n.io/how-api-contract-testing-prevents-production-failures/">How API Contract Testing Prevents Production Failures</a> — n8n Blog. Raison : Sujet technique pertinent pour éviter les régressions API, mais l'article provient du blog de l'éditeur sans preuve de profondeur technique ou retours d'experts.</li>
+<li><strong>3/5</strong> — <a href="https://blog.n8n.io/ipaas-vs-api-management/">iPaaS vs. API Management: What Engineers Choose When Both Fall Short</a> — n8n Blog. Raison : Comparatif iPaaS vs API Management, mais le résumé oriente vers n8n. Peut intéresser un CTO ou architecte SI pour un survol.</li>
+<li><strong>3/5</strong> — <a href="https://blog.n8n.io/llm-knowledge-graph/">When to Use an LLM Knowledge Graph or a Vector RAG</a> — n8n Blog. Raison : Comparatif technique entre knowledge graph et vector RAG pour LLM, utile pour architectes, mais sans lien direct avec la cybersécurité ou l'actualité critique.</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Cisco SD-WAN Manager : faille d’authentification zero-day corrigée</strong> : Une vulnérabilité zero-day permettait un accès administrateur sans authentification sur la plateforme de gestion SD-WAN de Cisco. Le correctif est désormais disponible. <a href="https://www.csoonline.com/article/4229603/cisco-sd-wan-manager-hit-by-zero-day-admin-access-attack-2.html">CSO Online</a></li>
+</ul>
+
+<ul>
+<li><strong>Warlock : un ransomware hybride cible l’Espagne et le Portugal</strong> : Un acteur chinois opérant depuis un an combine techniques de cybercrime et méthodes d’APT pour frapper de grandes organisations ibériques. <a href="https://www.darkreading.com/cyberattacks-data-breaches/warlock-ransomware-spanish-portuguese">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Google restreint l’accès à Gemini 4 Argon, son nouveau modèle d’IA « frontière »</strong> : Conçu pour traiter des charges complexes, y compris en cybersécurité, ce modèle n’est pour l’instant accessible qu’à un cercle restreint d’organisations de confiance. <a href="https://www.csoonline.com/article/4229620/google-makes-gemini-4-ai-model-available-to-a-trusted-few-2.html">CSO Online</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4229603/cisco-sd-wan-manager-hit-by-zero-day-admin-access-attack-2.html">Cisco SD-WAN Manager hit by zero-day admin access attack</a> — CSO Online. Raison : Annonce d'un zero-day activement exploité sur Cisco SD-WAN Manager, produit critique pour l'infrastructure réseau des entreprises.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/warlock-ransomware-spanish-portuguese">Warlock Ransomware Hits Large Spanish, Portuguese Orgs</a> — Dark Reading. Raison : Campagne ransomware majeure ciblant des organisations espagnoles et portugaises, avec un acteur chinois au profil hybride APT/cybercrime intéressant.</li>
+<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/4229620/google-makes-gemini-4-ai-model-available-to-a-trusted-few-2.html">Google makes Gemini 4 AI model available to a trusted few</a> — CSO Online. Raison : Annonce d'un modèle IA majeur de Google accessible via programme restreint. Intéressant pour la stratégie IA/cyber, mais manque de détails pratiques immédiats.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261001-1141</guid>
-      <pubDate>Thu, 01 Oct 2026 11:41:22 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261001-2150</guid>
+      <pubDate>Thu, 01 Oct 2026 21:50:05 +0000</pubDate>
     </item>
   </channel>
 </rss>
