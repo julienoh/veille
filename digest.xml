@@ -8,292 +8,154 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 02 Oct 2026 16:40:35 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 21:17:14 +0000</lastBuildDate>
     <item>
-      <title>Digest — 02/10 16h</title>
+      <title>Digest — 02/10 21h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Stratégie &amp; analyse
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Gouvernance de l'IA : entre dérégulation et responsabilisation** : L'administration Trump poursuit une approche de régulation minimale de l'IA, tandis que les entreprises doivent anticiper 2027 comme point de bascule vers une exigence accrue de responsabilité sur la sécurité et la valeur des systèmes déployés. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-geants-de-la-tech-et-trump-signent-un-accord-sur-la-securite-de-l-ia-100826.html) · [Dark Reading](https://www.darkreading.com/cybersecurity-operations/is-your-organization-ready-for-2027-s-ai-accountability-era-)
+- **Dell Container Storage Modules – Vulnérabilités critiques** : Plusieurs failles critiques dans Dell CSM, dont une non-authentification (CVE-2026-63688, CVSS 10.0), permettent une prise de contrôle complète des systèmes, incluant un accès administrateur sans authentification et un accès root aux nœuds Kubernetes. [The Hacker News](https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html)
 
-- **Anthropomorphisme et responsabilité en cas d'incident IA** : Qualifier un LLM de « rogue AI » déplace indûment la responsabilité de l'éditeur vers un agent logiciel non déterministe. Les défenseurs doivent traiter ces systèmes comme des composants non fiables, et non comme des entités malveillantes. [Dark Reading](https://www.darkreading.com/insider-threats/blame-rogue-ai-security-failures)
+- **GitLab AI Gateway – Exécution de commandes** : Une faille critique (CVSS 9.9) dans la passerelle AI Gateway auto-hébergée de GitLab permet à un utilisateur authentifié disposant d'un accès Duo Agent Platform d'exécuter des commandes sur le serveur. [The Hacker News](https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html)
 
-- **Gestion des vulnérabilités : le vrai problème est organisationnel** : Les backlogs de correctifs ne relèvent pas d'un manque d'outils de détection, mais d'une absence de propriété claire des actifs et de capacité à appliquer les corrections. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/vulnerability-backlogs-ownership-problem)
+- **Ransomware Warlock – Exploitation de SharePoint** : Le groupe ransomware lié à la Chine "Warlock" cible des opérateurs d'infrastructures critiques (eau, télécoms) ainsi que des universités et gouvernements régionaux en exploitant des vulnérabilités SharePoint pour l'accès initial. [BleepingComputer](https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/)
 
-- **Menace sur les middleware bancaires et gouvernementaux** : Une vulnérabilité dans un middleware SWIFT permet l'exécution de code à distance, exposant des environnements sensibles à un contournement de la MFA matérielle. Le correctif est prioritaire. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/swift-banking-govt-middleware-rce)
+- **Campagne d'espionnage Antino – Détournement de services cloud légitimes** : Un acteur lié à la Chine utilise le backdoor "Antino" contre des organisations gouvernementales en Asie, en s'appuyant sur Outlook et OneDrive pour le command-and-control afin de se fondre dans le trafic légitime. [The Hacker News](https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html)
 
-- **Implants Linux imitant des solutions de sécurité légitimes** : Trois portes dérobées se font passer pour des produits de sécurité de messagerie asiatiques, rendant leur détection difficile sur les équipements de bordure. [Dark Reading](https://www.darkreading.com/threat-intelligence/malicious-linux-implants-mimic-asian-mail-security)
+- **Frontline Education – Exposition de données RH** : Une brèche chez Frontline Education, exploitant une vulnérabilité dans un logiciel tiers, a conduit au vol de données personnelles d'employés de districts scolaires, incluant des numéros de sécurité sociale. [BleepingComputer](https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/)
 
-- **Caméras de surveillance non identifiées dans l'espace public** : La découverte en Floride de caméras ALPR de marque Flock sans propriétaire connu ni autorisation administrative rappelle les risques liés aux dispositifs de surveillance non maîtrisés sur le territoire. [Schneier on Security](https://www.schneier.com/blog/archives/2026/10/unidentified-flock-cameras-in-florida.html)
+- **Pegasus – Irrecevabilité aux États-Unis** : La plainte de journalistes salvadoriens ciblés par le logiciel espion Pegasus a été rejetée par un tribunal californien pour défaut de compétence juridictionnelle, compliquant les poursuites transnationales contre NSO Group. [The Record](https://therecord.media/judge-dismisses-spyware-case-brought-by-salvadoran-journalists)
 
-**Évaluation du scoring**
-
-- **5/5** — [SWIFT Banking &amp;amp; Government Middleware Enables RCE](https://www.darkreading.com/cybersecurity-operations/swift-banking-govt-middleware-rce) — Dark Reading. Raison : Vulnérabilité critique dans un middleware SWIFT utilisé dans des environnements sensibles bancaires et gouvernementaux, permettant une RCE. Impact direct sur les technologies critiques des lecteurs.
-- **4/5** — [Is Your Organization Ready for 2027's AI Accountability Era?](https://www.darkreading.com/cybersecurity-operations/is-your-organization-ready-for-2027-s-ai-accountability-era-) — Dark Reading. Raison : Article prospectif sur gouvernance IA avec des analystes reconnus (Omdia, Gartner). Pertinent pour RSSI/CTO préparant l'échéance 2027, mais sans détail technique immédiat.
-- **4/5** — [Vulnerability Backlogs Are an Ownership Problem](https://www.darkreading.com/cybersecurity-operations/vulnerability-backlogs-ownership-problem) — Dark Reading. Raison : Aborde un problème de gouvernance des vulnérabilités (responsabilité et capacité à corriger) crucial pour RSSI/CTO. Analyse de fond sur l'organisation, utile mais pas une actualité critique immédiate.
-- **4/5** — [Malicious Linux Implants Mimic Asian Mail Security Products](https://www.darkreading.com/threat-intelligence/malicious-linux-implants-mimic-asian-mail-security) — Dark Reading. Raison : Nouvelles backdoors Linux imitant des produits de sécurité asiatiques, technique d'évasion avancée. Pertinent pour RSSI et architectes SI exposés à ces solutions.
-- **3/5** — [Les géants de la tech et Trump signent un accord sur la sécurité de l'IA](https://www.lemondeinformatique.fr/actualites/lire-les-geants-de-la-tech-et-trump-signent-un-accord-sur-la-securite-de-l-ia-100826.html) — Le Monde Informatique — Sécurité. Raison : Annonce d'un accord politique sur la sécurité IA entre géants tech et administration US. Utile pour contexte réglementaire macro, mais sans détail technique ni impact concret immédiat.
-- **3/5** — [Is It Fair to Blame 'Rogue' AI for Security Failures?](https://www.darkreading.com/insider-threats/blame-rogue-ai-security-failures) — Dark Reading. Raison : Analyse pertinente sur la responsabilité des éditeurs face aux risques des LLM, mais sans détail technique ou cas concret immédiat.
-- **3/5** — [Unidentified Flock Cameras in Florida](https://www.schneier.com/blog/archives/2026/10/unidentified-flock-cameras-in-florida.html) — Schneier on Security. Raison : Anomalie intéressante de caméras non identifiées, mais l'analyse reste spéculative et sans impact technique immédiat pour un public expert.
-
-## Actualité tech FR
-
-- **Fuite de données chez LDLC (4e incident)** : LDLC notifie ses clients d’un nouvel accès non autorisé à un de ses SI, marquant le quatrième incident de ce type pour l’enseigne. [Next.ink](https://next.ink/brief-article/fuite-de-donnees-et-de-quatre-pour-ldlc/)
-
-- **Fuite massive de données Minecraft** : Des pirates annoncent sur un forum dark web avoir exfiltré les données de 18 millions de joueurs, possiblement via des malwares d’origine russe. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/plus-de-18-millions-de-joueurs-concernes-le-jeu-minecraft-aurait-ete-victime-d-une-importante-fuite-de-donnees_AV-202610020715.html)
-
-- **Google et le stress hydrique de ses datacenters** : Next.ink a recalculé les chiffres de Google sur ses prélèvements d’eau avec le standard WRI, remettant en cause l’affirmation selon laquelle 72 % proviendraient de zones peu stressées. [Next.ink](https://next.ink/259609/datacenters-google-affirme-prelever-72-de-son-eau-en-zone-peu-stressee-vraiment/)
-
-- **Régulation de l’IA : accord entre la Maison Blanche et les géants tech** : L’administration Trump a signé un accord avec les grandes entreprises technologiques pour une régulation limitée de la sécurité de l’IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-les-geants-de-la-tech-et-trump-signent-un-accord-sur-la-securite-de-l-ia-100826.html)
-
-- **Agents IA : Oracle lance Fusion Claw, OpenAI dévoile Dots** : Oracle muscle son offre d’IA agentique avec Fusion Claw pour les tâches complexes, tandis qu’OpenAI lance Dots, un assistant qui assemble des capacités existantes sous une nouvelle persona sans rupture technique majeure. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-oracle-lance-fusion-claw-un-agent-dedie-aux-taches-complexes-100827.html) · [Actu IA](https://www.actuia.com/actualite/dots-un-bon-coup-produit-pas-une-rupture-technique/)
-
-- **Saturation des plateformes par l’IA générative** : arXiv limite les soumissions à 2 par mois pour endiguer le flot d’articles générés par IA, tandis que la justice britannique publie le volume de ses résumés automatisés mais reste muette sur leur taux d’erreur. [Next.ink](https://next.ink/259620/arxiv-limite-les-soumissions-a-2-par-mois-pour-faire-face-a-la-submersion-due-a-la-genai/) · [Actu IA](https://www.actuia.com/actualite/la-justice-britannique-publie-le-nombre-de-ses-resumes-dia-pas-leur-taux-derreur/)
+- **Législation ALPR – Pression bipartisane aux États-Unis** : Deux propositions de loi, portées par des élus républicains et démocrates, visent à restreindre l'usage des lecteurs automatiques de plaques d'immatriculation, signalant une volonté politique de réguler cette technologie de surveillance. [The Record](https://therecord.media/alpr-legislation-hawley-sanders-merkley-aoc)
 
 **Évaluation du scoring**
 
-- **4/5** — [Plus de 18 millions de joueurs concernés: le jeu "Minecraft" aurait été victime d'une importante fuite de données](https://www.bfmtv.com/tech/cybersecurite/plus-de-18-millions-de-joueurs-concernes-le-jeu-minecraft-aurait-ete-victime-d-une-importante-fuite-de-donnees_AV-202610020715.html) — BFM Tech. Raison : Incident touchant 18M de comptes, source dark web, possible malware russe. Pertinent pour RSSI/CTO, mais manque de détails techniques sur l'exploitation.
-- **4/5** — [Datacenters : Google affirme prélever 72 % de son eau en zone peu stressée… vraiment ?](https://next.ink/259609/datacenters-google-affirme-prelever-72-de-son-eau-en-zone-peu-stressee-vraiment/) — Next.ink. Raison : Analyse critique des chiffres de Google sur l'usage de l'eau dans ses datacenters. Pertinente pour RSSI/CTO/Architecte car impacte la stratégie RSE et les choix de localisation des infrastructures.
-- **4/5** — [☕️ Fuite de données : et de quatre pour LDLC](https://next.ink/brief-article/fuite-de-donnees-et-de-quatre-pour-ldlc/) — Next.ink. Raison : Incident cyber récurrent chez un e-commerçant français majeur. Analyse utile pour comprendre les failles et la gestion de crise, intérêt pour RSSI et CTO.
-- **3/5** — [Oracle lance Fusion Claw : un agent dédié aux tâches complexes](https://www.lemondeinformatique.fr/actualites/lire-oracle-lance-fusion-claw-un-agent-dedie-aux-taches-complexes-100827.html) — Le Monde Informatique — IA. Raison : Annonce d'un agent IA Oracle, sujet IA en entreprise. Peu de détails techniques, utile pour surveiller la stratégie Oracle mais probablement pas critique.
-- **3/5** — [Les géants de la tech et Trump signent un accord sur la sécurité de l'IA](https://www.lemondeinformatique.fr/actualites/lire-les-geants-de-la-tech-et-trump-signent-un-accord-sur-la-securite-de-l-ia-100826.html) — Le Monde Informatique — IA. Raison : Annonce d'un accord entre géants tech et administration Trump sur sécurité IA. Sujet pertinent mais résumé trop vague pour évaluer l'impact concret.
-- **3/5** — [arXiv limite les soumissions à 2 par mois pour faire face à la submersion due à la genAI](https://next.ink/259620/arxiv-limite-les-soumissions-a-2-par-mois-pour-faire-face-a-la-submersion-due-a-la-genai/) — Next.ink. Raison : Information sur la régulation des soumissions arXiv face à l'afflux d'articles IA. Pertinent pour comprendre l'impact sur la recherche, mais sans implication technique directe pour les experts.
-- **3/5** — [La justice britannique publie le nombre de ses résumés d'IA, pas leur taux d'erreur](https://www.actuia.com/actualite/la-justice-britannique-publie-le-nombre-de-ses-resumes-dia-pas-leur-taux-derreur/) — Actu IA. Raison : Sujet intéressant sur la transparence des résumés IA dans la justice, mais manque de détails techniques ou d'impact direct pour le public cible.
-- **3/5** — [Dots : un bon coup produit, pas une rupture technique](https://www.actuia.com/actualite/dots-un-bon-coup-produit-pas-une-rupture-technique/) — Actu IA. Raison : Analyse de l'évolution produit d'OpenAI vers un assistant agentisé. Intéressant pour la stratégie IA mais sans rupture technique ni impact cyber direct.
+- **5/5** — [Frontline Education breach exposes school district employee data](https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/) — BleepingComputer. Raison : Incident cyber majeur chez un fournisseur de données scolaires avec vol de numéros de Sécurité sociale, impact direct sur la chaîne d'approvisionnement.
+- **5/5** — [Warlock ransomware breach SharePoint in water, telecom operator attacks](https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/) — BleepingComputer. Raison : Campagne ransomware ciblant un secteur critique (eau, télécoms) via exploitation SharePoint. Incident majeur avec impact direct sur des infrastructures essentielles.
+- **5/5** — [GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers](https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html) — The Hacker News. Raison : CVE critique sur un produit largement utilisé en entreprise (GitLab AI Gateway), avec exécution de commande possible, patch d'urgence disponible.
+- **5/5** — [Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes](https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html) — The Hacker News. Raison : CVE avec score CVSS 10.0, permettant accès admin non authentifié et prise de contrôle root sur nœuds Kubernetes. Critique pour les RSSI et architectes SI utilisant Dell CSM.
+- **4/5** — [Judge dismisses spyware case brought by Salvadoran journalists targeted with Pegasus](https://therecord.media/judge-dismisses-spyware-case-brought-by-salvadoran-journalists) — The Record. Raison : Décision de justice concernant l'usage de Pegasus par un État, sujet de gouvernance et de souveraineté numérique pertinent pour un RSSI/CTO.
+- **4/5** — [Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign](https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html) — The Hacker News. Raison : Campagne ciblant des gouvernements asiatiques avec un backdoor inédit (Antino) utilisant Outlook et OneDrive pour C2. Analyse technique pertinente pour RSSI et architectes.
+- **3/5** — [Bipartisan backlash to ALPRs grows as two high-profile bills are introduced](https://therecord.media/alpr-legislation-hawley-sanders-merkley-aoc) — The Record. Raison : Législation US sur les lecteurs de plaques, sujet réglementaire transposable en Europe. Intéressant pour veille, mais pas d'impact immédiat sur les pratiques cyber des experts français.
 
-## Cyber — Menaces &amp; vulnérabilités
+## Cyber — Stratégie &amp; analyse
 
-- **GitLab : exécution de code à distance via AI Gateway** : GitLab appelle à patcher immédiatement une vulnérabilité critique dans son service AI Gateway permettant l'exécution de commandes arbitraires sur les instances exposées. [BleepingComputer](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/)
+- **Gestion de crise zero-day : deux approches opposées** : L'incident Kiteworks illustre une réponse radicale (mise hors ligne de la plateforme pendant 9h), tandis que Citrix a choisi le silence avant la publication d'un correctif. Deux postures qui soulignent l'absence de standard en matière de communication de crise sur les vulnérabilités actives. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/kiteworks-citrix-incidents-challenges-zero-day-response)
 
-- **Dell CSM : deux failles critiques donnant les privilèges admin** : Dell a corrigé deux vulnérabilités de sévérité maximale dans ses Container Storage Modules, utilisés pour connecter le stockage d'entreprise aux environnements Kubernetes. L'exploitation permet d'obtenir des privilèges administrateur. [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/)
-
-- **Ransomware Warlock cible des infrastructures critiques via SharePoint** : Le groupe Warlock exploite plusieurs vulnérabilités Microsoft SharePoint pour compromettre des infrastructures critiques dans des pays lusophones et hispanophones, selon Symantec. [The Record](https://therecord.media/warlock-ransomware-used-in-critical-infrastructure-attacks)
-
-- **Ransomware : la ville de Vicksburg (Mississippi) contrainte d'arrêter ses systèmes** : Les services municipaux ont été temporairement interrompus suite à un incident ransomware. Le FBI et d'autres autorités enquêtent. [The Record](https://therecord.media/vicksburg-mississippi-government-ransomware-attack)
-
-- **Sanctions US contre le gang Tren de Aragua pour des attaques d'ATM jackpotting** : Le Trésor américain a sanctionné huit membres du gang vénézuélien pour leur rôle dans le vol de millions de dollars via des attaques de jackpotting de distributeurs automatiques. [BleepingComputer](https://www.bleepingcomputer.com/news/security/us-sanctions-tren-de-aragua-members-in-atm-jackpotting-crackdown/)
-
-- **Angle mort EDR : trois techniques d'attaque via le navigateur** : Les attaques basées navigateur (vol de session, extensions abusives, manipulation utilisateur) échappent à la télémétrie endpoint classique car elles ne génèrent pas les artefacts attendus par l'EDR. NordLayer détaille trois méthodes d'évasion et préconise des contrôles au niveau du navigateur. [BleepingComputer](https://www.bleepingcomputer.com/news/security/the-edr-blind-spot-3-ways-browser-attacks-evade-endpoint-telemetry/)
-
-- **Reporting RSSI : difficulté à répondre aux questions du board** : Les RSSI peinent à consolider les données issues d'outils disparates (IAM, CSPM, scanners, SIEM, EDR) pour produire des réponses claires aux trois questions critiques du conseil d'administration. [The Hacker News](https://thehackernews.com/2026/10/why-cisos-struggle-to-answer-boards.html)
-
-- **OpenAI : licenciement de trois chercheurs de l'équipe sécurité** : OpenAI s'est séparée de trois membres de son équipe de sécurité pour avoir divulgué des informations sensibles en violation des politiques internes. [The Hacker News](https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html)
+- **Red teaming post-brèche** : RemoteThreat parie sur des simulations qui démarrent après la compromission initiale des défenses, pour tester la capacité de détection et de réaction sur les phases tardives d'une attaque. L'approche cible spécifiquement les angles morts des scénarios classiques centrés sur la prévention. [Dark Reading](https://www.darkreading.com/cybersecurity-operations/remotethreat-bets-security-teams-need-to-test-what-happens-after-defenses-fail)
 
 **Évaluation du scoring**
 
-- **5/5** — [GitLab warns of critical RCE vulnerability in AI Gateway service](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/) — BleepingComputer. Raison : CVE critique AI Gateway avec RCE exploitable, patch urgent, impact direct sur les instances GitLab en entreprise.
-- **5/5** — ['Warlock' ransomware used in attacks on critical infrastructure in Portuguese, Spanish-speaking countries](https://therecord.media/warlock-ransomware-used-in-critical-infrastructure-attacks) — The Record. Raison : Campagne ransomware ciblant des infrastructures critiques via exploitation de vulnérabilités SharePoint. Impact direct sur secteurs critiques, nécessite lecture immédiate.
-- **5/5** — [Dell asks admins to patch max severity CSM flaws as soon as possible](https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/) — BleepingComputer. Raison : CVE critiques de sévérité maximale dans un produit Dell CSM utilisé en entreprise, nécessitant un patch urgent. Impact direct sur les infrastructures Kubernetes.
-- **4/5** — [US sanctions Tren de Aragua gang members in ATM hacks crackdown](https://www.bleepingcomputer.com/news/security/us-sanctions-tren-de-aragua-members-in-atm-jackpotting-crackdown/) — BleepingComputer. Raison : Sanctions US contre un gang lié à des attaques ATM jackpotting. Impact réglementaire et opérationnel pour la sécurité des systèmes financiers.
-- **4/5** — [Mississippi mayor says ransomware incident led city to shut down systems](https://therecord.media/vicksburg-mississippi-government-ransomware-attack) — The Record. Raison : Incident ransomware municipal confirmé, avec implication du FBI. Pertinent pour RSSI/CTO comme cas concret de gouvernance et continuité d'activité.
-- **4/5** — [The EDR blind spot: 3 ways browser attacks evade endpoint telemetry](https://www.bleepingcomputer.com/news/security/the-edr-blind-spot-3-ways-browser-attacks-evade-endpoint-telemetry/) — BleepingComputer. Raison : Analyse des techniques d'évasion browser face à l'EDR, sujet pertinent pour RSSI et CTO. L'angle est pratique mais l'impact précis pour l'entreprise reste à vérifier.
-- **4/5** — [Why CISOs Struggle to Answer the Board's Three Hardest Questions, and How to Fix the Report](https://thehackernews.com/2026/10/why-cisos-struggle-to-answer-boards.html) — The Hacker News. Raison : Article traitant de la communication CTO/RSSI avec le board sur la mesure de sécurité, sujet pertinent pour la gouvernance et la stratégie cyber.
-- **3/5** — [OpenAI Parts Ways With Three Safety Researchers Over Sensitive Information Mishandling](https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html) — The Hacker News. Raison : Annonce de gestion d'équipe chez OpenAI, intéressante pour la gouvernance interne mais sans impact technique direct pour les experts ciblés.
-
-## IA — Labos &amp; éditeurs
-
-- **GPT-6 : guide de production pour startups** : OpenAI publie un guide pratique couvrant le choix de modèles, le réglage de l'effort de raisonnement, l'ingénierie de prompts, la coordination d'outils et la préparation des workflows pour la mise en production. [OpenAI News](https://openai.com/index/practical-guide-building-gpt-6)
-
-- **Conformité par IA avec réponses défendables** : AWS présente le pattern *Adjudicated Query*, qui couple un agent conversationnel à un moteur de règles déterministe via un serveur MCP borné, pour produire des réponses de conformité prouvablement complètes et défendables. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/)
-
-- **Recherche web sécurisée pour Claude Desktop** : AWS montre comment connecter Claude Desktop à une recherche web via Bedrock AgentCore Gateway, avec authentification JWT entrante par IAM Identity Center et Cognito, contournant ainsi la limite de connaissance du modèle. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/)
-
-- **Fine-tuning d'agents de recherche par RL multi-tours** : AWS détaille le fine-tuning d'un petit modèle agent de recherche avec apprentissage par renforcement multi-tours sur SageMaker AI, visant la fiabilité d'un modèle frontière à latence et coût réduits. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/)
-
-- **AstaBrief : génération rapide de rapports en open source** : Allen AI open-source AstaBrief, le modèle de génération rapide de rapports issu de leur système Asta. [Hugging Face Blog](https://huggingface.co/blog/allenai/astabrief)
-
-- **Apprentissage fédéré avec confidentialité prouvable** : Google Research explore des approches pour un apprentissage privé prouvable à partir de données fédérées sur systèmes mobiles. [Google Research](https://research.google/blog/toward-provably-private-learning-from-federated-data/)
-
-**Évaluation du scoring**
-
-- **3/5** — [A model guide for the GPT-6 family](https://openai.com/index/practical-guide-building-gpt-6) — OpenAI News. Raison : Guide pratique pour startups sur le choix et l'optimisation des modèles GPT-6. Utile pour experts en IA, mais sans angle cyber ou technique avancé.
-- **3/5** — [Sweep thousands of leases for compliance using Amazon Quick and the Adjudicated Query pattern](https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/) — AWS Machine Learning. Raison : Article technique AWS combinant agent IA et règles pour conformité. Utile pour automatisation, mais cas d'usage locatif peu critique pour cybersécurité.
-- **3/5** — [Add secure Web Search to Claude Desktop with Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Tutoriel technique pour intégrer une recherche web sécurisée à Claude Desktop via AWS Bedrock. Utile pour les experts AWS mais pas structurant.
-- **3/5** — [Fine-tune a search agent with multi-turn RL on Amazon SageMaker AI](https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/) — AWS Machine Learning. Raison : Article technique sur le fine-tuning d'un agent de recherche avec RL multi-tours sur SageMaker. Intéressant pour l'optimisation de coût/latence, mais pas critique pour la cybersécurité.
-- **3/5** — [Open-sourcing AstaBrief, the fast report-generation model in Asta](https://huggingface.co/blog/allenai/astabrief) — Hugging Face Blog. Raison : Annonce open-source d'un modèle de génération de rapports. Intéressant pour dev/archi mais pas critique immédiat pour cybersécurité ou stratégie d'entreprise.
-- **3/5** — [Toward provably private learning from federated data](https://research.google/blog/toward-provably-private-learning-from-federated-data/) — Google Research. Raison : Article de recherche Google sur l'apprentissage privé à partir de données fédérées. Intéressant pour la sécurité des données mais sans détail sur l'impact pratique immédiat.
+- **5/5** — [Kiteworks &amp;amp; Citrix Incidents Show Challenges of Zero-Day Response](https://www.darkreading.com/cybersecurity-operations/kiteworks-citrix-incidents-challenges-zero-day-response) — Dark Reading. Raison : Incidents zero-day sur des solutions de protection de données, avec impact direct sur la sécurité des entreprises. Nécessité de comprendre la réponse et les leçons pour les RSSI/CTO.
+- **3/5** — [RemoteThreat Bets Security Teams Need to Test What Happens After Defenses Fail](https://www.darkreading.com/cybersecurity-operations/remotethreat-bets-security-teams-need-to-test-what-happens-after-defenses-fail) — Dark Reading. Raison : Présentation d'une startup innovant dans le red teaming post-échec des défenses. Intéressant pour RSSI et CTO mais sans détail technique vérifiable dans le résumé.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **IA autonome en entreprise** : Le marché de l'IA d'entreprise bascule d'une phase expérimentale à un déploiement opérationnel massif, avec des investissements mondiaux prévus à 2 500 milliards de dollars en 2026 (+44 % sur un an). La baisse continue des coûts de calcul et l'accélération des capacités des modèles creusent l'écart entre ce qui est techniquement possible et la capacité d'absorption des organisations. [MIT Technology Review](https://www.technologyreview.com/2026/10/02/1143774/redefining-enterprise-intelligence-with-autonomous-ai/)
+- **Agents IA et permissions macOS** : Apple restreint les contrôles "Full Disk Access" sur macOS, jugeant que les agents IA de plus en plus autonomes rendent l'accès global aux fichiers, messages et historiques trop risqué. [TechCrunch](https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/)
+
+- **OpenAI lance sa plateforme agentique** : OpenAI dévoile "Dots", une plateforme d'agents positionnée sur le segment professionnel, capable d'automatiser des tâches métier tout en intégrant des actions du quotidien comme commander un repas. [The Verge](https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent)
 
 **Évaluation du scoring**
 
-- **3/5** — [Redefining enterprise intelligence with autonomous AI](https://www.technologyreview.com/2026/10/02/1143774/redefining-enterprise-intelligence-with-autonomous-ai/) — MIT Technology Review — AI. Raison : Article générique sur l'adoption de l'IA en entreprise, sans détail technique ni applicatif concret pour un public expert.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
+- **5/5** — [Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents](https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/) — TechCrunch — AI. Raison : Impact direct sur la sécurité des systèmes macOS en entreprise. Nouveaux risques des agents IA justifient une reconfiguration des contrôles d'accès. Décision stratégique d'Apple avec implications opérationnelles pour RSSI et architectes.
+- **3/5** — [OpenAI’s Dot agent is enterprise software that can also order your dinner](https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent) — The Verge — AI. Raison : Annonce d'un agent IA grand public par OpenAI, sans détails techniques ni impact cybersécurité évident pour un public expert.
+
+## Actualité tech FR
+
+- **Tensions sur le marché des mémoires jusqu'en 2028** : Les fabricants Micron et Samsung prévoient une prolongation des pénuries et une hausse des prix sur la mémoire vive et le stockage pour au moins deux ans, avec des stocks déjà largement écoulés jusqu'en 2027. [BFM Tech](https://www.bfmtv.com/tech/ordinateur/une-grande-partie-du-stock-est-deja-vendu-pour-2027-une-explosion-des-prix-l-an-prochain-et-des-penuries-jusqu-en-2028-au-moins-la-crise-de-la-memoire-est-la-pour-durer_AV-202610020778.html)
+
+**Évaluation du scoring**
+
+- **3/5** — ["Une grande partie du stock est déjà vendue pour 2027": une explosion des prix l’an prochain et des pénuries jusqu'en 2028 au moins, la crise de la mémoire est là pour durer](https://www.bfmtv.com/tech/ordinateur/une-grande-partie-du-stock-est-deja-vendu-pour-2027-une-explosion-des-prix-l-an-prochain-et-des-penuries-jusqu-en-2028-au-moins-la-crise-de-la-memoire-est-la-pour-durer_AV-202610020778.html) — BFM Tech. Raison : Information sur pénurie mémoire impactant les coûts matériels, utile mais sans détail technique ni lien direct avec cyber ou IA.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Gouvernance de l'IA : entre dérégulation et responsabilisation</strong> : L'administration Trump poursuit une approche de régulation minimale de l'IA, tandis que les entreprises doivent anticiper 2027 comme point de bascule vers une exigence accrue de responsabilité sur la sécurité et la valeur des systèmes déployés. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-geants-de-la-tech-et-trump-signent-un-accord-sur-la-securite-de-l-ia-100826.html">Le Monde Informatique</a> · <a href="https://www.darkreading.com/cybersecurity-operations/is-your-organization-ready-for-2027-s-ai-accountability-era-">Dark Reading</a></li>
+<li><strong>Dell Container Storage Modules – Vulnérabilités critiques</strong> : Plusieurs failles critiques dans Dell CSM, dont une non-authentification (CVE-2026-63688, CVSS 10.0), permettent une prise de contrôle complète des systèmes, incluant un accès administrateur sans authentification et un accès root aux nœuds Kubernetes. <a href="https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Anthropomorphisme et responsabilité en cas d'incident IA</strong> : Qualifier un LLM de « rogue AI » déplace indûment la responsabilité de l'éditeur vers un agent logiciel non déterministe. Les défenseurs doivent traiter ces systèmes comme des composants non fiables, et non comme des entités malveillantes. <a href="https://www.darkreading.com/insider-threats/blame-rogue-ai-security-failures">Dark Reading</a></li>
+<li><strong>GitLab AI Gateway – Exécution de commandes</strong> : Une faille critique (CVSS 9.9) dans la passerelle AI Gateway auto-hébergée de GitLab permet à un utilisateur authentifié disposant d'un accès Duo Agent Platform d'exécuter des commandes sur le serveur. <a href="https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Gestion des vulnérabilités : le vrai problème est organisationnel</strong> : Les backlogs de correctifs ne relèvent pas d'un manque d'outils de détection, mais d'une absence de propriété claire des actifs et de capacité à appliquer les corrections. <a href="https://www.darkreading.com/cybersecurity-operations/vulnerability-backlogs-ownership-problem">Dark Reading</a></li>
+<li><strong>Ransomware Warlock – Exploitation de SharePoint</strong> : Le groupe ransomware lié à la Chine "Warlock" cible des opérateurs d'infrastructures critiques (eau, télécoms) ainsi que des universités et gouvernements régionaux en exploitant des vulnérabilités SharePoint pour l'accès initial. <a href="https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Menace sur les middleware bancaires et gouvernementaux</strong> : Une vulnérabilité dans un middleware SWIFT permet l'exécution de code à distance, exposant des environnements sensibles à un contournement de la MFA matérielle. Le correctif est prioritaire. <a href="https://www.darkreading.com/cybersecurity-operations/swift-banking-govt-middleware-rce">Dark Reading</a></li>
+<li><strong>Campagne d'espionnage Antino – Détournement de services cloud légitimes</strong> : Un acteur lié à la Chine utilise le backdoor "Antino" contre des organisations gouvernementales en Asie, en s'appuyant sur Outlook et OneDrive pour le command-and-control afin de se fondre dans le trafic légitime. <a href="https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Implants Linux imitant des solutions de sécurité légitimes</strong> : Trois portes dérobées se font passer pour des produits de sécurité de messagerie asiatiques, rendant leur détection difficile sur les équipements de bordure. <a href="https://www.darkreading.com/threat-intelligence/malicious-linux-implants-mimic-asian-mail-security">Dark Reading</a></li>
+<li><strong>Frontline Education – Exposition de données RH</strong> : Une brèche chez Frontline Education, exploitant une vulnérabilité dans un logiciel tiers, a conduit au vol de données personnelles d'employés de districts scolaires, incluant des numéros de sécurité sociale. <a href="https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Caméras de surveillance non identifiées dans l'espace public</strong> : La découverte en Floride de caméras ALPR de marque Flock sans propriétaire connu ni autorisation administrative rappelle les risques liés aux dispositifs de surveillance non maîtrisés sur le territoire. <a href="https://www.schneier.com/blog/archives/2026/10/unidentified-flock-cameras-in-florida.html">Schneier on Security</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.darkreading.com/cybersecurity-operations/swift-banking-govt-middleware-rce">SWIFT Banking &amp; Government Middleware Enables RCE</a> — Dark Reading. Raison : Vulnérabilité critique dans un middleware SWIFT utilisé dans des environnements sensibles bancaires et gouvernementaux, permettant une RCE. Impact direct sur les technologies critiques des lecteurs.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cybersecurity-operations/is-your-organization-ready-for-2027-s-ai-accountability-era-">Is Your Organization Ready for 2027's AI Accountability Era?</a> — Dark Reading. Raison : Article prospectif sur gouvernance IA avec des analystes reconnus (Omdia, Gartner). Pertinent pour RSSI/CTO préparant l'échéance 2027, mais sans détail technique immédiat.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cybersecurity-operations/vulnerability-backlogs-ownership-problem">Vulnerability Backlogs Are an Ownership Problem</a> — Dark Reading. Raison : Aborde un problème de gouvernance des vulnérabilités (responsabilité et capacité à corriger) crucial pour RSSI/CTO. Analyse de fond sur l'organisation, utile mais pas une actualité critique immédiate.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/threat-intelligence/malicious-linux-implants-mimic-asian-mail-security">Malicious Linux Implants Mimic Asian Mail Security Products</a> — Dark Reading. Raison : Nouvelles backdoors Linux imitant des produits de sécurité asiatiques, technique d'évasion avancée. Pertinent pour RSSI et architectes SI exposés à ces solutions.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-les-geants-de-la-tech-et-trump-signent-un-accord-sur-la-securite-de-l-ia-100826.html">Les géants de la tech et Trump signent un accord sur la sécurité de l'IA</a> — Le Monde Informatique — Sécurité. Raison : Annonce d'un accord politique sur la sécurité IA entre géants tech et administration US. Utile pour contexte réglementaire macro, mais sans détail technique ni impact concret immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://www.darkreading.com/insider-threats/blame-rogue-ai-security-failures">Is It Fair to Blame 'Rogue' AI for Security Failures?</a> — Dark Reading. Raison : Analyse pertinente sur la responsabilité des éditeurs face aux risques des LLM, mais sans détail technique ou cas concret immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/10/unidentified-flock-cameras-in-florida.html">Unidentified Flock Cameras in Florida</a> — Schneier on Security. Raison : Anomalie intéressante de caméras non identifiées, mais l'analyse reste spéculative et sans impact technique immédiat pour un public expert.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Fuite de données chez LDLC (4e incident)</strong> : LDLC notifie ses clients d’un nouvel accès non autorisé à un de ses SI, marquant le quatrième incident de ce type pour l’enseigne. <a href="https://next.ink/brief-article/fuite-de-donnees-et-de-quatre-pour-ldlc/">Next.ink</a></li>
+<li><strong>Pegasus – Irrecevabilité aux États-Unis</strong> : La plainte de journalistes salvadoriens ciblés par le logiciel espion Pegasus a été rejetée par un tribunal californien pour défaut de compétence juridictionnelle, compliquant les poursuites transnationales contre NSO Group. <a href="https://therecord.media/judge-dismisses-spyware-case-brought-by-salvadoran-journalists">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Fuite massive de données Minecraft</strong> : Des pirates annoncent sur un forum dark web avoir exfiltré les données de 18 millions de joueurs, possiblement via des malwares d’origine russe. <a href="https://www.bfmtv.com/tech/cybersecurite/plus-de-18-millions-de-joueurs-concernes-le-jeu-minecraft-aurait-ete-victime-d-une-importante-fuite-de-donnees_AV-202610020715.html">BFM Tech</a></li>
-</ul>
-
-<ul>
-<li><strong>Google et le stress hydrique de ses datacenters</strong> : Next.ink a recalculé les chiffres de Google sur ses prélèvements d’eau avec le standard WRI, remettant en cause l’affirmation selon laquelle 72 % proviendraient de zones peu stressées. <a href="https://next.ink/259609/datacenters-google-affirme-prelever-72-de-son-eau-en-zone-peu-stressee-vraiment/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Régulation de l’IA : accord entre la Maison Blanche et les géants tech</strong> : L’administration Trump a signé un accord avec les grandes entreprises technologiques pour une régulation limitée de la sécurité de l’IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-les-geants-de-la-tech-et-trump-signent-un-accord-sur-la-securite-de-l-ia-100826.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents IA : Oracle lance Fusion Claw, OpenAI dévoile Dots</strong> : Oracle muscle son offre d’IA agentique avec Fusion Claw pour les tâches complexes, tandis qu’OpenAI lance Dots, un assistant qui assemble des capacités existantes sous une nouvelle persona sans rupture technique majeure. <a href="https://www.lemondeinformatique.fr/actualites/lire-oracle-lance-fusion-claw-un-agent-dedie-aux-taches-complexes-100827.html">Le Monde Informatique</a> · <a href="https://www.actuia.com/actualite/dots-un-bon-coup-produit-pas-une-rupture-technique/">Actu IA</a></li>
-</ul>
-
-<ul>
-<li><strong>Saturation des plateformes par l’IA générative</strong> : arXiv limite les soumissions à 2 par mois pour endiguer le flot d’articles générés par IA, tandis que la justice britannique publie le volume de ses résumés automatisés mais reste muette sur leur taux d’erreur. <a href="https://next.ink/259620/arxiv-limite-les-soumissions-a-2-par-mois-pour-faire-face-a-la-submersion-due-a-la-genai/">Next.ink</a> · <a href="https://www.actuia.com/actualite/la-justice-britannique-publie-le-nombre-de-ses-resumes-dia-pas-leur-taux-derreur/">Actu IA</a></li>
+<li><strong>Législation ALPR – Pression bipartisane aux États-Unis</strong> : Deux propositions de loi, portées par des élus républicains et démocrates, visent à restreindre l'usage des lecteurs automatiques de plaques d'immatriculation, signalant une volonté politique de réguler cette technologie de surveillance. <a href="https://therecord.media/alpr-legislation-hawley-sanders-merkley-aoc">The Record</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/plus-de-18-millions-de-joueurs-concernes-le-jeu-minecraft-aurait-ete-victime-d-une-importante-fuite-de-donnees_AV-202610020715.html">Plus de 18 millions de joueurs concernés: le jeu "Minecraft" aurait été victime d'une importante fuite de données</a> — BFM Tech. Raison : Incident touchant 18M de comptes, source dark web, possible malware russe. Pertinent pour RSSI/CTO, mais manque de détails techniques sur l'exploitation.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/259609/datacenters-google-affirme-prelever-72-de-son-eau-en-zone-peu-stressee-vraiment/">Datacenters : Google affirme prélever 72 % de son eau en zone peu stressée… vraiment ?</a> — Next.ink. Raison : Analyse critique des chiffres de Google sur l'usage de l'eau dans ses datacenters. Pertinente pour RSSI/CTO/Architecte car impacte la stratégie RSE et les choix de localisation des infrastructures.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/brief-article/fuite-de-donnees-et-de-quatre-pour-ldlc/">☕️ Fuite de données : et de quatre pour LDLC</a> — Next.ink. Raison : Incident cyber récurrent chez un e-commerçant français majeur. Analyse utile pour comprendre les failles et la gestion de crise, intérêt pour RSSI et CTO.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-oracle-lance-fusion-claw-un-agent-dedie-aux-taches-complexes-100827.html">Oracle lance Fusion Claw : un agent dédié aux tâches complexes</a> — Le Monde Informatique — IA. Raison : Annonce d'un agent IA Oracle, sujet IA en entreprise. Peu de détails techniques, utile pour surveiller la stratégie Oracle mais probablement pas critique.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-les-geants-de-la-tech-et-trump-signent-un-accord-sur-la-securite-de-l-ia-100826.html">Les géants de la tech et Trump signent un accord sur la sécurité de l'IA</a> — Le Monde Informatique — IA. Raison : Annonce d'un accord entre géants tech et administration Trump sur sécurité IA. Sujet pertinent mais résumé trop vague pour évaluer l'impact concret.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/259620/arxiv-limite-les-soumissions-a-2-par-mois-pour-faire-face-a-la-submersion-due-a-la-genai/">arXiv limite les soumissions à 2 par mois pour faire face à la submersion due à la genAI</a> — Next.ink. Raison : Information sur la régulation des soumissions arXiv face à l'afflux d'articles IA. Pertinent pour comprendre l'impact sur la recherche, mais sans implication technique directe pour les experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.actuia.com/actualite/la-justice-britannique-publie-le-nombre-de-ses-resumes-dia-pas-leur-taux-derreur/">La justice britannique publie le nombre de ses résumés d'IA, pas leur taux d'erreur</a> — Actu IA. Raison : Sujet intéressant sur la transparence des résumés IA dans la justice, mais manque de détails techniques ou d'impact direct pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://www.actuia.com/actualite/dots-un-bon-coup-produit-pas-une-rupture-technique/">Dots : un bon coup produit, pas une rupture technique</a> — Actu IA. Raison : Analyse de l'évolution produit d'OpenAI vers un assistant agentisé. Intéressant pour la stratégie IA mais sans rupture technique ni impact cyber direct.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/">Frontline Education breach exposes school district employee data</a> — BleepingComputer. Raison : Incident cyber majeur chez un fournisseur de données scolaires avec vol de numéros de Sécurité sociale, impact direct sur la chaîne d'approvisionnement.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/">Warlock ransomware breach SharePoint in water, telecom operator attacks</a> — BleepingComputer. Raison : Campagne ransomware ciblant un secteur critique (eau, télécoms) via exploitation SharePoint. Incident majeur avec impact direct sur des infrastructures essentielles.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html">GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers</a> — The Hacker News. Raison : CVE critique sur un produit largement utilisé en entreprise (GitLab AI Gateway), avec exécution de commande possible, patch d'urgence disponible.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html">Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes</a> — The Hacker News. Raison : CVE avec score CVSS 10.0, permettant accès admin non authentifié et prise de contrôle root sur nœuds Kubernetes. Critique pour les RSSI et architectes SI utilisant Dell CSM.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/judge-dismisses-spyware-case-brought-by-salvadoran-journalists">Judge dismisses spyware case brought by Salvadoran journalists targeted with Pegasus</a> — The Record. Raison : Décision de justice concernant l'usage de Pegasus par un État, sujet de gouvernance et de souveraineté numérique pertinent pour un RSSI/CTO.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html">Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign</a> — The Hacker News. Raison : Campagne ciblant des gouvernements asiatiques avec un backdoor inédit (Antino) utilisant Outlook et OneDrive pour C2. Analyse technique pertinente pour RSSI et architectes.</li>
+<li><strong>3/5</strong> — <a href="https://therecord.media/alpr-legislation-hawley-sanders-merkley-aoc">Bipartisan backlash to ALPRs grows as two high-profile bills are introduced</a> — The Record. Raison : Législation US sur les lecteurs de plaques, sujet réglementaire transposable en Europe. Intéressant pour veille, mais pas d'impact immédiat sur les pratiques cyber des experts français.</li>
 </ul>
 
-<h2>Cyber — Menaces & vulnérabilités</h2>
+<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>GitLab : exécution de code à distance via AI Gateway</strong> : GitLab appelle à patcher immédiatement une vulnérabilité critique dans son service AI Gateway permettant l'exécution de commandes arbitraires sur les instances exposées. <a href="https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Dell CSM : deux failles critiques donnant les privilèges admin</strong> : Dell a corrigé deux vulnérabilités de sévérité maximale dans ses Container Storage Modules, utilisés pour connecter le stockage d'entreprise aux environnements Kubernetes. L'exploitation permet d'obtenir des privilèges administrateur. <a href="https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/">BleepingComputer</a></li>
+<li><strong>Gestion de crise zero-day : deux approches opposées</strong> : L'incident Kiteworks illustre une réponse radicale (mise hors ligne de la plateforme pendant 9h), tandis que Citrix a choisi le silence avant la publication d'un correctif. Deux postures qui soulignent l'absence de standard en matière de communication de crise sur les vulnérabilités actives. <a href="https://www.darkreading.com/cybersecurity-operations/kiteworks-citrix-incidents-challenges-zero-day-response">Dark Reading</a></li>
 </ul>
 
 <ul>
-<li><strong>Ransomware Warlock cible des infrastructures critiques via SharePoint</strong> : Le groupe Warlock exploite plusieurs vulnérabilités Microsoft SharePoint pour compromettre des infrastructures critiques dans des pays lusophones et hispanophones, selon Symantec. <a href="https://therecord.media/warlock-ransomware-used-in-critical-infrastructure-attacks">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Ransomware : la ville de Vicksburg (Mississippi) contrainte d'arrêter ses systèmes</strong> : Les services municipaux ont été temporairement interrompus suite à un incident ransomware. Le FBI et d'autres autorités enquêtent. <a href="https://therecord.media/vicksburg-mississippi-government-ransomware-attack">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Sanctions US contre le gang Tren de Aragua pour des attaques d'ATM jackpotting</strong> : Le Trésor américain a sanctionné huit membres du gang vénézuélien pour leur rôle dans le vol de millions de dollars via des attaques de jackpotting de distributeurs automatiques. <a href="https://www.bleepingcomputer.com/news/security/us-sanctions-tren-de-aragua-members-in-atm-jackpotting-crackdown/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Angle mort EDR : trois techniques d'attaque via le navigateur</strong> : Les attaques basées navigateur (vol de session, extensions abusives, manipulation utilisateur) échappent à la télémétrie endpoint classique car elles ne génèrent pas les artefacts attendus par l'EDR. NordLayer détaille trois méthodes d'évasion et préconise des contrôles au niveau du navigateur. <a href="https://www.bleepingcomputer.com/news/security/the-edr-blind-spot-3-ways-browser-attacks-evade-endpoint-telemetry/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Reporting RSSI : difficulté à répondre aux questions du board</strong> : Les RSSI peinent à consolider les données issues d'outils disparates (IAM, CSPM, scanners, SIEM, EDR) pour produire des réponses claires aux trois questions critiques du conseil d'administration. <a href="https://thehackernews.com/2026/10/why-cisos-struggle-to-answer-boards.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>OpenAI : licenciement de trois chercheurs de l'équipe sécurité</strong> : OpenAI s'est séparée de trois membres de son équipe de sécurité pour avoir divulgué des informations sensibles en violation des politiques internes. <a href="https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html">The Hacker News</a></li>
+<li><strong>Red teaming post-brèche</strong> : RemoteThreat parie sur des simulations qui démarrent après la compromission initiale des défenses, pour tester la capacité de détection et de réaction sur les phases tardives d'une attaque. L'approche cible spécifiquement les angles morts des scénarios classiques centrés sur la prévention. <a href="https://www.darkreading.com/cybersecurity-operations/remotethreat-bets-security-teams-need-to-test-what-happens-after-defenses-fail">Dark Reading</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/">GitLab warns of critical RCE vulnerability in AI Gateway service</a> — BleepingComputer. Raison : CVE critique AI Gateway avec RCE exploitable, patch urgent, impact direct sur les instances GitLab en entreprise.</li>
-<li><strong>5/5</strong> — <a href="https://therecord.media/warlock-ransomware-used-in-critical-infrastructure-attacks">'Warlock' ransomware used in attacks on critical infrastructure in Portuguese, Spanish-speaking countries</a> — The Record. Raison : Campagne ransomware ciblant des infrastructures critiques via exploitation de vulnérabilités SharePoint. Impact direct sur secteurs critiques, nécessite lecture immédiate.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/">Dell asks admins to patch max severity CSM flaws as soon as possible</a> — BleepingComputer. Raison : CVE critiques de sévérité maximale dans un produit Dell CSM utilisé en entreprise, nécessitant un patch urgent. Impact direct sur les infrastructures Kubernetes.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/us-sanctions-tren-de-aragua-members-in-atm-jackpotting-crackdown/">US sanctions Tren de Aragua gang members in ATM hacks crackdown</a> — BleepingComputer. Raison : Sanctions US contre un gang lié à des attaques ATM jackpotting. Impact réglementaire et opérationnel pour la sécurité des systèmes financiers.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/vicksburg-mississippi-government-ransomware-attack">Mississippi mayor says ransomware incident led city to shut down systems</a> — The Record. Raison : Incident ransomware municipal confirmé, avec implication du FBI. Pertinent pour RSSI/CTO comme cas concret de gouvernance et continuité d'activité.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/the-edr-blind-spot-3-ways-browser-attacks-evade-endpoint-telemetry/">The EDR blind spot: 3 ways browser attacks evade endpoint telemetry</a> — BleepingComputer. Raison : Analyse des techniques d'évasion browser face à l'EDR, sujet pertinent pour RSSI et CTO. L'angle est pratique mais l'impact précis pour l'entreprise reste à vérifier.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/why-cisos-struggle-to-answer-boards.html">Why CISOs Struggle to Answer the Board's Three Hardest Questions, and How to Fix the Report</a> — The Hacker News. Raison : Article traitant de la communication CTO/RSSI avec le board sur la mesure de sécurité, sujet pertinent pour la gouvernance et la stratégie cyber.</li>
-<li><strong>3/5</strong> — <a href="https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html">OpenAI Parts Ways With Three Safety Researchers Over Sensitive Information Mishandling</a> — The Hacker News. Raison : Annonce de gestion d'équipe chez OpenAI, intéressante pour la gouvernance interne mais sans impact technique direct pour les experts ciblés.</li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>GPT-6 : guide de production pour startups</strong> : OpenAI publie un guide pratique couvrant le choix de modèles, le réglage de l'effort de raisonnement, l'ingénierie de prompts, la coordination d'outils et la préparation des workflows pour la mise en production. <a href="https://openai.com/index/practical-guide-building-gpt-6">OpenAI News</a></li>
-</ul>
-
-<ul>
-<li><strong>Conformité par IA avec réponses défendables</strong> : AWS présente le pattern *Adjudicated Query*, qui couple un agent conversationnel à un moteur de règles déterministe via un serveur MCP borné, pour produire des réponses de conformité prouvablement complètes et défendables. <a href="https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Recherche web sécurisée pour Claude Desktop</strong> : AWS montre comment connecter Claude Desktop à une recherche web via Bedrock AgentCore Gateway, avec authentification JWT entrante par IAM Identity Center et Cognito, contournant ainsi la limite de connaissance du modèle. <a href="https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Fine-tuning d'agents de recherche par RL multi-tours</strong> : AWS détaille le fine-tuning d'un petit modèle agent de recherche avec apprentissage par renforcement multi-tours sur SageMaker AI, visant la fiabilité d'un modèle frontière à latence et coût réduits. <a href="https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>AstaBrief : génération rapide de rapports en open source</strong> : Allen AI open-source AstaBrief, le modèle de génération rapide de rapports issu de leur système Asta. <a href="https://huggingface.co/blog/allenai/astabrief">Hugging Face Blog</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage fédéré avec confidentialité prouvable</strong> : Google Research explore des approches pour un apprentissage privé prouvable à partir de données fédérées sur systèmes mobiles. <a href="https://research.google/blog/toward-provably-private-learning-from-federated-data/">Google Research</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>3/5</strong> — <a href="https://openai.com/index/practical-guide-building-gpt-6">A model guide for the GPT-6 family</a> — OpenAI News. Raison : Guide pratique pour startups sur le choix et l'optimisation des modèles GPT-6. Utile pour experts en IA, mais sans angle cyber ou technique avancé.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/sweep-thousands-of-leases-for-compliance-using-amazon-quick-and-the-adjudicated-query-pattern/">Sweep thousands of leases for compliance using Amazon Quick and the Adjudicated Query pattern</a> — AWS Machine Learning. Raison : Article technique AWS combinant agent IA et règles pour conformité. Utile pour automatisation, mais cas d'usage locatif peu critique pour cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/">Add secure Web Search to Claude Desktop with Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Tutoriel technique pour intégrer une recherche web sécurisée à Claude Desktop via AWS Bedrock. Utile pour les experts AWS mais pas structurant.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/fine-tune-a-search-agent-with-multi-turn-rl-on-amazon-sagemaker-ai/">Fine-tune a search agent with multi-turn RL on Amazon SageMaker AI</a> — AWS Machine Learning. Raison : Article technique sur le fine-tuning d'un agent de recherche avec RL multi-tours sur SageMaker. Intéressant pour l'optimisation de coût/latence, mais pas critique pour la cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/allenai/astabrief">Open-sourcing AstaBrief, the fast report-generation model in Asta</a> — Hugging Face Blog. Raison : Annonce open-source d'un modèle de génération de rapports. Intéressant pour dev/archi mais pas critique immédiat pour cybersécurité ou stratégie d'entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://research.google/blog/toward-provably-private-learning-from-federated-data/">Toward provably private learning from federated data</a> — Google Research. Raison : Article de recherche Google sur l'apprentissage privé à partir de données fédérées. Intéressant pour la sécurité des données mais sans détail sur l'impact pratique immédiat.</li>
+<li><strong>5/5</strong> — <a href="https://www.darkreading.com/cybersecurity-operations/kiteworks-citrix-incidents-challenges-zero-day-response">Kiteworks &amp; Citrix Incidents Show Challenges of Zero-Day Response</a> — Dark Reading. Raison : Incidents zero-day sur des solutions de protection de données, avec impact direct sur la sécurité des entreprises. Nécessité de comprendre la réponse et les leçons pour les RSSI/CTO.</li>
+<li><strong>3/5</strong> — <a href="https://www.darkreading.com/cybersecurity-operations/remotethreat-bets-security-teams-need-to-test-what-happens-after-defenses-fail">RemoteThreat Bets Security Teams Need to Test What Happens After Defenses Fail</a> — Dark Reading. Raison : Présentation d'une startup innovant dans le red teaming post-échec des défenses. Intéressant pour RSSI et CTO mais sans détail technique vérifiable dans le résumé.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>IA autonome en entreprise</strong> : Le marché de l'IA d'entreprise bascule d'une phase expérimentale à un déploiement opérationnel massif, avec des investissements mondiaux prévus à 2 500 milliards de dollars en 2026 (+44 % sur un an). La baisse continue des coûts de calcul et l'accélération des capacités des modèles creusent l'écart entre ce qui est techniquement possible et la capacité d'absorption des organisations. <a href="https://www.technologyreview.com/2026/10/02/1143774/redefining-enterprise-intelligence-with-autonomous-ai/">MIT Technology Review</a></li>
+<li><strong>Agents IA et permissions macOS</strong> : Apple restreint les contrôles "Full Disk Access" sur macOS, jugeant que les agents IA de plus en plus autonomes rendent l'accès global aux fichiers, messages et historiques trop risqué. <a href="https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>OpenAI lance sa plateforme agentique</strong> : OpenAI dévoile "Dots", une plateforme d'agents positionnée sur le segment professionnel, capable d'automatiser des tâches métier tout en intégrant des actions du quotidien comme commander un repas. <a href="https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent">The Verge</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/10/02/1143774/redefining-enterprise-intelligence-with-autonomous-ai/">Redefining enterprise intelligence with autonomous AI</a> — MIT Technology Review — AI. Raison : Article générique sur l'adoption de l'IA en entreprise, sans détail technique ni applicatif concret pour un public expert.</li>
+<li><strong>5/5</strong> — <a href="https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/">Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents</a> — TechCrunch — AI. Raison : Impact direct sur la sécurité des systèmes macOS en entreprise. Nouveaux risques des agents IA justifient une reconfiguration des contrôles d'accès. Décision stratégique d'Apple avec implications opérationnelles pour RSSI et architectes.</li>
+<li><strong>3/5</strong> — <a href="https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent">OpenAI’s Dot agent is enterprise software that can also order your dinner</a> — The Verge — AI. Raison : Annonce d'un agent IA grand public par OpenAI, sans détails techniques ni impact cybersécurité évident pour un public expert.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Tensions sur le marché des mémoires jusqu'en 2028</strong> : Les fabricants Micron et Samsung prévoient une prolongation des pénuries et une hausse des prix sur la mémoire vive et le stockage pour au moins deux ans, avec des stocks déjà largement écoulés jusqu'en 2027. <a href="https://www.bfmtv.com/tech/ordinateur/une-grande-partie-du-stock-est-deja-vendu-pour-2027-une-explosion-des-prix-l-an-prochain-et-des-penuries-jusqu-en-2028-au-moins-la-crise-de-la-memoire-est-la-pour-durer_AV-202610020778.html">BFM Tech</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/ordinateur/une-grande-partie-du-stock-est-deja-vendu-pour-2027-une-explosion-des-prix-l-an-prochain-et-des-penuries-jusqu-en-2028-au-moins-la-crise-de-la-memoire-est-la-pour-durer_AV-202610020778.html">"Une grande partie du stock est déjà vendue pour 2027": une explosion des prix l’an prochain et des pénuries jusqu'en 2028 au moins, la crise de la mémoire est là pour durer</a> — BFM Tech. Raison : Information sur pénurie mémoire impactant les coûts matériels, utile mais sans détail technique ni lien direct avec cyber ou IA.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261002-1640</guid>
-      <pubDate>Fri, 02 Oct 2026 16:40:35 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261002-2117</guid>
+      <pubDate>Fri, 02 Oct 2026 21:17:14 +0000</pubDate>
     </item>
   </channel>
 </rss>
