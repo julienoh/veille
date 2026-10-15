@@ -8,388 +8,256 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 15 Oct 2026 09:51:37 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 15:40:16 +0000</lastBuildDate>
     <item>
-      <title>Digest — 15/10 09h</title>
+      <title>Digest — 15/10 15h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## IA — Labos &amp; éditeurs
 
-- **Exploitation active de failles PAN-OS et Langflow** : Palo Alto Networks corrige une RCE authentifiée (CVE-2026-0322, CVSS 8.6) sur l'interface de management PAN-OS, exploitée en conditions réelles. Parallèlement, une faille critique d'exécution de code authentifiée dans Langflow fait l'objet de plus de 1 400 tentatives d'exploitation détectées via honeypots. [PAN-OS](https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html) · [Langflow](https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html)
+- **NVIDIA élargit sa gamme Nemotron avec des modèles optimisés pour agents** : NVIDIA publie Nemotron 3.5 Super VL (120B paramètres), un modèle open-weight conçu pour la vitesse d'exécution et la précision des agents spécialisés toujours actifs, accompagné de deux déclinaisons edge dont Bolt 74B-A9B optimisé pour tourner sur 24 Go de VRAM. [NVIDIA Blog](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/)
 
-- **AhsayCBS : correctifs incomplets exploités pour déposer webshells et miners** : Deux vulnérabilités (CVE-2026-105133, CVE-2026-105134) dans AhsayCBS permettent de contourner l'authentification et d'exécuter du code. Les attaquants les utilisent pour installer des webshells et le mineur XMRig ; un nouveau correctif vient d'être publié après un premier patch insuffisant. [The Hacker News](https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html)
-
-- **Campagne GhostAction : ~1 900 comptes GitHub compromis** : La campagne de vol de credentials GhostAction a ciblé plus de 30 000 dépôts en compromettant environ 1 900 comptes utilisateurs GitHub, avec un pic d'activité observé les 8 et 9 octobre 2026. [The Hacker News](https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html)
-
-- **Fuite de données historiques à la Legal Aid Agency britannique** : L'agence britannique d'aide juridique confirme que des attaquants ayant pénétré ses systèmes en avril 2025 ont exfiltré des dossiers remontant jusqu'à 1978. [BleepingComputer](https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/)
-
-- **Microsoft corrige un bug d'affichage sur Windows 11** : Un correctif résout un problème connu provoquant des écrans noirs, des échecs de chargement du bureau et des plantages de l'Explorateur après installation des mises à jour Windows 11 d'août. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-windows-black-screens-explorer-crashes/)
-
-- **Démantèlement du marché cybercriminel OLVX** : L'administrateur présumé de la place de marché OLVX a été arrêté en Macédoine du Nord lors d'une opération conjointe de la police locale et du FBI. [The Record](https://therecord.media/olvx-cybercrime-marketplace-arrest-north-macedonia)
-
-- **Starshield : rétablissement du service pour l'Ukraine après des restrictions** : L'armée ukrainienne peut de nouveau utiliser le service satellite Starshield en mobilité, après une interruption soudaine qui avait perturbé des missions de drones sur la ligne de front. [The Record](https://therecord.media/ukraine-says-starshield-working-again-after-disruption)
+- **AWS formalise un cadre de confiance pour l'autonomie des agents IA** : AWS propose "Trust in Depth", une approche en cinq couches (scope, know, bound, observe, prove) visant à déléguer des actions aux agents uniquement lorsqu'elles sont vérifiables, et à réserver les décisions critiques au jugement humain. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/)
 
 **Évaluation du scoring**
 
-- **5/5** — [UK Legal Aid Agency: Hackers stole records dating back to 1978](https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/) — BleepingComputer. Raison : Incident cyber majeur touchant un secteur critique (justice UK) avec vol de données sensibles remontant à 1978, impact potentiel sur la chaîne d'approvisionnement et la gouvernance.
-- **5/5** — [Langflow's Critical Authenticated RCE Flaw Targeted in 1,423 Honeypot Exploit Attempts](https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html) — The Hacker News. Raison : CVE critique (score 9.9) activement exploitée sur une plateforme IA open source. Impact direct sur les infrastructures utilisant Langflow, nécessitant une action immédiate.
-- **5/5** — [AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches](https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html) — The Hacker News. Raison : CVE exploitées activement pour déployer web shells et mineurs, correctifs incomplets. Impact direct sur les entreprises utilisant AhsayCBS, nécessite action immédiate.
-- **5/5** — [Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation](https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html) — The Hacker News. Raison : CVE critique PAN-OS activement exploitée, impact direct sur les infrastructures des RSSI/CTO. Patch urgent à déployer.
-- **4/5** — [Microsoft fixes bug causing Windows black screens, Explorer crashes](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-windows-black-screens-explorer-crashes/) — BleepingComputer. Raison : Correctif Microsoft pour bug impactant stabilité post-mise à jour Windows 11. Pertinent pour RSSI/CTO car touche parc utilisateur entreprise.
-- **4/5** — [GhostAction Compromises About 1,900 GitHub Accounts, Targets Over 30,000 Repositories](https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html) — The Hacker News. Raison : Campagne de credential-theft ciblant GitHub, compromettant 1900 comptes et 30 000 dépôts. Impact direct sur la chaîne d'approvisionnement logicielle, pertinent pour RSSI et CTO.
-- **4/5** — [Ukraine says Elon Musk's Starshield service restored after restrictions disrupted drone missions](https://therecord.media/ukraine-says-starshield-working-again-after-disruption) — The Record. Raison : Incident impactant l'usage militaire de Starshield, révélant une dépendance stratégique et des risques pour les communications critiques.
-- **3/5** — [ISC Stormcast For Thursday, October 15th, 2026 https://isc.sans.edu/podcastdetail/10138, (Thu, Oct 15th)](https://isc.sans.edu/diary/rss/33428) — SANS ISC. Raison : Podcast technique du SANS ISC, source fiable pour experts cybersécurité. Contenu probablement utile mais inconnu avant écoute. À survoler pour décider.
-- **3/5** — [North Macedonian police arrest alleged administrator behind OLVX cybercrime market](https://therecord.media/olvx-cybercrime-marketplace-arrest-north-macedonia) — The Record. Raison : Arrestation d'un administrateur de marché cybercriminel. Information utile pour la veille menace mais sans détail technique ou impact direct immédiat.
-
-## Actualité tech FR
-
-- **AI Act : un calendrier assoupli** : Bruxelles accorde un délai d'un an aux entreprises pour se mettre en conformité, ce qu'elles réclamaient pour absorber la complexité réglementaire sans casser l'innovation. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1556651-ai-act-un-an-de-repit-comment-remettre-les-priorites-dans-l-ordre/)
-
-- **Enquêtes européennes sur les agents IA offensifs** : La Commission enquête sur OpenAI et Anthropic après que leurs agents ont mené des piratages contre des sites gouvernementaux australiens, en s'appuyant sur les dispositions de l'AI Act. [Next.ink](https://next.ink/261691/leurope-lance-des-enquetes-sur-les-piratages-par-agents-ia-et-met-en-avant-lai-act/)
-
-- **Web scraping encadré par le CEPD** : Le Comité européen de la protection des données précise les limites légales du web scraping pour l'entraînement des IA génératives, un sujet à fort risque juridique pour les éditeurs de modèles. [Journal du Net](https://www.journaldunet.com/cybersecurite/1556609-le-cepd-clarifie-le-cadre-juridique-du-web-scraping/)
-
-- **Orchestrateurs d'agents IA dans la relation client** : Le marché bascule du CRM/CCaaS vers des plateformes orchestrant des micro-agents et des interactions agent-to-agent (A2A), une évolution à suivre pour les DSI qui intégreront ces briques. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1556669-apres-le-crm-et-le-ccaas-l-ere-des-orchestrateurs-d-agents-ia/)
-
-- **Cyberattaque sur des frigos connectés : un signal faible à ne pas ignorer** : L'attaque touchant des centaines de supermarchés français expose la surface de risque liée aux IoT et aux équipements connectés dans les infrastructures critiques, bien au-delà du seul secteur retail. [Journal du Net](https://www.journaldunet.com/cybersecurite/1556679-cyberattaques-sur-les-frigos-l-arbuste-qui-cache-la-foret/)
-
-- **Fortnite arrive sur Linux avec un nouveau launcher** : Epic Games concrétise le portage de Fortnite sur Linux, un signal fort pour la viabilité de l'OS dans le gaming, poussé par l'amélioration des couches de compatibilité et des outils maison. [Next.ink](https://next.ink/261927/nouveau-lanceur-fortnite-sur-linux-le-signal-fort-depic-games-a-lindustrie/)
-
-- **Tutoriel : monter son résolveur DNS avec Unbound** : Next.ink détaille l'installation d'un résolveur local sur Raspberry Pi, VM Freebox ou VPS, une solution simple pour ne plus dépendre des DNS des FAI ou des géants du numérique. [Next.ink](https://next.ink/260020/tuto-installer-facilement-son-propre-resolveur-dns-sur-raspberry-pi-vm-freebox-vps/)
-
-**Évaluation du scoring**
-
-- **4/5** — [AI Act : un an de répit, comment remettre les priorités dans l'ordre](https://www.journaldunet.com/intelligence-artificielle/1556651-ai-act-un-an-de-repit-comment-remettre-les-priorites-dans-l-ordre/) — Journal du Net. Raison : Sujet réglementaire structurant (AI Act) avec impact direct sur la conformité et la stratégie IA des entreprises. Analyse de fond attendue.
-- **4/5** — [Cyberattaques sur les frigos : l'arbuste qui cache la forêt ?](https://www.journaldunet.com/cybersecurite/1556679-cyberattaques-sur-les-frigos-l-arbuste-qui-cache-la-foret/) — Journal du Net. Raison : Analyse d'un incident cyber réel sur des équipements connectés grand public, avec implications pour les infrastructures critiques. Pertinent pour RSSI et architecte SI.
-- **4/5** — [L’Europe lance des enquêtes sur les piratages par agents IA et met en avant l’AI Act](https://next.ink/261691/leurope-lance-des-enquetes-sur-les-piratages-par-agents-ia-et-met-en-avant-lai-act/) — Next.ink. Raison : Enquêtes réglementaires UE sur agents IA et mise en avant de l'AI Act : impact direct sur la gouvernance cyber et la stratégie IA en entreprise.
-- **4/5** — [Le CEPD clarifie le cadre juridique du web scraping](https://www.journaldunet.com/cybersecurite/1556609-le-cepd-clarifie-le-cadre-juridique-du-web-scraping/) — Journal du Net. Raison : Clarification réglementaire du CEPD sur le web scraping pour l'IA, impact direct sur la conformité et la gouvernance des données en entreprise.
-- **3/5** — [Nouveau lanceur, Fortnite sur Linux : le signal fort d’Epic Games à l’industrie](https://next.ink/261927/nouveau-lanceur-fortnite-sur-linux-le-signal-fort-depic-games-a-lindustrie/) — Next.ink. Raison : Annonce du portage d'un jeu sur Linux. Pas de contenu cybersécurité, IA ou outillage dev. Intéressant comme signal marché mais hors sujet pour le public cible.
-- **3/5** — [Après le CRM et le CCaaS, l'ère des orchestrateurs d'agents IA](https://www.journaldunet.com/intelligence-artificielle/1556669-apres-le-crm-et-le-ccaas-l-ere-des-orchestrateurs-d-agents-ia/) — Journal du Net. Raison : Sujet émergent sur l'orchestration d'agents IA en relation client, pertinent pour l'IA en entreprise mais sans détail technique ou sécurité.
-- **3/5** — [\[Tuto\] Installer facilement son propre résolveur DNS sur Raspberry Pi, VM Freebox, VPS](https://next.ink/260020/tuto-installer-facilement-son-propre-resolveur-dns-sur-raspberry-pi-vm-freebox-vps/) — Next.ink. Raison : Tutoriel technique pour installer un résolveur DNS local avec unbound. Utile pour les experts cherchant une solution simple, mais sans nouveauté majeure ni impact stratégique.
-
-## Cyber — Stratégie &amp; analyse
-
-- **Correctifs incomplets et risque OT** : Une vulnérabilité critique sur Ivanti ICS (CVE-2026-104935) n'a été que partiellement corrigée en juillet, laissant une porte ouverte aux attaquants. Dans le secteur industriel, des chaînes de supermarchés européennes ont perdu des millions d'euros à cause de firmware non patché sur leurs systèmes de réfrigération, géré par des tiers. [Dark Reading - Ivanti](https://www.darkreading.com/vulnerabilities-threats/ivanti-ics-zero-day-attacks-vendor-patching) · [Dark Reading - OT](https://www.darkreading.com/ics-ot-security/eu-grocers-unpatched-fridge-firmware)
-
-- **Vol furtif de secrets développeurs via Claude Code** : Une faille zero-click dans le panneau d'aperçu de Claude Code Desktop permet d'exfiltrer silencieusement des clés SSH, tokens OAuth et identifiants AWS. Le risque est accentué par l'intégration croissante de ces outils dans les chaînes CI/CD. [Dark Reading](https://www.darkreading.com/threat-intelligence/new-anthropic-sneakpeek-silent-zero-click-threat)
-
-- **Industrialisation du phishing-as-a-service** : Microsoft a démantelé "Yam Store", une place de marché criminelle responsable d'un milliard de messages malveillants. L'opération, menée sur près d'un an avec des partenaires internationaux, illustre le passage à l'échelle industrielle de la fourniture d'outils de phishing clés en main. [CSO Online](https://www.csoonline.com/article/4235517/as-phishing-as-a-service-goes-industrial-microsoft-takes-down-a-marketplace-behind-1-billion-messages.html)
-
-**Évaluation du scoring**
-
-- **5/5** — [Ivanti ICS Zero-Day Attacks Highlight Vendor Patching Hurdles](https://www.darkreading.com/vulnerabilities-threats/ivanti-ics-zero-day-attacks-vendor-patching) — Dark Reading. Raison : CVE critique 0-day avec bypass d'authentification et RCE, patch partiel laissant une porte ouverte aux attaquants. Impact direct sur les systèmes ICS en entreprise.
-- **5/5** — [Anthropic 'SneakPeek' Flaw Is a Silent Zero-Click Threat](https://www.darkreading.com/threat-intelligence/new-anthropic-sneakpeek-silent-zero-click-threat) — Dark Reading. Raison : Vulnérabilité zero-click dans Claude Code Desktop exposant directement credentials SSH, AWS et tokens OAuth. Impact critique sur développeurs et RSSI, nécessite réaction immédiate.
-- **4/5** — [EU Grocers Pay a Steep Price for Unpatched Fridge Firmware](https://www.darkreading.com/ics-ot-security/eu-grocers-unpatched-fridge-firmware) — Dark Reading. Raison : Incident cyber réel sur OT en milieu retail avec impact financier significatif. Analyse de dépendance aux prestataires et firmware non patché, pertinent pour RSSI/CTO.
-- **4/5** — [As phishing-as-a-service goes industrial, Microsoft takes down a marketplace behind 1 billion messages](https://www.csoonline.com/article/4235517/as-phishing-as-a-service-goes-industrial-microsoft-takes-down-a-marketplace-behind-1-billion-messages.html) — CSO Online. Raison : Démantèlement d'une marketplace PhaaS massive (1 milliard de messages) : impact direct sur la menace cyber, analyse opérationnelle utile pour RSSI et CTO.
+- **4/5** — [Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/) — NVIDIA Blog. Raison : Annonce de modèles open source de NVIDIA, incluant un modèle de 120B et des versions edge optimisées. Pertinent pour experts en IA et déploiement local.
+- **3/5** — [Trust in Depth: Giving agents more autonomy without losing control](https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/) — AWS Machine Learning. Raison : Article AWS présentant une approche de gouvernance des agents IA, utile pour connaître leur stratégie, mais sans détail technique ni validation indépendante.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Sécurité IoT industrielle** : Une chaîne de 700 supermarchés a subi un incident majeur (pertes financières et départs d'incendie) causé par des réfrigérateurs connectés obsolètes exposés sur Internet sans protection. [Ars Technica](https://arstechnica.com/security/2026/10/hack-costing-millions-and-sparking-fires-stemmed-from-poor-security/)
+- **Apprentissage continu des agents IA** : CopilotKit propose CLiF, une plateforme qui convertit les traces d'exécution et les actions utilisateurs en données d'évaluation et de fine-tuning, pour améliorer la fiabilité des agents sur des tâches complexes. [MarkTechPost](https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/)
 
-- **Modèles vocaux** : SpaceXAI publie Grok Voice 3.0, un modèle speech-to-speech qui prend la première place de l'index Artificial Analysis (score 86.9) et intègre appels d'outils, facturé 0,08 $/min. Fish Audio sort Drama 3, un modèle TTS de 35B paramètres (3B actifs) en open weights sous licence à revenus plafonnés, couvrant 83 langues. [MarkTechPost (Grok)](https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/) · [MarkTechPost (Drama 3)](https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/)
-
-- **Benchmark OCR** : Datalab publie OmniParseBench, un benchmark ouvert pour évaluer les parseurs OCR via 16 288 tests binaires sur 2 937 pages en 92 langues, avec scores filtrables par langue, script ou étiquette. [MarkTechPost](https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/)
-
-- **Régulation IA &amp; protection des mineurs** : Huit États américains poursuivent OpenAI, accusant l'entreprise de nuire aux enfants et de tromper les utilisateurs sur la sécurité de ChatGPT. [The Verge](https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety)
+- **Agents embarqués dans l'automobile** : Rivian prépare l'intégration d'agents IA dans ses véhicules, avec des précisions attendues lors de son événement "AI &amp; Autonomy Day" en décembre. [TechCrunch](https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/)
 
 **Évaluation du scoring**
 
-- **4/5** — [Fridge hack costing millions and sparking fires stemmed from poor security](https://arstechnica.com/security/2026/10/fridge-hack-costing-millions-and-sparking-fires-stemmed-from-poor-security/) — Ars Technica — Tech Lab. Raison : Incident cyber réel touchant un secteur critique (grande distribution) via des équipements obsolètes exposés, avec impact financier et physique. Analyse utile pour RSSI/CTO.
-- **3/5** — [Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis](https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/) — MarkTechPost. Raison : Annonce d'un nouveau modèle vocal IA classé #1 sur un benchmark. Intéressant pour les experts IA, mais sans lien direct avec la cybersécurité ou les sujets ciblés.
-- **3/5** — [Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers](https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/) — MarkTechPost. Raison : Benchmark OCR ouvert, technique et reproductible, utile pour évaluer des parsers. Absence d'angle cybersécurité ou impact direct sur les pratiques des experts ciblés.
-- **3/5** — [Fish Audio Releases Drama 3, a 35B Open-Weight MoE Text-to-Speech Model](https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/) — MarkTechPost. Raison : Modèle TTS open-weight avec MoE et 83 langues, intéressant pour veille IA mais pas de lien direct avec cybersécurité ou dev tooling.
-- **3/5** — [Eight states sue OpenAI, saying ChatGPT isn&amp;#8217;t safe for kids](https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety) — The Verge — AI. Raison : Action en justice d'États américains contre OpenAI pour sécurité des mineurs. Sujet réglementaire intéressant mais sans impact technique direct pour un public français.
+- **3/5** — [AI agents are coming to Rivian’s cars](https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/) — TechCrunch — AI. Raison : Annonce de fonctionnalité IA dans un véhicule, sans détail technique ni lien avec la cybersécurité. Intérêt limité pour un public expert.
+- **3/5** — [CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data](https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/) — MarkTechPost. Raison : Outil intéressant pour améliorer les agents IA via apprentissage continu, mais ciblé développeurs, pas sécurité ou stratégie d'entreprise.
 
-## IA — Recherche
+## Cyber — Menaces &amp; vulnérabilités
 
-- **Sécurité des agents autonomes et injection indirecte** : Un agent dont la mission unique est de maintenir des humains en vie peut être détourné pour tuer via une injection de prompt différée et multi-tours, démontrant une faille critique dans les systèmes à haut risque. [Can agents whose sole duty is to keep humans alive be hijacked to kill?](https://arxiv.org/abs/2610.15153)
+- **NGINX : 5 vulnérabilités corrigées, dont une présente depuis 2005** : Trois bugs mémoire peuvent permettre une exécution de code ou un crash de processus worker ; un bug TLS peut contourner la vérification des certificats clients. Mise à jour vers les versions 1.30.6 ou 1.31.7 requise. [The Hacker News](https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html)
 
-- **Évaluation des jailbreaks par similarité sémantique** : Pour mieux évaluer le succès des attaques sur les LLM, une nouvelle méthode utilise un jeu de reconstruction sémantique afin de distinguer une réponse interdite d'un refus ou d'une réponse hors-sujet, réduisant ainsi les faux positifs. [Did the LLM Answer the Question?](https://arxiv.org/abs/2610.19306)
+- **Next.js : deux failles critiques RCE non authentifiées** : Un correctif hors cycle publié le 14 octobre corrige une exécution de code dans les React Server Components et une autre dans librsvg, ainsi qu'un déni de service. [The Hacker News](https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html)
 
-- **Désapprentissage multimodal fin** : CUSE propose une méthode de désapprentissage pour les MLLMs qui combine guidance contrefactuelle et auto-distillation, capable de supprimer une information sensible tout en préservant le contenu non-cible au sein d'une même réponse. [CUSE](https://arxiv.org/abs/2610.14763)
+- **Drupal : faille critique dans le module Field UI** : L'exploitation nécessite des modules contribués spécifiques mais peut mener à une RCE sur le serveur. Correctifs disponibles dans les versions 11.4.10, 11.3.19 et 10.6.19. [The Hacker News](https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html)
 
-- **Optimisation de l'inférence des modèles hybrides** : GateSight exploite la mémoire récurrente des couches Gated DeltaNet pour anticiper et évincer le cache KV des couches d'attention, réduisant ainsi la mémoire de service sans sacrifier la performance. [GateSight](https://arxiv.org/abs/2610.14754)
+- **Help TDS : plus de 20 000 domaines Cloudflare Pages détournés pour des arnaques au support technique** : Le système de distribution de trafic Help TDS est lié au programme d'affiliation russe Hotejka (ex-ROI777), actif depuis 2017, et fournit des templates PHP pour diffuser des scams. [The Hacker News](https://thehackernews.com/2026/10/help-tds-linked-to-hotejka-as-20000.html)
 
-- **Agents "caméra-first"** : Le principal défi pour les agents opérant en temps réel sur un flux visuel n'est pas la reconnaissance, mais la capacité à agir de manière cohérente sur un monde qui se déroule en continu. [How Should a Camera-First AI Agent Work?](https://arxiv.org/abs/2610.14772)
+- **Campagnes de phishing ciblant les États post-soviétiques** : Une opération de cyber-espionnage menée depuis environ deux ans contre des gouvernements d'Asie centrale serait attribuable à des acteurs basés au Kazakhstan. [The Record](https://therecord.media/suspected-kazakhstan-phishing-central-asia-espionage)
 
-- **Orchestration d'outils par génération de code** : ProgAgent entraîne les LLM à produire un code orchestreur plutôt que d'appeler les outils séquentiellement, ce qui améliore leur capacité à planifier et exécuter des tâches complexes à long terme. [ProgAgent](https://arxiv.org/abs/2610.14774)
+- **Attaques usurpant des produits IA visant les entreprises américaines** : Entre avril et octobre 2026, 1 258 analyses en sandbox ont été liées à des campagnes distribuant des malwares et volant des sessions navigateur via de fausses applications IA, augmentant la charge des MSSP. [The Hacker News](https://thehackernews.com/2026/10/fake-ai-attacks-spread-across-us.html)
 
-- **Agents auto-améliorables et réflexifs** :
-    - Un nouveau cadre Lean-vérifié définit des garanties formelles sur le regret contrefactuel pour les agents qui apprennent de leurs retours sans modifier leurs poids, clarifiant quand la réflexion locale améliore la performance à long terme. [Counterfactual Regret for Reflective Agents](https://arxiv.org/abs/2610.14790)
-    - L'apprentissage basé sur l'expérience est amélioré en guidant les agents non plus sur le résultat final, mais sur la qualité de leur trajectoire d'exécution, ce qui permet un progrès plus fin et continu. [Beyond Outcome Feedback](https://arxiv.org/abs/2610.14877)
-    - EvoCowork teste la capacité d'agents à s'améliorer sur des tâches de bureau réelles, en vérifiant si les gains sont dus à des procédures réutilisables ou à du surapprentissage spécifique à une tâche. [EvoCowork](https://arxiv.org/abs/2610.14828)
+- **Fuite de données à l'agence d'aide juridique britannique** : L'étendue de la compromission est plus large qu'annoncé, avec des enregistrements volés remontant jusqu'à 1978. [The Record](https://therecord.media/uk-legal-aid-cyberattack-data)
 
-- **Benchmarks et architectures pour agents autonomes** :
-    - **Architecture de référence en entreprise** : Un modèle architectural formel structure l'intégration de l'IA agentique dans les logiciels d'entreprise, en détaillant les responsabilités, interactions et points de variabilité. [A Reference Architecture for Integrating Agentic AI](https://arxiv.org/abs/2610.14818)
-    - **Survie en monde persistant** : ASIWorld est un bac à sable persistant conçu pour évaluer les agents autonomes sur leur capacité à enchaîner des actions cohérentes à très long terme avec des observations incomplètes. [ASIWorld](https://arxiv.org/abs/2610.14807)
-    - **Auto-amélioration récursive** : Un système de comptabilité pré-enregistré et auditable permet de falsifier les affirmations d'auto-amélioration récursive en distinguant les mécanismes créés par le système lui-même de ceux fournis par les concepteurs. [Pre-Registered Genesis Accounting for Recursive Self-Improvement](https://arxiv.org/abs/2610.14843)
+- **Fin du support standard de Windows Server 2022** : Microsoft a annoncé le passage en support étendu jusqu'en octobre 2031 ; les mises à jour de sécurité continuent mais sans évolutions fonctionnelles ni support sans contrat. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2022-reached-end-of-mainstream-support/)
 
-- **Apprentissage par renforcement multi-agents** : MARL-BattleGrounds est un nouveau benchmark en JAX, économe en ressources, dédié aux environnements compétitifs et hétérogènes, comblant un manque pour la recherche en MARL. [MARL-BattleGrounds](https://arxiv.org/abs/2610.14883)
+- **Pentest IA vs humain** : L'IA peut identifier des vulnérabilités échappant aux testeurs humains, mais présente des lacunes en cohérence, évaluation du risque et compréhension du contexte métier. Les deux approches restent complémentaires. [BleepingComputer](https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/)
 
-- **Synthèse de programmes analytiques** : LYNX améliore la traduction de requêtes analytiques en code exécutable en ancrant la génération dans les données réelles et en utilisant une boucle de raffinement en boucle fermée. [LYNX](https://arxiv.org/abs/2610.14777)
-
-- **Modèles d'IA comme répondants synthétiques** : Un audit psychométrique révèle que les modèles de décision, bien que produisant des distributions de réponses probables, échouent à satisfaire les critères de validité pour une utilisation en tant qu'échantillons synthétiques dans les sondages. [Probable but Not Valid](https://arxiv.org/abs/2610.14912)
-
-- **Applications sectorielles** :
-    - **Optimisation réseau mobile** : PEAM est un agent embarqué sur appareil qui personnalise et automatise la configuration réseau mobile de manière économe en fonction de l'activité de l'utilisateur. [PEAM](https://arxiv.org/abs/2610.14855)
-    - **Tournées de livraison** : GREAT-ESDD utilise un réseau d'attention sur graphe pour orienter les décisions de livraison, réduisant les coûts de routage en intégrant des options de livraison hors domicile. [GREAT-ESDD](https://arxiv.org/abs/2610.14792)
-    - **Prévision météorologique** : WeatherBridge adapte en entrée les états initiaux issus de modèles physiques opérationnels aux modèles de prévision data-driven pré-entraînés sur ERA5, résolvant le problème de décalage de distribution pour un usage en production. [WeatherBridge](https://arxiv.org/abs/2610.14863)
-
-- **Gestion des séries temporelles et détection d'anomalies** : Le dataset CESNET-TimeSeries26 fournit plusieurs années de trafic réseau pour évaluer la robustesse des modèles de prévision face à la saisonnalité annuelle, aux dérives de concept et aux anomalies long-terme. [CESNET-TimeSeries26](https://arxiv.org/abs/2610.14799)
-
-- **Évaluation robuste en RL** : Une nouvelle méthode en modélisation in-contexte réduit l'écart d'approximation du risque dans l'échantillonnage prédictif de tâches, améliorant l'efficacité du post-entraînement de LLMs par RL. [Bridging Risk Approximation Gaps](https://arxiv.org/abs/2610.14913)
+- **IA en réponse à incident : la confiance n'est pas une validation** : Les outils d'IA gagnent en assurance dans leurs résultats plus vite que les praticiens ne développent des méthodes de vérification fiables. Des modèles de gouvernance et de validation deviennent indispensables. [The Hacker News](https://thehackernews.com/2026/10/why-ai-confidence-is-not-validation.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [Can agents whose sole duty is to keep humans alive be hijacked to kill? Delayed multi-turn derived-action trap attacks in simulated high-stakes environments](https://arxiv.org/abs/2610.15153) — arXiv cs.AI. Raison : Recherche sur l'injection de prompts différée pour détourner un agent IA vers une action létale, pertinente pour la sécurité des agents autonomes en environnement critique.
-- **4/5** — [Did the LLM Answer the Question? A Semantic Reconstruction Game for Jailbreak Evaluation](https://arxiv.org/abs/2610.19306) — arXiv cs.LG. Raison : Méthode d'évaluation des jailbreaks LLM avec impact direct sur la fiabilité des ASR, pertinent pour la sécurité des IA en entreprise.
-- **3/5** — [GateSight: Recurrent Memory Anticipates Attention Memory for Query-Agnostic KV Eviction in Hybrid LLMs](https://arxiv.org/abs/2610.14754) — arXiv cs.AI. Raison : Papier de recherche sur une optimisation mémoire pour LLMs hybrides. Intéressant pour l'architecture SI, mais sans lien direct avec la cybersécurité ou les priorités opérationnelles des experts ciblés.
-- **3/5** — [CUSE: Fine-Grained Multimodal Unlearning with Counterfactual Guidance and On-Policy Self-Distillation](https://arxiv.org/abs/2610.14763) — arXiv cs.AI. Raison : Papier de recherche sur le désapprentissage multimodal fin. Intéressant pour la sécurité des MLLMs, mais impact pratique incertain pour le public cible.
-- **3/5** — [How Should a Camera-First AI Agent Work?](https://arxiv.org/abs/2610.14772) — arXiv cs.AI. Raison : Papier de recherche arXiv sur les agents IA caméra-first. Intéressant pour l'architecture temps réel mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
-- **3/5** — [ProgAgent: Learning Tool Orchestration through Programmatic Training](https://arxiv.org/abs/2610.14774) — arXiv cs.AI. Raison : Papier de recherche sur l'orchestration programmatique d'outils par LLM. Intéressant pour les experts en automatisation, mais l'impact pratique reste incertain.
-- **3/5** — [LYNX: Analytical Program Synthesis via Grounding and Closed-Loop Refinement](https://arxiv.org/abs/2610.14777) — arXiv cs.AI. Raison : Papier de recherche sur la synthèse de programmes analytiques avec LLMs. Intéressant pour l'IA en entreprise, mais impact pratique incertain.
-- **3/5** — [Counterfactual Regret for Reflective Agents with Lean-Verified Guarantees](https://arxiv.org/abs/2610.14790) — arXiv cs.AI. Raison : Papier de recherche sur les agents réflexifs avec garanties vérifiées, intéressant mais sans application pratique immédiate pour le public cible.
-- **3/5** — [GREAT-ESDD: Graph Edge Attention Network for Effectively Steered Delivery Decisions](https://arxiv.org/abs/2610.14792) — arXiv cs.AI. Raison : Papier de recherche sur un framework de pricing et routage pour livraison le jour même. Hors périmètre cybersécurité et IA entreprise, intérêt limité pour le public cible.
-- **3/5** — [CESNET-TimeSeries26: A Multi-Year Network Traffic Time Series Dataset for Annual Seasonality, Concept Drift, and Long-Term Anomaly Detection](https://arxiv.org/abs/2610.14799) — arXiv cs.AI. Raison : Dataset multi-annuel pour détection d'anomalies réseau. Intéressant pour la recherche, mais impact pratique immédiat incertain pour le public cible.
-- **3/5** — [ASIWorld: Benchmarking Autonomous Agents in a Persistent Survival Sandbox](https://arxiv.org/abs/2610.14807) — arXiv cs.AI. Raison : Papier de recherche sur un benchmark pour agents autonomes en environnement persistant. Intéressant pour l'évaluation des agents IA, mais impact pratique incertain pour le public cible.
-- **3/5** — [A Reference Architecture for Integrating Agentic AI into Enterprise Software: Responsibilities, Interactions, and Variability](https://arxiv.org/abs/2610.14818) — arXiv cs.AI. Raison : Article de recherche sur une architecture de référence pour l'IA agentive en entreprise. Intéressant pour les architectes SI mais sans détail pratique immédiat.
-- **3/5** — [EvoCowork: A Benchmark for Real-World Office Tasks](https://arxiv.org/abs/2610.14828) — arXiv cs.AI. Raison : Benchmark académique pour agents IA sur tâches bureautiques. Intéressant pour évaluer la robustesse des agents, mais impact pratique incertain pour le public cible.
-- **3/5** — [Pre-Registered Genesis Accounting for Recursive Self-Improvement: First Audited Operator-Genesis Events in a Physics-Discovery Runtime](https://arxiv.org/abs/2610.14843) — arXiv cs.AI. Raison : Papier de recherche sur l'audit de l'auto-amélioration récursive en IA. Sujet pointu mais impact pratique incertain pour le public cible.
-- **3/5** — [PEAM: On-device Communication Agent for Personalized, Efficient and Autonomous Mobile Network Configuration](https://arxiv.org/abs/2610.14855) — arXiv cs.AI. Raison : Papier de recherche sur un agent IA pour configuration réseau mobile. Intéressant pour l'IA embarquée mais impact pratique incertain pour le public cible.
-- **3/5** — [WeatherBridge: Forecast-Aware Multi-Source Input Adaptation for Pretrained Weather Forecasting Models](https://arxiv.org/abs/2610.14863) — arXiv cs.AI. Raison : Papier de recherche IA appliqué à la prévision météo, intéressant mais hors périmètre cybersécurité/dev pour le public cible.
-- **3/5** — [Beyond Outcome Feedback: Trajectory-Quality-Guided Experience-based Learning](https://arxiv.org/abs/2610.14877) — arXiv cs.AI. Raison : Papier de recherche sur l'apprentissage par expérience des LLM, intéressant mais sans lien direct avec la cybersécurité ou les pratiques expertes.
-- **3/5** — [MARL-BattleGrounds: A Novel JAX-native Benchmark for Heterogeneous and Competitive Multi-agent RL](https://arxiv.org/abs/2610.14883) — arXiv cs.AI. Raison : Benchmark JAX pour MARL hétérogène, potentiel pour agents IA, mais hors cybersécurité et sans impact direct sur les pratiques des experts ciblés.
-- **3/5** — [Probable but Not Valid: A Psychometric Audit of Decision Models as Synthetic Survey Respondents](https://arxiv.org/abs/2610.14912) — arXiv cs.AI. Raison : Papier de recherche sur l'utilisation des LLM comme répondants synthétiques pour des enquêtes psychométriques. Intéressant mais sans lien direct avec la cybersécurité ou l'IA en entreprise.
-- **3/5** — [Bridging Risk Approximation Gaps in Model Predictive Task Sampling via In-Context Modeling](https://arxiv.org/abs/2610.14913) — arXiv cs.AI. Raison : Papier de recherche en IA (RL, optimisation), intéressant pour experts mais pertinence directe pour cybersécurité non établie.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **5/5** — [UK Legal Aid Agency hack worse than thought, with stolen records dating back to 1978](https://therecord.media/uk-legal-aid-cyberattack-data) — The Record. Raison : Incident cyber majeur touchant un secteur critique gouvernemental avec données sensibles très anciennes, impact direct sur la gouvernance et la conformité.
+- **5/5** — [NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks](https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html) — The Hacker News. Raison : Plusieurs vulnérabilités NGINX dont une avec potentiel RCE et un contournement de vérification de certificat TLS. Impact direct sur une techno très utilisée en entreprise.
+- **5/5** — [Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing](https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html) — The Hacker News. Raison : Deux RCE critiques non authentifiées sur Next.js, technologie très utilisée par le public cible. Patch out-of-band urgent nécessitant action immédiate.
+- **5/5** — [Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules](https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html) — The Hacker News. Raison : CVE critique avec RCE non authentifié sur Drupal via modules contribués, patch critique publié. Impact direct sur une technologie largement utilisée en entreprise, action urgente requise.
+- **4/5** — [Help TDS Linked to Hotejka as 20,000+ Cloudflare Pages Domains Host Tech Support Scams](https://thehackernews.com/2026/10/help-tds-linked-to-hotejka-as-20000.html) — The Hacker News. Raison : Analyse d'un TDS lié à un programme d'affiliation russe, avec plus de 20 000 domaines Cloudflare Pages utilisés pour des escroqueries. Pertinent pour RSSI et CTO.
+- **4/5** — [Is AI pentesting as good as a human pentester?](https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/) — BleepingComputer. Raison : Comparaison IA vs humain en pentest, sujet clé pour RSSI/CTO. Source sérieuse, analyse des limites et forces. Utile pour décision d'adoption.
+- **4/5** — [Microsoft: Windows Server 2022 reached end of mainstream support](https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2022-reached-end-of-mainstream-support/) — BleepingComputer. Raison : Impact direct pour les RSSI/CTO gérant des infrastructures Windows: fin du support mainstream impose une planification de migration ou maintien en extended support jusqu'en 2031.
+- **4/5** — [Fake AI Attacks Spread Across US Companies: How MSSPs Can Stop Incidents Early](https://thehackernews.com/2026/10/fake-ai-attacks-spread-across-us.html) — The Hacker News. Raison : Campagne d'attaques utilisant l'IA comme leurre, ciblant entreprises US avec malware et vol de sessions. Analyse de 1 258 échantillons pertinente pour RSSI et SOC.
+- **4/5** — [Why AI Confidence Is Not Validation](https://thehackernews.com/2026/10/why-ai-confidence-is-not-validation.html) — The Hacker News. Raison : Aborde le décalage croissant entre confiance des IA et validation humaine en forensic/incident response, sujet stratégique pour RSSI/CTO. Source crédible.
+- **3/5** — [Suspected Kazakhstan-linked hackers target governments across former Soviet states](https://therecord.media/suspected-kazakhstan-phishing-central-asia-espionage) — The Record. Raison : Campagne cyber-espionnage étatique (Kazakhstan) ciblant gouvernements ex-soviétiques. Pertinent pour RSSI/CTO mais pas de détails techniques exploitables immédiatement.
+
+## Actualité tech FR
+
+- **Faille de sécurité dans un robot-jouet IA pour enfants** : Le robot Eiliko (80€), doté d'IA générative pour converser avec les enfants, présente des dizaines de vulnérabilités exploitables, illustrant les risques des objets connectés grand public embarquant de l'IA sans cadre de sécurité minimal. [Next.ink](https://next.ink/261507/agenouille-toi-comment-notre-robot-jouet-ia-a-ete-pirate-sous-nos-yeux/)
+
+- **Jailbreak de la PS5 et riposte de Sony** : L'outil Relapse, diffusé depuis fin septembre, permet le jailbreak de la console et facilite le piratage de jeux ; Sony contre-attaque activement pour refermer cet accès. [Next.ink](https://next.ink/262062/sony-tente-de-refermer-les-vannes-du-piratage-apres-le-jailbreak-de-la-ps5/)
+
+- **Vibe coding sur Android : Google abaisse la barrière, la sécurité en question** : Google modifie sa politique pour permettre le développement d'applications Android via requêtes en langage naturel, ce qui soulève des inquiétudes quant aux dérives de sécurité potentielles. [Next.ink](https://next.ink/261945/google-veut-surfer-sur-la-vague-du-vibe-coding-personnel-pour-android/)
+
+- **Investissements de Nvidia dans l'écosystème IA français** : Nvidia renforce son ancrage en France en entrant au capital de Doctolib et de trois autres entreprises tricolores spécialisées en IA. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-nvidia-investit-dans-doctolib-et-trois-entreprises-francaises-de-l-ia-100852.html)
+
+- **Crédits d'impôt R&amp;D détournés pour des datacenters IA** : Une enquête du New York Times révèle que Meta aurait utilisé 6,6 milliards de dollars de crédits d'impôt recherche pour financer ses infrastructures datacenters IA, déclenchant une interrogation de sénateurs américains. [Next.ink](https://next.ink/261885/meta-accusee-de-detourner-des-milliards-de-credits-dimpots-rd-pour-ses-datacenters-ia/)
+
+- **Sobriété numérique comme levier économique** : Une analyse rappelle que la sobriété numérique doit être abordée comme une stratégie de création de valeur et de résilience économique, et non comme une contrainte opposée à la performance. [Journal du Net](https://www.journaldunet.com/management/direction-generale/1556625-survie-du-numerique-la-sobriete-une-strategie-economique-et-non-une-contrainte/)
+
+- **Benchmark des derniers modèles d'IA générative** : Le modèle Gemini 4 de Google est évalué face à Claude Opus 5.5 et GPT-6 Astra, se positionnant comme une alternative crédible pour les clients Google Cloud et Workspace. [Journal du Net](https://www.journaldunet.com/intelligence-artificielle/1556691-gemini-4-que-vaut-le-modele-de-google-face-a-claude-opus-5-5-et-gpt-6-astra/)
+
+**Évaluation du scoring**
+
+- **4/5** — [« Agenouille-toi » : comment notre robot-jouet IA a été piraté sous nos yeux](https://next.ink/261507/agenouille-toi-comment-notre-robot-jouet-ia-a-ete-pirate-sous-nos-yeux/) — Next.ink. Raison : Analyse détaillée de failles de sécurité sur un objet connecté grand public, exposant des données sensibles. Pertinent pour les experts en cybersécurité.
+- **3/5** — [Survie du numérique : la sobriété, une stratégie économique et non une contrainte](https://www.journaldunet.com/management/direction-generale/1556625-survie-du-numerique-la-sobriete-une-strategie-economique-et-non-une-contrainte/) — Journal du Net. Raison : Sujet intéressant sur la sobriété numérique comme levier économique, mais générique et sans apport technique ou stratégique immédiat pour un public expert.
+- **3/5** — [Sony tente de refermer les vannes du piratage après le jailbreak de la PS5](https://next.ink/262062/sony-tente-de-refermer-les-vannes-du-piratage-apres-le-jailbreak-de-la-ps5/) — Next.ink. Raison : Article sur le jailbreak PS5 et la contre-attaque Sony. Pertinent pour la sécurité des systèmes embarqués mais pas directement pour le public expert SI français.
+- **3/5** — [Nvidia investit dans Doctolib et trois entreprises françaises de l'IA](https://www.lemondeinformatique.fr/actualites/lire-nvidia-investit-dans-doctolib-et-trois-entreprises-francaises-de-l-ia-100852.html) — Le Monde Informatique — IA. Raison : Investissement de Nvidia dans Doctolib et startups IA françaises. Montre une tendance stratégique du marché IA, mais sans détail technique ou impact cyber direct pour les experts.
+- **3/5** — [Google veut surfer sur la vague du vibe coding personnel pour Android](https://next.ink/261945/google-veut-surfer-sur-la-vague-du-vibe-coding-personnel-pour-android/) — Next.ink. Raison : Annonce produit IA de Google AI Studio pour le développement Android. Intéressant pour les CTO et développeurs, mais l'angle sécurité semble secondaire.
+- **3/5** — [Gemini 4 : que vaut le modèle de Google face à Claude Opus 5.5 et GPT-6 Astra ?](https://www.journaldunet.com/intelligence-artificielle/1556691-gemini-4-que-vaut-le-modele-de-google-face-a-claude-opus-5-5-et-gpt-6-astra/) — Journal du Net. Raison : Comparatif de modèles IA avec tests réels et coûts, intéressant pour CTO/Architecte mais pas de rupture majeure ni lien cyber.
+- **3/5** — [Meta accusée de détourner des milliards de crédits d’impôts R&amp;D pour ses datacenters IA](https://next.ink/261885/meta-accusee-de-detourner-des-milliards-de-credits-dimpots-rd-pour-ses-datacenters-ia/) — Next.ink. Raison : Sujet potentiel sur détournement fiscal R&amp;D IA, mais manque de détails techniques cyber. Intérêt pour gouvernance et stratégie, pas d'urgence.
+
+## Cyber — Stratégie &amp; analyse
+
+- **Vulnérabilités critiques sur équipements réseau (Cisco, Palo Alto)** : Cisco confirme l'exploitation active d'une faille sur Secure Email Gateway permettant l'écriture de fichiers arbitraires sur l'OS sous-jacent. Parallèlement, une vulnérabilité PAN-OS (CVE-2026-0322) est exploitée pour obtenir des privilèges root sur les firewalls Palo Alto, la CISA imposant un correctif sous trois jours aux agences fédérales américaines. [Cisco](https://www.csoonline.com/article/4235801/cisco-warns-of-actively-exploited-secure-email-gateway-flaw.html) · [Palo Alto](https://www.csoonline.com/article/4235787/attackers-exploit-palo-alto-pan-os-flaw-for-root-access-as-cisa-orders-three-day-fix.html)
+
+- **Évolution des tactiques d'extorsion par ransomware** : Les attaquants étendent la pression au-delà du chiffrement et de l'exfiltration de données, en recourant à l'intimidation physique des employés et de leurs familles pour forcer le paiement des rançons. [CSO Online](https://www.csoonline.com/article/4235782/ransomware-extortion-gets-personal-as-attackers-target-employees-families.html)
+
+**Évaluation du scoring**
+
+- **5/5** — [Cisco warns of actively exploited Secure Email Gateway flaw](https://www.csoonline.com/article/4235801/cisco-warns-of-actively-exploited-secure-email-gateway-flaw.html) — CSO Online. Raison : CVE critique exploitée activement sur un produit Cisco Secure Email Gateway, impact direct sur la sécurité des entreprises. Patch urgent recommandé.
+- **5/5** — [Attackers exploit Palo Alto PAN-OS flaw for root access as CISA orders three-day fix](https://www.csoonline.com/article/4235787/attackers-exploit-palo-alto-pan-os-flaw-for-root-access-as-cisa-orders-three-day-fix.html) — CSO Online. Raison : CVE critique PAN-OS exploitée pour root ; CISA impose correctif urgent. Impact direct sur un grand pare-feu, nécessite action immédiate des équipes sécurité.
+- **4/5** — [Ransomware extortion gets personal as attackers target employees’ families](https://www.csoonline.com/article/4235782/ransomware-extortion-gets-personal-as-attackers-target-employees-families.html) — CSO Online. Raison : Analyse solide d'une tendance inquiétante : chantage physique et usage de l'IA par les ransomwares, avec des données chiffrées. Pertinent pour les RSSI/CTO en veille stratégique.</description>
+      <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Exploitation active de failles PAN-OS et Langflow</strong> : Palo Alto Networks corrige une RCE authentifiée (CVE-2026-0322, CVSS 8.6) sur l'interface de management PAN-OS, exploitée en conditions réelles. Parallèlement, une faille critique d'exécution de code authentifiée dans Langflow fait l'objet de plus de 1 400 tentatives d'exploitation détectées via honeypots. <a href="https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html">PAN-OS</a> · <a href="https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html">Langflow</a></li>
+<li><strong>NVIDIA élargit sa gamme Nemotron avec des modèles optimisés pour agents</strong> : NVIDIA publie Nemotron 3.5 Super VL (120B paramètres), un modèle open-weight conçu pour la vitesse d'exécution et la précision des agents spécialisés toujours actifs, accompagné de deux déclinaisons edge dont Bolt 74B-A9B optimisé pour tourner sur 24 Go de VRAM. <a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/">NVIDIA Blog</a></li>
 </ul>
 
 <ul>
-<li><strong>AhsayCBS : correctifs incomplets exploités pour déposer webshells et miners</strong> : Deux vulnérabilités (CVE-2026-105133, CVE-2026-105134) dans AhsayCBS permettent de contourner l'authentification et d'exécuter du code. Les attaquants les utilisent pour installer des webshells et le mineur XMRig ; un nouveau correctif vient d'être publié après un premier patch insuffisant. <a href="https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Campagne GhostAction : ~1 900 comptes GitHub compromis</strong> : La campagne de vol de credentials GhostAction a ciblé plus de 30 000 dépôts en compromettant environ 1 900 comptes utilisateurs GitHub, avec un pic d'activité observé les 8 et 9 octobre 2026. <a href="https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Fuite de données historiques à la Legal Aid Agency britannique</strong> : L'agence britannique d'aide juridique confirme que des attaquants ayant pénétré ses systèmes en avril 2025 ont exfiltré des dossiers remontant jusqu'à 1978. <a href="https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Microsoft corrige un bug d'affichage sur Windows 11</strong> : Un correctif résout un problème connu provoquant des écrans noirs, des échecs de chargement du bureau et des plantages de l'Explorateur après installation des mises à jour Windows 11 d'août. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-windows-black-screens-explorer-crashes/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Démantèlement du marché cybercriminel OLVX</strong> : L'administrateur présumé de la place de marché OLVX a été arrêté en Macédoine du Nord lors d'une opération conjointe de la police locale et du FBI. <a href="https://therecord.media/olvx-cybercrime-marketplace-arrest-north-macedonia">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>Starshield : rétablissement du service pour l'Ukraine après des restrictions</strong> : L'armée ukrainienne peut de nouveau utiliser le service satellite Starshield en mobilité, après une interruption soudaine qui avait perturbé des missions de drones sur la ligne de front. <a href="https://therecord.media/ukraine-says-starshield-working-again-after-disruption">The Record</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/">UK Legal Aid Agency: Hackers stole records dating back to 1978</a> — BleepingComputer. Raison : Incident cyber majeur touchant un secteur critique (justice UK) avec vol de données sensibles remontant à 1978, impact potentiel sur la chaîne d'approvisionnement et la gouvernance.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html">Langflow's Critical Authenticated RCE Flaw Targeted in 1,423 Honeypot Exploit Attempts</a> — The Hacker News. Raison : CVE critique (score 9.9) activement exploitée sur une plateforme IA open source. Impact direct sur les infrastructures utilisant Langflow, nécessitant une action immédiate.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html">AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches</a> — The Hacker News. Raison : CVE exploitées activement pour déployer web shells et mineurs, correctifs incomplets. Impact direct sur les entreprises utilisant AhsayCBS, nécessite action immédiate.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html">Palo Alto Networks Patches PAN-OS Authenticated RCE Flaw Amid Active Exploitation</a> — The Hacker News. Raison : CVE critique PAN-OS activement exploitée, impact direct sur les infrastructures des RSSI/CTO. Patch urgent à déployer.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-causing-windows-black-screens-explorer-crashes/">Microsoft fixes bug causing Windows black screens, Explorer crashes</a> — BleepingComputer. Raison : Correctif Microsoft pour bug impactant stabilité post-mise à jour Windows 11. Pertinent pour RSSI/CTO car touche parc utilisateur entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/ghostaction-compromises-about-1900.html">GhostAction Compromises About 1,900 GitHub Accounts, Targets Over 30,000 Repositories</a> — The Hacker News. Raison : Campagne de credential-theft ciblant GitHub, compromettant 1900 comptes et 30 000 dépôts. Impact direct sur la chaîne d'approvisionnement logicielle, pertinent pour RSSI et CTO.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/ukraine-says-starshield-working-again-after-disruption">Ukraine says Elon Musk's Starshield service restored after restrictions disrupted drone missions</a> — The Record. Raison : Incident impactant l'usage militaire de Starshield, révélant une dépendance stratégique et des risques pour les communications critiques.</li>
-<li><strong>3/5</strong> — <a href="https://isc.sans.edu/diary/rss/33428">ISC Stormcast For Thursday, October 15th, 2026 https://isc.sans.edu/podcastdetail/10138, (Thu, Oct 15th)</a> — SANS ISC. Raison : Podcast technique du SANS ISC, source fiable pour experts cybersécurité. Contenu probablement utile mais inconnu avant écoute. À survoler pour décider.</li>
-<li><strong>3/5</strong> — <a href="https://therecord.media/olvx-cybercrime-marketplace-arrest-north-macedonia">North Macedonian police arrest alleged administrator behind OLVX cybercrime market</a> — The Record. Raison : Arrestation d'un administrateur de marché cybercriminel. Information utile pour la veille menace mais sans détail technique ou impact direct immédiat.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>AI Act : un calendrier assoupli</strong> : Bruxelles accorde un délai d'un an aux entreprises pour se mettre en conformité, ce qu'elles réclamaient pour absorber la complexité réglementaire sans casser l'innovation. <a href="https://www.journaldunet.com/intelligence-artificielle/1556651-ai-act-un-an-de-repit-comment-remettre-les-priorites-dans-l-ordre/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Enquêtes européennes sur les agents IA offensifs</strong> : La Commission enquête sur OpenAI et Anthropic après que leurs agents ont mené des piratages contre des sites gouvernementaux australiens, en s'appuyant sur les dispositions de l'AI Act. <a href="https://next.ink/261691/leurope-lance-des-enquetes-sur-les-piratages-par-agents-ia-et-met-en-avant-lai-act/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Web scraping encadré par le CEPD</strong> : Le Comité européen de la protection des données précise les limites légales du web scraping pour l'entraînement des IA génératives, un sujet à fort risque juridique pour les éditeurs de modèles. <a href="https://www.journaldunet.com/cybersecurite/1556609-le-cepd-clarifie-le-cadre-juridique-du-web-scraping/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Orchestrateurs d'agents IA dans la relation client</strong> : Le marché bascule du CRM/CCaaS vers des plateformes orchestrant des micro-agents et des interactions agent-to-agent (A2A), une évolution à suivre pour les DSI qui intégreront ces briques. <a href="https://www.journaldunet.com/intelligence-artificielle/1556669-apres-le-crm-et-le-ccaas-l-ere-des-orchestrateurs-d-agents-ia/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Cyberattaque sur des frigos connectés : un signal faible à ne pas ignorer</strong> : L'attaque touchant des centaines de supermarchés français expose la surface de risque liée aux IoT et aux équipements connectés dans les infrastructures critiques, bien au-delà du seul secteur retail. <a href="https://www.journaldunet.com/cybersecurite/1556679-cyberattaques-sur-les-frigos-l-arbuste-qui-cache-la-foret/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Fortnite arrive sur Linux avec un nouveau launcher</strong> : Epic Games concrétise le portage de Fortnite sur Linux, un signal fort pour la viabilité de l'OS dans le gaming, poussé par l'amélioration des couches de compatibilité et des outils maison. <a href="https://next.ink/261927/nouveau-lanceur-fortnite-sur-linux-le-signal-fort-depic-games-a-lindustrie/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Tutoriel : monter son résolveur DNS avec Unbound</strong> : Next.ink détaille l'installation d'un résolveur local sur Raspberry Pi, VM Freebox ou VPS, une solution simple pour ne plus dépendre des DNS des FAI ou des géants du numérique. <a href="https://next.ink/260020/tuto-installer-facilement-son-propre-resolveur-dns-sur-raspberry-pi-vm-freebox-vps/">Next.ink</a></li>
+<li><strong>AWS formalise un cadre de confiance pour l'autonomie des agents IA</strong> : AWS propose "Trust in Depth", une approche en cinq couches (scope, know, bound, observe, prove) visant à déléguer des actions aux agents uniquement lorsqu'elles sont vérifiables, et à réserver les décisions critiques au jugement humain. <a href="https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/">AWS Machine Learning</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/intelligence-artificielle/1556651-ai-act-un-an-de-repit-comment-remettre-les-priorites-dans-l-ordre/">AI Act : un an de répit, comment remettre les priorités dans l'ordre</a> — Journal du Net. Raison : Sujet réglementaire structurant (AI Act) avec impact direct sur la conformité et la stratégie IA des entreprises. Analyse de fond attendue.</li>
-<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1556679-cyberattaques-sur-les-frigos-l-arbuste-qui-cache-la-foret/">Cyberattaques sur les frigos : l'arbuste qui cache la forêt ?</a> — Journal du Net. Raison : Analyse d'un incident cyber réel sur des équipements connectés grand public, avec implications pour les infrastructures critiques. Pertinent pour RSSI et architecte SI.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/261691/leurope-lance-des-enquetes-sur-les-piratages-par-agents-ia-et-met-en-avant-lai-act/">L’Europe lance des enquêtes sur les piratages par agents IA et met en avant l’AI Act</a> — Next.ink. Raison : Enquêtes réglementaires UE sur agents IA et mise en avant de l'AI Act : impact direct sur la gouvernance cyber et la stratégie IA en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1556609-le-cepd-clarifie-le-cadre-juridique-du-web-scraping/">Le CEPD clarifie le cadre juridique du web scraping</a> — Journal du Net. Raison : Clarification réglementaire du CEPD sur le web scraping pour l'IA, impact direct sur la conformité et la gouvernance des données en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/261927/nouveau-lanceur-fortnite-sur-linux-le-signal-fort-depic-games-a-lindustrie/">Nouveau lanceur, Fortnite sur Linux : le signal fort d’Epic Games à l’industrie</a> — Next.ink. Raison : Annonce du portage d'un jeu sur Linux. Pas de contenu cybersécurité, IA ou outillage dev. Intéressant comme signal marché mais hors sujet pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/intelligence-artificielle/1556669-apres-le-crm-et-le-ccaas-l-ere-des-orchestrateurs-d-agents-ia/">Après le CRM et le CCaaS, l'ère des orchestrateurs d'agents IA</a> — Journal du Net. Raison : Sujet émergent sur l'orchestration d'agents IA en relation client, pertinent pour l'IA en entreprise mais sans détail technique ou sécurité.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/260020/tuto-installer-facilement-son-propre-resolveur-dns-sur-raspberry-pi-vm-freebox-vps/">\[Tuto\] Installer facilement son propre résolveur DNS sur Raspberry Pi, VM Freebox, VPS</a> — Next.ink. Raison : Tutoriel technique pour installer un résolveur DNS local avec unbound. Utile pour les experts cherchant une solution simple, mais sans nouveauté majeure ni impact stratégique.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Correctifs incomplets et risque OT</strong> : Une vulnérabilité critique sur Ivanti ICS (CVE-2026-104935) n'a été que partiellement corrigée en juillet, laissant une porte ouverte aux attaquants. Dans le secteur industriel, des chaînes de supermarchés européennes ont perdu des millions d'euros à cause de firmware non patché sur leurs systèmes de réfrigération, géré par des tiers. <a href="https://www.darkreading.com/vulnerabilities-threats/ivanti-ics-zero-day-attacks-vendor-patching">Dark Reading - Ivanti</a> · <a href="https://www.darkreading.com/ics-ot-security/eu-grocers-unpatched-fridge-firmware">Dark Reading - OT</a></li>
-</ul>
-
-<ul>
-<li><strong>Vol furtif de secrets développeurs via Claude Code</strong> : Une faille zero-click dans le panneau d'aperçu de Claude Code Desktop permet d'exfiltrer silencieusement des clés SSH, tokens OAuth et identifiants AWS. Le risque est accentué par l'intégration croissante de ces outils dans les chaînes CI/CD. <a href="https://www.darkreading.com/threat-intelligence/new-anthropic-sneakpeek-silent-zero-click-threat">Dark Reading</a></li>
-</ul>
-
-<ul>
-<li><strong>Industrialisation du phishing-as-a-service</strong> : Microsoft a démantelé "Yam Store", une place de marché criminelle responsable d'un milliard de messages malveillants. L'opération, menée sur près d'un an avec des partenaires internationaux, illustre le passage à l'échelle industrielle de la fourniture d'outils de phishing clés en main. <a href="https://www.csoonline.com/article/4235517/as-phishing-as-a-service-goes-industrial-microsoft-takes-down-a-marketplace-behind-1-billion-messages.html">CSO Online</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.darkreading.com/vulnerabilities-threats/ivanti-ics-zero-day-attacks-vendor-patching">Ivanti ICS Zero-Day Attacks Highlight Vendor Patching Hurdles</a> — Dark Reading. Raison : CVE critique 0-day avec bypass d'authentification et RCE, patch partiel laissant une porte ouverte aux attaquants. Impact direct sur les systèmes ICS en entreprise.</li>
-<li><strong>5/5</strong> — <a href="https://www.darkreading.com/threat-intelligence/new-anthropic-sneakpeek-silent-zero-click-threat">Anthropic 'SneakPeek' Flaw Is a Silent Zero-Click Threat</a> — Dark Reading. Raison : Vulnérabilité zero-click dans Claude Code Desktop exposant directement credentials SSH, AWS et tokens OAuth. Impact critique sur développeurs et RSSI, nécessite réaction immédiate.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/ics-ot-security/eu-grocers-unpatched-fridge-firmware">EU Grocers Pay a Steep Price for Unpatched Fridge Firmware</a> — Dark Reading. Raison : Incident cyber réel sur OT en milieu retail avec impact financier significatif. Analyse de dépendance aux prestataires et firmware non patché, pertinent pour RSSI/CTO.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4235517/as-phishing-as-a-service-goes-industrial-microsoft-takes-down-a-marketplace-behind-1-billion-messages.html">As phishing-as-a-service goes industrial, Microsoft takes down a marketplace behind 1 billion messages</a> — CSO Online. Raison : Démantèlement d'une marketplace PhaaS massive (1 milliard de messages) : impact direct sur la menace cyber, analyse opérationnelle utile pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/">Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models</a> — NVIDIA Blog. Raison : Annonce de modèles open source de NVIDIA, incluant un modèle de 120B et des versions edge optimisées. Pertinent pour experts en IA et déploiement local.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/">Trust in Depth: Giving agents more autonomy without losing control</a> — AWS Machine Learning. Raison : Article AWS présentant une approche de gouvernance des agents IA, utile pour connaître leur stratégie, mais sans détail technique ni validation indépendante.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Sécurité IoT industrielle</strong> : Une chaîne de 700 supermarchés a subi un incident majeur (pertes financières et départs d'incendie) causé par des réfrigérateurs connectés obsolètes exposés sur Internet sans protection. <a href="https://arstechnica.com/security/2026/10/hack-costing-millions-and-sparking-fires-stemmed-from-poor-security/">Ars Technica</a></li>
+<li><strong>Apprentissage continu des agents IA</strong> : CopilotKit propose CLiF, une plateforme qui convertit les traces d'exécution et les actions utilisateurs en données d'évaluation et de fine-tuning, pour améliorer la fiabilité des agents sur des tâches complexes. <a href="https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/">MarkTechPost</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles vocaux</strong> : SpaceXAI publie Grok Voice 3.0, un modèle speech-to-speech qui prend la première place de l'index Artificial Analysis (score 86.9) et intègre appels d'outils, facturé 0,08 $/min. Fish Audio sort Drama 3, un modèle TTS de 35B paramètres (3B actifs) en open weights sous licence à revenus plafonnés, couvrant 83 langues. <a href="https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/">MarkTechPost (Grok)</a> · <a href="https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/">MarkTechPost (Drama 3)</a></li>
-</ul>
-
-<ul>
-<li><strong>Benchmark OCR</strong> : Datalab publie OmniParseBench, un benchmark ouvert pour évaluer les parseurs OCR via 16 288 tests binaires sur 2 937 pages en 92 langues, avec scores filtrables par langue, script ou étiquette. <a href="https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/">MarkTechPost</a></li>
-</ul>
-
-<ul>
-<li><strong>Régulation IA & protection des mineurs</strong> : Huit États américains poursuivent OpenAI, accusant l'entreprise de nuire aux enfants et de tromper les utilisateurs sur la sécurité de ChatGPT. <a href="https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety">The Verge</a></li>
+<li><strong>Agents embarqués dans l'automobile</strong> : Rivian prépare l'intégration d'agents IA dans ses véhicules, avec des précisions attendues lors de son événement "AI & Autonomy Day" en décembre. <a href="https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/">TechCrunch</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/10/fridge-hack-costing-millions-and-sparking-fires-stemmed-from-poor-security/">Fridge hack costing millions and sparking fires stemmed from poor security</a> — Ars Technica — Tech Lab. Raison : Incident cyber réel touchant un secteur critique (grande distribution) via des équipements obsolètes exposés, avec impact financier et physique. Analyse utile pour RSSI/CTO.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/14/meet-grok-voice-3-0-spacexai-voice-agent-model-ranks-1-on-artificial-analysis/">Meet Grok Voice 3.0: SpaceXAI Voice Agent Model Ranks #1 on Artificial Analysis</a> — MarkTechPost. Raison : Annonce d'un nouveau modèle vocal IA classé #1 sur un benchmark. Intéressant pour les experts IA, mais sans lien direct avec la cybersécurité ou les sujets ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/14/datalab-omniparsebench-open-ocr-document-parsing-benchmark/">Datalab Releases OmniParseBench: An Open OCR Benchmark With 16,288 Pass/Fail Tests to Audit OCR Parsers</a> — MarkTechPost. Raison : Benchmark OCR ouvert, technique et reproductible, utile pour évaluer des parsers. Absence d'angle cybersécurité ou impact direct sur les pratiques des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/">Fish Audio Releases Drama 3, a 35B Open-Weight MoE Text-to-Speech Model</a> — MarkTechPost. Raison : Modèle TTS open-weight avec MoE et 83 langues, intéressant pour veille IA mais pas de lien direct avec cybersécurité ou dev tooling.</li>
-<li><strong>3/5</strong> — <a href="https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety">Eight states sue OpenAI, saying ChatGPT isn&#8217;t safe for kids</a> — The Verge — AI. Raison : Action en justice d'États américains contre OpenAI pour sécurité des mineurs. Sujet réglementaire intéressant mais sans impact technique direct pour un public français.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/">AI agents are coming to Rivian’s cars</a> — TechCrunch — AI. Raison : Annonce de fonctionnalité IA dans un véhicule, sans détail technique ni lien avec la cybersécurité. Intérêt limité pour un public expert.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/15/copilotkit-releases-clif-a-continual-learning-platform-that-turns-agent-traces-and-user-actions-into-skills-evals-and-fine-tuning-data/">CopilotKit Releases CLiF: A Continual Learning Platform That Turns Agent Traces and User Actions into Skills, Evals, and Fine-Tuning Data</a> — MarkTechPost. Raison : Outil intéressant pour améliorer les agents IA via apprentissage continu, mais ciblé développeurs, pas sécurité ou stratégie d'entreprise.</li>
 </ul>
 
-<h2>IA — Recherche</h2>
+<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Sécurité des agents autonomes et injection indirecte</strong> : Un agent dont la mission unique est de maintenir des humains en vie peut être détourné pour tuer via une injection de prompt différée et multi-tours, démontrant une faille critique dans les systèmes à haut risque. <a href="https://arxiv.org/abs/2610.15153">Can agents whose sole duty is to keep humans alive be hijacked to kill?</a></li>
+<li><strong>NGINX : 5 vulnérabilités corrigées, dont une présente depuis 2005</strong> : Trois bugs mémoire peuvent permettre une exécution de code ou un crash de processus worker ; un bug TLS peut contourner la vérification des certificats clients. Mise à jour vers les versions 1.30.6 ou 1.31.7 requise. <a href="https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Évaluation des jailbreaks par similarité sémantique</strong> : Pour mieux évaluer le succès des attaques sur les LLM, une nouvelle méthode utilise un jeu de reconstruction sémantique afin de distinguer une réponse interdite d'un refus ou d'une réponse hors-sujet, réduisant ainsi les faux positifs. <a href="https://arxiv.org/abs/2610.19306">Did the LLM Answer the Question?</a></li>
+<li><strong>Next.js : deux failles critiques RCE non authentifiées</strong> : Un correctif hors cycle publié le 14 octobre corrige une exécution de code dans les React Server Components et une autre dans librsvg, ainsi qu'un déni de service. <a href="https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Désapprentissage multimodal fin</strong> : CUSE propose une méthode de désapprentissage pour les MLLMs qui combine guidance contrefactuelle et auto-distillation, capable de supprimer une information sensible tout en préservant le contenu non-cible au sein d'une même réponse. <a href="https://arxiv.org/abs/2610.14763">CUSE</a></li>
+<li><strong>Drupal : faille critique dans le module Field UI</strong> : L'exploitation nécessite des modules contribués spécifiques mais peut mener à une RCE sur le serveur. Correctifs disponibles dans les versions 11.4.10, 11.3.19 et 10.6.19. <a href="https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Optimisation de l'inférence des modèles hybrides</strong> : GateSight exploite la mémoire récurrente des couches Gated DeltaNet pour anticiper et évincer le cache KV des couches d'attention, réduisant ainsi la mémoire de service sans sacrifier la performance. <a href="https://arxiv.org/abs/2610.14754">GateSight</a></li>
+<li><strong>Help TDS : plus de 20 000 domaines Cloudflare Pages détournés pour des arnaques au support technique</strong> : Le système de distribution de trafic Help TDS est lié au programme d'affiliation russe Hotejka (ex-ROI777), actif depuis 2017, et fournit des templates PHP pour diffuser des scams. <a href="https://thehackernews.com/2026/10/help-tds-linked-to-hotejka-as-20000.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents "caméra-first"</strong> : Le principal défi pour les agents opérant en temps réel sur un flux visuel n'est pas la reconnaissance, mais la capacité à agir de manière cohérente sur un monde qui se déroule en continu. <a href="https://arxiv.org/abs/2610.14772">How Should a Camera-First AI Agent Work?</a></li>
+<li><strong>Campagnes de phishing ciblant les États post-soviétiques</strong> : Une opération de cyber-espionnage menée depuis environ deux ans contre des gouvernements d'Asie centrale serait attribuable à des acteurs basés au Kazakhstan. <a href="https://therecord.media/suspected-kazakhstan-phishing-central-asia-espionage">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Orchestration d'outils par génération de code</strong> : ProgAgent entraîne les LLM à produire un code orchestreur plutôt que d'appeler les outils séquentiellement, ce qui améliore leur capacité à planifier et exécuter des tâches complexes à long terme. <a href="https://arxiv.org/abs/2610.14774">ProgAgent</a></li>
+<li><strong>Attaques usurpant des produits IA visant les entreprises américaines</strong> : Entre avril et octobre 2026, 1 258 analyses en sandbox ont été liées à des campagnes distribuant des malwares et volant des sessions navigateur via de fausses applications IA, augmentant la charge des MSSP. <a href="https://thehackernews.com/2026/10/fake-ai-attacks-spread-across-us.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Agents auto-améliorables et réflexifs</strong> :</li>
-</ul>
-    - Un nouveau cadre Lean-vérifié définit des garanties formelles sur le regret contrefactuel pour les agents qui apprennent de leurs retours sans modifier leurs poids, clarifiant quand la réflexion locale améliore la performance à long terme. <a href="https://arxiv.org/abs/2610.14790">Counterfactual Regret for Reflective Agents</a>
-    - L'apprentissage basé sur l'expérience est amélioré en guidant les agents non plus sur le résultat final, mais sur la qualité de leur trajectoire d'exécution, ce qui permet un progrès plus fin et continu. <a href="https://arxiv.org/abs/2610.14877">Beyond Outcome Feedback</a>
-    - EvoCowork teste la capacité d'agents à s'améliorer sur des tâches de bureau réelles, en vérifiant si les gains sont dus à des procédures réutilisables ou à du surapprentissage spécifique à une tâche. <a href="https://arxiv.org/abs/2610.14828">EvoCowork</a>
-
-<ul>
-<li><strong>Benchmarks et architectures pour agents autonomes</strong> :</li>
-</ul>
-    - <strong>Architecture de référence en entreprise</strong> : Un modèle architectural formel structure l'intégration de l'IA agentique dans les logiciels d'entreprise, en détaillant les responsabilités, interactions et points de variabilité. <a href="https://arxiv.org/abs/2610.14818">A Reference Architecture for Integrating Agentic AI</a>
-    - <strong>Survie en monde persistant</strong> : ASIWorld est un bac à sable persistant conçu pour évaluer les agents autonomes sur leur capacité à enchaîner des actions cohérentes à très long terme avec des observations incomplètes. <a href="https://arxiv.org/abs/2610.14807">ASIWorld</a>
-    - <strong>Auto-amélioration récursive</strong> : Un système de comptabilité pré-enregistré et auditable permet de falsifier les affirmations d'auto-amélioration récursive en distinguant les mécanismes créés par le système lui-même de ceux fournis par les concepteurs. <a href="https://arxiv.org/abs/2610.14843">Pre-Registered Genesis Accounting for Recursive Self-Improvement</a>
-
-<ul>
-<li><strong>Apprentissage par renforcement multi-agents</strong> : MARL-BattleGrounds est un nouveau benchmark en JAX, économe en ressources, dédié aux environnements compétitifs et hétérogènes, comblant un manque pour la recherche en MARL. <a href="https://arxiv.org/abs/2610.14883">MARL-BattleGrounds</a></li>
+<li><strong>Fuite de données à l'agence d'aide juridique britannique</strong> : L'étendue de la compromission est plus large qu'annoncé, avec des enregistrements volés remontant jusqu'à 1978. <a href="https://therecord.media/uk-legal-aid-cyberattack-data">The Record</a></li>
 </ul>
 
 <ul>
-<li><strong>Synthèse de programmes analytiques</strong> : LYNX améliore la traduction de requêtes analytiques en code exécutable en ancrant la génération dans les données réelles et en utilisant une boucle de raffinement en boucle fermée. <a href="https://arxiv.org/abs/2610.14777">LYNX</a></li>
+<li><strong>Fin du support standard de Windows Server 2022</strong> : Microsoft a annoncé le passage en support étendu jusqu'en octobre 2031 ; les mises à jour de sécurité continuent mais sans évolutions fonctionnelles ni support sans contrat. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2022-reached-end-of-mainstream-support/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèles d'IA comme répondants synthétiques</strong> : Un audit psychométrique révèle que les modèles de décision, bien que produisant des distributions de réponses probables, échouent à satisfaire les critères de validité pour une utilisation en tant qu'échantillons synthétiques dans les sondages. <a href="https://arxiv.org/abs/2610.14912">Probable but Not Valid</a></li>
+<li><strong>Pentest IA vs humain</strong> : L'IA peut identifier des vulnérabilités échappant aux testeurs humains, mais présente des lacunes en cohérence, évaluation du risque et compréhension du contexte métier. Les deux approches restent complémentaires. <a href="https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Applications sectorielles</strong> :</li>
-</ul>
-    - <strong>Optimisation réseau mobile</strong> : PEAM est un agent embarqué sur appareil qui personnalise et automatise la configuration réseau mobile de manière économe en fonction de l'activité de l'utilisateur. <a href="https://arxiv.org/abs/2610.14855">PEAM</a>
-    - <strong>Tournées de livraison</strong> : GREAT-ESDD utilise un réseau d'attention sur graphe pour orienter les décisions de livraison, réduisant les coûts de routage en intégrant des options de livraison hors domicile. <a href="https://arxiv.org/abs/2610.14792">GREAT-ESDD</a>
-    - <strong>Prévision météorologique</strong> : WeatherBridge adapte en entrée les états initiaux issus de modèles physiques opérationnels aux modèles de prévision data-driven pré-entraînés sur ERA5, résolvant le problème de décalage de distribution pour un usage en production. <a href="https://arxiv.org/abs/2610.14863">WeatherBridge</a>
-
-<ul>
-<li><strong>Gestion des séries temporelles et détection d'anomalies</strong> : Le dataset CESNET-TimeSeries26 fournit plusieurs années de trafic réseau pour évaluer la robustesse des modèles de prévision face à la saisonnalité annuelle, aux dérives de concept et aux anomalies long-terme. <a href="https://arxiv.org/abs/2610.14799">CESNET-TimeSeries26</a></li>
-</ul>
-
-<ul>
-<li><strong>Évaluation robuste en RL</strong> : Une nouvelle méthode en modélisation in-contexte réduit l'écart d'approximation du risque dans l'échantillonnage prédictif de tâches, améliorant l'efficacité du post-entraînement de LLMs par RL. <a href="https://arxiv.org/abs/2610.14913">Bridging Risk Approximation Gaps</a></li>
+<li><strong>IA en réponse à incident : la confiance n'est pas une validation</strong> : Les outils d'IA gagnent en assurance dans leurs résultats plus vite que les praticiens ne développent des méthodes de vérification fiables. Des modèles de gouvernance et de validation deviennent indispensables. <a href="https://thehackernews.com/2026/10/why-ai-confidence-is-not-validation.html">The Hacker News</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2610.15153">Can agents whose sole duty is to keep humans alive be hijacked to kill? Delayed multi-turn derived-action trap attacks in simulated high-stakes environments</a> — arXiv cs.AI. Raison : Recherche sur l'injection de prompts différée pour détourner un agent IA vers une action létale, pertinente pour la sécurité des agents autonomes en environnement critique.</li>
-<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2610.19306">Did the LLM Answer the Question? A Semantic Reconstruction Game for Jailbreak Evaluation</a> — arXiv cs.LG. Raison : Méthode d'évaluation des jailbreaks LLM avec impact direct sur la fiabilité des ASR, pertinent pour la sécurité des IA en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14754">GateSight: Recurrent Memory Anticipates Attention Memory for Query-Agnostic KV Eviction in Hybrid LLMs</a> — arXiv cs.AI. Raison : Papier de recherche sur une optimisation mémoire pour LLMs hybrides. Intéressant pour l'architecture SI, mais sans lien direct avec la cybersécurité ou les priorités opérationnelles des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14763">CUSE: Fine-Grained Multimodal Unlearning with Counterfactual Guidance and On-Policy Self-Distillation</a> — arXiv cs.AI. Raison : Papier de recherche sur le désapprentissage multimodal fin. Intéressant pour la sécurité des MLLMs, mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14772">How Should a Camera-First AI Agent Work?</a> — arXiv cs.AI. Raison : Papier de recherche arXiv sur les agents IA caméra-first. Intéressant pour l'architecture temps réel mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14774">ProgAgent: Learning Tool Orchestration through Programmatic Training</a> — arXiv cs.AI. Raison : Papier de recherche sur l'orchestration programmatique d'outils par LLM. Intéressant pour les experts en automatisation, mais l'impact pratique reste incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14777">LYNX: Analytical Program Synthesis via Grounding and Closed-Loop Refinement</a> — arXiv cs.AI. Raison : Papier de recherche sur la synthèse de programmes analytiques avec LLMs. Intéressant pour l'IA en entreprise, mais impact pratique incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14790">Counterfactual Regret for Reflective Agents with Lean-Verified Guarantees</a> — arXiv cs.AI. Raison : Papier de recherche sur les agents réflexifs avec garanties vérifiées, intéressant mais sans application pratique immédiate pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14792">GREAT-ESDD: Graph Edge Attention Network for Effectively Steered Delivery Decisions</a> — arXiv cs.AI. Raison : Papier de recherche sur un framework de pricing et routage pour livraison le jour même. Hors périmètre cybersécurité et IA entreprise, intérêt limité pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14799">CESNET-TimeSeries26: A Multi-Year Network Traffic Time Series Dataset for Annual Seasonality, Concept Drift, and Long-Term Anomaly Detection</a> — arXiv cs.AI. Raison : Dataset multi-annuel pour détection d'anomalies réseau. Intéressant pour la recherche, mais impact pratique immédiat incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14807">ASIWorld: Benchmarking Autonomous Agents in a Persistent Survival Sandbox</a> — arXiv cs.AI. Raison : Papier de recherche sur un benchmark pour agents autonomes en environnement persistant. Intéressant pour l'évaluation des agents IA, mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14818">A Reference Architecture for Integrating Agentic AI into Enterprise Software: Responsibilities, Interactions, and Variability</a> — arXiv cs.AI. Raison : Article de recherche sur une architecture de référence pour l'IA agentive en entreprise. Intéressant pour les architectes SI mais sans détail pratique immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14828">EvoCowork: A Benchmark for Real-World Office Tasks</a> — arXiv cs.AI. Raison : Benchmark académique pour agents IA sur tâches bureautiques. Intéressant pour évaluer la robustesse des agents, mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14843">Pre-Registered Genesis Accounting for Recursive Self-Improvement: First Audited Operator-Genesis Events in a Physics-Discovery Runtime</a> — arXiv cs.AI. Raison : Papier de recherche sur l'audit de l'auto-amélioration récursive en IA. Sujet pointu mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14855">PEAM: On-device Communication Agent for Personalized, Efficient and Autonomous Mobile Network Configuration</a> — arXiv cs.AI. Raison : Papier de recherche sur un agent IA pour configuration réseau mobile. Intéressant pour l'IA embarquée mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14863">WeatherBridge: Forecast-Aware Multi-Source Input Adaptation for Pretrained Weather Forecasting Models</a> — arXiv cs.AI. Raison : Papier de recherche IA appliqué à la prévision météo, intéressant mais hors périmètre cybersécurité/dev pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14877">Beyond Outcome Feedback: Trajectory-Quality-Guided Experience-based Learning</a> — arXiv cs.AI. Raison : Papier de recherche sur l'apprentissage par expérience des LLM, intéressant mais sans lien direct avec la cybersécurité ou les pratiques expertes.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14883">MARL-BattleGrounds: A Novel JAX-native Benchmark for Heterogeneous and Competitive Multi-agent RL</a> — arXiv cs.AI. Raison : Benchmark JAX pour MARL hétérogène, potentiel pour agents IA, mais hors cybersécurité et sans impact direct sur les pratiques des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14912">Probable but Not Valid: A Psychometric Audit of Decision Models as Synthetic Survey Respondents</a> — arXiv cs.AI. Raison : Papier de recherche sur l'utilisation des LLM comme répondants synthétiques pour des enquêtes psychométriques. Intéressant mais sans lien direct avec la cybersécurité ou l'IA en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.14913">Bridging Risk Approximation Gaps in Model Predictive Task Sampling via In-Context Modeling</a> — arXiv cs.AI. Raison : Papier de recherche en IA (RL, optimisation), intéressant pour experts mais pertinence directe pour cybersécurité non établie.</li>
+<li><strong>5/5</strong> — <a href="https://therecord.media/uk-legal-aid-cyberattack-data">UK Legal Aid Agency hack worse than thought, with stolen records dating back to 1978</a> — The Record. Raison : Incident cyber majeur touchant un secteur critique gouvernemental avec données sensibles très anciennes, impact direct sur la gouvernance et la conformité.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html">NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks</a> — The Hacker News. Raison : Plusieurs vulnérabilités NGINX dont une avec potentiel RCE et un contournement de vérification de certificat TLS. Impact direct sur une techno très utilisée en entreprise.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html">Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing</a> — The Hacker News. Raison : Deux RCE critiques non authentifiées sur Next.js, technologie très utilisée par le public cible. Patch out-of-band urgent nécessitant action immédiate.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html">Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules</a> — The Hacker News. Raison : CVE critique avec RCE non authentifié sur Drupal via modules contribués, patch critique publié. Impact direct sur une technologie largement utilisée en entreprise, action urgente requise.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/help-tds-linked-to-hotejka-as-20000.html">Help TDS Linked to Hotejka as 20,000+ Cloudflare Pages Domains Host Tech Support Scams</a> — The Hacker News. Raison : Analyse d'un TDS lié à un programme d'affiliation russe, avec plus de 20 000 domaines Cloudflare Pages utilisés pour des escroqueries. Pertinent pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/is-ai-pentesting-as-good-as-a-human-pentester/">Is AI pentesting as good as a human pentester?</a> — BleepingComputer. Raison : Comparaison IA vs humain en pentest, sujet clé pour RSSI/CTO. Source sérieuse, analyse des limites et forces. Utile pour décision d'adoption.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2022-reached-end-of-mainstream-support/">Microsoft: Windows Server 2022 reached end of mainstream support</a> — BleepingComputer. Raison : Impact direct pour les RSSI/CTO gérant des infrastructures Windows: fin du support mainstream impose une planification de migration ou maintien en extended support jusqu'en 2031.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/fake-ai-attacks-spread-across-us.html">Fake AI Attacks Spread Across US Companies: How MSSPs Can Stop Incidents Early</a> — The Hacker News. Raison : Campagne d'attaques utilisant l'IA comme leurre, ciblant entreprises US avec malware et vol de sessions. Analyse de 1 258 échantillons pertinente pour RSSI et SOC.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/why-ai-confidence-is-not-validation.html">Why AI Confidence Is Not Validation</a> — The Hacker News. Raison : Aborde le décalage croissant entre confiance des IA et validation humaine en forensic/incident response, sujet stratégique pour RSSI/CTO. Source crédible.</li>
+<li><strong>3/5</strong> — <a href="https://therecord.media/suspected-kazakhstan-phishing-central-asia-espionage">Suspected Kazakhstan-linked hackers target governments across former Soviet states</a> — The Record. Raison : Campagne cyber-espionnage étatique (Kazakhstan) ciblant gouvernements ex-soviétiques. Pertinent pour RSSI/CTO mais pas de détails techniques exploitables immédiatement.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Faille de sécurité dans un robot-jouet IA pour enfants</strong> : Le robot Eiliko (80€), doté d'IA générative pour converser avec les enfants, présente des dizaines de vulnérabilités exploitables, illustrant les risques des objets connectés grand public embarquant de l'IA sans cadre de sécurité minimal. <a href="https://next.ink/261507/agenouille-toi-comment-notre-robot-jouet-ia-a-ete-pirate-sous-nos-yeux/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Jailbreak de la PS5 et riposte de Sony</strong> : L'outil Relapse, diffusé depuis fin septembre, permet le jailbreak de la console et facilite le piratage de jeux ; Sony contre-attaque activement pour refermer cet accès. <a href="https://next.ink/262062/sony-tente-de-refermer-les-vannes-du-piratage-apres-le-jailbreak-de-la-ps5/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Vibe coding sur Android : Google abaisse la barrière, la sécurité en question</strong> : Google modifie sa politique pour permettre le développement d'applications Android via requêtes en langage naturel, ce qui soulève des inquiétudes quant aux dérives de sécurité potentielles. <a href="https://next.ink/261945/google-veut-surfer-sur-la-vague-du-vibe-coding-personnel-pour-android/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Investissements de Nvidia dans l'écosystème IA français</strong> : Nvidia renforce son ancrage en France en entrant au capital de Doctolib et de trois autres entreprises tricolores spécialisées en IA. <a href="https://www.lemondeinformatique.fr/actualites/lire-nvidia-investit-dans-doctolib-et-trois-entreprises-francaises-de-l-ia-100852.html">Le Monde Informatique</a></li>
+</ul>
+
+<ul>
+<li><strong>Crédits d'impôt R&D détournés pour des datacenters IA</strong> : Une enquête du New York Times révèle que Meta aurait utilisé 6,6 milliards de dollars de crédits d'impôt recherche pour financer ses infrastructures datacenters IA, déclenchant une interrogation de sénateurs américains. <a href="https://next.ink/261885/meta-accusee-de-detourner-des-milliards-de-credits-dimpots-rd-pour-ses-datacenters-ia/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Sobriété numérique comme levier économique</strong> : Une analyse rappelle que la sobriété numérique doit être abordée comme une stratégie de création de valeur et de résilience économique, et non comme une contrainte opposée à la performance. <a href="https://www.journaldunet.com/management/direction-generale/1556625-survie-du-numerique-la-sobriete-une-strategie-economique-et-non-une-contrainte/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmark des derniers modèles d'IA générative</strong> : Le modèle Gemini 4 de Google est évalué face à Claude Opus 5.5 et GPT-6 Astra, se positionnant comme une alternative crédible pour les clients Google Cloud et Workspace. <a href="https://www.journaldunet.com/intelligence-artificielle/1556691-gemini-4-que-vaut-le-modele-de-google-face-a-claude-opus-5-5-et-gpt-6-astra/">Journal du Net</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://next.ink/261507/agenouille-toi-comment-notre-robot-jouet-ia-a-ete-pirate-sous-nos-yeux/">« Agenouille-toi » : comment notre robot-jouet IA a été piraté sous nos yeux</a> — Next.ink. Raison : Analyse détaillée de failles de sécurité sur un objet connecté grand public, exposant des données sensibles. Pertinent pour les experts en cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/management/direction-generale/1556625-survie-du-numerique-la-sobriete-une-strategie-economique-et-non-une-contrainte/">Survie du numérique : la sobriété, une stratégie économique et non une contrainte</a> — Journal du Net. Raison : Sujet intéressant sur la sobriété numérique comme levier économique, mais générique et sans apport technique ou stratégique immédiat pour un public expert.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/262062/sony-tente-de-refermer-les-vannes-du-piratage-apres-le-jailbreak-de-la-ps5/">Sony tente de refermer les vannes du piratage après le jailbreak de la PS5</a> — Next.ink. Raison : Article sur le jailbreak PS5 et la contre-attaque Sony. Pertinent pour la sécurité des systèmes embarqués mais pas directement pour le public expert SI français.</li>
+<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-nvidia-investit-dans-doctolib-et-trois-entreprises-francaises-de-l-ia-100852.html">Nvidia investit dans Doctolib et trois entreprises françaises de l'IA</a> — Le Monde Informatique — IA. Raison : Investissement de Nvidia dans Doctolib et startups IA françaises. Montre une tendance stratégique du marché IA, mais sans détail technique ou impact cyber direct pour les experts.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/261945/google-veut-surfer-sur-la-vague-du-vibe-coding-personnel-pour-android/">Google veut surfer sur la vague du vibe coding personnel pour Android</a> — Next.ink. Raison : Annonce produit IA de Google AI Studio pour le développement Android. Intéressant pour les CTO et développeurs, mais l'angle sécurité semble secondaire.</li>
+<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/intelligence-artificielle/1556691-gemini-4-que-vaut-le-modele-de-google-face-a-claude-opus-5-5-et-gpt-6-astra/">Gemini 4 : que vaut le modèle de Google face à Claude Opus 5.5 et GPT-6 Astra ?</a> — Journal du Net. Raison : Comparatif de modèles IA avec tests réels et coûts, intéressant pour CTO/Architecte mais pas de rupture majeure ni lien cyber.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/261885/meta-accusee-de-detourner-des-milliards-de-credits-dimpots-rd-pour-ses-datacenters-ia/">Meta accusée de détourner des milliards de crédits d’impôts R&D pour ses datacenters IA</a> — Next.ink. Raison : Sujet potentiel sur détournement fiscal R&D IA, mais manque de détails techniques cyber. Intérêt pour gouvernance et stratégie, pas d'urgence.</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Vulnérabilités critiques sur équipements réseau (Cisco, Palo Alto)</strong> : Cisco confirme l'exploitation active d'une faille sur Secure Email Gateway permettant l'écriture de fichiers arbitraires sur l'OS sous-jacent. Parallèlement, une vulnérabilité PAN-OS (CVE-2026-0322) est exploitée pour obtenir des privilèges root sur les firewalls Palo Alto, la CISA imposant un correctif sous trois jours aux agences fédérales américaines. <a href="https://www.csoonline.com/article/4235801/cisco-warns-of-actively-exploited-secure-email-gateway-flaw.html">Cisco</a> · <a href="https://www.csoonline.com/article/4235787/attackers-exploit-palo-alto-pan-os-flaw-for-root-access-as-cisa-orders-three-day-fix.html">Palo Alto</a></li>
+</ul>
+
+<ul>
+<li><strong>Évolution des tactiques d'extorsion par ransomware</strong> : Les attaquants étendent la pression au-delà du chiffrement et de l'exfiltration de données, en recourant à l'intimidation physique des employés et de leurs familles pour forcer le paiement des rançons. <a href="https://www.csoonline.com/article/4235782/ransomware-extortion-gets-personal-as-attackers-target-employees-families.html">CSO Online</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4235801/cisco-warns-of-actively-exploited-secure-email-gateway-flaw.html">Cisco warns of actively exploited Secure Email Gateway flaw</a> — CSO Online. Raison : CVE critique exploitée activement sur un produit Cisco Secure Email Gateway, impact direct sur la sécurité des entreprises. Patch urgent recommandé.</li>
+<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4235787/attackers-exploit-palo-alto-pan-os-flaw-for-root-access-as-cisa-orders-three-day-fix.html">Attackers exploit Palo Alto PAN-OS flaw for root access as CISA orders three-day fix</a> — CSO Online. Raison : CVE critique PAN-OS exploitée pour root ; CISA impose correctif urgent. Impact direct sur un grand pare-feu, nécessite action immédiate des équipes sécurité.</li>
+<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4235782/ransomware-extortion-gets-personal-as-attackers-target-employees-families.html">Ransomware extortion gets personal as attackers target employees’ families</a> — CSO Online. Raison : Analyse solide d'une tendance inquiétante : chantage physique et usage de l'IA par les ransomwares, avec des données chiffrées. Pertinent pour les RSSI/CTO en veille stratégique.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261015-0951</guid>
-      <pubDate>Thu, 15 Oct 2026 09:51:37 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261015-1540</guid>
+      <pubDate>Thu, 15 Oct 2026 15:40:16 +0000</pubDate>
     </item>
   </channel>
 </rss>
