@@ -178,3 +178,14 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-10-06 11:57 UTC | scoring | Engineer sentenced for locking over 3,000 devices on employe (BleepingComputer) | Rate limit fournisseur LLM atteint |
 | 2026-10-06 11:58 UTC | scoring | "Vous pouvez vous sentir en sécurité": l'Europe peut-elle vr (BFM Tech) | Rate limit fournisseur LLM atteint |
 | 2026-10-07 22:01 UTC | scoring | What Is Agentic Pentesting? What It Proves, and Where It Sto (The Hacker News) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:45 UTC | scoring | Causal Syntax Circuits in CodeLMs: Budget and Probe Decide W (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:45 UTC | scoring | Optimal Hydra: Model Heterogeneous Federated Learning for LL (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:46 UTC | scoring | Amortizing Sequential Experimental Design in Reasoning LLMs (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:46 UTC | scoring | Sign Betting for Misspecified Regression: Variance Adaptivit (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:46 UTC | scoring | Task-Centric Multimodal Learning for Cognitive Impairment De (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:46 UTC | scoring | How to Train Your Little Dragon: Teaching a Small Language M (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:46 UTC | scoring | Do As I Do, Not As I Say: On-Policy Distillation Inherits th (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:47 UTC | scoring | Imperfect Is Perfect: Learned Column Prefilling for Branch-P (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:47 UTC | scoring | Noise-Space Reward Alignment for Few-Step Generative Models (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:47 UTC | scoring | Predicting Live Birth After Fresh Embryo Transfer in IVF/ICS (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
+| 2026-10-16 09:48 UTC | scoring | AI Act : les enquêtes pourraient prolonger le délai de sanct (Actu IA) | Rate limit fournisseur LLM atteint |
