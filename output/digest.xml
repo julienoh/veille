@@ -8,146 +8,296 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 16 Oct 2026 19:53:18 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 09:11:58 +0000</lastBuildDate>
     <item>
-      <title>Digest — 16/10 19h</title>
+      <title>Digest — 17/10 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Stratégie &amp; analyse
+      <description>## IA &amp; Tech — Médias internationaux
 
-- **Risques supply chain liés aux skills IA officiels** : Des chercheurs ont identifié une vulnérabilité inédite dans le dépôt officiel de *skills* d'OpenAI, où un domaine « halluciné » par une IA a pu être enregistré pour diffuser du code malveillant. Cela démontre que l'utilisation de composants même validés par l'éditeur introduit un risque de dépendance non maîtrisé. [CSO Online](https://www.csoonline.com/article/4236659/hallucinated-domain-in-official-openai-skill-underscores-ai-supply-chain-risks.html)
-
-- **De l'adoption à la gestion des risques IA en entreprise** : La préoccupation des entreprises bascule de l'intégration de l'IA vers la maîtrise de son exécution et de sa sécurité. Le sujet n'est plus de déployer, mais de contrôler les dérives et les failles opérationnelles. [Dark Reading](https://www.darkreading.com/cyber-risk/enterprise-ai-risk-management-phase-security-concerns-rise)
-
-**Évaluation du scoring**
-
-- **4/5** — [Hallucinated domain in official OpenAI skill underscores AI supply chain risks](https://www.csoonline.com/article/4236659/hallucinated-domain-in-official-openai-skill-underscores-ai-supply-chain-risks.html) — CSO Online. Raison : Première vulnérabilité de chaîne d'approvisionnement dans le dépôt officiel OpenAI, impactant la confiance implicite accordée aux compétences IA vérifiées.
-- **3/5** — [Enterprise AI Enters Risk Management Phase as Security Concerns Rise](https://www.darkreading.com/cyber-risk/enterprise-ai-risk-management-phase-security-concerns-rise) — Dark Reading. Raison : Analyse de tendance sur le passage de l'adoption à l'exécution de l'IA en entreprise, avec un focus sur les risques. Pertinent mais sans détail technique ou pratique immédiat.
-
-## IA &amp; Tech — Médias internationaux
-
-- **Agents IA compromis via des secrets exposés** : Des agents autonomes ont été détournés en Inde à cause d’identifiants et de configurations de connexion laissés en clair dans des dépôts publics et des rôles cloud trop permissifs. [TechCrunch](https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/)
-- **Conception de virus par IA générative** : Un doctorant de Stanford a utilisé un modèle génératif pour proposer des plans génétiques de virus, sans toutefois créer de forme de vie artificielle. [MIT Technology Review](https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/)
+- **Modèles ouverts et agents** : StepFun publie les poids ouverts de Step 5 Preview, un modèle MoE de 600B paramètres (27B actifs) avec une fenêtre de contexte d'1M tokens, ciblant les tâches agentiques longues. [MarkTechPost](https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/)
+- **Sandbox pour agents IA** : Perplexity libère sous Apache 2.0 SPACE, la plateforme qui isole chaque tâche d'agent dans une microVM Firecracker, avec contrôle externe des credentials et du trafic sortant. [MarkTechPost](https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/)
+- **Modèles de décision** : Le lancement de Jev par TypeSafe (modèle de classification, pas un chatbot) a déclenché une vague d'au moins 20 alternatives en quatre semaines, venant de Cloudflare, OpenAI, Perplexity, Liquid AI et AWS. [MarkTechPost](https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/)
+- **Risques de sécurité des LLM** : Des modèles d'OpenAI ont piraté un portefeuille crypto et compromis des sites web lors de tests — des actions qui auraient relevé du pénal si elles avaient été commises par des humains. [Ars Technica](https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/)
+- **Limites de l'IA en génomique** : Les modèles actuels peinent à décoder l'ADN car celui-ci fonctionne de façon dynamique et non comme une simple séquence d'instructions ; les données nécessaires pour modéliser cette complexité manquent encore. [Wired](https://www.wired.com/story/why-ai-isnt-ready-to-tackle-our-convoluted-genomes/)
 
 **Évaluation du scoring**
 
-- **4/5** — [India becomes the latest country to report rogue AI agent activity](https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/) — TechCrunch — AI. Raison : Incident réel d'agents IA malveillants exploitant des expositions de credentials et configurations cloud. Impact direct sur la gouvernance cyber et les pratiques DevSecOps en entreprise.
-- **3/5** — [Roundtables: A Conversation With the Creator of AI-Designed Viruses](https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/) — MIT Technology Review — AI. Raison : Article sur l'IA générative appliquée à la conception de virus. Sujet périphérique pour experts cyber, potentiel impact futur mais contenu actuel spéculatif.
+- **5/5** — [StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context](https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/) — MarkTechPost. Raison : Nouveau modèle MoE majeur de 600B paramètres avec 1M de contexte ouvert, impact fort pour les experts en IA et architecture SI.
+- **4/5** — [Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents](https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/) — MarkTechPost. Raison : Open source d'une sandbox production-tested pour agents IA, avec contrôle des credentials et du trafic sortant. Pertinent pour RSSI et CTO évaluant l'isolation des agents.
+- **4/5** — [OpenAI models hacked a crypto wallet and breached more websites](https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/) — Ars Technica — Tech Lab. Raison : Démonstration technique d'IA autonome en cybersécurité avec compromission réelle. Analyse d'impact pour RSSI/CTO sur les risques des agents IA.
+- **3/5** — [Why AI Isn’t Ready to Tackle Our Convoluted Genomes](https://www.wired.com/story/why-ai-isnt-ready-to-tackle-our-convoluted-genomes/) — Wired — AI. Raison : Sujet intéressant sur les limites des modèles IA face à la complexité génomique, mais hors périmètre direct cyber/sécurité/DevOps pour ce public d'experts.
+- **3/5** — [20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026](https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/) — MarkTechPost. Raison : Annonce de nombreux alternatives IA décisionnelles, utile pour veille technologique mais manque d'analyse technique ou de benchmarking substantiel pour éclairer des choix en entreprise.
 
 ## Cyber — Menaces &amp; vulnérabilités
 
-- **OpenBSD : escalade locale via un bug vieux de 37 ans** : Un exploit chaînant un dépassement d'entier dans la mémoire partagée (datant d'environ 1988) avec une faille noyau permet d'obtenir les droits root sur OpenBSD 7.9, contournant KARL, SMAP et SMEP. [The Hacker News](https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html)
+- **Chaîne d'approvisionnement ConnectWise** : Des attaquants exploitent un compte Microsoft 365 compromis appartenant à ConnectWise Cloud Backup pour se connecter à au moins 173 locataires clients. Le vecteur exact de la compromission initiale du compte ConnectWise n'est pas encore confirmé. [The Hacker News](https://thehackernews.com/2026/10/hackers-use-compromised-connectwise-credential-to-sign-in-to-173-microsoft-365-tenants.html)
 
-- **Spyware Candiru distribué par publicités ciblées en zero-click** : Des employés d'Al Jazeera ont été infectés par le spyware Candiru via des publicités en ligne malveillantes, sans aucune interaction utilisateur, le simple affichage de la pub suffisant à compromettre l'appareil. [BleepingComputer](https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/)
-
-- **Compromission du serveur de mise à jour d'AOMEI Backupper** : Des attaquants ont altéré les fichiers de mise à jour sur les serveurs officiels d'AOMEI par intermittence (fenêtres de 5 à 10 minutes) entre mai et juillet 2026, poussant une backdoor aux clients ayant vérifié une mise à jour durant ces créneaux. [The Hacker News](https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html)
-
-- **Phishing ciblé contre la recherche taïwanaise (UAT-11985)** : Une campagne APT utilise de fausses invitations à des événements pour rediriger des affiliés d'organismes de recherche taïwanais vers un framework d'hameçonnage AitM visant à dérober des comptes Google. [The Hacker News](https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html)
+- **Exécution de code critique sur Magento** : Une vulnérabilité de sévérité maximale (CVE-2026-103849) dans l'extension BlockStrap permet l'exécution de code PHP arbitraire sur les serveurs Adobe Commerce et Magento. Un correctif est disponible, une exploitation imminente est anticipée. [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/)
 
 **Évaluation du scoring**
 
-- **5/5** — [Researchers Demonstrate OpenBSD Root Exploit Chaining 37-Year-Old Shared-Memory Bug](https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html) — The Hacker News. Raison : Exploitation d'un bug vieux de 37 ans menant à un root sur OpenBSD, contournant KARL, SMAP et SMEP. CVE critique avec PoC public, impact direct sur un OS utilisé en production.
-- **5/5** — [Targeted ads installed Candiru spyware in zero-click attacks](https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/) — BleepingComputer. Raison : Zero-click attack via publicité ciblée diffusant un spyware de type Candiru. Technique avancée, impact potentiel élevé pour RSSI et architectes SI.
-- **5/5** — [Attackers Tampered with AOMEI Backupper's Update Servers for Minutes to Deliver a Backdoor](https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html) — The Hacker News. Raison : Incident critique de supply chain touchant un outil de backup largement déployé en entreprise, avec compromission des serveurs de mise à jour et backdoor délivrée.
-- **4/5** — [UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Google AitM Phishing](https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html) — The Hacker News. Raison : Campagne APT ciblant des organisations de recherche avec phishing AitM contournant MFA. Technique avancée, pertinent pour RSSI et AppSec, mais concerne un périmètre spécifique.
+- **5/5** — [Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants](https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html) — The Hacker News. Raison : Incident en cours exploitant un credential ConnectWise compromis pour accéder à 173 tenants M365, ciblant des MSPs. Impact direct sur la chaîne d'approvisionnement.
+- **5/5** — [Critical BlockStrap flaw lets hackers run code on Magento servers](https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/) — BleepingComputer. Raison : CVE critique max-severité sur Magento/Adobe Commerce, exploit imminent. Impact direct sur serveurs de production, nécessite action immédiate.
 
-## IA — Produits, agents &amp; dev tooling
+## IA — Recherche
 
-- **Comparatif plateformes d'automatisation enterprise** : n8n publie un comparatif de 12 solutions d'automatisation de workflows (n8n, Zapier, Make, Workato, etc.) destiné aux équipes techniques, en évaluant le contrôle, la scalabilité et la gestion des workflows IA. [n8n Blog](https://blog.n8n.io/enterprise-workflow-automation/)
+- **Séparation décision/génération dans les agents LLM** : Plusieurs travaux visent à réduire la dépendance aux grands modèles pour les tâches décisionnelles simples (choix d'expert, contrôle qualité). JevAgentHarness et Jev-LiteMAS proposent de déléguer ces décisions bornées à des modèles légers spécialisés, améliorant la vitesse et le coût des workflows multi-agents sans dégrader la performance. [JevAgentHarness](https://arxiv.org/abs/2610.21412) · [Jev-LiteMAS](https://arxiv.org/abs/2610.21411)
+
+- **Pilotage du raisonnement par densité d'information** : Une étude (The Density of Thought) montre que la variation de densité informationnelle entre les étapes de chaîne de pensée (CoT) prédit la justesse des réponses et peut être utilisée comme cible de contrôle à l'inférence pour améliorer la fiabilité du raisonnement. [Source](https://arxiv.org/abs/2610.21286)
+
+- **Optimisation de l'apprentissage auto-supervisé** : Learning to Reason with Selective Internal Feedback corrige une dérive courante où l'optimisation de la certitude moyenne du modèle finit par dégrader la qualité du raisonnement, en proposant un mécanisme de rétroaction interne sélectif qui maintient l'alignement confiance/correction. [Source](https://arxiv.org/abs/2610.21392)
+
+- **Diagnostic d'erreurs par LLM auto-guidé** : Self-Guided LLM Reasoning for Error Diagnosis s'attaque aux problèmes de routage de véhicules (VRP) où les instances sont imparfaites, en utilisant le LLM pour diagnostiquer et expliquer lui-même les erreurs dans les solutions, plutôt que de supposer des données d'entrée correctes. [Source](https://arxiv.org/abs/2610.21393)
+
+- **Simulation utilisateur fiable et gouvernable** : ARGUS introduit une simulation utilisateur pilotée par agenda pour les environnements interactifs, résolvant les problèmes de fiabilité (omission d'objectifs, non-respect de politiques) rencontrés par les simulateurs basés LLM actuels lors de l'évaluation et l'entraînement d'agents. [Source](https://arxiv.org/abs/2610.21346)
+
+- **Apprentissage fédéré de compétences pour agents** : FedSkillGit applique un modèle de contrôle de version (type Git) à l'apprentissage fédéré pour faire évoluer collaborativement des compétences en langage naturel entre agents, sans jamais mutualiser les données brutes détenues par différents propriétaires. [Source](https://arxiv.org/abs/2610.21348)
+
+- **Oubli ciblé dans la mémoire long-terme des agents** : MemCut identifie que les systèmes de mémoire persistante des agents LLM sont vulnérables aux traces résiduelles de données sensibles, et propose une méthode pour garantir l'oubli effectif de ces informations sur demande. [Source](https://arxiv.org/abs/2610.21405)
+
+- **Modélisation du monde physique par code exécutable** : Mallea explore les "code world models" qui représentent la dynamique du monde via états et règles exécutables, en se concentrant sur la coordination entre représentations d'objets, révisions comportementales et mémoire visuelle pour construire et piloter des environnements simulés. [Source](https://arxiv.org/abs/2610.21283)
+
+- **Analyse de cause racine (RCA) agentique pour基础设施** : Diviner propose un système d'analyse de cause racine pour infrastructures large-échelle où le diagnostic traverse les frontières services/données/configurations, en orchestrant agents et experts humains avec une adaptation gouvernée par l'humain. [Source](https://arxiv.org/abs/2610.21281)
+
+- **Biais et agrégation dans les décisions multi-agents** : Bias Control and Injection for Multi-Agent Aggregation étudie comment contrôler et injecter des biais pour résoudre les désaccords entre agents lors de la prise de décision collective, un problème central lorsque les décisions sont sensibles à des facteurs non-maîtrisés. [Source](https://arxiv.org/abs/2610.21290)
+
+- **Détection de mules financières par apprentissage relationnel** : Une étude sur le dataset RBIH NFPC formalise la détection de mules financières comme un problème d'apprentissage relationnel, en exploitant la structure du réseau de transactions et de contreparties plutôt que des transactions isolées. [Source](https://arxiv.org/abs/2610.21314)
+
+- **Apprentissage multi-agent contraint en imagination** : Constrained Multi-Agent Reinforcement Learning in Imagination (CA-MAMBA) déporte la majorité des mises à jour de politiques contraintes dans un modèle monde appris, réduisant drastiquement (10 à 20x) le besoin d'interactions réelles coûteuses avec l'environnement. [Source](https://arxiv.org/abs/2610.21319)
+
+- **Compréhension de longs documents visuels par orchestration agentique** : DocPilot entraîne et orchestre des agents pour la compréhension de longs documents visuels, où les modèles vision-langage peinent à rassembler des preuves éparses inter-pages et inter-modalités nécessaires au raisonnement. [Source](https://arxiv.org/abs/2610.21327)
+
+- **Évaluation rigoureuse du quantique pour données cérébrales** : Une étude sur la classification de troubles neuropsychiatriques à partir d'IRM fonctionnelle compare méthodiquement apprentissage machine quantique et classique en conditions équitables, un domaine où les évaluations rigoureuses sont rares. [Source](https://arxiv.org/abs/2610.21344)
+
+- **Représentation structurée d'articles scientifiques pour agents** : SPRA introduit un format de représentation des articles scientifiques qui expose objets de recherche et relations typées persistantes, visant à remplacer le parsing narratif peu fiable pour les agents scientifiques. [Source](https://arxiv.org/abs/2610.21424)
+
+- **Distillation de contexte localisé pour l'apprentissage continu** : Learning from Interaction Experience via Localized Context Distillation améliore l'apprentissage des LLM en déploiement continu en distillant sélectivement des informations privilégiées d'un enseignant vers un élève, contrairement aux méthodes de distillation globale. [Source](https://arxiv.org/abs/2610.21427)
+
+- **Raffinement d'ontologies par plongements et LLM** : Une étude de cas sur l'ontologie CASTON utilise des plongements et des LLM pour affiner les hiérarchies de classes dans les ontologies biomédicales, où la construction manuelle ou automatique reste peu fiable. [Source](https://arxiv.org/abs/2610.21466)
+
+- **Benchmark de raisonnement contrefactuel sur les data centers IA** : Watts If? propose un benchmark pour évaluer la capacité des LLM à effectuer des raisonnements contrefactuels sur les choix d'infrastructure de data centers IA (énergie, refroidissement, localisation), décisions critiques prises des années avant l'exploitation. [Source](https://arxiv.org/abs/2610.21397)
+
+- **Détection de documents de faible qualité par graphe hiérarchique** : Une approche par réseau convolutif de graphe hiérarchique exploite la cohérence interne aux documents pour détecter à grande échelle les documents de faible qualité (incohérences) produits massivement en ligne. [Source](https://arxiv.org/abs/2610.21350)
 
 **Évaluation du scoring**
 
-- **3/5** — [12 Best Enterprise Workflow Automation Platforms](https://blog.n8n.io/enterprise-workflow-automation/) — n8n Blog. Raison : Comparatif de plateformes d'automatisation de workflows orienté équipes techniques, utile pour un survol des options disponibles, mais sans angle original ou analyse de sécurité approfondie.
+- **4/5** — [JevAgentHarness: Benchmarking, Deploying and Training Decision Models That Share Control with LLMs](https://arxiv.org/abs/2610.21412) — arXiv cs.AI. Raison : Propose une optimisation concrète des agents LLM en remplaçant les appels coûteux par un modèle décisionnel. Pertinent pour CTO et développeurs confrontés à des tâches longues et coûteuses.
+- **3/5** — [Diviner: Agentic RCA with Human-Governed Adaptation for Large-Scale Infrastructure](https://arxiv.org/abs/2610.21281) — arXiv cs.AI. Raison : Papier académique sur le RCA agentique avec supervision humaine pour grandes infrastructures. Intéressant pour un public expert mais impact pratique encore incertain.
+- **3/5** — [Mallea: Building, Steering, and Memorizing Worlds with Coding Agent](https://arxiv.org/abs/2610.21283) — arXiv cs.AI. Raison : Papier de recherche sur les modèles de monde par code agent, intéressant mais sans application immédiate en cybersécurité ou en entreprise.
+- **3/5** — [The Density of Thought: Predicting and Steering Reasoning in Large Language Models](https://arxiv.org/abs/2610.21286) — arXiv cs.AI. Raison : Recherche théorique sur la densité d'information dans le raisonnement des LLM. Aucun lien direct avec la cybersécurité, le management ou un produit concret.
+- **3/5** — [Bias Control and Injection for Multi-Agent Aggregation](https://arxiv.org/abs/2610.21290) — arXiv cs.AI. Raison : Papier de recherche sur le contrôle des biais dans l'agrégation multi-agents LLM. Sujet intéressant mais sans application immédiate pour la cybersécurité ou l'IT.
+- **3/5** — [Money-Mule Detection as a Relational Learning Problem: A Study on the RBIH NFPC Dataset](https://arxiv.org/abs/2610.21314) — arXiv cs.AI. Raison : Papier de recherche sur la détection de mules financières par apprentissage relationnel. Intéressant pour la méthode mais impact pratique incertain pour les experts cibles.
+- **3/5** — [Constrained Multi-Agent Reinforcement Learning in Imagination](https://arxiv.org/abs/2610.21319) — arXiv cs.AI. Raison : Papier de recherche technique sur l'apprentissage par renforcement multi-agent, mais sans lien direct avec la cybersécurité ou les préoccupations des experts ciblés.
+- **3/5** — [DocPilot: Interactive Agent Orchestration and Training for Long Visual Document Understanding](https://arxiv.org/abs/2610.21327) — arXiv cs.AI. Raison : Papier de recherche sur un agent pour la compréhension de documents longs multimodaux. Potentiel intéressant pour automatiser analyses documentaires en entreprise, mais sans impact immédiat démontré.
+- **3/5** — [Quantum Versus Classical Machine Learning for Neuropsychiatric Disorders: A Feature-Matched Multi-Cohort Evaluation](https://arxiv.org/abs/2610.21344) — arXiv cs.AI. Raison : Article de recherche comparant QML et ML classique pour la classification de troubles psychiatriques à partir de données de connectivité fonctionnelle. Intéressant pour experts IA mais hors périmètre cybersécurité/dev.
+- **3/5** — [ARGUS: An Agenda-Driven Framework for Reliable User Simulation](https://arxiv.org/abs/2610.21346) — arXiv cs.AI. Raison : Papier de recherche sur un framework neuro-symbolique pour simulation utilisateur fiable, intéressant pour les experts IA mais sans lien direct avec la cybersécurité ou l'entreprise.
+- **3/5** — [FedSkillGit: Federated Skill Evolution via Version Control](https://arxiv.org/abs/2610.21348) — arXiv cs.AI. Raison : Papier de recherche sur l'évolution fédérée de compétences pour agents IA. Intéressant pour experts en IA et architecture SI, mais impact pratique et validation restent incertains.
+- **3/5** — [Hierarchical Graph Convolutional Network Approach for Detecting Low-Quality Documents](https://arxiv.org/abs/2610.21350) — arXiv cs.AI. Raison : Papier de recherche sur la détection de documents de faible qualité via graphes. Intéressant mais éloigné des sujets cyber et IA d'entreprise, et sans implication pratique immédiate.
+- **3/5** — [Learning to Reason with Selective Internal Feedback](https://arxiv.org/abs/2610.21392) — arXiv cs.AI. Raison : Recherche IA sur un mécanisme de raisonnement par feedback interne, sans lien immédiat avec la cybersécurité ou un outil pratique. Intéressant mais nécessite lecture rapide pour experts.
+- **3/5** — [Self-Guided LLM Reasoning for Error Diagnosis in Vehicle Routing Problems](https://arxiv.org/abs/2610.21393) — arXiv cs.AI. Raison : Papier de recherche IA sur un benchmark de résolution de problèmes NP-difficiles avec erreurs. Intéressant mais éloigné des préoccupations immédiates des publics cibles.
+- **3/5** — [Watts If? A Benchmark for Counterfactual Reasoning About the AI Data Center Buildout](https://arxiv.org/abs/2610.21397) — arXiv cs.AI. Raison : Benchmark académique (DCBench-440) pour le raisonnement contrefactuel des LLMs sur les data centers IA. Intéressant pour experts IA, mais portée pratique encore incertaine.
+- **3/5** — [MemCut: Every Secret Leaves a Trail in the Long-Term Memory of LLM Agents](https://arxiv.org/abs/2610.21405) — arXiv cs.AI. Raison : Papier de recherche sur l'oubli en mémoire LLM, intéressant pour la sécurité, mais impact pratique incertain pour les experts ciblés.
+- **3/5** — [Jev-LiteMAS: Separating Decisions from Generation in Multi-Agent Workflows](https://arxiv.org/abs/2610.21411) — arXiv cs.AI. Raison : Papier de recherche sur l'optimisation des workflows multi-agents LLM, intéressant pour les experts en IA mais à l'impact pratique incertain.
+- **3/5** — [Do Agents Need a New Kind of Paper? SPRA: Structured Paper Representation for Agents](https://arxiv.org/abs/2610.21424) — arXiv cs.AI. Raison : Papier de recherche IA sur structure documentaire pour agents. Intéressant mais impact pratique incertain pour le public cible.
+- **3/5** — [Learning from Interaction Experience via Localized Context Distillation](https://arxiv.org/abs/2610.21427) — arXiv cs.AI. Raison : Papier de recherche sur un mécanisme de distillation de contexte indirectement lié aux LLMs, mais sans lien évident avec la cybersécurité.
+- **3/5** — [Ontology Refinement with Embeddings and LLMs: A Case Study on CASTON](https://arxiv.org/abs/2610.21466) — arXiv cs.AI. Raison : Papier de recherche sur le raffinement d'ontologies avec embeddings et LLMs, sans lien direct avec la cybersécurité ou les sujets ciblés. Intérêt pratique incertain pour les experts.
 
 ## IA — Labos &amp; éditeurs
 
-- **Reflection Beam sur AWS** : AWS met à disposition Beam, un modèle open-weight d'IA agentique pour le code et les tâches de longue haleine, via SageMaker JumpStart (endpoint temps réel) ou HyperPod Inference avec SGLang/vLLM pour un contrôle Kubernetes natif. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/)
+- **Évaluation continue des agents IA en production** : AWS publie un framework en neuf étapes pour détecter les dérives silencieuses de qualité des agents autonomes, de l'intégration au suivi en production. L'enjeu : la latence reste stable pendant que les réponses se dégradent. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/)
+
+- **Déploiement de l'IA générative dans un secteur régulé** : Itaú, première banque brésilienne, combine une interface conversationnelle (ia.i) et une plateforme de gouvernance interne (IARA) pour déployer l'IA générative auprès de l'ensemble de ses clients et employés, dans un cadre réglementaire contraignant. [OpenAI News](https://openai.com/index/itau-generative-ai)
 
 **Évaluation du scoring**
 
-- **3/5** — [Introducing Reflection Beam: an open-weight model for agentic coding on AWS](https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/) — AWS Machine Learning. Raison : Nouveau modèle open-weight pour agentic coding déployable sur AWS, potentiel pour les développeurs et architectes mais pas de critique cyber ou stratégique directe.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
+- **4/5** — [Building trust in AI agents: A production-ready evaluation framework with Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Framework structuré d'évaluation d'agents IA pour la production, base technique solide (Bedrock), pertinent pour RSSI et CTO confrontés à la dérive silencieuse de qualité.
+- **3/5** — [How Itaú is building generative AI for its entire customer base](https://openai.com/index/itau-generative-ai) — OpenAI News. Raison : Retour d'expérience entreprise sur déploiement IA à grande échelle dans un secteur régulé, intéressant pour stratégie mais sans détails techniques ou cyber. Source promotionnelle (OpenAI News).
+
+## Cyber — Stratégie &amp; analyse
+
+- **Vulnérabilités zero-day sur équipements de périmètre** : La compromission de la solution BeyondTrust Remote Support confirme une accentuation des attaques ciblant les appliances de bordure (VPN, accès distants). Cette tendance avait déjà été illustrée la même semaine par des failles critiques chez Ivanti, Cisco et Palo Alto Networks. [Dark Reading](https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs)
+
+- **Campagnes de malvertising ciblant les développeurs** : Des attaques usurpant Claude et ChatGPT se multiplient pour piéger des employés via de fausses invites en ligne de commande (tactique "ClickFix"). La finalité est la compromission de postes de développement pour accéder aux infrastructures d'entreprise. [Dark Reading](https://www.darkreading.com/application-security/fake-claude-chatgpt-attacks-developers-risk)
+
+**Évaluation du scoring**
+
+- **5/5** — [BeyondTrust Remote Support Zero-Day Continues Trend of Exploited Edge Bugs](https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs) — Dark Reading. Raison : Zero-day exploité sur un équipement de télétravail/fournisseur critique, tendance récurrente sur des acteurs majeurs (Ivanti, Cisco, Palo Alto). Impact direct sur les infrastructures de support à distance.
+- **4/5** — [Fake Claude, ChatGPT Attacks Surge, Putting Developers at Risk](https://www.darkreading.com/application-security/fake-claude-chatgpt-attacks-developers-risk) — Dark Reading. Raison : Campagne ciblant les employés via des usurpations d'IA, avec tactique ClickFix. Pertinent pour RSSI et AppSec, mais résumé trop vague pour un score 5.</description>
+      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Risques supply chain liés aux skills IA officiels</strong> : Des chercheurs ont identifié une vulnérabilité inédite dans le dépôt officiel de *skills* d'OpenAI, où un domaine « halluciné » par une IA a pu être enregistré pour diffuser du code malveillant. Cela démontre que l'utilisation de composants même validés par l'éditeur introduit un risque de dépendance non maîtrisé. <a href="https://www.csoonline.com/article/4236659/hallucinated-domain-in-official-openai-skill-underscores-ai-supply-chain-risks.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>De l'adoption à la gestion des risques IA en entreprise</strong> : La préoccupation des entreprises bascule de l'intégration de l'IA vers la maîtrise de son exécution et de sa sécurité. Le sujet n'est plus de déployer, mais de contrôler les dérives et les failles opérationnelles. <a href="https://www.darkreading.com/cyber-risk/enterprise-ai-risk-management-phase-security-concerns-rise">Dark Reading</a></li>
+<li><strong>Modèles ouverts et agents</strong> : StepFun publie les poids ouverts de Step 5 Preview, un modèle MoE de 600B paramètres (27B actifs) avec une fenêtre de contexte d'1M tokens, ciblant les tâches agentiques longues. <a href="https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/">MarkTechPost</a></li>
+<li><strong>Sandbox pour agents IA</strong> : Perplexity libère sous Apache 2.0 SPACE, la plateforme qui isole chaque tâche d'agent dans une microVM Firecracker, avec contrôle externe des credentials et du trafic sortant. <a href="https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/">MarkTechPost</a></li>
+<li><strong>Modèles de décision</strong> : Le lancement de Jev par TypeSafe (modèle de classification, pas un chatbot) a déclenché une vague d'au moins 20 alternatives en quatre semaines, venant de Cloudflare, OpenAI, Perplexity, Liquid AI et AWS. <a href="https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/">MarkTechPost</a></li>
+<li><strong>Risques de sécurité des LLM</strong> : Des modèles d'OpenAI ont piraté un portefeuille crypto et compromis des sites web lors de tests — des actions qui auraient relevé du pénal si elles avaient été commises par des humains. <a href="https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/">Ars Technica</a></li>
+<li><strong>Limites de l'IA en génomique</strong> : Les modèles actuels peinent à décoder l'ADN car celui-ci fonctionne de façon dynamique et non comme une simple séquence d'instructions ; les données nécessaires pour modéliser cette complexité manquent encore. <a href="https://www.wired.com/story/why-ai-isnt-ready-to-tackle-our-convoluted-genomes/">Wired</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4236659/hallucinated-domain-in-official-openai-skill-underscores-ai-supply-chain-risks.html">Hallucinated domain in official OpenAI skill underscores AI supply chain risks</a> — CSO Online. Raison : Première vulnérabilité de chaîne d'approvisionnement dans le dépôt officiel OpenAI, impactant la confiance implicite accordée aux compétences IA vérifiées.</li>
-<li><strong>3/5</strong> — <a href="https://www.darkreading.com/cyber-risk/enterprise-ai-risk-management-phase-security-concerns-rise">Enterprise AI Enters Risk Management Phase as Security Concerns Rise</a> — Dark Reading. Raison : Analyse de tendance sur le passage de l'adoption à l'exécution de l'IA en entreprise, avec un focus sur les risques. Pertinent mais sans détail technique ou pratique immédiat.</li>
-</ul>
-
-<h2>IA & Tech — Médias internationaux</h2>
-
-<ul>
-<li><strong>Agents IA compromis via des secrets exposés</strong> : Des agents autonomes ont été détournés en Inde à cause d’identifiants et de configurations de connexion laissés en clair dans des dépôts publics et des rôles cloud trop permissifs. <a href="https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/">TechCrunch</a></li>
-<li><strong>Conception de virus par IA générative</strong> : Un doctorant de Stanford a utilisé un modèle génératif pour proposer des plans génétiques de virus, sans toutefois créer de forme de vie artificielle. <a href="https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/">MIT Technology Review</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/">India becomes the latest country to report rogue AI agent activity</a> — TechCrunch — AI. Raison : Incident réel d'agents IA malveillants exploitant des expositions de credentials et configurations cloud. Impact direct sur la gouvernance cyber et les pratiques DevSecOps en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/10/16/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/">Roundtables: A Conversation With the Creator of AI-Designed Viruses</a> — MIT Technology Review — AI. Raison : Article sur l'IA générative appliquée à la conception de virus. Sujet périphérique pour experts cyber, potentiel impact futur mais contenu actuel spéculatif.</li>
+<li><strong>5/5</strong> — <a href="https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/">StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context</a> — MarkTechPost. Raison : Nouveau modèle MoE majeur de 600B paramètres avec 1M de contexte ouvert, impact fort pour les experts en IA et architecture SI.</li>
+<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/">Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents</a> — MarkTechPost. Raison : Open source d'une sandbox production-tested pour agents IA, avec contrôle des credentials et du trafic sortant. Pertinent pour RSSI et CTO évaluant l'isolation des agents.</li>
+<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/">OpenAI models hacked a crypto wallet and breached more websites</a> — Ars Technica — Tech Lab. Raison : Démonstration technique d'IA autonome en cybersécurité avec compromission réelle. Analyse d'impact pour RSSI/CTO sur les risques des agents IA.</li>
+<li><strong>3/5</strong> — <a href="https://www.wired.com/story/why-ai-isnt-ready-to-tackle-our-convoluted-genomes/">Why AI Isn’t Ready to Tackle Our Convoluted Genomes</a> — Wired — AI. Raison : Sujet intéressant sur les limites des modèles IA face à la complexité génomique, mais hors périmètre direct cyber/sécurité/DevOps pour ce public d'experts.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/">20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026</a> — MarkTechPost. Raison : Annonce de nombreux alternatives IA décisionnelles, utile pour veille technologique mais manque d'analyse technique ou de benchmarking substantiel pour éclairer des choix en entreprise.</li>
 </ul>
 
 <h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>OpenBSD : escalade locale via un bug vieux de 37 ans</strong> : Un exploit chaînant un dépassement d'entier dans la mémoire partagée (datant d'environ 1988) avec une faille noyau permet d'obtenir les droits root sur OpenBSD 7.9, contournant KARL, SMAP et SMEP. <a href="https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html">The Hacker News</a></li>
+<li><strong>Chaîne d'approvisionnement ConnectWise</strong> : Des attaquants exploitent un compte Microsoft 365 compromis appartenant à ConnectWise Cloud Backup pour se connecter à au moins 173 locataires clients. Le vecteur exact de la compromission initiale du compte ConnectWise n'est pas encore confirmé. <a href="https://thehackernews.com/2026/10/hackers-use-compromised-connectwise-credential-to-sign-in-to-173-microsoft-365-tenants.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>Spyware Candiru distribué par publicités ciblées en zero-click</strong> : Des employés d'Al Jazeera ont été infectés par le spyware Candiru via des publicités en ligne malveillantes, sans aucune interaction utilisateur, le simple affichage de la pub suffisant à compromettre l'appareil. <a href="https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Compromission du serveur de mise à jour d'AOMEI Backupper</strong> : Des attaquants ont altéré les fichiers de mise à jour sur les serveurs officiels d'AOMEI par intermittence (fenêtres de 5 à 10 minutes) entre mai et juillet 2026, poussant une backdoor aux clients ayant vérifié une mise à jour durant ces créneaux. <a href="https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Phishing ciblé contre la recherche taïwanaise (UAT-11985)</strong> : Une campagne APT utilise de fausses invitations à des événements pour rediriger des affiliés d'organismes de recherche taïwanais vers un framework d'hameçonnage AitM visant à dérober des comptes Google. <a href="https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html">The Hacker News</a></li>
+<li><strong>Exécution de code critique sur Magento</strong> : Une vulnérabilité de sévérité maximale (CVE-2026-103849) dans l'extension BlockStrap permet l'exécution de code PHP arbitraire sur les serveurs Adobe Commerce et Magento. Un correctif est disponible, une exploitation imminente est anticipée. <a href="https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/">BleepingComputer</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/researchers-demonstrate-openbsd-root.html">Researchers Demonstrate OpenBSD Root Exploit Chaining 37-Year-Old Shared-Memory Bug</a> — The Hacker News. Raison : Exploitation d'un bug vieux de 37 ans menant à un root sur OpenBSD, contournant KARL, SMAP et SMEP. CVE critique avec PoC public, impact direct sur un OS utilisé en production.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/">Targeted ads installed Candiru spyware in zero-click attacks</a> — BleepingComputer. Raison : Zero-click attack via publicité ciblée diffusant un spyware de type Candiru. Technique avancée, impact potentiel élevé pour RSSI et architectes SI.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/attackers-tampered-with-aomei.html">Attackers Tampered with AOMEI Backupper's Update Servers for Minutes to Deliver a Backdoor</a> — The Hacker News. Raison : Incident critique de supply chain touchant un outil de backup largement déployé en entreprise, avec compromission des serveurs de mise à jour et backdoor délivrée.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html">UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Google AitM Phishing</a> — The Hacker News. Raison : Campagne APT ciblant des organisations de recherche avec phishing AitM contournant MFA. Technique avancée, pertinent pour RSSI et AppSec, mais concerne un périmètre spécifique.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html">Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants</a> — The Hacker News. Raison : Incident en cours exploitant un credential ConnectWise compromis pour accéder à 173 tenants M365, ciblant des MSPs. Impact direct sur la chaîne d'approvisionnement.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/">Critical BlockStrap flaw lets hackers run code on Magento servers</a> — BleepingComputer. Raison : CVE critique max-severité sur Magento/Adobe Commerce, exploit imminent. Impact direct sur serveurs de production, nécessite action immédiate.</li>
 </ul>
 
-<h2>IA — Produits, agents & dev tooling</h2>
+<h2>IA — Recherche</h2>
 
 <ul>
-<li><strong>Comparatif plateformes d'automatisation enterprise</strong> : n8n publie un comparatif de 12 solutions d'automatisation de workflows (n8n, Zapier, Make, Workato, etc.) destiné aux équipes techniques, en évaluant le contrôle, la scalabilité et la gestion des workflows IA. <a href="https://blog.n8n.io/enterprise-workflow-automation/">n8n Blog</a></li>
+<li><strong>Séparation décision/génération dans les agents LLM</strong> : Plusieurs travaux visent à réduire la dépendance aux grands modèles pour les tâches décisionnelles simples (choix d'expert, contrôle qualité). JevAgentHarness et Jev-LiteMAS proposent de déléguer ces décisions bornées à des modèles légers spécialisés, améliorant la vitesse et le coût des workflows multi-agents sans dégrader la performance. <a href="https://arxiv.org/abs/2610.21412">JevAgentHarness</a> · <a href="https://arxiv.org/abs/2610.21411">Jev-LiteMAS</a></li>
+</ul>
+
+<ul>
+<li><strong>Pilotage du raisonnement par densité d'information</strong> : Une étude (The Density of Thought) montre que la variation de densité informationnelle entre les étapes de chaîne de pensée (CoT) prédit la justesse des réponses et peut être utilisée comme cible de contrôle à l'inférence pour améliorer la fiabilité du raisonnement. <a href="https://arxiv.org/abs/2610.21286">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation de l'apprentissage auto-supervisé</strong> : Learning to Reason with Selective Internal Feedback corrige une dérive courante où l'optimisation de la certitude moyenne du modèle finit par dégrader la qualité du raisonnement, en proposant un mécanisme de rétroaction interne sélectif qui maintient l'alignement confiance/correction. <a href="https://arxiv.org/abs/2610.21392">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Diagnostic d'erreurs par LLM auto-guidé</strong> : Self-Guided LLM Reasoning for Error Diagnosis s'attaque aux problèmes de routage de véhicules (VRP) où les instances sont imparfaites, en utilisant le LLM pour diagnostiquer et expliquer lui-même les erreurs dans les solutions, plutôt que de supposer des données d'entrée correctes. <a href="https://arxiv.org/abs/2610.21393">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Simulation utilisateur fiable et gouvernable</strong> : ARGUS introduit une simulation utilisateur pilotée par agenda pour les environnements interactifs, résolvant les problèmes de fiabilité (omission d'objectifs, non-respect de politiques) rencontrés par les simulateurs basés LLM actuels lors de l'évaluation et l'entraînement d'agents. <a href="https://arxiv.org/abs/2610.21346">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Apprentissage fédéré de compétences pour agents</strong> : FedSkillGit applique un modèle de contrôle de version (type Git) à l'apprentissage fédéré pour faire évoluer collaborativement des compétences en langage naturel entre agents, sans jamais mutualiser les données brutes détenues par différents propriétaires. <a href="https://arxiv.org/abs/2610.21348">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Oubli ciblé dans la mémoire long-terme des agents</strong> : MemCut identifie que les systèmes de mémoire persistante des agents LLM sont vulnérables aux traces résiduelles de données sensibles, et propose une méthode pour garantir l'oubli effectif de ces informations sur demande. <a href="https://arxiv.org/abs/2610.21405">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Modélisation du monde physique par code exécutable</strong> : Mallea explore les "code world models" qui représentent la dynamique du monde via états et règles exécutables, en se concentrant sur la coordination entre représentations d'objets, révisions comportementales et mémoire visuelle pour construire et piloter des environnements simulés. <a href="https://arxiv.org/abs/2610.21283">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Analyse de cause racine (RCA) agentique pour基础设施</strong> : Diviner propose un système d'analyse de cause racine pour infrastructures large-échelle où le diagnostic traverse les frontières services/données/configurations, en orchestrant agents et experts humains avec une adaptation gouvernée par l'humain. <a href="https://arxiv.org/abs/2610.21281">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Biais et agrégation dans les décisions multi-agents</strong> : Bias Control and Injection for Multi-Agent Aggregation étudie comment contrôler et injecter des biais pour résoudre les désaccords entre agents lors de la prise de décision collective, un problème central lorsque les décisions sont sensibles à des facteurs non-maîtrisés. <a href="https://arxiv.org/abs/2610.21290">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de mules financières par apprentissage relationnel</strong> : Une étude sur le dataset RBIH NFPC formalise la détection de mules financières comme un problème d'apprentissage relationnel, en exploitant la structure du réseau de transactions et de contreparties plutôt que des transactions isolées. <a href="https://arxiv.org/abs/2610.21314">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Apprentissage multi-agent contraint en imagination</strong> : Constrained Multi-Agent Reinforcement Learning in Imagination (CA-MAMBA) déporte la majorité des mises à jour de politiques contraintes dans un modèle monde appris, réduisant drastiquement (10 à 20x) le besoin d'interactions réelles coûteuses avec l'environnement. <a href="https://arxiv.org/abs/2610.21319">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Compréhension de longs documents visuels par orchestration agentique</strong> : DocPilot entraîne et orchestre des agents pour la compréhension de longs documents visuels, où les modèles vision-langage peinent à rassembler des preuves éparses inter-pages et inter-modalités nécessaires au raisonnement. <a href="https://arxiv.org/abs/2610.21327">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation rigoureuse du quantique pour données cérébrales</strong> : Une étude sur la classification de troubles neuropsychiatriques à partir d'IRM fonctionnelle compare méthodiquement apprentissage machine quantique et classique en conditions équitables, un domaine où les évaluations rigoureuses sont rares. <a href="https://arxiv.org/abs/2610.21344">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Représentation structurée d'articles scientifiques pour agents</strong> : SPRA introduit un format de représentation des articles scientifiques qui expose objets de recherche et relations typées persistantes, visant à remplacer le parsing narratif peu fiable pour les agents scientifiques. <a href="https://arxiv.org/abs/2610.21424">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Distillation de contexte localisé pour l'apprentissage continu</strong> : Learning from Interaction Experience via Localized Context Distillation améliore l'apprentissage des LLM en déploiement continu en distillant sélectivement des informations privilégiées d'un enseignant vers un élève, contrairement aux méthodes de distillation globale. <a href="https://arxiv.org/abs/2610.21427">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Raffinement d'ontologies par plongements et LLM</strong> : Une étude de cas sur l'ontologie CASTON utilise des plongements et des LLM pour affiner les hiérarchies de classes dans les ontologies biomédicales, où la construction manuelle ou automatique reste peu fiable. <a href="https://arxiv.org/abs/2610.21466">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Benchmark de raisonnement contrefactuel sur les data centers IA</strong> : Watts If? propose un benchmark pour évaluer la capacité des LLM à effectuer des raisonnements contrefactuels sur les choix d'infrastructure de data centers IA (énergie, refroidissement, localisation), décisions critiques prises des années avant l'exploitation. <a href="https://arxiv.org/abs/2610.21397">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Détection de documents de faible qualité par graphe hiérarchique</strong> : Une approche par réseau convolutif de graphe hiérarchique exploite la cohérence interne aux documents pour détecter à grande échelle les documents de faible qualité (incohérences) produits massivement en ligne. <a href="https://arxiv.org/abs/2610.21350">Source</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://blog.n8n.io/enterprise-workflow-automation/">12 Best Enterprise Workflow Automation Platforms</a> — n8n Blog. Raison : Comparatif de plateformes d'automatisation de workflows orienté équipes techniques, utile pour un survol des options disponibles, mais sans angle original ou analyse de sécurité approfondie.</li>
+<li><strong>4/5</strong> — <a href="https://arxiv.org/abs/2610.21412">JevAgentHarness: Benchmarking, Deploying and Training Decision Models That Share Control with LLMs</a> — arXiv cs.AI. Raison : Propose une optimisation concrète des agents LLM en remplaçant les appels coûteux par un modèle décisionnel. Pertinent pour CTO et développeurs confrontés à des tâches longues et coûteuses.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21281">Diviner: Agentic RCA with Human-Governed Adaptation for Large-Scale Infrastructure</a> — arXiv cs.AI. Raison : Papier académique sur le RCA agentique avec supervision humaine pour grandes infrastructures. Intéressant pour un public expert mais impact pratique encore incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21283">Mallea: Building, Steering, and Memorizing Worlds with Coding Agent</a> — arXiv cs.AI. Raison : Papier de recherche sur les modèles de monde par code agent, intéressant mais sans application immédiate en cybersécurité ou en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21286">The Density of Thought: Predicting and Steering Reasoning in Large Language Models</a> — arXiv cs.AI. Raison : Recherche théorique sur la densité d'information dans le raisonnement des LLM. Aucun lien direct avec la cybersécurité, le management ou un produit concret.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21290">Bias Control and Injection for Multi-Agent Aggregation</a> — arXiv cs.AI. Raison : Papier de recherche sur le contrôle des biais dans l'agrégation multi-agents LLM. Sujet intéressant mais sans application immédiate pour la cybersécurité ou l'IT.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21314">Money-Mule Detection as a Relational Learning Problem: A Study on the RBIH NFPC Dataset</a> — arXiv cs.AI. Raison : Papier de recherche sur la détection de mules financières par apprentissage relationnel. Intéressant pour la méthode mais impact pratique incertain pour les experts cibles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21319">Constrained Multi-Agent Reinforcement Learning in Imagination</a> — arXiv cs.AI. Raison : Papier de recherche technique sur l'apprentissage par renforcement multi-agent, mais sans lien direct avec la cybersécurité ou les préoccupations des experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21327">DocPilot: Interactive Agent Orchestration and Training for Long Visual Document Understanding</a> — arXiv cs.AI. Raison : Papier de recherche sur un agent pour la compréhension de documents longs multimodaux. Potentiel intéressant pour automatiser analyses documentaires en entreprise, mais sans impact immédiat démontré.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21344">Quantum Versus Classical Machine Learning for Neuropsychiatric Disorders: A Feature-Matched Multi-Cohort Evaluation</a> — arXiv cs.AI. Raison : Article de recherche comparant QML et ML classique pour la classification de troubles psychiatriques à partir de données de connectivité fonctionnelle. Intéressant pour experts IA mais hors périmètre cybersécurité/dev.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21346">ARGUS: An Agenda-Driven Framework for Reliable User Simulation</a> — arXiv cs.AI. Raison : Papier de recherche sur un framework neuro-symbolique pour simulation utilisateur fiable, intéressant pour les experts IA mais sans lien direct avec la cybersécurité ou l'entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21348">FedSkillGit: Federated Skill Evolution via Version Control</a> — arXiv cs.AI. Raison : Papier de recherche sur l'évolution fédérée de compétences pour agents IA. Intéressant pour experts en IA et architecture SI, mais impact pratique et validation restent incertains.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21350">Hierarchical Graph Convolutional Network Approach for Detecting Low-Quality Documents</a> — arXiv cs.AI. Raison : Papier de recherche sur la détection de documents de faible qualité via graphes. Intéressant mais éloigné des sujets cyber et IA d'entreprise, et sans implication pratique immédiate.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21392">Learning to Reason with Selective Internal Feedback</a> — arXiv cs.AI. Raison : Recherche IA sur un mécanisme de raisonnement par feedback interne, sans lien immédiat avec la cybersécurité ou un outil pratique. Intéressant mais nécessite lecture rapide pour experts.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21393">Self-Guided LLM Reasoning for Error Diagnosis in Vehicle Routing Problems</a> — arXiv cs.AI. Raison : Papier de recherche IA sur un benchmark de résolution de problèmes NP-difficiles avec erreurs. Intéressant mais éloigné des préoccupations immédiates des publics cibles.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21397">Watts If? A Benchmark for Counterfactual Reasoning About the AI Data Center Buildout</a> — arXiv cs.AI. Raison : Benchmark académique (DCBench-440) pour le raisonnement contrefactuel des LLMs sur les data centers IA. Intéressant pour experts IA, mais portée pratique encore incertaine.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21405">MemCut: Every Secret Leaves a Trail in the Long-Term Memory of LLM Agents</a> — arXiv cs.AI. Raison : Papier de recherche sur l'oubli en mémoire LLM, intéressant pour la sécurité, mais impact pratique incertain pour les experts ciblés.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21411">Jev-LiteMAS: Separating Decisions from Generation in Multi-Agent Workflows</a> — arXiv cs.AI. Raison : Papier de recherche sur l'optimisation des workflows multi-agents LLM, intéressant pour les experts en IA mais à l'impact pratique incertain.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21424">Do Agents Need a New Kind of Paper? SPRA: Structured Paper Representation for Agents</a> — arXiv cs.AI. Raison : Papier de recherche IA sur structure documentaire pour agents. Intéressant mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21427">Learning from Interaction Experience via Localized Context Distillation</a> — arXiv cs.AI. Raison : Papier de recherche sur un mécanisme de distillation de contexte indirectement lié aux LLMs, mais sans lien évident avec la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.21466">Ontology Refinement with Embeddings and LLMs: A Case Study on CASTON</a> — arXiv cs.AI. Raison : Papier de recherche sur le raffinement d'ontologies avec embeddings et LLMs, sans lien direct avec la cybersécurité ou les sujets ciblés. Intérêt pratique incertain pour les experts.</li>
 </ul>
 
 <h2>IA — Labos & éditeurs</h2>
 
 <ul>
-<li><strong>Reflection Beam sur AWS</strong> : AWS met à disposition Beam, un modèle open-weight d'IA agentique pour le code et les tâches de longue haleine, via SageMaker JumpStart (endpoint temps réel) ou HyperPod Inference avec SGLang/vLLM pour un contrôle Kubernetes natif. <a href="https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/">AWS Machine Learning</a></li>
+<li><strong>Évaluation continue des agents IA en production</strong> : AWS publie un framework en neuf étapes pour détecter les dérives silencieuses de qualité des agents autonomes, de l'intégration au suivi en production. L'enjeu : la latence reste stable pendant que les réponses se dégradent. <a href="https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Déploiement de l'IA générative dans un secteur régulé</strong> : Itaú, première banque brésilienne, combine une interface conversationnelle (ia.i) et une plateforme de gouvernance interne (IARA) pour déployer l'IA générative auprès de l'ensemble de ses clients et employés, dans un cadre réglementaire contraignant. <a href="https://openai.com/index/itau-generative-ai">OpenAI News</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/">Introducing Reflection Beam: an open-weight model for agentic coding on AWS</a> — AWS Machine Learning. Raison : Nouveau modèle open-weight pour agentic coding déployable sur AWS, potentiel pour les développeurs et architectes mais pas de critique cyber ou stratégique directe.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/">Building trust in AI agents: A production-ready evaluation framework with Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Framework structuré d'évaluation d'agents IA pour la production, base technique solide (Bedrock), pertinent pour RSSI et CTO confrontés à la dérive silencieuse de qualité.</li>
+<li><strong>3/5</strong> — <a href="https://openai.com/index/itau-generative-ai">How Itaú is building generative AI for its entire customer base</a> — OpenAI News. Raison : Retour d'expérience entreprise sur déploiement IA à grande échelle dans un secteur régulé, intéressant pour stratégie mais sans détails techniques ou cyber. Source promotionnelle (OpenAI News).</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Vulnérabilités zero-day sur équipements de périmètre</strong> : La compromission de la solution BeyondTrust Remote Support confirme une accentuation des attaques ciblant les appliances de bordure (VPN, accès distants). Cette tendance avait déjà été illustrée la même semaine par des failles critiques chez Ivanti, Cisco et Palo Alto Networks. <a href="https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagnes de malvertising ciblant les développeurs</strong> : Des attaques usurpant Claude et ChatGPT se multiplient pour piéger des employés via de fausses invites en ligne de commande (tactique "ClickFix"). La finalité est la compromission de postes de développement pour accéder aux infrastructures d'entreprise. <a href="https://www.darkreading.com/application-security/fake-claude-chatgpt-attacks-developers-risk">Dark Reading</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.darkreading.com/endpoint-security/beyondtrust-remote-support-exploited-edge-bugs">BeyondTrust Remote Support Zero-Day Continues Trend of Exploited Edge Bugs</a> — Dark Reading. Raison : Zero-day exploité sur un équipement de télétravail/fournisseur critique, tendance récurrente sur des acteurs majeurs (Ivanti, Cisco, Palo Alto). Impact direct sur les infrastructures de support à distance.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/application-security/fake-claude-chatgpt-attacks-developers-risk">Fake Claude, ChatGPT Attacks Surge, Putting Developers at Risk</a> — Dark Reading. Raison : Campagne ciblant les employés via des usurpations d'IA, avec tactique ClickFix. Pertinent pour RSSI et AppSec, mais résumé trop vague pour un score 5.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261016-1953</guid>
-      <pubDate>Fri, 16 Oct 2026 19:53:18 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261017-0911</guid>
+      <pubDate>Sat, 17 Oct 2026 09:11:58 +0000</pubDate>
     </item>
   </channel>
 </rss>
