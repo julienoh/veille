@@ -8,54 +8,66 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 17 Oct 2026 19:11:20 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 09:27:13 +0000</lastBuildDate>
     <item>
-      <title>Digest — 17/10 19h</title>
+      <title>Digest — 18/10 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Compromission de locataires Microsoft 365 via ConnectWise** : Une compromission de la chaîne d'approvisionnement du service Cloud Backup de ConnectWise (ex-SkyKick) a permis à des attaquants d'accéder à des identités d'applications et de pénétrer des environnements Microsoft 365 clients. ConnectWise a coupé l'accès au service et recommande une rotation immédiate des secrets. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/)
-- **Failles RCE critiques dans Drupal** : Deux vulnérabilités critiques permettant l'exécution de code à distance ont été corrigées dans toutes les versions supportées de Drupal. L'éditeur prévient que des exploits pourraient apparaître rapidement, le correctif est à appliquer sans délai. [BleepingComputer](https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/)
+- **Compromission de tenants Microsoft 365 via ConnectWise** : ConnectWise a désactivé sept identités applicatives après qu'un acteur malveillant y a obtenu un accès non autorisé, lui permettant de compromettre des tenants Microsoft 365 clients. L'incident a conduit à la suspension du service Cloud Backup. [The Hacker News](https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html)
 
 **Évaluation du scoring**
 
-- **5/5** — [Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack](https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/) — BleepingComputer. Raison : Incident majeur de supply-chain touchant Microsoft 365 via ConnectWise, impact direct sur la sécurité des entreprises, nécessite action immédiate.
-- **5/5** — [Drupal patches critical RCE flaws, warns exploits may emerge soon](https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/) — BleepingComputer. Raison : CVE critiques RCE sur Drupal, CMS très utilisé en entreprise. Patch disponible mais exploitation imminente. Impact direct sur les systèmes des experts ciblés.
+- **5/5** — [ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants](https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html) — The Hacker News. Raison : Incident majeur touchant un fournisseur critique et compromettant des tenants M365, impact direct sur la chaîne d'approvisionnement. Lecture impérative pour RSSI et CTO.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Meta retire une clause sur le scraping de données** : Meta a supprimé de ses conditions commerciales la mention laissant entendre qu'il pouvait aspirer le contenu de sites web pour entraîner son IA, suite à des critiques. L'entreprise cherche désormais une formulation conforme à son intention initiale. [The Verge](https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites)
+- **Optimisation d'agents sans fine-tuning** : Google livre Harness2 en open source (Apache 2.0), un framework qui modifie dynamiquement le contexte d'un agent à l'inférence pour gagner en performance sans toucher aux poids du modèle (+11,5 pts sur un benchmark avec GLM-5). [MarkTechPost](https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/)
+
+- **Prédiction tabulaire sans entraînement** : La librairie Structured Data Models de NVIDIA fédère plusieurs modèles tabulaires pré-entraînés (TabICLv2, KumoTabular, KumoRelational) derrière une interface PyTorch unique, permettant des prédictions zero-shot sur données structurées. [MarkTechPost](https://www.marktechpost.com/2026/10/17/how-to-make-zero-training-tabular-predictions-with-nvidia-structured-data-models/)
+
+- **Modèle robotique frugal avec mémoire** : Kyutai, l'Inria et l'École des Ponts publient REKI, un modèle vision-langage-action de 2,4B paramètres pré-entraîné uniquement sur données publiques, doté d'une mémoire court-terme pour la manipulation robotique — seul modèle de sa catégorie à tenir sur trois benchmarks out-of-distribution. [MarkTechPost](https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/)
 
 **Évaluation du scoring**
 
-- **3/5** — [Meta removes language that may have allowed it to scrape news sites](https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites) — The Verge — AI. Raison : Changement de conditions d'utilisation de Meta après backlash. Impact limité pour le public expert car pas de technique, ni de vulnérabilité ou de conformité structurante.</description>
+- **3/5** — [Google Open-Sources Harness2, a Recursive Agent Harnessing Framework](https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/) — MarkTechPost. Raison : Framework open-source intéressant pour agents récursifs, mais l'impact pratique pour un public expert reste à démontrer.
+- **3/5** — [How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models](https://www.marktechpost.com/2026/10/17/how-to-make-zero-training-tabular-predictions-with-nvidia-structured-data-models/) — MarkTechPost. Raison : Tutoriel technique sur un outil NVIDIA de prédiction tabulaire sans entraînement. Utile pour développeurs et architectes mais sans lien direct avec cybersécurité.
+- **3/5** — [Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation](https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/) — MarkTechPost. Raison : Modèle VLA pour robotique, prétraîné sur données publiques. Intéressant pour recherche IA/robotique, mais pas directement applicable au périmètre experts ciblé.</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Compromission de locataires Microsoft 365 via ConnectWise</strong> : Une compromission de la chaîne d'approvisionnement du service Cloud Backup de ConnectWise (ex-SkyKick) a permis à des attaquants d'accéder à des identités d'applications et de pénétrer des environnements Microsoft 365 clients. ConnectWise a coupé l'accès au service et recommande une rotation immédiate des secrets. <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/">BleepingComputer</a></li>
-<li><strong>Failles RCE critiques dans Drupal</strong> : Deux vulnérabilités critiques permettant l'exécution de code à distance ont été corrigées dans toutes les versions supportées de Drupal. L'éditeur prévient que des exploits pourraient apparaître rapidement, le correctif est à appliquer sans délai. <a href="https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/">BleepingComputer</a></li>
+<li><strong>Compromission de tenants Microsoft 365 via ConnectWise</strong> : ConnectWise a désactivé sept identités applicatives après qu'un acteur malveillant y a obtenu un accès non autorisé, lui permettant de compromettre des tenants Microsoft 365 clients. L'incident a conduit à la suspension du service Cloud Backup. <a href="https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html">The Hacker News</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/">Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack</a> — BleepingComputer. Raison : Incident majeur de supply-chain touchant Microsoft 365 via ConnectWise, impact direct sur la sécurité des entreprises, nécessite action immédiate.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/drupal-patches-critical-rce-flaws-warns-exploits-may-emerge-soon/">Drupal patches critical RCE flaws, warns exploits may emerge soon</a> — BleepingComputer. Raison : CVE critiques RCE sur Drupal, CMS très utilisé en entreprise. Patch disponible mais exploitation imminente. Impact direct sur les systèmes des experts ciblés.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html">ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants</a> — The Hacker News. Raison : Incident majeur touchant un fournisseur critique et compromettant des tenants M365, impact direct sur la chaîne d'approvisionnement. Lecture impérative pour RSSI et CTO.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Meta retire une clause sur le scraping de données</strong> : Meta a supprimé de ses conditions commerciales la mention laissant entendre qu'il pouvait aspirer le contenu de sites web pour entraîner son IA, suite à des critiques. L'entreprise cherche désormais une formulation conforme à son intention initiale. <a href="https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites">The Verge</a></li>
+<li><strong>Optimisation d'agents sans fine-tuning</strong> : Google livre Harness2 en open source (Apache 2.0), un framework qui modifie dynamiquement le contexte d'un agent à l'inférence pour gagner en performance sans toucher aux poids du modèle (+11,5 pts sur un benchmark avec GLM-5). <a href="https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Prédiction tabulaire sans entraînement</strong> : La librairie Structured Data Models de NVIDIA fédère plusieurs modèles tabulaires pré-entraînés (TabICLv2, KumoTabular, KumoRelational) derrière une interface PyTorch unique, permettant des prédictions zero-shot sur données structurées. <a href="https://www.marktechpost.com/2026/10/17/how-to-make-zero-training-tabular-predictions-with-nvidia-structured-data-models/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèle robotique frugal avec mémoire</strong> : Kyutai, l'Inria et l'École des Ponts publient REKI, un modèle vision-langage-action de 2,4B paramètres pré-entraîné uniquement sur données publiques, doté d'une mémoire court-terme pour la manipulation robotique — seul modèle de sa catégorie à tenir sur trois benchmarks out-of-distribution. <a href="https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/">MarkTechPost</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites">Meta removes language that may have allowed it to scrape news sites</a> — The Verge — AI. Raison : Changement de conditions d'utilisation de Meta après backlash. Impact limité pour le public expert car pas de technique, ni de vulnérabilité ou de conformité structurante.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/">Google Open-Sources Harness2, a Recursive Agent Harnessing Framework</a> — MarkTechPost. Raison : Framework open-source intéressant pour agents récursifs, mais l'impact pratique pour un public expert reste à démontrer.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/17/how-to-make-zero-training-tabular-predictions-with-nvidia-structured-data-models/">How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models</a> — MarkTechPost. Raison : Tutoriel technique sur un outil NVIDIA de prédiction tabulaire sans entraînement. Utile pour développeurs et architectes mais sans lien direct avec cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/">Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation</a> — MarkTechPost. Raison : Modèle VLA pour robotique, prétraîné sur données publiques. Intéressant pour recherche IA/robotique, mais pas directement applicable au périmètre experts ciblé.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261017-1911</guid>
-      <pubDate>Sat, 17 Oct 2026 19:11:20 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261018-0927</guid>
+      <pubDate>Sun, 18 Oct 2026 09:27:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
