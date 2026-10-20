@@ -8,198 +8,256 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Tue, 20 Oct 2026 15:42:01 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 20:28:07 +0000</lastBuildDate>
     <item>
-      <title>Digest — 20/10 15h</title>
+      <title>Digest — 20/10 20h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA — Labos &amp; éditeurs
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Couche sémantique pour agents IA sur AWS** : AtScale et AWS proposent une architecture articulée autour d'Amazon Bedrock AgentCore et d'un serveur MCP pour exposer des données Redshift à des agents, en garantissant le contrôle d'accès, la sécurité ligne et l'audit au niveau sémantique. [Source](https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-atscale-and-amazon-bedrock-agentcore/)
+- **Compromission d'autorités de certification eMudhra** : Huit clés privées de certificats intermédiaires eMudhra ont été compromises, permettant à un attaquant d'émettre des certificats frauduleux. Mozilla et Google déploient des correctifs d'urgence dans les navigateurs. [The Hacker News](https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html)
 
-- **ALTK-Evolve d'IBM Research** : Ce modèle, qui repose sur une mémoire apprise plutôt que sur un modèle frontalier, arrive en tête du benchmark τ²-bench sur des tâches de service client, démontrant qu'on peut obtenir des performances élevées sans recourir aux plus gros modèles. [Source](https://huggingface.co/blog/ibm-research/altk-evolve-bc)
+- **Exploitation active de failles Palo Alto Networks par des ransomwares** : Les groupes Qilin et INC exploitent la vulnérabilité CVE-2026-0257 (score 7.8) sur PAN-OS et Prisma Access pour contourner l'authentification MFA. Le correctif est disponible. [The Hacker News](https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html)
 
-**Évaluation du scoring**
+- **PoC public pour une faille critique FortiSIEM** : Un exploit pour la vulnérabilité CVE-2026-106173 (CVSS 9.4) sur Fortinet FortiSIEM est désormais public, permettant l'exécution de code à distance sans authentification. L'application du correctif est urgente. [The Hacker News](https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html)
 
-- **3/5** — [Build a semantic layer for agentic AI on AWS with AtScale and Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-atscale-and-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Article technique sur l'intégration d'un semantic layer avec AtScale et Bedrock AgentCore. Utile pour architectes SI mais pas critique pour la cybersécurité ou les priorités immédiates des RSSI/CTO.
-- **3/5** — [ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model](https://huggingface.co/blog/ibm-research/altk-evolve-bc) — Hugging Face Blog. Raison : Article technique sur benchmark IA pour service client. Pertinent mais pas critique pour RSSI/CTO, aucun lien direct avec sécurité ou stratégie.
+- **Fuite massive chez Zeabur entraîne la fermeture de la plateforme** : Un attaquant a exploité des identifiants internes en clair pour voler 3,2 millions de variables d'environnement et les données de 321 810 comptes. Il s'agit du second incident en deux mois, conduisant à l'arrêt du service. [BleepingComputer](https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/)
 
-## Cyber — Menaces &amp; vulnérabilités
+- **Violation de données chez un sous-traitant de l'Éducation nationale californienne** : Educational Testing Service (ETS) a subi une compromission de plusieurs mois, exposant les données de l'ensemble des élèves des écoles publiques de Californie. [The Record](https://therecord.media/california-warns-all-public-school-students-of-data-breach)
 
-- **Interdiction de DeepSeek dans les agences fédérales US** : Le DHS ordonne le retrait immédiat des produits DeepSeek de tous les systèmes gouvernementaux civils, confirmant le niveau de risque inacceptable attribué à cet outil. [BleepingComputer](https://www.bleepingcomputer.com/news/security/dhs-bans-deepseek-products-across-us-federal-civilian-agencies/)
+- **23andMe sanctionnée pour ses défaillances de sécurité** : L'entreprise paiera 6 millions de dollars pour solder les accusations du procureur de Californie concernant la protection insuffisante des données clients lors de la violation de 2023. [The Record](https://therecord.media/23andme-california-data-breach-settlement)
 
-- **Supply chain : AOMEI compromis sans notification clients** : Des attaquants ont manipulé les serveurs de mise à jour d'AOMEI entre avril et juillet pour distribuer des malwares par intermittence ; l'éditeur n'a toujours pas alerté ses utilisateurs. [The Record](https://therecord.media/aomei-yet-to-notify-customers-hijack-software)
+- **Utilisation offensive de GPT-6.1 Sol pour la migration de code legacy** : OpenAI confirme que son dernier modèle excelle dans la migration de langages de programmation anciens, une capacité pouvant faciliter la modernisation accélérée de code vulnérable par des acteurs malveillants. [BleepingComputer](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-gpt-61-sol-is-dramatically-better-at-migrating-legacy-code/)
 
-- **APT28 cible un chantier naval de l'OTAN** : Le groupe russe a compromis un constructeur naval d'un pays membre de l'OTAN en déployant un nouveau loader réflectif, illustrant une menace persistante contre la chaîne d'approvisionnement de défense. [The Hacker News](https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html)
-
-- **Pegasus confirmé sur l'iPhone d'un recteur serbe** : Citizen Lab a détecté le spyware NSO Group sur le téléphone de Vladan Đokić, figure de soutien aux manifestations étudiantes, six jours avant des élections législatives anticipées. [The Hacker News](https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html)
-
-- **Go révoque en urgence huit clés d'AC intermédiaires** : Les versions 1.27.3 et 1.26.10 rejettent toute chaîne de certificats transitant par ces clés, pour des raisons de sécurité non divulguées ; tout service utilisant ces AC deviendra inaccessible pour les applications compilées avec ces releases. [The Hacker News](https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html)
-
-- **Explosion du nombre de vulnérabilités publiées** : Cisco Talos analyse le passage d'une moyenne mensuelle de 100 à plus de 1 400 vulnérabilités dans les bulletins Microsoft, un volume qui interroge sur la soutenabilité des processus de correction. [Cisco Talos](https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/)
-
-- **Incident de sécurité chez ConnectWise** : L'éditeur a réinitialisé des comptes et des secrets applicatifs après un accès non autorisé à des identités d'application liées à son offre de sauvegarde cloud, toujours hors ligne. [The Hacker News](https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html)
-
-- **Cyberattaque contre Ahold Delhaize** : L'enseigne de distribution alimentaire confirme des perturbations de services dans ses magasins aux États-Unis et en Europe suite à un incident de la semaine dernière. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ahold-delhaize-cyberattack-affects-services-across-us-and-europe/)
-
-- **Messages anti-Poutine injectés dans une plateforme éducative russe** : Un groupe pro-Ukraine a diffusé des contenus hostiles au régime sur un système d'évaluation scolaire national ; les autorités russes annoncent une restauration des services. [The Record](https://therecord.media/anti-putin-messages-disrupt-russian-education-platform)
-
-- **WhatsApp masquait des instructions anti-DPO à son chatbot** : Des consignes cachées dans les pages d'aide en Europe ordonnaient au chatbot de ne pas orienter les utilisateurs vers les autorités de protection des données, en contradiction avec la propre politique de confidentialité de l'application. [The Hacker News](https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html)
-
-- **Quick Machine Recovery disponible sur Windows Server 2025** : La mise à jour d'octobre 2026 active la fonction de récupération rapide, permettant aux administrateurs IT de remédier plus efficacement aux démarrages défaillants. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/windows-server-2025-gets-support-for-quick-machine-recovery/)
-
-- **CJIS v6.1 : priorités pratiques pour les agences** : La nouvelle version impose MFA, gestion renforcée des comptes et mots de passe, journalisation et auditabilité ; cinq axes de mise en conformité sont détaillés. [BleepingComputer](https://www.bleepingcomputer.com/news/security/cjis-v61-compliance-5-practical-priorities-for-agencies/)
-
-- **8 ans de prison pour fraude fiscale par spearphishing** : Un ressortissant nigérian a été condamné pour avoir dérobé 3,3 millions de dollars via des campagnes ciblant des cabinets de préparation fiscale américains depuis 2019. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hacker-gets-8-years-for-stealing-33-million-from-taxpayers/)
+- **Condamnation dans une affaire de piratage de services fiscaux** : Un ressortissant nigérian impliqué dans le piratage d'entreprises de préparation fiscale et l'utilisation frauduleuse des données clients volées a été condamné à 8 ans de prison. [The Record](https://therecord.media/nigerian-given-8-year-sentenc-tax-hacks)
 
 **Évaluation du scoring**
 
-- **5/5** — [DHS bans DeepSeek products across US federal civilian agencies](https://www.bleepingcomputer.com/news/security/dhs-bans-deepseek-products-across-us-federal-civilian-agencies/) — BleepingComputer. Raison : Interdiction fédérale américaine de DeepSeek : décision réglementaire majeure impactant la gouvernance IA et la cybersécurité des administrations.
-- **5/5** — [AOMEI yet to notify customers after hackers hijacked its software updates](https://therecord.media/aomei-yet-to-notify-customers-hijack-software) — The Record. Raison : Incident majeur de supply chain : compromission de serveurs de mise à jour logicielle, impact potentiel sur de nombreux clients. Critique pour RSSI et CTO.
-- **5/5** — [Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election](https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html) — The Hacker News. Raison : Infection Pegasus par zero-click confirmée par Citizen Lab, cible politique de haut niveau, impact direct sur sécurité des mobiles en entreprise.
-- **5/5** — [Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns](https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html) — The Hacker News. Raison : Mise à jour d'urgence du langage Go bloquant huit clés CA intermédiaires. Impact direct sur la confiance TLS, potentiel incident grave de la chaîne d'approvisionnement, nécessite analyse immédiate.
-- **5/5** — [Ahold Delhaize: Cyberattack affects services across US and Europe](https://www.bleepingcomputer.com/news/security/ahold-delhaize-cyberattack-affects-services-across-us-and-europe/) — BleepingComputer. Raison : Incident cyber majeur touchant un grand distributeur international, impactant les opérations critiques en Europe et aux États-Unis. Pertinent pour RSSI et architectes SI.
-- **5/5** — [Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader](https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html) — The Hacker News. Raison : Incident cyber majeur visant un constructeur naval de l'OTAN par un APT étatique russe avec nouveau loader. Impact direct sur les infrastructures critiques et la chaîne d'approvisionnement.
-- **5/5** — [ConnectWise Resets Credentials as Cloud Backup Remains Offline After Security Incident](https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html) — The Hacker News. Raison : Incident de sécurité majeur chez un fournisseur cloud Backup impactant la chaîne d'approvisionnement. Remédiation en cours avec reset de credentials. Pertinence directe pour RSSI/CTO.
-- **4/5** — [There's only so much code: the rise in vulnerability numbers](https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/) — Cisco Talos. Raison : Analyse de la forte augmentation des vulnérabilités et de ses implications stratégiques pour la gestion des risques.
-- **4/5** — [Anti-Putin messages disrupt nationwide school assessments in Russia](https://therecord.media/anti-putin-messages-disrupt-russian-education-platform) — The Record. Raison : Incident cyber notable : compromission d'une plateforme nationale d'évaluation en Russie, revendiqué par un groupe hacktiviste. Pertinent pour comprendre les risques géopolitiques et la résilience des infrastructures critiques.
-- **4/5** — [Hacker gets 8 years for stealing $3.3 million from taxpayers](https://www.bleepingcomputer.com/news/security/hacker-gets-8-years-for-stealing-33-million-from-taxpayers/) — BleepingComputer. Raison : Condamnation significative pour spearphishing ciblant des entreprises fiscales. Analyse utile pour comprendre les risques et les conséquences juridiques des campagnes ciblées.
-- **4/5** — [Windows Server 2025 gets support for quick machine recovery](https://www.bleepingcomputer.com/news/microsoft/windows-server-2025-gets-support-for-quick-machine-recovery/) — BleepingComputer. Raison : Nouvelle fonctionnalité de recovery rapide pour Windows Server 2025 après patch sécurité. Utile pour RSSI/CTO gérant des infrastructures critiques.
-- **4/5** — [WhatsApp Hid Instructions in Help Pages Telling Its AI Chatbot Not to Recommend Privacy Regulators](https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html) — The Hacker News. Raison : Pratique trompeuse d'un acteur majeur (WhatsApp) concernant les droits des utilisateurs et les régulateurs, impactant la conformité et la gouvernance.
-- **3/5** — [CJIS v6.1 Compliance: 5 Practical Priorities for Agencies](https://www.bleepingcomputer.com/news/security/cjis-v61-compliance-5-practical-priorities-for-agencies/) — BleepingComputer. Raison : Article opérationnel sur la conformité CJIS v6.1, utile pour RSSI cyber-gouvernance mais sans nouveauté majeure. Priorités pratiques déjà connues.
+- **5/5** — [Zeabur shutting down after second security breach in two months](https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/) — BleepingComputer. Raison : Incident majeur chez Zeabur : vol de 3,2M de variables d'environnement et 321k comptes. Attaque par fuite de credentials en clair. Impact direct sur sécurité des infrastructures et supply chain.
+- **5/5** — [California warns all public school students of data stolen in contractor breach](https://therecord.media/california-warns-all-public-school-students-of-data-breach) — The Record. Raison : Incident cyber majeur touchant un secteur critique (éducation) via un fournisseur, avec fuite de données sensibles impactant des mineurs.
+- **5/5** — [Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software](https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html) — The Hacker News. Raison : Compromission de certificats intermédiaires eMudhra, impactant tous les navigateurs et logiciels. Vulnérabilité critique affectant la chaîne d'approvisionnement, nécessitant des correctifs urgents.
+- **5/5** — [Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution](https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html) — The Hacker News. Raison : CVE critique 9.4 avec PoC public pour RCE non authentifiée sur FortiSIEM, produit utilisé en entreprise. Impact direct pour un RSSI ou CTO.
+- **4/5** — [23andMe successor settles with California for $6 million over cybersecurity failings](https://therecord.media/23andme-california-data-breach-settlement) — The Record. Raison : Incident majeur avec données sensibles et sanction réglementaire significative, intéressant pour les RSSI et CTO sur la gouvernance et la conformité.
+- **4/5** — [Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA](https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html) — The Hacker News. Raison : Exploitation active d'une vulnérabilité PAN-OS par des ransomwares, contournement MFA. Pertinent pour RSSI/CTO mais patch déjà disponible.
+- **3/5** — [OpenAI says GPT-6.1 Sol is dramatically better at migrating legacy code](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-gpt-61-sol-is-dramatically-better-at-migrating-legacy-code/) — BleepingComputer. Raison : Annonce d'amélioration significative de migration de code legacy par un modèle OpenAI, pouvant impacter le dev tooling, mais sans détail technique ou benchmark exploitable dans le résumé.
+- **3/5** — [Nigerian national given 8-year sentence for tax business hacks](https://therecord.media/nigerian-given-8-year-sentenc-tax-hacks) — The Record. Raison : Illustre un cas de cybercriminalité ciblant des données fiscales, intéressant pour contexte mais sans détail technique exploitant.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Fuite de données via Meta Muse** : Le partage de conversations issues de l'IA Meta expose titres et contenus à des tiers par simple requête, y compris des secrets d'affaires. [Ars Technica](https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/)
+- **Meta suspend une fonctionnalité de partage Muse après une fuite de données** : Des chercheurs en sécurité ont découvert plus de 6 800 conversations avec l'assistant IA Muse accessibles publiquement sur le web via leurs URLs. Meta a suspendu la fonctionnalité le temps de corriger le problème. [The Verge](https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats)
 
-- **Économie de l'IA en entreprise** : Le coût devient le facteur limitant à mesure que l'IA s'infiltre dans tous les processus, forçant un arbitrage entre valeur et consommation de ressources comparable à celui de l'électricité. [MIT Technology Review](https://www.technologyreview.com/2026/10/20/1146937/the-new-economics-of-enterprise-ai/)
+- **Le gouvernement français contraint les plateformes à modérer contenus et reventes** : Face aux protestations, TikTok et d'autres réseaux ont reçu l'ordre de limiter la diffusion d'images de manifestations et de contenus modifiés par IA, tandis que Vinted et eBay ont signé un accord pour bloquer la revente de biens pillés. [Wired](https://www.wired.com/story/french-government-calls-emergency-meetings-with-platforms-over-protests/)
 
-- **Adoption sectorielle de l'IA** : Les patterns d'intégration de l'IA générative dans les secteurs traditionnels divergent du modèle tech, avec des boucles de rétroaction plus lentes et des contraintes réglementaires spécifiques. [MIT Technology Review](https://www.technologyreview.com/2026/10/20/1145423/ai-adoption-by-industry-shows-what-other-sectors-can-learn/)
-
-- **Limites du protocole MCP** : Dylan Field (Figma) juge le Model Context Protocol imparfait pour l'interconnexion des données ; Figma adoptera plusieurs standards sans exposer l'intégralité de ses données. [TechCrunch](https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/)
+- **Google et Meta open-sourcent TorchTPU pour PyTorch sur Cloud TPU** : TorchTPU devient le backend natif recommandé pour exécuter PyTorch sur les TPU Google Cloud, en exécution eager par défaut avec compilation via torch.compile et XLA. Il remplace PyTorch/XLA pour les nouveaux workloads. [MarkTechPost](https://www.marktechpost.com/2026/10/20/google-torchtpu-open-source-native-pytorch-tpu/)
 
 **Évaluation du scoring**
 
-- **4/5** — [The new economics of enterprise AI](https://www.technologyreview.com/2026/10/20/1146937/the-new-economics-of-enterprise-ai/) — MIT Technology Review — AI. Raison : Métaphore utile sur l'évolution du coût de l'IA en infrastructure, sujet stratégique pour RSSI/CTO. Analyse économique non technique mais structurante pour l'adoption.
-- **4/5** — [Meta Muse exposes users' personal and business secrets when they share conversations](https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/) — Ars Technica — Tech Lab. Raison : Vulnérabilité exposant des conversations utilisateurs via Meta Muse, impact potentiel sur la vie privée en entreprise. Analyse technique nécessaire pour évaluer le risque réel.
-- **3/5** — [Figma co-founder Dylan Field thinks MCP is not a perfect protocol](https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/) — TechCrunch — AI. Raison : Article sur la position de Figma sur le protocole MCP. Intéressant pour la stratégie IA, mais peu d'impact direct cybersécurité. À survoler.
-- **3/5** — [AI adoption by industry shows what other sectors can learn](https://www.technologyreview.com/2026/10/20/1145423/ai-adoption-by-industry-shows-what-other-sectors-can-learn/) — MIT Technology Review — AI. Raison : Analyse des tendances d'adoption de l'IA par secteur, pertinente mais sans information technique ou cyber spécifique pour experts RSSI/CTO.</description>
-      <content:encoded><![CDATA[<h2>IA — Labos & éditeurs</h2>
+- **4/5** — [Meta pauses Muse sharing after researchers find AI chats on the web](https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats) — The Verge — AI. Raison : Vulnérabilité de divulgation de données d'assistant IA (Muse) liée à des enregistrements DNS publics, pertinente pour la sécurité des chatbots en entreprise.
+- **3/5** — [French Government Calls Emergency Meetings With Platforms Over Protests](https://www.wired.com/story/french-government-calls-emergency-meetings-with-platforms-over-protests/) — Wired — AI. Raison : Article sur la gouvernance des contenus lors de protestations. Pertinent pour la régulation des plateformes, mais peu technique pour experts cyber.
+- **3/5** — [Google Open-Sources TorchTPU, a Native PyTorch Backend for Cloud TPUs](https://www.marktechpost.com/2026/10/20/google-torchtpu-open-source-native-pytorch-tpu/) — MarkTechPost. Raison : Annonce open-source d'un backend PyTorch natif pour Cloud TPU, utile aux développeurs et architectes. Intérêt technique présent mais non critique pour un public cyber.
+
+## Actualité tech FR
+
+- **Consignes cachées dans l’aide WhatsApp** : Redact a découvert que les pages d’aide de WhatsApp contenaient des instructions invisibles destinées aux IA leur interdisant de recommander une autorité de protection des données. L’Internet Archive confirme la présence de 102 blocs de ce type sur 80 pages. [Actu IA](https://www.actuia.com/actualite/pages-daide-de-whatsapp-une-consigne-cachee-interdisait-de-recommander-un-regulateur/)
+
+- **IA en gestion de projet : usage fort, maturité risque faible** : 73 % des PMO déclarent utiliser l’IA, mais moins de 10 % intègrent une anticipation des risques dans leurs pratiques. L’adoption reste donc superficielle et ne transforme pas le pilotage des portefeuilles de projets. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-73-des-pmo-utilisent-l-ia-mais-moins-de-10-anticipent-les-risques-100859.html)
+
+**Évaluation du scoring**
+
+- **4/5** — [Pages d’aide de WhatsApp : une consigne cachée interdisait de recommander un régulateur](https://www.actuia.com/actualite/pages-daide-de-whatsapp-une-consigne-cachee-interdisait-de-recommander-un-regulateur/) — Actu IA. Raison : Révèle une consigne IA cachée dans l'aide WhatsApp, impactant confiance et conformité. Analyse de fond sur gouvernance IA et régulation.
+- **3/5** — [73 % des PMO utilisent l'IA, mais moins de 10 % anticipent les risques](https://www.lemondeinformatique.fr/actualites/lire-73-des-pmo-utilisent-l-ia-mais-moins-de-10-anticipent-les-risques-100859.html) — Le Monde Informatique — IA. Raison : Sujet IA en entreprise et gestion des risques, pertinent mais résumé trop vague pour évaluer profondeur ; à survoler pour détails concrets.
+
+## IA — Labos &amp; éditeurs
+
+- **Gouvernance des identités agents par PKI** : AWS propose une architecture de référence couplant EJBCA et services AWS pour doter les agents IA d'une identité cryptographique X.509, avec signatures de requêtes, assertions de délégation, tokens à portée limitée (RFC 8693) et révocation OCSP en temps réel. [Source](https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/)
+
+- **Isolation multi-tenant pour agents en production** : Octave a déployé sur Bedrock AgentCore un assistant traitant 2 milliards de documents réglementés sans fuite entre locataires, en s'appuyant sur des embeddings Cohere Embed v4 et une exécution isolée par agent. [Source](https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/)
+
+- **Couche sémantique gouvernée pour l'IA agentique** : Denodo et Bedrock AgentCore construisent une couche fédérée (Aurora, Redshift, PostgreSQL on-prem) avec propagation d'identité et contrôle d'accès ligne/colonne, exposée aux agents en langage VQL. [Source](https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-denodo-and-amazon-bedrock-agentcore/)
+
+- **Passerelle MCP unifiée pour le multi-cloud** : Eon a remplacé les credentials par outil et les processus MCP locaux par une passerelle unique Bedrock AgentCore authentifiée, donnant à plus de 100 développeurs un accès unifié aux environnements AWS, GCP et Azure, et réduisant l'onboarding de deux jours à quelques heures. [Source](https://aws.amazon.com/blogs/machine-learning/how-eon-built-multi-cloud-investigation-with-an-mcp-gateway-on-amazon-bedrock-agentcore/)
+
+- **Découverte dynamique d'outils au runtime** : AWS Agent Registry permet à un orchestrateur de découvrir des serveurs MCP et agents A2A par recherche sémantique au runtime, évitant le câblage statique qui devient ingérable au-delà de quelques dizaines d'outils. [Source](https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/)
+
+- **Agents connectés aux données métiers en temps réel** : Le serveur MCP Smartsheet sur AWS donne aux agents IA un accès lecture/écriture aux données de gestion de travail, via Amazon Quick pour les métiers ou Kiro pour les développeurs. Parallèlement, Bedrock AgentCore exposant ERP, monitoring et achats comme couche outillée gouvernée permet une expérience conversationnelle unifiée pour la supply chain. [Source 1](https://aws.amazon.com/blogs/machine-learning/work-management-context-for-ai-agents-with-smartsheet-mcp-on-aws/) · [Source 2](https://aws.amazon.com/blogs/machine-learning/from-data-to-decisions-conversational-supply-chain-intelligence-with-amazon-quick-and-amazon-bedrock-agentcore/)
+
+- **Fine-tuning de modèles open source pour le raisonnement multilingue** : Le fine-tuning supervisé (SFT) de GPT-OSS-20B sur SageMaker HyperPod a fait passer la précision de raisonnement multilingue de 22% à 100%, le renforcement par GRPO n'apportant des gains que là où une marge de progression subsistait. [Source](https://aws.amazon.com/blogs/machine-learning/fine-tuning-gpt-oss-20b-for-multilingual-reasoning-on-amazon-sagemaker-hyperpod/)
+
+- **Accès aux modèles OpenAI via Bedrock au Canada** : Les organisations canadiennes peuvent invoquer les modèles GPT d'OpenAI sur Bedrock depuis les régions Canada Centre et Calgary via l'inférence cross-région, avec profils d'inférence et configuration IAM dédiés. [Source](https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference/)
+
+- **Évaluation de l'équité dans les décisions des LLM** : FairStress (Allen AI) propose un cadre d'évaluation plus fin des biais décisionnels des LLM, allant au-delà des métriques de fairness classiques pour détecter des déséquilibres subtils dans les décisions automatisées. [Source](https://huggingface.co/blog/allenai/fairstress)
+
+**Évaluation du scoring**
+
+- **4/5** — [How Octave built a secure multi-tenant AI foundation on Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/) — AWS Machine Learning. Raison : Retour d'expérience concret sur sécurisation multi-tenant d'IA avec Amazon Bedrock. Intéressant pour RSSI/CTO sur isolation des agents, mais technique sans détail sur vulnérabilités.
+- **4/5** — [Securing AI agent identity with X.509 PKI on AWS](https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/) — AWS Machine Learning. Raison : Article très technique et pragmatique sur la sécurisation des agents IA via PKI X.509 sur AWS, pertinent pour RSSI/CTO et architectes SI confrontés à l'identité des agents.
+- **4/5** — [How Eon built multi-cloud investigation with an MCP Gateway on Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/how-eon-built-multi-cloud-investigation-with-an-mcp-gateway-on-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Retour d'expérience concret sur l'unification d'accès multi-cloud via un gateway MCP Bedrock Agent, pertinent pour RSSI et CTO cherchant des architectures d'automatisation sécurisées.
+- **4/5** — [Build a semantic layer for agentic AI on AWS with Denodo and Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-denodo-and-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Article technique alliant gouvernance des données et agents IA sur AWS. Utile pour RSSI/CTO/Architecte pour son approche fédération de sources et contrôle d'accès à la couche sémantique.
+- **3/5** — [Work management context for AI agents with Smartsheet MCP on AWS](https://aws.amazon.com/blogs/machine-learning/work-management-context-for-ai-agents-with-smartsheet-mcp-on-aws/) — AWS Machine Learning. Raison : Article technique sur l'intégration d'agents IA avec Smartsheet via MCP sur AWS. Utile pour développeurs et architectes, mais pas critique pour la cybersécurité ou la stratégie.
+- **3/5** — [From data to decisions: Conversational supply chain intelligence with Amazon Quick and Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/from-data-to-decisions-conversational-supply-chain-intelligence-with-amazon-quick-and-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Article technique montrant l'intégration d'Amazon Bedrock AgentCore et Quick pour la chaîne logistique, utile pour les experts en IA mais peu lié à la cybersécurité.
+- **3/5** — [Fine-tuning GPT-OSS-20B for multilingual reasoning on Amazon SageMaker HyperPod](https://aws.amazon.com/blogs/machine-learning/fine-tuning-gpt-oss-20b-for-multilingual-reasoning-on-amazon-sagemaker-hyperpod/) — AWS Machine Learning. Raison : Article technique sur le fine-tuning d'un modèle ouvert pour raisonnement multilingue. Intéressant mais pas critique pour la cybersécurité ou le management.
+- **3/5** — [Access OpenAI GPT models on Amazon Bedrock from Canada with cross-Region inference](https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference/) — AWS Machine Learning. Raison : Annonce d'intégration de modèles OpenAI sur Bedrock au Canada. Intéressant pour les experts IA mais non critique : pas de nouveauté technique majeure ni d'impact cyber direct.
+- **3/5** — [Discover tools at runtime with AWS Agent Registry](https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/) — AWS Machine Learning. Raison : Article technique sur AWS Agent Registry pour découverte runtime d'outils agents, utile mais non critique.
+- **3/5** — [FairStress: A deeper evaluation of fairness in LLM decision-making](https://huggingface.co/blog/allenai/fairstress) — Hugging Face Blog. Raison : Nouveau benchmark d'équité des LLM, méthodologie potentiellement intéressante mais lien non établi avec la cybersécurité ou les outils des experts ciblés.
+
+## Cyber — Stratégie &amp; analyse
+
+- **Identités dans le cycle de développement face à l'IA** : La généralisation des assistants de code IA exacerbe le risque de fuites de secrets et d'usurpation d'identités machines dans la chaîne logicielle, faute de gouvernance unifiée entre équipes DevSecOps et IAM. La priorité est de cartographier les identités non humaines et de rapprocher les pratiques des développeurs de celles des administrateurs d'identité avant d'accélérer sur l'IA. [Dark Reading](https://www.darkreading.com/application-security/close-identity-gaps-sdlc-before-ai)
+
+**Évaluation du scoring**
+
+- **3/5** — [Close Identity Gaps in Software Development Before Unleashing AI](https://www.darkreading.com/application-security/close-identity-gaps-sdlc-before-ai) — Dark Reading. Raison : Article de niveau stratégique sur l'IA dans le cycle de vie du logiciel, avec des pistes de collaboration et réduction de coûts. Utile sans être technique ou immédiatement applicable.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Couche sémantique pour agents IA sur AWS</strong> : AtScale et AWS proposent une architecture articulée autour d'Amazon Bedrock AgentCore et d'un serveur MCP pour exposer des données Redshift à des agents, en garantissant le contrôle d'accès, la sécurité ligne et l'audit au niveau sémantique. <a href="https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-atscale-and-amazon-bedrock-agentcore/">Source</a></li>
+<li><strong>Compromission d'autorités de certification eMudhra</strong> : Huit clés privées de certificats intermédiaires eMudhra ont été compromises, permettant à un attaquant d'émettre des certificats frauduleux. Mozilla et Google déploient des correctifs d'urgence dans les navigateurs. <a href="https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html">The Hacker News</a></li>
 </ul>
 
 <ul>
-<li><strong>ALTK-Evolve d'IBM Research</strong> : Ce modèle, qui repose sur une mémoire apprise plutôt que sur un modèle frontalier, arrive en tête du benchmark τ²-bench sur des tâches de service client, démontrant qu'on peut obtenir des performances élevées sans recourir aux plus gros modèles. <a href="https://huggingface.co/blog/ibm-research/altk-evolve-bc">Source</a></li>
+<li><strong>Exploitation active de failles Palo Alto Networks par des ransomwares</strong> : Les groupes Qilin et INC exploitent la vulnérabilité CVE-2026-0257 (score 7.8) sur PAN-OS et Prisma Access pour contourner l'authentification MFA. Le correctif est disponible. <a href="https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>PoC public pour une faille critique FortiSIEM</strong> : Un exploit pour la vulnérabilité CVE-2026-106173 (CVSS 9.4) sur Fortinet FortiSIEM est désormais public, permettant l'exécution de code à distance sans authentification. L'application du correctif est urgente. <a href="https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Fuite massive chez Zeabur entraîne la fermeture de la plateforme</strong> : Un attaquant a exploité des identifiants internes en clair pour voler 3,2 millions de variables d'environnement et les données de 321 810 comptes. Il s'agit du second incident en deux mois, conduisant à l'arrêt du service. <a href="https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Violation de données chez un sous-traitant de l'Éducation nationale californienne</strong> : Educational Testing Service (ETS) a subi une compromission de plusieurs mois, exposant les données de l'ensemble des élèves des écoles publiques de Californie. <a href="https://therecord.media/california-warns-all-public-school-students-of-data-breach">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>23andMe sanctionnée pour ses défaillances de sécurité</strong> : L'entreprise paiera 6 millions de dollars pour solder les accusations du procureur de Californie concernant la protection insuffisante des données clients lors de la violation de 2023. <a href="https://therecord.media/23andme-california-data-breach-settlement">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Utilisation offensive de GPT-6.1 Sol pour la migration de code legacy</strong> : OpenAI confirme que son dernier modèle excelle dans la migration de langages de programmation anciens, une capacité pouvant faciliter la modernisation accélérée de code vulnérable par des acteurs malveillants. <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-gpt-61-sol-is-dramatically-better-at-migrating-legacy-code/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Condamnation dans une affaire de piratage de services fiscaux</strong> : Un ressortissant nigérian impliqué dans le piratage d'entreprises de préparation fiscale et l'utilisation frauduleuse des données clients volées a été condamné à 8 ans de prison. <a href="https://therecord.media/nigerian-given-8-year-sentenc-tax-hacks">The Record</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-atscale-and-amazon-bedrock-agentcore/">Build a semantic layer for agentic AI on AWS with AtScale and Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Article technique sur l'intégration d'un semantic layer avec AtScale et Bedrock AgentCore. Utile pour architectes SI mais pas critique pour la cybersécurité ou les priorités immédiates des RSSI/CTO.</li>
-<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/ibm-research/altk-evolve-bc">ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model</a> — Hugging Face Blog. Raison : Article technique sur benchmark IA pour service client. Pertinent mais pas critique pour RSSI/CTO, aucun lien direct avec sécurité ou stratégie.</li>
-</ul>
-
-<h2>Cyber — Menaces & vulnérabilités</h2>
-
-<ul>
-<li><strong>Interdiction de DeepSeek dans les agences fédérales US</strong> : Le DHS ordonne le retrait immédiat des produits DeepSeek de tous les systèmes gouvernementaux civils, confirmant le niveau de risque inacceptable attribué à cet outil. <a href="https://www.bleepingcomputer.com/news/security/dhs-bans-deepseek-products-across-us-federal-civilian-agencies/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Supply chain : AOMEI compromis sans notification clients</strong> : Des attaquants ont manipulé les serveurs de mise à jour d'AOMEI entre avril et juillet pour distribuer des malwares par intermittence ; l'éditeur n'a toujours pas alerté ses utilisateurs. <a href="https://therecord.media/aomei-yet-to-notify-customers-hijack-software">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>APT28 cible un chantier naval de l'OTAN</strong> : Le groupe russe a compromis un constructeur naval d'un pays membre de l'OTAN en déployant un nouveau loader réflectif, illustrant une menace persistante contre la chaîne d'approvisionnement de défense. <a href="https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Pegasus confirmé sur l'iPhone d'un recteur serbe</strong> : Citizen Lab a détecté le spyware NSO Group sur le téléphone de Vladan Đokić, figure de soutien aux manifestations étudiantes, six jours avant des élections législatives anticipées. <a href="https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Go révoque en urgence huit clés d'AC intermédiaires</strong> : Les versions 1.27.3 et 1.26.10 rejettent toute chaîne de certificats transitant par ces clés, pour des raisons de sécurité non divulguées ; tout service utilisant ces AC deviendra inaccessible pour les applications compilées avec ces releases. <a href="https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Explosion du nombre de vulnérabilités publiées</strong> : Cisco Talos analyse le passage d'une moyenne mensuelle de 100 à plus de 1 400 vulnérabilités dans les bulletins Microsoft, un volume qui interroge sur la soutenabilité des processus de correction. <a href="https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/">Cisco Talos</a></li>
-</ul>
-
-<ul>
-<li><strong>Incident de sécurité chez ConnectWise</strong> : L'éditeur a réinitialisé des comptes et des secrets applicatifs après un accès non autorisé à des identités d'application liées à son offre de sauvegarde cloud, toujours hors ligne. <a href="https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Cyberattaque contre Ahold Delhaize</strong> : L'enseigne de distribution alimentaire confirme des perturbations de services dans ses magasins aux États-Unis et en Europe suite à un incident de la semaine dernière. <a href="https://www.bleepingcomputer.com/news/security/ahold-delhaize-cyberattack-affects-services-across-us-and-europe/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>Messages anti-Poutine injectés dans une plateforme éducative russe</strong> : Un groupe pro-Ukraine a diffusé des contenus hostiles au régime sur un système d'évaluation scolaire national ; les autorités russes annoncent une restauration des services. <a href="https://therecord.media/anti-putin-messages-disrupt-russian-education-platform">The Record</a></li>
-</ul>
-
-<ul>
-<li><strong>WhatsApp masquait des instructions anti-DPO à son chatbot</strong> : Des consignes cachées dans les pages d'aide en Europe ordonnaient au chatbot de ne pas orienter les utilisateurs vers les autorités de protection des données, en contradiction avec la propre politique de confidentialité de l'application. <a href="https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html">The Hacker News</a></li>
-</ul>
-
-<ul>
-<li><strong>Quick Machine Recovery disponible sur Windows Server 2025</strong> : La mise à jour d'octobre 2026 active la fonction de récupération rapide, permettant aux administrateurs IT de remédier plus efficacement aux démarrages défaillants. <a href="https://www.bleepingcomputer.com/news/microsoft/windows-server-2025-gets-support-for-quick-machine-recovery/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>CJIS v6.1 : priorités pratiques pour les agences</strong> : La nouvelle version impose MFA, gestion renforcée des comptes et mots de passe, journalisation et auditabilité ; cinq axes de mise en conformité sont détaillés. <a href="https://www.bleepingcomputer.com/news/security/cjis-v61-compliance-5-practical-priorities-for-agencies/">BleepingComputer</a></li>
-</ul>
-
-<ul>
-<li><strong>8 ans de prison pour fraude fiscale par spearphishing</strong> : Un ressortissant nigérian a été condamné pour avoir dérobé 3,3 millions de dollars via des campagnes ciblant des cabinets de préparation fiscale américains depuis 2019. <a href="https://www.bleepingcomputer.com/news/security/hacker-gets-8-years-for-stealing-33-million-from-taxpayers/">BleepingComputer</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/dhs-bans-deepseek-products-across-us-federal-civilian-agencies/">DHS bans DeepSeek products across US federal civilian agencies</a> — BleepingComputer. Raison : Interdiction fédérale américaine de DeepSeek : décision réglementaire majeure impactant la gouvernance IA et la cybersécurité des administrations.</li>
-<li><strong>5/5</strong> — <a href="https://therecord.media/aomei-yet-to-notify-customers-hijack-software">AOMEI yet to notify customers after hackers hijacked its software updates</a> — The Record. Raison : Incident majeur de supply chain : compromission de serveurs de mise à jour logicielle, impact potentiel sur de nombreux clients. Critique pour RSSI et CTO.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html">Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election</a> — The Hacker News. Raison : Infection Pegasus par zero-click confirmée par Citizen Lab, cible politique de haut niveau, impact direct sur sécurité des mobiles en entreprise.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html">Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns</a> — The Hacker News. Raison : Mise à jour d'urgence du langage Go bloquant huit clés CA intermédiaires. Impact direct sur la confiance TLS, potentiel incident grave de la chaîne d'approvisionnement, nécessite analyse immédiate.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/ahold-delhaize-cyberattack-affects-services-across-us-and-europe/">Ahold Delhaize: Cyberattack affects services across US and Europe</a> — BleepingComputer. Raison : Incident cyber majeur touchant un grand distributeur international, impactant les opérations critiques en Europe et aux États-Unis. Pertinent pour RSSI et architectes SI.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html">Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader</a> — The Hacker News. Raison : Incident cyber majeur visant un constructeur naval de l'OTAN par un APT étatique russe avec nouveau loader. Impact direct sur les infrastructures critiques et la chaîne d'approvisionnement.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html">ConnectWise Resets Credentials as Cloud Backup Remains Offline After Security Incident</a> — The Hacker News. Raison : Incident de sécurité majeur chez un fournisseur cloud Backup impactant la chaîne d'approvisionnement. Remédiation en cours avec reset de credentials. Pertinence directe pour RSSI/CTO.</li>
-<li><strong>4/5</strong> — <a href="https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/">There's only so much code: the rise in vulnerability numbers</a> — Cisco Talos. Raison : Analyse de la forte augmentation des vulnérabilités et de ses implications stratégiques pour la gestion des risques.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/anti-putin-messages-disrupt-russian-education-platform">Anti-Putin messages disrupt nationwide school assessments in Russia</a> — The Record. Raison : Incident cyber notable : compromission d'une plateforme nationale d'évaluation en Russie, revendiqué par un groupe hacktiviste. Pertinent pour comprendre les risques géopolitiques et la résilience des infrastructures critiques.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hacker-gets-8-years-for-stealing-33-million-from-taxpayers/">Hacker gets 8 years for stealing $3.3 million from taxpayers</a> — BleepingComputer. Raison : Condamnation significative pour spearphishing ciblant des entreprises fiscales. Analyse utile pour comprendre les risques et les conséquences juridiques des campagnes ciblées.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/windows-server-2025-gets-support-for-quick-machine-recovery/">Windows Server 2025 gets support for quick machine recovery</a> — BleepingComputer. Raison : Nouvelle fonctionnalité de recovery rapide pour Windows Server 2025 après patch sécurité. Utile pour RSSI/CTO gérant des infrastructures critiques.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html">WhatsApp Hid Instructions in Help Pages Telling Its AI Chatbot Not to Recommend Privacy Regulators</a> — The Hacker News. Raison : Pratique trompeuse d'un acteur majeur (WhatsApp) concernant les droits des utilisateurs et les régulateurs, impactant la conformité et la gouvernance.</li>
-<li><strong>3/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/cjis-v61-compliance-5-practical-priorities-for-agencies/">CJIS v6.1 Compliance: 5 Practical Priorities for Agencies</a> — BleepingComputer. Raison : Article opérationnel sur la conformité CJIS v6.1, utile pour RSSI cyber-gouvernance mais sans nouveauté majeure. Priorités pratiques déjà connues.</li>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/">Zeabur shutting down after second security breach in two months</a> — BleepingComputer. Raison : Incident majeur chez Zeabur : vol de 3,2M de variables d'environnement et 321k comptes. Attaque par fuite de credentials en clair. Impact direct sur sécurité des infrastructures et supply chain.</li>
+<li><strong>5/5</strong> — <a href="https://therecord.media/california-warns-all-public-school-students-of-data-breach">California warns all public school students of data stolen in contractor breach</a> — The Record. Raison : Incident cyber majeur touchant un secteur critique (éducation) via un fournisseur, avec fuite de données sensibles impactant des mineurs.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html">Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software</a> — The Hacker News. Raison : Compromission de certificats intermédiaires eMudhra, impactant tous les navigateurs et logiciels. Vulnérabilité critique affectant la chaîne d'approvisionnement, nécessitant des correctifs urgents.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html">Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution</a> — The Hacker News. Raison : CVE critique 9.4 avec PoC public pour RCE non authentifiée sur FortiSIEM, produit utilisé en entreprise. Impact direct pour un RSSI ou CTO.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/23andme-california-data-breach-settlement">23andMe successor settles with California for $6 million over cybersecurity failings</a> — The Record. Raison : Incident majeur avec données sensibles et sanction réglementaire significative, intéressant pour les RSSI et CTO sur la gouvernance et la conformité.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html">Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA</a> — The Hacker News. Raison : Exploitation active d'une vulnérabilité PAN-OS par des ransomwares, contournement MFA. Pertinent pour RSSI/CTO mais patch déjà disponible.</li>
+<li><strong>3/5</strong> — <a href="https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-gpt-61-sol-is-dramatically-better-at-migrating-legacy-code/">OpenAI says GPT-6.1 Sol is dramatically better at migrating legacy code</a> — BleepingComputer. Raison : Annonce d'amélioration significative de migration de code legacy par un modèle OpenAI, pouvant impacter le dev tooling, mais sans détail technique ou benchmark exploitable dans le résumé.</li>
+<li><strong>3/5</strong> — <a href="https://therecord.media/nigerian-given-8-year-sentenc-tax-hacks">Nigerian national given 8-year sentence for tax business hacks</a> — The Record. Raison : Illustre un cas de cybercriminalité ciblant des données fiscales, intéressant pour contexte mais sans détail technique exploitant.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Fuite de données via Meta Muse</strong> : Le partage de conversations issues de l'IA Meta expose titres et contenus à des tiers par simple requête, y compris des secrets d'affaires. <a href="https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/">Ars Technica</a></li>
+<li><strong>Meta suspend une fonctionnalité de partage Muse après une fuite de données</strong> : Des chercheurs en sécurité ont découvert plus de 6 800 conversations avec l'assistant IA Muse accessibles publiquement sur le web via leurs URLs. Meta a suspendu la fonctionnalité le temps de corriger le problème. <a href="https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats">The Verge</a></li>
 </ul>
 
 <ul>
-<li><strong>Économie de l'IA en entreprise</strong> : Le coût devient le facteur limitant à mesure que l'IA s'infiltre dans tous les processus, forçant un arbitrage entre valeur et consommation de ressources comparable à celui de l'électricité. <a href="https://www.technologyreview.com/2026/10/20/1146937/the-new-economics-of-enterprise-ai/">MIT Technology Review</a></li>
+<li><strong>Le gouvernement français contraint les plateformes à modérer contenus et reventes</strong> : Face aux protestations, TikTok et d'autres réseaux ont reçu l'ordre de limiter la diffusion d'images de manifestations et de contenus modifiés par IA, tandis que Vinted et eBay ont signé un accord pour bloquer la revente de biens pillés. <a href="https://www.wired.com/story/french-government-calls-emergency-meetings-with-platforms-over-protests/">Wired</a></li>
 </ul>
 
 <ul>
-<li><strong>Adoption sectorielle de l'IA</strong> : Les patterns d'intégration de l'IA générative dans les secteurs traditionnels divergent du modèle tech, avec des boucles de rétroaction plus lentes et des contraintes réglementaires spécifiques. <a href="https://www.technologyreview.com/2026/10/20/1145423/ai-adoption-by-industry-shows-what-other-sectors-can-learn/">MIT Technology Review</a></li>
-</ul>
-
-<ul>
-<li><strong>Limites du protocole MCP</strong> : Dylan Field (Figma) juge le Model Context Protocol imparfait pour l'interconnexion des données ; Figma adoptera plusieurs standards sans exposer l'intégralité de ses données. <a href="https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/">TechCrunch</a></li>
+<li><strong>Google et Meta open-sourcent TorchTPU pour PyTorch sur Cloud TPU</strong> : TorchTPU devient le backend natif recommandé pour exécuter PyTorch sur les TPU Google Cloud, en exécution eager par défaut avec compilation via torch.compile et XLA. Il remplace PyTorch/XLA pour les nouveaux workloads. <a href="https://www.marktechpost.com/2026/10/20/google-torchtpu-open-source-native-pytorch-tpu/">MarkTechPost</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.technologyreview.com/2026/10/20/1146937/the-new-economics-of-enterprise-ai/">The new economics of enterprise AI</a> — MIT Technology Review — AI. Raison : Métaphore utile sur l'évolution du coût de l'IA en infrastructure, sujet stratégique pour RSSI/CTO. Analyse économique non technique mais structurante pour l'adoption.</li>
-<li><strong>4/5</strong> — <a href="https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/">Meta Muse exposes users' personal and business secrets when they share conversations</a> — Ars Technica — Tech Lab. Raison : Vulnérabilité exposant des conversations utilisateurs via Meta Muse, impact potentiel sur la vie privée en entreprise. Analyse technique nécessaire pour évaluer le risque réel.</li>
-<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/">Figma co-founder Dylan Field thinks MCP is not a perfect protocol</a> — TechCrunch — AI. Raison : Article sur la position de Figma sur le protocole MCP. Intéressant pour la stratégie IA, mais peu d'impact direct cybersécurité. À survoler.</li>
-<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/10/20/1145423/ai-adoption-by-industry-shows-what-other-sectors-can-learn/">AI adoption by industry shows what other sectors can learn</a> — MIT Technology Review — AI. Raison : Analyse des tendances d'adoption de l'IA par secteur, pertinente mais sans information technique ou cyber spécifique pour experts RSSI/CTO.</li>
+<li><strong>4/5</strong> — <a href="https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats">Meta pauses Muse sharing after researchers find AI chats on the web</a> — The Verge — AI. Raison : Vulnérabilité de divulgation de données d'assistant IA (Muse) liée à des enregistrements DNS publics, pertinente pour la sécurité des chatbots en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://www.wired.com/story/french-government-calls-emergency-meetings-with-platforms-over-protests/">French Government Calls Emergency Meetings With Platforms Over Protests</a> — Wired — AI. Raison : Article sur la gouvernance des contenus lors de protestations. Pertinent pour la régulation des plateformes, mais peu technique pour experts cyber.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/20/google-torchtpu-open-source-native-pytorch-tpu/">Google Open-Sources TorchTPU, a Native PyTorch Backend for Cloud TPUs</a> — MarkTechPost. Raison : Annonce open-source d'un backend PyTorch natif pour Cloud TPU, utile aux développeurs et architectes. Intérêt technique présent mais non critique pour un public cyber.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>Consignes cachées dans l’aide WhatsApp</strong> : Redact a découvert que les pages d’aide de WhatsApp contenaient des instructions invisibles destinées aux IA leur interdisant de recommander une autorité de protection des données. L’Internet Archive confirme la présence de 102 blocs de ce type sur 80 pages. <a href="https://www.actuia.com/actualite/pages-daide-de-whatsapp-une-consigne-cachee-interdisait-de-recommander-un-regulateur/">Actu IA</a></li>
+</ul>
+
+<ul>
+<li><strong>IA en gestion de projet : usage fort, maturité risque faible</strong> : 73 % des PMO déclarent utiliser l’IA, mais moins de 10 % intègrent une anticipation des risques dans leurs pratiques. L’adoption reste donc superficielle et ne transforme pas le pilotage des portefeuilles de projets. <a href="https://www.lemondeinformatique.fr/actualites/lire-73-des-pmo-utilisent-l-ia-mais-moins-de-10-anticipent-les-risques-100859.html">Le Monde Informatique</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.actuia.com/actualite/pages-daide-de-whatsapp-une-consigne-cachee-interdisait-de-recommander-un-regulateur/">Pages d’aide de WhatsApp : une consigne cachée interdisait de recommander un régulateur</a> — Actu IA. Raison : Révèle une consigne IA cachée dans l'aide WhatsApp, impactant confiance et conformité. Analyse de fond sur gouvernance IA et régulation.</li>
+<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-73-des-pmo-utilisent-l-ia-mais-moins-de-10-anticipent-les-risques-100859.html">73 % des PMO utilisent l'IA, mais moins de 10 % anticipent les risques</a> — Le Monde Informatique — IA. Raison : Sujet IA en entreprise et gestion des risques, pertinent mais résumé trop vague pour évaluer profondeur ; à survoler pour détails concrets.</li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Gouvernance des identités agents par PKI</strong> : AWS propose une architecture de référence couplant EJBCA et services AWS pour doter les agents IA d'une identité cryptographique X.509, avec signatures de requêtes, assertions de délégation, tokens à portée limitée (RFC 8693) et révocation OCSP en temps réel. <a href="https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Isolation multi-tenant pour agents en production</strong> : Octave a déployé sur Bedrock AgentCore un assistant traitant 2 milliards de documents réglementés sans fuite entre locataires, en s'appuyant sur des embeddings Cohere Embed v4 et une exécution isolée par agent. <a href="https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Couche sémantique gouvernée pour l'IA agentique</strong> : Denodo et Bedrock AgentCore construisent une couche fédérée (Aurora, Redshift, PostgreSQL on-prem) avec propagation d'identité et contrôle d'accès ligne/colonne, exposée aux agents en langage VQL. <a href="https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-denodo-and-amazon-bedrock-agentcore/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Passerelle MCP unifiée pour le multi-cloud</strong> : Eon a remplacé les credentials par outil et les processus MCP locaux par une passerelle unique Bedrock AgentCore authentifiée, donnant à plus de 100 développeurs un accès unifié aux environnements AWS, GCP et Azure, et réduisant l'onboarding de deux jours à quelques heures. <a href="https://aws.amazon.com/blogs/machine-learning/how-eon-built-multi-cloud-investigation-with-an-mcp-gateway-on-amazon-bedrock-agentcore/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Découverte dynamique d'outils au runtime</strong> : AWS Agent Registry permet à un orchestrateur de découvrir des serveurs MCP et agents A2A par recherche sémantique au runtime, évitant le câblage statique qui devient ingérable au-delà de quelques dizaines d'outils. <a href="https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents connectés aux données métiers en temps réel</strong> : Le serveur MCP Smartsheet sur AWS donne aux agents IA un accès lecture/écriture aux données de gestion de travail, via Amazon Quick pour les métiers ou Kiro pour les développeurs. Parallèlement, Bedrock AgentCore exposant ERP, monitoring et achats comme couche outillée gouvernée permet une expérience conversationnelle unifiée pour la supply chain. <a href="https://aws.amazon.com/blogs/machine-learning/work-management-context-for-ai-agents-with-smartsheet-mcp-on-aws/">Source 1</a> · <a href="https://aws.amazon.com/blogs/machine-learning/from-data-to-decisions-conversational-supply-chain-intelligence-with-amazon-quick-and-amazon-bedrock-agentcore/">Source 2</a></li>
+</ul>
+
+<ul>
+<li><strong>Fine-tuning de modèles open source pour le raisonnement multilingue</strong> : Le fine-tuning supervisé (SFT) de GPT-OSS-20B sur SageMaker HyperPod a fait passer la précision de raisonnement multilingue de 22% à 100%, le renforcement par GRPO n'apportant des gains que là où une marge de progression subsistait. <a href="https://aws.amazon.com/blogs/machine-learning/fine-tuning-gpt-oss-20b-for-multilingual-reasoning-on-amazon-sagemaker-hyperpod/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Accès aux modèles OpenAI via Bedrock au Canada</strong> : Les organisations canadiennes peuvent invoquer les modèles GPT d'OpenAI sur Bedrock depuis les régions Canada Centre et Calgary via l'inférence cross-région, avec profils d'inférence et configuration IAM dédiés. <a href="https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference/">Source</a></li>
+</ul>
+
+<ul>
+<li><strong>Évaluation de l'équité dans les décisions des LLM</strong> : FairStress (Allen AI) propose un cadre d'évaluation plus fin des biais décisionnels des LLM, allant au-delà des métriques de fairness classiques pour détecter des déséquilibres subtils dans les décisions automatisées. <a href="https://huggingface.co/blog/allenai/fairstress">Source</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/">How Octave built a secure multi-tenant AI foundation on Amazon Bedrock</a> — AWS Machine Learning. Raison : Retour d'expérience concret sur sécurisation multi-tenant d'IA avec Amazon Bedrock. Intéressant pour RSSI/CTO sur isolation des agents, mais technique sans détail sur vulnérabilités.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/securing-ai-agent-identity-with-x-509-pki-on-aws/">Securing AI agent identity with X.509 PKI on AWS</a> — AWS Machine Learning. Raison : Article très technique et pragmatique sur la sécurisation des agents IA via PKI X.509 sur AWS, pertinent pour RSSI/CTO et architectes SI confrontés à l'identité des agents.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/how-eon-built-multi-cloud-investigation-with-an-mcp-gateway-on-amazon-bedrock-agentcore/">How Eon built multi-cloud investigation with an MCP Gateway on Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Retour d'expérience concret sur l'unification d'accès multi-cloud via un gateway MCP Bedrock Agent, pertinent pour RSSI et CTO cherchant des architectures d'automatisation sécurisées.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-a-semantic-layer-for-agentic-ai-on-aws-with-denodo-and-amazon-bedrock-agentcore/">Build a semantic layer for agentic AI on AWS with Denodo and Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Article technique alliant gouvernance des données et agents IA sur AWS. Utile pour RSSI/CTO/Architecte pour son approche fédération de sources et contrôle d'accès à la couche sémantique.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/work-management-context-for-ai-agents-with-smartsheet-mcp-on-aws/">Work management context for AI agents with Smartsheet MCP on AWS</a> — AWS Machine Learning. Raison : Article technique sur l'intégration d'agents IA avec Smartsheet via MCP sur AWS. Utile pour développeurs et architectes, mais pas critique pour la cybersécurité ou la stratégie.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/from-data-to-decisions-conversational-supply-chain-intelligence-with-amazon-quick-and-amazon-bedrock-agentcore/">From data to decisions: Conversational supply chain intelligence with Amazon Quick and Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Article technique montrant l'intégration d'Amazon Bedrock AgentCore et Quick pour la chaîne logistique, utile pour les experts en IA mais peu lié à la cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/fine-tuning-gpt-oss-20b-for-multilingual-reasoning-on-amazon-sagemaker-hyperpod/">Fine-tuning GPT-OSS-20B for multilingual reasoning on Amazon SageMaker HyperPod</a> — AWS Machine Learning. Raison : Article technique sur le fine-tuning d'un modèle ouvert pour raisonnement multilingue. Intéressant mais pas critique pour la cybersécurité ou le management.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference/">Access OpenAI GPT models on Amazon Bedrock from Canada with cross-Region inference</a> — AWS Machine Learning. Raison : Annonce d'intégration de modèles OpenAI sur Bedrock au Canada. Intéressant pour les experts IA mais non critique : pas de nouveauté technique majeure ni d'impact cyber direct.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/">Discover tools at runtime with AWS Agent Registry</a> — AWS Machine Learning. Raison : Article technique sur AWS Agent Registry pour découverte runtime d'outils agents, utile mais non critique.</li>
+<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/allenai/fairstress">FairStress: A deeper evaluation of fairness in LLM decision-making</a> — Hugging Face Blog. Raison : Nouveau benchmark d'équité des LLM, méthodologie potentiellement intéressante mais lien non établi avec la cybersécurité ou les outils des experts ciblés.</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Identités dans le cycle de développement face à l'IA</strong> : La généralisation des assistants de code IA exacerbe le risque de fuites de secrets et d'usurpation d'identités machines dans la chaîne logicielle, faute de gouvernance unifiée entre équipes DevSecOps et IAM. La priorité est de cartographier les identités non humaines et de rapprocher les pratiques des développeurs de celles des administrateurs d'identité avant d'accélérer sur l'IA. <a href="https://www.darkreading.com/application-security/close-identity-gaps-sdlc-before-ai">Dark Reading</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://www.darkreading.com/application-security/close-identity-gaps-sdlc-before-ai">Close Identity Gaps in Software Development Before Unleashing AI</a> — Dark Reading. Raison : Article de niveau stratégique sur l'IA dans le cycle de vie du logiciel, avec des pistes de collaboration et réduction de coûts. Utile sans être technique ou immédiatement applicable.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261020-1542</guid>
-      <pubDate>Tue, 20 Oct 2026 15:42:01 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261020-2028</guid>
+      <pubDate>Tue, 20 Oct 2026 20:28:07 +0000</pubDate>
     </item>
   </channel>
 </rss>
