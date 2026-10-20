@@ -189,3 +189,16 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-10-16 09:47 UTC | scoring | Noise-Space Reward Alignment for Few-Step Generative Models (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-10-16 09:47 UTC | scoring | Predicting Live Birth After Fresh Embryo Transfer in IVF/ICS (arXiv cs.LG) | Rate limit fournisseur LLM atteint |
 | 2026-10-16 09:48 UTC | scoring | AI Act : les enquêtes pourraient prolonger le délai de sanct (Actu IA) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:37 UTC | scoring | ElevenLabs lance Eleven Realtime, des modèles speech-to-spee (Journal du Net) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:37 UTC | scoring | EU cyber law won’t force fixes for fridge controllers hit in (The Record) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:37 UTC | scoring | Spotify pulled 50 million AI slop and spam tracks from its r (The Verge — AI) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:37 UTC | scoring | Avec TorchNeuron, Amazon veut faciliter l’entraînement des m (Next.ink) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:38 UTC | scoring | Hackers Use Autonomous AI Agents to Breach Company Websites, (The Hacker News) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:38 UTC | scoring | US orders federal agencies to remove China’s DeepSeek AI fro (TechCrunch — AI) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:40 UTC | scoring | What Security Teams Can Do To Tame Wild Code (The Hacker News) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:40 UTC | scoring | OVHcloud CLI releases backdoored on GitHub to steal develope (BleepingComputer) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:40 UTC | scoring | Yelp can now call on your behalf to check wait times at a re (TechCrunch — AI) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:41 UTC | scoring | Palmier Pro : peut-on vraiment confier un montage vidéo comp (Journal du Net) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:41 UTC | scoring | Désactivation, localisation, identification: comment les mar (BFM Tech) | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:41 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
+| 2026-10-20 15:42 UTC | synthese | Cyber — Stratégie & analyse | Rate limit fournisseur LLM atteint |
