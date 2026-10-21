@@ -202,3 +202,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-10-20 15:41 UTC | scoring | Désactivation, localisation, identification: comment les mar (BFM Tech) | Rate limit fournisseur LLM atteint |
 | 2026-10-20 15:41 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
 | 2026-10-20 15:42 UTC | synthese | Cyber — Stratégie & analyse | Rate limit fournisseur LLM atteint |
+| 2026-10-21 10:02 UTC | scoring | Teaching AI Agent to Play Poker Strategically Through Prefer (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
