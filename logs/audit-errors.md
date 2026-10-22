@@ -203,3 +203,4 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-10-20 15:41 UTC | synthese | Actualité tech FR | Rate limit fournisseur LLM atteint |
 | 2026-10-20 15:42 UTC | synthese | Cyber — Stratégie & analyse | Rate limit fournisseur LLM atteint |
 | 2026-10-21 10:02 UTC | scoring | Teaching AI Agent to Play Poker Strategically Through Prefer (arXiv cs.AI) | Rate limit fournisseur LLM atteint |
+| 2026-10-22 15:54 UTC | scoring | Les syndicats maintiennent et amplifient leur appel à la mob (Journal du Net) | JSON malformé renvoyé par le LLM (Unterminated string starting at: line 5 column 13 (char 74)) |
