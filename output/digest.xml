@@ -8,202 +8,102 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Fri, 23 Oct 2026 20:19:03 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 09:23:43 +0000</lastBuildDate>
     <item>
-      <title>Digest — 23/10 20h</title>
+      <title>Digest — 24/10 09h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
       <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Vulnérabilités critiques dans le moteur regex Ruby (impact GitLab)** : Ruby a corrigé trois failles dans Onigmo, son moteur d'expressions régulières, qui sont à l'origine de quatre vulnérabilités critiques dans GitLab. Une expression régulière spécifiquement conçue peut entraîner une corruption mémoire et une exécution de code à distance. [The Hacker News](https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html)
-- **Écosystème d'intrusion piloté par IA des groupes INC et The Gentlemen** : Des chercheurs ont découvert une infrastructure exposée utilisant un framework autonome de type "Red Team" nommé Phantom, exploité par des affiliés ransomware pour automatiser les compromissions. L'attaque s'appuie sur des agents IA pour exécuter la chaîne d'intrusion. [The Hacker News](https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html)
-- **Bootkit UEFI BlackX ciblant des entités diplomatiques en Asie centrale** : Un bootkit UEFI sophistiqué, capable de contourner le Secure Boot sur des systèmes Windows pourtant patchés mais sans révocation à jour, a visé des organisations diplomatiques au Tadjikistan, Ouzbékistan et Turkménistan. [The Hacker News](https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html)
-- **Violation de données chez Quest Diagnostics** : Un acteur malveillant a accédé sans autorisation au système Quanum LSM, exposant des dossiers de patients. La nature exacte des données compromises est en cours d'évaluation. [BleepingComputer](https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/)
-- **Exploitabilité de la vulnérabilité php2shell** : Le SANS ISC analyse la fiabilité et les conditions d'exploitation de cette vulnérabilité critique, soulignant l'état d'alerte généralisé qu'elle a provoqué. [SANS ISC](https://isc.sans.edu/diary/rss/33452)
-- **Fin de support de Windows Server 2016 en janvier 2027** : Microsoft annonce l'arrêt des mises à jour de sécurité pour Windows Server 2016, exposant les systèmes non migrés à des risques de vulnérabilités non corrigées. La préparation de la migration doit débuter. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-january/)
-- **Détection de phishing par IA dans Microsoft Teams** : Microsoft va intégrer une détection de phishing contextuelle et basée sur l'IA dans Teams dès début novembre 2026 pour contrer les tentatives d'hameçonnage via la messagerie instantanée. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/)
-- **Interdiction par la FCC de deux appareils embarquant des puces HiSilicon** : La FCC a interdit un transmetteur vidéo sans fil et une caméra embarquée utilisant des composants de la filiale d'Huawei, explicitement commercialisés pour le marché de la surveillance. [The Record](https://therecord.media/fcc-bans-devices-huawei-surveillance-chips)
+- **Failles critiques dans Collabora Online et Arista VeloCloud exploitées activement** : La CISA a inscrit deux vulnérabilités critiques à son catalogue KEV, confirmant leur exploitation en conditions réelles. L'une affecte le serveur CODE intégré de Collabora Online, l'autre l'orchestrateur VeloCloud d'Arista. [The Hacker News](https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html)
+
+- **Application Popcorn Time abandonnée : risque RCE sur des millions de postes** : Des chercheurs ont neutralisé à distance un mécanisme de mise à jour vulnérable dans le fork Time4Popcorn, qui permettait l'exécution de code avec privilèges élevés. L'application n'étant plus maintenue, la désactivation forcée de ce composant était la seule parade. [BleepingComputer](https://www.bleepingcomputer.com/news/security/abandoned-popcorn-time-app-exposed-millions-of-device-to-rce-attacks/)
 
 **Évaluation du scoring**
 
-- **5/5** — [Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws](https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html) — The Hacker News. Raison : CVE critique impactant GitLab et Ruby ; correctifs disponibles pour des failles RCE exploitées via Onigmo ; lecture obligatoire pour RSSI/CTO.
-- **5/5** — [Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions](https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html) — The Hacker News. Raison : Campagne ransomware majeure intégrant des agents IA pour exécuter des intrusions : signal fort, impact direct sur les pratiques défensives et priorité pour les RSSI/CTO.
-- **5/5** — [Quest Diagnostics confirms data breach exposed patient records](https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/) — BleepingComputer. Raison : Incident majeur touchant un laboratoire américain, avec exposition de données patients. Impact potentiel sur la chaîne d'approvisionnement et la conformité réglementaire.
-- **4/5** — [(Reliable)&amp;#x3f; php2shell exploitability, (Fri, Oct 23rd)](https://isc.sans.edu/diary/rss/33452) — SANS ISC. Raison : Vulnérabilité très médiatisée dans la communauté, analyse de l'exploitabilité par SANS ISC, source experte fiable pour un public cybersécurité.
-- **4/5** — [Microsoft Teams to get AI-powered, context-aware phishing detection](https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/) — BleepingComputer. Raison : Annonce Microsoft sur détection phishing contextuelle dans Teams. Impact direct sur la sécurité des communications d'entreprise, sujet pertinent pour RSSI et CTO.
-- **4/5** — [BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations](https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html) — The Hacker News. Raison : Bootkit UEFI contournant Secure Boot, ciblant des entités diplomatiques, attribué à APT41. Technique avancée, impact potentiel sur les systèmes Windows non patchés.
-- **4/5** — [Microsoft: Windows Server 2016 reaches end of support in January](https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-january/) — BleepingComputer. Raison : Annonce d'une fin de support à échéance proche (janvier 2027) pour Windows Server 2016, impact direct sur la gouvernance des mises à jour et la conformité en entreprise.
-- **3/5** — [FCC bans two devices with surveillance chips linked to Huawei](https://therecord.media/fcc-bans-devices-huawei-surveillance-chips) — The Record. Raison : Décision réglementaire américaine sur des puces Huawei liées à la surveillance. Impact géopolitique notable mais sans menace technique immédiate pour un SI français.
-
-## Cyber — Stratégie &amp; analyse
-
-- **Campagnes d'attaque assistées par IA à bas coût** : Des acteurs malveillants exploitent des modèles d'IA open-weight pour mener des attaques à grande échelle pour un coût dérisoire : 12 dollars ont suffi pour obtenir le contrôle total d'un domaine. Cette évolution impose de repenser les stratégies de cyberdéfense face à l'automatisation massive des compromissions. [Source](https://www.darkreading.com/cybersecurity-operations/ai-tools-massive-attacks-little-cost)
-
-- **Vulnérabilité critique PHP (PHP2Shell)** : La correction des failles critiques PHP ne se limite pas à appliquer un correctif standard. Les équipes doivent cartographier leur exposition et vérifier la configuration de leurs serveurs, car les correctifs peuvent être contournés selon le contexte de déploiement. [Source](https://www.darkreading.com/application-security/exposed-php2shell-cyber-experts-advice)
-
-- **Correctifs trimestriels Oracle** : Le Critical Patch Update d'octobre corrige 1 295 vulnérabilités, dont six avec un score CVSS 3.1 de 10.0. Une faille critique concerne Oracle E-Business Suite (CVE-2026-101) et nécessite une attention immédiate pour les entreprises utilisant cette suite. [Source](https://www.csoonline.com/article/4239850/oracle-patches-1295-security-vulnerabilities-in-october-including-six-scoring-10-0-2.html)
-
-- **Sécurité BIOS avec mécanisme Dual BIOS** : La protection du BIOS reste un angle mort pour de nombreuses PME, qui concentrent leurs efforts sur la sécurité post-démarrage. Le Dual BIOS constitue une parade contre les attaques pré-boot visant à compromettre la chaîne de démarrage avant le chargement de l'OS et des solutions de sécurité. [Source](https://www.csoonline.com/article/4239779/dual-bios-the-laptop-security-feature-smbs-dont-know-they-need.html)
-
-**Évaluation du scoring**
-
-- **4/5** — [Exposed to PHP2Shell? Cyber Experts Weigh in With Advice](https://www.darkreading.com/application-security/exposed-php2shell-cyber-experts-advice) — Dark Reading. Raison : Article sur une faille PHP critique avec conseils d'experts pour RSSI et CTO. Analyse des risques et mesures de protection, non un simple patch.
-- **4/5** — [Oracle patches 1295 security vulnerabilities in October, including six scoring 10.0](https://www.csoonline.com/article/4239850/oracle-patches-1295-security-vulnerabilities-in-october-including-six-scoring-10-0-2.html) — CSO Online. Raison : Mise à jour critique Oracle avec 1295 CVE dont 6 notées 10.0, dont une affectant E-Business Suite. Impact potentiel élevé pour les RSSI/CTO exploitant ces solutions.
-- **4/5** — [AI Tools Are Generating Massive Attacks for Little Cost](https://www.darkreading.com/cybersecurity-operations/ai-tools-massive-attacks-little-cost) — Dark Reading. Raison : Campagne IA à faible coût avec impact concret (105 sites, contrôle de domaine pour 12$). Analyse pertinente pour adaptation défensive.
-- **3/5** — [Dual BIOS: The laptop security feature SMBs don’t know they need](https://www.csoonline.com/article/4239779/dual-bios-the-laptop-security-feature-smbs-dont-know-they-need.html) — CSO Online. Raison : Sujet utile pour SMB mais basique pour RSSI/CTO/Architecte. Absence de technique avancée ou de menace nouvelle.
-
-## IA — Labos &amp; éditeurs
-
-- **Infrastructure de stockage pour LLM à grande échelle** : OpenAI détaille l'architecture de Habitat, leur couche de stockage pour ChatGPT, qui atteint 1 milliard d'utilisateurs grâce au multi-tenancy, au cache global et à Azure Cosmos DB, avec des lectures 12× plus rapides. [OpenAI News](https://openai.com/index/scaling-storage-one-billion-users-part-two)
-
-- **Apprentissage par renforcement multi-tours sur SageMaker** : AWS propose un guide complet pour entraîner des modèles via le MTRL, où l'optimisation porte sur le résultat final d'une tâche multi-étapes plutôt que sur chaque étape isolée, en s'appuyant sur Bedrock AgentCore pour le déploiement. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/)
-
-- **Auto-scaling des endpoints SageMaker avec CDK** : AWS fournit une solution pour contourner les échecs de déploiement CloudFormation/CDK lors de la mise à jour d'endpoints avec auto-scaling, via un construct CDK réutilisable qui désenregistre et ré-enregistre automatiquement les règles de scaling. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/orchestrating-sagemaker-ai-endpoint-auto-scaling-with-aws-cdk/)
-
-- **Agents décisionnels multi-agents en production** : Bayer Crop Science a déployé un moteur décisionnel agentique sur Bedrock AgentCore, couvrant l'architecture et cinq choix de conception pour permettre aux chercheurs d'interroger leur plateforme analytique en langage naturel. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-bayer-crop-science-built-an-agentic-decision-engine-on-amazon-bedrock-agentcore-with-aws-unified-operations/)
-
-- **Visualisation de données géospatiales** : Amazon QuickSight étend ses couches cartographiques au support des géométries Point et LineString dans un même flux GeoJSON, permettant de tracer à la fois des emplacements et des itinéraires. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/visualize-points-and-routes-with-geojson-in-amazon-quick-sight-layer-maps/)
-
-- **Exploration de littérature scientifique par contextualisation dynamique** : Allen AI présente LitPivot, un outil qui aide les chercheurs à développer des idées en contextualisant dynamiquement des articles dans le paysage de la littérature existante. [Hugging Face Blog](https://huggingface.co/blog/allenai/litpivot)
-
-**Évaluation du scoring**
-
-- **4/5** — [Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)](https://openai.com/index/scaling-storage-one-billion-users-part-two) — OpenAI News. Raison : Retour d'expérience technique de scaling chez OpenAI avec des détails concrets multi-tenancy, caching, base NoSQL. Pertinent pour architectes et CTO.
-- **3/5** — [Multi-Turn Reinforcement Learning on Amazon SageMaker AI: A hands-on guide](https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/) — AWS Machine Learning. Raison : Tutoriel technique sur une méthode IA avancée (MTRL) avec pipeline concret. Intéressant pour experts, mais pas critique pour la cybersécurité.
-- **3/5** — [Orchestrating SageMaker AI endpoint auto scaling with AWS CDK](https://aws.amazon.com/blogs/machine-learning/orchestrating-sagemaker-ai-endpoint-auto-scaling-with-aws-cdk/) — AWS Machine Learning. Raison : Tutoriel technique pour déployer avec AWS CDK malgré une limitation connue de CloudFormation. Utile mais pas stratégique, ni critique pour cybersécurité ou IA.
-- **3/5** — [Visualize points and routes with GeoJSON in Amazon Quick Sight layer maps](https://aws.amazon.com/blogs/machine-learning/visualize-points-and-routes-with-geojson-in-amazon-quick-sight-layer-maps/) — AWS Machine Learning. Raison : Fonctionnalité technique utile pour visualiser données géolocalisées, mais sans lien avec cybersécurité ou IA structurante pour le public cible.
-- **3/5** — [How Bayer Crop Science built an agentic decision engine on Amazon Bedrock AgentCore with AWS Unified Operations](https://aws.amazon.com/blogs/machine-learning/how-bayer-crop-science-built-an-agentic-decision-engine-on-amazon-bedrock-agentcore-with-aws-unified-operations/) — AWS Machine Learning. Raison : Retour d'expérience sur architecture multi-agent avec AWS, utile pour comprendre une implémentation IA en entreprise, mais peu de détails cyber et pas de rupture technique majeure.
-- **3/5** — [LitPivot: Developing research ideas through dynamic contextualization within the literature landscape](https://huggingface.co/blog/allenai/litpivot) — Hugging Face Blog. Raison : Article de recherche sur une méthode de contextualisation dynamique pour l'idéation. Potentiel intéressant pour experts, mais impact pratique immédiat incertain.
-
-## Actualité tech FR
-
-- **Paralysie de services publics français suite à des failles PHP critiques** : La découverte de vulnérabilités critiques dans PHP a contraint l'arrêt d'urgence de nombreux services publics français (impôts, ministères, Ameli) et de millions de sites dans le monde, les pirates exploitant déjà ces failles de manière intensive via l'IA. [BFM Tech](https://www.bfmtv.com/tech/cybersecurite/apres-la-faille-php-les-developpeurs-du-monde-entier-appeles-a-etre-plus-vigilants-et-pro-actifs-dans-les-mises-a-jour_AV-202610230780.html)
-
-**Évaluation du scoring**
-
-- **5/5** — ["Les pirates utilisent l'IA jour et nuit": des impôts aux ministères, pourquoi le web français s'est arrêté net](https://www.bfmtv.com/tech/cybersecurite/apres-la-faille-php-les-developpeurs-du-monde-entier-appeles-a-etre-plus-vigilants-et-pro-actifs-dans-les-mises-a-jour_AV-202610230780.html) — BFM Tech. Raison : Faille critique PHP ayant paralysé services publics français (impôts, ministères, Ameli). Incident cyber majeur secteur critique, impact direct, nécessite analyse immédiate.
+- **5/5** — [CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud](https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html) — The Hacker News. Raison : CVE critiques (CVSS 9.2) activement exploitées, ajoutées au KEV de la CISA. Impact direct sur les infrastructures utilisant Collabora Online ou Arista VeloCloud.
+- **4/5** — [Abandoned Popcorn Time app exposed millions of devices to RCE attacks](https://www.bleepingcomputer.com/news/security/abandoned-popcorn-time-app-exposed-millions-of-device-to-rce-attacks/) — BleepingComputer. Raison : Vulnérabilité critique RCE sur une application encore largement installée. Intéressant pour évaluer le risque résiduel et les leçons sur les supply chains logicielles abandonnées.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Google élargit l'exploitation publicitaire des données personnelles** : Google modifie sa politique de confidentialité pour autoriser l'utilisation des contenus Gmail, Drive et Photos à des fins de ciblage publicitaire, sous couvert de fonctionnalités d'IA personnalisée. [The Verge](https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update)
+- **OpenAI coupe l'accès au web pour l'entraînement de ses modèles** : OpenAI annonce qu'elle ne fera plus ingérer le web en direct à ses modèles de pointe, invoquant des risques significatifs, quelques semaines après qu'un de ses ingénieurs ait jugé cette approche inefficace. [TechCrunch](https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/)
+
+- **Moonshot AI livre un modèle MoE massif en open weight** : Kimi K3.1 Pro affiche 2 800 milliards de paramètres totaux (104B actifs) et un contexte d'un million de tokens, avec des poids ouverts prévus pour novembre 2026. [MarkTechPost](https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/)
+
+- **NVIDIA sort un petit modèle ouvert pour agents vocaux embarqués** : Nemotron 3.5 Bolt E4B, dérivé de Gemma 4, cible 4 Go de VRAM pour faire tourner des assistants vocaux, personnages de jeu et robots en local sur RTX et Jetson. [MarkTechPost](https://www.marktechpost.com/2026/10/23/nvidia-nemotron-3-5-bolt-e4b-4gb/)
+
+- **Kyutai réduit la latence des modèles du monde vidéo sous 230 ms** : La famille d'autoencodeurs vidéo CADRE permet de construire des modèles du monde interactifs tournant à 20 fps sur un seul H100, avec un temps de réaction inférieur à 230 ms. [MarkTechPost](https://www.marktechpost.com/2026/10/23/kyutai-cadre-video-autoencoders-interactive-world-models/)
 
 **Évaluation du scoring**
 
-- **3/5** — [Now Google says it might use your Gmail and Google Photos data to target ads](https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update) — The Verge — AI. Raison : Politique de confidentialité modifiée par Google. Impact potentiel sur la vie privée des utilisateurs, mais ne constitue pas une menace cyber directe ou technique pour experts.</description>
+- **4/5** — [Moonshot AI Releases Kimi K3.1 Pro: A 2.8T Total/104B Active Params (MoE) Model with 1M Context](https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/) — MarkTechPost. Raison : Modèle MoE massif avec 1M contexte et benchmark solide. Intéressant pour experts IA, mais impact sécurité/entreprise non immédiat.
+- **3/5** — [NVIDIA Releases Nemotron 3.5 Bolt E4B 4GB: An Open Small Language Model for Local Voice Agents, Game Characters and Robots](https://www.marktechpost.com/2026/10/23/nvidia-nemotron-3-5-bolt-e4b-4gb/) — MarkTechPost. Raison : Modèle open source léger pour edge, intéressant pour agents vocaux locaux, mais pas de rupture majeure ni impact direct cybersécurité.
+- **3/5** — [Kyutai CADRE: Video Autoencoders That Cut World Model Lag Below 230 ms](https://www.marktechpost.com/2026/10/23/kyutai-cadre-video-autoencoders-interactive-world-models/) — MarkTechPost. Raison : Article technique sur un modèle de world model vidéo. Intéressant pour l'IA en entreprise mais pas directement lié à la cybersécurité ou au dev tooling.
+- **3/5** — [OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”](https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/) — TechCrunch — AI. Raison : Stratégie de sécurité IA intéressante pour experts, mais résumé vague sans détails techniques sur les risques contournés. À survoler.
+
+## Cyber — Stratégie &amp; analyse
+
+- **Ingénierie sociale assistée par IA** : Les attaquants contournent les défenses techniques en ciblant directement les help desks par téléphone, en utilisant l'IA pour imiter des voix ou générer des justificatifs crédibles afin d'obtenir des accès légitimes. [Dark Reading](https://www.darkreading.com/cyber-risk/trust-is-not-what-it-seems-and-fraudsters-are-counting-on-it)
+
+**Évaluation du scoring**
+
+- **4/5** — [Trust Is Not What It Seems — And Fraudsters Are Counting on It](https://www.darkreading.com/cyber-risk/trust-is-not-what-it-seems-and-fraudsters-are-counting-on-it) — Dark Reading. Raison : Article sur l'ingénierie sociale assistée par IA directement pertinent pour la sécurité des organisations, source reconnue.</description>
       <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Vulnérabilités critiques dans le moteur regex Ruby (impact GitLab)</strong> : Ruby a corrigé trois failles dans Onigmo, son moteur d'expressions régulières, qui sont à l'origine de quatre vulnérabilités critiques dans GitLab. Une expression régulière spécifiquement conçue peut entraîner une corruption mémoire et une exécution de code à distance. <a href="https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html">The Hacker News</a></li>
-<li><strong>Écosystème d'intrusion piloté par IA des groupes INC et The Gentlemen</strong> : Des chercheurs ont découvert une infrastructure exposée utilisant un framework autonome de type "Red Team" nommé Phantom, exploité par des affiliés ransomware pour automatiser les compromissions. L'attaque s'appuie sur des agents IA pour exécuter la chaîne d'intrusion. <a href="https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html">The Hacker News</a></li>
-<li><strong>Bootkit UEFI BlackX ciblant des entités diplomatiques en Asie centrale</strong> : Un bootkit UEFI sophistiqué, capable de contourner le Secure Boot sur des systèmes Windows pourtant patchés mais sans révocation à jour, a visé des organisations diplomatiques au Tadjikistan, Ouzbékistan et Turkménistan. <a href="https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html">The Hacker News</a></li>
-<li><strong>Violation de données chez Quest Diagnostics</strong> : Un acteur malveillant a accédé sans autorisation au système Quanum LSM, exposant des dossiers de patients. La nature exacte des données compromises est en cours d'évaluation. <a href="https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/">BleepingComputer</a></li>
-<li><strong>Exploitabilité de la vulnérabilité php2shell</strong> : Le SANS ISC analyse la fiabilité et les conditions d'exploitation de cette vulnérabilité critique, soulignant l'état d'alerte généralisé qu'elle a provoqué. <a href="https://isc.sans.edu/diary/rss/33452">SANS ISC</a></li>
-<li><strong>Fin de support de Windows Server 2016 en janvier 2027</strong> : Microsoft annonce l'arrêt des mises à jour de sécurité pour Windows Server 2016, exposant les systèmes non migrés à des risques de vulnérabilités non corrigées. La préparation de la migration doit débuter. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-january/">BleepingComputer</a></li>
-<li><strong>Détection de phishing par IA dans Microsoft Teams</strong> : Microsoft va intégrer une détection de phishing contextuelle et basée sur l'IA dans Teams dès début novembre 2026 pour contrer les tentatives d'hameçonnage via la messagerie instantanée. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/">BleepingComputer</a></li>
-<li><strong>Interdiction par la FCC de deux appareils embarquant des puces HiSilicon</strong> : La FCC a interdit un transmetteur vidéo sans fil et une caméra embarquée utilisant des composants de la filiale d'Huawei, explicitement commercialisés pour le marché de la surveillance. <a href="https://therecord.media/fcc-bans-devices-huawei-surveillance-chips">The Record</a></li>
+<li><strong>Failles critiques dans Collabora Online et Arista VeloCloud exploitées activement</strong> : La CISA a inscrit deux vulnérabilités critiques à son catalogue KEV, confirmant leur exploitation en conditions réelles. L'une affecte le serveur CODE intégré de Collabora Online, l'autre l'orchestrateur VeloCloud d'Arista. <a href="https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Application Popcorn Time abandonnée : risque RCE sur des millions de postes</strong> : Des chercheurs ont neutralisé à distance un mécanisme de mise à jour vulnérable dans le fork Time4Popcorn, qui permettait l'exécution de code avec privilèges élevés. L'application n'étant plus maintenue, la désactivation forcée de ce composant était la seule parade. <a href="https://www.bleepingcomputer.com/news/security/abandoned-popcorn-time-app-exposed-millions-of-device-to-rce-attacks/">BleepingComputer</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html">Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws</a> — The Hacker News. Raison : CVE critique impactant GitLab et Ruby ; correctifs disponibles pour des failles RCE exploitées via Onigmo ; lecture obligatoire pour RSSI/CTO.</li>
-<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html">Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions</a> — The Hacker News. Raison : Campagne ransomware majeure intégrant des agents IA pour exécuter des intrusions : signal fort, impact direct sur les pratiques défensives et priorité pour les RSSI/CTO.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/">Quest Diagnostics confirms data breach exposed patient records</a> — BleepingComputer. Raison : Incident majeur touchant un laboratoire américain, avec exposition de données patients. Impact potentiel sur la chaîne d'approvisionnement et la conformité réglementaire.</li>
-<li><strong>4/5</strong> — <a href="https://isc.sans.edu/diary/rss/33452">(Reliable)&#x3f; php2shell exploitability, (Fri, Oct 23rd)</a> — SANS ISC. Raison : Vulnérabilité très médiatisée dans la communauté, analyse de l'exploitabilité par SANS ISC, source experte fiable pour un public cybersécurité.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/">Microsoft Teams to get AI-powered, context-aware phishing detection</a> — BleepingComputer. Raison : Annonce Microsoft sur détection phishing contextuelle dans Teams. Impact direct sur la sécurité des communications d'entreprise, sujet pertinent pour RSSI et CTO.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html">BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations</a> — The Hacker News. Raison : Bootkit UEFI contournant Secure Boot, ciblant des entités diplomatiques, attribué à APT41. Technique avancée, impact potentiel sur les systèmes Windows non patchés.</li>
-<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-january/">Microsoft: Windows Server 2016 reaches end of support in January</a> — BleepingComputer. Raison : Annonce d'une fin de support à échéance proche (janvier 2027) pour Windows Server 2016, impact direct sur la gouvernance des mises à jour et la conformité en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://therecord.media/fcc-bans-devices-huawei-surveillance-chips">FCC bans two devices with surveillance chips linked to Huawei</a> — The Record. Raison : Décision réglementaire américaine sur des puces Huawei liées à la surveillance. Impact géopolitique notable mais sans menace technique immédiate pour un SI français.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Campagnes d'attaque assistées par IA à bas coût</strong> : Des acteurs malveillants exploitent des modèles d'IA open-weight pour mener des attaques à grande échelle pour un coût dérisoire : 12 dollars ont suffi pour obtenir le contrôle total d'un domaine. Cette évolution impose de repenser les stratégies de cyberdéfense face à l'automatisation massive des compromissions. <a href="https://www.darkreading.com/cybersecurity-operations/ai-tools-massive-attacks-little-cost">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Vulnérabilité critique PHP (PHP2Shell)</strong> : La correction des failles critiques PHP ne se limite pas à appliquer un correctif standard. Les équipes doivent cartographier leur exposition et vérifier la configuration de leurs serveurs, car les correctifs peuvent être contournés selon le contexte de déploiement. <a href="https://www.darkreading.com/application-security/exposed-php2shell-cyber-experts-advice">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Correctifs trimestriels Oracle</strong> : Le Critical Patch Update d'octobre corrige 1 295 vulnérabilités, dont six avec un score CVSS 3.1 de 10.0. Une faille critique concerne Oracle E-Business Suite (CVE-2026-101) et nécessite une attention immédiate pour les entreprises utilisant cette suite. <a href="https://www.csoonline.com/article/4239850/oracle-patches-1295-security-vulnerabilities-in-october-including-six-scoring-10-0-2.html">Source</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité BIOS avec mécanisme Dual BIOS</strong> : La protection du BIOS reste un angle mort pour de nombreuses PME, qui concentrent leurs efforts sur la sécurité post-démarrage. Le Dual BIOS constitue une parade contre les attaques pré-boot visant à compromettre la chaîne de démarrage avant le chargement de l'OS et des solutions de sécurité. <a href="https://www.csoonline.com/article/4239779/dual-bios-the-laptop-security-feature-smbs-dont-know-they-need.html">Source</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/application-security/exposed-php2shell-cyber-experts-advice">Exposed to PHP2Shell? Cyber Experts Weigh in With Advice</a> — Dark Reading. Raison : Article sur une faille PHP critique avec conseils d'experts pour RSSI et CTO. Analyse des risques et mesures de protection, non un simple patch.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4239850/oracle-patches-1295-security-vulnerabilities-in-october-including-six-scoring-10-0-2.html">Oracle patches 1295 security vulnerabilities in October, including six scoring 10.0</a> — CSO Online. Raison : Mise à jour critique Oracle avec 1295 CVE dont 6 notées 10.0, dont une affectant E-Business Suite. Impact potentiel élevé pour les RSSI/CTO exploitant ces solutions.</li>
-<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cybersecurity-operations/ai-tools-massive-attacks-little-cost">AI Tools Are Generating Massive Attacks for Little Cost</a> — Dark Reading. Raison : Campagne IA à faible coût avec impact concret (105 sites, contrôle de domaine pour 12$). Analyse pertinente pour adaptation défensive.</li>
-<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/4239779/dual-bios-the-laptop-security-feature-smbs-dont-know-they-need.html">Dual BIOS: The laptop security feature SMBs don’t know they need</a> — CSO Online. Raison : Sujet utile pour SMB mais basique pour RSSI/CTO/Architecte. Absence de technique avancée ou de menace nouvelle.</li>
-</ul>
-
-<h2>IA — Labos & éditeurs</h2>
-
-<ul>
-<li><strong>Infrastructure de stockage pour LLM à grande échelle</strong> : OpenAI détaille l'architecture de Habitat, leur couche de stockage pour ChatGPT, qui atteint 1 milliard d'utilisateurs grâce au multi-tenancy, au cache global et à Azure Cosmos DB, avec des lectures 12× plus rapides. <a href="https://openai.com/index/scaling-storage-one-billion-users-part-two">OpenAI News</a></li>
-</ul>
-
-<ul>
-<li><strong>Apprentissage par renforcement multi-tours sur SageMaker</strong> : AWS propose un guide complet pour entraîner des modèles via le MTRL, où l'optimisation porte sur le résultat final d'une tâche multi-étapes plutôt que sur chaque étape isolée, en s'appuyant sur Bedrock AgentCore pour le déploiement. <a href="https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Auto-scaling des endpoints SageMaker avec CDK</strong> : AWS fournit une solution pour contourner les échecs de déploiement CloudFormation/CDK lors de la mise à jour d'endpoints avec auto-scaling, via un construct CDK réutilisable qui désenregistre et ré-enregistre automatiquement les règles de scaling. <a href="https://aws.amazon.com/blogs/machine-learning/orchestrating-sagemaker-ai-endpoint-auto-scaling-with-aws-cdk/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents décisionnels multi-agents en production</strong> : Bayer Crop Science a déployé un moteur décisionnel agentique sur Bedrock AgentCore, couvrant l'architecture et cinq choix de conception pour permettre aux chercheurs d'interroger leur plateforme analytique en langage naturel. <a href="https://aws.amazon.com/blogs/machine-learning/how-bayer-crop-science-built-an-agentic-decision-engine-on-amazon-bedrock-agentcore-with-aws-unified-operations/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Visualisation de données géospatiales</strong> : Amazon QuickSight étend ses couches cartographiques au support des géométries Point et LineString dans un même flux GeoJSON, permettant de tracer à la fois des emplacements et des itinéraires. <a href="https://aws.amazon.com/blogs/machine-learning/visualize-points-and-routes-with-geojson-in-amazon-quick-sight-layer-maps/">AWS Machine Learning</a></li>
-</ul>
-
-<ul>
-<li><strong>Exploration de littérature scientifique par contextualisation dynamique</strong> : Allen AI présente LitPivot, un outil qui aide les chercheurs à développer des idées en contextualisant dynamiquement des articles dans le paysage de la littérature existante. <a href="https://huggingface.co/blog/allenai/litpivot">Hugging Face Blog</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://openai.com/index/scaling-storage-one-billion-users-part-two">Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)</a> — OpenAI News. Raison : Retour d'expérience technique de scaling chez OpenAI avec des détails concrets multi-tenancy, caching, base NoSQL. Pertinent pour architectes et CTO.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/">Multi-Turn Reinforcement Learning on Amazon SageMaker AI: A hands-on guide</a> — AWS Machine Learning. Raison : Tutoriel technique sur une méthode IA avancée (MTRL) avec pipeline concret. Intéressant pour experts, mais pas critique pour la cybersécurité.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/orchestrating-sagemaker-ai-endpoint-auto-scaling-with-aws-cdk/">Orchestrating SageMaker AI endpoint auto scaling with AWS CDK</a> — AWS Machine Learning. Raison : Tutoriel technique pour déployer avec AWS CDK malgré une limitation connue de CloudFormation. Utile mais pas stratégique, ni critique pour cybersécurité ou IA.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/visualize-points-and-routes-with-geojson-in-amazon-quick-sight-layer-maps/">Visualize points and routes with GeoJSON in Amazon Quick Sight layer maps</a> — AWS Machine Learning. Raison : Fonctionnalité technique utile pour visualiser données géolocalisées, mais sans lien avec cybersécurité ou IA structurante pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/how-bayer-crop-science-built-an-agentic-decision-engine-on-amazon-bedrock-agentcore-with-aws-unified-operations/">How Bayer Crop Science built an agentic decision engine on Amazon Bedrock AgentCore with AWS Unified Operations</a> — AWS Machine Learning. Raison : Retour d'expérience sur architecture multi-agent avec AWS, utile pour comprendre une implémentation IA en entreprise, mais peu de détails cyber et pas de rupture technique majeure.</li>
-<li><strong>3/5</strong> — <a href="https://huggingface.co/blog/allenai/litpivot">LitPivot: Developing research ideas through dynamic contextualization within the literature landscape</a> — Hugging Face Blog. Raison : Article de recherche sur une méthode de contextualisation dynamique pour l'idéation. Potentiel intéressant pour experts, mais impact pratique immédiat incertain.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>Paralysie de services publics français suite à des failles PHP critiques</strong> : La découverte de vulnérabilités critiques dans PHP a contraint l'arrêt d'urgence de nombreux services publics français (impôts, ministères, Ameli) et de millions de sites dans le monde, les pirates exploitant déjà ces failles de manière intensive via l'IA. <a href="https://www.bfmtv.com/tech/cybersecurite/apres-la-faille-php-les-developpeurs-du-monde-entier-appeles-a-etre-plus-vigilants-et-pro-actifs-dans-les-mises-a-jour_AV-202610230780.html">BFM Tech</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.bfmtv.com/tech/cybersecurite/apres-la-faille-php-les-developpeurs-du-monde-entier-appeles-a-etre-plus-vigilants-et-pro-actifs-dans-les-mises-a-jour_AV-202610230780.html">"Les pirates utilisent l'IA jour et nuit": des impôts aux ministères, pourquoi le web français s'est arrêté net</a> — BFM Tech. Raison : Faille critique PHP ayant paralysé services publics français (impôts, ministères, Ameli). Incident cyber majeur secteur critique, impact direct, nécessite analyse immédiate.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html">CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud</a> — The Hacker News. Raison : CVE critiques (CVSS 9.2) activement exploitées, ajoutées au KEV de la CISA. Impact direct sur les infrastructures utilisant Collabora Online ou Arista VeloCloud.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/abandoned-popcorn-time-app-exposed-millions-of-device-to-rce-attacks/">Abandoned Popcorn Time app exposed millions of devices to RCE attacks</a> — BleepingComputer. Raison : Vulnérabilité critique RCE sur une application encore largement installée. Intéressant pour évaluer le risque résiduel et les leçons sur les supply chains logicielles abandonnées.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Google élargit l'exploitation publicitaire des données personnelles</strong> : Google modifie sa politique de confidentialité pour autoriser l'utilisation des contenus Gmail, Drive et Photos à des fins de ciblage publicitaire, sous couvert de fonctionnalités d'IA personnalisée. <a href="https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update">The Verge</a></li>
+<li><strong>OpenAI coupe l'accès au web pour l'entraînement de ses modèles</strong> : OpenAI annonce qu'elle ne fera plus ingérer le web en direct à ses modèles de pointe, invoquant des risques significatifs, quelques semaines après qu'un de ses ingénieurs ait jugé cette approche inefficace. <a href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Moonshot AI livre un modèle MoE massif en open weight</strong> : Kimi K3.1 Pro affiche 2 800 milliards de paramètres totaux (104B actifs) et un contexte d'un million de tokens, avec des poids ouverts prévus pour novembre 2026. <a href="https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>NVIDIA sort un petit modèle ouvert pour agents vocaux embarqués</strong> : Nemotron 3.5 Bolt E4B, dérivé de Gemma 4, cible 4 Go de VRAM pour faire tourner des assistants vocaux, personnages de jeu et robots en local sur RTX et Jetson. <a href="https://www.marktechpost.com/2026/10/23/nvidia-nemotron-3-5-bolt-e4b-4gb/">MarkTechPost</a></li>
+</ul>
+
+<ul>
+<li><strong>Kyutai réduit la latence des modèles du monde vidéo sous 230 ms</strong> : La famille d'autoencodeurs vidéo CADRE permet de construire des modèles du monde interactifs tournant à 20 fps sur un seul H100, avec un temps de réaction inférieur à 230 ms. <a href="https://www.marktechpost.com/2026/10/23/kyutai-cadre-video-autoencoders-interactive-world-models/">MarkTechPost</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update">Now Google says it might use your Gmail and Google Photos data to target ads</a> — The Verge — AI. Raison : Politique de confidentialité modifiée par Google. Impact potentiel sur la vie privée des utilisateurs, mais ne constitue pas une menace cyber directe ou technique pour experts.</li>
+<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/">Moonshot AI Releases Kimi K3.1 Pro: A 2.8T Total/104B Active Params (MoE) Model with 1M Context</a> — MarkTechPost. Raison : Modèle MoE massif avec 1M contexte et benchmark solide. Intéressant pour experts IA, mais impact sécurité/entreprise non immédiat.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/23/nvidia-nemotron-3-5-bolt-e4b-4gb/">NVIDIA Releases Nemotron 3.5 Bolt E4B 4GB: An Open Small Language Model for Local Voice Agents, Game Characters and Robots</a> — MarkTechPost. Raison : Modèle open source léger pour edge, intéressant pour agents vocaux locaux, mais pas de rupture majeure ni impact direct cybersécurité.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/23/kyutai-cadre-video-autoencoders-interactive-world-models/">Kyutai CADRE: Video Autoencoders That Cut World Model Lag Below 230 ms</a> — MarkTechPost. Raison : Article technique sur un modèle de world model vidéo. Intéressant pour l'IA en entreprise mais pas directement lié à la cybersécurité ou au dev tooling.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/">OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”</a> — TechCrunch — AI. Raison : Stratégie de sécurité IA intéressante pour experts, mais résumé vague sans détails techniques sur les risques contournés. À survoler.</li>
+</ul>
+
+<h2>Cyber — Stratégie & analyse</h2>
+
+<ul>
+<li><strong>Ingénierie sociale assistée par IA</strong> : Les attaquants contournent les défenses techniques en ciblant directement les help desks par téléphone, en utilisant l'IA pour imiter des voix ou générer des justificatifs crédibles afin d'obtenir des accès légitimes. <a href="https://www.darkreading.com/cyber-risk/trust-is-not-what-it-seems-and-fraudsters-are-counting-on-it">Dark Reading</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyber-risk/trust-is-not-what-it-seems-and-fraudsters-are-counting-on-it">Trust Is Not What It Seems — And Fraudsters Are Counting on It</a> — Dark Reading. Raison : Article sur l'ingénierie sociale assistée par IA directement pertinent pour la sécurité des organisations, source reconnue.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261023-2019</guid>
-      <pubDate>Fri, 23 Oct 2026 20:19:03 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261024-0923</guid>
+      <pubDate>Sat, 24 Oct 2026 09:23:43 +0000</pubDate>
     </item>
   </channel>
 </rss>
