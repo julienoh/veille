@@ -8,38 +8,74 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 25 Oct 2026 14:55:40 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 19:30:48 +0000</lastBuildDate>
     <item>
-      <title>Digest — 25/10 14h</title>
+      <title>Digest — 25/10 19h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## IA &amp; Tech — Médias internationaux
+      <description>## Cyber — Menaces &amp; vulnérabilités
 
-- **Scanner de vulnérabilités par Anthropic** : Anthropic met à disposition un scanner gratuit pour les projets open source critiques, utilisant ses modèles les plus performants pour identifier des failles et transmettre les rapports directement aux mainteneurs, sans examen humain intermédiaire. [MarkTechPost](https://www.marktechpost.com/2026/10/25/anthropic-launches-oss-scanner-a-free-ai-vulnerability-scanner/)
+- **Détournement d'agents de codage IA** : Des fichiers `AGENTS.md` malveillants placés dans le dossier Téléchargements parviennent à faire exécuter des packages npm frauduleux par des assistants de codage basés sur l'IA. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/)
 
-- **Optimisation de l'inférence LLM par pruning** : Des chercheurs de Stanford et UC Berkeley proposent TokenGate, un module qui élague dynamiquement les tokens superflus dans les mécanismes d'attention, réduisant le temps d'inférence sur contextes longs jusqu'à 11,3x et la mémoire de pointe jusqu'à 3,4x, sans dégradation de précision. [MarkTechPost](https://www.marktechpost.com/2026/10/25/stanford-berkeley-tokengate-learned-token-pruning-llm-prefill/)
+- **Exploitation de PHP2Shell assistée par IA agentique** : L'exploitation des failles CVE-2026-109618/9619 cible des entités gouvernementales européennes, avec un usage inédit de l'IA agentique pour automatiser les actions post-exploitation. [The Hacker News](https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html)
+
+- **Élévation de privilèges via Tailscale SSH** : Un appareil compromis sur un réseau Tailscale peut obtenir un accès root à d'autres serveurs si le transfert de port SSH est activé, sans correctif disponible à date. [The Hacker News](https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html)
 
 **Évaluation du scoring**
 
-- **4/5** — [Anthropic Launches OSS Scanner, a Free AI Vulnerability Scanner](https://www.marktechpost.com/2026/10/25/anthropic-launches-oss-scanner-a-free-ai-vulnerability-scanner/) — MarkTechPost. Raison : Outil IA gratuit de scan de vulnérabilités pour l'open source, utilisant un modèle puissant. Pertinent pour les experts AppSec et Dev, mais l'absence de review humaine déplace la charge sur les mainteneurs.
-- **3/5** — [Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster](https://www.marktechpost.com/2026/10/25/stanford-berkeley-tokengate-learned-token-pruning-llm-prefill/) — MarkTechPost. Raison : Recherche académique sur l'optimisation des LLMs pour longs contextes, intéressante mais sans impact direct cybersécurité ou dev tooling immédiat.</description>
-      <content:encoded><![CDATA[<h2>IA & Tech — Médias internationaux</h2>
+- **5/5** — [PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking](https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html) — The Hacker News. Raison : CVE critiques exploitées activement contre un gouvernement européen, avec usage d'IA agentique en post-exploitation. Impact direct sur la sécurité des SI.
+- **4/5** — [Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers](https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html) — The Hacker News. Raison : Vulnérabilité Tailscale SSH permettant escalade de privilèges via un device compromis. Impact potentiel élevé, mais nécessite prérequis spécifiques. Analyse utile pour RSSI et architectes.
+- **4/5** — [AI coding agents hijacked using AGENTS.md file in Downloads folder](https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/) — BleepingComputer. Raison : Vulnérabilité concrète d'un agent IA via fichier malveillant dans un dossier utilisateur, avec installation de package npm. Impact direct sur les pratiques de développement et sécurité des pipelines IA.
+
+## IA &amp; Tech — Médias internationaux
+
+- **Retour sur investissement nul de l'IA hors tech** : Selon un économiste d'Apollo, l'IA n'a généré aucun gain financier pour les entreprises américaines en dehors du secteur technologique, malgré les investissements massifs et la couverture médiatique intense. [TechCrunch](https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/)
+
+- **Modèle open source lisible sur l'ADN** : Hugging Face a publié Carbon-X, un modèle de langage de 14,8 milliards de paramètres capable de lire des séquences d'ADN brutes et de répondre en anglais, avec une moyenne de 66,7 % sur cinq benchmarks ADN. [MarkTechPost](https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/)
+
+**Évaluation du scoring**
+
+- **3/5** — [AI delivers ‘zero financial payoff’ to most companies, Apollo economist says](https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/) — TechCrunch — AI. Raison : Analyse macroéconomique sur le faible retour sur investissement de l'IA hors secteur tech. Intéressant pour contexte stratégique mais manque d'angle technique ou cyber.
+- **3/5** — [Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time](https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/) — MarkTechPost. Raison : Modèle DNA+langage intéressant pour la recherche, mais sans lien direct avec la cybersécurité ou les sujets du public cible. Utile pour veille large.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
 
 <ul>
-<li><strong>Scanner de vulnérabilités par Anthropic</strong> : Anthropic met à disposition un scanner gratuit pour les projets open source critiques, utilisant ses modèles les plus performants pour identifier des failles et transmettre les rapports directement aux mainteneurs, sans examen humain intermédiaire. <a href="https://www.marktechpost.com/2026/10/25/anthropic-launches-oss-scanner-a-free-ai-vulnerability-scanner/">MarkTechPost</a></li>
+<li><strong>Détournement d'agents de codage IA</strong> : Des fichiers `AGENTS.md` malveillants placés dans le dossier Téléchargements parviennent à faire exécuter des packages npm frauduleux par des assistants de codage basés sur l'IA. <a href="https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/">BleepingComputer</a></li>
 </ul>
 
 <ul>
-<li><strong>Optimisation de l'inférence LLM par pruning</strong> : Des chercheurs de Stanford et UC Berkeley proposent TokenGate, un module qui élague dynamiquement les tokens superflus dans les mécanismes d'attention, réduisant le temps d'inférence sur contextes longs jusqu'à 11,3x et la mémoire de pointe jusqu'à 3,4x, sans dégradation de précision. <a href="https://www.marktechpost.com/2026/10/25/stanford-berkeley-tokengate-learned-token-pruning-llm-prefill/">MarkTechPost</a></li>
+<li><strong>Exploitation de PHP2Shell assistée par IA agentique</strong> : L'exploitation des failles CVE-2026-109618/9619 cible des entités gouvernementales européennes, avec un usage inédit de l'IA agentique pour automatiser les actions post-exploitation. <a href="https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Élévation de privilèges via Tailscale SSH</strong> : Un appareil compromis sur un réseau Tailscale peut obtenir un accès root à d'autres serveurs si le transfert de port SSH est activé, sans correctif disponible à date. <a href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html">The Hacker News</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>4/5</strong> — <a href="https://www.marktechpost.com/2026/10/25/anthropic-launches-oss-scanner-a-free-ai-vulnerability-scanner/">Anthropic Launches OSS Scanner, a Free AI Vulnerability Scanner</a> — MarkTechPost. Raison : Outil IA gratuit de scan de vulnérabilités pour l'open source, utilisant un modèle puissant. Pertinent pour les experts AppSec et Dev, mais l'absence de review humaine déplace la charge sur les mainteneurs.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/25/stanford-berkeley-tokengate-learned-token-pruning-llm-prefill/">Researchers from Stanford and UC Berkeley Introduce TokenGate: Token-Gated Attention Makes Long-Context Prefill Up to 11.3x Faster</a> — MarkTechPost. Raison : Recherche académique sur l'optimisation des LLMs pour longs contextes, intéressante mais sans impact direct cybersécurité ou dev tooling immédiat.</li>
+<li><strong>5/5</strong> — <a href="https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html">PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking</a> — The Hacker News. Raison : CVE critiques exploitées activement contre un gouvernement européen, avec usage d'IA agentique en post-exploitation. Impact direct sur la sécurité des SI.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html">Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers</a> — The Hacker News. Raison : Vulnérabilité Tailscale SSH permettant escalade de privilèges via un device compromis. Impact potentiel élevé, mais nécessite prérequis spécifiques. Analyse utile pour RSSI et architectes.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/">AI coding agents hijacked using AGENTS.md file in Downloads folder</a> — BleepingComputer. Raison : Vulnérabilité concrète d'un agent IA via fichier malveillant dans un dossier utilisateur, avec installation de package npm. Impact direct sur les pratiques de développement et sécurité des pipelines IA.</li>
+</ul>
+
+<h2>IA & Tech — Médias internationaux</h2>
+
+<ul>
+<li><strong>Retour sur investissement nul de l'IA hors tech</strong> : Selon un économiste d'Apollo, l'IA n'a généré aucun gain financier pour les entreprises américaines en dehors du secteur technologique, malgré les investissements massifs et la couverture médiatique intense. <a href="https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/">TechCrunch</a></li>
+</ul>
+
+<ul>
+<li><strong>Modèle open source lisible sur l'ADN</strong> : Hugging Face a publié Carbon-X, un modèle de langage de 14,8 milliards de paramètres capable de lire des séquences d'ADN brutes et de répondre en anglais, avec une moyenne de 66,7 % sur cinq benchmarks ADN. <a href="https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/">MarkTechPost</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/">AI delivers ‘zero financial payoff’ to most companies, Apollo economist says</a> — TechCrunch — AI. Raison : Analyse macroéconomique sur le faible retour sur investissement de l'IA hors secteur tech. Intéressant pour contexte stratégique mais manque d'angle technique ou cyber.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/">Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time</a> — MarkTechPost. Raison : Modèle DNA+langage intéressant pour la recherche, mais sans lien direct avec la cybersécurité ou les sujets du public cible. Utile pour veille large.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261025-1455</guid>
-      <pubDate>Sun, 25 Oct 2026 14:55:40 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261025-1930</guid>
+      <pubDate>Sun, 25 Oct 2026 19:30:48 +0000</pubDate>
     </item>
   </channel>
 </rss>
