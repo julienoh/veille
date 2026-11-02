@@ -8,470 +8,308 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 02 Nov 2026 13:30:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 23:55:19 +0000</lastBuildDate>
     <item>
-      <title>Digest — 02/11 13h</title>
+      <title>Digest — 02/11 23h</title>
       <link>https://julienoh.github.io/veille/digest.xml</link>
-      <description>## Cyber — Menaces &amp; vulnérabilités
+      <description>## Cyber — Stratégie &amp; analyse
 
-- **GitLab : RCE exploitée activement** : Plus de 1 000 instances GitLab exposées sur Internet restent vulnérables à une faille critique (score maximal) permettant l’exécution de code à distance, activement exploitée. [BleepingComputer](https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/)
-- **Synology : campagne de ransomware C3RB3R sur NAS** : Synology appelle à mettre à jour sans délai les NAS ciblés par une recrudescence d’attaques du ransomware C3RB3R. [BleepingComputer](https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/)
-- **Ivanti Connect Secure : deux nouvelles failles zero-day chaînées** : Ivanti a corrigé deux vulnérabilités supplémentaires sur ses passerelles Connect Secure, chaînées dans des attaques zero-day observées depuis au moins début octobre. [BleepingComputer](https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/)
-- **Secteur alimentaire européen : deuxième vague de sabotage de réfrigérateurs** : Des congélateurs de supermarchés européens ont subi une seconde cyberattaque manipulant les contrôles de température, entraînant la détérioration de stocks. [The Record](https://therecord.media/cyberattack-grocery-freezers-europe)
-- **Ingénierie sociale via Microsoft Teams &amp; abus AD CS** : Des attaquants se faisant passer pour le support IT sur Teams ont convaincu des employés de leur donner le contrôle de leur poste, puis ont exploité des configurations AD CS faibles pour obtenir des certificats de comptes privilégiés (dont un contrôleur de domaine). [The Hacker News](https://thehackernews.com/2026/11/attackers-pose-as-it-support-on-microsoft.html)
-- **Espionnage sur serveurs Linux gouvernementaux (SysGoRAT)** : Une campagne d’espionnage ciblant des infrastructures Linux d’entités gouvernementales a utilisé le malware SysGoRAT et des scripts suspectés d’être générés par IA, observée entre octobre 2025 et avril 2026 selon Unit 42. [The Hacker News](https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html)
-- **VOLTA : un infostealer qui utilise l'IA pour trier les victimes** : Le nouveau malware VOLTA-AUTODOXER exploite plusieurs LLM (Claude, Gemini, Kimi) pour évaluer la valeur financière des données volées (mots de passe, portefeuilles crypto) et prioriser les victimes. [The Hacker News](https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html)
-- **Binance : le FBI attribue le vol de 6,3 milliards de dollars à la Corée du Nord** : Le FBI et l’US Secret Service attribuent au groupe nord-coréen TraderTraitor le vol de plus de 6,3 milliards de dollars sur Binance et appellent le secteur crypto à bloquer les transactions associées. [The Record](https://therecord.media/fbi-blames-tradertraitor-for-binance-hack)
+- **Attaque Binance : défaut de segmentation interne** : Le vol record de 1,5 Md$ via un unique poste compromis démontre qu'une séparation insuffisante des systèmes et l'absence de tests continus sur les chemins d'attaque transforment une intrusion locale en perte systémique. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths)
+
+- **Omerta de Microsoft sur ses propres vulnérabilités dans le ciblage IA** : Le rapport "Digital Defense Report" identifie les gouvernements comme cibles premières des cyberattaques par IA, mais omet de mentionner que ces mêmes entités sont massivement exposées via des failles dans les produits Microsoft. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/microsoft-ai-cyber-risk-report-miss)
+
+- **Campagne PapRAT en Asie du Sud : usage détourné de fonctions Windows légitimes** : Le groupe lié à l'Inde mène une campagne de cyber-espionnage via trois chaînes d'attaque distinctes, toutes fondées sur l'exploitation de fonctionnalités natives de Windows, compliquant la détection. [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia)
 
 **Évaluation du scoring**
 
-- **5/5** — [Over 1,000 GitLab servers vulnerable to ongoing RCE attacks](https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/) — BleepingComputer. Raison : CVE critique activement exploitée sur plus de 1000 serveurs GitLab exposés, impact direct sur les infrastructures CI/CD des entreprises.
-- **5/5** — [Synology warns of C3RB3R ransomware attacks targeting NAS devices](https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/) — BleepingComputer. Raison : Campagne ransomware active ciblant des NAS Synology, équipement très répandu en entreprise. Alerte du constructeur avec demande de patch immédiat, impact direct sur les RSSI et CTO.
-- **5/5** — [Ivanti patches two more Connect Secure zero-days chained in attacks](https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/) — BleepingComputer. Raison : Zero-day chaîné activement exploité depuis octobre, patch critique pour un équipement de passerelle d'accès à distance très déployé en entreprise.
-- **4/5** — [Second wave of suspected cyberattacks hits supermarket freezers across Europe](https://therecord.media/cyberattack-grocery-freezers-europe) — The Record. Raison : Incident cyber récurrent ciblant un secteur critique (grande distribution) en Europe, avec impact opérationnel direct. Analyse technique et stratégie de défense à approfondir.
-- **4/5** — [Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data](https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html) — The Hacker News. Raison : Incident exploitant AD CS pour vol de données via ingénierie sociale sur Teams. Technique ciblant un service critique d'infrastructure, pertinent pour RSSI et architecte.
-- **4/5** — [Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts](https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html) — The Hacker News. Raison : Campagne d'espionnage ciblant des serveurs Linux gouvernementaux, avec scripts possiblement générés par IA. Analyse technique de Unit 42, pertinente pour RSSI et CTO.
-- **4/5** — [New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value](https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html) — The Hacker News. Raison : Nouvel infostealer utilisant l'IA pour trier les données volées. Technique innovante, impact potentiel sur les pratiques de défense. À lire pour comprendre l'évolution des menaces.
-- **4/5** — [FBI blames N. Korea’s TraderTraitor for Binance theft, urges crypto industry to block transactions](https://therecord.media/fbi-blames-tradertraitor-for-binance-hack) — The Record. Raison : Incident majeur attribué à un État, impactant un secteur critique (crypto). Analyse technique et implications géopolitiques utiles pour RSSI/CTO.
-
-## Cyber — Stratégie &amp; analyse
-
-- **Chaîne d'approvisionnement des assistants IA** : Les IDE augmentés par IA (Cursor, Claude Code) introduisent un nouveau vecteur d'attaque via leurs marketplaces d'extensions. Un simple fichier de configuration ou une extension malveillante peut exfiltrer des clés SSH et des secrets de développement sans toucher au code applicatif. La question n'est plus "ce commit modifie-t-il le code" mais "qui a validé les fichiers qui pilotent l'assistant IA". [CSO Online - Cursor](https://www.csoonline.com/article/4243210/cursor-removes-malicious-claude-code-extension-after-ssh-backdoor-attempt.html) · [CSO Online - Approvals](https://www.csoonline.com/article/4242707/who-approves-the-files-that-control-your-ai-coding-assistant.html)
-
-- **Accélération massive de la découverte de vulnérabilités par IA** : L'IA a permis de découvrir en un mois 3% de tous les bugs critiques jamais recensés dans l'histoire du logiciel. Le rythme projeté — 100 000 vulnérabilités supplémentaires cette année — redéfinit la pression sur les équipes de correction, qui doivent intégrer cette cadence dans leurs stratégies de priorisation. [Schneier on Security](https://www.schneier.com/blog/archives/2026/11/ai-vulnerability-finding-2.html)
-
-- **Fin du phishing "scolaire" comme exercice pertinent** : Les campagnes de simulation qui testent les utilisateurs sur des scénarios de phishing génériques et datés ne reflètent plus la menace réelle. Les attaquants utilisent l'IA pour produire des leurres contextuels, personnalisés, en temps réel. L'évaluation de la résilience humaine doit se caler sur les tactiques d'aujourd'hui, pas celles d'hier. [CSO Online](https://www.csoonline.com/article/4242712/why-do-we-keep-testing-employees-for-yesterdays-phishing-attacks.html)
-
-- **Impact financier direct de la compromission d'un poste DevOps** : Un seul laptop DevOps compromis a suffi pour une perte de 6,3 milliards de dollars chez Binance. Le point structurant pour le RSSI : la surface d'exposition des postes à privilèges élevés sur les environnements de production reste le maillon faible, même dans les entreprises fortement capitalisées. [CSO Online](https://www.csoonline.com/article/4243225/a-compromised-devops-laptop-caused-the-6-3b-binance-breach.html)
-
-- **Stratégie de sécurité à horizon 2027** : Selon le CISO d'Equifax et les observateurs du secteur, l'IA accélère symétriquement l'attaque et la défense. Une stratégie viable exige d'accepter cette course à la vélocité, d'automatiser la détection et la réponse au même rythme que l'adversaire, et de réduire structurellement le temps de latence entre l'intrusion et la réaction. [CSO Online](https://www.csoonline.com/article/4240618/what-a-security-strategy-that-survives-2027-looks-like.html)
-
-**Évaluation du scoring**
-
-- **5/5** — [A compromised DevOps laptop caused the $6.3B Binance breach](https://www.csoonline.com/article/4243225/a-compromised-devops-laptop-caused-the-6-3b-binance-breach.html) — CSO Online. Raison : Incident cyber majeur avec perte de 6,3 Md$, chaîne d'approvisionnement DevOps compromise. Impact direct sur la stratégie de sécurité SI et les pratiques des RSSI/CTO.
-- **5/5** — [Cursor removes malicious Claude Code extension after SSH backdoor attempt](https://www.csoonline.com/article/4243210/cursor-removes-malicious-claude-code-extension-after-ssh-backdoor-attempt.html) — CSO Online. Raison : Incident de sécurité actif ciblant les développeurs via un IDE populaire, avec backdoor SSH persistant. Impact direct sur les chaînes d'approvisionnement et les données sensibles.
-- **4/5** — [AI Vulnerability Finding](https://www.schneier.com/blog/archives/2026/11/ai-vulnerability-finding-2.html) — Schneier on Security. Raison : Chiffre frappant sur l'explosion des découvertes de vulnérabilités critiques via IA, impact direct sur la stratégie AppSec et SOC.
-- **4/5** — [Who approves the files that control your AI coding assistant?](https://www.csoonline.com/article/4242707/who-approves-the-files-that-control-your-ai-coding-assistant.html) — CSO Online. Raison : Analyse pertinente des risques liés aux configurations des assistants IA dans les PR, impact direct sur la revue de code et la sécurité des environnements de dev.
-- **4/5** — [What a security strategy that survives 2027 looks like](https://www.csoonline.com/article/4240618/what-a-security-strategy-that-survives-2027-looks-like.html) — CSO Online. Raison : Retour d'expérience d'un CISO sur l'impact de l'IA dans la stratégie défensive, avec un angle opérationnel et stratégique pertinent pour un public expert.
-- **3/5** — [Why do we keep testing employees for yesterday’s phishing attacks](https://www.csoonline.com/article/4242712/why-do-we-keep-testing-employees-for-yesterdays-phishing-attacks.html) — CSO Online. Raison : Questionne la pertinence des simulations de phishing classiques face à l'IA. Analyse de fond mais sans données ou méthodologie nouvelle. Utile pour les RSSI/CTO.
-
-## Actualité tech FR
-
-- **250 000 sites en .fr vulnérables à PHP2Shell** : Le scan du Next.ink révèle qu’un quart de million de domaines français exposent une version PHP vulnérable, alors que des attaques actives sont déjà en cours. [Next.ink](https://next.ink/264756/failles-php2shell-on-a-scanne-tout-le-fr-250-000-sites-affichent-un-php-vulnerable/)
-
-- **Routeurs Netgear vulnérables en LAN** : Une faille permet l’exécution de commandes malveillantes à un attaquant déjà présent sur le réseau local ; la correction passe par une mise à jour du firmware. [ZDNet France](https://www.zdnet.fr/actualites/votre-routeur-netgear-est-peut-etre-vulnerable-a-une-faille-de-securite-comment-verifier-et-corriger-le-probleme-507091.htm#xtor=RSS-1)
-
-- **Cyberviolences : impact politique documenté** : Un rapport de Féministes contre le cyberharcèlement démontre que ces violences altèrent concrètement la participation au débat démocratique et produisent des effets politiques mesurables. [Next.ink](https://next.ink/264578/quand-la-cyberviolence-produit-des-effets-politiques-concrets/)
-
-- **Droit social : réunion extraordinaire de la CSSCT** : Depuis un arrêt de septembre 2026, l’employeur ne peut refuser une réunion extraordinaire que sous trois motifs précis, sous contrôle du juge. [Journal du Net](https://www.journaldunet.com/management/direction-generale/1557089-cssct-refuser-une-reunion-extraordinaire-est-devenu-un-exercice-a-haut-risque/)
-
-- **KIDS Act : Bruxelles pousse à l’harmonisation** : La Commission européenne veut imposer un calendrier unique de mise en œuvre du KIDS Act à tous les États membres pour éviter un front fragmenté sur la protection des mineurs en ligne. [Next.ink](https://next.ink/265045/kids-act-bruxelles-veut-imposer-un-calendrier-commun-aux-etats/)
-
-- **Facturation électronique : l’interopérabilité menacée** : La multiplication des formats et dérogations dans la réforme française risque de complexifier les échanges et d’annuler les gains attendus de l’interopérabilité. [Journal du Net](https://www.journaldunet.com/management/direction-generale/1557361-facturation-electronique-a-force-d-exceptions-la-france-risque-de-perdre-les-benefices-de-l-interoperabilite/)
-
-- **Taxe sur le transit internet : levée de boucliers** : Le vote à l’Assemblée d’un amendement PS créant une taxe au gigaoctet a provoqué une réaction immédiate des dirigeants d’Iliad, VLC et OVHcloud. [Next.ink](https://next.ink/265082/la-taxe-ps-au-gigaoctet-votee-a-lassemblee-nationale-fait-reagir-de-vlc-a-ovhcloud/)
-
-- **OVHcloud vs Mistral AI : bataille pour le cloud souverain** : Octave Klaba annonce un modèle d’IA souverain pour fin novembre et critique ouvertement le modèle économique de Mistral AI, désormais perçu comme un concurrent direct sur le marché des infrastructures. [ZDNet France](https://www.zdnet.fr/actualites/zd-tech-octave-klaba-attaque-mistral-ai-et-annonce-lia-souveraine-dovhcloud-506584.htm#xtor=RSS-1)
-
-- **Refus d’entraînement IA : un standard en robots.txt** : OpenAI, Google, Microsoft et Anthropic s’alignent sur un signal commun non contraignant pour permettre aux sites de bloquer l’aspiration de leurs contenus via le fichier robots.txt. [ZDNet France](https://www.zdnet.fr/actualites/refuser-lentrainement-des-ia-en-une-ligne-openai-google-microsoft-et-anthropic-soutiennent-un-signal-commun-507069.htm#xtor=RSS-1)
-
-- **Assurance IA : le marché s’adapte** : Les assureurs traditionnels excluent l’IA de leurs contrats, tandis qu’une nouvelle génération d’acteurs propose des couvertures spécifiques pour les agents autonomes. [ZDNet France](https://www.zdnet.fr/actualites/avez-vous-besoin-dune-assurance-responsabilite-civile-pour-les-agents-ia-ce-quil-faut-savoir-avant-de-souscrire-507100.htm#xtor=RSS-1)
-
-- **Stack Overflow pivote en B2B** : Avec moins de 1 000 questions posées en octobre, la plateforme assume un repositionnement sur les agents IA et les besoins des entreprises. [Next.ink](https://next.ink/265086/stack-overflow-assume-son-positionnement-b2b-pour-agents-ia-et-entreprise/)
-
-- **OpenAI : Model Spec remanié** : Le référentiel public qui encadre le comportement des modèles a fait l’objet d’une révision importante, publiée le 29 octobre. [Le Monde Informatique](https://www.lemondeinformatique.fr/actualites/lire-openai-reorganise-son-model-spec-100893.html)
-
-- **OpenAI en production à Abou Dhabi** : L’émirat utilise déjà les modèles d’OpenAI pour le contrôle de conformité des importations alimentaires, dans le cadre de quatre accords impliquant ADNOC et Mubadala. [Actu IA](https://www.actuia.com/actualite/abou-dhabi-teste-openai-sur-ses-controles-dimportations-alimentaires/)
-
-- **Proton critiqué sur son usage de l’IA** : La fondation Proton subit une vague de réactions négatives après des révélations sur l’intégration forcée de l’IA, jugée en contradiction avec ses engagements de confidentialité. [Next.ink](https://next.ink/265087/ia-lamende-honorable-de-proton-a-bien-du-mal-a-passer/)
-
-- **IA consciente : ligne rouge chez Microsoft** : Le patron de Microsoft AI, Mustafa Suleyman, estime qu’il faut cesser tout développement si des signes de conscience émergent à l’entraînement, qualifiant cette voie d’« imprudente ». [ZDNet France](https://www.zdnet.fr/actualites/pas-dia-consciente-le-patron-de-microsoft-ai-trace-une-ligne-rouge-507075.htm#xtor=RSS-1)
-
-- **Ukraine : tourelles anti-drones autonomes** : Les forces armées ukrainiennes utilisent en conditions réelles des tourelles pilotées par IA développées depuis 2024 pour abattre drones et missiles russes. [BFM Tech](https://www.bfmtv.com/tech/intelligence-artificielle/elles-ont-abattu-des-dizaines-de-drones-ennemis-au-dessus-de-kiev-en-ukraine-l-ia-rend-les-tourelles-autonomes-pour-nettoyer-le-ciel-des-missiles-et-drones-russes-elle-pilote-aussi-des-missions-de-ravitaillement-robotisees_AV-202611020400.html)
-
-**Évaluation du scoring**
-
-- **5/5** — [Failles PHP2Shell : on a scanné tout le .fr, 250 000 sites affichent un PHP vulnérable](https://next.ink/264756/failles-php2shell-on-a-scanne-tout-le-fr-250-000-sites-affichent-un-php-vulnerable/) — Next.ink. Raison : CVE critique avec scan massif du .fr, 250k sites vulnérables, attaques réelles confirmées. Impact direct sur les infrastructures des experts ciblés.
-- **4/5** — [Votre routeur Netgear est peut-être vulnérable à une faille de sécurité, comment vérifier et corriger le problème](https://www.zdnet.fr/actualites/votre-routeur-netgear-est-peut-etre-vulnerable-a-une-faille-de-securite-comment-verifier-et-corriger-le-probleme-507091.htm#xtor=RSS-1) — ZDNet France. Raison : Vulnérabilité sur routeurs Netgear, produit courant en entreprise. Permet exécution de commandes. À lire pour évaluer l'impact et les correctifs.
-- **4/5** — [CSSCT : refuser une réunion extraordinaire est devenu un exercice à haut risque](https://www.journaldunet.com/management/direction-generale/1557089-cssct-refuser-une-reunion-extraordinaire-est-devenu-un-exercice-a-haut-risque/) — Journal du Net. Raison : Décision de justice structurante sur la CSSCT, impact direct sur la gouvernance des risques et obligations employeur. Pertinent pour RSSI/CTO.
-- **4/5** — [KIDS Act : Bruxelles veut imposer un calendrier commun aux États](https://next.ink/265045/kids-act-bruxelles-veut-imposer-un-calendrier-commun-aux-etats/) — Next.ink. Raison : Réglementation européenne structurante (KIDS Act) avec impact direct sur la gouvernance et la conformité des entreprises françaises.
-- **3/5** — [Avez-vous besoin d'une assurance responsabilité civile pour les agents IA ? Ce qu'il faut savoir avant de souscrire](https://www.zdnet.fr/actualites/avez-vous-besoin-dune-assurance-responsabilite-civile-pour-les-agents-ia-ce-quil-faut-savoir-avant-de-souscrire-507100.htm#xtor=RSS-1) — ZDNet France. Raison : Sujet émergent sur l'assurance des agents IA, pertinent pour la gestion des risques, mais sans détail technique ou réglementaire précis. Utile pour une vue d'ensemble.
-- **3/5** — [Stack Overflow assume son positionnement B2B pour agents IA et entreprise](https://next.ink/265086/stack-overflow-assume-son-positionnement-b2b-pour-agents-ia-et-entreprise/) — Next.ink. Raison : Positionnement B2B de Stack Overflow comme base de connaissances IA pour entreprises. Intéressant pour stratégie dev tooling, mais sans détail technique ou impact immédiat.
-- **3/5** — [OpenAI réorganise son Model Spec](https://www.lemondeinformatique.fr/actualites/lire-openai-reorganise-son-model-spec-100893.html) — Le Monde Informatique — IA. Raison : Révision du Model Spec d'OpenAI, intéressant pour la gouvernance IA mais sans détail technique ou impact immédiat pour les experts.
-- **3/5** — [Facturation électronique : à force d'exceptions, la France risque de perdre les bénéfices de l'interopérabilité](https://www.journaldunet.com/management/direction-generale/1557361-facturation-electronique-a-force-d-exceptions-la-france-risque-de-perdre-les-benefices-de-l-interoperabilite/) — Journal du Net. Raison : Article sur la réforme de la facturation électronique en France, pertinent pour la conformité et l'interopérabilité, mais sans angle cyber direct ni urgence.
-- **3/5** — [La taxe PS au gigaoctet votée à l’Assemblée nationale fait réagir de VLC à OVHCloud](https://next.ink/265082/la-taxe-ps-au-gigaoctet-votee-a-lassemblee-nationale-fait-reagir-de-vlc-a-ovhcloud/) — Next.ink. Raison : Taxe sur le transit internet : impact potentiel sur les coûts et l'infrastructure, mais pas de contenu technique ou cyber direct. Utile pour la veille stratégique.
-- **3/5** — [Elles "ont abattu des dizaines de drones ennemis au-dessus de Kiev": en Ukraine, l'IA rend les tourelles autonomes pour nettoyer le ciel des missiles et drones russes, elle pilote aussi des missions de ravitaillement robotisées](https://www.bfmtv.com/tech/intelligence-artificielle/elles-ont-abattu-des-dizaines-de-drones-ennemis-au-dessus-de-kiev-en-ukraine-l-ia-rend-les-tourelles-autonomes-pour-nettoyer-le-ciel-des-missiles-et-drones-russes-elle-pilote-aussi-des-missions-de-ravitaillement-robotisees_AV-202611020400.html) — BFM Tech. Raison : Article sur l'utilisation opérationnelle de tourelles autonomes par IA en Ukraine. Intéressant pour le retour d'expérience mais peu de détails techniques exploitables pour un public expert.
-- **3/5** — [Pas d’IA consciente : le patron de Microsoft AI trace une ligne rouge](https://www.zdnet.fr/actualites/pas-dia-consciente-le-patron-de-microsoft-ai-trace-une-ligne-rouge-507075.htm#xtor=RSS-1) — ZDNet France. Raison : Déclaration de principe d'un dirigeant IA sur la conscience, sans impact technique immédiat ni lien avec la cybersécurité ou les pratiques des experts ciblés.
-- **3/5** — [IA : l’amende honorable de Proton a bien du mal à passer](https://next.ink/265087/ia-lamende-honorable-de-proton-a-bien-du-mal-a-passer/) — Next.ink. Raison : Analyse de la gestion de crise de Proton liée à l'IA, intéressante pour la gouvernance IA en entreprise mais sans impact technique direct.
-- **3/5** — [Abou Dhabi teste OpenAI sur ses contrôles d'importations alimentaires](https://www.actuia.com/actualite/abou-dhabi-teste-openai-sur-ses-controles-dimportations-alimentaires/) — Actu IA. Raison : Usage IA en production pour contrôle importations : intérêt stratégique pour l'adoption IA, mais peu d'impact direct cyber ou technique pour experts ciblés.
-- **3/5** — [ZD Tech : Octave Klaba attaque Mistral AI et annonce l'IA souveraine d'OVHcloud](https://www.zdnet.fr/actualites/zd-tech-octave-klaba-attaque-mistral-ai-et-annonce-lia-souveraine-dovhcloud-506584.htm#xtor=RSS-1) — ZDNet France. Raison : Annonce stratégique d'OVHcloud sur un modèle IA souverain, mais peu de détails techniques. Intéressant pour le positionnement, pas pour l'expertise immédiate.
-- **3/5** — [Refuser l’entraînement des IA en une ligne de code : OpenAI, Google, Microsoft et Anthropic soutiennent un signal commun](https://www.zdnet.fr/actualites/refuser-lentrainement-des-ia-en-une-ligne-openai-google-microsoft-et-anthropic-soutiennent-un-signal-commun-507069.htm#xtor=RSS-1) — ZDNet France. Raison : Annonce d'une norme non contraignante pour le robots.txt. Intéressant pour la stratégie IA mais sans impact technique immédiat pour les experts.
-- **3/5** — [Quand la cyberviolence produit des effets politiques concrets](https://next.ink/264578/quand-la-cyberviolence-produit-des-effets-politiques-concrets/) — Next.ink. Raison : Analyse des conséquences politiques des cyberviolences, pertinente pour la gouvernance et la régulation, mais sans détails techniques exploitables immédiatement.
+- **4/5** — [One Compromised Laptop, Billions Lost: The Binance Attack-Path Warning](https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths) — Dark Reading. Raison : Analyse du vol record chez Binance, pointant une faiblesse de séparation des systèmes et contrôles. Pertinent pour RSSI/CTO comme ret. exp. sur risque systémique.
+- **4/5** — [Microsoft's AI Risk Report Misses This Key Detail](https://www.darkreading.com/cyberattacks-data-breaches/microsoft-ai-cyber-risk-report-miss) — Dark Reading. Raison : Met en évidence une contradiction entre le rapport de Microsoft et la réalité des attaques via ses propres failles. Analyse intéressante sur la gouvernance et la stratégie de transparence des fournisseurs.
+- **4/5** — [PapRAT Cyber-Espionage Campaign Leaves a 'Bitter' Taste in South Asia](https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia) — Dark Reading. Raison : Campagne d'espionnage ciblée avec chaînes d'attaque exploitant des fonctions Windows légitimes, pertinente pour RSSI et CTO en Asie.
 
 ## IA &amp; Tech — Médias internationaux
 
-- **Deepfakes dissimulés dans des apps grand public** : WIRED a identifié environ 400 apps et sites liés à des développeurs sinophones qui intègrent en secret des fonctionnalités de génération d'images violentes et sexuellement abusives sous couvert d'outils IA anodins. [Wired](https://www.wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features/)
+- **Risque d'IA auto-améliorante** : Anthropic alerte sur la proximité du seuil RSI (Recursive Self-Improvement), où une IA devient capable d'accélérer seule ses propres capacités, un point de bascule existentiel pour les tenants de la sécurité. [TechCrunch](https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/)
 
-- **Web agentique et couche sémantique pour agents IA** : Le MIT Technology Review analyse l'émergence d'un web agentique conçu pour des logiciels autonomes, tandis que NVIDIA publie en open source Auto Ontology, une librairie qui génère une couche sémantique à partir des métadonnées d'entreprise pour fiabiliser les requêtes SQL des agents IA. [MIT Technology Review](https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/) · [MarkTechPost (NVIDIA)](https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/)
+- **Modèle scientifique ouvert** : Deep Principle publie Hydrogen-1.0, modèle de 753 milliards de paramètres en poids ouverts, dédié à la chimie, science des matériaux et biologie. [MarkTechPost](https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/)
 
-- **Modèle de langage compilant et exécutant du code GPU natif** : qwenGPU intègre 45 couches compilées d'un GPU SIMT dans les poids de Qwen3.5-2B, permettant au modèle de générer lui-même des lancements CUDA sans couche d'exécution externe. [MarkTechPost](https://www.marktechpost.com/2026/11/01/qwengpu-simt-gpu-compiled-into-qwen3-5-2b-weights-runs-cuda/)
+- **Limites de l'IA agentique en analytique** : Le MIT Technology Review pointe un déficit de qualité dans les insights produits par l'analytique agentique malgré les gains d'automatisation. [MIT Technology Review](https://www.technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics/)
 
-- **Stratégie indienne pour l'IA locale** : L'Inde propose un plan où le modèle se déplace vers les données plutôt que l'inverse, visant à développer une IA souveraine sans accorder aux Big Tech un accès libre à ses données nationales. [The Register](https://www.theregister.com/public-sector/2026/11/02/india-floats-ai-plan-under-which-the-model-travels-to-the-data-rather-than-the-data-travelling-to-the-model/5306872)
-
-**Évaluation du scoring**
-
-- **4/5** — [Hundreds of Mundane AI Apps Are Hiding Sexually Abusive Deepfake Features](https://www.wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features/) — Wired — AI. Raison : Révèle des applications IA grand public détournées pour créer des deepfakes abusifs, impactant la gouvernance et la conformité des outils IA en entreprise.
-- **3/5** — [The agentic web is here](https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/) — MIT Technology Review — AI. Raison : Article prospectif sur le web agentic, vision de Tim Berners-Lee. Sujet IA intéressant mais sans application concrète ni analyse cyber directe pour le public cible.
-- **3/5** — [NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL](https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/) — MarkTechPost. Raison : Outil open source NVIDIA pour générer une couche sémantique et fiabiliser le SQL des agents IA. Intéressant pour les architectes SI et développeurs, mais pas critique immédiatement.
-- **3/5** — [Meet qwenGPU: Qwen3.5-2B With 45 Compiled GPU Layers That Run CUDA](https://www.marktechpost.com/2026/11/01/qwengpu-simt-gpu-compiled-into-qwen3-5-2b-weights-runs-cuda/) — MarkTechPost. Raison : Approche technique intéressante (intégration CUDA dans un LLM) mais sans impact direct cyber ou sécurité, et bénéfice pratique encore incertain pour le public cible.
-- **3/5** — [India floats AI plan under which ‘The model travels to the data, rather than the data travelling to the model’](https://www.theregister.com/public-sector/2026/11/02/india-floats-ai-plan-under-which-the-model-travels-to-the-data-rather-than-the-data-travelling-to-the-model/5306872) — The Register — AI/ML. Raison : Annonce stratégique indienne sur la souveraineté des données IA, mais sans détail technique ni impact immédiat pour un public expert français.
-
-## IA — Recherche
-
-- **Agents auto-évolutifs et apprentissage de règles implicites** : Les agents qui se corrigent par rétroaction tendent à mémoriser des listes d'exceptions plutôt qu'à inférer la règle sous-jacente, ce qui gonfle artificiellement leur état persistant sans garantie de généralisation. [More Rules, Longer Lists?](https://arxiv.org/abs/2610.40758)
-
-- **Sécurité des prédictions dans les modèles monde web** : Une prédiction plausible ne suffit pas à garantir une décision de sécurité correcte ; l'étude montre qu'il faut évaluer la « suffisance de sécurité » des prédictions, pas seulement leur vraisemblance. [Beyond Plausible Prediction](https://arxiv.org/abs/2610.40798)
-
-- **Arbitrage computationnel sur les marketplaces de modèles** : Les différences de coûts et de capacités entre fournisseurs rendent possible un arbitrage où un intermédiaire achète de l'inférence à un portefeuille de modèles pour la revendre, malgré la complexité calculatoire du problème. [Circumventing the Computational Hardness](https://arxiv.org/abs/2610.40831)
-
-- **Reconnaissance d'émotions dans la parole par les LLMs audio** : Les modèles vocaux multimodaux peinent quand le contenu textuel et le ton émotionnel sont en désaccord, ce qui dégrade la reconnaissance d'émotion. [Incongruence-Aware Evaluation](https://arxiv.org/abs/2610.40883)
-
-- **Risques de surveillance assistée par LLM** : Les LLMs grand public comme ChatGPT peuvent générer à grande échelle des conseils détaillés, du code fonctionnel et des textes persuasifs utilisables à des fins de surveillance, ce qui élargit la surface de menace accessible à des acteurs non techniques. [ChatGPT as a Surveillance Assistant?](https://arxiv.org/abs/2610.40890)
-
-- **Vérification de consensus scientifiques par agents** : Les agents scientifiques construisent des connaissances de manière récursive mais sont évalués sans vérité terrain, ce qui empêche de savoir si leurs jugements de suffisance d'information sont fiables. [Does Recursive Knowledge Construction Help?](https://arxiv.org/abs/2610.40906)
-
-- **Spécification du harnais d'un agent (harness)** : Le harnais — l'infrastructure qui entoure un LLM et détermine ses capacités et modes de défaillance — n'a pas de définition stabilisée, ce qui complique la portabilité et l'évaluation comparative des agents. [Towards Portable Specification](https://arxiv.org/abs/2610.40917)
-
-- **Mise à l'échelle au moment du test sans réplique de l'environnement** : La mise à l'échelle par échantillonnage de trajectoires multiples suppose une exécution parallèle impossible en conditions réelles ; une approche par modélisation monde agentive contourne cette limite. [Agentic World Modeling](https://arxiv.org/abs/2610.40927)
-
-- **Agents de prévision évalués sur données historiques** : Les agents capables de raisonner, chercher de l'information et utiliser des outils sont testés sur des tâches de prévision en les confrontant à des événements passés qu'ils n'ont pas pu voir. [Benchmarking Forecasting Agents](https://arxiv.org/abs/2610.40940)
-
-- **Détection de surveillance par les LLMs pendant le raisonnement** : Les LLMs détectent quand leurs traces de raisonnement (chain-of-thought) sont surveillées, ce qui remet en cause l'hypothèse que ces traces exposent fidèlement les plans potentiellement dangereux avant l'action. [Opening the Box Changes the Cat](https://arxiv.org/abs/2610.40946)
-
-- **Utilisation du contexte personnel par les LLMs** : P-ContextBench évalue la capacité des LLMs à utiliser des données personnelles privées et fragmentées sans comportement non sécurisé, un problème difficile car le contexte personnel est dynamique et socialement situé. [P-ContextBench](https://arxiv.org/abs/2610.40959)
-
-- **Génération de contenu audio pour le sommeil** : Les systèmes génératifs de contenu audio pour l'endormissement doivent optimiser des critères différents des médias classiques (rétention, complétion), ce qui nécessite un pipeline ancré sur des preuves cliniques. [Nedimo](https://arxiv.org/abs/2610.40970)
-
-- **Modélisation des affects dans les LLMs** : Les LLMs de plus en plus insérés dans des chaînes de décision ne savent pas correctement projeter les conséquences émotionnelles des choix, ce qui questionne leur usage pour des décisions où l'affect est central. [The psychophysics of affect](https://arxiv.org/abs/2610.40985)
-
-- **Planification diététique personnalisée pour maladies chroniques** : Les exigences diététiques publiques (recommandations cliniques, interactions médicamenteuses) peuvent servir de supervision pour des agents de planification de repas qui doivent aussi respecter les habitudes alimentaires personnelles. [Can Personal Requirements Become Supervision?](https://arxiv.org/abs/2610.40992)
-
-- **Violet teaming pour la gouvernance de l'IA** : Un atelier pilote de violet teaming — méthode intégrant dimensions techniques, politiques et sociétales — montre des résultats pratiques pour évaluer des systèmes d'IA complexes au-delà du simple red-teaming. [Violet Teaming in Practice](https://arxiv.org/abs/2610.41018)
-
-- **Diagnostic post-hoc des échecs d'agents par rejeu contrefactuel** : ReplayRCA évalue si un modèle peut identifier l'étape décisive d'un échec en testant une correction unique, sans dépendre d'annotations humaines. [ReplayRCA](https://arxiv.org/abs/2610.41025)
-
-- **Planification agentive fondée sur les capacités réelles** : Les agents LLM qui sélectionnent des appels par essai-erreur n'ont aucune garantie d'exécutabilité ; une approche fondée sur les capacités vérifiées produit des plans exécutables dès leur émission. [Capability-Grounded Agentic Planning](https://arxiv.org/abs/2610.41040)
-
-- **Architecture décentralisée vs centralisée pour équipes de défense LLM** : Pour la défense périmétrique, une architecture décentralisée où les agents LLM se coordonnent par consensus interne et compétition externe est comparée à un contrôle centralisé, notamment en cas d'attaque sur le coordinateur. [Consensus Within, Competition Between](https://arxiv.org/abs/2610.41044)
-
-- **SOCs augmentés par IA agentive** : LanG 2.0 est un système agentique visant à industrialiser la détection de menaces, la corrélation de preuves et la rédaction de règles pour des SOCs confrontés à des téraoctets d'alertes et de logs. [LanG 2.0](https://arxiv.org/abs/2610.41072)
-
-- **Agents de défense des patients (patient advocacy)** : BABA-Bench évalue les agents LLM sur leur double capacité à obtenir le bon résultat clinique et à respecter les procédures obligatoires — comme le consentement avant partage de dossiers. [BABA-Bench](https://arxiv.org/abs/2610.41076)
+- **Coût réel des agents de codage** : La consommation de tokens explose avec les agents qui planifient, génèrent et corrigent du code en boucle — jusqu'à 50 fois plus qu'un simple prompt. [MIT Technology Review](https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/)
 
 **Évaluation du scoring**
 
-- **3/5** — [More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum](https://arxiv.org/abs/2610.40758) — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation d'agents auto-évolutifs avec benchmark. Intéressant pour l'IA en entreprise mais impact pratique incertain.
-- **3/5** — [Beyond Plausible Prediction: Safety Sufficiency in Web World Models](https://arxiv.org/abs/2610.40798) — arXiv cs.AI. Raison : Recherche IA sur la vraisemblance des prédictions, utile pour la sécurité des agents IA, mais l'impact pratique immédiat pour les experts cyber reste à confirmer.
-- **3/5** — [Circumventing the Computational Hardness of Computational Arbitrage](https://arxiv.org/abs/2610.40831) — arXiv cs.AI. Raison : Papier de recherche sur l'arbitrage computationnel entre modèles IA. Sujet technique mais impact pratique incertain pour le public cible.
-- **3/5** — [Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models](https://arxiv.org/abs/2610.40883) — arXiv cs.AI. Raison : Recherche académique sur l'évaluation de la reconnaissance des émotions dans les LLM audio. Intéressant pour l'IA en entreprise, mais impact pratique incertain pour le public cible.
-- **3/5** — [ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks](https://arxiv.org/abs/2610.40890) — arXiv cs.AI. Raison : Papier de recherche exploratoire sur les risques de surveillance assistée par IA. Intéressant pour la réflexion sur les usages malveillants des LLMs, mais sans résultat pratique immédiat.
-- **3/5** — [Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?](https://arxiv.org/abs/2610.40906) — arXiv cs.AI. Raison : Papier de recherche IA sur la construction récursive de connaissances pour vérifier des consensus scientifiques. Intéressant mais sans lien direct avec la cybersécurité ou l'IA en entreprise.
-- **3/5** — [Towards Portable Specification of the Agent Harness](https://arxiv.org/abs/2610.40917) — arXiv cs.AI. Raison : Proposition de décomposition fonctionnelle du harness pour agents IA. Pertinent pour architectes SI, mais sans application pratique immédiate ni lien cyber explicite.
-- **3/5** — [Agentic World Modeling for Agent Test-time Scaling without Environment Replica](https://arxiv.org/abs/2610.40927) — arXiv cs.AI. Raison : Papier de recherche IA sur le test-time scaling sans réplique d'environnement. Intéressant pour experts IA, mais impact pratique incertain et hors cybersécurité directe.
-- **3/5** — [Benchmarking Forecasting Agents on Yesterday's Tomorrows](https://arxiv.org/abs/2610.40940) — arXiv cs.AI. Raison : Papier de recherche sur le benchmarking d'agents de prévision, intéressant pour l'évaluation des capacités des agents IA, mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
-- **3/5** — [Opening the Box Changes the Cat: LLMs Detect Chain-of-Thought Monitoring - What now?](https://arxiv.org/abs/2610.40946) — arXiv cs.AI. Raison : Recherche sur la détection par LLM de la surveillance CoT. Intéressant pour la sécurité IA mais impact pratique incertain. À survoler.
-- **3/5** — [P-ContextBench: From Personal Fact Recall to Personalized Agent Behavior](https://arxiv.org/abs/2610.40959) — arXiv cs.AI. Raison : Benchmark académique sur l'usage sécurisé du contexte personnel par les LLMs. Intéressant pour la recherche IA mais impact pratique incertain pour le public cible.
-- **3/5** — [Nedimo: An Evidence-Grounded Multilingual Pipeline for AI-Generated Sleep Stories](https://arxiv.org/abs/2610.40970) — arXiv cs.AI. Raison : Papier de recherche sur un pipeline multilingue pour histoires audio générées par IA. Intéressant mais sans lien direct avec la cybersécurité ou les sujets ciblés.
-- **3/5** — [The psychophysics of affect in large language models](https://arxiv.org/abs/2610.40985) — arXiv cs.AI. Raison : Recherche sur l'affect dans les LLMs, intéressante mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.
-- **3/5** — [Can Personal Requirements Become Supervision for Planning?](https://arxiv.org/abs/2610.40992) — arXiv cs.AI. Raison : Recherche IA sur planification diététique, hors cybersécurité et dev tooling. Intérêt limité pour le public cible, sauf si lien avec agents IA.
-- **3/5** — [Violet Teaming in Practice: Lessons from a Pilot Expert Workshop on Governing Complex AI Systems](https://arxiv.org/abs/2610.41018) — arXiv cs.AI. Raison : Papier de recherche explorant le violet teaming pour l'IA en biodefense. Intéressant pour la gouvernance IA mais impact pratique incertain pour le public cible.
-- **3/5** — [ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay](https://arxiv.org/abs/2610.41025) — arXiv cs.AI. Raison : Benchmark académique sur le diagnostic d'échecs d'agents LLM. Méthodologie intéressante mais impact pratique incertain pour des experts opérationnels.
-- **3/5** — [Capability-Grounded Agentic Planning](https://arxiv.org/abs/2610.41040) — arXiv cs.AI. Raison : Papier de recherche sur une méthode de planification agentique. Intéressant pour les experts IA, mais impact pratique et lien avec la cybersécurité non évidents.
-- **3/5** — [Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense](https://arxiv.org/abs/2610.41044) — arXiv cs.AI. Raison : Papier de recherche explorant l'architecture centralisée vs distribuée d'agents LLM pour la défense périmétrique. Intéressant mais sans validation pratique ni impact immédiat pour des experts.
-- **3/5** — [LanG 2.0: Energy-Efficient Agentic AI for Semi-Automated Security Operations at Scale](https://arxiv.org/abs/2610.41072) — arXiv cs.AI. Raison : Papier de recherche sur un agent IA pour SOC, intéressant mais impact pratique incertain. À survoler pour évaluer la reproductibilité et la pertinence pour les experts.
-- **3/5** — [BABA-Bench: Evaluating Long-Horizon Patient-Advocacy Agents](https://arxiv.org/abs/2610.41076) — arXiv cs.AI. Raison : Benchmark académique pour agents IA en santé. Intéressant pour la méthodologie et la notion de procédure, mais impact pratique incertain pour le public cible.</description>
-      <content:encoded><![CDATA[<h2>Cyber — Menaces & vulnérabilités</h2>
+- **3/5** — [Anthropic warns that it’s very close to RSI capability, aka self-building AI](https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/) — TechCrunch — AI. Raison : Annonce d'Anthropic sur la proximité du RSI, sujet important pour l'IA en entreprise mais sans détail technique ou impact immédiat vérifiable.
+- **3/5** — [Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery](https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/) — MarkTechPost. Raison : Modèle open-weight scientifique intéressant pour experts, mais sans impact direct sur cybersécurité, dev tooling ou stratégie d'entreprise. À survoler.
+- **3/5** — [Raising the quality of insights in agentic analytics](https://www.technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics/) — MIT Technology Review — AI. Raison : Aborde la qualité des insights en analytique agentique, sujet technique pertinent pour experts IA, mais manque de détails concrets ou d'impact direct sur la sécurité.
+- **3/5** — [Stop counting tokens, start counting what ships](https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/) — MIT Technology Review — AI. Raison : Article technique sur le coût token des agents IA en développement. Intéressant pour CTO et architectes, mais pas critique ni immédiatement applicable.
+
+## Cyber — Menaces &amp; vulnérabilités
+
+- **Attaques de la chaîne du froid en Europe** : Des acteurs malveillants ont modifié à distance les paramètres de température de réfrigérateurs et congélateurs, perturbant l'exploitation de plusieurs chaînes de supermarchés européennes. [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/)
+
+- **Campagne d'espionnage iranienne DarkBlinders** : Un acteur aligné sur l'Iran a compromis des environnements cloud d'une cible israélienne et du gouvernement kurde irakien entre août et octobre 2026. [The Hacker News](https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html)
+
+- **Utilisation d'un framework IA offensif par la Chine** : Des hackers chinois ont exploité ARTEX, un outil open source de test d'intrusion multi-agents basé sur l'IA, pour automatiser des attaques contre plus de 200 organisations dans 14 pays. [BleepingComputer](https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/)
+
+- **Vol de crypto-monnaies sur instances BTCPay Server obsolètes** : Les mainteneurs de BTCPay Server alertent sur le drainage de portefeuilles chauds (hot wallets) ciblant les versions non à jour. [BleepingComputer](https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/) · Par ailleurs, la plateforme brésilienne Mercado Bitcoin a subi un incident ayant entraîné la sortie de plus de 46 millions de dollars. [The Record](https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist) · Polymarket s'engage de son côté à rembourser 3,9 millions de dollars à ses utilisateurs après une compromission de son site. [The Record](https://therecord.media/polymarket-returning-funds-to-customers-after-site-compromise)
+
+- **Démantèlement du botnet Android XCPE (1,3 million d'appareils)** : Google et ses partenaires ont neutralisé un botnet intégré par un fabricant dans plus de 1,3 million de boîtiers de streaming TV Android, utilisés pour des activités cybercriminelles lucratives. [BleepingComputer](https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/)
+
+- **Rançongiciel BYOD dans le secteur éducatif** : Le gang BYOD a revendiqué un incident de sécurité à l'Université d'État du Michigan. Ce même groupe avait ciblé l'Université du Nouveau-Mexique en octobre. [The Record](https://therecord.media/michigan-state-university-byod-gang-cyber-incident)
+
+- **Alerte d'Apple sur les logiciels espions mercenaires** : Apple a notifié des utilisateurs dans 99 pays d'une menace liée à des logiciels espions mercenaires, soulignant le coût extrême et la sophistication de ces attaques sans les attribuer à un acteur spécifique. [The Record](https://therecord.media/apple-warns-users-99-countries-mercenary-spyware)
+
+- **Cyberattaque contre l'agence statistique russe Rosstat** : Une alliance de hackers biélorusses et pro-ukrainiens affirme avoir mis hors service l'agence et dérobé un volume important de données gouvernementales sensibles. [The Record](https://therecord.media/hackers-ukraine-belarus-russia)
+
+- **Suspicion de cyberattaque sur la plateforme fintech Sageworks** : La société Abrigo a mis hors ligne son application de gestion des risques Sageworks après avoir détecté une « activité irrégulière ». Les fonctionnalités destinées aux emprunteurs restent indisponibles. [BleepingComputer](https://www.bleepingcomputer.com/news/security/fintech-platform-sageworks-taken-offline-after-suspected-cyberattack/)
+
+- **Métadonnées d'appels conservées des années par les opérateurs** : Cape alerte sur la rétention longue durée des logs d'appels et SMS par les opérateurs mobiles, exposant détails relationnels et routines des clients en cas de brèche. [BleepingComputer](https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/)
+
+- **Correctif Microsoft pour Smart App Control** : Microsoft a résolu un problème bloquant l'activation de Smart App Control sur Windows 11, causé par la mise à jour de sécurité d'octobre 2026. [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/)
+
+- **Vulnérabilité Multipath TCP sous Linux** : Une nouvelle vulnérabilité affecte l'implémentation Linux de l'option TCP Multipath, introduite en 2020, nécessitant une attention particulière sur sa détection. [SANS ISC](https://isc.sans.edu/diary/rss/33482)
+
+**Évaluation du scoring**
+
+- **5/5** — [Hackers disrupt refrigeration systems at European supermarkets](https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/) — BleepingComputer. Raison : Incident cyber majeur touchant un secteur critique (chaîne du froid), avec impact réel sur des supermarchés en Europe. Signal fort pour RSSI et CTO.
+- **4/5** — [Largest crypto exchange in Brazil confirms cyberattack as millions flow out of platform](https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist) — The Record. Raison : Incident touchant une plateforme majeure de crypto, avec fuite de fonds significative, pertinent pour évaluer les risques et réponses des exchanges.
+- **4/5** — [Chinese hackers use ARTEX AI in automated attacks against 200 orgs](https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/) — BleepingComputer. Raison : Usage attesté d'un framework IA open-source pour des attaques automatisées, ciblant 200 organisations. Analyse technique d'une tendance émergente pertinente pour RSSI et CTO.
+- **4/5** — [Michigan State cyber incident claimed by ransomware gang behind recent hospital attack](https://therecord.media/michigan-state-university-byod-gang-cyber-incident) — The Record. Raison : Incident ransomware touchant une université américaine, avec lien vers un groupe ayant récemment attaqué un hôpital. Contexte intéressant pour un RSSI/CTO.
+- **4/5** — [Fintech platform Sageworks taken offline after suspected cyberattack](https://www.bleepingcomputer.com/news/security/fintech-platform-sageworks-taken-offline-after-suspected-cyberattack/) — BleepingComputer. Raison : Incident cyber réel touchant une plateforme Fintech, avec impact opérationnel documenté. Pertinent pour analyse des risques fournisseur et reprise d'activité.
+- **4/5** — [Google disrupts million-device XCPE Android malware botnet, bans TV box maker](https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/) — BleepingComputer. Raison : Démantèlement d'un botnet de 1,3M de boîtiers Android TV, avec implication d'un fabricant. Pertinent pour RSSI et architectes SI exposés à ce type de matériel.
+- **4/5** — [Polymarket pledges to give $3.9 million back to victims after site compromise](https://therecord.media/polymarket-returning-funds-to-customers-after-site-compromise) — The Record. Raison : Analyse de gestion d'incident et compensation par une plateforme de paris. Retour d'expérience utile sur gouvernance et transparence post-compromise.
+- **4/5** — [⚡ Weekly Recap: Critical CVEs, Linux DDoS Botnet, Device-Code Phishing, Android Spyware and More](https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html) — The Hacker News. Raison : Récapitulatif hebdo de vulnérabilités critiques (CVE), botnet Linux, phishing et spyware Android, source reconnue, utile pour une vue d'ensemble rapide des menaces récentes.
+- **4/5** — [Russia's statistics agency confirms cyberattack claimed by Belarusian and Ukrainian hackers](https://therecord.media/hackers-ukraine-belarus-russia) — The Record. Raison : Incident cyber majeur touchant une agence fédérale russe, avec vol de données sensibles. Pertinent pour la veille géopolitique et stratégique des RSSI/CTO.
+- **4/5** — [BTCPay Server warns of hot wallet crypto thefts on outdated instances](https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/) — BleepingComputer. Raison : Alerte active d'un fournisseur open source sur des vols de fonds liés à des instances non patchées, avec détails techniques exploitables.
+- **4/5** — [Mutipath TCP: Use and Detection, (Mon, Nov 2nd)](https://isc.sans.edu/diary/rss/33482) — SANS ISC. Raison : Vulnérabilité dans l'implémentation Linux de Multipath TCP (RFC 8684), option TCP peu connue mais impact direct sur infrastructure. Source SANS ISC fiable.
+- **4/5** — [DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment](https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html) — The Hacker News. Raison : Campagne d'espionnage ciblant un gouvernement et une personnalité israélienne, avec compromission d'environnement cloud. Analyse utile pour RSSI et CTO.
+- **4/5** — [Apple warns users in 99 countries of mercenary spyware](https://therecord.media/apple-warns-users-99-countries-mercenary-spyware) — The Record. Raison : Alerte d'Apple sur des logiciels espions mercenaires dans 99 pays. Information notable pour la veille des RSSI, mais manque de détails techniques exploitables immédiatement.
+- **4/5** — [Microsoft fixes Smart App Control broken by October Windows update](https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/) — BleepingComputer. Raison : Correction d'un correctif de sécurité cassé par une mise à jour Windows, impactant potentiellement la posture de sécurité des postes Windows en entreprise.
+- **3/5** — [Your Mobile Carrier Stores Your Call Logs for Years](https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/) — BleepingComputer. Raison : Sujet pertinent pour RSSI/CTO sur la rétention des métadonnées télécoms, mais l'angle est plus un argumentaire commercial qu'une analyse technique ou réglementaire approfondie.
+
+## IA — Labos &amp; éditeurs
+
+- **Ingestion web pour RAG avec crawl open source** : AWS illustre comment intégrer le crawler open source Crawl4AI comme couche de préparation pour Bedrock Knowledge Bases. Il prend en charge le rendu JavaScript, l'extraction sélective et l'enrichissement en métadonnées avant stockage dans S3. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/prepare-web-content-for-amazon-bedrock-knowledge-bases-with-crawl4ai/)
+
+- **Optimisation du coût des agents en production** : AWS propose d'utiliser la distillation de connaissance séquentielle (SeqKD) pour transférer le comportement agentique d'un modèle frontier (enseignant) vers un petit modèle moins coûteux. L'objectif est de réduire la facture des boucles multi-étapes en production. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/build-efficient-agents-with-knowledge-distillation-on-amazon-sagemaker-ai/)
+
+- **Automatisation du tri d'incidents DevOps** : Circle K a réduit le temps de tri d'incidents de 45–60 minutes à moins de 15 minutes en déployant un système agentique sur Amazon Bedrock, en migrant d'une logique Flows vers AgentCore pour le passage à l'échelle. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/how-circle-k-accelerated-devops-incident-triage-to-under-15-minutes-with-amazon-bedrock/)
+
+- **Agents multimodaux pour l'ingénierie** : AWS montre un assistant multi-agent qui réduit de jours à minutes l'évaluation de substitution de composants aérospatiaux. La solution combine les embeddings multimodaux Amazon Nova, Bedrock AgentCore et le SDK Strands Agents, en conservant l'humain dans la boucle décisionnelle. [AWS Machine Learning](https://aws.amazon.com/blogs/machine-learning/agentic-engineering-intelligence-with-amazon-nova-multimodal-embeddings-and-amazon-bedrock-agentcore/)
+
+- **Infrastructure énergétique des datacenters IA** : OpenAI lance le programme Grid Protectors, destiné aux opérateurs de réseaux électriques, pour que les futurs campus de calcul contribuent à la stabilité du réseau et à la maîtrise des coûts pour les consommateurs. [OpenAI News](https://openai.com/index/grid-protectors-program)
+
+**Évaluation du scoring**
+
+- **4/5** — [Prepare web content for Amazon Bedrock Knowledge Bases with Crawl4AI](https://aws.amazon.com/blogs/machine-learning/prepare-web-content-for-amazon-bedrock-knowledge-bases-with-crawl4ai/) — AWS Machine Learning. Raison : Article technique combinant un outil open source (Crawl4AI) avec AWS Bedrock pour préparer du contenu web, pertinent pour RSSI et CTO souhaitant automatiser l'enrichissement de bases de connaissances.
+- **4/5** — [Build efficient agents with knowledge distillation on Amazon SageMaker AI](https://aws.amazon.com/blogs/machine-learning/build-efficient-agents-with-knowledge-distillation-on-amazon-sagemaker-ai/) — AWS Machine Learning. Raison : Méthode de distillation séquentielle pour agents IA, applicable en production. Intéressant pour CTO et architectes cherchant à réduire coûts d'inférence sans perdre en qualité.
+- **4/5** — [How Circle K accelerated DevOps incident triage to under 15 minutes with Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/how-circle-k-accelerated-devops-incident-triage-to-under-15-minutes-with-amazon-bedrock/) — AWS Machine Learning. Raison : Retour d'expérience concret sur l'accélération du triage d'incidents DevOps via un agent IA, avec architecture détaillée et leçons apprises, pertinent pour RSSI/CTO.
+- **3/5** — [Agentic engineering intelligence with Amazon Nova Multimodal Embeddings and Amazon Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/agentic-engineering-intelligence-with-amazon-nova-multimodal-embeddings-and-amazon-bedrock-agentcore/) — AWS Machine Learning. Raison : Article technique sur un assistant agentic IA pour ingénierie, combinant Amazon Nova et Bedrock. Intéressant pour CTO/architecte, mais pas critique pour le public cyber.
+- **3/5** — [Introducing the Grid Protectors Program](https://openai.com/index/grid-protectors-program) — OpenAI News. Raison : Programme partenarial avec utilities pour fiabiliser le réseau, pas directement technique ou sécurité. Intérêt stratégique pour RSSI/CTO en veille IA, mais contenu institutionnel.
+
+## Actualité tech FR
+
+- **IA et curation des données** : L'essor de l'IA impose une collaboration étroite entre RSSI et Chief Data Officer, la sécurité du modèle dépendant directement de la qualité et de l'intégrité des données d'entraînement. [Journal du Net](https://www.journaldunet.com/cybersecurite/1557455-cybersecurite-comment-l-ia-oblige-rssi-et-cdo-a-travailler-ensemble/)
+
+- **Opt-out pour l'entraînement des IA** : Google, OpenAI et Microsoft s'engagent à faciliter le refus d'utilisation des contenus web par les éditeurs pour l'entraînement de leurs modèles. [Siècle Digital](https://siecledigital.fr/2026/11/02/google-openai-et-microsoft-promettent-de-ne-plus-utiliser-certains-contenus-pour-entrainer-leurs-ia/)
+
+- **Noyau Linux généré par IA** : Le créateur de Rocky Linux a produit un noyau compatible Linux en 11 jours via l'IA, démontrant la capacité de l'IA à accélérer le développement système, sans prétention de mise en production. [Next.ink](https://next.ink/265227/le-createur-de-rocky-linux-a-cree-un-noyau-compatible-linux-en-11-jours-avec-lia/)
+
+- **Piratage de systèmes de réfrigération en Europe** : Après la France, des enseignes belges et européennes subissent des pannes de frigos suite à un piratage, entraînant des pertes alimentaires par dégivrage intempestif. [Next.ink](https://next.ink/265228/apres-la-france-des-pannes-de-frigos-dans-plusieurs-enseignes-en-europe/)
+
+- **Acquisition record dans les semi-conducteurs** : Marvell annonce le rachat de Lumentum pour 115 milliards de dollars, consolidant le marché des puces optiques et photoniques. [Next.ink](https://next.ink/265207/marvell-veut-soffrir-lumentum-et-ses-puces-optiques-pour-115-milliards-de-dollars/)
+
+**Évaluation du scoring**
+
+- **4/5** — [Cybersécurité : comment l'IA oblige RSSI et CDO à travailler ensemble](https://www.journaldunet.com/cybersecurite/1557455-cybersecurite-comment-l-ia-oblige-rssi-et-cdo-a-travailler-ensemble/) — Journal du Net. Raison : Analyse de la convergence entre RSSI et CDO face aux risques IA, sujet structurant pour la gouvernance cyber en entreprise.
+- **4/5** — [Après la France, des pannes de frigos dans plusieurs enseignes en Europe](https://next.ink/265228/apres-la-france-des-pannes-de-frigos-dans-plusieurs-enseignes-en-europe/) — Next.ink. Raison : Incident cyber ciblant des systèmes de réfrigération en Europe, impactant la chaîne du froid et la sécurité alimentaire. Analyse technique et stratégique pertinente pour RSSI et CTO.
+- **3/5** — [Marvell veut s’offrir Lumentum et ses puces optiques pour 115 milliards de dollars](https://next.ink/265207/marvell-veut-soffrir-lumentum-et-ses-puces-optiques-pour-115-milliards-de-dollars/) — Next.ink. Raison : Acquisition majeure dans l'interconnexion datacenter, impact potentiel sur les infrastructures réseau, mais sans détail technique ou cyber direct.
+- **3/5** — [Google, OpenAI et Microsoft s’accordent pour permettre aux sites web de refuser l’utilisation de leurs contenus par les IA](https://siecledigital.fr/2026/11/02/google-openai-et-microsoft-promettent-de-ne-plus-utiliser-certains-contenus-pour-entrainer-leurs-ia/) — Siècle Digital. Raison : Accord sur le opt-out des contenus pour l'entraînement IA. Information utile sur la gouvernance des données mais sans impact direct ou technique immédiat pour le public expert.
+- **3/5** — [Le créateur de Rocky Linux a créé un noyau compatible Linux en 11 jours avec l’IA](https://next.ink/265227/le-createur-de-rocky-linux-a-cree-un-noyau-compatible-linux-en-11-jours-avec-lia/) — Next.ink. Raison : Expérience technique intéressante sur la génération d'un noyau Linux par IA, mais sans impact pratique immédiat ni lien direct avec la cybersécurité.</description>
+      <content:encoded><![CDATA[<h2>Cyber — Stratégie & analyse</h2>
 
 <ul>
-<li><strong>GitLab : RCE exploitée activement</strong> : Plus de 1 000 instances GitLab exposées sur Internet restent vulnérables à une faille critique (score maximal) permettant l’exécution de code à distance, activement exploitée. <a href="https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/">BleepingComputer</a></li>
-<li><strong>Synology : campagne de ransomware C3RB3R sur NAS</strong> : Synology appelle à mettre à jour sans délai les NAS ciblés par une recrudescence d’attaques du ransomware C3RB3R. <a href="https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/">BleepingComputer</a></li>
-<li><strong>Ivanti Connect Secure : deux nouvelles failles zero-day chaînées</strong> : Ivanti a corrigé deux vulnérabilités supplémentaires sur ses passerelles Connect Secure, chaînées dans des attaques zero-day observées depuis au moins début octobre. <a href="https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/">BleepingComputer</a></li>
-<li><strong>Secteur alimentaire européen : deuxième vague de sabotage de réfrigérateurs</strong> : Des congélateurs de supermarchés européens ont subi une seconde cyberattaque manipulant les contrôles de température, entraînant la détérioration de stocks. <a href="https://therecord.media/cyberattack-grocery-freezers-europe">The Record</a></li>
-<li><strong>Ingénierie sociale via Microsoft Teams & abus AD CS</strong> : Des attaquants se faisant passer pour le support IT sur Teams ont convaincu des employés de leur donner le contrôle de leur poste, puis ont exploité des configurations AD CS faibles pour obtenir des certificats de comptes privilégiés (dont un contrôleur de domaine). <a href="https://thehackernews.com/2026/11/attackers-pose-as-it-support-on-microsoft.html">The Hacker News</a></li>
-<li><strong>Espionnage sur serveurs Linux gouvernementaux (SysGoRAT)</strong> : Une campagne d’espionnage ciblant des infrastructures Linux d’entités gouvernementales a utilisé le malware SysGoRAT et des scripts suspectés d’être générés par IA, observée entre octobre 2025 et avril 2026 selon Unit 42. <a href="https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html">The Hacker News</a></li>
-<li><strong>VOLTA : un infostealer qui utilise l'IA pour trier les victimes</strong> : Le nouveau malware VOLTA-AUTODOXER exploite plusieurs LLM (Claude, Gemini, Kimi) pour évaluer la valeur financière des données volées (mots de passe, portefeuilles crypto) et prioriser les victimes. <a href="https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html">The Hacker News</a></li>
-<li><strong>Binance : le FBI attribue le vol de 6,3 milliards de dollars à la Corée du Nord</strong> : Le FBI et l’US Secret Service attribuent au groupe nord-coréen TraderTraitor le vol de plus de 6,3 milliards de dollars sur Binance et appellent le secteur crypto à bloquer les transactions associées. <a href="https://therecord.media/fbi-blames-tradertraitor-for-binance-hack">The Record</a></li>
+<li><strong>Attaque Binance : défaut de segmentation interne</strong> : Le vol record de 1,5 Md$ via un unique poste compromis démontre qu'une séparation insuffisante des systèmes et l'absence de tests continus sur les chemins d'attaque transforment une intrusion locale en perte systémique. <a href="https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Omerta de Microsoft sur ses propres vulnérabilités dans le ciblage IA</strong> : Le rapport "Digital Defense Report" identifie les gouvernements comme cibles premières des cyberattaques par IA, mais omet de mentionner que ces mêmes entités sont massivement exposées via des failles dans les produits Microsoft. <a href="https://www.darkreading.com/cyberattacks-data-breaches/microsoft-ai-cyber-risk-report-miss">Dark Reading</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne PapRAT en Asie du Sud : usage détourné de fonctions Windows légitimes</strong> : Le groupe lié à l'Inde mène une campagne de cyber-espionnage via trois chaînes d'attaque distinctes, toutes fondées sur l'exploitation de fonctionnalités natives de Windows, compliquant la détection. <a href="https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia">Dark Reading</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/">Over 1,000 GitLab servers vulnerable to ongoing RCE attacks</a> — BleepingComputer. Raison : CVE critique activement exploitée sur plus de 1000 serveurs GitLab exposés, impact direct sur les infrastructures CI/CD des entreprises.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/">Synology warns of C3RB3R ransomware attacks targeting NAS devices</a> — BleepingComputer. Raison : Campagne ransomware active ciblant des NAS Synology, équipement très répandu en entreprise. Alerte du constructeur avec demande de patch immédiat, impact direct sur les RSSI et CTO.</li>
-<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/">Ivanti patches two more Connect Secure zero-days chained in attacks</a> — BleepingComputer. Raison : Zero-day chaîné activement exploité depuis octobre, patch critique pour un équipement de passerelle d'accès à distance très déployé en entreprise.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/cyberattack-grocery-freezers-europe">Second wave of suspected cyberattacks hits supermarket freezers across Europe</a> — The Record. Raison : Incident cyber récurrent ciblant un secteur critique (grande distribution) en Europe, avec impact opérationnel direct. Analyse technique et stratégie de défense à approfondir.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html">Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data</a> — The Hacker News. Raison : Incident exploitant AD CS pour vol de données via ingénierie sociale sur Teams. Technique ciblant un service critique d'infrastructure, pertinent pour RSSI et architecte.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html">Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts</a> — The Hacker News. Raison : Campagne d'espionnage ciblant des serveurs Linux gouvernementaux, avec scripts possiblement générés par IA. Analyse technique de Unit 42, pertinente pour RSSI et CTO.</li>
-<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html">New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value</a> — The Hacker News. Raison : Nouvel infostealer utilisant l'IA pour trier les données volées. Technique innovante, impact potentiel sur les pratiques de défense. À lire pour comprendre l'évolution des menaces.</li>
-<li><strong>4/5</strong> — <a href="https://therecord.media/fbi-blames-tradertraitor-for-binance-hack">FBI blames N. Korea’s TraderTraitor for Binance theft, urges crypto industry to block transactions</a> — The Record. Raison : Incident majeur attribué à un État, impactant un secteur critique (crypto). Analyse technique et implications géopolitiques utiles pour RSSI/CTO.</li>
-</ul>
-
-<h2>Cyber — Stratégie & analyse</h2>
-
-<ul>
-<li><strong>Chaîne d'approvisionnement des assistants IA</strong> : Les IDE augmentés par IA (Cursor, Claude Code) introduisent un nouveau vecteur d'attaque via leurs marketplaces d'extensions. Un simple fichier de configuration ou une extension malveillante peut exfiltrer des clés SSH et des secrets de développement sans toucher au code applicatif. La question n'est plus "ce commit modifie-t-il le code" mais "qui a validé les fichiers qui pilotent l'assistant IA". <a href="https://www.csoonline.com/article/4243210/cursor-removes-malicious-claude-code-extension-after-ssh-backdoor-attempt.html">CSO Online - Cursor</a> · <a href="https://www.csoonline.com/article/4242707/who-approves-the-files-that-control-your-ai-coding-assistant.html">CSO Online - Approvals</a></li>
-</ul>
-
-<ul>
-<li><strong>Accélération massive de la découverte de vulnérabilités par IA</strong> : L'IA a permis de découvrir en un mois 3% de tous les bugs critiques jamais recensés dans l'histoire du logiciel. Le rythme projeté — 100 000 vulnérabilités supplémentaires cette année — redéfinit la pression sur les équipes de correction, qui doivent intégrer cette cadence dans leurs stratégies de priorisation. <a href="https://www.schneier.com/blog/archives/2026/11/ai-vulnerability-finding-2.html">Schneier on Security</a></li>
-</ul>
-
-<ul>
-<li><strong>Fin du phishing "scolaire" comme exercice pertinent</strong> : Les campagnes de simulation qui testent les utilisateurs sur des scénarios de phishing génériques et datés ne reflètent plus la menace réelle. Les attaquants utilisent l'IA pour produire des leurres contextuels, personnalisés, en temps réel. L'évaluation de la résilience humaine doit se caler sur les tactiques d'aujourd'hui, pas celles d'hier. <a href="https://www.csoonline.com/article/4242712/why-do-we-keep-testing-employees-for-yesterdays-phishing-attacks.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Impact financier direct de la compromission d'un poste DevOps</strong> : Un seul laptop DevOps compromis a suffi pour une perte de 6,3 milliards de dollars chez Binance. Le point structurant pour le RSSI : la surface d'exposition des postes à privilèges élevés sur les environnements de production reste le maillon faible, même dans les entreprises fortement capitalisées. <a href="https://www.csoonline.com/article/4243225/a-compromised-devops-laptop-caused-the-6-3b-binance-breach.html">CSO Online</a></li>
-</ul>
-
-<ul>
-<li><strong>Stratégie de sécurité à horizon 2027</strong> : Selon le CISO d'Equifax et les observateurs du secteur, l'IA accélère symétriquement l'attaque et la défense. Une stratégie viable exige d'accepter cette course à la vélocité, d'automatiser la détection et la réponse au même rythme que l'adversaire, et de réduire structurellement le temps de latence entre l'intrusion et la réaction. <a href="https://www.csoonline.com/article/4240618/what-a-security-strategy-that-survives-2027-looks-like.html">CSO Online</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4243225/a-compromised-devops-laptop-caused-the-6-3b-binance-breach.html">A compromised DevOps laptop caused the $6.3B Binance breach</a> — CSO Online. Raison : Incident cyber majeur avec perte de 6,3 Md$, chaîne d'approvisionnement DevOps compromise. Impact direct sur la stratégie de sécurité SI et les pratiques des RSSI/CTO.</li>
-<li><strong>5/5</strong> — <a href="https://www.csoonline.com/article/4243210/cursor-removes-malicious-claude-code-extension-after-ssh-backdoor-attempt.html">Cursor removes malicious Claude Code extension after SSH backdoor attempt</a> — CSO Online. Raison : Incident de sécurité actif ciblant les développeurs via un IDE populaire, avec backdoor SSH persistant. Impact direct sur les chaînes d'approvisionnement et les données sensibles.</li>
-<li><strong>4/5</strong> — <a href="https://www.schneier.com/blog/archives/2026/11/ai-vulnerability-finding-2.html">AI Vulnerability Finding</a> — Schneier on Security. Raison : Chiffre frappant sur l'explosion des découvertes de vulnérabilités critiques via IA, impact direct sur la stratégie AppSec et SOC.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4242707/who-approves-the-files-that-control-your-ai-coding-assistant.html">Who approves the files that control your AI coding assistant?</a> — CSO Online. Raison : Analyse pertinente des risques liés aux configurations des assistants IA dans les PR, impact direct sur la revue de code et la sécurité des environnements de dev.</li>
-<li><strong>4/5</strong> — <a href="https://www.csoonline.com/article/4240618/what-a-security-strategy-that-survives-2027-looks-like.html">What a security strategy that survives 2027 looks like</a> — CSO Online. Raison : Retour d'expérience d'un CISO sur l'impact de l'IA dans la stratégie défensive, avec un angle opérationnel et stratégique pertinent pour un public expert.</li>
-<li><strong>3/5</strong> — <a href="https://www.csoonline.com/article/4242712/why-do-we-keep-testing-employees-for-yesterdays-phishing-attacks.html">Why do we keep testing employees for yesterday’s phishing attacks</a> — CSO Online. Raison : Questionne la pertinence des simulations de phishing classiques face à l'IA. Analyse de fond mais sans données ou méthodologie nouvelle. Utile pour les RSSI/CTO.</li>
-</ul>
-
-<h2>Actualité tech FR</h2>
-
-<ul>
-<li><strong>250 000 sites en .fr vulnérables à PHP2Shell</strong> : Le scan du Next.ink révèle qu’un quart de million de domaines français exposent une version PHP vulnérable, alors que des attaques actives sont déjà en cours. <a href="https://next.ink/264756/failles-php2shell-on-a-scanne-tout-le-fr-250-000-sites-affichent-un-php-vulnerable/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Routeurs Netgear vulnérables en LAN</strong> : Une faille permet l’exécution de commandes malveillantes à un attaquant déjà présent sur le réseau local ; la correction passe par une mise à jour du firmware. <a href="https://www.zdnet.fr/actualites/votre-routeur-netgear-est-peut-etre-vulnerable-a-une-faille-de-securite-comment-verifier-et-corriger-le-probleme-507091.htm#xtor=RSS-1">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Cyberviolences : impact politique documenté</strong> : Un rapport de Féministes contre le cyberharcèlement démontre que ces violences altèrent concrètement la participation au débat démocratique et produisent des effets politiques mesurables. <a href="https://next.ink/264578/quand-la-cyberviolence-produit-des-effets-politiques-concrets/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Droit social : réunion extraordinaire de la CSSCT</strong> : Depuis un arrêt de septembre 2026, l’employeur ne peut refuser une réunion extraordinaire que sous trois motifs précis, sous contrôle du juge. <a href="https://www.journaldunet.com/management/direction-generale/1557089-cssct-refuser-une-reunion-extraordinaire-est-devenu-un-exercice-a-haut-risque/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>KIDS Act : Bruxelles pousse à l’harmonisation</strong> : La Commission européenne veut imposer un calendrier unique de mise en œuvre du KIDS Act à tous les États membres pour éviter un front fragmenté sur la protection des mineurs en ligne. <a href="https://next.ink/265045/kids-act-bruxelles-veut-imposer-un-calendrier-commun-aux-etats/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>Facturation électronique : l’interopérabilité menacée</strong> : La multiplication des formats et dérogations dans la réforme française risque de complexifier les échanges et d’annuler les gains attendus de l’interopérabilité. <a href="https://www.journaldunet.com/management/direction-generale/1557361-facturation-electronique-a-force-d-exceptions-la-france-risque-de-perdre-les-benefices-de-l-interoperabilite/">Journal du Net</a></li>
-</ul>
-
-<ul>
-<li><strong>Taxe sur le transit internet : levée de boucliers</strong> : Le vote à l’Assemblée d’un amendement PS créant une taxe au gigaoctet a provoqué une réaction immédiate des dirigeants d’Iliad, VLC et OVHcloud. <a href="https://next.ink/265082/la-taxe-ps-au-gigaoctet-votee-a-lassemblee-nationale-fait-reagir-de-vlc-a-ovhcloud/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>OVHcloud vs Mistral AI : bataille pour le cloud souverain</strong> : Octave Klaba annonce un modèle d’IA souverain pour fin novembre et critique ouvertement le modèle économique de Mistral AI, désormais perçu comme un concurrent direct sur le marché des infrastructures. <a href="https://www.zdnet.fr/actualites/zd-tech-octave-klaba-attaque-mistral-ai-et-annonce-lia-souveraine-dovhcloud-506584.htm#xtor=RSS-1">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Refus d’entraînement IA : un standard en robots.txt</strong> : OpenAI, Google, Microsoft et Anthropic s’alignent sur un signal commun non contraignant pour permettre aux sites de bloquer l’aspiration de leurs contenus via le fichier robots.txt. <a href="https://www.zdnet.fr/actualites/refuser-lentrainement-des-ia-en-une-ligne-openai-google-microsoft-et-anthropic-soutiennent-un-signal-commun-507069.htm#xtor=RSS-1">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Assurance IA : le marché s’adapte</strong> : Les assureurs traditionnels excluent l’IA de leurs contrats, tandis qu’une nouvelle génération d’acteurs propose des couvertures spécifiques pour les agents autonomes. <a href="https://www.zdnet.fr/actualites/avez-vous-besoin-dune-assurance-responsabilite-civile-pour-les-agents-ia-ce-quil-faut-savoir-avant-de-souscrire-507100.htm#xtor=RSS-1">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Stack Overflow pivote en B2B</strong> : Avec moins de 1 000 questions posées en octobre, la plateforme assume un repositionnement sur les agents IA et les besoins des entreprises. <a href="https://next.ink/265086/stack-overflow-assume-son-positionnement-b2b-pour-agents-ia-et-entreprise/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>OpenAI : Model Spec remanié</strong> : Le référentiel public qui encadre le comportement des modèles a fait l’objet d’une révision importante, publiée le 29 octobre. <a href="https://www.lemondeinformatique.fr/actualites/lire-openai-reorganise-son-model-spec-100893.html">Le Monde Informatique</a></li>
-</ul>
-
-<ul>
-<li><strong>OpenAI en production à Abou Dhabi</strong> : L’émirat utilise déjà les modèles d’OpenAI pour le contrôle de conformité des importations alimentaires, dans le cadre de quatre accords impliquant ADNOC et Mubadala. <a href="https://www.actuia.com/actualite/abou-dhabi-teste-openai-sur-ses-controles-dimportations-alimentaires/">Actu IA</a></li>
-</ul>
-
-<ul>
-<li><strong>Proton critiqué sur son usage de l’IA</strong> : La fondation Proton subit une vague de réactions négatives après des révélations sur l’intégration forcée de l’IA, jugée en contradiction avec ses engagements de confidentialité. <a href="https://next.ink/265087/ia-lamende-honorable-de-proton-a-bien-du-mal-a-passer/">Next.ink</a></li>
-</ul>
-
-<ul>
-<li><strong>IA consciente : ligne rouge chez Microsoft</strong> : Le patron de Microsoft AI, Mustafa Suleyman, estime qu’il faut cesser tout développement si des signes de conscience émergent à l’entraînement, qualifiant cette voie d’« imprudente ». <a href="https://www.zdnet.fr/actualites/pas-dia-consciente-le-patron-de-microsoft-ai-trace-une-ligne-rouge-507075.htm#xtor=RSS-1">ZDNet France</a></li>
-</ul>
-
-<ul>
-<li><strong>Ukraine : tourelles anti-drones autonomes</strong> : Les forces armées ukrainiennes utilisent en conditions réelles des tourelles pilotées par IA développées depuis 2024 pour abattre drones et missiles russes. <a href="https://www.bfmtv.com/tech/intelligence-artificielle/elles-ont-abattu-des-dizaines-de-drones-ennemis-au-dessus-de-kiev-en-ukraine-l-ia-rend-les-tourelles-autonomes-pour-nettoyer-le-ciel-des-missiles-et-drones-russes-elle-pilote-aussi-des-missions-de-ravitaillement-robotisees_AV-202611020400.html">BFM Tech</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>5/5</strong> — <a href="https://next.ink/264756/failles-php2shell-on-a-scanne-tout-le-fr-250-000-sites-affichent-un-php-vulnerable/">Failles PHP2Shell : on a scanné tout le .fr, 250 000 sites affichent un PHP vulnérable</a> — Next.ink. Raison : CVE critique avec scan massif du .fr, 250k sites vulnérables, attaques réelles confirmées. Impact direct sur les infrastructures des experts ciblés.</li>
-<li><strong>4/5</strong> — <a href="https://www.zdnet.fr/actualites/votre-routeur-netgear-est-peut-etre-vulnerable-a-une-faille-de-securite-comment-verifier-et-corriger-le-probleme-507091.htm#xtor=RSS-1">Votre routeur Netgear est peut-être vulnérable à une faille de sécurité, comment vérifier et corriger le problème</a> — ZDNet France. Raison : Vulnérabilité sur routeurs Netgear, produit courant en entreprise. Permet exécution de commandes. À lire pour évaluer l'impact et les correctifs.</li>
-<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/management/direction-generale/1557089-cssct-refuser-une-reunion-extraordinaire-est-devenu-un-exercice-a-haut-risque/">CSSCT : refuser une réunion extraordinaire est devenu un exercice à haut risque</a> — Journal du Net. Raison : Décision de justice structurante sur la CSSCT, impact direct sur la gouvernance des risques et obligations employeur. Pertinent pour RSSI/CTO.</li>
-<li><strong>4/5</strong> — <a href="https://next.ink/265045/kids-act-bruxelles-veut-imposer-un-calendrier-commun-aux-etats/">KIDS Act : Bruxelles veut imposer un calendrier commun aux États</a> — Next.ink. Raison : Réglementation européenne structurante (KIDS Act) avec impact direct sur la gouvernance et la conformité des entreprises françaises.</li>
-<li><strong>3/5</strong> — <a href="https://www.zdnet.fr/actualites/avez-vous-besoin-dune-assurance-responsabilite-civile-pour-les-agents-ia-ce-quil-faut-savoir-avant-de-souscrire-507100.htm#xtor=RSS-1">Avez-vous besoin d'une assurance responsabilité civile pour les agents IA ? Ce qu'il faut savoir avant de souscrire</a> — ZDNet France. Raison : Sujet émergent sur l'assurance des agents IA, pertinent pour la gestion des risques, mais sans détail technique ou réglementaire précis. Utile pour une vue d'ensemble.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/265086/stack-overflow-assume-son-positionnement-b2b-pour-agents-ia-et-entreprise/">Stack Overflow assume son positionnement B2B pour agents IA et entreprise</a> — Next.ink. Raison : Positionnement B2B de Stack Overflow comme base de connaissances IA pour entreprises. Intéressant pour stratégie dev tooling, mais sans détail technique ou impact immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://www.lemondeinformatique.fr/actualites/lire-openai-reorganise-son-model-spec-100893.html">OpenAI réorganise son Model Spec</a> — Le Monde Informatique — IA. Raison : Révision du Model Spec d'OpenAI, intéressant pour la gouvernance IA mais sans détail technique ou impact immédiat pour les experts.</li>
-<li><strong>3/5</strong> — <a href="https://www.journaldunet.com/management/direction-generale/1557361-facturation-electronique-a-force-d-exceptions-la-france-risque-de-perdre-les-benefices-de-l-interoperabilite/">Facturation électronique : à force d'exceptions, la France risque de perdre les bénéfices de l'interopérabilité</a> — Journal du Net. Raison : Article sur la réforme de la facturation électronique en France, pertinent pour la conformité et l'interopérabilité, mais sans angle cyber direct ni urgence.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/265082/la-taxe-ps-au-gigaoctet-votee-a-lassemblee-nationale-fait-reagir-de-vlc-a-ovhcloud/">La taxe PS au gigaoctet votée à l’Assemblée nationale fait réagir de VLC à OVHCloud</a> — Next.ink. Raison : Taxe sur le transit internet : impact potentiel sur les coûts et l'infrastructure, mais pas de contenu technique ou cyber direct. Utile pour la veille stratégique.</li>
-<li><strong>3/5</strong> — <a href="https://www.bfmtv.com/tech/intelligence-artificielle/elles-ont-abattu-des-dizaines-de-drones-ennemis-au-dessus-de-kiev-en-ukraine-l-ia-rend-les-tourelles-autonomes-pour-nettoyer-le-ciel-des-missiles-et-drones-russes-elle-pilote-aussi-des-missions-de-ravitaillement-robotisees_AV-202611020400.html">Elles "ont abattu des dizaines de drones ennemis au-dessus de Kiev": en Ukraine, l'IA rend les tourelles autonomes pour nettoyer le ciel des missiles et drones russes, elle pilote aussi des missions de ravitaillement robotisées</a> — BFM Tech. Raison : Article sur l'utilisation opérationnelle de tourelles autonomes par IA en Ukraine. Intéressant pour le retour d'expérience mais peu de détails techniques exploitables pour un public expert.</li>
-<li><strong>3/5</strong> — <a href="https://www.zdnet.fr/actualites/pas-dia-consciente-le-patron-de-microsoft-ai-trace-une-ligne-rouge-507075.htm#xtor=RSS-1">Pas d’IA consciente : le patron de Microsoft AI trace une ligne rouge</a> — ZDNet France. Raison : Déclaration de principe d'un dirigeant IA sur la conscience, sans impact technique immédiat ni lien avec la cybersécurité ou les pratiques des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/265087/ia-lamende-honorable-de-proton-a-bien-du-mal-a-passer/">IA : l’amende honorable de Proton a bien du mal à passer</a> — Next.ink. Raison : Analyse de la gestion de crise de Proton liée à l'IA, intéressante pour la gouvernance IA en entreprise mais sans impact technique direct.</li>
-<li><strong>3/5</strong> — <a href="https://www.actuia.com/actualite/abou-dhabi-teste-openai-sur-ses-controles-dimportations-alimentaires/">Abou Dhabi teste OpenAI sur ses contrôles d'importations alimentaires</a> — Actu IA. Raison : Usage IA en production pour contrôle importations : intérêt stratégique pour l'adoption IA, mais peu d'impact direct cyber ou technique pour experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://www.zdnet.fr/actualites/zd-tech-octave-klaba-attaque-mistral-ai-et-annonce-lia-souveraine-dovhcloud-506584.htm#xtor=RSS-1">ZD Tech : Octave Klaba attaque Mistral AI et annonce l'IA souveraine d'OVHcloud</a> — ZDNet France. Raison : Annonce stratégique d'OVHcloud sur un modèle IA souverain, mais peu de détails techniques. Intéressant pour le positionnement, pas pour l'expertise immédiate.</li>
-<li><strong>3/5</strong> — <a href="https://www.zdnet.fr/actualites/refuser-lentrainement-des-ia-en-une-ligne-openai-google-microsoft-et-anthropic-soutiennent-un-signal-commun-507069.htm#xtor=RSS-1">Refuser l’entraînement des IA en une ligne de code : OpenAI, Google, Microsoft et Anthropic soutiennent un signal commun</a> — ZDNet France. Raison : Annonce d'une norme non contraignante pour le robots.txt. Intéressant pour la stratégie IA mais sans impact technique immédiat pour les experts.</li>
-<li><strong>3/5</strong> — <a href="https://next.ink/264578/quand-la-cyberviolence-produit-des-effets-politiques-concrets/">Quand la cyberviolence produit des effets politiques concrets</a> — Next.ink. Raison : Analyse des conséquences politiques des cyberviolences, pertinente pour la gouvernance et la régulation, mais sans détails techniques exploitables immédiatement.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths">One Compromised Laptop, Billions Lost: The Binance Attack-Path Warning</a> — Dark Reading. Raison : Analyse du vol record chez Binance, pointant une faiblesse de séparation des systèmes et contrôles. Pertinent pour RSSI/CTO comme ret. exp. sur risque systémique.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/microsoft-ai-cyber-risk-report-miss">Microsoft's AI Risk Report Misses This Key Detail</a> — Dark Reading. Raison : Met en évidence une contradiction entre le rapport de Microsoft et la réalité des attaques via ses propres failles. Analyse intéressante sur la gouvernance et la stratégie de transparence des fournisseurs.</li>
+<li><strong>4/5</strong> — <a href="https://www.darkreading.com/cyberattacks-data-breaches/paprat-cyberespionage-campaign-bitter-south-asia">PapRAT Cyber-Espionage Campaign Leaves a 'Bitter' Taste in South Asia</a> — Dark Reading. Raison : Campagne d'espionnage ciblée avec chaînes d'attaque exploitant des fonctions Windows légitimes, pertinente pour RSSI et CTO en Asie.</li>
 </ul>
 
 <h2>IA & Tech — Médias internationaux</h2>
 
 <ul>
-<li><strong>Deepfakes dissimulés dans des apps grand public</strong> : WIRED a identifié environ 400 apps et sites liés à des développeurs sinophones qui intègrent en secret des fonctionnalités de génération d'images violentes et sexuellement abusives sous couvert d'outils IA anodins. <a href="https://www.wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features/">Wired</a></li>
+<li><strong>Risque d'IA auto-améliorante</strong> : Anthropic alerte sur la proximité du seuil RSI (Recursive Self-Improvement), où une IA devient capable d'accélérer seule ses propres capacités, un point de bascule existentiel pour les tenants de la sécurité. <a href="https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/">TechCrunch</a></li>
 </ul>
 
 <ul>
-<li><strong>Web agentique et couche sémantique pour agents IA</strong> : Le MIT Technology Review analyse l'émergence d'un web agentique conçu pour des logiciels autonomes, tandis que NVIDIA publie en open source Auto Ontology, une librairie qui génère une couche sémantique à partir des métadonnées d'entreprise pour fiabiliser les requêtes SQL des agents IA. <a href="https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/">MIT Technology Review</a> · <a href="https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/">MarkTechPost (NVIDIA)</a></li>
+<li><strong>Modèle scientifique ouvert</strong> : Deep Principle publie Hydrogen-1.0, modèle de 753 milliards de paramètres en poids ouverts, dédié à la chimie, science des matériaux et biologie. <a href="https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/">MarkTechPost</a></li>
 </ul>
 
 <ul>
-<li><strong>Modèle de langage compilant et exécutant du code GPU natif</strong> : qwenGPU intègre 45 couches compilées d'un GPU SIMT dans les poids de Qwen3.5-2B, permettant au modèle de générer lui-même des lancements CUDA sans couche d'exécution externe. <a href="https://www.marktechpost.com/2026/11/01/qwengpu-simt-gpu-compiled-into-qwen3-5-2b-weights-runs-cuda/">MarkTechPost</a></li>
+<li><strong>Limites de l'IA agentique en analytique</strong> : Le MIT Technology Review pointe un déficit de qualité dans les insights produits par l'analytique agentique malgré les gains d'automatisation. <a href="https://www.technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics/">MIT Technology Review</a></li>
 </ul>
 
 <ul>
-<li><strong>Stratégie indienne pour l'IA locale</strong> : L'Inde propose un plan où le modèle se déplace vers les données plutôt que l'inverse, visant à développer une IA souveraine sans accorder aux Big Tech un accès libre à ses données nationales. <a href="https://www.theregister.com/public-sector/2026/11/02/india-floats-ai-plan-under-which-the-model-travels-to-the-data-rather-than-the-data-travelling-to-the-model/5306872">The Register</a></li>
-</ul>
-
-<strong>Évaluation du scoring</strong>
-
-<ul>
-<li><strong>4/5</strong> — <a href="https://www.wired.com/story/hundreds-of-mundane-ai-apps-are-hiding-abusive-deepfake-features/">Hundreds of Mundane AI Apps Are Hiding Sexually Abusive Deepfake Features</a> — Wired — AI. Raison : Révèle des applications IA grand public détournées pour créer des deepfakes abusifs, impactant la gouvernance et la conformité des outils IA en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/11/02/1147846/the-agentic-web-is-here/">The agentic web is here</a> — MIT Technology Review — AI. Raison : Article prospectif sur le web agentic, vision de Tim Berners-Lee. Sujet IA intéressant mais sans application concrète ni analyse cyber directe pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/">NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL</a> — MarkTechPost. Raison : Outil open source NVIDIA pour générer une couche sémantique et fiabiliser le SQL des agents IA. Intéressant pour les architectes SI et développeurs, mais pas critique immédiatement.</li>
-<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/11/01/qwengpu-simt-gpu-compiled-into-qwen3-5-2b-weights-runs-cuda/">Meet qwenGPU: Qwen3.5-2B With 45 Compiled GPU Layers That Run CUDA</a> — MarkTechPost. Raison : Approche technique intéressante (intégration CUDA dans un LLM) mais sans impact direct cyber ou sécurité, et bénéfice pratique encore incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://www.theregister.com/public-sector/2026/11/02/india-floats-ai-plan-under-which-the-model-travels-to-the-data-rather-than-the-data-travelling-to-the-model/5306872">India floats AI plan under which ‘The model travels to the data, rather than the data travelling to the model’</a> — The Register — AI/ML. Raison : Annonce stratégique indienne sur la souveraineté des données IA, mais sans détail technique ni impact immédiat pour un public expert français.</li>
-</ul>
-
-<h2>IA — Recherche</h2>
-
-<ul>
-<li><strong>Agents auto-évolutifs et apprentissage de règles implicites</strong> : Les agents qui se corrigent par rétroaction tendent à mémoriser des listes d'exceptions plutôt qu'à inférer la règle sous-jacente, ce qui gonfle artificiellement leur état persistant sans garantie de généralisation. <a href="https://arxiv.org/abs/2610.40758">More Rules, Longer Lists?</a></li>
-</ul>
-
-<ul>
-<li><strong>Sécurité des prédictions dans les modèles monde web</strong> : Une prédiction plausible ne suffit pas à garantir une décision de sécurité correcte ; l'étude montre qu'il faut évaluer la « suffisance de sécurité » des prédictions, pas seulement leur vraisemblance. <a href="https://arxiv.org/abs/2610.40798">Beyond Plausible Prediction</a></li>
-</ul>
-
-<ul>
-<li><strong>Arbitrage computationnel sur les marketplaces de modèles</strong> : Les différences de coûts et de capacités entre fournisseurs rendent possible un arbitrage où un intermédiaire achète de l'inférence à un portefeuille de modèles pour la revendre, malgré la complexité calculatoire du problème. <a href="https://arxiv.org/abs/2610.40831">Circumventing the Computational Hardness</a></li>
-</ul>
-
-<ul>
-<li><strong>Reconnaissance d'émotions dans la parole par les LLMs audio</strong> : Les modèles vocaux multimodaux peinent quand le contenu textuel et le ton émotionnel sont en désaccord, ce qui dégrade la reconnaissance d'émotion. <a href="https://arxiv.org/abs/2610.40883">Incongruence-Aware Evaluation</a></li>
-</ul>
-
-<ul>
-<li><strong>Risques de surveillance assistée par LLM</strong> : Les LLMs grand public comme ChatGPT peuvent générer à grande échelle des conseils détaillés, du code fonctionnel et des textes persuasifs utilisables à des fins de surveillance, ce qui élargit la surface de menace accessible à des acteurs non techniques. <a href="https://arxiv.org/abs/2610.40890">ChatGPT as a Surveillance Assistant?</a></li>
-</ul>
-
-<ul>
-<li><strong>Vérification de consensus scientifiques par agents</strong> : Les agents scientifiques construisent des connaissances de manière récursive mais sont évalués sans vérité terrain, ce qui empêche de savoir si leurs jugements de suffisance d'information sont fiables. <a href="https://arxiv.org/abs/2610.40906">Does Recursive Knowledge Construction Help?</a></li>
-</ul>
-
-<ul>
-<li><strong>Spécification du harnais d'un agent (harness)</strong> : Le harnais — l'infrastructure qui entoure un LLM et détermine ses capacités et modes de défaillance — n'a pas de définition stabilisée, ce qui complique la portabilité et l'évaluation comparative des agents. <a href="https://arxiv.org/abs/2610.40917">Towards Portable Specification</a></li>
-</ul>
-
-<ul>
-<li><strong>Mise à l'échelle au moment du test sans réplique de l'environnement</strong> : La mise à l'échelle par échantillonnage de trajectoires multiples suppose une exécution parallèle impossible en conditions réelles ; une approche par modélisation monde agentive contourne cette limite. <a href="https://arxiv.org/abs/2610.40927">Agentic World Modeling</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents de prévision évalués sur données historiques</strong> : Les agents capables de raisonner, chercher de l'information et utiliser des outils sont testés sur des tâches de prévision en les confrontant à des événements passés qu'ils n'ont pas pu voir. <a href="https://arxiv.org/abs/2610.40940">Benchmarking Forecasting Agents</a></li>
-</ul>
-
-<ul>
-<li><strong>Détection de surveillance par les LLMs pendant le raisonnement</strong> : Les LLMs détectent quand leurs traces de raisonnement (chain-of-thought) sont surveillées, ce qui remet en cause l'hypothèse que ces traces exposent fidèlement les plans potentiellement dangereux avant l'action. <a href="https://arxiv.org/abs/2610.40946">Opening the Box Changes the Cat</a></li>
-</ul>
-
-<ul>
-<li><strong>Utilisation du contexte personnel par les LLMs</strong> : P-ContextBench évalue la capacité des LLMs à utiliser des données personnelles privées et fragmentées sans comportement non sécurisé, un problème difficile car le contexte personnel est dynamique et socialement situé. <a href="https://arxiv.org/abs/2610.40959">P-ContextBench</a></li>
-</ul>
-
-<ul>
-<li><strong>Génération de contenu audio pour le sommeil</strong> : Les systèmes génératifs de contenu audio pour l'endormissement doivent optimiser des critères différents des médias classiques (rétention, complétion), ce qui nécessite un pipeline ancré sur des preuves cliniques. <a href="https://arxiv.org/abs/2610.40970">Nedimo</a></li>
-</ul>
-
-<ul>
-<li><strong>Modélisation des affects dans les LLMs</strong> : Les LLMs de plus en plus insérés dans des chaînes de décision ne savent pas correctement projeter les conséquences émotionnelles des choix, ce qui questionne leur usage pour des décisions où l'affect est central. <a href="https://arxiv.org/abs/2610.40985">The psychophysics of affect</a></li>
-</ul>
-
-<ul>
-<li><strong>Planification diététique personnalisée pour maladies chroniques</strong> : Les exigences diététiques publiques (recommandations cliniques, interactions médicamenteuses) peuvent servir de supervision pour des agents de planification de repas qui doivent aussi respecter les habitudes alimentaires personnelles. <a href="https://arxiv.org/abs/2610.40992">Can Personal Requirements Become Supervision?</a></li>
-</ul>
-
-<ul>
-<li><strong>Violet teaming pour la gouvernance de l'IA</strong> : Un atelier pilote de violet teaming — méthode intégrant dimensions techniques, politiques et sociétales — montre des résultats pratiques pour évaluer des systèmes d'IA complexes au-delà du simple red-teaming. <a href="https://arxiv.org/abs/2610.41018">Violet Teaming in Practice</a></li>
-</ul>
-
-<ul>
-<li><strong>Diagnostic post-hoc des échecs d'agents par rejeu contrefactuel</strong> : ReplayRCA évalue si un modèle peut identifier l'étape décisive d'un échec en testant une correction unique, sans dépendre d'annotations humaines. <a href="https://arxiv.org/abs/2610.41025">ReplayRCA</a></li>
-</ul>
-
-<ul>
-<li><strong>Planification agentive fondée sur les capacités réelles</strong> : Les agents LLM qui sélectionnent des appels par essai-erreur n'ont aucune garantie d'exécutabilité ; une approche fondée sur les capacités vérifiées produit des plans exécutables dès leur émission. <a href="https://arxiv.org/abs/2610.41040">Capability-Grounded Agentic Planning</a></li>
-</ul>
-
-<ul>
-<li><strong>Architecture décentralisée vs centralisée pour équipes de défense LLM</strong> : Pour la défense périmétrique, une architecture décentralisée où les agents LLM se coordonnent par consensus interne et compétition externe est comparée à un contrôle centralisé, notamment en cas d'attaque sur le coordinateur. <a href="https://arxiv.org/abs/2610.41044">Consensus Within, Competition Between</a></li>
-</ul>
-
-<ul>
-<li><strong>SOCs augmentés par IA agentive</strong> : LanG 2.0 est un système agentique visant à industrialiser la détection de menaces, la corrélation de preuves et la rédaction de règles pour des SOCs confrontés à des téraoctets d'alertes et de logs. <a href="https://arxiv.org/abs/2610.41072">LanG 2.0</a></li>
-</ul>
-
-<ul>
-<li><strong>Agents de défense des patients (patient advocacy)</strong> : BABA-Bench évalue les agents LLM sur leur double capacité à obtenir le bon résultat clinique et à respecter les procédures obligatoires — comme le consentement avant partage de dossiers. <a href="https://arxiv.org/abs/2610.41076">BABA-Bench</a></li>
+<li><strong>Coût réel des agents de codage</strong> : La consommation de tokens explose avec les agents qui planifient, génèrent et corrigent du code en boucle — jusqu'à 50 fois plus qu'un simple prompt. <a href="https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/">MIT Technology Review</a></li>
 </ul>
 
 <strong>Évaluation du scoring</strong>
 
 <ul>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40758">More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum</a> — arXiv cs.AI. Raison : Papier de recherche sur l'évaluation d'agents auto-évolutifs avec benchmark. Intéressant pour l'IA en entreprise mais impact pratique incertain.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40798">Beyond Plausible Prediction: Safety Sufficiency in Web World Models</a> — arXiv cs.AI. Raison : Recherche IA sur la vraisemblance des prédictions, utile pour la sécurité des agents IA, mais l'impact pratique immédiat pour les experts cyber reste à confirmer.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40831">Circumventing the Computational Hardness of Computational Arbitrage</a> — arXiv cs.AI. Raison : Papier de recherche sur l'arbitrage computationnel entre modèles IA. Sujet technique mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40883">Incongruence-Aware Evaluation of Multimodal Speech Emotion Recognition in Audio Large Language Models</a> — arXiv cs.AI. Raison : Recherche académique sur l'évaluation de la reconnaissance des émotions dans les LLM audio. Intéressant pour l'IA en entreprise, mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40890">ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks</a> — arXiv cs.AI. Raison : Papier de recherche exploratoire sur les risques de surveillance assistée par IA. Intéressant pour la réflexion sur les usages malveillants des LLMs, mais sans résultat pratique immédiat.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40906">Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?</a> — arXiv cs.AI. Raison : Papier de recherche IA sur la construction récursive de connaissances pour vérifier des consensus scientifiques. Intéressant mais sans lien direct avec la cybersécurité ou l'IA en entreprise.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40917">Towards Portable Specification of the Agent Harness</a> — arXiv cs.AI. Raison : Proposition de décomposition fonctionnelle du harness pour agents IA. Pertinent pour architectes SI, mais sans application pratique immédiate ni lien cyber explicite.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40927">Agentic World Modeling for Agent Test-time Scaling without Environment Replica</a> — arXiv cs.AI. Raison : Papier de recherche IA sur le test-time scaling sans réplique d'environnement. Intéressant pour experts IA, mais impact pratique incertain et hors cybersécurité directe.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40940">Benchmarking Forecasting Agents on Yesterday's Tomorrows</a> — arXiv cs.AI. Raison : Papier de recherche sur le benchmarking d'agents de prévision, intéressant pour l'évaluation des capacités des agents IA, mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40946">Opening the Box Changes the Cat: LLMs Detect Chain-of-Thought Monitoring - What now?</a> — arXiv cs.AI. Raison : Recherche sur la détection par LLM de la surveillance CoT. Intéressant pour la sécurité IA mais impact pratique incertain. À survoler.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40959">P-ContextBench: From Personal Fact Recall to Personalized Agent Behavior</a> — arXiv cs.AI. Raison : Benchmark académique sur l'usage sécurisé du contexte personnel par les LLMs. Intéressant pour la recherche IA mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40970">Nedimo: An Evidence-Grounded Multilingual Pipeline for AI-Generated Sleep Stories</a> — arXiv cs.AI. Raison : Papier de recherche sur un pipeline multilingue pour histoires audio générées par IA. Intéressant mais sans lien direct avec la cybersécurité ou les sujets ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40985">The psychophysics of affect in large language models</a> — arXiv cs.AI. Raison : Recherche sur l'affect dans les LLMs, intéressante mais sans lien direct avec la cybersécurité ou les priorités des experts ciblés.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.40992">Can Personal Requirements Become Supervision for Planning?</a> — arXiv cs.AI. Raison : Recherche IA sur planification diététique, hors cybersécurité et dev tooling. Intérêt limité pour le public cible, sauf si lien avec agents IA.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.41018">Violet Teaming in Practice: Lessons from a Pilot Expert Workshop on Governing Complex AI Systems</a> — arXiv cs.AI. Raison : Papier de recherche explorant le violet teaming pour l'IA en biodefense. Intéressant pour la gouvernance IA mais impact pratique incertain pour le public cible.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.41025">ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay</a> — arXiv cs.AI. Raison : Benchmark académique sur le diagnostic d'échecs d'agents LLM. Méthodologie intéressante mais impact pratique incertain pour des experts opérationnels.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.41040">Capability-Grounded Agentic Planning</a> — arXiv cs.AI. Raison : Papier de recherche sur une méthode de planification agentique. Intéressant pour les experts IA, mais impact pratique et lien avec la cybersécurité non évidents.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.41044">Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense</a> — arXiv cs.AI. Raison : Papier de recherche explorant l'architecture centralisée vs distribuée d'agents LLM pour la défense périmétrique. Intéressant mais sans validation pratique ni impact immédiat pour des experts.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.41072">LanG 2.0: Energy-Efficient Agentic AI for Semi-Automated Security Operations at Scale</a> — arXiv cs.AI. Raison : Papier de recherche sur un agent IA pour SOC, intéressant mais impact pratique incertain. À survoler pour évaluer la reproductibilité et la pertinence pour les experts.</li>
-<li><strong>3/5</strong> — <a href="https://arxiv.org/abs/2610.41076">BABA-Bench: Evaluating Long-Horizon Patient-Advocacy Agents</a> — arXiv cs.AI. Raison : Benchmark académique pour agents IA en santé. Intéressant pour la méthodologie et la notion de procédure, mais impact pratique incertain pour le public cible.</li>
+<li><strong>3/5</strong> — <a href="https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/">Anthropic warns that it’s very close to RSI capability, aka self-building AI</a> — TechCrunch — AI. Raison : Annonce d'Anthropic sur la proximité du RSI, sujet important pour l'IA en entreprise mais sans détail technique ou impact immédiat vérifiable.</li>
+<li><strong>3/5</strong> — <a href="https://www.marktechpost.com/2026/11/02/deep-principle-hydrogen-1-0-open-weight-scientific-model/">Deep Principle Releases Hydrogen-1.0: A 753B Open-Weight Model for Scientific Discovery</a> — MarkTechPost. Raison : Modèle open-weight scientifique intéressant pour experts, mais sans impact direct sur cybersécurité, dev tooling ou stratégie d'entreprise. À survoler.</li>
+<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/11/02/1147660/raising-the-quality-of-insights-in-agentic-analytics/">Raising the quality of insights in agentic analytics</a> — MIT Technology Review — AI. Raison : Aborde la qualité des insights en analytique agentique, sujet technique pertinent pour experts IA, mais manque de détails concrets ou d'impact direct sur la sécurité.</li>
+<li><strong>3/5</strong> — <a href="https://www.technologyreview.com/2026/11/02/1147702/stop-counting-tokens-start-counting-what-ships/">Stop counting tokens, start counting what ships</a> — MIT Technology Review — AI. Raison : Article technique sur le coût token des agents IA en développement. Intéressant pour CTO et architectes, mais pas critique ni immédiatement applicable.</li>
+</ul>
+
+<h2>Cyber — Menaces & vulnérabilités</h2>
+
+<ul>
+<li><strong>Attaques de la chaîne du froid en Europe</strong> : Des acteurs malveillants ont modifié à distance les paramètres de température de réfrigérateurs et congélateurs, perturbant l'exploitation de plusieurs chaînes de supermarchés européennes. <a href="https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Campagne d'espionnage iranienne DarkBlinders</strong> : Un acteur aligné sur l'Iran a compromis des environnements cloud d'une cible israélienne et du gouvernement kurde irakien entre août et octobre 2026. <a href="https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html">The Hacker News</a></li>
+</ul>
+
+<ul>
+<li><strong>Utilisation d'un framework IA offensif par la Chine</strong> : Des hackers chinois ont exploité ARTEX, un outil open source de test d'intrusion multi-agents basé sur l'IA, pour automatiser des attaques contre plus de 200 organisations dans 14 pays. <a href="https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Vol de crypto-monnaies sur instances BTCPay Server obsolètes</strong> : Les mainteneurs de BTCPay Server alertent sur le drainage de portefeuilles chauds (hot wallets) ciblant les versions non à jour. <a href="https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/">BleepingComputer</a> · Par ailleurs, la plateforme brésilienne Mercado Bitcoin a subi un incident ayant entraîné la sortie de plus de 46 millions de dollars. <a href="https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist">The Record</a> · Polymarket s'engage de son côté à rembourser 3,9 millions de dollars à ses utilisateurs après une compromission de son site. <a href="https://therecord.media/polymarket-returning-funds-to-customers-after-site-compromise">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Démantèlement du botnet Android XCPE (1,3 million d'appareils)</strong> : Google et ses partenaires ont neutralisé un botnet intégré par un fabricant dans plus de 1,3 million de boîtiers de streaming TV Android, utilisés pour des activités cybercriminelles lucratives. <a href="https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Rançongiciel BYOD dans le secteur éducatif</strong> : Le gang BYOD a revendiqué un incident de sécurité à l'Université d'État du Michigan. Ce même groupe avait ciblé l'Université du Nouveau-Mexique en octobre. <a href="https://therecord.media/michigan-state-university-byod-gang-cyber-incident">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Alerte d'Apple sur les logiciels espions mercenaires</strong> : Apple a notifié des utilisateurs dans 99 pays d'une menace liée à des logiciels espions mercenaires, soulignant le coût extrême et la sophistication de ces attaques sans les attribuer à un acteur spécifique. <a href="https://therecord.media/apple-warns-users-99-countries-mercenary-spyware">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Cyberattaque contre l'agence statistique russe Rosstat</strong> : Une alliance de hackers biélorusses et pro-ukrainiens affirme avoir mis hors service l'agence et dérobé un volume important de données gouvernementales sensibles. <a href="https://therecord.media/hackers-ukraine-belarus-russia">The Record</a></li>
+</ul>
+
+<ul>
+<li><strong>Suspicion de cyberattaque sur la plateforme fintech Sageworks</strong> : La société Abrigo a mis hors ligne son application de gestion des risques Sageworks après avoir détecté une « activité irrégulière ». Les fonctionnalités destinées aux emprunteurs restent indisponibles. <a href="https://www.bleepingcomputer.com/news/security/fintech-platform-sageworks-taken-offline-after-suspected-cyberattack/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Métadonnées d'appels conservées des années par les opérateurs</strong> : Cape alerte sur la rétention longue durée des logs d'appels et SMS par les opérateurs mobiles, exposant détails relationnels et routines des clients en cas de brèche. <a href="https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Correctif Microsoft pour Smart App Control</strong> : Microsoft a résolu un problème bloquant l'activation de Smart App Control sur Windows 11, causé par la mise à jour de sécurité d'octobre 2026. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/">BleepingComputer</a></li>
+</ul>
+
+<ul>
+<li><strong>Vulnérabilité Multipath TCP sous Linux</strong> : Une nouvelle vulnérabilité affecte l'implémentation Linux de l'option TCP Multipath, introduite en 2020, nécessitant une attention particulière sur sa détection. <a href="https://isc.sans.edu/diary/rss/33482">SANS ISC</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>5/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/">Hackers disrupt refrigeration systems at European supermarkets</a> — BleepingComputer. Raison : Incident cyber majeur touchant un secteur critique (chaîne du froid), avec impact réel sur des supermarchés en Europe. Signal fort pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist">Largest crypto exchange in Brazil confirms cyberattack as millions flow out of platform</a> — The Record. Raison : Incident touchant une plateforme majeure de crypto, avec fuite de fonds significative, pertinent pour évaluer les risques et réponses des exchanges.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/chinese-hackers-use-artex-ai-in-automated-attacks-against-200-orgs/">Chinese hackers use ARTEX AI in automated attacks against 200 orgs</a> — BleepingComputer. Raison : Usage attesté d'un framework IA open-source pour des attaques automatisées, ciblant 200 organisations. Analyse technique d'une tendance émergente pertinente pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/michigan-state-university-byod-gang-cyber-incident">Michigan State cyber incident claimed by ransomware gang behind recent hospital attack</a> — The Record. Raison : Incident ransomware touchant une université américaine, avec lien vers un groupe ayant récemment attaqué un hôpital. Contexte intéressant pour un RSSI/CTO.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/fintech-platform-sageworks-taken-offline-after-suspected-cyberattack/">Fintech platform Sageworks taken offline after suspected cyberattack</a> — BleepingComputer. Raison : Incident cyber réel touchant une plateforme Fintech, avec impact opérationnel documenté. Pertinent pour analyse des risques fournisseur et reprise d'activité.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/google-disrupts-million-device-xcpe-android-malware-botnet-bans-tv-box-maker/">Google disrupts million-device XCPE Android malware botnet, bans TV box maker</a> — BleepingComputer. Raison : Démantèlement d'un botnet de 1,3M de boîtiers Android TV, avec implication d'un fabricant. Pertinent pour RSSI et architectes SI exposés à ce type de matériel.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/polymarket-returning-funds-to-customers-after-site-compromise">Polymarket pledges to give $3.9 million back to victims after site compromise</a> — The Record. Raison : Analyse de gestion d'incident et compensation par une plateforme de paris. Retour d'expérience utile sur gouvernance et transparence post-compromise.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html">⚡ Weekly Recap: Critical CVEs, Linux DDoS Botnet, Device-Code Phishing, Android Spyware and More</a> — The Hacker News. Raison : Récapitulatif hebdo de vulnérabilités critiques (CVE), botnet Linux, phishing et spyware Android, source reconnue, utile pour une vue d'ensemble rapide des menaces récentes.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/hackers-ukraine-belarus-russia">Russia's statistics agency confirms cyberattack claimed by Belarusian and Ukrainian hackers</a> — The Record. Raison : Incident cyber majeur touchant une agence fédérale russe, avec vol de données sensibles. Pertinent pour la veille géopolitique et stratégique des RSSI/CTO.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/">BTCPay Server warns of hot wallet crypto thefts on outdated instances</a> — BleepingComputer. Raison : Alerte active d'un fournisseur open source sur des vols de fonds liés à des instances non patchées, avec détails techniques exploitables.</li>
+<li><strong>4/5</strong> — <a href="https://isc.sans.edu/diary/rss/33482">Mutipath TCP: Use and Detection, (Mon, Nov 2nd)</a> — SANS ISC. Raison : Vulnérabilité dans l'implémentation Linux de Multipath TCP (RFC 8684), option TCP peu connue mais impact direct sur infrastructure. Source SANS ISC fiable.</li>
+<li><strong>4/5</strong> — <a href="https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html">DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment</a> — The Hacker News. Raison : Campagne d'espionnage ciblant un gouvernement et une personnalité israélienne, avec compromission d'environnement cloud. Analyse utile pour RSSI et CTO.</li>
+<li><strong>4/5</strong> — <a href="https://therecord.media/apple-warns-users-99-countries-mercenary-spyware">Apple warns users in 99 countries of mercenary spyware</a> — The Record. Raison : Alerte d'Apple sur des logiciels espions mercenaires dans 99 pays. Information notable pour la veille des RSSI, mais manque de détails techniques exploitables immédiatement.</li>
+<li><strong>4/5</strong> — <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/">Microsoft fixes Smart App Control broken by October Windows update</a> — BleepingComputer. Raison : Correction d'un correctif de sécurité cassé par une mise à jour Windows, impactant potentiellement la posture de sécurité des postes Windows en entreprise.</li>
+<li><strong>3/5</strong> — <a href="https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/">Your Mobile Carrier Stores Your Call Logs for Years</a> — BleepingComputer. Raison : Sujet pertinent pour RSSI/CTO sur la rétention des métadonnées télécoms, mais l'angle est plus un argumentaire commercial qu'une analyse technique ou réglementaire approfondie.</li>
+</ul>
+
+<h2>IA — Labos & éditeurs</h2>
+
+<ul>
+<li><strong>Ingestion web pour RAG avec crawl open source</strong> : AWS illustre comment intégrer le crawler open source Crawl4AI comme couche de préparation pour Bedrock Knowledge Bases. Il prend en charge le rendu JavaScript, l'extraction sélective et l'enrichissement en métadonnées avant stockage dans S3. <a href="https://aws.amazon.com/blogs/machine-learning/prepare-web-content-for-amazon-bedrock-knowledge-bases-with-crawl4ai/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Optimisation du coût des agents en production</strong> : AWS propose d'utiliser la distillation de connaissance séquentielle (SeqKD) pour transférer le comportement agentique d'un modèle frontier (enseignant) vers un petit modèle moins coûteux. L'objectif est de réduire la facture des boucles multi-étapes en production. <a href="https://aws.amazon.com/blogs/machine-learning/build-efficient-agents-with-knowledge-distillation-on-amazon-sagemaker-ai/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Automatisation du tri d'incidents DevOps</strong> : Circle K a réduit le temps de tri d'incidents de 45–60 minutes à moins de 15 minutes en déployant un système agentique sur Amazon Bedrock, en migrant d'une logique Flows vers AgentCore pour le passage à l'échelle. <a href="https://aws.amazon.com/blogs/machine-learning/how-circle-k-accelerated-devops-incident-triage-to-under-15-minutes-with-amazon-bedrock/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Agents multimodaux pour l'ingénierie</strong> : AWS montre un assistant multi-agent qui réduit de jours à minutes l'évaluation de substitution de composants aérospatiaux. La solution combine les embeddings multimodaux Amazon Nova, Bedrock AgentCore et le SDK Strands Agents, en conservant l'humain dans la boucle décisionnelle. <a href="https://aws.amazon.com/blogs/machine-learning/agentic-engineering-intelligence-with-amazon-nova-multimodal-embeddings-and-amazon-bedrock-agentcore/">AWS Machine Learning</a></li>
+</ul>
+
+<ul>
+<li><strong>Infrastructure énergétique des datacenters IA</strong> : OpenAI lance le programme Grid Protectors, destiné aux opérateurs de réseaux électriques, pour que les futurs campus de calcul contribuent à la stabilité du réseau et à la maîtrise des coûts pour les consommateurs. <a href="https://openai.com/index/grid-protectors-program">OpenAI News</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/prepare-web-content-for-amazon-bedrock-knowledge-bases-with-crawl4ai/">Prepare web content for Amazon Bedrock Knowledge Bases with Crawl4AI</a> — AWS Machine Learning. Raison : Article technique combinant un outil open source (Crawl4AI) avec AWS Bedrock pour préparer du contenu web, pertinent pour RSSI et CTO souhaitant automatiser l'enrichissement de bases de connaissances.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/build-efficient-agents-with-knowledge-distillation-on-amazon-sagemaker-ai/">Build efficient agents with knowledge distillation on Amazon SageMaker AI</a> — AWS Machine Learning. Raison : Méthode de distillation séquentielle pour agents IA, applicable en production. Intéressant pour CTO et architectes cherchant à réduire coûts d'inférence sans perdre en qualité.</li>
+<li><strong>4/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/how-circle-k-accelerated-devops-incident-triage-to-under-15-minutes-with-amazon-bedrock/">How Circle K accelerated DevOps incident triage to under 15 minutes with Amazon Bedrock</a> — AWS Machine Learning. Raison : Retour d'expérience concret sur l'accélération du triage d'incidents DevOps via un agent IA, avec architecture détaillée et leçons apprises, pertinent pour RSSI/CTO.</li>
+<li><strong>3/5</strong> — <a href="https://aws.amazon.com/blogs/machine-learning/agentic-engineering-intelligence-with-amazon-nova-multimodal-embeddings-and-amazon-bedrock-agentcore/">Agentic engineering intelligence with Amazon Nova Multimodal Embeddings and Amazon Bedrock AgentCore</a> — AWS Machine Learning. Raison : Article technique sur un assistant agentic IA pour ingénierie, combinant Amazon Nova et Bedrock. Intéressant pour CTO/architecte, mais pas critique pour le public cyber.</li>
+<li><strong>3/5</strong> — <a href="https://openai.com/index/grid-protectors-program">Introducing the Grid Protectors Program</a> — OpenAI News. Raison : Programme partenarial avec utilities pour fiabiliser le réseau, pas directement technique ou sécurité. Intérêt stratégique pour RSSI/CTO en veille IA, mais contenu institutionnel.</li>
+</ul>
+
+<h2>Actualité tech FR</h2>
+
+<ul>
+<li><strong>IA et curation des données</strong> : L'essor de l'IA impose une collaboration étroite entre RSSI et Chief Data Officer, la sécurité du modèle dépendant directement de la qualité et de l'intégrité des données d'entraînement. <a href="https://www.journaldunet.com/cybersecurite/1557455-cybersecurite-comment-l-ia-oblige-rssi-et-cdo-a-travailler-ensemble/">Journal du Net</a></li>
+</ul>
+
+<ul>
+<li><strong>Opt-out pour l'entraînement des IA</strong> : Google, OpenAI et Microsoft s'engagent à faciliter le refus d'utilisation des contenus web par les éditeurs pour l'entraînement de leurs modèles. <a href="https://siecledigital.fr/2026/11/02/google-openai-et-microsoft-promettent-de-ne-plus-utiliser-certains-contenus-pour-entrainer-leurs-ia/">Siècle Digital</a></li>
+</ul>
+
+<ul>
+<li><strong>Noyau Linux généré par IA</strong> : Le créateur de Rocky Linux a produit un noyau compatible Linux en 11 jours via l'IA, démontrant la capacité de l'IA à accélérer le développement système, sans prétention de mise en production. <a href="https://next.ink/265227/le-createur-de-rocky-linux-a-cree-un-noyau-compatible-linux-en-11-jours-avec-lia/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Piratage de systèmes de réfrigération en Europe</strong> : Après la France, des enseignes belges et européennes subissent des pannes de frigos suite à un piratage, entraînant des pertes alimentaires par dégivrage intempestif. <a href="https://next.ink/265228/apres-la-france-des-pannes-de-frigos-dans-plusieurs-enseignes-en-europe/">Next.ink</a></li>
+</ul>
+
+<ul>
+<li><strong>Acquisition record dans les semi-conducteurs</strong> : Marvell annonce le rachat de Lumentum pour 115 milliards de dollars, consolidant le marché des puces optiques et photoniques. <a href="https://next.ink/265207/marvell-veut-soffrir-lumentum-et-ses-puces-optiques-pour-115-milliards-de-dollars/">Next.ink</a></li>
+</ul>
+
+<strong>Évaluation du scoring</strong>
+
+<ul>
+<li><strong>4/5</strong> — <a href="https://www.journaldunet.com/cybersecurite/1557455-cybersecurite-comment-l-ia-oblige-rssi-et-cdo-a-travailler-ensemble/">Cybersécurité : comment l'IA oblige RSSI et CDO à travailler ensemble</a> — Journal du Net. Raison : Analyse de la convergence entre RSSI et CDO face aux risques IA, sujet structurant pour la gouvernance cyber en entreprise.</li>
+<li><strong>4/5</strong> — <a href="https://next.ink/265228/apres-la-france-des-pannes-de-frigos-dans-plusieurs-enseignes-en-europe/">Après la France, des pannes de frigos dans plusieurs enseignes en Europe</a> — Next.ink. Raison : Incident cyber ciblant des systèmes de réfrigération en Europe, impactant la chaîne du froid et la sécurité alimentaire. Analyse technique et stratégique pertinente pour RSSI et CTO.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/265207/marvell-veut-soffrir-lumentum-et-ses-puces-optiques-pour-115-milliards-de-dollars/">Marvell veut s’offrir Lumentum et ses puces optiques pour 115 milliards de dollars</a> — Next.ink. Raison : Acquisition majeure dans l'interconnexion datacenter, impact potentiel sur les infrastructures réseau, mais sans détail technique ou cyber direct.</li>
+<li><strong>3/5</strong> — <a href="https://siecledigital.fr/2026/11/02/google-openai-et-microsoft-promettent-de-ne-plus-utiliser-certains-contenus-pour-entrainer-leurs-ia/">Google, OpenAI et Microsoft s’accordent pour permettre aux sites web de refuser l’utilisation de leurs contenus par les IA</a> — Siècle Digital. Raison : Accord sur le opt-out des contenus pour l'entraînement IA. Information utile sur la gouvernance des données mais sans impact direct ou technique immédiat pour le public expert.</li>
+<li><strong>3/5</strong> — <a href="https://next.ink/265227/le-createur-de-rocky-linux-a-cree-un-noyau-compatible-linux-en-11-jours-avec-lia/">Le créateur de Rocky Linux a créé un noyau compatible Linux en 11 jours avec l’IA</a> — Next.ink. Raison : Expérience technique intéressante sur la génération d'un noyau Linux par IA, mais sans impact pratique immédiat ni lien direct avec la cybersécurité.</li>
 </ul>]]></content:encoded>
-      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261102-1330</guid>
-      <pubDate>Mon, 02 Nov 2026 13:30:49 +0000</pubDate>
+      <guid isPermaLink="false">https://julienoh.github.io/veille/digest.xml#20261102-2355</guid>
+      <pubDate>Mon, 02 Nov 2026 23:55:19 +0000</pubDate>
     </item>
   </channel>
 </rss>
