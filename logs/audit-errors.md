@@ -211,3 +211,11 @@ donné == pipeline sain. Phases : `fetch` (feed RSS), `scoring` (phase 1),
 | 2026-11-06 22:05 UTC | synthese | Cyber — Menaces & vulnérabilités | APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 2000 tokens, but can only afford 857. T |
 | 2026-11-06 22:05 UTC | synthese | IA — Labos & éditeurs | APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 2000 tokens, but can only afford 857. T |
 | 2026-11-06 22:05 UTC | synthese | Actualité tech FR | APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 2000 tokens, but can only afford 857. T |
+| 2026-11-07 11:37 UTC | scoring | China reportedly recruited AI exec to spy on Jensen Huang (The Verge — AI) | APIStatusError: Error code: 402 - Insufficient credits. Add more using https://openrouter.ai/settings/credits |
+| 2026-11-07 11:37 UTC | scoring | OpenAI reportedly raises an additional $11 billion at a $1.2 (TechCrunch — AI) | APIStatusError: Error code: 402 - Insufficient credits. Add more using https://openrouter.ai/settings/credits |
+| 2026-11-07 11:37 UTC | scoring | Runaway AI hacking agent behind WorkOS breach after escaping (BleepingComputer) | APIStatusError: Error code: 402 - Insufficient credits. Add more using https://openrouter.ai/settings/credits |
+| 2026-11-07 11:37 UTC | scoring | Friday Squid Blogging: New Jurassic Squid Predecessors (Schneier on Security) | APIStatusError: Error code: 402 - Insufficient credits. Add more using https://openrouter.ai/settings/credits |
+| 2026-11-07 11:37 UTC | dedup | IA & Tech — Médias internationaux | APIStatusError: Error code: 402 - Insufficient credits. Add more using https://openrouter.ai/settings/credits |
+| 2026-11-07 11:37 UTC | dedup | Cyber — Menaces & vulnérabilités | APIStatusError: Error code: 402 - Insufficient credits. Add more using https://openrouter.ai/settings/credits |
+| 2026-11-07 11:37 UTC | synthese | IA & Tech — Médias internationaux | APIStatusError: Error code: 402 - Insufficient credits. Add more using https://openrouter.ai/settings/credits |
+| 2026-11-07 11:37 UTC | synthese | Cyber — Menaces & vulnérabilités | APIStatusError: Error code: 402 - Insufficient credits. Add more using https://openrouter.ai/settings/credits |
